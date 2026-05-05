@@ -136,14 +136,23 @@ const LearningCenter = () => {
                   className="kindle-card"
                 >
                   <div className="book-cover-wrapper">
-                    <div className="book-cover">
+                    <div 
+                      className="book-cover"
+                      style={item.thumbnail_url ? { 
+                        backgroundImage: `url(${item.thumbnail_url})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                      } : {}}
+                    >
                       <div className="book-spine"></div>
                       <div className="book-overlay"></div>
-                      <div className="book-content">
-                        <div className="book-tag">{item.subject || 'General'}</div>
-                        <div className="book-main-title">{item.title}</div>
-                        <div className="book-exam-name">{item.exam_name || 'Multi-Exam'}</div>
-                      </div>
+                      {!item.thumbnail_url && (
+                        <div className="book-content">
+                          <div className="book-tag">{item.subject || 'General'}</div>
+                          <div className="book-main-title">{item.title}</div>
+                          <div className="book-exam-name">{item.exam_name || 'Multi-Exam'}</div>
+                        </div>
+                      )}
                       {item.is_locked ? (
                         <div className="book-badge locked"><Lock size={10} /> PREMIUM</div>
                       ) : (
