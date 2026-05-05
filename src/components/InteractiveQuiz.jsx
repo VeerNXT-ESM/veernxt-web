@@ -10,6 +10,7 @@ const InteractiveQuiz = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [revealed, setRevealed] = useState({}); // Track which questions have been answered/revealed
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -32,8 +33,17 @@ const InteractiveQuiz = () => {
   }, [id]);
 
   const handleSelectOption = (questionId, optionKey) => {
-    if (submitted) return;
+    if (submitted || revealed[questionId]) return;
+    
+    const currentQ = questions[currentQuestionIndex];
+    const isCorrect = optionKey === currentQ.correct_answer;
+    
     setAnswers({ ...answers, [questionId]: optionKey });
+    setRevealed({ ...revealed, [questionId]: true });
+    
+    if (isCorrect) {
+      setScore(prev => prev + 1);
+    }
   };
 
   const handleSubmit = async () => {
@@ -106,20 +116,44 @@ const InteractiveQuiz = () => {
             
             <div className="options-grid">
               {Object.entries(questions[currentQuestionIndex].options || {}).map(([key, value]) => {
-                const isSelected = answers[questions[currentQuestionIndex].id] === key;
+                const questionId = questions[currentQuestionIndex].id;
+                const isSelected = answers[questionId] === key;
+                const isRevealed = revealed[questionId];
+                const isCorrect = key === questions[currentQuestionIndex].correct_answer;
+                
+                let statusClass = "";
+                if (isRevealed) {
+                  if (isSelected) statusClass = isCorrect ? "correct" : "incorrect";
+                  else if (isCorrect) statusClass = "should-have-selected";
+                }
+
                 return (
                   <div 
                     key={key}
-                    onClick={() => handleSelectOption(questions[currentQuestionIndex].id, key)}
-                    className={`option-item ${isSelected ? 'selected' : ''}`}
+                    onClick={() => handleSelectOption(questionId, key)}
+                    className={`option-item ${isSelected ? 'selected' : ''} ${statusClass}`}
                   >
                     <div className="option-key">{key}</div>
                     <div className="option-value">{value}</div>
-                    {isSelected && <CheckCircle size={18} className="select-icon" />}
+                    {isRevealed && isCorrect && <CheckCircle size={18} className="status-icon correct" />}
+                    {isRevealed && isSelected && !isCorrect && <XCircle size={18} className="status-icon incorrect" />}
                   </div>
                 );
               })}
             </div>
+
+            {revealed[questions[currentQuestionIndex].id] && (
+              <div className="immediate-feedback animate-slide-up">
+                <div className={`feedback-header ${answers[questions[currentQuestionIndex].id] === questions[currentQuestionIndex].correct_answer ? 'correct' : 'incorrect'}`}>
+                  {answers[questions[currentQuestionIndex].id] === questions[currentQuestionIndex].correct_answer ? 'Well Done!' : 'Not Quite...'}
+                </div>
+                {questions[currentQuestionIndex].explanation && (
+                  <div className="explanation-text">
+                    <strong>Insight:</strong> {questions[currentQuestionIndex].explanation}
+                  </div>
+                )}
+              </div>
+            )}
 
             <div className="quiz-actions">
               <button 
@@ -134,7 +168,7 @@ const InteractiveQuiz = () => {
                 <button 
                   onClick={handleSubmit} 
                   className="btn-primary"
-                  disabled={!answers[questions[currentQuestionIndex].id]}
+                  disabled={!revealed[questions[currentQuestionIndex].id]}
                 >
                   Complete Quiz
                 </button>
@@ -142,7 +176,7 @@ const InteractiveQuiz = () => {
                 <button 
                   onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))}
                   className="btn-primary"
-                  disabled={!answers[questions[currentQuestionIndex].id]}
+                  disabled={!revealed[questions[currentQuestionIndex].id]}
                 >
                   Next Question <ChevronRight size={18} />
                 </button>
@@ -260,7 +294,7 @@ const InteractiveQuiz = () => {
         .q-number { color: var(--ios-olive); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .question-text { font-size: 1.5rem; color: #0f172a; margin-bottom: 2.5rem; line-height: 1.4; font-weight: 700; }
         
-        .options-grid { display: flex; flexDirection: column; gap: 1rem; margin-bottom: 3rem; }
+        .options-grid { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem; }
         .option-item {
           display: flex;
           align-items: center;
@@ -277,6 +311,10 @@ const InteractiveQuiz = () => {
           background: rgba(75, 107, 50, 0.05);
           border-color: var(--ios-olive);
         }
+        .option-item.correct { background: rgba(34, 197, 94, 0.1); border-color: #22c55e; }
+        .option-item.incorrect { background: rgba(239, 68, 68, 0.1); border-color: #ef4444; }
+        .option-item.should-have-selected { border: 2px dashed #22c55e; }
+        
         .option-key {
           width: 32px;
           height: 32px;
@@ -291,8 +329,24 @@ const InteractiveQuiz = () => {
           box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .selected .option-key { background: var(--ios-olive); color: white; }
+        .correct .option-key { background: #22c55e; color: white; }
+        .incorrect .option-key { background: #ef4444; color: white; }
+        
         .option-value { flex: 1; font-weight: 600; color: #334155; }
-        .select-icon { color: var(--ios-olive); }
+        .status-icon.correct { color: #22c55e; }
+        .status-icon.incorrect { color: #ef4444; }
+
+        .immediate-feedback {
+          margin-bottom: 3rem;
+          padding: 1.5rem;
+          background: #f8fafc;
+          border-radius: 16px;
+          border: 1px solid #e2e8f0;
+        }
+        .feedback-header { font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .feedback-header.correct { color: #15803d; }
+        .feedback-header.incorrect { color: #b91c1c; }
+        .explanation-text { font-size: 0.95rem; color: #475569; line-height: 1.5; }
 
         .quiz-actions { display: flex; justify-content: space-between; gap: 1rem; }
         .nav-btn {
