@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap');
+
+:root {
+  /* Marketing Design Tokens */
+  --ios-bg: #FFFFFF;
+  --ios-secondary: #F2F2F7;
+  --ios-olive: #4b6b32;
+  --ios-text: #333333;
+  --radius-ios: 20px;
+  --shadow-ios: 0 10px 40px rgba(0, 0, 0, 0.04);
+  
+  /* Mapping to existing app variables for compatibility */
+  --primary-color: var(--ios-bg);
+  --secondary-color: var(--ios-secondary);
+  --text-primary: var(--ios-text);
+  --text-secondary: #666666;
+  --accent-green: var(--ios-olive);
+  --accent-gold: #fbbf24;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: var(--shadow-ios);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--ios-bg);
+  color: var(--ios-text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ios-card, .glass-panel {
+  background: white;
+  border: 1px solid #f1f1f1;
+  border-radius: var(--radius-ios);
+  box-shadow: var(--shadow-ios);
+  padding: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--ios-text);
+  margin-bottom: 0.5rem;
+  tracking: -0.02em;
+}
+
+.font-cta {
+  font-family: "Quicksand", sans-serif;
+}
+
+button, .btn-primary, .btn-gold {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  border-radius: 9999px; /* Pills */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--ios-olive);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(75, 107, 50, 0.2);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--ios-secondary);
+  color: var(--ios-olive);
+  padding: 0.75rem 1.5rem;
+}
+
+.ios-pill {
+  border-radius: 9999px;
+}
+
+/* Learning Center Styles */
+.learning-header {
+  padding: 3rem 0;
+}
+
+.tab-switcher {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--ios-secondary);
+  padding: 0.25rem;
+  border-radius: 12px;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.tab-switcher button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.tab-switcher button.active {
+  background: white;
+  color: var(--ios-olive);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.filter-controls select:focus, .filter-controls input:focus {
+  outline: 2px solid var(--ios-olive);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
