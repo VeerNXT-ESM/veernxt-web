@@ -22,23 +22,22 @@ const AdminDashboard = () => {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const [resCount, quizCount, exams] = await Promise.all([
+      const [resCount, quizCount, resources] = await Promise.all([
         supabase.from('resources').select('*', { count: 'exact', head: true }),
         supabase.from('quizzes').select('*', { count: 'exact', head: true }),
-        supabase.from('resources').select('exam_name, conducting_body').order('created_at', { ascending: false })
+        supabase.from('resources').select('id, title, exam_name, category').order('created_at', { ascending: false }).limit(10)
       ]);
 
-      // Unique exams
-      const uniqueExams = Array.from(new Set(exams.data.map(e => e.exam_name)))
-        .map(name => exams.data.find(e => e.exam_name === name))
-        .slice(0, 10);
+      // Count unique exams from all resources
+      const { data: allResources } = await supabase.from('resources').select('exam_name');
+      const uniqueExams = allResources ? new Set(allResources.map(r => r.exam_name)).size : 0;
 
       setStats({
         resources: resCount.count || 0,
         quizzes: quizCount.count || 0,
-        exams: uniqueExams.length
+        exams: uniqueExams
       });
-      setRecentExams(uniqueExams);
+      setRecentExams(resources.data || []);
     } catch (err) {
       console.error('Error fetching dashboard data:', err);
     } finally {
@@ -94,7 +93,7 @@ const AdminDashboard = () => {
             <Search size={18} />
             <input 
               type="text" 
-              placeholder="Search exams..." 
+              placeholder="Search resources..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -102,14 +101,14 @@ const AdminDashboard = () => {
         </div>
 
         <div className="exam-list">
-          {recentExams.map((exam, idx) => (
+          {recentExams.filter(item => !searchTerm || item.title?.toLowerCase().includes(searchTerm.toLowerCase())).map((item, idx) => (
             <div key={idx} className="exam-item">
               <div className="exam-main">
-                <h3>{exam.exam_name || 'Unnamed Exam'}</h3>
-                <span>{exam.conducting_body}</span>
+                <h3>{item.title || 'Untitled Resource'}</h3>
+                <span>{item.exam_name} • {item.category}</span>
               </div>
               <div className="exam-actions">
-                <button className="btn-outline">Manage Content</button>
+                <button className="btn-outline" onClick={() => navigate(`/admin/content/${item.id}`)}>Manage Content</button>
                 <ChevronRight size={20} />
               </div>
             </div>
