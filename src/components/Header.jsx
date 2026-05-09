@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, Settings, LogOut, User, Bell } from 'lucide-react';
+import { Menu, Settings, LogOut, User, Bell, Landmark } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 const Header = () => {
@@ -42,6 +42,9 @@ const Header = () => {
                 <div style={{ padding: '0.5rem' }}>
                   <button onClick={() => { navigate('/dashboard'); setIsMenuOpen(false); }} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ios-text)' }}>
                     <User size={16} /> Dashboard
+                  </button>
+                  <button onClick={() => { navigate('/financial-guidance'); setIsMenuOpen(false); }} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ios-text)' }}>
+                    <Landmark size={16} /> Financial Guidance
                   </button>
                   <button onClick={() => { setIsMenuOpen(false); }} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ios-text)' }}>
                     <Settings size={16} /> Settings

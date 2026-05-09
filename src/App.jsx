@@ -7,6 +7,7 @@ import AuthCallback from './pages/AuthCallback';
 import Profiling from './pages/Profiling';
 import Dashboard from './pages/Dashboard';
 import LearningCenter from './pages/LearningCenter';
+import FinancialGuidance from './pages/FinancialGuidance';
 import SecureReader from './components/SecureReader';
 import InteractiveQuiz from './components/InteractiveQuiz';
 import AdminLogin from './pages/admin/AdminLogin';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/profiling" element={<Profiling />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/learning-center" element={<LearningCenter />} />
+          <Route path="/financial-guidance" element={<FinancialGuidance />} />
           <Route path="/reader/:id" element={<SecureReader />} />
           <Route path="/quiz/:id" element={<InteractiveQuiz />} />
         </Route>

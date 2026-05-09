@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle } from 'lucide-react';
+import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark } from 'lucide-react';
 
 const PreparationPanel = ({ examName }) => {
   const [resources, setResources] = useState([]);
@@ -228,6 +228,22 @@ const Dashboard = () => {
             <Link to="/learning-center" className="btn-primary ios-pill" style={{ textDecoration: 'none', textAlign: 'center', fontSize: '0.9rem' }}>
               Enter Library
             </Link>
+          </div>
+
+          {/* Financial Guidance CTA */}
+          <div className="ios-card library-card" style={{ gridColumn: 'span 2' }}>
+            <div className="card-top">
+              <Landmark size={24} color="var(--ios-olive)" />
+              <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>FINANCIAL GUIDANCE</span>
+            </div>
+            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+              <p className="card-desc" style={{ flex: 1 }}>
+                Explore tailored financial schemes, low-interest education loans, and start-up seed funding designed for candidates and transitioning service members.
+              </p>
+              <Link to="/financial-guidance" className="btn-primary ios-pill" style={{ textDecoration: 'none', whiteSpace: 'nowrap', fontSize: '0.9rem' }}>
+                View Schemes
+              </Link>
+            </div>
           </div>
 
           {/* Matches Section */}
