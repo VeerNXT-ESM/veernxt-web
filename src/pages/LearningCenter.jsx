@@ -22,11 +22,10 @@ const LearningCenter = () => {
       setLoading(true);
       try {
         const { data: examData } = await supabase
-          .from('exams')
-          .select('exam_name')
-          .order('exam_name');
+          .from('resources')
+          .select('exam_name');
         if (examData) {
-          const uniqueExams = [...new Set(examData.map(e => e.exam_name))];
+          const uniqueExams = [...new Set(examData.map(e => e.exam_name).filter(Boolean))].sort();
           setExams(uniqueExams);
         }
         await fetchContent();
@@ -113,8 +112,8 @@ const LearningCenter = () => {
 
         <div className="course-content">
           <div className="course-tags">
-            <span className="tag-light">English / Hindi</span>
-            <span className="tag-blue">{type === 'resource' ? 'Study Material' : 'Mock Test'}</span>
+            <span className="tag-light">{item.subject || 'General'}</span>
+            <span className="tag-blue">{item.category || (type === 'resource' ? 'Study Material' : 'Mock Test')}</span>
             <Heart size={16} className="heart-icon" />
           </div>
 
