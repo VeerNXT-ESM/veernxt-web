@@ -9,6 +9,10 @@ import Dashboard from './pages/Dashboard';
 import LearningCenter from './pages/LearningCenter';
 import SecureReader from './components/SecureReader';
 import InteractiveQuiz from './components/InteractiveQuiz';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminContentEditor from './pages/admin/AdminContentEditor';
+import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import './index.css';
 
 function App() {
@@ -26,6 +30,12 @@ function App() {
           <Route path="/reader/:id" element={<SecureReader />} />
           <Route path="/quiz/:id" element={<InteractiveQuiz />} />
         </Route>
+
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
+        <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
 
         {/* Redirect root to dashboard */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />

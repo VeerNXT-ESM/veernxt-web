@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Book, FileText, Lock, PlayCircle, RefreshCw, Search } from 'lucide-react';
+import { Book, FileText, Lock, PlayCircle, RefreshCw, Search, Heart, Video, CheckCircle } from 'lucide-react';
 
 const LearningCenter = () => {
   const [resources, setResources] = useState([]);
   const [quizzes, setQuizzes] = useState([]);
   const [exams, setExams] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('resources');
-  const [searchQuery, setSearchQuery] = useState('');
+  
+  // Filters
   const [selectedExam, setSelectedExam] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  // Sidebar Checkboxes
+  const [showResources, setShowResources] = useState(true);
+  const [showQuizzes, setShowQuizzes] = useState(true);
 
   useEffect(() => {
     const fetchInitialData = async () => {
@@ -21,7 +26,6 @@ const LearningCenter = () => {
           .select('exam_name')
           .order('exam_name');
         if (examData) {
-          // Unique exams only
           const uniqueExams = [...new Set(examData.map(e => e.exam_name))];
           setExams(uniqueExams);
         }
@@ -71,339 +75,603 @@ const LearningCenter = () => {
       fetchContent();
     }, 500);
     return () => clearTimeout(timer);
-  }, [searchQuery, selectedExam, activeTab]);
+  }, [searchQuery, selectedExam]);
 
-  const items = activeTab === 'resources' ? resources : quizzes;
+  const renderCard = (item, type) => {
+    const isPremium = item.is_locked;
+    return (
+      <Link 
+        key={item.id} 
+        to={type === 'resource' ? `/reader/${item.id}` : `/quiz/${item.id}`} 
+        className="course-card"
+      >
+        <div className="course-image-wrapper">
+          <div 
+            className="course-image"
+            style={item.thumbnail_url ? { 
+              backgroundImage: `url(${item.thumbnail_url})` 
+            } : {
+              background: 'linear-gradient(135deg, #4b6b32 0%, #2d411e 100%)'
+            }}
+          >
+            {!item.thumbnail_url && (
+              <div className="course-image-fallback">
+                <span className="fallback-exam">{item.exam_name || 'Multi-Exam'}</span>
+                <span className="fallback-title">{item.title}</span>
+              </div>
+            )}
+          </div>
+          {/* Top Right Badges */}
+          <div className="course-badges">
+            <span className="badge-alpha">A</span>
+          </div>
+          {/* Bottom Tags */}
+          <div className="course-bottom-tags">
+             <span className="tag-sale">{isPremium ? 'PREMIUM' : 'FREE ACCESS'}</span>
+          </div>
+        </div>
+
+        <div className="course-content">
+          <div className="course-tags">
+            <span className="tag-light">English / Hindi</span>
+            <span className="tag-blue">{type === 'resource' ? 'Study Material' : 'Mock Test'}</span>
+            <Heart size={16} className="heart-icon" />
+          </div>
+
+          <h3 className="course-title" title={item.title}>
+            {item.title}
+          </h3>
+
+          <div className="course-features">
+            {type === 'resource' ? (
+              <>
+                <span><FileText size={12} /> {item.subject || 'Comprehensive Notes'}</span>
+                <span><Video size={12} /> Video Solutions</span>
+              </>
+            ) : (
+              <>
+                <span><CheckCircle size={12} /> Latest Pattern</span>
+                <span><PlayCircle size={12} /> Detailed Analysis</span>
+              </>
+            )}
+          </div>
+
+          <div className="course-footer">
+            <div className="price-section">
+              {isPremium ? (
+                <>
+                  <span className="price-current">₹999</span>
+                  <span className="price-original">₹2999</span>
+                  <span className="price-discount">(66% off)</span>
+                </>
+              ) : (
+                <span className="price-current" style={{ color: '#22c55e' }}>FREE</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </Link>
+    );
+  };
 
   return (
     <div className="learning-wrapper">
-      <div className="learning-content animate-fade-in">
-        <div className="learning-header">
-          <h1 className="header-title">Learning Center</h1>
-          <p className="header-subtitle">Comprehensive study materials for your targeted government exams.</p>
-          
-          <div className="filter-controls">
+      {/* Top Navigation Tabs */}
+      <div className="top-nav-tabs">
+        <div className="tabs-container">
+          <button 
+            className={`tab-item ${selectedExam === 'all' ? 'active' : ''}`}
+            onClick={() => setSelectedExam('all')}
+          >
+            All Exams
+          </button>
+          {exams.map(exam => (
+            <button 
+              key={exam}
+              className={`tab-item ${selectedExam === exam ? 'active' : ''}`}
+              onClick={() => setSelectedExam(exam)}
+            >
+              {exam}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="learning-layout">
+        {/* Left Sidebar */}
+        <aside className="sidebar">
+          <div className="sidebar-section">
+            <h3 className="sidebar-title">Filters</h3>
+            
+            <div className="filter-group">
+              <h4 className="filter-subtitle">Product Category</h4>
+              <label className="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  checked={showResources} 
+                  onChange={(e) => setShowResources(e.target.checked)} 
+                />
+                Study Materials
+              </label>
+              <label className="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  checked={showQuizzes} 
+                  onChange={(e) => setShowQuizzes(e.target.checked)} 
+                />
+                Mock Tests
+              </label>
+            </div>
+          </div>
+
+          <div className="sidebar-section">
+            <h4 className="filter-subtitle">Important Exams</h4>
+            <div className="exam-links">
+              <button 
+                className={`exam-link ${selectedExam === 'all' ? 'active' : ''}`}
+                onClick={() => setSelectedExam('all')}
+              >
+                All Exams
+              </button>
+              {exams.map(exam => (
+                <button 
+                  key={exam}
+                  className={`exam-link ${selectedExam === exam ? 'active' : ''}`}
+                  onClick={() => setSelectedExam(exam)}
+                >
+                  {exam} Coaching
+                </button>
+              ))}
+            </div>
+          </div>
+        </aside>
+
+        {/* Main Content */}
+        <main className="main-content">
+          <div className="content-header">
+            <h1 className="main-title">
+              {selectedExam === 'all' ? 'Government Exams' : selectedExam} Study Material 2026, Study Plan, Notes
+            </h1>
+            <p className="main-subtitle">
+              Prepare effectively with the latest {selectedExam === 'all' ? '' : selectedExam} study notes and comprehensive mock tests.
+            </p>
+            
             <div className="search-box">
               <Search size={18} className="search-icon" />
               <input 
                 type="text"
-                placeholder="Search by title, subject or exam..."
+                placeholder="Search for courses, exams, or subjects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-
-            <select 
-              value={selectedExam}
-              onChange={(e) => setSelectedExam(e.target.value)}
-              className="exam-select"
-            >
-              <option value="all">All Exams</option>
-              {exams.map((name, i) => (
-                <option key={i} value={name}>{name}</option>
-              ))}
-            </select>
           </div>
 
-          <div className="tab-switcher">
-            <button 
-              className={activeTab === 'resources' ? 'active' : ''} 
-              onClick={() => setActiveTab('resources')}
-            >
-              <Book size={16} /> Study Guides
-            </button>
-            <button 
-              className={activeTab === 'quizzes' ? 'active' : ''} 
-              onClick={() => setActiveTab('quizzes')}
-            >
-              <PlayCircle size={16} /> Interactive Quizzes
-            </button>
-          </div>
-        </div>
-
-        {loading ? (
-          <div className="loading-state">
-            <RefreshCw className="animate-spin" size={32} />
-            <p>Loading library...</p>
-          </div>
-        ) : (
-          <div className="library-grid">
-            {items.length > 0 ? (
-              items.map((item) => (
-                <Link 
-                  key={item.id} 
-                  to={activeTab === 'resources' ? `/reader/${item.id}` : `/quiz/${item.id}`} 
-                  className="kindle-card"
-                >
-                  <div className="book-cover-wrapper">
-                    <div 
-                      className="book-cover"
-                      style={item.thumbnail_url ? { 
-                        backgroundImage: `url(${item.thumbnail_url})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                      } : {}}
-                    >
-                      <div className="book-spine"></div>
-                      <div className="book-overlay"></div>
-                      {!item.thumbnail_url && (
-                        <div className="book-content">
-                          <div className="book-tag">{item.subject || 'General'}</div>
-                          <div className="book-main-title">{item.title}</div>
-                          <div className="book-exam-name">{item.exam_name || 'Multi-Exam'}</div>
-                        </div>
-                      )}
-                      {item.is_locked ? (
-                        <div className="book-badge locked"><Lock size={10} /> PREMIUM</div>
-                      ) : (
-                        <div className="book-badge free">FREE</div>
-                      )}
-                    </div>
+          {loading ? (
+            <div className="loading-state">
+              <RefreshCw className="animate-spin" size={32} />
+              <p>Fetching latest courses...</p>
+            </div>
+          ) : (
+            <div className="course-sections">
+              
+              {showResources && resources.length > 0 && (
+                <div className="course-section">
+                  <div className="section-header">
+                    <h2>{selectedExam === 'all' ? 'All' : selectedExam} Study Materials ({resources.length})</h2>
+                    <button className="view-all">View All</button>
                   </div>
-                  <div className="book-details">
-                    <h3 className="item-title">{item.title}</h3>
-                    <p className="item-meta">{item.subject || 'Study Material'}</p>
+                  <div className="course-grid">
+                    {resources.map(item => renderCard(item, 'resource'))}
                   </div>
-                </Link>
-              ))
-            ) : (
-              <div className="empty-library">
-                <Book size={64} />
-                <h3>No materials found</h3>
-                <p>Try adjusting your search or filters to find what you're looking for.</p>
-              </div>
-            )}
-          </div>
-        )}
+                </div>
+              )}
+
+              {showQuizzes && quizzes.length > 0 && (
+                <div className="course-section">
+                  <div className="section-header">
+                    <h2>{selectedExam === 'all' ? 'All' : selectedExam} Mock Tests ({quizzes.length})</h2>
+                    <button className="view-all">View All</button>
+                  </div>
+                  <div className="course-grid">
+                    {quizzes.map(item => renderCard(item, 'quiz'))}
+                  </div>
+                </div>
+              )}
+
+              {(!showResources && !showQuizzes) || (resources.length === 0 && quizzes.length === 0) ? (
+                <div className="empty-library">
+                  <Book size={64} />
+                  <h3>No courses found</h3>
+                  <p>Try adjusting your search or filters.</p>
+                </div>
+              ) : null}
+
+            </div>
+          )}
+        </main>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
         .learning-wrapper {
-          background: #fff;
+          background: #f8fafc;
           min-height: 100vh;
-        }
-        .learning-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 4rem 1.5rem;
-        }
-        .header-title {
-          font-size: 3rem;
-          font-weight: 800;
-          letter-spacing: -0.04em;
-          margin-bottom: 0.5rem;
-        }
-        .header-subtitle {
-          color: #64748b;
-          font-size: 1.1rem;
-          margin-bottom: 3rem;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
-        .filter-controls {
+        /* Top Nav Tabs */
+        .top-nav-tabs {
+          background: #fff;
+          border-bottom: 1px solid #e2e8f0;
+          position: sticky;
+          top: 64px; /* Adjust based on your App Navbar height */
+          z-index: 40;
+        }
+        .tabs-container {
+          max-width: 1400px;
+          margin: 0 auto;
           display: flex;
-          gap: 1rem;
+          overflow-x: auto;
+          scrollbar-width: none;
+          padding: 0 1rem;
+        }
+        .tabs-container::-webkit-scrollbar { display: none; }
+        .tab-item {
+          padding: 1rem 1.5rem;
+          white-space: nowrap;
+          color: #64748b;
+          font-weight: 600;
+          font-size: 0.9rem;
+          border-bottom: 3px solid transparent;
+          transition: all 0.2s;
+        }
+        .tab-item:hover { color: #1e293b; }
+        .tab-item.active {
+          color: #ef4444; /* Red accent matching screenshot */
+          border-bottom-color: #ef4444;
+        }
+
+        /* Layout */
+        .learning-layout {
+          max-width: 1400px;
+          margin: 0 auto;
+          display: flex;
+          gap: 2rem;
+          padding: 2rem 1rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+          width: 260px;
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+        @media (max-width: 900px) {
+          .sidebar { display: none; } /* Hide on mobile for simplicity, could add a drawer later */
+        }
+        .sidebar-section {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: 12px;
+          padding: 1.5rem;
+        }
+        .sidebar-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 1.5rem;
+          padding-bottom: 0.75rem;
+          border-bottom: 1px solid #f1f5f9;
+        }
+        .filter-subtitle {
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: #334155;
+          margin-bottom: 1rem;
+        }
+        .filter-group {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .checkbox-label {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          font-size: 0.9rem;
+          color: #475569;
+          cursor: pointer;
+        }
+        .checkbox-label input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          accent-color: var(--ios-olive, #4b6b32);
+          cursor: pointer;
+        }
+
+        .exam-links {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .exam-link {
+          text-align: left;
+          font-size: 0.9rem;
+          color: #3b82f6;
+          padding: 0.5rem;
+          border-radius: 6px;
+          transition: background 0.2s;
+        }
+        .exam-link:hover { background: #eff6ff; }
+        .exam-link.active { font-weight: 700; background: #eff6ff; }
+
+        /* Main Content */
+        .main-content {
+          flex: 1;
+          min-width: 0;
+        }
+        .content-header {
           margin-bottom: 2rem;
-          flex-wrap: wrap;
+        }
+        .main-title {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 0.5rem;
+        }
+        .main-subtitle {
+          color: #64748b;
+          font-size: 0.95rem;
+          margin-bottom: 1.5rem;
         }
 
         .search-box {
-          flex: 1;
-          min-width: 300px;
           position: relative;
+          max-width: 600px;
         }
         .search-icon {
           position: absolute;
-          left: 1.25rem;
+          left: 1rem;
           top: 50%;
           transform: translateY(-50%);
           color: #94a3b8;
         }
         .search-box input {
           width: 100%;
-          padding: 1rem 1rem 1rem 3.5rem;
-          border-radius: 16px;
+          padding: 1rem 1rem 1rem 3rem;
+          border-radius: 12px;
           border: 1px solid #e2e8f0;
-          background: #f8fafc;
+          background: #fff;
           font-size: 1rem;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.02);
           transition: all 0.2s;
         }
         .search-box input:focus {
-          background: #fff;
-          border-color: var(--ios-olive);
-          box-shadow: 0 0 0 4px rgba(75, 107, 50, 0.1);
+          border-color: var(--ios-olive, #4b6b32);
+          box-shadow: 0 0 0 3px rgba(75, 107, 50, 0.1);
           outline: none;
         }
 
-        .exam-select {
-          padding: 0 1.5rem;
-          border-radius: 16px;
-          border: 1px solid #e2e8f0;
-          background: #f8fafc;
-          font-weight: 600;
-          color: #475569;
-          cursor: pointer;
-          max-width: 300px;
-        }
-
-        .tab-switcher {
-          display: flex;
-          gap: 0.5rem;
-          background: #f1f5f9;
-          padding: 0.4rem;
-          border-radius: 14px;
-          width: fit-content;
-          margin-top: 1rem;
-        }
-        .tab-switcher button {
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          padding: 0.75rem 1.5rem;
-          border-radius: 10px;
-          font-weight: 700;
-          font-size: 0.9rem;
-          transition: all 0.2s;
-          color: #64748b;
-        }
-        .tab-switcher button.active {
-          background: #fff;
-          color: var(--ios-olive);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .library-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 3rem 2rem;
-          margin-top: 4rem;
-        }
-
-        .kindle-card {
-          text-decoration: none;
-          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .kindle-card:hover {
-          transform: translateY(-12px);
-        }
-
-        .book-cover-wrapper {
-          perspective: 1000px;
-        }
-
-        .book-cover {
-          aspect-ratio: 2/3;
-          background: linear-gradient(135deg, #4b6b32 0%, #2d411e 100%);
-          border-radius: 4px 12px 12px 4px;
-          position: relative;
-          display: flex;
-          box-shadow: 15px 15px 30px rgba(0,0,0,0.1), 2px 2px 5px rgba(0,0,0,0.05);
-          overflow: hidden;
-          transform-style: preserve-3d;
-        }
-
-        .book-spine {
-          width: 15px;
-          height: 100%;
-          background: rgba(0,0,0,0.3);
-          border-right: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .book-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, transparent 10%, transparent 90%, rgba(0,0,0,0.1) 100%);
-          pointer-events: none;
-        }
-
-        .book-content {
-          flex: 1;
-          padding: 2rem 1.25rem;
+        /* Course Sections */
+        .course-sections {
           display: flex;
           flex-direction: column;
+          gap: 3rem;
+        }
+        .section-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1.25rem;
+        }
+        .section-header h2 {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #0f172a;
+        }
+        .view-all {
+          color: #3b82f6;
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+        .view-all:hover { text-decoration: underline; }
+
+        .course-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 1.5rem;
+        }
+
+        /* Flat Course Card (Screenshot 2 Match) */
+        .course-card {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: 12px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: inherit;
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .course-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+        
+        .course-image-wrapper {
+          position: relative;
+          aspect-ratio: 1 / 1;
+          background: #f1f5f9;
+        }
+        .course-image {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
           justify-content: center;
+        }
+        .course-image-fallback {
+          padding: 1.5rem;
           text-align: center;
           color: white;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .fallback-exam {
+          font-size: 0.75rem;
+          font-weight: 800;
+          letter-spacing: 0.05em;
+          color: rgba(255,255,255,0.8);
+          background: rgba(0,0,0,0.3);
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          display: inline-block;
+          margin: 0 auto;
+        }
+        .fallback-title {
+          font-size: 1.25rem;
+          font-weight: 800;
+          line-height: 1.2;
         }
 
-        .book-tag {
-          font-size: 0.65rem;
+        .course-badges {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+        }
+        .badge-alpha {
+          background: #000;
+          color: #fbbf24; /* Yellow A */
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 0.15em;
+          font-size: 0.8rem;
+          border-radius: 4px;
+        }
+
+        .course-bottom-tags {
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+        }
+        .tag-sale {
+          background: #fbbf24;
+          color: #000;
+          font-size: 0.7rem;
+          font-weight: 800;
+          padding: 0.25rem 0.75rem;
+          border-radius: 12px;
+          white-space: nowrap;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .course-content {
+          padding: 1.5rem 1.25rem 1.25rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .course-tags {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
           margin-bottom: 0.75rem;
-          color: rgba(255,255,255,0.6);
         }
+        .tag-light {
+          background: #f1f5f9;
+          color: #475569;
+          font-size: 0.65rem;
+          font-weight: 600;
+          padding: 0.2rem 0.4rem;
+          border-radius: 4px;
+        }
+        .tag-blue {
+          background: #eff6ff;
+          color: #3b82f6;
+          font-size: 0.65rem;
+          font-weight: 600;
+          padding: 0.2rem 0.4rem;
+          border-radius: 4px;
+        }
+        .heart-icon {
+          margin-left: auto;
+          color: #cbd5e1;
+        }
+        .heart-icon:hover { color: #ef4444; fill: #ef4444; }
 
-        .book-main-title {
-          font-size: 1.15rem;
-          font-weight: 800;
-          line-height: 1.3;
-          margin-bottom: 1.5rem;
+        .course-title {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: #0f172a;
+          line-height: 1.4;
+          margin-bottom: 1rem;
           display: -webkit-box;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
 
-        .book-exam-name {
-          font-size: 0.6rem;
-          opacity: 0.7;
-          font-weight: 600;
-          text-transform: uppercase;
+        .course-features {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 1.25rem;
+        }
+        .course-features span {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          font-size: 0.75rem;
+          color: #64748b;
         }
 
-        .book-badge {
-          position: absolute;
-          top: 0.75rem;
-          right: 0.75rem;
-          font-size: 0.6rem;
-          font-weight: 900;
-          padding: 0.3rem 0.6rem;
-          border-radius: 6px;
+        .course-footer {
+          margin-top: auto;
+          padding-top: 1rem;
+          border-top: 1px dashed #e2e8f0;
         }
-        .book-badge.free { background: #22c55e; color: white; }
-        .book-badge.locked { background: #fbbf24; color: #000; }
-
-        .book-details {
-          margin-top: 1.25rem;
+        .price-section {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
         }
-        .item-title {
-          font-size: 1rem;
-          font-weight: 700;
-          color: #1e293b;
-          margin-bottom: 0.25rem;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+        .price-current {
+          font-size: 1.1rem;
+          font-weight: 800;
+          color: #0f172a;
         }
-        .item-meta {
-          font-size: 0.85rem;
+        .price-original {
+          font-size: 0.8rem;
           color: #94a3b8;
-          font-weight: 500;
+          text-decoration: line-through;
+        }
+        .price-discount {
+          font-size: 0.8rem;
+          color: #22c55e;
+          font-weight: 600;
         }
 
-        .loading-state {
+        .loading-state, .empty-library {
           text-align: center;
           padding: 6rem 0;
           color: #94a3b8;
         }
         .loading-state p { margin-top: 1rem; font-weight: 600; }
-
-        .empty-library {
-          grid-column: 1 / -1;
-          text-align: center;
-          padding: 8rem 0;
-          color: #94a3b8;
-        }
         .empty-library h3 { color: #1e293b; margin: 1.5rem 0 0.5rem; }
-
-        @media (max-width: 600px) {
-          .library-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.5rem; }
-          .header-title { font-size: 2rem; }
-        }
       `}} />
     </div>
   );
 };
 
 export default LearningCenter;
+
