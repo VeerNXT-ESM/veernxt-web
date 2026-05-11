@@ -50,6 +50,16 @@ const Header = () => {
                     <Settings size={16} /> Settings
                   </button>
                   <div style={{ height: '1px', background: '#eee', margin: '0.5rem 0' }}></div>
+                  <button onClick={() => { navigate('/privacy'); setIsMenuOpen(false); }} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ios-text)' }}>
+                    Privacy Policy
+                  </button>
+                  <button onClick={() => { navigate('/support'); setIsMenuOpen(false); }} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ios-text)' }}>
+                    Support
+                  </button>
+                  <button onClick={() => { navigate('/legal'); setIsMenuOpen(false); }} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ios-text)' }}>
+                    Legal
+                  </button>
+                  <div style={{ height: '1px', background: '#eee', margin: '0.5rem 0' }}></div>
                   <button onClick={handleLogout} style={{ width: '100%', padding: '0.75rem', border: 'none', background: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', fontSize: '0.9rem', color: '#ef4444' }}>
                     <LogOut size={16} /> Sign Out
                   </button>

@@ -9,6 +9,12 @@ import Dashboard from './pages/Dashboard';
 import LearningCenter from './pages/LearningCenter';
 import FinancialGuidance from './pages/FinancialGuidance';
 import SecureReader from './components/SecureReader';
+import Footer from './components/Footer';
+
+// New Legal Pages
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Support from './pages/Support';
+import Legal from './pages/Legal';
 import InteractiveQuiz from './components/InteractiveQuiz';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -31,6 +37,9 @@ function App() {
           <Route path="/financial-guidance" element={<FinancialGuidance />} />
           <Route path="/reader/:id" element={<SecureReader />} />
           <Route path="/quiz/:id" element={<InteractiveQuiz />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/legal" element={<Legal />} />
         </Route>
 
         {/* Admin Routes */}
@@ -49,12 +58,13 @@ function App() {
 // Layout wrapper for pages that need the Header
 const Layout = () => {
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <main style={{ minHeight: 'calc(100vh - 64px)' }}>
+      <main style={{ flex: '1' }}>
         <Outlet />
       </main>
-    </>
+      <Footer />
+    </div>
   );
 };
 
