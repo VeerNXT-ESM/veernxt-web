@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
-import { Plus, Book, FileText, HelpCircle, ChevronRight, Search } from 'lucide-react';
+import { Plus, Book, FileText, HelpCircle, ChevronRight, Search, Briefcase, RefreshCw } from 'lucide-react';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [stats, setStats] = useState({ resources: 0, quizzes: 0, exams: 0 });
+  const [stats, setStats] = useState({ resources: 0, quizzes: 0, exams: 0, jobs: 0 });
   const [recentExams, setRecentExams] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -32,10 +32,22 @@ const AdminDashboard = () => {
       const { data: allResources } = await supabase.from('resources').select('exam_name');
       const uniqueExams = allResources ? new Set(allResources.map(r => r.exam_name)).size : 0;
 
+      // Fetch Jobs count from Engine
+      let jobsCount = 0;
+      try {
+        const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'https://veernxt-profiling-engine.onrender.com';
+        const jobRes = await fetch(`${ENGINE_URL}/api/jobs`);
+        const jobData = await jobRes.json();
+        if (jobData.ok) jobsCount = jobData.count;
+      } catch (e) {
+        console.warn('Could not fetch jobs count for stats');
+      }
+
       setStats({
         resources: resCount.count || 0,
         quizzes: quizCount.count || 0,
-        exams: uniqueExams
+        exams: uniqueExams,
+        jobs: jobsCount
       });
       setRecentExams(resources.data || []);
     } catch (err) {
@@ -59,6 +71,9 @@ const AdminDashboard = () => {
           <Link to="/admin/quiz" className="btn-action">
             <Plus size={18} /> New Quiz
           </Link>
+          <Link to="/admin/jobs" className="btn-action primary">
+            <RefreshCw size={18} /> Run Scraper
+          </Link>
         </div>
       </div>
 
@@ -77,14 +92,21 @@ const AdminDashboard = () => {
             <span className="stat-value">{stats.quizzes}</span>
           </div>
         </div>
-        <div className="stat-card">
-          <div className="stat-icon exam"><Search size={20} /></div>
-          <div className="stat-info">
-            <span className="stat-label">Subject Categories</span>
-            <span className="stat-value">{stats.exams}</span>
+          <div className="stat-card">
+            <div className="stat-icon exam"><Search size={20} /></div>
+            <div className="stat-info">
+              <span className="stat-label">Subject Categories</span>
+              <span className="stat-value">{stats.exams}</span>
+            </div>
+          </div>
+          <div className="stat-card" onClick={() => navigate('/admin/jobs')} style={{ cursor: 'pointer' }}>
+            <div className="stat-icon res" style={{ background: 'var(--ios-olive)' }}><Briefcase size={20} /></div>
+            <div className="stat-info">
+              <span className="stat-label">Live Notifications</span>
+              <span className="stat-value">{stats.jobs}</span>
+            </div>
           </div>
         </div>
-      </div>
 
       <div className="content-section">
         <div className="section-header">

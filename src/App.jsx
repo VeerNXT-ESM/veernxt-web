@@ -10,6 +10,8 @@ import LearningCenter from './pages/LearningCenter';
 import FinancialGuidance from './pages/FinancialGuidance';
 import SecureReader from './components/SecureReader';
 import Footer from './components/Footer';
+import AdminJobs from './pages/admin/AdminJobs';
+import PublicJobs from './pages/PublicJobs';
 
 // New Legal Pages
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -35,6 +37,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/learning-center" element={<LearningCenter />} />
           <Route path="/financial-guidance" element={<FinancialGuidance />} />
+          <Route path="/jobs" element={<PublicJobs />} />
           <Route path="/reader/:id" element={<SecureReader />} />
           <Route path="/quiz/:id" element={<InteractiveQuiz />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
@@ -47,6 +50,7 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
+        <Route path="/admin/jobs" element={<AdminJobs />} />
 
         {/* Redirect root to dashboard */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
