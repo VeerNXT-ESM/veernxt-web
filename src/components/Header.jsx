@@ -17,9 +17,7 @@ const Header = () => {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'between' }}>
         <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
           <Link to="/dashboard" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'inherit' }}>
-            <div style={{ width: '32px', height: '32px', background: 'var(--ios-olive)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>
-              V
-            </div>
+            <img src="/logo.png" alt="VeerNXT" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
             <span style={{ fontSize: '1.25rem', fontWeight: '700', letterSpacing: '-0.02em' }}>VeerNXT</span>
           </Link>
         </div>

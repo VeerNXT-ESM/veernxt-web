@@ -60,9 +60,7 @@ const Login = () => {
     }}>
       <div className="ios-card animate-fade-in" style={{ padding: '3.5rem 2.5rem', maxWidth: '420px', width: '100%', textAlign: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
-          <div style={{ width: '48px', height: '48px', background: 'var(--ios-olive)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold', fontSize: '1.5rem' }}>
-            V
-          </div>
+          <img src="/logo.png" alt="VeerNXT" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
         </div>
         
         <h2 style={{ fontSize: '1.75rem', tracking: '-0.03em', marginBottom: '0.5rem' }}>VeerNXT App</h2>
