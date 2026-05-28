@@ -158,7 +158,7 @@ const AdminLogin = () => {
           align-items: center;
           justify-content: center;
           background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1F3A2E 100%);
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
           padding: 1.5rem;
         }
 

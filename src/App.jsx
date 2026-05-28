@@ -12,6 +12,8 @@ import SecureReader from './components/SecureReader';
 import Footer from './components/Footer';
 import AdminJobs from './pages/admin/AdminJobs';
 import PublicJobs from './pages/PublicJobs';
+import FindCandidates from './pages/FindCandidates';
+import MessagingWorkspace from './components/MessagingWorkspace';
 
 // New Legal Pages
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -38,6 +40,8 @@ function App() {
           <Route path="/learning-center" element={<LearningCenter />} />
           <Route path="/financial-guidance" element={<FinancialGuidance />} />
           <Route path="/jobs" element={<PublicJobs />} />
+          <Route path="/find-candidates" element={<FindCandidates />} />
+          <Route path="/messaging" element={<MessagingWorkspace />} />
           <Route path="/reader/:id" element={<SecureReader />} />
           <Route path="/quiz/:id" element={<InteractiveQuiz />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

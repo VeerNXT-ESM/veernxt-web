@@ -70,21 +70,23 @@ const Profiling = () => {
       }
 
       // 2. Pre-fill from existing profile table
-      const userId = session?.user?.id || '00000000-0000-0000-0000-000000000000';
-      const { data: profile } = await supabase
-        .from('user_profiles')
-        .select('*')
-        .eq('id', userId)
-        .single();
+      const userId = session?.user?.id;
+      if (userId && userId !== '00000000-0000-0000-0000-000000000000') {
+        const { data: profile } = await supabase
+          .from('user_profiles')
+          .select('*')
+          .eq('id', userId)
+          .single();
 
-      if (profile && profile.raw_profile_data) {
-        console.log("Pre-filling with existing profile data:", profile.raw_profile_data);
-        setFormData(prev => ({
-          ...prev,
-          ...profile.raw_profile_data,
-          // Ensure display names match what's in the table if they differ
-          fullName: profile.full_name || profile.raw_profile_data.fullName
-        }));
+        if (profile && profile.raw_profile_data) {
+          console.log("Pre-filling with existing profile data:", profile.raw_profile_data);
+          setFormData(prev => ({
+            ...prev,
+            ...profile.raw_profile_data,
+            // Ensure display names match what's in the table if they differ
+            fullName: profile.full_name || profile.raw_profile_data.fullName
+          }));
+        }
       }
     };
     fetchUser();
@@ -158,22 +160,26 @@ const Profiling = () => {
       if (!recommendResponse.data.ok) throw new Error(recommendResponse.data.error || 'Failed to get recommendations');
       const resultsData = recommendResponse.data;
 
-      const { error } = await supabase
-        .from('user_profiles')
-        .upsert({
-          id: session.user.id,
-          full_name: formData.fullName,
-          service_branch: formData.serviceBranch,
-          years_of_service: parseInt(formData.totalServiceDuration) || 0,
-          education_level: formData.highestQualification,
-          profile_data: formData,
-          recommendations: resultsData.recommendations,
-          veer_score: resultsData.summary?.overall_match_score || 0,
-          profiling_completed: true,
-          updated_at: new Date().toISOString()
-        });
+      if (session.user.id && session.user.id !== '00000000-0000-0000-0000-000000000000') {
+        const { error } = await supabase
+          .from('user_profiles')
+          .upsert({
+            id: session.user.id,
+            full_name: formData.fullName,
+            service_branch: formData.serviceBranch,
+            years_of_service: parseInt(formData.totalServiceDuration) || 0,
+            education_level: formData.highestQualification,
+            profile_data: formData,
+            recommendations: resultsData.recommendations,
+            veer_score: resultsData.summary?.overall_match_score || 0,
+            profiling_completed: true,
+            updated_at: new Date().toISOString()
+          });
 
-      if (error) throw error;
+        if (error) throw error;
+      } else {
+        console.warn("Mock session: skipped upserting profile to Supabase.");
+      }
       navigate('/dashboard');
     } catch (error) {
       console.error('Error submitting profile:', error);

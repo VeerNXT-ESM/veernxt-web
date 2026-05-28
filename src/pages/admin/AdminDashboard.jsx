@@ -1199,7 +1199,7 @@ const AdminDashboard = () => {
           max-width: 1400px;
           margin: 0 auto;
           padding: 0 2.5rem 2rem;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         
         /* Mimic main app header style */
@@ -1229,7 +1229,7 @@ const AdminDashboard = () => {
           flex-shrink: 0;
         }
         .logo-img {
-          height: 80px; /* Large beautiful logo just like the main app header */
+          height: 92px; /* 15% larger logo size */
           width: auto;
           object-fit: contain;
           border-radius: 4px;

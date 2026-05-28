@@ -78,7 +78,7 @@ const Dashboard = () => {
         const { data: { session } } = await supabase.auth.getSession();
         let data = null;
         
-        if (session) {
+        if (session && session.user.id !== '00000000-0000-0000-0000-000000000000') {
           const { data: profileData, error } = await supabase
             .from('user_profiles')
             .select('*')
@@ -158,16 +158,20 @@ const Dashboard = () => {
       const response = await axios.post(`${ENGINE_URL}/api/recommend`, profile.profile_data);
       
       if (response.data.ok) {
-        const { error } = await supabase
-          .from('user_profiles')
-          .update({
-            recommendations: response.data.recommendations,
-            veer_score: response.data.summary?.overall_match_score || 0,
-            updated_at: new Date().toISOString()
-          })
-          .eq('id', profile.id);
+        if (profile.id !== '00000000-0000-0000-0000-000000000000') {
+          const { error } = await supabase
+            .from('user_profiles')
+            .update({
+              recommendations: response.data.recommendations,
+              veer_score: response.data.summary?.overall_match_score || 0,
+              updated_at: new Date().toISOString()
+            })
+            .eq('id', profile.id);
 
-        if (error) throw error;
+          if (error) throw error;
+        } else {
+          console.warn("Mock profile recalculate: skipped database update.");
+        }
         window.location.reload(); // Refresh to show new results
       }
     } catch (err) {

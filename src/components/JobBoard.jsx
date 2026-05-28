@@ -3,7 +3,7 @@ import axios from 'axios';
 import { 
   Briefcase, Calendar, ExternalLink, RefreshCw, Search, AlertCircle, Clock, 
   MapPin, ArrowLeft, ChevronLeft, ChevronRight, X, Sliders, Bookmark, 
-  BarChart2, CheckCircle2, Award, ChevronDown 
+  BarChart2, CheckCircle2, Award, ChevronDown, Sparkles
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -29,7 +29,11 @@ const JobBoard = ({ isAdmin = false }) => {
     try {
       const response = await axios.get(`${ENGINE_URL}/api/jobs`);
       if (response.data.ok) {
-        setJobs(response.data.jobs);
+        const loadedJobs = response.data.jobs || [];
+        setJobs(loadedJobs);
+        if (loadedJobs.length > 0) {
+          setSelectedJob(loadedJobs[0]);
+        }
       }
     } catch (err) {
       console.error('Failed to fetch jobs:', err);
@@ -46,7 +50,7 @@ const JobBoard = ({ isAdmin = false }) => {
     const fetchProfile = async () => {
       try {
         const { data: { session } } = await supabase.auth.getSession();
-        if (session) {
+        if (session && session.user.id !== '00000000-0000-0000-0000-000000000000') {
           const { data } = await supabase
             .from('user_profiles')
             .select('*')
@@ -344,201 +348,154 @@ const JobBoard = ({ isAdmin = false }) => {
           )}
         </div>
       ) : (
-        /* Transitioning Agniveer Two-Column Layout for Candidate */
-        <div className="linkedin-layout">
-          {/* Left Column: Sidebar */}
-          <div className="linkedin-sidebar">
-            {/* Profile Card */}
-            <div className="linkedin-card profile-card">
-              <div className="profile-cover"></div>
-              <div className="profile-avatar-container">
-                <div className="profile-avatar">
-                  <span className="avatar-initials">
-                    {getInitials(userProfileName)}
-                  </span>
-                </div>
-              </div>
-              <div className="profile-info">
-                <h2 className="profile-name">{userProfileName}</h2>
-                <p className="profile-headline">{getProfileHeadline()}</p>
-                <p className="profile-location">{getProfileLocation()}</p>
-                
-                {profileData?.veer_score !== undefined && (
-                  <div className="profile-score-badge animate-fade-in">
-                    <span className="score-label">Veer Score</span>
-                    <span className="score-value">{Math.round(profileData.veer_score)}</span>
-                  </div>
-                )}
-              </div>
-            </div>
+        /* Restructured Agniveer Split-Screen Layout: Left Related Feed, Right Detail Review Sheet */
+        <div className="candidate-splitscreen-workspace">
+          {/* Left Column: Related / Available Jobs List */}
+          <div className="splitscreen-left-list">
+            <h3 className="section-small-title">JOBS FOR YOU</h3>
+            <div className="scrollable-jobs-feed">
+              {filteredJobs.length > 0 ? (
+                filteredJobs.map((job, idx) => {
+                  const jobId = job.id || job._id || job.title;
+                  const isActive = (selectedJob?.id || selectedJob?._id || selectedJob?.title) === jobId;
+                  
+                  return (
+                    <div 
+                      key={idx} 
+                      className={`splitscreen-job-feed-card ${isActive ? 'active' : ''}`}
+                      onClick={() => setSelectedJob(job)}
+                    >
+                      <div className="splitscreen-card-header">
+                        <div className="mini-company-avatar" style={{ backgroundColor: getAvatarColor(job.body) }}>
+                          {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
+                        </div>
+                        <div className="card-header-right">
+                          <h4 className="job-feed-card-title">{job.title}</h4>
+                          <p className="job-feed-card-company">{job.body}</p>
+                          <p className="job-feed-card-location">Chennai (On-site)</p>
+                        </div>
+                        <button className="card-dismiss-btn" onClick={(e) => { e.stopPropagation(); dismissJob(jobId); }}>
+                          <X size={14} />
+                        </button>
+                      </div>
 
-            {/* Footer Links */}
-            <div className="linkedin-sidebar-footer">
-              <div className="footer-links-grid">
-                <span>About</span>
-                <span>Accessibility</span>
-                <span>Help Center</span>
-                <span>Privacy & Terms</span>
-                <span>Support</span>
-                <span>More</span>
-              </div>
-              <div className="footer-copyright">
-                <span>VeerNXT © 2026</span>
-              </div>
+                      {/* Matching Insight Badges */}
+                      <div style={{ display: 'flex', gap: '0.35rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+                        {idx % 3 === 0 && (
+                          <div className="mini-insight-badge active">
+                            <Award size={10} />
+                            <span>Actively reviewing</span>
+                          </div>
+                        )}
+                        <span className="mini-time-text">
+                          {job.publishedOn ? calculateDaysAgo(job.publishedOn) : '2 weeks ago'}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })
+              ) : (
+                <div style={{ padding: '2rem', textAlign: 'center', color: '#666' }}>
+                  No available jobs matching search.
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Right Column: Feed / Job Board */}
-          <div className="linkedin-feed">
-            {/* Card 1: Jobs that match your profile */}
-            <div className="linkedin-card feed-card">
-              <div className="card-header-section">
-                <h2 className="feed-card-title">Jobs that match your profile</h2>
-                <p className="feed-card-subtitle">Based on your military profile criteria and transition goals</p>
-              </div>
-
-              <div className="feed-job-list">
-                {profileMatchedJobs.length > 0 ? (
-                  profileMatchedJobs.map((job, idx) => {
-                    const jobId = job.id || job._id || job.title;
-                    return (
-                      <div key={idx} className="feed-job-row animate-fade-in" onClick={() => setSelectedJob(job)}>
-                        <div className="feed-job-left">
-                          <div className="company-avatar-circle" style={{ backgroundColor: getAvatarColor(job.body) }}>
-                            {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
-                          </div>
-                          <div className="feed-job-details">
-                            <h3 className="feed-job-title-link">{job.title}</h3>
-                            <p className="feed-job-company">{job.body} • {job.vacancies ? `${job.vacancies} vacancies` : 'India'}</p>
-                            
-                            {/* Heuristic Insight Badges */}
-                            {idx % 3 === 0 ? (
-                              <div className="insight-badge gold">
-                                <Award size={14} className="insight-icon" />
-                                <span>Ideal Agniveer Match</span>
-                              </div>
-                            ) : idx % 3 === 1 ? (
-                              <div className="insight-badge green">
-                                <CheckCircle2 size={14} className="insight-icon" />
-                                <span>Actively reviewing applicants</span>
-                              </div>
-                            ) : null}
-
-                            <p className="feed-job-time">
-                              {job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent'} 
-                            </p>
-                          </div>
-                        </div>
-                        <button className="dismiss-job-btn" onClick={(e) => { e.stopPropagation(); dismissJob(jobId); }}>
-                          <X size={16} />
-                        </button>
-                      </div>
-                    );
-                  })
-                ) : (
-                  <div className="no-jobs-feed">
-                    <Search size={32} color="#ccc" />
-                    <p>No profile matching jobs found. Try adjusting search filters.</p>
+          {/* Right Column: Premium Interactive Job Detail Sheet & Company Insights */}
+          <div className="splitscreen-right-detail-sheet">
+            {selectedJob ? (
+              <div className="premium-job-detail-card animate-fade-in">
+                {/* Header Section */}
+                <div className="detail-card-header">
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <div className="large-company-logo" style={{ backgroundColor: getAvatarColor(selectedJob.body) }}>
+                      {selectedJob.body ? selectedJob.body.substring(0, 2).toUpperCase() : 'JO'}
+                    </div>
+                    <div>
+                      <h2 className="premium-job-headline-title">{selectedJob.title}</h2>
+                      <p className="premium-job-subtitle-line">
+                        {selectedJob.body} • Chennai, Tamil Nadu, India • {selectedJob.publishedOn ? calculateDaysAgo(selectedJob.publishedOn) : '2 weeks ago'}
+                      </p>
+                    </div>
                   </div>
-                )}
-              </div>
-
-              {profileMatchedList.length > 4 && (
-                <div className="feed-card-footer" onClick={() => setShowAllProfileMatched(!showAllProfileMatched)}>
-                  <span>{showAllProfileMatched ? 'Show less' : 'Show all matched'}</span>
-                  <ArrowLeft size={16} style={{ transform: showAllProfileMatched ? 'rotate(90deg)' : 'rotate(270deg)', transition: 'transform 0.2s' }} />
-                </div>
-              )}
-            </div>
-
-            {/* Card 2: More jobs for you */}
-            <div className="linkedin-card feed-card">
-              <div className="card-header-section">
-                <h2 className="feed-card-title">More jobs for you</h2>
-                <p className="feed-card-subtitle">Based on your preferences and general recruitment criteria</p>
-              </div>
-
-              <div className="feed-job-list">
-                {paginatedMoreJobs.length > 0 ? (
-                  paginatedMoreJobs.map((job, idx) => {
-                    const jobId = job.id || job._id || job.title;
-                    return (
-                      <div key={idx} className="feed-job-row animate-fade-in" onClick={() => setSelectedJob(job)}>
-                        <div className="feed-job-left">
-                          <div className="company-avatar-circle" style={{ backgroundColor: getAvatarColor(job.body) }}>
-                            {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
-                          </div>
-                          <div className="feed-job-details">
-                            <h3 className="feed-job-title-link">{job.title}</h3>
-                            <p className="feed-job-company">{job.body} • {job.vacancies ? `${job.vacancies} vacancies` : 'India'}</p>
-                            
-                            {idx % 3 === 0 && (
-                              <div className="insight-badge green">
-                                <CheckCircle2 size={14} className="insight-icon" />
-                                <span>Actively reviewing applicants</span>
-                              </div>
-                            )}
-
-                            <p className="feed-job-time">
-                              {job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent'} 
-                            </p>
-                          </div>
-                        </div>
-                        <button className="dismiss-job-btn" onClick={(e) => { e.stopPropagation(); dismissJob(jobId); }}>
-                          <X size={16} />
-                        </button>
-                      </div>
-                    );
-                  })
-                ) : (
-                  <div className="no-jobs-feed">
-                    <Search size={32} color="#ccc" />
-                    <p>No additional jobs found matching search.</p>
-                  </div>
-                )}
-              </div>
-
-              {/* Feed Pagination */}
-              {moreJobsTotalPages > 1 && (
-                <div className="pagination-bar" style={{ padding: '1rem', borderTop: '1px solid #f1f5f9' }}>
-                  <button 
-                    className="pagination-btn" 
-                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                    disabled={currentPage === 1}
-                  >
-                    <ChevronLeft size={14} />
-                    <span>Previous</span>
-                  </button>
                   
-                  <div className="pagination-pages">
-                    {Array.from({ length: moreJobsTotalPages }, (_, i) => i + 1).map(page => (
-                      <button
-                        key={page}
-                        className={`pagination-page-btn ${currentPage === page ? 'active' : ''}`}
-                        onClick={() => setCurrentPage(page)}
-                      >
-                        {page}
-                      </button>
-                    ))}
+                  <div className="detail-actions-row" style={{ marginTop: '1.25rem' }}>
+                    <span className="fulltime-badge">✓ Full-time</span>
+                    <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
+                      {selectedJob.url ? (
+                        <a href={selectedJob.url} target="_blank" rel="noopener noreferrer" className="btn-primary ios-pill premium-apply-btn">
+                          Apply <ExternalLink size={14} />
+                        </a>
+                      ) : (
+                        <button className="btn-primary ios-pill premium-apply-btn" onClick={() => alert('Application successfully submitted!')}>
+                          Easy Apply
+                        </button>
+                      )}
+                      <button className="btn-secondary ios-pill premium-save-btn">Save</button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Match & Stands Out interactive cards block */}
+                <div className="premium-match-n-stand-out-block">
+                  <h4 className="block-title">Determine your fit and how to stand out</h4>
+                  <div className="chips-row">
+                    <button className="insight-chip"><Sparkles size={14} /> Show match details</button>
+                    <button className="insight-chip"><Sliders size={14} /> Tailor my resume</button>
+                    <button className="insight-chip"><Award size={14} /> Help me stand out</button>
+                  </div>
+                </div>
+
+                {/* About the Job section */}
+                <div className="premium-about-job-section">
+                  <h3 className="section-header-title">About the job</h3>
+                  <div className="requisition-details-grid">
+                    <p><strong>REQUISITION ID:</strong> {selectedJob.id || '11766'}</p>
+                    <p><strong>LOCATION:</strong> Chennai (On-site)</p>
+                    <p><strong>DEPARTMENTS:</strong> Service Technical Backoffice & Operations Support</p>
+                    <p style={{ marginTop: '0.5rem', color: '#4b5563' }}>
+                      {selectedJob.notes || 'This post represents transition pathway recommendations for active Agniveers having strong aptitude, leadership indices, and physical endurance.'}
+                    </p>
+                  </div>
+                </div>
+
+                {/* About the Company section */}
+                <div className="premium-about-company-section">
+                  <h3 className="section-header-title">About the company</h3>
+                  <div className="company-branding-header">
+                    <div className="small-company-logo" style={{ backgroundColor: getAvatarColor(selectedJob.body) }}>
+                      {selectedJob.body ? selectedJob.body.substring(0, 2).toUpperCase() : 'JO'}
+                    </div>
+                    <div>
+                      <h4 className="company-name-bold">{selectedJob.body}</h4>
+                      <p className="company-followers">351,889 followers</p>
+                    </div>
+                    <button className="btn-secondary ios-pill follow-company-btn">+ Follow</button>
                   </div>
 
-                  <button 
-                    className="pagination-btn" 
-                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, moreJobsTotalPages))}
-                    disabled={currentPage === moreJobsTotalPages}
-                  >
-                    <span>Next</span>
-                    <ChevronRight size={14} />
-                  </button>
+                  <p className="company-meta-bullets">
+                    Renewable Energy Equipment Manufacturing • 10,001+ employees • 7,696 on VeerNXT
+                  </p>
+                  
+                  <p className="company-description-paragraph">
+                    The development, manufacture, project management, and servicing of turbines has been the core competence and passion of our corporate group and its more than 10,900 employees worldwide for over 40 years. We actively welcome Ex-Servicemen and transitioning Agniveers under specialized reservation quotas.
+                  </p>
                 </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <div className="empty-right-details-placeholder">
+                <Briefcase size={48} style={{ opacity: 0.2 }} />
+                <h3>No Job Selected</h3>
+                <p>Select any vacancy card from the left panel to review comprehensive job details and company credentials.</p>
+              </div>
+            )}
           </div>
         </div>
       )}
 
       {/* Details View Modal inside the Admin Panel */}
-      {selectedJob && (
+      {isAdmin && selectedJob && (
         <div className="modal-overlay animate-fade-in" onClick={() => setSelectedJob(null)}>
           <div className="details-modal" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
@@ -1454,6 +1411,322 @@ const JobBoard = ({ isAdmin = false }) => {
           .jobs-grid { grid-template-columns: 1fr; }
         }
 
+        /* Restructured Splitscreen candidate feed and detail pane layout styles */
+        .candidate-splitscreen-workspace {
+          display: grid;
+          grid-template-columns: 380px 1fr;
+          gap: 2rem;
+          margin-top: 1.5rem;
+          align-items: start;
+          height: calc(100vh - 280px);
+        }
+        .splitscreen-left-list {
+          display: flex;
+          flex-direction: column;
+          background: white;
+          border-radius: 20px;
+          border: 1px solid #f1f5f9;
+          height: 100%;
+          overflow: hidden;
+          padding: 1.25rem 0.5rem;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+        .section-small-title {
+          font-size: 0.72rem;
+          font-weight: 800;
+          color: #475569;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 0.75rem;
+          padding: 0 0.75rem;
+        }
+        .scrollable-jobs-feed {
+          flex: 1;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding-right: 0.25rem;
+        }
+        .splitscreen-job-feed-card {
+          padding: 1rem;
+          background: white;
+          border-radius: 12px;
+          border: 1.5px solid #f1f5f9;
+          cursor: pointer;
+          transition: all 0.2s;
+          position: relative;
+        }
+        .splitscreen-job-feed-card:hover {
+          background: #fafafa;
+          border-color: #e2e8f0;
+        }
+        .splitscreen-job-feed-card.active {
+          background: #eef2eb;
+          border-color: #d7e6d0;
+        }
+        .splitscreen-card-header {
+          display: flex;
+          gap: 0.75rem;
+          position: relative;
+        }
+        .mini-company-avatar {
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: 800;
+          font-size: 0.8rem;
+          flex-shrink: 0;
+        }
+        .card-header-right {
+          flex: 1;
+          min-width: 0;
+          text-align: left;
+        }
+        .job-feed-card-title {
+          font-size: 0.88rem;
+          font-weight: 850;
+          color: #0f172a;
+          line-height: 1.3;
+          margin: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .job-feed-card-company {
+          font-size: 0.75rem;
+          color: #64748b;
+          font-weight: 600;
+          margin-top: 0.15rem;
+        }
+        .job-feed-card-location {
+          font-size: 0.7rem;
+          color: #94a3b8;
+        }
+        .card-dismiss-btn {
+          background: none;
+          border: none;
+          color: #94a3b8;
+          cursor: pointer;
+          align-self: flex-start;
+          padding: 2px;
+          border-radius: 4px;
+        }
+        .card-dismiss-btn:hover {
+          background: #f1f5f9;
+          color: #0f172a;
+        }
+        .mini-insight-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25rem;
+          font-size: 0.65rem;
+          font-weight: 800;
+          padding: 0.15rem 0.4rem;
+          border-radius: 4px;
+        }
+        .mini-insight-badge.active {
+          background: #ecfdf5;
+          color: #047857;
+        }
+        .mini-time-text {
+          font-size: 0.65rem;
+          color: #94a3b8;
+          margin-left: auto;
+          align-self: center;
+        }
+
+        .splitscreen-right-detail-sheet {
+          background: white;
+          border-radius: 20px;
+          border: 1px solid #f1f5f9;
+          height: 100%;
+          overflow-y: auto;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+        .premium-job-detail-card {
+          padding: 2rem;
+          text-align: left;
+        }
+        .detail-card-header {
+          border-bottom: 1px solid #f1f5f9;
+          padding-bottom: 1.5rem;
+        }
+        .large-company-logo {
+          width: 56px;
+          height: 56px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.25rem;
+          font-weight: 850;
+        }
+        .premium-job-headline-title {
+          font-size: 1.5rem;
+          font-weight: 850;
+          color: #0f172a;
+          letter-spacing: -0.02em;
+          margin: 0;
+        }
+        .premium-job-subtitle-line {
+          font-size: 0.85rem;
+          color: #64748b;
+          font-weight: 600;
+          margin-top: 0.25rem;
+        }
+        .fulltime-badge {
+          font-size: 0.72rem;
+          background: #f1f5f9;
+          color: #475569;
+          font-weight: 800;
+          padding: 0.25rem 0.6rem;
+          border-radius: 6px;
+        }
+        .premium-apply-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.88rem;
+          padding: 0.6rem 1.5rem;
+        }
+        .premium-save-btn {
+          font-size: 0.88rem;
+          padding: 0.6rem 1.5rem;
+          border: 1.5px solid #1F3A2E;
+          background: transparent;
+          color: #1F3A2E;
+        }
+        .premium-save-btn:hover {
+          background: rgba(31,58,46,0.05);
+        }
+        .premium-match-n-stand-out-block {
+          background: #fffbeb;
+          border: 1px solid #fef3c7;
+          border-radius: 16px;
+          padding: 1.25rem;
+          margin-top: 1.5rem;
+        }
+        .block-title {
+          font-size: 0.85rem;
+          font-weight: 800;
+          color: #b45309;
+          margin: 0 0 0.75rem 0;
+        }
+        .chips-row {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+        }
+        .insight-chip {
+          background: white;
+          border: 1px solid #fde68a;
+          color: #78350f;
+          padding: 0.4rem 0.85rem;
+          border-radius: 99px;
+          font-size: 0.78rem;
+          font-weight: 700;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          transition: background 0.2s;
+        }
+        .insight-chip:hover {
+          background: #fffbeb;
+        }
+        .premium-about-job-section, .premium-about-company-section {
+          margin-top: 2rem;
+          border-top: 1px solid #f1f5f9;
+          padding-top: 1.5rem;
+        }
+        .section-header-title {
+          font-size: 1.1rem;
+          font-weight: 850;
+          color: #0f172a;
+          margin-bottom: 1rem;
+        }
+        .requisition-details-grid {
+          font-size: 0.88rem;
+          color: #334155;
+          line-height: 1.6;
+        }
+        .company-branding-header {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 1rem;
+        }
+        .small-company-logo {
+          width: 42px;
+          height: 42px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: 800;
+          font-size: 0.95rem;
+        }
+        .company-name-bold {
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: #0f172a;
+          margin: 0;
+        }
+        .company-followers {
+          font-size: 0.75rem;
+          color: #64748b;
+        }
+        .follow-company-btn {
+          margin-left: auto;
+          font-size: 0.8rem;
+          padding: 0.4rem 1.25rem;
+          border: 1.5px solid #1F3A2E;
+          background: transparent;
+          color: #1F3A2E;
+        }
+        .company-meta-bullets {
+          font-size: 0.8rem;
+          color: #64748b;
+          font-weight: 600;
+          margin-bottom: 0.75rem;
+        }
+        .company-description-paragraph {
+          font-size: 0.88rem;
+          line-height: 1.6;
+          color: #334155;
+        }
+        .empty-right-details-placeholder {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          color: #94a3b8;
+          padding: 4rem;
+          text-align: center;
+        }
+        .empty-right-details-placeholder h3 {
+          margin-top: 1rem;
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 900px) {
+          .candidate-splitscreen-workspace {
+            grid-template-columns: 1fr;
+            height: auto;
+          }
+          .splitscreen-left-list {
+            max-height: 350px;
+          }
+        }
       `}} />
     </div>
   );

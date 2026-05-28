@@ -14,9 +14,16 @@ const Header = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const { data } = await supabase.from('user_profiles').select('full_name').limit(1);
-        if (data && data[0]?.full_name) {
-          setUserProfileName(data[0].full_name);
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session && session.user.id !== '00000000-0000-0000-0000-000000000000') {
+          const { data } = await supabase
+            .from('user_profiles')
+            .select('full_name')
+            .eq('id', session.user.id)
+            .single();
+          if (data && data.full_name) {
+            setUserProfileName(data.full_name);
+          }
         }
       } catch (e) {
         console.warn("Could not load user profile for header name");
@@ -40,27 +47,32 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Right Side: LinkedIn-styled Navigation links */}
+        {/* Right Side: LinkedIn-styled Navigation links (Icon only with active indicator lines) */}
         <div className="header-right">
-          <Link to="/dashboard" className={`nav-link-item ${window.location.pathname === '/dashboard' ? 'active' : ''}`}>
-            <Home size={20} />
-            <span>Home</span>
+          <Link to="/dashboard" className={`nav-link-item ${window.location.pathname === '/dashboard' ? 'active' : ''}`} title="Home">
+            <Home size={22} />
           </Link>
 
-          <Link to="/learning-center" className={`nav-link-item ${window.location.pathname === '/learning-center' ? 'active' : ''}`}>
-            <Users size={20} />
-            <span>Learning</span>
+          <Link to="/learning-center" className={`nav-link-item ${window.location.pathname === '/learning-center' ? 'active' : ''}`} title="Learning">
+            <Users size={22} />
           </Link>
 
-          <Link to="/jobs" className={`nav-link-item ${window.location.pathname === '/jobs' ? 'active' : ''}`}>
-            <Briefcase size={20} />
+          <Link to="/jobs" className={`nav-link-item ${window.location.pathname === '/jobs' ? 'active' : ''}`} title="Jobs">
+            <Briefcase size={22} />
             <span className="dot-badge"></span>
-            <span>Jobs</span>
           </Link>
 
-          <Link to="/financial-guidance" className={`nav-link-item ${window.location.pathname === '/financial-guidance' ? 'active' : ''}`}>
-            <Landmark size={20} />
-            <span>Finance</span>
+          <Link to="/find-candidates" className={`nav-link-item ${window.location.pathname === '/find-candidates' ? 'active' : ''}`} title="Find Candidates">
+            <Search size={22} />
+          </Link>
+
+          <Link to="/messaging" className={`nav-link-item ${window.location.pathname === '/messaging' ? 'active' : ''}`} title="Messages">
+            <MessageSquare size={22} />
+            <span className="dot-badge" style={{ backgroundColor: '#fbbf24' }}></span>
+          </Link>
+
+          <Link to="/financial-guidance" className={`nav-link-item ${window.location.pathname === '/financial-guidance' ? 'active' : ''}`} title="Finance">
+            <Landmark size={22} />
           </Link>
 
           {/* User Profile / Dropdown */}
@@ -114,14 +126,14 @@ const Header = () => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .linkedin-header {
-          background: white;
-          border-bottom: 1px solid #eef3f8;
+          background: #FFFFFF; /* Pure white header background */
+          border-bottom: 1px solid #e2e8f0;
           position: sticky;
           top: 0;
           z-index: 100;
           width: 100%;
           font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-          padding: 1.5rem 0 1rem; /* Header top padding and bottom padding */
+          padding: 1rem 0; /* Tightened layout spacing */
           display: flex;
           align-items: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.02);
@@ -143,7 +155,7 @@ const Header = () => {
           flex-shrink: 0;
         }
         .logo-img {
-          height: 96px; /* 3 times 32px size, making logo 3x larger! */
+          height: 74px; /* 15% larger logo size */
           width: auto;
           object-fit: contain;
           border-radius: 4px;
@@ -152,7 +164,7 @@ const Header = () => {
         .header-right {
           display: flex;
           align-items: center;
-          gap: 1.25rem;
+          gap: 1.5rem;
           height: 100%;
         }
         .nav-link-item {
@@ -160,30 +172,35 @@ const Header = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          color: #666;
+          color: #64748b;
           text-decoration: none;
-          font-size: 0.75rem;
-          font-weight: 550;
-          gap: 0.25rem;
-          padding: 0.5rem 0.75rem;
+          padding: 0.75rem 0.5rem;
           cursor: pointer;
           position: relative;
           transition: all 0.15s;
-          border-bottom: 2px solid transparent;
         }
         .nav-link-item:hover {
-          color: #191919;
+          color: #0f172a;
         }
         .nav-link-item.active {
-          color: #191919;
-          border-bottom: 2px solid #1F3A2E; /* VeerNXT active green active line */
+          color: #1F3A2E;
+        }
+        .nav-link-item.active::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 10%;
+          right: 10%;
+          height: 3px;
+          background: #1F3A2E; /* VeerNXT active green active line */
+          border-radius: 99px;
         }
         .dot-badge {
           position: absolute;
-          top: 4px;
-          right: 18px;
-          width: 8px;
-          height: 8px;
+          top: 6px;
+          right: 2px;
+          width: 6px;
+          height: 6px;
           background: #ef4444;
           border-radius: 50%;
         }
