@@ -92,7 +92,7 @@ const Dashboard = () => {
         } else {
           // Fallback to mock profile for dummy testing
           setProfile({
-            full_name: 'Test Veer',
+            full_name: 'Rahul Kumar',
             veer_score: 92,
             profiling_completed: true,
             recommendations: [

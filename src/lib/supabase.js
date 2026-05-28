@@ -9,7 +9,7 @@ const client = createClient(supabaseUrl, supabaseAnonKey);
 const mockUser = {
   id: '00000000-0000-0000-0000-000000000000',
   email: 'test@veernxt.in',
-  user_metadata: { full_name: 'Test Veer' }
+  user_metadata: { full_name: 'Rahul Kumar' }
 };
 
 const mockSession = {

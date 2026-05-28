@@ -10,12 +10,30 @@ const LearningCenter = () => {
   const [loading, setLoading] = useState(true);
   
   // Filters
-  const [selectedExam, setSelectedExam] = useState('all');
+  const [selectedExams, setSelectedExams] = useState(['all']);
   const [searchQuery, setSearchQuery] = useState('');
   
   // Sidebar Checkboxes
   const [showResources, setShowResources] = useState(true);
   const [showQuizzes, setShowQuizzes] = useState(true);
+
+  const handleExamCheckboxChange = (examName) => {
+    setSelectedExams(prev => {
+      if (examName === 'all') {
+        return ['all'];
+      }
+      let newSelection = prev.filter(e => e !== 'all');
+      if (newSelection.includes(examName)) {
+        newSelection = newSelection.filter(e => e !== examName);
+      } else {
+        newSelection.push(examName);
+      }
+      if (newSelection.length === 0) {
+        return ['all'];
+      }
+      return newSelection;
+    });
+  };
 
   useEffect(() => {
     const fetchInitialData = async () => {
@@ -44,9 +62,9 @@ const LearningCenter = () => {
       let resQuery = supabase.from('resources').select('*');
       let quizQuery = supabase.from('quizzes').select('*');
 
-      if (selectedExam !== 'all') {
-        resQuery = resQuery.eq('exam_name', selectedExam);
-        quizQuery = quizQuery.eq('exam_name', selectedExam);
+      if (!selectedExams.includes('all')) {
+        resQuery = resQuery.in('exam_name', selectedExams);
+        quizQuery = quizQuery.in('exam_name', selectedExams);
       }
 
       if (searchQuery) {
@@ -74,7 +92,7 @@ const LearningCenter = () => {
       fetchContent();
     }, 500);
     return () => clearTimeout(timer);
-  }, [searchQuery, selectedExam]);
+  }, [searchQuery, selectedExams]);
 
   const renderCard = (item, type) => {
     const isPremium = item.is_locked;
@@ -113,7 +131,7 @@ const LearningCenter = () => {
         <div className="course-content">
           <div className="course-tags">
             <span className="tag-light">{item.subject || 'General'}</span>
-            <span className="tag-blue">{item.category || (type === 'resource' ? 'Study Material' : 'Mock Test')}</span>
+            <span className="tag-olive">{item.category || (type === 'resource' ? 'Study Material' : 'Mock Test')}</span>
             <Heart size={16} className="heart-icon" />
           </div>
 
@@ -144,7 +162,7 @@ const LearningCenter = () => {
                   <span className="price-discount">(66% off)</span>
                 </>
               ) : (
-                <span className="price-current" style={{ color: '#22c55e' }}>FREE</span>
+                <span className="price-current" style={{ color: '#4b6b32' }}>FREE</span>
               )}
             </div>
           </div>
@@ -155,27 +173,6 @@ const LearningCenter = () => {
 
   return (
     <div className="learning-wrapper">
-      {/* Top Navigation Tabs */}
-      <div className="top-nav-tabs">
-        <div className="tabs-container">
-          <button 
-            className={`tab-item ${selectedExam === 'all' ? 'active' : ''}`}
-            onClick={() => setSelectedExam('all')}
-          >
-            All Exams
-          </button>
-          {exams.map(exam => (
-            <button 
-              key={exam}
-              className={`tab-item ${selectedExam === exam ? 'active' : ''}`}
-              onClick={() => setSelectedExam(exam)}
-            >
-              {exam}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="learning-layout">
         {/* Left Sidebar */}
         <aside className="sidebar">
@@ -190,7 +187,8 @@ const LearningCenter = () => {
                   checked={showResources} 
                   onChange={(e) => setShowResources(e.target.checked)} 
                 />
-                Study Materials
+                <span className="checkbox-custom"></span>
+                <span className="checkbox-text">Study Materials</span>
               </label>
               <label className="checkbox-label">
                 <input 
@@ -198,28 +196,34 @@ const LearningCenter = () => {
                   checked={showQuizzes} 
                   onChange={(e) => setShowQuizzes(e.target.checked)} 
                 />
-                Mock Tests
+                <span className="checkbox-custom"></span>
+                <span className="checkbox-text">Mock Tests</span>
               </label>
             </div>
           </div>
 
           <div className="sidebar-section">
             <h4 className="filter-subtitle">Important Exams</h4>
-            <div className="exam-links">
-              <button 
-                className={`exam-link ${selectedExam === 'all' ? 'active' : ''}`}
-                onClick={() => setSelectedExam('all')}
-              >
-                All Exams
-              </button>
+            <div className="checkbox-filter-group">
+              <label className="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  checked={selectedExams.includes('all')} 
+                  onChange={() => handleExamCheckboxChange('all')} 
+                />
+                <span className="checkbox-custom"></span>
+                <span className="checkbox-text">All Exams</span>
+              </label>
               {exams.map(exam => (
-                <button 
-                  key={exam}
-                  className={`exam-link ${selectedExam === exam ? 'active' : ''}`}
-                  onClick={() => setSelectedExam(exam)}
-                >
-                  {exam} Coaching
-                </button>
+                <label key={exam} className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    checked={selectedExams.includes(exam)} 
+                    onChange={() => handleExamCheckboxChange(exam)} 
+                  />
+                  <span className="checkbox-custom"></span>
+                  <span className="checkbox-text">{exam}</span>
+                </label>
               ))}
             </div>
           </div>
@@ -229,10 +233,10 @@ const LearningCenter = () => {
         <main className="main-content">
           <div className="content-header">
             <h1 className="main-title">
-              {selectedExam === 'all' ? 'Government Exams' : selectedExam} Study Material 2026, Study Plan, Notes
+              {selectedExams.includes('all') ? 'Government Exams' : selectedExams.join(', ')} Study Material 2026, Study Plan, Notes
             </h1>
             <p className="main-subtitle">
-              Prepare effectively with the latest {selectedExam === 'all' ? '' : selectedExam} study notes and comprehensive mock tests.
+              Prepare effectively with the latest {selectedExams.includes('all') ? '' : selectedExams.join(', ')} study notes and comprehensive mock tests.
             </p>
             
             <div className="search-box">
@@ -257,7 +261,7 @@ const LearningCenter = () => {
               {showResources && resources.length > 0 && (
                 <div className="course-section">
                   <div className="section-header">
-                    <h2>{selectedExam === 'all' ? 'All' : selectedExam} Study Materials ({resources.length})</h2>
+                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Study Materials ({resources.length})</h2>
                     <button className="view-all">View All</button>
                   </div>
                   <div className="course-grid">
@@ -269,7 +273,7 @@ const LearningCenter = () => {
               {showQuizzes && quizzes.length > 0 && (
                 <div className="course-section">
                   <div className="section-header">
-                    <h2>{selectedExam === 'all' ? 'All' : selectedExam} Mock Tests ({quizzes.length})</h2>
+                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Mock Tests ({quizzes.length})</h2>
                     <button className="view-all">View All</button>
                   </div>
                   <div className="course-grid">
@@ -298,38 +302,6 @@ const LearningCenter = () => {
           font-family: 'Inter', system-ui, sans-serif;
         }
 
-        /* Top Nav Tabs */
-        .top-nav-tabs {
-          background: #fff;
-          border-bottom: 1px solid #e2e8f0;
-          position: sticky;
-          top: 64px; /* Adjust based on your App Navbar height */
-          z-index: 40;
-        }
-        .tabs-container {
-          max-width: 1400px;
-          margin: 0 auto;
-          display: flex;
-          overflow-x: auto;
-          scrollbar-width: none;
-          padding: 0 1rem;
-        }
-        .tabs-container::-webkit-scrollbar { display: none; }
-        .tab-item {
-          padding: 1rem 1.5rem;
-          white-space: nowrap;
-          color: #64748b;
-          font-weight: 600;
-          font-size: 0.9rem;
-          border-bottom: 3px solid transparent;
-          transition: all 0.2s;
-        }
-        .tab-item:hover { color: #1e293b; }
-        .tab-item.active {
-          color: #ef4444; /* Red accent matching screenshot */
-          border-bottom-color: #ef4444;
-        }
-
         /* Layout */
         .learning-layout {
           max-width: 1400px;
@@ -348,7 +320,7 @@ const LearningCenter = () => {
           gap: 2rem;
         }
         @media (max-width: 900px) {
-          .sidebar { display: none; } /* Hide on mobile for simplicity, could add a drawer later */
+          .sidebar { display: none; } /* Hide on mobile for simplicity */
         }
         .sidebar-section {
           background: #fff;
@@ -375,6 +347,8 @@ const LearningCenter = () => {
           flex-direction: column;
           gap: 0.75rem;
         }
+        
+        /* Premium Custom Checkboxes */
         .checkbox-label {
           display: flex;
           align-items: center;
@@ -382,29 +356,58 @@ const LearningCenter = () => {
           font-size: 0.9rem;
           color: #475569;
           cursor: pointer;
+          user-select: none;
+          position: relative;
+          transition: color 0.2s;
         }
         .checkbox-label input[type="checkbox"] {
-          width: 16px;
-          height: 16px;
-          accent-color: var(--ios-olive, #4b6b32);
+          position: absolute;
+          opacity: 0;
           cursor: pointer;
+          height: 0;
+          width: 0;
         }
-
-        .exam-links {
+        .checkbox-custom {
+          width: 18px;
+          height: 18px;
+          border: 2px solid #cbd5e1;
+          border-radius: 4px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          transition: all 0.2s ease;
+          flex-shrink: 0;
+        }
+        .checkbox-label:hover .checkbox-custom {
+          border-color: #4b6b32;
+        }
+        .checkbox-label input:checked ~ .checkbox-custom {
+          background-color: #4b6b32;
+          border-color: #4b6b32;
+        }
+        .checkbox-custom::after {
+          content: "";
+          display: none;
+          width: 5px;
+          height: 9px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          margin-bottom: 2px;
+        }
+        .checkbox-label input:checked ~ .checkbox-custom::after {
+          display: block;
+        }
+        .checkbox-label input:checked ~ .checkbox-text {
+          color: #1F3A2E;
+          font-weight: 600;
+        }
+        .checkbox-filter-group {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 0.75rem;
         }
-        .exam-link {
-          text-align: left;
-          font-size: 0.9rem;
-          color: #3b82f6;
-          padding: 0.5rem;
-          border-radius: 6px;
-          transition: background 0.2s;
-        }
-        .exam-link:hover { background: #eff6ff; }
-        .exam-link.active { font-weight: 700; background: #eff6ff; }
 
         /* Main Content */
         .main-content {
@@ -448,7 +451,7 @@ const LearningCenter = () => {
           transition: all 0.2s;
         }
         .search-box input:focus {
-          border-color: var(--ios-olive, #4b6b32);
+          border-color: #4b6b32;
           box-shadow: 0 0 0 3px rgba(75, 107, 50, 0.1);
           outline: none;
         }
@@ -471,19 +474,36 @@ const LearningCenter = () => {
           color: #0f172a;
         }
         .view-all {
-          color: #3b82f6;
+          color: #4b6b32;
           font-size: 0.9rem;
           font-weight: 600;
+          background: none;
+          border: none;
+          cursor: pointer;
+          transition: color 0.2s;
         }
-        .view-all:hover { text-decoration: underline; }
+        .view-all:hover {
+          color: #2d411e;
+          text-decoration: underline;
+        }
 
         .course-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          grid-template-columns: repeat(1, 1fr);
           gap: 1.5rem;
         }
+        @media (min-width: 600px) {
+          .course-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (min-width: 1024px) {
+          .course-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
 
-        /* Flat Course Card (Screenshot 2 Match) */
+        /* Flat Course Card */
         .course-card {
           background: #fff;
           border: 1px solid #e2e8f0;
@@ -502,14 +522,17 @@ const LearningCenter = () => {
         
         .course-image-wrapper {
           position: relative;
-          aspect-ratio: 1 / 1;
-          background: #f1f5f9;
+          aspect-ratio: 3 / 4; /* Portrait book cover shape */
+          background: #f8fafc;
+          overflow: hidden;
         }
         .course-image {
           width: 100%;
           height: 100%;
-          background-size: cover;
+          background-size: contain; /* Ensure the full cover thumbnail is fully visible */
+          background-repeat: no-repeat;
           background-position: center;
+          background-color: #f8fafc;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -545,8 +568,8 @@ const LearningCenter = () => {
           right: 0.5rem;
         }
         .badge-alpha {
-          background: #000;
-          color: #fbbf24; /* Yellow A */
+          background: #4b6b32;
+          color: #fff;
           width: 24px;
           height: 24px;
           display: flex;
@@ -565,14 +588,15 @@ const LearningCenter = () => {
           z-index: 10;
         }
         .tag-sale {
-          background: #fbbf24;
-          color: #000;
+          background: #eef2eb;
+          color: #4b6b32;
+          border: 1px solid rgba(75, 107, 50, 0.2);
           font-size: 0.7rem;
           font-weight: 800;
           padding: 0.25rem 0.75rem;
           border-radius: 12px;
           white-space: nowrap;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .course-content {
@@ -595,9 +619,9 @@ const LearningCenter = () => {
           padding: 0.2rem 0.4rem;
           border-radius: 4px;
         }
-        .tag-blue {
-          background: #eff6ff;
-          color: #3b82f6;
+        .tag-olive {
+          background: #eef2eb;
+          color: #4b6b32;
           font-size: 0.65rem;
           font-weight: 600;
           padding: 0.2rem 0.4rem;
@@ -606,8 +630,12 @@ const LearningCenter = () => {
         .heart-icon {
           margin-left: auto;
           color: #cbd5e1;
+          transition: color 0.2s, fill 0.2s;
         }
-        .heart-icon:hover { color: #ef4444; fill: #ef4444; }
+        .heart-icon:hover {
+          color: #4b6b32;
+          fill: #4b6b32;
+        }
 
         .course-title {
           font-size: 0.95rem;
@@ -656,7 +684,7 @@ const LearningCenter = () => {
         }
         .price-discount {
           font-size: 0.8rem;
-          color: #22c55e;
+          color: #4b6b32;
           font-weight: 600;
         }
 

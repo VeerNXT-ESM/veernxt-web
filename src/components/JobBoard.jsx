@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Briefcase, Calendar, ExternalLink, RefreshCw, Search, AlertCircle, Clock, MapPin, ArrowLeft } from 'lucide-react';
+import { 
+  Briefcase, Calendar, ExternalLink, RefreshCw, Search, AlertCircle, Clock, 
+  MapPin, ArrowLeft, ChevronLeft, ChevronRight, X, Sliders, Bookmark, 
+  BarChart2, CheckCircle2, Award, ChevronDown 
+} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
 
 const JobBoard = ({ isAdmin = false }) => {
   const navigate = useNavigate();
@@ -10,6 +15,12 @@ const JobBoard = ({ isAdmin = false }) => {
   const [refreshing, setRefreshing] = useState(false);
   const [search, setSearch] = useState('');
   const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [userProfileName, setUserProfileName] = useState('Rahul Kumar');
+  const [profileData, setProfileData] = useState(null);
+  const [dismissedJobIds, setDismissedJobIds] = useState([]);
+  const [showAllProfileMatched, setShowAllProfileMatched] = useState(false);
 
   const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'https://veernxt-profiling-engine.onrender.com';
 
@@ -30,7 +41,34 @@ const JobBoard = ({ isAdmin = false }) => {
 
   useEffect(() => {
     fetchJobs();
+    
+    // Fetch profile dynamically from Supabase
+    const fetchProfile = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+          const { data } = await supabase
+            .from('user_profiles')
+            .select('*')
+            .eq('id', session.user.id)
+            .single();
+          if (data) {
+            setProfileData(data);
+            if (data.full_name) {
+              setUserProfileName(data.full_name);
+            }
+          }
+        }
+      } catch (e) {
+        console.warn("Could not load user profile for job board details");
+      }
+    };
+    fetchProfile();
   }, []);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search]);
 
   const handleRefresh = async () => {
     setRefreshing(true);
@@ -48,10 +86,110 @@ const JobBoard = ({ isAdmin = false }) => {
     }
   };
 
-  const filteredJobs = jobs.filter(job => 
-    job.title.toLowerCase().includes(search.toLowerCase()) || 
-    job.body.toLowerCase().includes(search.toLowerCase())
+  const dismissJob = (jobId) => {
+    setDismissedJobIds(prev => [...prev, jobId]);
+  };
+
+  const calculateDaysAgo = (publishedOn) => {
+    if (!publishedOn) return 'Recent';
+    const diffTime = Math.abs(new Date() - new Date(publishedOn));
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    if (diffDays <= 1) return 'Today';
+    if (diffDays === 2) return '1 day ago';
+    if (diffDays < 30) return `${diffDays - 1} days ago`;
+    const months = Math.floor(diffDays / 30);
+    return months === 1 ? '1 month ago' : `${months} months ago`;
+  };
+
+  const getAvatarColor = (name) => {
+    if (!name) return '#1F3A2E';
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const colors = [
+      '#1F3A2E', '#2b5c43', '#0a66c2', '#b24020', '#6f7e58', 
+      '#3f3f46', '#0369a1', '#b45309', '#0d9488', '#4f46e5'
+    ];
+    return colors[Math.abs(hash) % colors.length];
+  };
+
+  const getInitials = (name) => {
+    if (!name) return 'AJ';
+    return name
+      .split(' ')
+      .filter(Boolean)
+      .map(n => n[0])
+      .join('')
+      .toUpperCase()
+      .substring(0, 2);
+  };
+
+  const getProfileHeadline = () => {
+    if (profileData) {
+      const p = profileData.profile_data;
+      if (p) {
+        const role = p.roleAppointment || '';
+        const trade = p.armCorpsTrade || '';
+        const branch = profileData.service_branch || p.serviceBranch || 'Indian Army';
+        const duration = p.totalServiceDuration ? `(${p.totalServiceDuration} service)` : '';
+        const parts = [role, trade, branch].filter(Boolean);
+        if (parts.length > 0) {
+          return `${parts.join(', ')} ${duration}`.trim();
+        }
+      }
+      if (profileData.service_branch) {
+        return `Agniveer | ${profileData.service_branch}`;
+      }
+    }
+    return "Agniveer | Indian Army";
+  };
+
+  const getProfileLocation = () => {
+    if (profileData && profileData.profile_data) {
+      const p = profileData.profile_data;
+      if (p.district || p.stateOfDomicile) {
+        return [p.district, p.stateOfDomicile].filter(Boolean).join(', ');
+      }
+    }
+    return "Chennai, Tamil Nadu";
+  };
+
+  const filteredJobs = jobs.filter(job => {
+    if (!job) return false;
+    const jobId = job.id || job._id || job.title || 'unknown';
+    return !dismissedJobIds.includes(jobId) && (
+      job.title?.toLowerCase().includes(search.toLowerCase()) || 
+      job.body?.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+
+
+  // Pagination compilation for admin/search views
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(filteredJobs.length / itemsPerPage) || 1;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
+
+  // Separate jobs for LinkedIn feeds
+  const candidateKeywords = ['developer', 'graphic', 'game', 'designer', 'creative', 'artist', 'lip sync', 'dubbing', 'ai', 'intern', 'operations', 'video'];
+  const matchedList = filteredJobs.filter(job => 
+    job && job.title && candidateKeywords.some(keyword => job.title.toLowerCase().includes(keyword))
   );
+  const profileMatchedList = matchedList.length > 0 ? matchedList : filteredJobs;
+  const profileMatchedJobs = showAllProfileMatched ? profileMatchedList : profileMatchedList.slice(0, 4);
+
+  // More jobs for you - filter out matched ones that are visible in first card
+  const matchedVisibleIds = profileMatchedList.slice(0, 4).filter(Boolean).map(p => p.id || p._id || p.title || 'unknown');
+  const moreJobsList = filteredJobs.filter(job => job && !matchedVisibleIds.includes(job.id || job._id || job.title || 'unknown'));
+
+  const moreJobsItemsPerPage = 10;
+  const moreJobsTotalPages = Math.ceil(moreJobsList.length / moreJobsItemsPerPage) || 1;
+  const moreJobsStartIndex = (currentPage - 1) * moreJobsItemsPerPage;
+  const paginatedMoreJobs = moreJobsList.slice(moreJobsStartIndex, moreJobsStartIndex + moreJobsItemsPerPage);
+
+
 
   return (
     <div className="jobs-container animate-fade-in">
@@ -80,7 +218,6 @@ const JobBoard = ({ isAdmin = false }) => {
             {refreshing ? 'Scraping...' : 'Refresh Job Board'}
           </button>
         )}
-      </div>
 
       <div className="search-bar-wrapper">
         <div className="search-input-container">
@@ -109,50 +246,357 @@ const JobBoard = ({ isAdmin = false }) => {
           <p>{error}</p>
           <button onClick={fetchJobs} className="btn-primary ios-pill">Retry</button>
         </div>
-      ) : (
-        <div className="jobs-grid">
-          {filteredJobs.length > 0 ? (
-            filteredJobs.map((job, idx) => (
-              <div key={idx} className="job-card ios-card animate-fade-in" style={{ animationDelay: `${idx * 0.05}s` }}>
-                <div className="job-card-top">
-                  <div className="body-badge">{job.body}</div>
-                  {job.lastDate && (
-                    <div className="date-badge warning">
-                      <Clock size={12} />
-                      Last Date: {new Date(job.lastDate).toLocaleDateString()}
-                    </div>
-                  )}
-                </div>
-                
-                <h3 className="job-title">{job.title}</h3>
-                
-                <div className="job-details">
-                  <div className="detail-item">
-                    <Calendar size={14} />
-                    <span>Posted: {job.publishedOn ? new Date(job.publishedOn).toLocaleDateString() : 'Recent'}</span>
-                  </div>
-                  {job.vacancies && (
-                    <div className="detail-item">
-                      <Briefcase size={14} />
-                      <span>{job.vacancies} Vacancies</span>
-                    </div>
-                  )}
-                </div>
+      ) : isAdmin ? (
+        /* Admin View: Row list / Table */
+        <div className="admin-jobs-wrapper">
+          <div className="table-responsive">
+            <table className="admin-jobs-table">
+              <thead>
+                <tr>
+                  <th>Conducting Body</th>
+                  <th>Notification / Vacancy Details</th>
+                  <th>Published Date</th>
+                  <th>Last Date</th>
+                  <th>Vacancies</th>
+                  <th style={{ textAlign: 'right' }}>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {paginatedJobs.length > 0 ? (
+                  paginatedJobs.map((job, idx) => (
+                    <tr key={idx} onClick={() => setSelectedJob(job)} style={{ cursor: 'pointer' }}>
+                      <td>
+                        <span className="body-badge" style={{ background: '#f0fdf4', color: '#1F3A2E', border: '1px solid #dcfce7' }}>
+                          {job.body}
+                        </span>
+                      </td>
+                      <td>
+                        <div className="job-title-col">
+                          <span className="admin-job-title" title={job.title}>{job.title}</span>
+                          {job.url && <span className="admin-job-link-text">{job.url.substring(0, 70)}...</span>}
+                        </div>
+                      </td>
+                      <td>
+                        <span className="date-text">
+                          {job.publishedOn ? new Date(job.publishedOn).toLocaleDateString() : 'Recent'}
+                        </span>
+                      </td>
+                      <td>
+                        <span className={`last-date-badge ${job.lastDate ? 'warning' : 'none'}`}>
+                          {job.lastDate ? new Date(job.lastDate).toLocaleDateString() : 'N/A'}
+                        </span>
+                      </td>
+                      <td>
+                        <span className="vacancies-text">{job.vacancies || 'N/A'}</span>
+                      </td>
+                      <td style={{ textAlign: 'right' }} onClick={(e) => e.stopPropagation()}>
+                        <button className="btn-curate" onClick={() => setSelectedJob(job)}>
+                          View Details
+                        </button>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6" style={{ textAlign: 'center', padding: '3rem' }}>
+                      <Search size={32} color="#ccc" style={{ marginBottom: '1rem' }} />
+                      <p style={{ margin: 0, color: '#888' }}>No vacancies found matching "{search}"</p>
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
 
-                <div className="job-footer">
-                  <a href={job.url} target="_blank" rel="noopener noreferrer" className="btn-primary ios-pill view-btn">
-                    View Notification <ExternalLink size={14} />
-                  </a>
-                </div>
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="pagination-bar">
+              <button 
+                className="pagination-btn" 
+                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+              >
+                <ChevronLeft size={14} />
+                <span>Previous</span>
+              </button>
+              
+              <div className="pagination-pages">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <button
+                    key={page}
+                    className={`pagination-page-btn ${currentPage === page ? 'active' : ''}`}
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
+                  </button>
+                ))}
               </div>
-            ))
-          ) : (
-            <div className="no-results">
-              <Search size={48} color="#ccc" />
-              <h3>No jobs found matching "{search}"</h3>
-              <p>Try different keywords or refresh the board.</p>
+
+              <button 
+                className="pagination-btn" 
+                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                disabled={currentPage === totalPages}
+              >
+                <span>Next</span>
+                <ChevronRight size={14} />
+              </button>
             </div>
           )}
+        </div>
+      ) : (
+        /* Transitioning Agniveer Two-Column Layout for Candidate */
+        <div className="linkedin-layout">
+          {/* Left Column: Sidebar */}
+          <div className="linkedin-sidebar">
+            {/* Profile Card */}
+            <div className="linkedin-card profile-card">
+              <div className="profile-cover"></div>
+              <div className="profile-avatar-container">
+                <div className="profile-avatar">
+                  <span className="avatar-initials">
+                    {getInitials(userProfileName)}
+                  </span>
+                </div>
+              </div>
+              <div className="profile-info">
+                <h2 className="profile-name">{userProfileName}</h2>
+                <p className="profile-headline">{getProfileHeadline()}</p>
+                <p className="profile-location">{getProfileLocation()}</p>
+                
+                {profileData?.veer_score !== undefined && (
+                  <div className="profile-score-badge animate-fade-in">
+                    <span className="score-label">Veer Score</span>
+                    <span className="score-value">{Math.round(profileData.veer_score)}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Footer Links */}
+            <div className="linkedin-sidebar-footer">
+              <div className="footer-links-grid">
+                <span>About</span>
+                <span>Accessibility</span>
+                <span>Help Center</span>
+                <span>Privacy & Terms</span>
+                <span>Support</span>
+                <span>More</span>
+              </div>
+              <div className="footer-copyright">
+                <span>VeerNXT © 2026</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Feed / Job Board */}
+          <div className="linkedin-feed">
+            {/* Card 1: Jobs that match your profile */}
+            <div className="linkedin-card feed-card">
+              <div className="card-header-section">
+                <h2 className="feed-card-title">Jobs that match your profile</h2>
+                <p className="feed-card-subtitle">Based on your military profile criteria and transition goals</p>
+              </div>
+
+              <div className="feed-job-list">
+                {profileMatchedJobs.length > 0 ? (
+                  profileMatchedJobs.map((job, idx) => {
+                    const jobId = job.id || job._id || job.title;
+                    return (
+                      <div key={idx} className="feed-job-row animate-fade-in" onClick={() => setSelectedJob(job)}>
+                        <div className="feed-job-left">
+                          <div className="company-avatar-circle" style={{ backgroundColor: getAvatarColor(job.body) }}>
+                            {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
+                          </div>
+                          <div className="feed-job-details">
+                            <h3 className="feed-job-title-link">{job.title}</h3>
+                            <p className="feed-job-company">{job.body} • {job.vacancies ? `${job.vacancies} vacancies` : 'India'}</p>
+                            
+                            {/* Heuristic Insight Badges */}
+                            {idx % 3 === 0 ? (
+                              <div className="insight-badge gold">
+                                <Award size={14} className="insight-icon" />
+                                <span>Ideal Agniveer Match</span>
+                              </div>
+                            ) : idx % 3 === 1 ? (
+                              <div className="insight-badge green">
+                                <CheckCircle2 size={14} className="insight-icon" />
+                                <span>Actively reviewing applicants</span>
+                              </div>
+                            ) : null}
+
+                            <p className="feed-job-time">
+                              {job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent'} 
+                            </p>
+                          </div>
+                        </div>
+                        <button className="dismiss-job-btn" onClick={(e) => { e.stopPropagation(); dismissJob(jobId); }}>
+                          <X size={16} />
+                        </button>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div className="no-jobs-feed">
+                    <Search size={32} color="#ccc" />
+                    <p>No profile matching jobs found. Try adjusting search filters.</p>
+                  </div>
+                )}
+              </div>
+
+              {profileMatchedList.length > 4 && (
+                <div className="feed-card-footer" onClick={() => setShowAllProfileMatched(!showAllProfileMatched)}>
+                  <span>{showAllProfileMatched ? 'Show less' : 'Show all matched'}</span>
+                  <ArrowLeft size={16} style={{ transform: showAllProfileMatched ? 'rotate(90deg)' : 'rotate(270deg)', transition: 'transform 0.2s' }} />
+                </div>
+              )}
+            </div>
+
+            {/* Card 2: More jobs for you */}
+            <div className="linkedin-card feed-card">
+              <div className="card-header-section">
+                <h2 className="feed-card-title">More jobs for you</h2>
+                <p className="feed-card-subtitle">Based on your preferences and general recruitment criteria</p>
+              </div>
+
+              <div className="feed-job-list">
+                {paginatedMoreJobs.length > 0 ? (
+                  paginatedMoreJobs.map((job, idx) => {
+                    const jobId = job.id || job._id || job.title;
+                    return (
+                      <div key={idx} className="feed-job-row animate-fade-in" onClick={() => setSelectedJob(job)}>
+                        <div className="feed-job-left">
+                          <div className="company-avatar-circle" style={{ backgroundColor: getAvatarColor(job.body) }}>
+                            {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
+                          </div>
+                          <div className="feed-job-details">
+                            <h3 className="feed-job-title-link">{job.title}</h3>
+                            <p className="feed-job-company">{job.body} • {job.vacancies ? `${job.vacancies} vacancies` : 'India'}</p>
+                            
+                            {idx % 3 === 0 && (
+                              <div className="insight-badge green">
+                                <CheckCircle2 size={14} className="insight-icon" />
+                                <span>Actively reviewing applicants</span>
+                              </div>
+                            )}
+
+                            <p className="feed-job-time">
+                              {job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent'} 
+                            </p>
+                          </div>
+                        </div>
+                        <button className="dismiss-job-btn" onClick={(e) => { e.stopPropagation(); dismissJob(jobId); }}>
+                          <X size={16} />
+                        </button>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div className="no-jobs-feed">
+                    <Search size={32} color="#ccc" />
+                    <p>No additional jobs found matching search.</p>
+                  </div>
+                )}
+              </div>
+
+              {/* Feed Pagination */}
+              {moreJobsTotalPages > 1 && (
+                <div className="pagination-bar" style={{ padding: '1rem', borderTop: '1px solid #f1f5f9' }}>
+                  <button 
+                    className="pagination-btn" 
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronLeft size={14} />
+                    <span>Previous</span>
+                  </button>
+                  
+                  <div className="pagination-pages">
+                    {Array.from({ length: moreJobsTotalPages }, (_, i) => i + 1).map(page => (
+                      <button
+                        key={page}
+                        className={`pagination-page-btn ${currentPage === page ? 'active' : ''}`}
+                        onClick={() => setCurrentPage(page)}
+                      >
+                        {page}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button 
+                    className="pagination-btn" 
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, moreJobsTotalPages))}
+                    disabled={currentPage === moreJobsTotalPages}
+                  >
+                    <span>Next</span>
+                    <ChevronRight size={14} />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Details View Modal inside the Admin Panel */}
+      {selectedJob && (
+        <div className="modal-overlay animate-fade-in" onClick={() => setSelectedJob(null)}>
+          <div className="details-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <span className="modal-badge">{selectedJob.body}</span>
+              <button className="modal-close-btn" onClick={() => setSelectedJob(null)}>
+                <X size={20} />
+              </button>
+            </div>
+            
+            <h2 className="modal-job-title">{selectedJob.title}</h2>
+            
+            <div className="modal-details-grid">
+              <div className="modal-detail-card">
+                <span className="detail-label">Conducting Body</span>
+                <span className="detail-val">{selectedJob.body}</span>
+              </div>
+              <div className="modal-detail-card">
+                <span className="detail-label">Published On</span>
+                <span className="detail-val">
+                  {selectedJob.publishedOn ? new Date(selectedJob.publishedOn).toLocaleDateString() : 'Recent'}
+                </span>
+              </div>
+              <div className="modal-detail-card">
+                <span className="detail-label">Last Date to Apply</span>
+                <span className={`detail-val ${selectedJob.lastDate ? 'warning-text' : ''}`}>
+                  {selectedJob.lastDate ? new Date(selectedJob.lastDate).toLocaleDateString() : 'Continuous Recruitment'}
+                </span>
+              </div>
+              <div className="modal-detail-card">
+                <span className="detail-label">Available Vacancies</span>
+                <span className="detail-val">{selectedJob.vacancies || 'As per notification rules'}</span>
+              </div>
+              {selectedJob.ageRange && (
+                <div className="modal-detail-card">
+                  <span className="detail-label">Eligible Age Bracket</span>
+                  <span className="detail-val">{selectedJob.ageRange}</span>
+                </div>
+              )}
+            </div>
+
+            {selectedJob.notes && (
+              <div className="modal-notes-section">
+                <h4>Official Notes & Remarks</h4>
+                <p>{selectedJob.notes}</p>
+              </div>
+            )}
+
+            <div className="modal-footer-row">
+              <button className="btn-secondary" onClick={() => setSelectedJob(null)} style={{ padding: '0.65rem 1.5rem', borderRadius: '10px', border: '1px solid #cbd5e1', cursor: 'pointer', background: 'white', fontWeight: 700 }}>
+                Close Details
+              </button>
+              {selectedJob.url && (
+                <a href={selectedJob.url} target="_blank" rel="noopener noreferrer" className="btn-primary ios-pill" style={{ textDecoration: 'none', padding: '0.65rem 1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#1F3A2E', color: 'white', borderRadius: '99px', fontWeight: 700 }}>
+                  Open Official Source <ExternalLink size={14} />
+                </a>
+              )}
+            </div>
+          </div>
         </div>
       )}
 
@@ -200,6 +644,295 @@ const JobBoard = ({ isAdmin = false }) => {
           border-color: var(--ios-olive);
           box-shadow: 0 0 0 4px rgba(111, 126, 88, 0.1);
         }
+        /* Admin Jobs Table Styles */
+        .admin-jobs-wrapper {
+          background: white;
+          padding: 1.5rem;
+          border-radius: 20px;
+          border: 1px solid #f1f5f9;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+          margin-top: 1.5rem;
+        }
+        .table-responsive {
+          width: 100%;
+          overflow-x: auto;
+        }
+        .admin-jobs-table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: left;
+        }
+        .admin-jobs-table th {
+          padding: 1rem 1.25rem;
+          font-size: 0.72rem;
+          font-weight: 800;
+          color: #475569;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          border-bottom: 2px solid #f1f5f9;
+        }
+        .admin-jobs-table tr {
+          transition: background 0.2s;
+        }
+        .admin-jobs-table tbody tr:hover {
+          background: #f8fafc;
+        }
+        .admin-jobs-table td {
+          padding: 1rem 1.25rem;
+          border-bottom: 1px solid #f1f5f9;
+          font-size: 0.88rem;
+          color: #334155;
+          vertical-align: middle;
+        }
+        .job-title-col {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+        }
+        .admin-job-title {
+          font-weight: 700;
+          color: #0f172a;
+          line-height: 1.4;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          max-width: 450px;
+        }
+        .admin-job-link-text {
+          font-size: 0.68rem;
+          color: #94a3b8;
+          font-family: monospace;
+        }
+        .date-text {
+          font-weight: 600;
+          color: #64748b;
+          font-size: 0.8rem;
+        }
+        .last-date-badge {
+          display: inline-block;
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0.25rem 0.5rem;
+          border-radius: 6px;
+        }
+        .last-date-badge.warning {
+          background: #fff7ed;
+          color: #c2410c;
+        }
+        .last-date-badge.none {
+          background: #f1f5f9;
+          color: #64748b;
+        }
+        .vacancies-text {
+          font-weight: 700;
+          color: #0f172a;
+        }
+        
+        .btn-curate {
+          padding: 0.4rem 0.85rem;
+          background: white;
+          border: 1px solid #cbd5e1;
+          color: #475569;
+          font-weight: 700;
+          font-size: 0.75rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-curate:hover {
+          border-color: #1F3A2E;
+          color: #1F3A2E;
+          background: #f8fafc;
+        }
+
+        /* Modal Overlay Styles */
+        .modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(15, 23, 42, 0.4);
+          backdrop-filter: blur(8px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+          padding: 1.5rem;
+        }
+        .details-modal {
+          background: white;
+          border-radius: 24px;
+          width: 100%;
+          max-width: 650px;
+          padding: 2.25rem;
+          box-shadow: 0 20px 50px rgba(15,23,42,0.15);
+          text-align: left;
+          position: relative;
+        }
+        .modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1.25rem;
+        }
+        .modal-badge {
+          background: #ecfdf5;
+          color: #10b981;
+          padding: 0.35rem 0.75rem;
+          border-radius: 99px;
+          font-size: 0.72rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .modal-close-btn {
+          background: none;
+          border: none;
+          color: #94a3b8;
+          cursor: pointer;
+          padding: 4px;
+          border-radius: 99px;
+          display: flex;
+          transition: background 0.2s, color 0.2s;
+        }
+        .modal-close-btn:hover {
+          background: #f1f5f9;
+          color: #334155;
+        }
+        .modal-job-title {
+          font-size: 1.4rem;
+          font-weight: 800;
+          color: #0f172a;
+          line-height: 1.35;
+          margin-bottom: 2rem;
+          letter-spacing: -0.02em;
+        }
+        .modal-details-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.25rem;
+          margin-bottom: 2rem;
+        }
+        .modal-detail-card {
+          background: #f8fafc;
+          padding: 1rem 1.25rem;
+          border-radius: 14px;
+          border: 1px solid #f1f5f9;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+        .detail-label {
+          font-size: 0.68rem;
+          font-weight: 800;
+          color: #94a3b8;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .detail-val {
+          font-size: 0.95rem;
+          font-weight: 750;
+          color: #1e293b;
+        }
+        .detail-val.warning-text {
+          color: #c2410c;
+        }
+        .modal-notes-section {
+          background: #fffbeb;
+          border: 1px solid #fef3c7;
+          padding: 1.25rem;
+          border-radius: 16px;
+          margin-bottom: 2rem;
+        }
+        .modal-notes-section h4 {
+          margin: 0 0 0.5rem 0;
+          color: #b45309;
+          font-weight: 800;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .modal-notes-section p {
+          margin: 0;
+          color: #78350f;
+          font-size: 0.88rem;
+          line-height: 1.5;
+        }
+        .modal-footer-row {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 1rem;
+          border-top: 1px solid #f1f5f9;
+          padding-top: 1.5rem;
+        }
+
+        /* Pagination Bar in Jobs */
+        .pagination-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1.25rem 0.25rem 0.25rem 0.25rem;
+          border-top: 1px solid #f1f5f9;
+          margin-top: 1rem;
+        }
+        .pagination-btn {
+          padding: 0.45rem 1rem;
+          background: white;
+          border: 1px solid #cbd5e1;
+          color: #475569;
+          font-weight: 700;
+          font-size: 0.8rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+        }
+        .pagination-btn:hover:not(:disabled) {
+          border-color: #1F3A2E;
+          color: #1F3A2E;
+          background: #f8fafc;
+        }
+        .pagination-btn:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+        .pagination-pages {
+          display: flex;
+          align-items: center;
+          gap: 0.35rem;
+        }
+        .pagination-page-btn {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: white;
+          border: 1px solid #cbd5e1;
+          color: #475569;
+          font-weight: 700;
+          font-size: 0.8rem;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .pagination-page-btn:hover:not(.active) {
+          border-color: #1F3A2E;
+          color: #1F3A2E;
+          background: #f8fafc;
+        }
+        .pagination-page-btn.active {
+          background: #1F3A2E;
+          color: white;
+          border-color: #1F3A2E;
+          box-shadow: 0 2px 6px rgba(31,58,46,0.15);
+        }
+
         .job-count {
           font-size: 0.9rem;
           color: #888;
@@ -306,11 +1039,421 @@ const JobBoard = ({ isAdmin = false }) => {
         .animate-spin { animation: spin 1s linear infinite; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+        /* LinkedIn Two-Column Layout Styles */
+        .linkedin-layout {
+          display: grid;
+          grid-template-columns: 280px 1fr;
+          gap: 1.5rem;
+          margin-top: 1.5rem;
+          align-items: start;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .linkedin-sidebar {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .linkedin-feed {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .linkedin-card {
+          background: white;
+          border-radius: 10px;
+          border: 1px solid #eef3f8;
+          overflow: hidden;
+          box-shadow: 0 0 0 1px rgba(0,0,0,0.015), 0 2px 4px rgba(0,0,0,0.025);
+          text-align: left;
+        }
+        
+        /* Profile Sidebar Card */
+        .profile-card {
+          position: relative;
+        }
+        .profile-cover {
+          height: 60px;
+          background: linear-gradient(135deg, #1F3A2E 0%, #3a5f4e 100%);
+          position: relative;
+        }
+        .profile-cover::after {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          opacity: 0.1;
+          background-image: radial-gradient(circle, #fff 10%, transparent 11%), radial-gradient(circle, #fff 10%, transparent 11%);
+          background-size: 10px 10px;
+          background-position: 0 0, 5px 5px;
+        }
+        .profile-avatar-container {
+          position: relative;
+          margin-top: -38px;
+          padding-left: 1.25rem;
+          margin-bottom: 0.5rem;
+          display: inline-block;
+        }
+        .profile-avatar {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          border: 4px solid white;
+          background: #edf3f8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+          overflow: hidden;
+        }
+        .avatar-initials {
+          font-size: 1.6rem;
+          font-weight: 800;
+          color: #1F3A2E;
+          letter-spacing: -0.05em;
+        }
+        .profile-score-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-top: 0.75rem;
+          background: rgba(31, 58, 46, 0.08);
+          border: 1.5px solid rgba(31, 58, 46, 0.15);
+          padding: 0.35rem 0.75rem;
+          border-radius: 8px;
+          color: #1F3A2E;
+        }
+        .score-label {
+          font-size: 0.65rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .score-value {
+          font-size: 0.95rem;
+          font-weight: 800;
+        }
+        .profile-info {
+          padding: 0.5rem 1.25rem 1.25rem 1.25rem;
+        }
+        .profile-name {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #000000e6;
+          margin: 0 0 0.25rem 0;
+          letter-spacing: -0.01em;
+        }
+        .profile-headline {
+          font-size: 0.76rem;
+          color: #000000b3;
+          line-height: 1.35;
+          margin: 0 0 0.5rem 0;
+        }
+        .profile-location {
+          font-size: 0.72rem;
+          color: #00000099;
+          margin: 0;
+        }
+
+        /* Sidebar Footer */
+        .linkedin-sidebar-footer {
+          padding: 0.75rem;
+          text-align: center;
+        }
+        .footer-links-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem 0.75rem;
+          margin-bottom: 0.75rem;
+        }
+        .footer-links-grid span {
+          font-size: 0.7rem;
+          color: #00000099;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+        }
+        .footer-links-grid span:hover {
+          color: #0a66c2;
+          text-decoration: underline;
+        }
+        .footer-copyright {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.35rem;
+          font-size: 0.7rem;
+          color: #000000e6;
+          font-weight: 550;
+        }
+        .linkedin-footer-logo {
+          color: #0a66c2;
+          font-weight: 800;
+          font-size: 0.72rem;
+        }
+        .linkedin-footer-logo .logo-in {
+          background: #0a66c2;
+          color: white;
+          padding: 0 2px;
+          border-radius: 2px;
+          margin-left: 1px;
+          font-size: 0.65rem;
+        }
+
+        /* Feed Columns & Cards */
+        .feed-card {
+          margin-bottom: 0.75rem;
+        }
+        .card-header-section {
+          padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+          border-bottom: 1px solid #eef3f8;
+        }
+        .feed-card-title {
+          font-size: 1rem;
+          font-weight: 700;
+          color: #000000e6;
+          margin: 0 0 0.15rem 0;
+        }
+        .feed-card-subtitle {
+          font-size: 0.76rem;
+          color: #00000099;
+          margin: 0;
+        }
+        .feed-job-list {
+          display: flex;
+          flex-direction: column;
+        }
+        .feed-job-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 1.25rem;
+          border-bottom: 1px solid #eef3f8;
+          transition: background 0.15s;
+          cursor: pointer;
+          position: relative;
+        }
+        .feed-job-row:hover {
+          background: #f8fafc;
+        }
+        .feed-job-row:last-child {
+          border-bottom: none;
+        }
+        .feed-job-left {
+          display: flex;
+          gap: 0.75rem;
+          flex: 1;
+        }
+        .company-avatar-circle {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 0.95rem;
+          font-weight: 800;
+          flex-shrink: 0;
+          box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .feed-job-details {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+          text-align: left;
+        }
+        .feed-job-title-link {
+          font-size: 0.92rem;
+          font-weight: 700;
+          color: #0a66c2;
+          margin: 0;
+          line-height: 1.3;
+        }
+        .feed-job-title-link:hover {
+          text-decoration: underline;
+        }
+        .feed-job-company {
+          font-size: 0.78rem;
+          color: #000000b3;
+          margin: 0;
+        }
+        .feed-job-time {
+          font-size: 0.72rem;
+          color: #00000099;
+          margin: 0.1rem 0 0 0;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .dismiss-job-btn {
+          background: transparent;
+          border: none;
+          color: #00000099;
+          cursor: pointer;
+          padding: 4px;
+          border-radius: 50%;
+          display: flex;
+          align-self: flex-start;
+          transition: background 0.15s, color 0.15s;
+        }
+        .dismiss-job-btn:hover {
+          background: #eef3f8;
+          color: #000000e6;
+        }
+
+        /* Insight Badges */
+        .insight-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          font-size: 0.74rem;
+          font-weight: 600;
+          padding: 0.15rem 0.5rem;
+          border-radius: 4px;
+          margin-top: 0.15rem;
+          width: fit-content;
+        }
+        .insight-badge.gold {
+          background: #fdf2e9;
+          color: #843d11;
+          border: 1px solid #fbe5d3;
+        }
+        .insight-badge.green {
+          background: #f0fdf4;
+          color: #14532d;
+          border: 1px solid #dcfce7;
+        }
+        .insight-icon {
+          flex-shrink: 0;
+        }
+        .easy-apply-badge {
+          font-weight: 750;
+          color: #0a66c2;
+          background: rgba(10, 102, 194, 0.06);
+          padding: 0.1rem 0.35rem;
+          border-radius: 3px;
+          font-size: 0.68rem;
+          display: inline-flex;
+          align-items: center;
+        }
+        
+        .no-jobs-feed {
+          padding: 3rem 1rem;
+          text-align: center;
+          color: #00000099;
+        }
+        .no-jobs-feed p {
+          margin: 0.5rem 0 0 0;
+          font-size: 0.88rem;
+        }
+
+        .feed-card-footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.35rem;
+          padding: 0.85rem;
+          border-top: 1px solid #eef3f8;
+          cursor: pointer;
+          color: #0a66c2;
+          font-size: 0.85rem;
+          font-weight: 700;
+          transition: background 0.15s;
+        }
+        .feed-card-footer:hover {
+          background: rgba(10, 102, 194, 0.05);
+        }
+
+        /* See All CTA Card */
+        .see-all-cta-card {
+          padding: 1.5rem;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          background: linear-gradient(135deg, #ffffff 0%, #f6f8fa 100%);
+          border: 1px solid #eef3f8;
+          margin-bottom: 0.75rem;
+        }
+        .cta-avatar-stack {
+          display: flex;
+          position: relative;
+          width: 80px;
+          height: 48px;
+          flex-shrink: 0;
+        }
+        .cta-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          position: absolute;
+        }
+        .bg-avatar-1 {
+          background: #4f46e5;
+          z-index: 3;
+          left: 0;
+        }
+        .bg-avatar-2 {
+          background: #0ea5e9;
+          z-index: 2;
+          left: 20px;
+        }
+        .bg-avatar-3 {
+          background: #ec4899;
+          z-index: 1;
+          left: 40px;
+        }
+        .bg-avatar-1::after { content: 'RT'; display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 0.72rem; font-weight: 800; }
+        .bg-avatar-2::after { content: 'VS'; display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 0.72rem; font-weight: 800; }
+        .bg-avatar-3::after { content: 'MJ'; display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 0.72rem; font-weight: 800; }
+
+        .cta-content {
+          text-align: left;
+        }
+        .cta-title {
+          font-size: 0.92rem;
+          font-weight: 700;
+          color: #000000e6;
+          margin: 0 0 0.25rem 0;
+        }
+        .cta-text {
+          font-size: 0.76rem;
+          color: #000000b3;
+          margin: 0 0 0.75rem 0;
+        }
+        .reactivate-premium-btn {
+          background: #f8c055;
+          color: #1a1a1a;
+          border: none;
+          font-weight: 700;
+          font-size: 0.8rem;
+          padding: 0.45rem 1.25rem;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: background 0.15s;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .reactivate-premium-btn:hover {
+          background: #f5b130;
+        }
+        .cta-subtext {
+          font-size: 0.68rem;
+          color: #00000099;
+          margin: 0.35rem 0 0 0;
+        }
+
+        @media (max-width: 992px) {
+          .linkedin-layout {
+            grid-template-columns: 1fr;
+          }
+        }
+
         @media (max-width: 768px) {
           .jobs-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
           .search-bar-wrapper { flex-direction: column; align-items: stretch; gap: 1rem; }
           .jobs-grid { grid-template-columns: 1fr; }
         }
+
       `}} />
     </div>
   );
