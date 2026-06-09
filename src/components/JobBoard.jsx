@@ -22,7 +22,7 @@ const JobBoard = ({ isAdmin = false }) => {
   const [dismissedJobIds, setDismissedJobIds] = useState([]);
   const [showAllProfileMatched, setShowAllProfileMatched] = useState(false);
 
-  const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'https://veernxt-profiling-engine.onrender.com';
+  const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'http://localhost:5001';
 
   const fetchJobs = async () => {
     setLoading(true);

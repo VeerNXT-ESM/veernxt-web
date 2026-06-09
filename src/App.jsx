@@ -14,6 +14,7 @@ import AdminJobs from './pages/admin/AdminJobs';
 import PublicJobs from './pages/PublicJobs';
 import FindCandidates from './pages/FindCandidates';
 import MessagingWorkspace from './components/MessagingWorkspace';
+import Subscribe from './pages/Subscribe';
 
 // New Legal Pages
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -35,15 +36,16 @@ function App() {
         
         {/* Routes with Global Header */}
         <Route element={<Layout />}>
-          <Route path="/profiling" element={<Profiling />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/learning-center" element={<LearningCenter />} />
-          <Route path="/financial-guidance" element={<FinancialGuidance />} />
-          <Route path="/jobs" element={<PublicJobs />} />
-          <Route path="/find-candidates" element={<FindCandidates />} />
-          <Route path="/messaging" element={<MessagingWorkspace />} />
-          <Route path="/reader/:id" element={<SecureReader />} />
-          <Route path="/quiz/:id" element={<InteractiveQuiz />} />
+          <Route path="/profiling" element={<AuthGuard skipProfilingCheck><Profiling /></AuthGuard>} />
+          <Route path="/subscribe" element={<AuthGuard skipProfilingCheck><Subscribe /></AuthGuard>} />
+          <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
+          <Route path="/learning-center" element={<AuthGuard><LearningCenter /></AuthGuard>} />
+          <Route path="/financial-guidance" element={<AuthGuard><FinancialGuidance /></AuthGuard>} />
+          <Route path="/jobs" element={<AuthGuard><PublicJobs /></AuthGuard>} />
+          <Route path="/find-candidates" element={<AuthGuard><FindCandidates /></AuthGuard>} />
+          <Route path="/messaging" element={<AuthGuard><MessagingWorkspace /></AuthGuard>} />
+          <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
+          <Route path="/quiz/:id" element={<AuthGuard><InteractiveQuiz /></AuthGuard>} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/support" element={<Support />} />
           <Route path="/legal" element={<Legal />} />
@@ -56,7 +58,7 @@ function App() {
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/jobs" element={<AdminJobs />} />
 
-        {/* Redirect root to dashboard */}
+        {/* Redirect root to dashboard (bypassing login) */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </Router>

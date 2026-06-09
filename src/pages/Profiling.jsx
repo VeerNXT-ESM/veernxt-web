@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { supabase } from '../lib/supabase';
+import { supabase, getEngineUrl } from '../lib/supabase';
 import { Check, ChevronRight, ChevronLeft, Loader2, Award, Target, BookOpen, Clock, Shield, Briefcase, GraduationCap, Heart } from 'lucide-react';
 
-const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'https://veernxt-profiling-engine.onrender.com';
+const ENGINE_URL = getEngineUrl();
 
 const STEPS = [
   { id: 'identity', label: 'Identity', icon: Shield },
@@ -80,11 +80,17 @@ const Profiling = () => {
 
         if (profile && profile.raw_profile_data) {
           console.log("Pre-filling with existing profile data:", profile.raw_profile_data);
+          
+          // Prevent controlled component warnings by replacing null/undefined with empty strings
+          const cleanData = Object.fromEntries(
+            Object.entries(profile.raw_profile_data).map(([k, v]) => [k, v === null || v === undefined ? '' : v])
+          );
+
           setFormData(prev => ({
             ...prev,
-            ...profile.raw_profile_data,
+            ...cleanData,
             // Ensure display names match what's in the table if they differ
-            fullName: profile.full_name || profile.raw_profile_data.fullName
+            fullName: profile.full_name || cleanData.fullName || prev.fullName
           }));
         }
       }
@@ -150,7 +156,7 @@ const Profiling = () => {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       
-      const recommendResponse = await axios.post(`${ENGINE_URL}/api/recommend`, {
+      const recommendResponse = await axios.post(`${ENGINE_URL}/api/profile/recommend`, {
         ...formData,
         heightCm: parseInt(formData.heightCm),
         chestCm: formData.chestCm ? parseInt(formData.chestCm) : null,

@@ -1,36 +1,19 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || import.meta.env.SUPABASE_URL || import.meta.env.VITE_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.SUPABASE_ANON_KEY || import.meta.env.VITE_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key';
 
-const client = createClient(supabaseUrl, supabaseAnonKey);
+// Real Supabase client — no more mock overrides
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-// Mock Session for testing
-const mockUser = {
-  id: '00000000-0000-0000-0000-000000000000',
-  email: 'test@veernxt.in',
-  user_metadata: { full_name: 'Rahul Kumar' }
-};
-
-const mockSession = {
-  user: mockUser,
-  access_token: null,
-  refresh_token: 'fake-refresh-token',
-  expires_in: 3600,
-  expires_at: Math.floor(Date.now() / 1000) + 3600
-};
-
-// Override getSession and onAuthStateChange
-const originalAuth = client.auth;
-client.auth = {
-  ...originalAuth,
-  getSession: async () => ({ data: { session: mockSession }, error: null }),
-  getUser: async () => ({ data: { user: mockUser }, error: null }),
-  onAuthStateChange: (callback) => {
-    callback('SIGNED_IN', mockSession);
-    return { data: { subscription: { unsubscribe: () => {} } } };
-  },
-  signOut: async () => ({ error: null })
-};
-
-export const supabase = client;
+/**
+ * Helper: get the profiling engine URL.
+ * Uses the local Vercel API route (merged engine) by default.
+ * Falls back to the Render instance if VITE_ENGINE_URL is set.
+ */
+export function getEngineUrl() {
+  const envUrl = import.meta.env.VITE_ENGINE_URL;
+  if (envUrl && envUrl.trim() !== '') return envUrl;
+  // Use local Vercel API route — no CORS, no cold start
+  return '';
+}

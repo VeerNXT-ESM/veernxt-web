@@ -1,0 +1,1869 @@
+{
+  "designations": [
+    {
+      "trade": "Rifleman (Rifle/LMG)",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "MMG / HMG Gunner",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Grenadier / UGL Operator",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "ATGM Operator",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Rocket Launcher Operator",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Sniper",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Signaller (Infantry)",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pioneer (Infantry)",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Stretcher Bearer / Combat Medic",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Mortar Operator",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "MANPADS Operator",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Recce Trooper",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dog Handler (Infantry)",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Parachutist",
+      "arm_corps": "INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IFV Commander",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IFV Gunner",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IFV Driver",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IFV Radio Operator / Loader",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Rifleman (Mech Inf)",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "LMG Gunner (Mech Inf)",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "ATGM Operator (Mech Inf)",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Signaller (Mech Inf)",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Sniper (Mech Inf)",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Combat Medic (Mech)",
+      "arm_corps": "MECHANISED INFANTRY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Tank Commander",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Tank Gunner",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Tank Driver",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Tank Loader",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Tank Radio Operator",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Reconnaissance Trooper",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Signals Operator (Armoured)",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "NBC Operator",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Recovery Operator",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "61st Cavalry Trooper",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Farrier (61st Cavalry)",
+      "arm_corps": "ARMOURED CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Gunner (Field Artillery)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Gunner (Self-Propelled)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Rocket Launcher Operator (MBRL)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Survey Instrument Mechanic (SIM)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Sound Ranger",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Radar Operator (Met)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Fire Control Computer Operator",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Signaller (Artillery)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "FOO Signaller",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Ammunition Handler",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Driver (Artillery)",
+      "arm_corps": "ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Missile Operator (Akash SAM)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Missile Operator (Spyder)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "MANPADS Operator (Igla-S)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Gun Operator (L70 Bofors AD)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Gun Operator (ZU-23-2)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Radar Operator (AD)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "AD Control and Reporting Operator",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IFF Operator",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Missile Technician",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Electronics Mechanic (AD)",
+      "arm_corps": "AIR DEFENCE ARTILLERY",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Aviation Mechanic (Engine)",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Aviation Mechanic (Airframe)",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Avionics Technician",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "ATC Operator (Army Aviation)",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Ground Crew / Marshaller",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Air Despatch Rigger",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Parachute Packer",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Armament Mechanic (Aviation)",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Flight Line Mechanic",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Crash Rescue Crew",
+      "arm_corps": "ARMY AVIATION CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Special Forces Operator (Para SF)",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Combat Diver",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "HAHO / HALO Parachutist",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Sniper (SF)",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "EOD Operator",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Communications Operator (SF)",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Combat Medic (SF)",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Mountain Specialist",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Jungle Warfare Specialist",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "CQB Instructor",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dog Handler (SF)",
+      "arm_corps": "SPECIAL FORCES",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Combat Engineer",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Construction Engineer",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Bridge Builder / Pontoon Operator",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IED Disposal / EOD Operator",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Mine Clearance Operator",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Survey Instrument Mechanic",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Draughtsman",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Water Purification Operator",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Diver (Military)",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "NBC / CBRN Operator",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Electrician (Engineers)",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Carpenter",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Air Field Construction Specialist",
+      "arm_corps": "CORPS OF ENGINEERS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Radio Operator (Signaller)",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Lineman (Field Telephone)",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Cable Layer (OFC)",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Cipher Operator",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IT Operator / Network Admin",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "SATCOM Operator",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Electronic Warfare Operator",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Telecom Mechanic",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Microwave Communication Operator",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Troposcatter Operator",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Cyber Operator",
+      "arm_corps": "CORPS OF SIGNALS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Driver MT (HMV)",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Driver MT (LMV)",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Driver MT (MHE)",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Supply Assistant",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "POL Operator",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Air Despatch Porter",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Baker",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Cook",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Butcher",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Water Tanker Operator",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Stores Keeper (ASC)",
+      "arm_corps": "ARMY SERVICE CORPS (ASC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Storekeeper Tech (General)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Storekeeper Tech (Ammunition)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Armament Artificer (Small Arms)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Armament Artificer (Crew-Served)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Armament Artificer (Missiles)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Vehicle Stores Operator",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Computer Operator (AOC)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Draughtsman (AOC)",
+      "arm_corps": "ARMY ORDNANCE CORPS (AOC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Artificer (Automobile)",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Artificer (Tracked / AFV)",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Artificer (Armament)",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Artificer (Electronics)",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Artificer (Aviation)",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Artificer (Instrument)",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Metalsmith / Welder",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Machinist",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Generator Mechanic",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Recovery Mechanic",
+      "arm_corps": "ELECTRICAL AND MECHANICAL ENGINEERS (EME)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Nursing Assistant (NA)",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pharmacist / Dispenser",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Laboratory Technician",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Radiographer",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dresser (Field Surgical)",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Physiotherapy Assistant",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Stretcher Bearer",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Ambulance Driver",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Sanitary Inspector / Hygiene Tech",
+      "arm_corps": "ARMY MEDICAL CORPS (AMC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dental Technician (Prosthetics)",
+      "arm_corps": "ARMY DENTAL CORPS (ADC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dental Assistant",
+      "arm_corps": "ARMY DENTAL CORPS (ADC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dental Hygienist",
+      "arm_corps": "ARMY DENTAL CORPS (ADC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dental Lab Tech (Orthodontics)",
+      "arm_corps": "ARMY DENTAL CORPS (ADC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Radiographer (Dental / OPG)",
+      "arm_corps": "ARMY DENTAL CORPS (ADC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Muleteer / Mule Handler",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dog Handler",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Horse Handler / Rider",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Veterinary Assistant",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Farrier",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Meat Inspector",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Kennel Master",
+      "arm_corps": "REMOUNT AND VETERINARY CORPS (RVC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "General Duty Nursing Officer",
+      "arm_corps": "MILITARY NURSING SERVICE (MNS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "ICU / Critical Care Nurse",
+      "arm_corps": "MILITARY NURSING SERVICE (MNS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "OT Scrub Nurse",
+      "arm_corps": "MILITARY NURSING SERVICE (MNS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Psychiatric Nurse",
+      "arm_corps": "MILITARY NURSING SERVICE (MNS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Military Nursing Tutor",
+      "arm_corps": "MILITARY NURSING SERVICE (MNS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Education Havildar",
+      "arm_corps": "ARMY EDUCATION CORPS (AEC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Instructor (Vocational)",
+      "arm_corps": "ARMY EDUCATION CORPS (AEC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Education Specialist",
+      "arm_corps": "ARMY EDUCATION CORPS (AEC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Library Assistant",
+      "arm_corps": "ARMY EDUCATION CORPS (AEC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Sports Instructor",
+      "arm_corps": "ARMY EDUCATION CORPS (AEC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Intelligence Operator (HUMINT)",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "DOCEX Analyst",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "IMINT Analyst",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "SIGINT Operator",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Counter Intelligence Operator",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Interrogation Specialist",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Language Specialist / Interpreter",
+      "arm_corps": "INTELLIGENCE CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Military Law Specialist",
+      "arm_corps": "JUDGE ADVOCATE GENERAL'S DEPT (JAG)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Legal Aid Officer",
+      "arm_corps": "JUDGE ADVOCATE GENERAL'S DEPT (JAG)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Postal Assistant",
+      "arm_corps": "ARMY POSTAL SERVICE (APS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Field Post Office (FPO) Operator",
+      "arm_corps": "ARMY POSTAL SERVICE (APS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dispatch Rider (Postal)",
+      "arm_corps": "ARMY POSTAL SERVICE (APS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Money Order Processor",
+      "arm_corps": "ARMY POSTAL SERVICE (APS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Parcel Handler",
+      "arm_corps": "ARMY POSTAL SERVICE (APS)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pioneer (General Duties)",
+      "arm_corps": "PIONEER CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pioneer (Construction)",
+      "arm_corps": "PIONEER CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pioneer (Quarry Operator)",
+      "arm_corps": "PIONEER CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pioneer (Earth Moving Equipment Operator)",
+      "arm_corps": "PIONEER CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pioneer Section Commander",
+      "arm_corps": "PIONEER CORPS",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Security Guard (Armed)",
+      "arm_corps": "DEFENCE SECURITY CORPS (DSC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Security Guard (Unarmed)",
+      "arm_corps": "DEFENCE SECURITY CORPS (DSC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dog Handler (DSC)",
+      "arm_corps": "DEFENCE SECURITY CORPS (DSC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Security Supervisor / JCO",
+      "arm_corps": "DEFENCE SECURITY CORPS (DSC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Military Policeman (Provost)",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Traffic Controller",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "SIB Investigator",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "POW Guard",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Military Prison Staff",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Close Protection Officer (CPO)",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Dog Handler (CMP)",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Port / Rail / Air Embarkation NCO",
+      "arm_corps": "CORPS OF MILITARY POLICE (CMP)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pay Accountant",
+      "arm_corps": "ARMY PAY CORPS (APC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Audit Clerk",
+      "arm_corps": "ARMY PAY CORPS (APC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pension Processing Clerk",
+      "arm_corps": "ARMY PAY CORPS (APC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Pay Accounts Clerk",
+      "arm_corps": "ARMY PAY CORPS (APC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Computer Operator (Pay)",
+      "arm_corps": "ARMY PAY CORPS (APC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Cashier",
+      "arm_corps": "ARMY PAY CORPS (APC)",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Riding Instructor",
+      "arm_corps": "REMOUNT TRAINING CENTRE",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Horse Trainer / Breaker",
+      "arm_corps": "REMOUNT TRAINING CENTRE",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Mule Trainer",
+      "arm_corps": "REMOUNT TRAINING CENTRE",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Equestrian Sports Trainer",
+      "arm_corps": "REMOUNT TRAINING CENTRE",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Farrier (RTC)",
+      "arm_corps": "REMOUNT TRAINING CENTRE",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Polo Groom",
+      "arm_corps": "REMOUNT TRAINING CENTRE",
+      "service": "Indian Army"
+    },
+    {
+      "trade": "Seaman (General Service)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Quartermaster (QM)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Signalman (Visual Communication)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Regulating Petty Officer",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Physical Training Instructor (PTI)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Cook (General Service)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Steward",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Canteen Manager",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Dhobi (Laundry)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Writer (Clerk)",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Stores Assistant",
+      "arm_corps": "EXECUTIVE BRANCH (Seamen Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Radio Operator (Communication)",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Tele-Communication Mechanic (TCM)",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Radar Plotter",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Electronic Warfare (EW) Operator",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Cipher Operator",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Satellite Communication (SATCOM) Operator",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Communication Instructor",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Tele-Communication Artificer",
+      "arm_corps": "COMMUNICATIONS BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Mechanician / Engine Room Artificer (ERA)",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Electrical Artificer (EA)",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Weapon Electrical Artificer (WEA)",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Damage Control Operator",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Refrigeration & Air Conditioning Mechanic (RACM)",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Shipwright",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Blacksmith / Welder (Navy)",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Machinery Control Room (MCR) Operator",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Boiler Mechanic",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Hull Maintenance Technician",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Nuclear Propulsion Operator (INS Arihant/Arighat)",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Diesel Engine Mechanic",
+      "arm_corps": "ENGINEERING BRANCH (Marine Engineering)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Gunner (Naval)",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Missile Operator",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Torpedo Operator",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Anti-Submarine Warfare (ASW) Operator",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Mine Warfare Operator",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Diver (Naval)",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Guided Missile Technician",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Ordnance Artificer (OA)",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Fire Control Operator",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "NBC Defence Operator",
+      "arm_corps": "WEAPON BRANCH (Seaman Specialist / Gunnery)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Aircraft Mechanic (Airframe)",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Aircraft Mechanic (Engine)",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Aircraft Mechanic (Avionics)",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Air Traffic Control (ATC) Operator",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Aircraft Handler / Marshaller",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Flight Deck Operator (INS Vikrant/Vikramaditya)",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Observer (Air)",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Aircraft Armament Technician",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Meteorological Observer (Naval)",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Air Stores Accountant",
+      "arm_corps": "NAVAL AIR ARM (Aviation Branch)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Operator (General)",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Sonar Operator",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Torpedo Tube Operator",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Electrical Artificer",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Engine Room Artificer (ERA)",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Navigation Operator",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Life Support Operator",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Communication Operator",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Diver",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Submarine Weapons Artificer",
+      "arm_corps": "SUBMARINE BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Sick Berth Attendant (SBA)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Laboratory Technician (Naval)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Pharmacist (Naval)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Radiographer (Naval)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Dental Technician (Naval)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Dental Assistant (Naval)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Physiotherapy Assistant (Naval)",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Medical Stores Assistant",
+      "arm_corps": "NAVAL MEDICAL BRANCH",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Survey Recorder",
+      "arm_corps": "SURVEY BRANCH (Hydrographic)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Hydrographic Surveyor",
+      "arm_corps": "SURVEY BRANCH (Hydrographic)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Oceanographic Observer",
+      "arm_corps": "SURVEY BRANCH (Hydrographic)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Draftsman (Survey)",
+      "arm_corps": "SURVEY BRANCH (Hydrographic)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Survey Stores Accountant",
+      "arm_corps": "SURVEY BRANCH (Hydrographic)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Instructor (Naval Education)",
+      "arm_corps": "NAVAL EDUCATION & METEOROLOGY",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Meteorological Observer (Shore)",
+      "arm_corps": "NAVAL EDUCATION & METEOROLOGY",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Physical Training Instructor (Naval)",
+      "arm_corps": "NAVAL EDUCATION & METEOROLOGY",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Writer / Accountant (Pay)",
+      "arm_corps": "NAVAL EDUCATION & METEOROLOGY",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Legal Assistant (JAG Support)",
+      "arm_corps": "NAVAL EDUCATION & METEOROLOGY",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Navik (General Duty)",
+      "arm_corps": "INDIAN COAST GUARD (Aligned with Navy)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Navik (Domestic Branch)",
+      "arm_corps": "INDIAN COAST GUARD (Aligned with Navy)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Yantrik (Mechanical)",
+      "arm_corps": "INDIAN COAST GUARD (Aligned with Navy)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Yantrik (Electrical)",
+      "arm_corps": "INDIAN COAST GUARD (Aligned with Navy)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Yantrik (Electronics)",
+      "arm_corps": "INDIAN COAST GUARD (Aligned with Navy)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Rescue Swimmer",
+      "arm_corps": "INDIAN COAST GUARD (Aligned with Navy)",
+      "service": "Indian Navy"
+    },
+    {
+      "trade": "Pilot (Fighter)",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Pilot (Transport)",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Pilot (Helicopter)",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Navigator / Weapons Systems Operator (WSO)",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Flight Engineer (Transport)",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Air Traffic Controller (ATC) — Officer",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Meteorological Officer",
+      "arm_corps": "FLYING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Air Engine Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Airframe Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Instrument Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Armament Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Avionics / Electrical Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Radio Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Radar Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Safety Equipment Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (MT Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Workshop Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Electrical Fitter — Ground)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (ECM / EW Fitter)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Parachute Packer / Rigger)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Air Traffic Control — Enlisted)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (MT Driver)",
+      "arm_corps": "GROUND DUTY TECHNICAL (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Administration / Clerk)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Accounts)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Stores — General)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Stores — Technical)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Secretariat / Stenographer)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Education Instructor)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Legal Clerk)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Intelligence)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Photographer / Imagery)",
+      "arm_corps": "GROUND DUTY NON-TECHNICAL (Admin / Logistics)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Medical Assistant)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Laboratory Technician)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Pharmacist)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Radiographer)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Dental Technician)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Physiotherapy Assistant)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Aviation Medicine Technician)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Ambulance Driver / Medical)",
+      "arm_corps": "IAF MEDICAL BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Meteorological Observer)",
+      "arm_corps": "METEOROLOGY BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Meteorological Technician)",
+      "arm_corps": "METEOROLOGY BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Radar Meteorologist — Support)",
+      "arm_corps": "METEOROLOGY BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Meteorological Plotter)",
+      "arm_corps": "METEOROLOGY BRANCH (Airmen)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — Rifleman)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — LMG Gunner)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — MANPADS Operator)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — Radar Operator)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — Dog Handler)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — Communication Operator)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — Fire Control Operator)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — NBC Operator)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Regiment — Intelligence Operator)",
+      "arm_corps": "IAF REGIMENT (Ground Defence)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Radar Operator — Ground)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Radio Operator — Ground)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Signals — Telecom Mechanic)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Air Defence Radar Plotter)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (SATCOM Operator)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Microwave / Troposcatter)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (EW — Ground)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Computer Operator — ATC Systems)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Encryption / Cipher Operator)",
+      "arm_corps": "IAF SIGNALS BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Education Instructor — Technical)",
+      "arm_corps": "IAF EDUCATION BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Education Instructor — Non-Technical)",
+      "arm_corps": "IAF EDUCATION BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Physical Training Instructor)",
+      "arm_corps": "IAF EDUCATION BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Library Assistant)",
+      "arm_corps": "IAF EDUCATION BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Audio Visual Technician)",
+      "arm_corps": "IAF EDUCATION BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Fire Fighter / Crash Rescue)",
+      "arm_corps": "IAF FIRE SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Fire Fighting Mechanic)",
+      "arm_corps": "IAF FIRE SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Fire Fighting Operator)",
+      "arm_corps": "IAF FIRE SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Fire Alarm Technician)",
+      "arm_corps": "IAF FIRE SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Pioneer)",
+      "arm_corps": "IAF PIONEER & WORKS SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Works — Electrical)",
+      "arm_corps": "IAF PIONEER & WORKS SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Works — Civil / Construction)",
+      "arm_corps": "IAF PIONEER & WORKS SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Works — Air Conditioning / Refrigeration)",
+      "arm_corps": "IAF PIONEER & WORKS SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Generator / DG Set Operator)",
+      "arm_corps": "IAF PIONEER & WORKS SERVICES",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Cook)",
+      "arm_corps": "IAF CATERING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Steward)",
+      "arm_corps": "IAF CATERING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Mess Manager)",
+      "arm_corps": "IAF CATERING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Butcher)",
+      "arm_corps": "IAF CATERING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Baker)",
+      "arm_corps": "IAF CATERING BRANCH",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Musician — Wind)",
+      "arm_corps": "IAF MUSIC BRANCH (Bands)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Musician — Percussion)",
+      "arm_corps": "IAF MUSIC BRANCH (Bands)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Musician — Brass)",
+      "arm_corps": "IAF MUSIC BRANCH (Bands)",
+      "service": "Indian Air Force"
+    },
+    {
+      "trade": "Airman (Drum Major)",
+      "arm_corps": "IAF MUSIC BRANCH (Bands)",
+      "service": "Indian Air Force"
+    }
+  ]
+}
