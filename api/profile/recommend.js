@@ -151,12 +151,22 @@ export default async function handler(req, res) {
     // 3. Rank
     scored.sort((a, b) => b.score - a.score);
 
+    // Calculate overall readiness (Veer Score) as average of top 3 matches
+    let overall_match_score = 0;
+    if (scored.length > 0) {
+      const topScores = scored.slice(0, 3).map(r => r.score);
+      overall_match_score = topScores.reduce((a, b) => a + b, 0) / topScores.length;
+    }
+
     // 4. Diversify
     const diversified = diversify(scored, topN, 4);
 
     // 5. Build response
     const result = {
       ok: true,
+      summary: {
+        overall_match_score: overall_match_score
+      },
       profileSummary: summariseProfile(profile),
       totalEligible: survivors.length,
       totalRejected: rejected.length,

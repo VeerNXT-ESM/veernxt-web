@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { supabase } from '../lib/supabase';
+import axios from 'axios';
+import { supabase, getEngineUrl } from '../lib/supabase';
 import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark } from 'lucide-react';
 
-const PreparationPanel = ({ examName }) => {
+const PreparationPanel = ({ exam }) => {
   const [resources, setResources] = useState([]);
   const [quizzes, setQuizzes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,10 +13,21 @@ const PreparationPanel = ({ examName }) => {
     const fetchPrepData = async () => {
       setLoading(true);
       try {
-        const [resData, quizData] = await Promise.all([
-          supabase.from('resources').select('*').eq('exam_name', examName).limit(3),
-          supabase.from('quizzes').select('*').eq('exam_name', examName).limit(3)
-        ]);
+        let resData = await supabase.from('resources').select('*').eq('exam_name', exam.exam_name).limit(3);
+        let quizData = await supabase.from('quizzes').select('*').eq('exam_name', exam.exam_name).limit(3);
+        
+        // Fallback: If no direct match, fetch generalized prep for this career track
+        if ((!resData.data || resData.data.length === 0) && exam.career_track) {
+          let fallbackTerm = exam.exam_name.split(' ')[0]; 
+          if (exam.career_track === 'POLICE_CAPF') fallbackTerm = 'Constable';
+          else if (exam.career_track === 'SSC') fallbackTerm = 'SSC';
+          else if (exam.career_track === 'RAILWAYS') fallbackTerm = 'RRB';
+          else if (exam.career_track === 'BANKING') fallbackTerm = 'IBPS';
+          else if (exam.career_track === 'DEFENCE') fallbackTerm = 'Defence';
+          
+          resData = await supabase.from('resources').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
+          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
+        }
         
         setResources(resData.data || []);
         setQuizzes(quizData.data || []);
@@ -25,8 +37,8 @@ const PreparationPanel = ({ examName }) => {
         setLoading(false);
       }
     };
-    fetchPrepData();
-  }, [examName]);
+    if (exam && exam.exam_name) fetchPrepData();
+  }, [exam]);
 
   if (loading) return <div style={{ padding: '1rem', textAlign: 'center' }}><RefreshCw className="animate-spin" size={20} color="var(--ios-olive)" /></div>;
 
@@ -147,15 +159,28 @@ const Dashboard = () => {
   const recommendations = profile?.recommendations || [];
 
   const handleRecalculate = async () => {
-    if (!profile?.profile_data) {
+    if (!profile?.raw_profile_data) {
       navigate('/profiling');
       return;
     }
 
     setLoading(true);
     try {
-      const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'http://localhost:5001';
-      const response = await axios.post(`${ENGINE_URL}/api/recommend`, profile.profile_data);
+      const ENGINE_URL = getEngineUrl();
+      const formData = profile.raw_profile_data;
+      
+      // Transform raw formData to match engine schema (same as Profiling.jsx does)
+      const payload = {
+        ...formData,
+        dateOfBirth: `${formData.dobYear}-${formData.dobMonth}-${formData.dobDay}`,
+        totalServiceDuration: `${formData.serviceYears} years ${formData.serviceMonths} months`,
+        heightCm: parseInt(formData.heightCm) || 0,
+        weightKg: parseInt(formData.weightKg) || 0,
+        chestCm: parseInt(formData.chestCm) || 0,
+        chestExpansion: parseInt(formData.chestExpansion) || 0,
+      };
+
+      const response = await axios.post(`${ENGINE_URL}/api/profile/recommend`, payload);
       
       if (response.data.ok) {
         if (profile.id !== '00000000-0000-0000-0000-000000000000') {
@@ -163,7 +188,7 @@ const Dashboard = () => {
             .from('user_profiles')
             .update({
               recommendations: response.data.recommendations,
-              veer_score: response.data.summary?.overall_match_score || 0,
+              veer_score: Math.round(response.data.summary?.overall_match_score || 0),
               updated_at: new Date().toISOString()
             })
             .eq('id', profile.id);
@@ -215,7 +240,7 @@ const Dashboard = () => {
               <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>VEER SCORE</span>
             </div>
             <div className="score-display">
-              {profile?.veer_score ? Math.round(profile.veer_score) : '—'}
+              {profile?.veer_score != null ? Math.round(profile.veer_score) : '—'}
             </div>
             <p className="card-desc">Your overall readiness score calculated from service history, skills, and physical standards.</p>
           </div>
@@ -272,9 +297,9 @@ const Dashboard = () => {
                     </div>
                     <div className="rec-score-section">
                       <div className="score-bar-bg">
-                        <div className="score-bar-fill" style={{ width: `${rec.match_score}%` }}></div>
+                        <div className="score-bar-fill" style={{ width: `${Math.min(rec.score, 100)}%` }}></div>
                       </div>
-                      <span className="score-text">{Math.round(rec.match_score)}% Match</span>
+                      <span className="score-text">{Math.min(Math.round(rec.score), 100)}% Match</span>
                     </div>
                     <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                       <button 
@@ -290,7 +315,7 @@ const Dashboard = () => {
                       </a>
                     </div>
                   </div>
-                  {expandedExamId === rec.exam_id && <PreparationPanel examName={rec.exam_name} />}
+                  {expandedExamId === rec.exam_id && <PreparationPanel exam={rec} />}
                 </React.Fragment>
               ))}
               </div>

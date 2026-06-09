@@ -131,7 +131,8 @@ export function scoreExam(profile, exam, options = {}) {
     add(breakdown, 'technical_trade_alignment', 8);
   }
 
-  const score = Object.values(breakdown).reduce((a, b) => a + b, 0);
+  let score = Object.values(breakdown).reduce((a, b) => a + b, 0);
+  score = Math.min(score, 100);
   return { score, breakdown };
 }
 

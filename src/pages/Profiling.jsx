@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { supabase, getEngineUrl } from '../lib/supabase';
+import { STATE_DISTRICTS } from '../lib/districts';
 import { Check, ChevronRight, ChevronLeft, Loader2, Award, Target, BookOpen, Clock, Shield, Briefcase, GraduationCap, Heart } from 'lucide-react';
+import designationsData from '../data/designations.json';
+import PremiumSelect from '../components/PremiumSelect';
 
 const ENGINE_URL = getEngineUrl();
 
@@ -23,7 +26,9 @@ const Profiling = () => {
   
   const [formData, setFormData] = useState({
     fullName: '',
-    dateOfBirth: '',
+    dobDay: '',
+    dobMonth: '',
+    dobYear: '',
     category: '',
     stateOfDomicile: '',
     district: '',
@@ -34,6 +39,8 @@ const Profiling = () => {
     armCorpsTrade: '',
     roleAppointment: '',
     totalServiceDuration: '',
+    serviceYears: '',
+    serviceMonths: '',
     militaryCourses: [],
     characterOnDischarge: '',
     specificSkills: [],
@@ -43,6 +50,7 @@ const Profiling = () => {
     sportsAchievement: 'None',
     mathInClass12: false,
     heightCm: '',
+    weightKg: '',
     chestCm: '',
     chestExpansion: '',
     vision: '',
@@ -100,10 +108,20 @@ const Profiling = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+    setFormData(prev => {
+      const updates = { [name]: type === 'checkbox' ? checked : value };
+      if (name === 'stateOfDomicile' && value !== prev.stateOfDomicile) {
+        updates.district = '';
+      }
+      if (name === 'serviceBranch' && value !== prev.serviceBranch) {
+        updates.armCorpsTrade = '';
+        updates.roleAppointment = '';
+      }
+      if (name === 'armCorpsTrade' && value !== prev.armCorpsTrade) {
+        updates.roleAppointment = '';
+      }
+      return { ...prev, ...updates };
+    });
   };
 
   const handleMultiSelect = (name, val) => {
@@ -119,10 +137,10 @@ const Profiling = () => {
 
   const validateStep = (step) => {
     const d = formData;
-    if (step === 0) return d.fullName && d.dateOfBirth && d.category && d.stateOfDomicile && d.maritalStatus && d.email && d.mobile;
-    if (step === 1) return d.serviceBranch && d.armCorpsTrade && d.roleAppointment && d.totalServiceDuration && d.characterOnDischarge;
+    if (step === 0) return d.fullName && d.dobDay && d.dobMonth && d.dobYear && d.category && d.stateOfDomicile && d.maritalStatus && d.email && d.mobile;
+    if (step === 1) return d.serviceBranch && d.armCorpsTrade && d.roleAppointment && d.serviceYears !== '' && d.serviceMonths !== '' && d.characterOnDischarge;
     if (step === 2) return d.highestQualification;
-    if (step === 3) return d.heightCm;
+    if (step === 3) return d.heightCm && d.weightKg && d.chestCm && d.chestExpansion;
     if (step === 4) return d.careerPreferences.length > 0;
     if (step === 6) return d.consent;
     return true;
@@ -158,9 +176,12 @@ const Profiling = () => {
       
       const recommendResponse = await axios.post(`${ENGINE_URL}/api/profile/recommend`, {
         ...formData,
+        dateOfBirth: `${formData.dobYear}-${formData.dobMonth}-${formData.dobDay}`,
+        totalServiceDuration: `${formData.serviceYears} years ${formData.serviceMonths} months`,
         heightCm: parseInt(formData.heightCm),
-        chestCm: formData.chestCm ? parseInt(formData.chestCm) : null,
-        chestExpansion: formData.chestExpansion ? parseInt(formData.chestExpansion) : null,
+        weightKg: parseInt(formData.weightKg),
+        chestCm: parseInt(formData.chestCm),
+        chestExpansion: parseInt(formData.chestExpansion),
       });
 
       if (!recommendResponse.data.ok) throw new Error(recommendResponse.data.error || 'Failed to get recommendations');
@@ -173,11 +194,11 @@ const Profiling = () => {
             id: session.user.id,
             full_name: formData.fullName,
             service_branch: formData.serviceBranch,
-            years_of_service: parseInt(formData.totalServiceDuration) || 0,
+            years_of_service: parseInt(formData.serviceYears) || 0,
             education_level: formData.highestQualification,
-            profile_data: formData,
+            raw_profile_data: formData,
             recommendations: resultsData.recommendations,
-            veer_score: resultsData.summary?.overall_match_score || 0,
+            veer_score: Math.round(resultsData.summary?.overall_match_score || 0),
             profiling_completed: true,
             updated_at: new Date().toISOString()
           });
@@ -197,8 +218,24 @@ const Profiling = () => {
 
   const renderStepContent = () => {
     const d = formData;
+    
+    const today = new Date();
+    const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate()).toISOString().split('T')[0];
+
     switch (currentStep) {
-      case 0:
+      case 0: {
+        const currentYear = new Date().getFullYear();
+        const yearOptions = [];
+        for (let y = currentYear - 18; y >= currentYear - 50; y--) {
+          yearOptions.push({ value: String(y), label: String(y) });
+        }
+        const monthOptions = [
+          {value:'01',label:'Jan'}, {value:'02',label:'Feb'}, {value:'03',label:'Mar'}, {value:'04',label:'Apr'}, 
+          {value:'05',label:'May'}, {value:'06',label:'Jun'}, {value:'07',label:'Jul'}, {value:'08',label:'Aug'}, 
+          {value:'09',label:'Sep'}, {value:'10',label:'Oct'}, {value:'11',label:'Nov'}, {value:'12',label:'Dec'}
+        ];
+        const dayOptions = [...Array(31).keys()].map(i => ({ value: String(i+1).padStart(2, '0'), label: String(i+1).padStart(2, '0') }));
+
         return (
           <div className="form-section animate-fade-in">
             <h3 style={{ borderBottom: '1px solid #eee', paddingBottom: '0.5rem', marginBottom: '1.5rem', color: 'var(--ios-olive)' }}>Section A — Identity</h3>
@@ -209,32 +246,68 @@ const Profiling = () => {
               </div>
               <div className="field">
                 <label>Date of Birth *</label>
-                <input type="date" name="dateOfBirth" value={d.dateOfBirth} onChange={handleChange} required />
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <div style={{ flex: 1 }}>
+                    <PremiumSelect name="dobDay" value={d.dobDay} onChange={handleChange} placeholder="DD" options={dayOptions} />
+                  </div>
+                  <div style={{ flex: 1.2 }}>
+                    <PremiumSelect name="dobMonth" value={d.dobMonth} onChange={handleChange} placeholder="Month" options={monthOptions} />
+                  </div>
+                  <div style={{ flex: 1.2 }}>
+                    <PremiumSelect name="dobYear" value={d.dobYear} onChange={handleChange} placeholder="YYYY" options={yearOptions} />
+                  </div>
+                </div>
               </div>
               <div className="field">
                 <label>Category *</label>
-                <select name="category" value={d.category} onChange={handleChange} required>
-                  <option value="">Select</option>
-                  <option>General</option><option>OBC</option><option>SC</option><option>ST</option><option>EWS</option>
-                </select>
+                <PremiumSelect 
+                  name="category" 
+                  value={d.category} 
+                  onChange={handleChange} 
+                  placeholder="Select Category"
+                  options={['General', 'OBC', 'SC', 'ST', 'EWS'].map(c => ({ value: c, label: c }))} 
+                />
               </div>
               <div className="field">
                 <label>State of Domicile *</label>
-                <select name="stateOfDomicile" value={d.stateOfDomicile} onChange={handleChange} required>
-                  <option value="">Select State</option>
-                  {['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Delhi', 'J&K', 'Ladakh'].map(s => <option key={s}>{s}</option>)}
-                </select>
+                <PremiumSelect 
+                  name="stateOfDomicile" 
+                  value={d.stateOfDomicile} 
+                  onChange={handleChange} 
+                  placeholder="Select State"
+                  options={Object.keys(STATE_DISTRICTS).sort().map(s => ({ value: s, label: s }))} 
+                />
               </div>
               <div className="field">
                 <label>Marital Status *</label>
-                <select name="maritalStatus" value={d.maritalStatus} onChange={handleChange} required>
-                  <option value="">Select</option>
-                  <option>Single</option><option>Married</option>
-                </select>
+                <PremiumSelect 
+                  name="maritalStatus" 
+                  value={d.maritalStatus} 
+                  onChange={handleChange} 
+                  placeholder="Select Status"
+                  options={['Single', 'Married'].map(m => ({ value: m, label: m }))} 
+                />
               </div>
               <div className="field">
                 <label>District</label>
-                <input type="text" name="district" value={d.district} onChange={handleChange} />
+                {d.stateOfDomicile && STATE_DISTRICTS[d.stateOfDomicile] ? (
+                  <PremiumSelect 
+                    name="district" 
+                    value={d.district} 
+                    onChange={handleChange} 
+                    placeholder="Select District"
+                    options={STATE_DISTRICTS[d.stateOfDomicile].map(dist => ({ value: dist, label: dist }))} 
+                  />
+                ) : (
+                  <PremiumSelect 
+                    name="district" 
+                    value="" 
+                    onChange={handleChange} 
+                    disabled={true} 
+                    placeholder="Select a state first"
+                    options={[]} 
+                  />
+                )}
               </div>
               <div className="field">
                 <label>Email *</label>
@@ -247,42 +320,96 @@ const Profiling = () => {
             </div>
           </div>
         );
-      case 1:
+      }
+      case 1: {
+        const availableArms = d.serviceBranch 
+          ? [...new Set(designationsData.designations.filter(x => x.service === d.serviceBranch).map(x => x.arm_corps))]
+          : [];
+        const availableRoles = d.armCorpsTrade 
+          ? designationsData.designations.filter(x => x.service === d.serviceBranch && x.arm_corps === d.armCorpsTrade).map(x => x.trade)
+          : [];
+
         return (
           <div className="form-section animate-fade-in">
             <h3 style={{ borderBottom: '1px solid #eee', paddingBottom: '0.5rem', marginBottom: '1.5rem', color: 'var(--ios-olive)' }}>Section B — Service Record</h3>
             <div className="grid-2">
               <div className="field">
                 <label>Service Branch *</label>
-                <select name="serviceBranch" value={d.serviceBranch} onChange={handleChange} required>
-                  <option value="">Select</option>
-                  <option value="Indian Army">Indian Army</option>
-                  <option value="Indian Navy">Indian Navy</option>
-                  <option value="Indian Air Force">Indian Air Force</option>
-                </select>
+                <PremiumSelect 
+                  name="serviceBranch" 
+                  value={d.serviceBranch} 
+                  onChange={handleChange} 
+                  placeholder="Select Branch"
+                  options={[
+                    { value: "Indian Army", label: "Indian Army" },
+                    { value: "Indian Navy", label: "Indian Navy" },
+                    { value: "Indian Air Force", label: "Indian Air Force" }
+                  ]} 
+                />
               </div>
               <div className="field">
                 <label>Arm / Corps / Trade *</label>
-                <input type="text" name="armCorpsTrade" value={d.armCorpsTrade} onChange={handleChange} placeholder="e.g. Infantry, Signals" required />
+                <PremiumSelect 
+                  name="armCorpsTrade" 
+                  value={d.armCorpsTrade} 
+                  onChange={handleChange} 
+                  disabled={!d.serviceBranch} 
+                  placeholder="Select Arm/Corps"
+                  options={availableArms.map(arm => ({ value: arm, label: arm }))} 
+                />
               </div>
               <div className="field">
                 <label>Role / Appointment *</label>
-                <input type="text" name="roleAppointment" value={d.roleAppointment} onChange={handleChange} placeholder="e.g. Rifleman" required />
+                <PremiumSelect 
+                  name="roleAppointment" 
+                  value={d.roleAppointment} 
+                  onChange={handleChange} 
+                  disabled={!d.armCorpsTrade} 
+                  placeholder="Select Role/Appointment"
+                  options={availableRoles.map(role => ({ value: role, label: role }))} 
+                />
               </div>
               <div className="field">
                 <label>Total Duration *</label>
-                <input type="text" name="totalServiceDuration" value={d.totalServiceDuration} onChange={handleChange} placeholder="e.g. 4 years 0 months" required />
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <div style={{ flex: 1 }}>
+                    <PremiumSelect 
+                      name="serviceYears" 
+                      value={d.serviceYears} 
+                      onChange={handleChange} 
+                      placeholder="Years"
+                      options={[...Array(35).keys()].map(y => ({ value: y.toString(), label: `${y} Years` }))} 
+                    />
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <PremiumSelect 
+                      name="serviceMonths" 
+                      value={d.serviceMonths} 
+                      onChange={handleChange} 
+                      placeholder="Months"
+                      options={[...Array(12).keys()].map(m => ({ value: m.toString(), label: `${m} Months` }))} 
+                    />
+                  </div>
+                </div>
               </div>
               <div className="field">
                 <label>Character on Discharge *</label>
-                <select name="characterOnDischarge" value={d.characterOnDischarge} onChange={handleChange} required>
-                  <option value="">Select</option>
-                  <option>Exemplary</option><option>Very Good</option><option>Good</option>
-                </select>
+                <PremiumSelect 
+                  name="characterOnDischarge" 
+                  value={d.characterOnDischarge} 
+                  onChange={handleChange} 
+                  placeholder="Select Character"
+                  options={[
+                    { value: "Exemplary", label: "Exemplary" },
+                    { value: "Very Good", label: "Very Good" },
+                    { value: "Good", label: "Good" }
+                  ]} 
+                />
               </div>
             </div>
           </div>
         );
+      }
       case 2:
         return (
           <div className="form-section animate-fade-in">
@@ -290,40 +417,81 @@ const Profiling = () => {
             <div className="grid-2">
               <div className="field">
                 <label>Highest Qualification *</label>
-                <select name="highestQualification" value={d.highestQualification} onChange={handleChange} required>
-                  <option value="">Select</option>
-                  <option>Class 10</option><option>Class 12</option><option>Graduate</option><option>Post-Graduate</option>
-                </select>
+                <PremiumSelect 
+                  name="highestQualification" 
+                  value={d.highestQualification} 
+                  onChange={handleChange} 
+                  placeholder="Select Qualification"
+                  options={['Class 10', 'Class 12', 'Graduate', 'Post-Graduate'].map(q => ({ value: q, label: q }))} 
+                />
               </div>
               <div className="field">
                 <label>NCC Certification</label>
-                <select name="nccCertification" value={d.nccCertification} onChange={handleChange}>
-                  <option>None</option><option>A Certificate</option><option>B Certificate</option><option>C Certificate</option>
-                </select>
+                <PremiumSelect 
+                  name="nccCertification" 
+                  value={d.nccCertification} 
+                  onChange={handleChange} 
+                  placeholder="Select Certification"
+                  options={['None', 'A Certificate', 'B Certificate', 'C Certificate'].map(c => ({ value: c, label: c }))} 
+                />
               </div>
             </div>
           </div>
         );
-      case 3:
+      case 3: {
+        const heightOptions = Array.from({length: 81}, (_, i) => 140 + i).map(v => ({ value: String(v), label: `${v} cm` }));
+        const weightOptions = Array.from({length: 111}, (_, i) => 40 + i).map(v => ({ value: String(v), label: `${v} kg` }));
+        const chestOptions = Array.from({length: 71}, (_, i) => 60 + i).map(v => ({ value: String(v), label: `${v} cm` }));
+        const expansionOptions = Array.from({length: 21}, (_, i) => 0 + i).map(v => ({ value: String(v), label: `${v} cm` }));
+
         return (
           <div className="form-section animate-fade-in">
             <h3 style={{ borderBottom: '1px solid #eee', paddingBottom: '0.5rem', marginBottom: '1.5rem', color: 'var(--ios-olive)' }}>Section D — Physical</h3>
-            <div className="grid-3">
+            <div className="grid-2">
               <div className="field">
                 <label>Height (cm) *</label>
-                <input type="number" name="heightCm" value={d.heightCm} onChange={handleChange} required />
+                <PremiumSelect 
+                  name="heightCm" 
+                  value={d.heightCm ? String(d.heightCm) : ''} 
+                  onChange={handleChange} 
+                  placeholder="Height"
+                  options={heightOptions} 
+                />
               </div>
               <div className="field">
-                <label>Chest (cm)</label>
-                <input type="number" name="chestCm" value={d.chestCm} onChange={handleChange} />
+                <label>Weight (kg) *</label>
+                <PremiumSelect 
+                  name="weightKg" 
+                  value={d.weightKg ? String(d.weightKg) : ''} 
+                  onChange={handleChange} 
+                  placeholder="Weight"
+                  options={weightOptions} 
+                />
               </div>
               <div className="field">
-                <label>Expansion (cm)</label>
-                <input type="number" name="chestExpansion" value={d.chestExpansion} onChange={handleChange} />
+                <label>Chest (cm) *</label>
+                <PremiumSelect 
+                  name="chestCm" 
+                  value={d.chestCm ? String(d.chestCm) : ''} 
+                  onChange={handleChange} 
+                  placeholder="Chest"
+                  options={chestOptions} 
+                />
+              </div>
+              <div className="field">
+                <label>Expansion (cm) *</label>
+                <PremiumSelect 
+                  name="chestExpansion" 
+                  value={d.chestExpansion ? String(d.chestExpansion) : ''} 
+                  onChange={handleChange} 
+                  placeholder="Expansion"
+                  options={expansionOptions} 
+                />
               </div>
             </div>
           </div>
         );
+      }
       case 4:
         return (
           <div className="form-section animate-fade-in">
@@ -499,8 +667,8 @@ const Profiling = () => {
         }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-        .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
-        .field label { font-size: 0.8rem; font-weight: 700; color: #555; }
+        .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; min-width: 0; }
+        .field label { font-size: 0.8rem; font-weight: 700; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .field input, .field select {
           padding: 0.8rem;
           border-radius: 12px;
@@ -508,6 +676,9 @@ const Profiling = () => {
           background: var(--ios-secondary);
           font-family: inherit;
           font-size: 0.95rem;
+          width: 100%;
+          box-sizing: border-box;
+          text-overflow: ellipsis;
         }
         .field input:focus, .field select:focus {
           outline: none;

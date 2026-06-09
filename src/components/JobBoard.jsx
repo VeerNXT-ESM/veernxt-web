@@ -150,8 +150,8 @@ const JobBoard = ({ isAdmin = false }) => {
   };
 
   const getProfileLocation = () => {
-    if (profileData && profileData.profile_data) {
-      const p = profileData.profile_data;
+    if (profileData && profileData.raw_profile_data) {
+      const p = profileData.raw_profile_data;
       if (p.district || p.stateOfDomicile) {
         return [p.district, p.stateOfDomicile].filter(Boolean).join(', ');
       }
