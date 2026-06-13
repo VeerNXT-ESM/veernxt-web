@@ -191,7 +191,7 @@ const SecureReader = () => {
           margin-bottom: 3rem;
         }
         .nav-inner {
-          max-width: 800px;
+          max-width: 1000px;
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
@@ -222,7 +222,7 @@ const SecureReader = () => {
         .nav-icon-btn:hover { background: #f1f5f9; color: var(--ios-olive); }
         
         .reader-main {
-          max-width: 800px;
+          max-width: 1000px;
           margin: 0 auto;
           padding: 0 1.5rem;
         }
@@ -287,7 +287,27 @@ const SecureReader = () => {
         .reader-content p { margin-bottom: 1.5rem; }
         .reader-content img { max-width: 100%; height: auto; border-radius: 8px; }
         .reader-content pre { white-space: pre-wrap; word-break: break-all; overflow-x: auto; max-width: 100%; }
-        .reader-content table { width: 100%; table-layout: fixed; word-wrap: break-word; }
+        .reader-content table { 
+          width: 100%; 
+          border-collapse: collapse; 
+          margin: 1.5em 0; 
+          display: block;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .reader-content th, .reader-content td { 
+          border: 1px solid #cbd5e1; 
+          padding: 0.75rem 1.25rem; 
+          text-align: left; 
+          word-break: normal;
+          overflow-wrap: normal;
+          min-width: 120px;
+        }
+        .reader-content th { 
+          background-color: #f1f5f9; 
+          font-weight: 600; 
+          color: #0f172a; 
+        }
         
         .reader-footer {
           margin-top: 4rem;

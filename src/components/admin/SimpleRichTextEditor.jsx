@@ -13,6 +13,7 @@ const fullModules = {
     ['link', 'image'],
     ['clean']
   ],
+  table: true
 };
 
 const compactModules = {
@@ -29,7 +30,8 @@ const formats = [
   'color', 'background',
   'list', 'align',
   'blockquote', 'code-block',
-  'link', 'image', 'script'
+  'link', 'image', 'script',
+  'table'
 ];
 
 const SimpleRichTextEditor = ({ value, onChange, compact = false }) => {
@@ -129,6 +131,27 @@ const SimpleRichTextEditor = ({ value, onChange, compact = false }) => {
           color: #475569;
           font-style: italic;
           border-radius: 0 8px 8px 0;
+        }
+        .ql-editor table { 
+          width: 100%; 
+          border-collapse: collapse; 
+          margin: 1.5em 0; 
+          display: block;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .ql-editor th, .ql-editor td { 
+          border: 1px solid #cbd5e1; 
+          padding: 0.75rem 1.25rem; 
+          text-align: left; 
+          word-break: normal;
+          overflow-wrap: normal;
+          min-width: 120px;
+        }
+        .ql-editor th { 
+          background-color: #f1f5f9; 
+          font-weight: 600; 
+          color: #0f172a; 
         }
       `}</style>
     </div>
