@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import { Save, ArrowLeft, Plus, Trash2, HelpCircle, Layout, List } from 'lucide-react';
+import SimpleRichTextEditor from '../../components/admin/SimpleRichTextEditor';
 
 const AdminQuizEditor = () => {
   const { id } = useParams();
@@ -148,11 +149,11 @@ const AdminQuizEditor = () => {
                 
                 <div className="form-group">
                   <label>Question Text</label>
-                  <textarea 
+                  <SimpleRichTextEditor 
                     value={q.question_text} 
-                    onChange={e => {
+                    onChange={content => {
                       const newQ = [...questions];
-                      newQ[idx].question_text = e.target.value;
+                      newQ[idx].question_text = content;
                       setQuestions(newQ);
                     }}
                   />
@@ -166,29 +167,28 @@ const AdminQuizEditor = () => {
                         newQ[idx].correct_answer = key;
                         setQuestions(newQ);
                       }}>{key}</div>
-                      <input 
-                        type="text" 
-                        placeholder={`Option ${key}...`} 
-                        value={q.options[key]}
-                        onChange={e => {
-                          const newQ = [...questions];
-                          newQ[idx].options[key] = e.target.value;
-                          setQuestions(newQ);
-                        }}
-                      />
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <SimpleRichTextEditor 
+                          compact={true}
+                          value={q.options[key]}
+                          onChange={content => {
+                            const newQ = [...questions];
+                            newQ[idx].options[key] = content;
+                            setQuestions(newQ);
+                          }}
+                        />
+                      </div>
                     </div>
                   ))}
                 </div>
 
                 <div className="form-group">
                   <label>Explanation / Insight</label>
-                  <textarea 
-                    rows={2}
-                    placeholder="Why is this the correct answer?"
+                  <SimpleRichTextEditor 
                     value={q.explanation} 
-                    onChange={e => {
+                    onChange={content => {
                       const newQ = [...questions];
-                      newQ[idx].explanation = e.target.value;
+                      newQ[idx].explanation = content;
                       setQuestions(newQ);
                     }}
                   />
@@ -222,7 +222,7 @@ const AdminQuizEditor = () => {
         .btn-delete:hover { color: #ef4444; }
 
         .options-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-        .option-row { display: flex; align-items: center; gap: 0.5rem; }
+        .option-row { display: flex; align-items: flex-start; gap: 0.5rem; }
         .option-selector { 
           width: 32px; height: 32px; border: 2px solid #e2e8f0; border-radius: 8px; 
           display: flex; align-items: center; justify-content: center; font-weight: 800; color: #94a3b8; cursor: pointer;

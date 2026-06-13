@@ -94,16 +94,50 @@ const AdminContentEditor = () => {
     try {
       const latestFormData = formDataRef.current;
       const latestChapters = chaptersRef.current;
-      const dataToSave = { ...latestFormData };
-      if (isMultiChapter) {
-        dataToSave.body_html = JSON.stringify(latestChapters);
+
+      // Only include writable columns — exclude generated/read-only fields
+      const dataToSave = {
+        title: latestFormData.title,
+        exam_name: latestFormData.exam_name,
+        subject: latestFormData.subject,
+        category: latestFormData.category,
+        conducting_body: latestFormData.conducting_body,
+        website_url: latestFormData.website_url,
+        body_html: isMultiChapter ? JSON.stringify(latestChapters) : latestFormData.body_html,
+        thumbnail_url: latestFormData.thumbnail_url,
+        is_freemium: latestFormData.is_freemium,
+      };
+
+      console.log('[DEBUG SAVE] body_html snippet:', dataToSave.body_html?.substring(0, 300));
+      console.log('[DEBUG SAVE] fields being saved:', Object.keys(dataToSave));
+
+      const res = await fetch('/api/admin/save-resource', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id,
+          dataToSave
+        }),
+      });
+
+      const responseData = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(responseData.error || 'Failed to save resource');
       }
 
-      const { data, error } = id 
-        ? await supabase.from('resources').update(dataToSave).eq('id', id).select()
-        : await supabase.from('resources').insert([dataToSave]).select();
+      const { data } = responseData;
 
-      if (error) throw error;
+      // Detect silent RLS rejection (shouldn't happen with service role, but good sanity check)
+      if (!data || data.length === 0) {
+        console.error('[DEBUG SAVE] Supabase returned empty data — update was silently rejected (likely RLS)');
+        if (!silent) alert('Warning: Save may not have persisted. Check Supabase RLS policies on the resources table.');
+        return false;
+      }
+
+      console.log('[DEBUG SAVE] Supabase returned data:', data?.[0]?.body_html?.substring(0, 300));
       if (!silent) alert('Content saved successfully!');
       
       if (!id && data && data.length > 0) {

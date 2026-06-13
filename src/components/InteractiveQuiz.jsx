@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ArrowLeft, CheckCircle, XCircle, RefreshCw, Trophy, ChevronRight, HelpCircle } from 'lucide-react';
+import 'react-quill-new/dist/quill.snow.css';
 
 const InteractiveQuiz = () => {
   const { id } = useParams();
@@ -110,9 +111,9 @@ const InteractiveQuiz = () => {
               <HelpCircle size={20} color="#cbd5e1" />
             </div>
             
-            <h3 className="question-text">
-              {questions[currentQuestionIndex].question_text}
-            </h3>
+            <div className="question-text ql-snow">
+              <div className="ql-editor" dangerouslySetInnerHTML={{ __html: questions[currentQuestionIndex].question_text }} />
+            </div>
             
             <div className="options-grid">
               {Object.entries(questions[currentQuestionIndex].options || {}).map(([key, value]) => {
@@ -134,7 +135,9 @@ const InteractiveQuiz = () => {
                     className={`option-item ${isSelected ? 'selected' : ''} ${statusClass}`}
                   >
                     <div className="option-key">{key}</div>
-                    <div className="option-value">{value}</div>
+                    <div className="option-value ql-snow" style={{ padding: 0 }}>
+                      <div className="ql-editor" style={{ padding: 0, minHeight: 'auto' }} dangerouslySetInnerHTML={{ __html: value }} />
+                    </div>
                     {isRevealed && isCorrect && <CheckCircle size={18} className="status-icon correct" />}
                     {isRevealed && isSelected && !isCorrect && <XCircle size={18} className="status-icon incorrect" />}
                   </div>
@@ -148,8 +151,9 @@ const InteractiveQuiz = () => {
                   {answers[questions[currentQuestionIndex].id] === questions[currentQuestionIndex].correct_answer ? 'Well Done!' : 'Not Quite...'}
                 </div>
                 {questions[currentQuestionIndex].explanation && (
-                  <div className="explanation-text">
-                    <strong>Insight:</strong> {questions[currentQuestionIndex].explanation}
+                  <div className="explanation-text ql-snow">
+                    <strong>Insight:</strong>
+                    <div className="ql-editor" style={{ padding: '0.5rem 0', minHeight: 'auto' }} dangerouslySetInnerHTML={{ __html: questions[currentQuestionIndex].explanation }} />
                   </div>
                 )}
               </div>
@@ -210,7 +214,9 @@ const InteractiveQuiz = () => {
                 const isCorrect = answers[q.id] === q.correct_answer;
                 return (
                   <div key={q.id} className={`review-item ${isCorrect ? 'correct' : 'incorrect'}`}>
-                    <div className="review-q-text">{idx + 1}. {q.question_text}</div>
+                    <div className="review-q-text ql-snow">
+                      <div className="ql-editor" style={{ padding: 0, minHeight: 'auto' }} dangerouslySetInnerHTML={{ __html: `${idx + 1}. ` + q.question_text }} />
+                    </div>
                     <div className="review-answer-row">
                       <div className="user-answer">
                         <span>Your: <strong>{answers[q.id] || 'N/A'}</strong></span>
@@ -223,8 +229,9 @@ const InteractiveQuiz = () => {
                       )}
                     </div>
                     {q.explanation && (
-                      <div className="explanation">
-                        <strong>Insight:</strong> {q.explanation}
+                      <div className="explanation ql-snow">
+                        <strong>Insight:</strong>
+                        <div className="ql-editor" style={{ padding: 0, minHeight: 'auto' }} dangerouslySetInnerHTML={{ __html: q.explanation }} />
                       </div>
                     )}
                   </div>

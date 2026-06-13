@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import fs from 'fs'
 import path from 'path'
@@ -51,12 +51,19 @@ const vercelApiPlugin = () => {
   }
 }
 
-export default defineConfig({
-  plugins: [react(), vercelApiPlugin()],
-  envPrefix: ['VITE_', 'SUPABASE_'],
-  server: {
-    port: 8080,
-    host: true,
-    cors: true
+export default defineConfig(({ mode }) => {
+  // Load env file based on `mode` in the current working directory.
+  // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
+  const env = loadEnv(mode, process.cwd(), '')
+  process.env = { ...process.env, ...env }
+
+  return {
+    plugins: [react(), vercelApiPlugin()],
+    envPrefix: ['VITE_', 'SUPABASE_'],
+    server: {
+      port: 8080,
+      host: true,
+      cors: true
+    }
   }
 })

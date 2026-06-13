@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw } from 'lucide-react';
+import 'react-quill-new/dist/quill.snow.css';
 
 const SecureReader = () => {
   const { id } = useParams();
   const [resource, setResource] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [isRead, setIsRead] = useState(false);
   const [chapters, setChapters] = useState(null);
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
@@ -21,45 +21,46 @@ const SecureReader = () => {
         .single();
       
       setResource(data);
+      console.log('[DEBUG VIEWER] raw body_html snippet:', data?.body_html?.substring(0, 300));
+      
+      let parsedChapters = null;
+
       if (data && data.body_html && data.body_html.trim().startsWith('[')) {
         try {
           const parsed = JSON.parse(data.body_html);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            setChapters(parsed);
+            parsedChapters = parsed;
           }
         } catch (e) {
-          // Fallback to single page
+          // Fallback to raw HTML
         }
       }
+
+      if (parsedChapters && parsedChapters.length > 0) {
+        setChapters(parsedChapters);
+      } else {
+        setChapters([{ id: 'page-1', title: 'Content', content: data?.body_html || '' }]);
+      }
+      
       setLoading(false);
     };
 
     fetchResource();
 
-    const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    
     // Prevent context menu
     const handleContextMenu = (e) => e.preventDefault();
     document.addEventListener('contextmenu', handleContextMenu);
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('contextmenu', handleContextMenu);
     };
   }, [id]);
 
   const handleMarkAsRead = () => {
     setIsRead(true);
-    // In a real app, you'd update a 'user_resource_progress' table here
   };
 
-  const currentContent = chapters ? chapters[activeChapterIndex].content : resource?.body_html;
+  const currentContent = chapters ? chapters[activeChapterIndex].content : '';
   const isLastChapter = chapters ? activeChapterIndex === chapters.length - 1 : true;
 
   if (loading) return (
@@ -72,11 +73,6 @@ const SecureReader = () => {
 
   return (
     <div className="reader-container animate-fade-in">
-      {/* Progress Bar */}
-      <div className="scroll-progress-container">
-        <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>
-      </div>
-
       <div className="reader-nav">
         <div className="nav-inner">
           <Link to="/learning-center" className="back-link">
@@ -101,33 +97,31 @@ const SecureReader = () => {
           </div>
         </header>
 
-        <div className={`reader-layout ${chapters ? 'has-sidebar' : ''}`}>
-          {chapters && (
-            <aside className="toc-sidebar">
-              <h3>Table of Contents</h3>
-              <ul>
+        <div className="reader-layout">
+          {chapters && chapters.length > 1 && (
+            <div className="toc-tabs">
+              <div className="tabs-container">
                 {chapters.map((chap, idx) => (
-                  <li 
+                  <button 
                     key={chap.id || idx} 
-                    className={activeChapterIndex === idx ? 'active' : ''}
+                    className={`tab-btn ${activeChapterIndex === idx ? 'active' : ''}`}
                     onClick={() => {
                       setActiveChapterIndex(idx);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   >
-                    <span className="chap-num">{idx + 1}</span> {chap.title}
-                  </li>
+                    <span className="chap-num">{idx + 1}</span> 
+                    <span className="tab-title">{chap.title}</span>
+                  </button>
                 ))}
-              </ul>
-            </aside>
+              </div>
+            </div>
           )}
 
           <div className="glass-panel reader-card">
-            {chapters && <h2 className="chapter-title">{chapters[activeChapterIndex].title}</h2>}
-            <div 
-              className="reader-content"
-              dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} 
-            />
+            <div className="reader-content ql-snow">
+              <div className="ql-editor" dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} />
+            </div>
             
             <div className="reader-footer">
               {chapters && activeChapterIndex > 0 && (
@@ -282,12 +276,18 @@ const SecureReader = () => {
           font-size: 1.15rem;
           color: #334155;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+          min-width: 0; /* Prevent flex overflow */
+          overflow-wrap: break-word;
+          word-wrap: break-word;
         }
         .reader-content h2, .reader-content h3 {
           margin: 2rem 0 1rem;
           color: #0f172a;
         }
         .reader-content p { margin-bottom: 1.5rem; }
+        .reader-content img { max-width: 100%; height: auto; border-radius: 8px; }
+        .reader-content pre { white-space: pre-wrap; word-break: break-all; overflow-x: auto; max-width: 100%; }
+        .reader-content table { width: 100%; table-layout: fixed; word-wrap: break-word; }
         
         .reader-footer {
           margin-top: 4rem;
@@ -327,38 +327,41 @@ const SecureReader = () => {
           color: #94a3b8;
         }
 
-        .reader-layout { display: flex; gap: 2rem; align-items: flex-start; }
-        .reader-layout.has-sidebar .reader-card { flex: 1; min-width: 0; }
+        .reader-layout { display: flex; flex-direction: column; gap: 1.5rem; align-items: stretch; }
         
-        .toc-sidebar {
-          width: 250px;
-          background: white;
-          border-radius: 16px;
-          padding: 1.5rem;
-          position: sticky;
-          top: 80px;
-          border: 1px solid rgba(0,0,0,0.05);
-          box-shadow: 0 10px 25px -5px rgba(0,0,0,0.02);
-          flex-shrink: 0;
+        .toc-tabs {
+          width: 100%;
+          overflow-x: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          padding-bottom: 0.5rem;
         }
-        .toc-sidebar h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8; margin-bottom: 1rem; }
-        .toc-sidebar ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
-        .toc-sidebar li {
+        .toc-tabs::-webkit-scrollbar { display: none; }
+        .tabs-container {
+          display: flex;
+          gap: 0.75rem;
+          min-width: max-content;
+        }
+        .tab-btn {
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          padding: 0.75rem;
-          border-radius: 8px;
+          gap: 0.5rem;
+          padding: 0.6rem 1.25rem;
+          border-radius: 99px;
+          border: 1px solid #e2e8f0;
+          background: white;
           color: #475569;
           font-size: 0.9rem;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.2s;
+          white-space: nowrap;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
-        .toc-sidebar li:hover { background: #f8fafc; color: var(--ios-olive); }
-        .toc-sidebar li.active { background: rgba(75, 107, 50, 0.1); color: var(--ios-olive); }
-        .chap-num { width: 24px; height: 24px; background: #e2e8f0; border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #64748b; flex-shrink: 0; }
-        .toc-sidebar li.active .chap-num { background: white; color: var(--ios-olive); }
+        .tab-btn:hover { background: #f8fafc; color: var(--ios-olive); border-color: #cbd5e1; }
+        .tab-btn.active { background: var(--ios-olive); color: white; border-color: var(--ios-olive); box-shadow: 0 4px 10px rgba(75, 107, 50, 0.25); }
+        .tab-btn .chap-num { width: 22px; height: 22px; background: #e2e8f0; border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #64748b; }
+        .tab-btn.active .chap-num { background: rgba(255,255,255,0.25); color: white; }
         
         .chapter-title { font-size: 2rem; color: #0f172a; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #f1f5f9; }
         
@@ -378,11 +381,6 @@ const SecureReader = () => {
         .btn-paginate:hover { background: #f8fafc; color: var(--ios-olive); }
         .btn-paginate.primary { background: var(--ios-olive); color: white; border: none; box-shadow: 0 4px 6px -1px rgba(75, 107, 50, 0.2); }
         .btn-paginate.primary:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(75, 107, 50, 0.3); color: white; }
-        
-        @media (max-width: 900px) {
-          .reader-layout { flex-direction: column; }
-          .toc-sidebar { width: 100%; position: relative; top: 0; margin-bottom: 2rem; }
-        }
         
         @media (max-width: 600px) {
           .reader-card { padding: 2rem 1.5rem; }
