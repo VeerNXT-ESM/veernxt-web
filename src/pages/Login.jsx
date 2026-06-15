@@ -26,6 +26,7 @@ const Login = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [otp, setOtp] = useState('');
+  const [resetToken, setResetToken] = useState('');
   const [step, setStep] = useState('input'); // 'input' | 'otp' | 'set-password'
   
   // Employer
@@ -96,6 +97,9 @@ const Login = () => {
 
       if (data.ok && data.verified) {
         setVerifiedMobile(data.mobile);
+        if (authMode === 'forgot' && data.resetToken) {
+          setResetToken(data.resetToken);
+        }
         setStep('set-password');
         showMsg(authMode === 'forgot'
           ? 'OTP verified! Set your new password below.'
@@ -153,23 +157,30 @@ const Login = () => {
           setTimeout(() => navigate('/profiling'), 1000);
         }
       } else if (authMode === 'forgot') {
-        // Reset password — sign in first, then update
-        const syntheticEmail = `${verifiedMobile}@veernxt.in`;
-        const { data, error } = await supabase.auth.signInWithPassword({
-          email: syntheticEmail,
-          password: password, // This won't work — we need updateUser
+        // Reset password via secure backend API
+        const res = await fetch('/api/auth/reset-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            mobile: verifiedMobile, 
+            newPassword: password,
+            resetToken: resetToken 
+          }),
         });
+        const data = await res.json();
 
-        // Actually for password reset, we update the password
-        // First try to sign in with old credentials, then update
-        const { error: updateError } = await supabase.auth.updateUser({
-          password: password,
-        });
-
-        if (updateError) {
-          showMsg('Could not reset password. Please contact support.', 'error');
+        if (!res.ok || !data.ok) {
+          showMsg(data.error || 'Could not reset password. Please contact support.', 'error');
         } else {
           showMsg('Password reset successful! Logging you in...', 'success');
+          
+          // Auto-login after successful reset
+          const syntheticEmail = `${verifiedMobile}@veernxt.in`;
+          await supabase.auth.signInWithPassword({
+            email: syntheticEmail,
+            password: password,
+          });
+          
           setTimeout(() => navigate('/dashboard'), 1000);
         }
       }

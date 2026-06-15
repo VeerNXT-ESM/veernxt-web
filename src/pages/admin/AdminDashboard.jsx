@@ -61,8 +61,8 @@ const AdminDashboard = () => {
     const session = JSON.parse(sessionStr);
     setCurrentSession(session);
     
-    // Load and initialize Admin Registry
-    initializeAdminRegistry(session);
+    // Load and initialize Admin Registry from DB
+    initializeAdminRegistry();
     
     // Fetch DB statistics
     fetchDashboardData();
@@ -161,23 +161,16 @@ const AdminDashboard = () => {
     }
   };
 
-  const initializeAdminRegistry = (session) => {
-    let registry = JSON.parse(localStorage.getItem('admin_registry') || '[]');
-    
-    // Ensure Super Admin Vivek Talwar exists
-    const superExists = registry.some(a => a.email.toLowerCase() === 'veernxt.esm@gmail.com');
-    if (!superExists) {
-      const superAdminObj = {
-        name: 'Vivek Talwar',
-        email: 'veernxt.esm@gmail.com',
-        role: 'Super Admin',
-        permissions: ['all']
-      };
-      registry = [superAdminObj, ...registry];
-      localStorage.setItem('admin_registry', JSON.stringify(registry));
+  const initializeAdminRegistry = async () => {
+    try {
+      const res = await fetch('/api/admin/list-admins');
+      const data = await res.json();
+      if (data.ok) {
+        setAdminsList(data.admins);
+      }
+    } catch (err) {
+      console.error('Error fetching admin registry:', err);
     }
-    
-    setAdminsList(registry);
   };
 
   const fetchDashboardData = async () => {
@@ -224,7 +217,7 @@ const AdminDashboard = () => {
   };
 
   // Add Admin handler
-  const handleAddAdmin = (e) => {
+  const handleAddAdmin = async (e) => {
     e.preventDefault();
     if (!newAdmin.name || !newAdmin.email) return;
 
@@ -241,45 +234,70 @@ const AdminDashboard = () => {
       permissions: activePerms
     };
 
-    const registry = JSON.parse(localStorage.getItem('admin_registry') || '[]');
-    
-    // Check if email already exists
-    if (registry.some(a => a.email.toLowerCase() === newAdminObj.email)) {
-      alert('An administrator with this email is already registered.');
-      return;
-    }
+    try {
+      const res = await fetch('/api/admin/invite-admin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newAdminObj)
+      });
+      const data = await res.json();
 
-    const updatedRegistry = [...registry, newAdminObj];
-    localStorage.setItem('admin_registry', JSON.stringify(updatedRegistry));
-    setAdminsList(updatedRegistry);
-    
-    // Reset Form & Close Modal
-    setNewAdmin({
-      name: '',
-      email: '',
-      role: 'Content Curator',
-      permissions: {
-        create_content: true,
-        edit_quizzes: false,
-        trigger_scrapers: false,
-        manage_users: false
+      if (!data.ok) {
+        alert(data.error || 'Failed to add administrator');
+        return;
       }
-    });
-    setShowAddModal(false);
+      
+      if (data.tempPassword) {
+        alert(`Admin created!\n\nEmail: ${newAdminObj.email}\nTemporary Password: ${data.tempPassword}\n\nPlease copy this password and share it securely with the user.`);
+      } else {
+        alert(data.message || 'Administrator added successfully');
+      }
+
+      await initializeAdminRegistry();
+      
+      // Reset Form & Close Modal
+      setNewAdmin({
+        name: '',
+        email: '',
+        role: 'Content Curator',
+        permissions: {
+          create_content: true,
+          edit_quizzes: false,
+          trigger_scrapers: false,
+          manage_users: false
+        }
+      });
+      setShowAddModal(false);
+    } catch (err) {
+      alert('Error creating admin. Please try again.');
+    }
   };
 
   // Delete Admin handler
-  const handleDeleteAdmin = (emailToDelete) => {
+  const handleDeleteAdmin = async (emailToDelete) => {
     if (emailToDelete.toLowerCase() === 'veernxt.esm@gmail.com') {
       alert('Access Denied: Super Admin Vivek Talwar cannot be removed to prevent portal lockouts.');
       return;
     }
     
     if (window.confirm(`Are you sure you want to revoke administrative privileges for ${emailToDelete}?`)) {
-      const registry = JSON.parse(localStorage.getItem('admin_registry') || '[]');
-      const filteredRegistry = registry.filter(a => a.email.toLowerCase() !== emailToDelete.toLowerCase());
-      localStorage.setItem('admin_registry', JSON.stringify(filteredRegistry));
-      setAdminsList(filteredRegistry);
+      try {
+        const res = await fetch('/api/admin/remove-admin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: emailToDelete })
+        });
+        const data = await res.json();
+        
+        if (!data.ok) {
+          alert(data.error || 'Failed to revoke privileges');
+          return;
+        }
+        
+        await initializeAdminRegistry();
+      } catch (err) {
+        alert('Error communicating with server.');
+      }
     }
   };
 
