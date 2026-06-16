@@ -12,8 +12,8 @@ import Joi from 'joi';
 import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { checkEligibility } from '../engine/eligibility.js';
-import { scoreExam } from '../engine/scoring.js';
+import { checkEligibility } from '../../backend/engine/eligibility.js';
+import { scoreExam } from '../../backend/engine/scoring.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -63,7 +63,7 @@ const profileSchema = Joi.object({
 let EXAM_CACHE = null;
 function loadExamMaster() {
   if (EXAM_CACHE) return EXAM_CACHE;
-  const masterPath = resolve(__dirname, '../engine/data/exam_master.json');
+  const masterPath = resolve(__dirname, '../../backend/engine/data/exam_master.json');
   EXAM_CACHE = JSON.parse(readFileSync(masterPath, 'utf-8'));
   return EXAM_CACHE;
 }
