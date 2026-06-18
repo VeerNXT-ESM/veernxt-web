@@ -331,6 +331,9 @@ const Login = () => {
                 required
                 style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
               />
+              <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#64748b', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
+                <span style={{ fontWeight: '600', color: 'var(--ios-olive)' }}>TEST MODE ACTIVE:</span> Please enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
+              </div>
             </div>
             <button type="submit" className="btn-primary ios-pill" disabled={loading || otp.length !== 6}
               style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>

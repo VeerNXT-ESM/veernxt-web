@@ -105,57 +105,16 @@ const AdminDashboard = () => {
   const loadUserProfiles = async () => {
     setUsersLoading(true);
     try {
-      const res = await fetch('/User_Profiles.csv');
-      const text = await res.text();
-      const lines = text.split('\n').filter(l => l.trim());
-      if (lines.length < 2) return;
+      const { data, error } = await supabase
+        .from('user_profiles')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
       
-      const headers = parseCSVLine(lines[0]);
-      const profiles = [];
-      
-      for (let i = 1; i < lines.length; i++) {
-        const values = parseCSVLine(lines[i]);
-        if (values.length < 5) continue;
-        
-        const name = values[1]?.trim();
-        // Filter out test entries
-        if (!name || name.length <= 2 || name === 'vv') continue;
-        
-        profiles.push({
-          timestamp: values[0],
-          name: name,
-          dob: values[2],
-          phone: values[3],
-          email: values[4],
-          category: values[5],
-          state: values[6],
-          district: values[7],
-          maritalStatus: values[8],
-          serviceBranch: values[9],
-          armCorpsTrade: values[10],
-          role: values[11],
-          militaryCourses: values[12],
-          characterOnDischarge: values[13],
-          skills: values[14],
-          qualification: values[15],
-          ncc: values[16],
-          sports: values[17],
-          height: values[18],
-          chest: values[19],
-          eyesight: values[20],
-          medicalCategory: values[21],
-          physicalProficiency: values[22],
-          careerPreference: values[23],
-          willingToRelocate: values[24],
-          englishProficiency: values[25],
-          sewaNidhi: values[26],
-          consent: values[27]
-        });
-      }
-      
-      setUserProfiles(profiles);
+      setUserProfiles(data || []);
     } catch (err) {
-      console.error('Error loading user profiles:', err);
+      console.error('Error loading user profiles from Supabase:', err);
     } finally {
       setUsersLoading(false);
     }
@@ -737,21 +696,29 @@ const AdminDashboard = () => {
       {/* Tab 4: Users Management */}
       {activeTab === 'users' && (() => {
         // Dynamic filter options
-        const uniqueCategories = [...new Set(userProfiles.map(u => u.category).filter(Boolean))].sort();
-        const uniqueStates = [...new Set(userProfiles.map(u => u.state).filter(Boolean))].sort();
-        const uniqueQualifications = [...new Set(userProfiles.map(u => u.qualification).filter(Boolean))].sort();
+        const uniqueCategories = [...new Set(userProfiles.map(u => u.raw_profile_data?.category || u.category).filter(Boolean))].sort();
+        const uniqueStates = [...new Set(userProfiles.map(u => u.raw_profile_data?.stateOfDomicile || u.state).filter(Boolean))].sort();
+        const uniqueQualifications = [...new Set(userProfiles.map(u => u.education_level || u.qualification).filter(Boolean))].sort();
 
         // Filter logic
         const filteredUsers = userProfiles.filter(user => {
+          const name = user.full_name || user.raw_profile_data?.fullName || user.name || '';
+          const email = user.raw_profile_data?.email || user.email || '';
+          const state = user.raw_profile_data?.stateOfDomicile || user.state || '';
+          const skills = Array.isArray(user.raw_profile_data?.specificSkills) ? user.raw_profile_data.specificSkills.join(', ') : (user.raw_profile_data?.skills || user.skills || '');
+          const district = user.raw_profile_data?.district || user.district || '';
+          const category = user.raw_profile_data?.category || user.category || '';
+          const qualification = user.education_level || user.raw_profile_data?.highestQualification || user.qualification || '';
+
           const matchesSearch = !userSearchTerm ||
-            user.name?.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
-            user.email?.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
-            user.state?.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
-            user.skills?.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
-            user.district?.toLowerCase().includes(userSearchTerm.toLowerCase());
-          const matchesCategory = selectedUserCategory === 'all' || user.category === selectedUserCategory;
-          const matchesState = selectedUserState === 'all' || user.state === selectedUserState;
-          const matchesQualification = selectedUserQualification === 'all' || user.qualification === selectedUserQualification;
+            name.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
+            email.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
+            state.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
+            skills.toLowerCase().includes(userSearchTerm.toLowerCase()) ||
+            district.toLowerCase().includes(userSearchTerm.toLowerCase());
+          const matchesCategory = selectedUserCategory === 'all' || category === selectedUserCategory;
+          const matchesState = selectedUserState === 'all' || state === selectedUserState;
+          const matchesQualification = selectedUserQualification === 'all' || qualification === selectedUserQualification;
           return matchesSearch && matchesCategory && matchesState && matchesQualification;
         });
 
@@ -837,45 +804,56 @@ const AdminDashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                {paginatedUsers.map((user, idx) => (
+                {paginatedUsers.map((user, idx) => {
+                  const name = user.full_name || user.raw_profile_data?.fullName || user.name || 'Unknown';
+                  const serviceBranch = user.service_branch || user.raw_profile_data?.serviceBranch || user.serviceBranch || 'Indian Army';
+                  const state = user.raw_profile_data?.stateOfDomicile || user.state || '—';
+                  const district = user.raw_profile_data?.district || user.district || '—';
+                  const category = user.raw_profile_data?.category || user.category || '—';
+                  const armCorpsTrade = user.raw_profile_data?.armCorpsTrade || user.armCorpsTrade || '—';
+                  const qualification = user.education_level || user.raw_profile_data?.highestQualification || user.qualification || '—';
+                  const skills = Array.isArray(user.raw_profile_data?.specificSkills) ? user.raw_profile_data.specificSkills.join(', ') : (user.raw_profile_data?.skills || user.skills || '—');
+                  const medicalCategory = user.raw_profile_data?.medicalCategory || user.medicalCategory || '—';
+
+                  return (
                   <tr key={idx} className="user-row-clickable" onClick={() => setSelectedUserProfile(user)}>
                     <td>
                       <div className="table-item-title-col">
                         <div className="user-initials-circle">
-                          {user.name?.split(' ').filter(n => n).slice(0, 2).map(n => n[0]?.toUpperCase()).join('')}
+                          {name.split(' ').filter(n => n).slice(0, 2).map(n => n[0]?.toUpperCase()).join('')}
                         </div>
                         <div className="item-details">
-                          <span className="item-title">{user.name}</span>
-                          <span className="item-sub-id">{user.serviceBranch || 'Indian Army'}</span>
+                          <span className="item-title">{name}</span>
+                          <span className="item-sub-id">{serviceBranch}</span>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div className="state-district-cell">
-                        <span className="state-name">{user.state}</span>
-                        <span className="district-name">{user.district}</span>
+                        <span className="state-name">{state}</span>
+                        <span className="district-name">{district}</span>
                       </div>
                     </td>
                     <td>
-                      <span className={`category-badge-pill ${user.category?.toLowerCase().replace(/[^a-z]/g, '-')}`}>
-                        {user.category?.replace(' (Non-creamy layer)', '') || '—'}
+                      <span className={`category-badge-pill ${category.toLowerCase().replace(/[^a-z]/g, '-')}`}>
+                        {category.replace(' (Non-creamy layer)', '')}
                       </span>
                     </td>
                     <td>
-                      <span className="corps-text">{user.armCorpsTrade || '—'}</span>
+                      <span className="corps-text">{armCorpsTrade}</span>
                     </td>
                     <td>
-                      <span className={`qual-badge ${user.qualification?.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <span className={`qual-badge ${qualification.toLowerCase().replace(/\s+/g, '-')}`}>
                         <GraduationCap size={12} />
-                        {user.qualification || '—'}
+                        {qualification}
                       </span>
                     </td>
                     <td>
-                      <span className="skills-cell" title={user.skills}>{user.skills?.substring(0, 35)}{user.skills?.length > 35 ? '...' : ''}</span>
+                      <span className="skills-cell" title={skills}>{skills.substring(0, 35)}{skills.length > 35 ? '...' : ''}</span>
                     </td>
                     <td>
-                      <span className={`medical-badge ${user.medicalCategory === 'SHAPE-1' ? 'shape1' : 'other'}`}>
-                        {user.medicalCategory || '—'}
+                      <span className={`medical-badge ${medicalCategory === 'SHAPE-1' ? 'shape1' : 'other'}`}>
+                        {medicalCategory}
                       </span>
                     </td>
                     <td style={{ textAlign: 'center' }}>
@@ -884,7 +862,8 @@ const AdminDashboard = () => {
                       </button>
                     </td>
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
             </table>
 
@@ -937,17 +916,29 @@ const AdminDashboard = () => {
       })()}
 
       {/* User Profile Detail Drawer */}
-      {selectedUserProfile && (
+      {selectedUserProfile && (() => {
+        const u = selectedUserProfile;
+        const name = u.full_name || u.raw_profile_data?.fullName || u.name || 'Unknown';
+        const serviceBranch = u.service_branch || u.raw_profile_data?.serviceBranch || u.serviceBranch || 'Indian Army';
+        const armCorpsTrade = u.raw_profile_data?.armCorpsTrade || u.armCorpsTrade || '—';
+        const dob = u.raw_profile_data?.dobDay ? `${u.raw_profile_data.dobDay}/${u.raw_profile_data.dobMonth}/${u.raw_profile_data.dobYear}` : (u.dob || '—');
+        const phone = u.raw_profile_data?.mobile || u.phone || '—';
+        const email = u.raw_profile_data?.email || u.email || '—';
+        const maritalStatus = u.raw_profile_data?.maritalStatus || u.maritalStatus || '—';
+        const category = u.raw_profile_data?.category || u.category || '—';
+        const state = u.raw_profile_data?.stateOfDomicile || u.state || '—';
+        
+        return (
         <div className="user-drawer-backdrop" onClick={() => setSelectedUserProfile(null)}>
           <div className="user-drawer-panel animate-slide-in-right" onClick={(e) => e.stopPropagation()}>
             <div className="drawer-header">
               <div className="drawer-profile-hero">
                 <div className="drawer-avatar">
-                  {selectedUserProfile.name?.split(' ').filter(n => n).slice(0, 2).map(n => n[0]?.toUpperCase()).join('')}
+                  {name.split(' ').filter(n => n).slice(0, 2).map(n => n[0]?.toUpperCase()).join('')}
                 </div>
                 <div className="drawer-hero-info">
-                  <h3>{selectedUserProfile.name}</h3>
-                  <p>{selectedUserProfile.serviceBranch || 'Indian Army'} • {selectedUserProfile.armCorpsTrade || '—'}</p>
+                  <h3>{name}</h3>
+                  <p>{serviceBranch} • {armCorpsTrade}</p>
                 </div>
               </div>
               <button className="btn-close" onClick={() => setSelectedUserProfile(null)}>
@@ -962,31 +953,31 @@ const AdminDashboard = () => {
                 <div className="drawer-grid">
                   <div className="drawer-field">
                     <span className="field-label">Full Name</span>
-                    <span className="field-value">{selectedUserProfile.name}</span>
+                    <span className="field-value">{name}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">Date of Birth</span>
-                    <span className="field-value">{selectedUserProfile.dob || '—'}</span>
+                    <span className="field-value">{dob}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">Contact (WhatsApp)</span>
-                    <span className="field-value"><Phone size={12} /> {selectedUserProfile.phone || '—'}</span>
+                    <span className="field-value"><Phone size={12} /> {phone}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">Email</span>
-                    <span className="field-value"><Mail size={12} /> {selectedUserProfile.email || '—'}</span>
+                    <span className="field-value"><Mail size={12} /> {email}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">Marital Status</span>
-                    <span className="field-value">{selectedUserProfile.maritalStatus || '—'}</span>
+                    <span className="field-value">{maritalStatus}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">Category</span>
-                    <span className="field-value">{selectedUserProfile.category || '—'}</span>
+                    <span className="field-value">{category}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">State of Domicile</span>
-                    <span className="field-value"><MapPin size={12} /> {selectedUserProfile.state || '—'}</span>
+                    <span className="field-value"><MapPin size={12} /> {state}</span>
                   </div>
                   <div className="drawer-field">
                     <span className="field-label">District</span>
@@ -1098,7 +1089,8 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
-      )}
+        );
+      })()}
 
       {/* Add Admin Modal Dialog */}
 
