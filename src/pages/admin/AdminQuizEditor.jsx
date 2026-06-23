@@ -21,6 +21,8 @@ const AdminQuizEditor = () => {
   });
 
   const [questions, setQuestions] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const questionsPerPage = 1;
 
   useEffect(() => {
     const session = localStorage.getItem('admin_session');
@@ -44,7 +46,10 @@ const AdminQuizEditor = () => {
       correct_answer: 'A',
       explanation: ''
     };
-    setQuestions([...questions, newQ]);
+    const newQuestions = [...questions, newQ];
+    setQuestions(newQuestions);
+    const newTotalPages = Math.ceil(newQuestions.length / questionsPerPage) || 1;
+    setCurrentPage(newTotalPages);
   };
 
   const handleSave = async () => {
@@ -138,7 +143,9 @@ const AdminQuizEditor = () => {
           </div>
         ) : (
           <div className="questions-manager animate-fade-in">
-            {questions.map((q, idx) => (
+            {questions.slice((currentPage - 1) * questionsPerPage, currentPage * questionsPerPage).map((q, localIdx) => {
+              const idx = (currentPage - 1) * questionsPerPage + localIdx;
+              return (
               <div key={idx} className="card question-card">
                 <div className="q-header">
                   <div className="q-circle">{idx + 1}</div>
@@ -194,7 +201,30 @@ const AdminQuizEditor = () => {
                   />
                 </div>
               </div>
-            ))}
+            )})}
+            
+            {Math.ceil(questions.length / questionsPerPage) > 1 && (
+              <div className="pagination-bar" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', margin: '2rem 0' }}>
+                <button 
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  style={{ padding: '0.75rem 1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'white', cursor: currentPage === 1 ? 'not-allowed' : 'pointer', fontWeight: 600, color: currentPage === 1 ? '#cbd5e1' : '#475569' }}
+                >
+                  Previous Page
+                </button>
+                <span style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: '#0f172a' }}>
+                  Page {currentPage} of {Math.ceil(questions.length / questionsPerPage) || 1}
+                </span>
+                <button 
+                  onClick={() => setCurrentPage(p => Math.min(Math.ceil(questions.length / questionsPerPage), p + 1))}
+                  disabled={currentPage === Math.ceil(questions.length / questionsPerPage)}
+                  style={{ padding: '0.75rem 1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'white', cursor: currentPage === Math.ceil(questions.length / questionsPerPage) ? 'not-allowed' : 'pointer', fontWeight: 600, color: currentPage === Math.ceil(questions.length / questionsPerPage) ? '#cbd5e1' : '#475569' }}
+                >
+                  Next Page
+                </button>
+              </div>
+            )}
+
             <button className="btn-add-q" onClick={handleAddQuestion}>
               <Plus size={20} /> Add Next Question
             </button>

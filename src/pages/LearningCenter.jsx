@@ -11,11 +11,30 @@ const LearningCenter = () => {
   
   // Filters
   const [selectedExams, setSelectedExams] = useState(['all']);
+  const [selectedCategories, setSelectedCategories] = useState(['all']);
   const [searchQuery, setSearchQuery] = useState('');
   
-  // Sidebar Checkboxes
-  const [showResources, setShowResources] = useState(true);
-  const [showQuizzes, setShowQuizzes] = useState(true);
+  const AVAILABLE_CATEGORIES = [
+    'Intro',
+    'Guide Book',
+    'Precis',
+    '10 Years PYQ',
+    'Test Series'
+  ];
+
+  const handleCategoryCheckboxChange = (category) => {
+    setSelectedCategories(prev => {
+      if (category === 'all') return ['all'];
+      let newSelection = prev.filter(c => c !== 'all');
+      if (newSelection.includes(category)) {
+        newSelection = newSelection.filter(c => c !== category);
+      } else {
+        newSelection.push(category);
+      }
+      if (newSelection.length === 0) return ['all'];
+      return newSelection;
+    });
+  };
 
   const handleExamCheckboxChange = (examName) => {
     setSelectedExams(prev => {
@@ -58,6 +77,9 @@ const LearningCenter = () => {
 
   const fetchContent = async () => {
     setLoading(true);
+    setResources([]);
+    setQuizzes([]);
+    
     try {
       let resQuery = supabase.from('resources').select('*');
       let quizQuery = supabase.from('quizzes').select('*');
@@ -67,8 +89,19 @@ const LearningCenter = () => {
         quizQuery = quizQuery.in('exam_name', selectedExams);
       }
 
+      if (!selectedCategories.includes('all')) {
+        const catFilters = selectedCategories.map(c => {
+          if (c === '10 Years PYQ') return 'category.ilike."%PYQ%"';
+          if (c === 'Test Series') return 'category.ilike."%Mock Test%"';
+          if (c === 'Guide Book') return 'category.ilike."%Guide%"';
+          return `category.ilike."%${c}%"`;
+        }).join(',');
+        resQuery = resQuery.or(catFilters);
+        quizQuery = quizQuery.or(catFilters);
+      }
+
       if (searchQuery) {
-        const filter = `title.ilike.%${searchQuery}%,subject.ilike.%${searchQuery}%,exam_name.ilike.%${searchQuery}%`;
+        const filter = `title.ilike."%${searchQuery}%",subject.ilike."%${searchQuery}%",exam_name.ilike."%${searchQuery}%"`;
         resQuery = resQuery.or(filter);
         quizQuery = quizQuery.or(filter);
       }
@@ -92,7 +125,7 @@ const LearningCenter = () => {
       fetchContent();
     }, 500);
     return () => clearTimeout(timer);
-  }, [searchQuery, selectedExams]);
+  }, [searchQuery, selectedExams, selectedCategories]);
 
   const renderCard = (item, type) => {
     const isPremium = item.is_locked;
@@ -180,25 +213,29 @@ const LearningCenter = () => {
             <h3 className="sidebar-title">Filters</h3>
             
             <div className="filter-group">
-              <h4 className="filter-subtitle">Product Category</h4>
-              <label className="checkbox-label">
-                <input 
-                  type="checkbox" 
-                  checked={showResources} 
-                  onChange={(e) => setShowResources(e.target.checked)} 
-                />
-                <span className="checkbox-custom"></span>
-                <span className="checkbox-text">Study Materials</span>
-              </label>
-              <label className="checkbox-label">
-                <input 
-                  type="checkbox" 
-                  checked={showQuizzes} 
-                  onChange={(e) => setShowQuizzes(e.target.checked)} 
-                />
-                <span className="checkbox-custom"></span>
-                <span className="checkbox-text">Mock Tests</span>
-              </label>
+              <h4 className="filter-subtitle">Content Type</h4>
+              <div className="checkbox-filter-group">
+                <label className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    checked={selectedCategories.includes('all')} 
+                    onChange={() => handleCategoryCheckboxChange('all')} 
+                  />
+                  <span className="checkbox-custom"></span>
+                  <span className="checkbox-text">All Content</span>
+                </label>
+                {AVAILABLE_CATEGORIES.map(category => (
+                  <label key={category} className="checkbox-label">
+                    <input 
+                      type="checkbox" 
+                      checked={selectedCategories.includes(category)} 
+                      onChange={() => handleCategoryCheckboxChange(category)} 
+                    />
+                    <span className="checkbox-custom"></span>
+                    <span className="checkbox-text">{category}</span>
+                  </label>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -258,7 +295,7 @@ const LearningCenter = () => {
           ) : (
             <div className="course-sections">
               
-              {showResources && resources.length > 0 && (
+              {resources.length > 0 && (
                 <div className="course-section">
                   <div className="section-header">
                     <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Study Materials ({resources.length})</h2>
@@ -270,7 +307,7 @@ const LearningCenter = () => {
                 </div>
               )}
 
-              {showQuizzes && quizzes.length > 0 && (
+              {quizzes.length > 0 && (
                 <div className="course-section">
                   <div className="section-header">
                     <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Mock Tests ({quizzes.length})</h2>
@@ -282,7 +319,7 @@ const LearningCenter = () => {
                 </div>
               )}
 
-              {(!showResources && !showQuizzes) || (resources.length === 0 && quizzes.length === 0) ? (
+              {resources.length === 0 && quizzes.length === 0 ? (
                 <div className="empty-library">
                   <Book size={64} />
                   <h3>No courses found</h3>
