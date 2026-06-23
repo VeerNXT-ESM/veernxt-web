@@ -22,8 +22,35 @@ const InteractiveQuiz = () => {
         const { data: quizData } = await supabase.from('quizzes').select('*').eq('id', id).single();
         const { data: questionsData } = await supabase.from('questions').select('*').eq('quiz_id', id).order('question_number');
         
+        const parsedQuestions = (questionsData || []).map(q => {
+          let dynamicExplanation = null;
+          const cleanOptions = {};
+          if (q.options) {
+            Object.entries(q.options).forEach(([k, v]) => {
+              if (typeof v === 'string') {
+                const markerRegex = /(?:<[^>]+>|\s)*(?:(?:✓|✔|&#10003;|&#10004;|&check;)?\s*Correct(?:\s*Answer:?)?|Answer:|💡\s*Explanation:|Explanation:)/i;
+                const fullMatchIdx = v.search(markerRegex);
+                if (fullMatchIdx !== -1 && fullMatchIdx > 0) {
+                  cleanOptions[k] = v.substring(0, fullMatchIdx);
+                  const extra = v.substring(fullMatchIdx).replace(/^(?:<[^>]+>|\s)*/i, '');
+                  if (!dynamicExplanation) dynamicExplanation = extra;
+                } else {
+                  cleanOptions[k] = v;
+                }
+              } else {
+                cleanOptions[k] = v;
+              }
+            });
+          }
+          return {
+            ...q,
+            options: cleanOptions,
+            explanation: q.explanation || dynamicExplanation
+          };
+        });
+
         setQuiz(quizData);
-        setQuestions(questionsData || []);
+        setQuestions(parsedQuestions);
       } catch (err) {
         console.error('Error fetching quiz:', err);
       } finally {
@@ -84,32 +111,33 @@ const InteractiveQuiz = () => {
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
   return (
-    <div className="quiz-container animate-fade-in">
+    <div className="quiz-container animate-fade-in quiz-theme">
       <div className="quiz-header">
         <div className="header-inner">
           <Link to="/learning-center" className="back-link">
-            <ArrowLeft size={18} /> Exit Quiz
+            <ArrowLeft size={18} /> Exit
           </Link>
-          <div className="quiz-title-box">
-            <h2 className="quiz-title">{quiz.title}</h2>
-            <span className="quiz-subject">{quiz.subject}</span>
+          <div className="progress-container">
+            <div className="progress-track">
+              <div className="progress-fill" style={{ width: `${progress}%` }}></div>
+            </div>
           </div>
           <div className="question-counter">
             {currentQuestionIndex + 1} / {questions.length}
           </div>
-        </div>
-        <div className="progress-track">
-          <div className="progress-fill" style={{ width: `${progress}%` }}></div>
         </div>
       </div>
 
       <div className="quiz-main">
         {questions.length > 0 && !submitted && (
           <div className="question-card animate-fade-in">
-            <div className="question-header">
-              <span className="q-number">Question {currentQuestionIndex + 1}</span>
-              <HelpCircle size={20} color="#cbd5e1" />
+            <div className="question-badge">
+              {score}
             </div>
+            
+            <h2 className="q-title">Question <span>{String(currentQuestionIndex + 1).padStart(2, '0')}</span></h2>
+            <span className="q-subject">{quiz.subject || 'Quiz'}</span>
+            <div className="q-divider"></div>
             
             <div className="question-text ql-snow">
               <div className="ql-editor" dangerouslySetInnerHTML={{ __html: questions[currentQuestionIndex].question_text }} />
@@ -134,12 +162,14 @@ const InteractiveQuiz = () => {
                     onClick={() => handleSelectOption(questionId, key)}
                     className={`option-item ${isSelected ? 'selected' : ''} ${statusClass}`}
                   >
-                    <div className="option-key">{key}</div>
                     <div className="option-value ql-snow" style={{ padding: 0 }}>
                       <div className="ql-editor" style={{ padding: 0, minHeight: 'auto' }} dangerouslySetInnerHTML={{ __html: value }} />
                     </div>
-                    {isRevealed && isCorrect && <CheckCircle size={18} className="status-icon correct" />}
-                    {isRevealed && isSelected && !isCorrect && <XCircle size={18} className="status-icon incorrect" />}
+                    <div className="option-indicator">
+                      {isRevealed && isCorrect ? <CheckCircle size={24} className="indicator-icon correct" /> :
+                       isRevealed && isSelected && !isCorrect ? <XCircle size={24} className="indicator-icon incorrect" /> :
+                       <div className="empty-circle"></div>}
+                    </div>
                   </div>
                 );
               })}
@@ -147,9 +177,6 @@ const InteractiveQuiz = () => {
 
             {revealed[questions[currentQuestionIndex].id] && (
               <div className="immediate-feedback animate-slide-up">
-                <div className={`feedback-header ${answers[questions[currentQuestionIndex].id] === questions[currentQuestionIndex].correct_answer ? 'correct' : 'incorrect'}`}>
-                  {answers[questions[currentQuestionIndex].id] === questions[currentQuestionIndex].correct_answer ? 'Well Done!' : 'Not Quite...'}
-                </div>
                 {questions[currentQuestionIndex].explanation && (
                   <div className="explanation-text ql-snow">
                     <strong>Insight:</strong>
@@ -158,34 +185,28 @@ const InteractiveQuiz = () => {
                 )}
               </div>
             )}
+          </div>
+        )}
 
-            <div className="quiz-actions">
+        {questions.length > 0 && !submitted && (
+          <div className="bottom-action-container animate-slide-up">
+            {currentQuestionIndex === questions.length - 1 ? (
               <button 
-                onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))}
-                disabled={currentQuestionIndex === 0}
-                className={`nav-btn ${currentQuestionIndex === 0 ? 'disabled' : ''}`}
+                onClick={handleSubmit} 
+                className="btn-next-action"
+                disabled={!revealed[questions[currentQuestionIndex].id]}
               >
-                Previous
+                Complete Quiz
               </button>
-              
-              {currentQuestionIndex === questions.length - 1 ? (
-                <button 
-                  onClick={handleSubmit} 
-                  className="btn-primary"
-                  disabled={!revealed[questions[currentQuestionIndex].id]}
-                >
-                  Complete Quiz
-                </button>
-              ) : (
-                <button 
-                  onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))}
-                  className="btn-primary"
-                  disabled={!revealed[questions[currentQuestionIndex].id]}
-                >
-                  Next Question <ChevronRight size={18} />
-                </button>
-              )}
-            </div>
+            ) : (
+              <button 
+                onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))}
+                className="btn-next-action"
+                disabled={!revealed[questions[currentQuestionIndex].id]}
+              >
+                Next
+              </button>
+            )}
           </div>
         )}
 
@@ -249,133 +270,237 @@ const InteractiveQuiz = () => {
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
-        .quiz-container {
+        .quiz-theme {
           min-height: 100vh;
-          background: #f8fafc;
+          background: var(--ios-bg);
           padding-bottom: 5rem;
+          color: var(--ios-text);
+          font-family: 'Inter', sans-serif;
         }
         .quiz-header {
-          background: white;
           position: sticky;
-          top: 64px;
+          top: 0;
           z-index: 50;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+          padding: 1.5rem 0;
+          background: rgba(244, 244, 248, 0.9);
+          backdrop-filter: blur(10px);
         }
         .header-inner {
-          max-width: 800px;
+          max-width: 600px;
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1rem 1.5rem;
+          padding: 0 1.5rem;
         }
-        .back-link {
+        .back-link, .question-counter {
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          color: #64748b;
+          background: white;
+          padding: 0.5rem 1rem;
+          border-radius: 12px;
+          color: var(--ios-text);
           text-decoration: none;
           font-weight: 600;
           font-size: 0.9rem;
+          box-shadow: var(--shadow-ios);
         }
-        .quiz-title-box { text-align: center; }
-        .quiz-title { font-size: 1.1rem; margin: 0; color: #1e293b; }
-        .quiz-subject { font-size: 0.7rem; color: var(--ios-olive); font-weight: 800; text-transform: uppercase; }
-        .question-counter { font-weight: 700; color: #94a3b8; font-variant-numeric: tabular-nums; }
-        
-        .progress-track { height: 4px; background: #f1f5f9; }
-        .progress-fill { height: 100%; background: var(--ios-olive); transition: width 0.3s ease; }
+        .progress-container {
+          flex: 1;
+          margin: 0 1rem;
+        }
+        .progress-track {
+          height: 6px;
+          background: #e2e8f0;
+          border-radius: 99px;
+          overflow: hidden;
+        }
+        .progress-fill {
+          height: 100%;
+          background: var(--ios-olive);
+          border-radius: 99px;
+          transition: width 0.3s ease;
+        }
 
         .quiz-main {
-          max-width: 800px;
-          margin: 3rem auto;
+          max-width: 600px;
+          margin: 4rem auto 2rem auto;
           padding: 0 1.5rem;
         }
         .question-card {
           background: white;
           border-radius: 24px;
-          padding: 3rem;
-          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+          padding: 3rem 2rem 2rem 2rem;
+          position: relative;
+          box-shadow: var(--shadow-ios);
+          text-align: center;
+          border: 1px solid #f1f1f1;
         }
-        .question-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
-        .q-number { color: var(--ios-olive); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .question-text { font-size: 1.5rem; color: #0f172a; margin-bottom: 2.5rem; line-height: 1.4; font-weight: 700; }
-        
-        .options-grid { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem; }
-        .option-item {
+        .question-badge {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 60px;
+          background: white;
+          border: 4px solid var(--ios-olive);
+          border-radius: 50%;
           display: flex;
           align-items: center;
-          gap: 1.25rem;
-          padding: 1.25rem;
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: var(--ios-text);
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        .q-title {
+          font-size: 1.5rem;
+          color: var(--ios-text);
+          margin: 0 0 0.5rem 0;
+          font-weight: 800;
+        }
+        .q-title span { color: var(--ios-olive); }
+        .q-subject {
+          color: #64748b;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 600;
+        }
+        .q-divider {
+          height: 1px;
+          background: #e2e8f0;
+          margin: 1.5rem 0;
+          border-style: dashed;
+        }
+        .question-text {
+          font-size: 1.25rem;
+          color: var(--ios-text);
+          margin-bottom: 2.5rem;
+          line-height: 1.6;
+          font-weight: 600;
+        }
+        
+        .options-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .option-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.25rem 1.5rem;
           background: #f8fafc;
-          border: 2px solid transparent;
+          border: 1px solid #e2e8f0;
           border-radius: 16px;
           cursor: pointer;
           transition: all 0.2s;
         }
-        .option-item:hover { background: #f1f5f9; transform: translateY(-2px); }
-        .option-item.selected {
-          background: rgba(75, 107, 50, 0.05);
-          border-color: var(--ios-olive);
+        .option-item:hover {
+          background: #f1f5f9;
+          transform: translateY(-2px);
         }
-        .option-item.correct { background: rgba(34, 197, 94, 0.1); border-color: #22c55e; }
-        .option-item.incorrect { background: rgba(239, 68, 68, 0.1); border-color: #ef4444; }
-        .option-item.should-have-selected { border: 2px dashed #22c55e; }
+        .option-value {
+          flex: 1;
+          text-align: left;
+          font-weight: 600;
+          font-size: 1rem;
+          color: #334155;
+        }
         
-        .option-key {
-          width: 32px;
-          height: 32px;
-          background: white;
-          border-radius: 8px;
+        .option-item.selected {
+          border-color: var(--ios-olive);
+          background: rgba(75, 107, 50, 0.05);
+        }
+        .option-item.correct {
+          background: rgba(34, 197, 94, 0.1);
+          border-color: #22c55e;
+        }
+        .option-item.incorrect {
+          background: rgba(239, 68, 68, 0.1);
+          border-color: #ef4444;
+        }
+        .option-item.should-have-selected {
+          border: 2px dashed #22c55e;
+        }
+        
+        .option-indicator {
+          margin-left: 1rem;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: 800;
-          color: #64748b;
-          font-size: 0.9rem;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        .selected .option-key { background: var(--ios-olive); color: white; }
-        .correct .option-key { background: #22c55e; color: white; }
-        .incorrect .option-key { background: #ef4444; color: white; }
-        
-        .option-value { flex: 1; font-weight: 600; color: #334155; }
-        .status-icon.correct { color: #22c55e; }
-        .status-icon.incorrect { color: #ef4444; }
+        .empty-circle {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 2px solid #cbd5e1;
+        }
+        .indicator-icon.correct {
+          color: #22c55e;
+          fill: rgba(34, 197, 94, 0.2);
+        }
+        .indicator-icon.incorrect {
+          color: #ef4444;
+          fill: rgba(239, 68, 68, 0.2);
+        }
 
         .immediate-feedback {
-          margin-bottom: 3rem;
+          margin-top: 2rem;
           padding: 1.5rem;
           background: #f8fafc;
           border-radius: 16px;
           border: 1px solid #e2e8f0;
+          text-align: left;
         }
-        .feedback-header { font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .feedback-header.correct { color: #15803d; }
-        .feedback-header.incorrect { color: #b91c1c; }
-        .explanation-text { font-size: 0.95rem; color: #475569; line-height: 1.5; }
+        .explanation-text {
+          font-size: 0.95rem;
+          color: #475569;
+          line-height: 1.6;
+        }
 
-        .quiz-actions { display: flex; justify-content: space-between; gap: 1rem; }
-        .nav-btn {
-          background: #f1f5f9;
-          color: #64748b;
+        .bottom-action-container {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 2rem 1.5rem;
+        }
+        .btn-next-action {
+          width: 100%;
+          background: var(--ios-olive);
+          color: white;
           border: none;
-          padding: 1rem 2rem;
+          padding: 1.25rem;
           border-radius: 99px;
-          font-weight: 700;
+          font-weight: 800;
+          font-size: 1.1rem;
           cursor: pointer;
           transition: all 0.2s;
+          box-shadow: 0 10px 15px -3px rgba(75, 107, 50, 0.3);
         }
-        .nav-btn.disabled { opacity: 0.5; cursor: not-allowed; }
-        
+        .btn-next-action:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+        .btn-next-action:not(:disabled):hover {
+          transform: translateY(-2px);
+          opacity: 0.9;
+        }
+
         /* Result Styles */
-        .result-card { background: white; border-radius: 24px; padding: 4rem; text-align: center; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
+        .result-card { background: white; border-radius: 24px; padding: 3rem 2rem; text-align: center; border: 1px solid #f1f1f1; box-shadow: var(--shadow-ios); }
         .trophy-icon { color: #f59e0b; margin-bottom: 1.5rem; }
+        .result-card h1 { color: var(--ios-text); margin-bottom: 0.5rem; }
+        .result-card p { color: #64748b; }
         .score-summary {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 2.5rem;
+          gap: 2rem;
           margin: 3rem 0;
           padding: 2rem;
           background: #f8fafc;
@@ -390,29 +515,28 @@ const InteractiveQuiz = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+          border: 4px solid var(--ios-olive);
+          box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-        .score-num { font-size: 2rem; font-weight: 800; color: var(--ios-olive); line-height: 1; }
-        .score-total { font-size: 0.8rem; color: #94a3b8; font-weight: 700; }
+        .score-num { font-size: 2rem; font-weight: 800; color: var(--ios-text); line-height: 1; }
+        .score-total { font-size: 0.8rem; color: #64748b; font-weight: 700; }
         .score-details { text-align: left; }
-        .score-details h3 { margin: 0 0 0.25rem 0; color: #1e293b; }
+        .score-details h3 { margin: 0 0 0.25rem 0; color: var(--ios-text); }
         .score-details p { margin: 0; color: #64748b; font-size: 0.9rem; }
         
-        .review-section { text-align: left; margin-top: 4rem; }
-        .section-title { font-size: 1.25rem; margin-bottom: 1.5rem; }
-        .review-item { padding: 1.5rem; border-radius: 16px; margin-bottom: 1rem; border-left: 4px solid #e2e8f0; background: #f8fafc; }
+        .review-section { text-align: left; margin-top: 3rem; }
+        .section-title { font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--ios-text); border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; }
+        .review-item { padding: 1.5rem; border-radius: 16px; margin-bottom: 1rem; border-left: 4px solid #94a3b8; background: #f8fafc; }
         .review-item.correct { border-left-color: #22c55e; }
         .review-item.incorrect { border-left-color: #ef4444; }
-        .review-q-text { font-weight: 700; margin-bottom: 1rem; color: #1e293b; }
-        .review-answer-row { display: flex; gap: 2rem; margin-bottom: 0.75rem; font-size: 0.9rem; }
+        .review-q-text { font-weight: 700; margin-bottom: 1rem; color: var(--ios-text); }
+        .review-answer-row { display: flex; gap: 2rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: #334155; }
         .user-answer { display: flex; align-items: center; gap: 0.5rem; }
-        .explanation { font-size: 0.85rem; color: #64748b; background: white; padding: 0.75rem; border-radius: 8px; margin-top: 0.75rem; }
+        .explanation { font-size: 0.85rem; color: #475569; background: white; padding: 0.75rem; border-radius: 8px; margin-top: 0.75rem; border: 1px solid #f1f1f1; }
         
-        .full-width { width: 100%; margin-top: 2rem; }
-
         @media (max-width: 600px) {
           .question-card, .result-card { padding: 2rem 1.5rem; }
-          .score-summary { flexDirection: column; text-align: center; }
+          .score-summary { flex-direction: column; text-align: center; }
           .score-details { text-align: center; }
         }
       `}} />

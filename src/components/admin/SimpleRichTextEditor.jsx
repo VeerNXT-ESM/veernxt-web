@@ -73,22 +73,47 @@ const SimpleRichTextEditor = ({ value, onChange, compact = false }) => {
 
       <style>{`
         .rich-text-container {
-          border: 1px solid #e2e8f0;
+          border: 1px solid rgba(255, 255, 255, 0.5);
           border-radius: ${compact ? '12px' : '18px'};
           overflow: hidden;
-          background: white;
+          background: rgba(255, 255, 255, 0.4);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           display: flex;
           flex-direction: column;
           width: 100%;
-          box-shadow: 0 4px 24px rgba(0,0,0,0.02);
+          box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
         }
 
         .custom-quill-editor .ql-toolbar {
           border: none;
-          border-bottom: 1px solid #e2e8f0;
-          background: #f8fafc;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          background: rgba(255, 255, 255, 0.35);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
           padding: 0.75rem;
           border-radius: ${compact ? '12px 12px 0 0' : '18px 18px 0 0'};
+        }
+        
+        .custom-quill-editor .ql-toolbar .ql-formats {
+          background: rgba(255, 255, 255, 0.6);
+          border-radius: 8px;
+          padding: 2px;
+          margin-right: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+          transition: all 0.2s ease;
+        }
+
+        .custom-quill-editor .ql-toolbar button {
+          border-radius: 6px;
+          transition: all 0.2s ease;
+        }
+        .custom-quill-editor .ql-toolbar button:hover {
+          background: rgba(75, 107, 50, 0.1);
+        }
+        .custom-quill-editor .ql-toolbar button.ql-active {
+          background: rgba(75, 107, 50, 0.2);
         }
 
         .custom-quill-editor .ql-container {
@@ -97,18 +122,19 @@ const SimpleRichTextEditor = ({ value, onChange, compact = false }) => {
           font-size: 0.95rem;
           line-height: 1.7;
           color: #0f172a;
+          background: rgba(255, 255, 255, 0.85);
         }
         
         .custom-quill-editor .ql-editor {
-          min-height: ${compact ? '80px' : '450px'};
+          min-height: ${compact ? '80px' : '150px'};
         }
 
         .rich-text-footer {
           display: flex;
           justify-content: space-between;
           padding: 0.5rem 1rem;
-          background: #f8fafc;
-          border-top: 1px solid #e2e8f0;
+          background: rgba(255, 255, 255, 0.6);
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
           font-size: 0.75rem;
           color: #64748b;
         }

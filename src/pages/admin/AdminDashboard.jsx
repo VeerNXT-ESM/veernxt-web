@@ -135,10 +135,11 @@ const AdminDashboard = () => {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const [resCount, quizCount, resources] = await Promise.all([
+      const [resCount, quizCount, resources, quizzesList] = await Promise.all([
         supabase.from('resources').select('*', { count: 'exact', head: true }),
         supabase.from('quizzes').select('*', { count: 'exact', head: true }),
-        supabase.from('resources').select('*').order('created_at', { ascending: false }) // Fetch all resources for high fidelity catalog operations
+        supabase.from('resources').select('*').order('created_at', { ascending: false }), // Fetch all resources for high fidelity catalog operations
+        supabase.from('quizzes').select('*').order('created_at', { ascending: false })
       ]);
 
       // Count unique exams from all resources
@@ -162,7 +163,18 @@ const AdminDashboard = () => {
         exams: uniqueExams,
         jobs: jobsCount
       });
-      setRecentExams(resources.data || []);
+      
+      const resourcesData = (resources.data || []).map(r => ({ ...r, _type: 'resource' }));
+      const quizzesData = (quizzesList.data || []).map(q => ({
+        ...q,
+        _type: 'quiz',
+        category: 'Mock Test',
+        is_freemium: !q.is_locked
+      }));
+      
+      const combined = [...resourcesData, ...quizzesData].sort((a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime());
+      
+      setRecentExams(combined);
     } catch (err) {
       console.error('Error fetching dashboard data:', err);
     } finally {
@@ -261,22 +273,23 @@ const AdminDashboard = () => {
   };
 
   // Delete Resource handler
-  const handleDeleteResource = async (id, title) => {
+  const handleDeleteResource = async (id, title, type = 'resource') => {
     // Check Permissions
     const hasWritePermission = currentSession?.role === 'Super Admin' || currentSession?.permissions?.includes('create_content');
     if (!hasWritePermission) {
-      alert('Access Denied: You do not have permissions to delete course resources.');
+      alert('Access Denied: You do not have permissions to delete content.');
       return;
     }
 
-    if (window.confirm(`WARNING: Are you sure you want to permanently delete the textbook/guide "${title}" from the cloud database?`)) {
+    if (window.confirm(`WARNING: Are you sure you want to permanently delete the ${type} "${title}" from the cloud database?`)) {
       try {
-        const { error } = await supabase.from('resources').delete().eq('id', id);
+        const table = type === 'quiz' ? 'quizzes' : 'resources';
+        const { error } = await supabase.from(table).delete().eq('id', id);
         if (error) throw error;
-        alert('Resource successfully removed from Supabase.');
+        alert('Item successfully removed from Supabase.');
         fetchDashboardData(); // Refresh the counts and listings
       } catch (err) {
-        alert('Error removing resource: ' + err.message);
+        alert('Error removing item: ' + err.message);
       }
     }
   };
@@ -467,6 +480,7 @@ const AdminDashboard = () => {
                 <option value="Intro">Intro (Introduction)</option>
                 <option value="Precis">Precis (Short Summaries)</option>
                 <option value="Guide">Guide (Study Books)</option>
+                <option value="Mock Test">Mock Test (Quizzes)</option>
               </select>
             </div>
 
@@ -499,7 +513,7 @@ const AdminDashboard = () => {
                     <td>
                       <div className="table-item-title-col">
                         <div className="item-icon-circle">
-                          {item.category === 'Guide' ? <Book size={15} /> : <FileText size={15} />}
+                          {item._type === 'quiz' ? <HelpCircle size={15} /> : item.category === 'Guide' ? <Book size={15} /> : <FileText size={15} />}
                         </div>
                         <div className="item-details">
                           <span className="item-title" title={item.title}>{item.title}</span>
@@ -527,14 +541,14 @@ const AdminDashboard = () => {
                       <div className="table-actions-row">
                         <button 
                           className="btn-curate" 
-                          onClick={() => navigate(`/admin/content/${item.id}`)}
-                          title="Manage details & edit textbook chapters"
+                          onClick={() => navigate(item._type === 'quiz' ? `/admin/quiz/${item.id}` : `/admin/content/${item.id}`)}
+                          title="Manage details & edit content"
                         >
                           Curate Content
                         </button>
                         <button 
                           className="btn-row-delete" 
-                          onClick={() => handleDeleteResource(item.id, item.title)}
+                          onClick={() => handleDeleteResource(item.id, item.title, item._type)}
                           title="Delete permanently from Supabase"
                           disabled={currentSession?.role !== 'Super Admin' && !currentSession?.permissions?.includes('create_content')}
                         >
