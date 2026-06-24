@@ -17,7 +17,8 @@ const AdminQuizEditor = () => {
     category: 'PYQ',
     description: '',
     total_questions: 0,
-    is_freemium: false
+    is_freemium: false,
+    status: 'Draft'
   });
 
   const [questions, setQuestions] = useState([]);
@@ -116,6 +117,22 @@ const AdminQuizEditor = () => {
               <div className="form-group">
                 <label>Quiz Title</label>
                 <input type="text" placeholder="e.g. 2024 English PYQ Set 1" value={quizData.title} onChange={e => setQuizData({...quizData, title: e.target.value})} />
+              </div>
+              <div className="form-group">
+                <label>Publish Status</label>
+                <select 
+                  value={quizData.status} 
+                  onChange={e => setQuizData({...quizData, status: e.target.value})}
+                  style={{
+                    background: quizData.status === 'Published' ? '#eef2eb' : quizData.status === 'In Review' ? '#fdf6e2' : '#f1f5f9',
+                    color: quizData.status === 'Published' ? '#4b6b32' : quizData.status === 'In Review' ? '#b89047' : '#475569',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  <option value="Draft">Draft (Hidden)</option>
+                  <option value="In Review">In Review</option>
+                  <option value="Published">Published (Live)</option>
+                </select>
               </div>
               <div className="form-group">
                 <label>Category</label>

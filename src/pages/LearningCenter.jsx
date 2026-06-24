@@ -81,8 +81,8 @@ const LearningCenter = () => {
     setQuizzes([]);
     
     try {
-      let resQuery = supabase.from('resources').select('*');
-      let quizQuery = supabase.from('quizzes').select('*');
+      let resQuery = supabase.from('resources').select('*').eq('status', 'Published');
+      let quizQuery = supabase.from('quizzes').select('*').eq('status', 'Published');
 
       if (!selectedExams.includes('all')) {
         resQuery = resQuery.in('exam_name', selectedExams);

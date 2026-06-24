@@ -19,7 +19,8 @@ const AdminContentEditor = () => {
     website_url: '',
     body_html: '',
     thumbnail_url: '',
-    is_freemium: false
+    is_freemium: false,
+    status: 'Draft'
   });
   const [isMultiChapter, setIsMultiChapter] = useState(false);
   const [chapters, setChapters] = useState([{ id: 1, title: 'Chapter 1', content: '' }]);
@@ -106,6 +107,7 @@ const AdminContentEditor = () => {
         body_html: isMultiChapter ? JSON.stringify(latestChapters) : latestFormData.body_html,
         thumbnail_url: latestFormData.thumbnail_url,
         is_freemium: latestFormData.is_freemium,
+        status: latestFormData.status,
       };
 
       console.log('[DEBUG SAVE] body_html snippet:', dataToSave.body_html?.substring(0, 300));
@@ -386,6 +388,23 @@ const AdminContentEditor = () => {
                 value={formData.title}
                 onChange={e => updateFormData(prev => ({...prev, title: e.target.value}))}
               />
+            </div>
+
+            <div className="sidebar-field">
+              <label>Publish Status</label>
+              <select 
+                value={formData.status}
+                onChange={e => updateFormData(prev => ({...prev, status: e.target.value}))}
+                style={{
+                  background: formData.status === 'Published' ? '#eef2eb' : formData.status === 'In Review' ? '#fdf6e2' : '#f1f5f9',
+                  color: formData.status === 'Published' ? '#4b6b32' : formData.status === 'In Review' ? '#b89047' : '#475569',
+                  fontWeight: 'bold'
+                }}
+              >
+                <option value="Draft">Draft (Hidden)</option>
+                <option value="In Review">In Review</option>
+                <option value="Published">Published (Live)</option>
+              </select>
             </div>
 
             <div className="sidebar-field">

@@ -27,7 +27,7 @@ const JobBoard = ({ isAdmin = false }) => {
   const fetchJobs = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${ENGINE_URL}/api/jobs`);
+      const response = await axios.get('/api/jobs');
       if (response.data.ok) {
         const loadedJobs = response.data.jobs || [];
         setJobs(loadedJobs);
@@ -37,7 +37,7 @@ const JobBoard = ({ isAdmin = false }) => {
       }
     } catch (err) {
       console.error('Failed to fetch jobs:', err);
-      setError('Could not connect to the job engine. Please try again later.');
+      setError('Could not load jobs from database. Please try again later.');
     } finally {
       setLoading(false);
     }
@@ -77,11 +77,10 @@ const JobBoard = ({ isAdmin = false }) => {
   const handleRefresh = async () => {
     setRefreshing(true);
     try {
-      const response = await axios.post(`${ENGINE_URL}/api/jobs/refresh`);
-      if (response.data.ok) {
-        alert(`Refresh complete! Found ${response.data.newEntriesCount} new entries.`);
-        fetchJobs();
-      }
+      // Refresh logic would ideally call a Vercel serverless function or external scraper hook
+      // For now, we'll just refetch from the database
+      await fetchJobs();
+      alert('Job board synced with latest database records.');
     } catch (err) {
       console.error('Refresh failed:', err);
       alert('Refresh failed: ' + err.message);
