@@ -340,6 +340,14 @@ const AdminDashboard = () => {
           {/* Right Side: Tab Links & Profile Dropdown */}
           <div className="header-right-nav">
             <button 
+              className={`nav-link-item ${activeTab === 'pipeline' ? 'active' : ''}`}
+              onClick={() => setActiveTab('pipeline')}
+            >
+              <FileText size={20} />
+              <span>Content Pipeline</span>
+            </button>
+
+            <button 
               className={`nav-link-item ${activeTab === 'catalog' ? 'active' : ''}`}
               onClick={() => setActiveTab('catalog')}
             >
@@ -429,6 +437,143 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
+
+      {/* Tab 0: Content Pipeline */}
+      {activeTab === 'pipeline' && (() => {
+        const examMetrics = uniqueExamsList.map(exam => {
+          const total = recentExams.filter(r => r.exam_name === exam);
+          const published = total.filter(r => r.status === 'Published');
+          return {
+            exam,
+            total: total.length,
+            published: published.length,
+            percent: total.length > 0 ? Math.round((published.length / total.length) * 100) : 0
+          };
+        });
+
+        const hashCounts = {};
+        recentExams.forEach(r => {
+          if (r.file_hash) {
+            hashCounts[r.file_hash] = (hashCounts[r.file_hash] || 0) + 1;
+          }
+        });
+        const duplicateHashes = new Set(Object.keys(hashCounts).filter(hash => hashCounts[hash] > 1));
+
+        return (
+        <div className="content-section animate-fade-in">
+          <div className="section-header">
+            <div>
+              <h2>Content Pipeline Dashboard</h2>
+              <p className="hint">Track readiness, view completion metrics, and catch duplicates</p>
+            </div>
+          </div>
+
+          <div className="metrics-container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+            <div className="metrics-card" style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1rem', marginTop: 0, marginBottom: '1rem' }}>Exam Completion Metrics</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                {examMetrics.map(m => (
+                  <div key={m.exam}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: '0.25rem' }}>
+                      <span style={{ fontWeight: 600 }}>{m.exam || 'General'}</span>
+                      <span>{m.published} / {m.total} Published ({m.percent}%)</span>
+                    </div>
+                    <div style={{ width: '100%', height: '8px', background: '#e2e8f0', borderRadius: '4px', overflow: 'hidden' }}>
+                      <div style={{ width: `${m.percent}%`, height: '100%', background: m.percent === 100 ? '#4b6b32' : '#b89047' }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="metrics-card" style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1rem', marginTop: 0, marginBottom: '1rem' }}>System Health</h3>
+              <div style={{ padding: '1rem', background: duplicateHashes.size > 0 ? '#fdf2f2' : '#f0fdf4', border: `1px solid ${duplicateHashes.size > 0 ? '#fecaca' : '#bbf7d0'}`, borderRadius: '8px' }}>
+                {duplicateHashes.size > 0 ? (
+                  <>
+                    <div style={{ color: '#ef4444', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                      <ShieldAlert size={16} /> Warning: Duplicate Hashes Detected
+                    </div>
+                    <p style={{ margin: 0, fontSize: '0.85rem', color: '#991b1b' }}>Multiple documents have the same file_hash. Please review the table below for items marked as duplicates.</p>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ color: '#16a34a', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                      <Check size={16} /> All Clear
+                    </div>
+                    <p style={{ margin: 0, fontSize: '0.85rem', color: '#166534' }}>No duplicate file hashes detected across ingested documents.</p>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="table-responsive">
+            <table className="corporate-table">
+              <thead>
+                <tr>
+                  <th>Resource Title</th>
+                  <th>Status</th>
+                  <th>File Hash</th>
+                  <th>Source File</th>
+                  <th style={{ textAlign: 'right' }}>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recentExams.map((item, idx) => (
+                  <tr key={item.id || idx} style={item.file_hash && duplicateHashes.has(item.file_hash) ? { background: '#fff1f2' } : {}}>
+                    <td>
+                      <div className="table-item-title-col">
+                        <div className="item-icon-circle">
+                          {item._type === 'quiz' ? <HelpCircle size={15} /> : <FileText size={15} />}
+                        </div>
+                        <div className="item-details">
+                          <span className="item-title" title={item.title}>{item.title}</span>
+                          <span className="item-sub-id">{item.exam_name || 'General'} • {item.category}</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span className={`status-badge-pill ${item.status?.replace(' ', '').toLowerCase() || 'draft'}`} style={{ 
+                        display: 'inline-block', fontSize: '0.7rem', fontWeight: 800, padding: '0.2rem 0.5rem', borderRadius: '4px', textTransform: 'uppercase',
+                        background: item.status === 'Published' ? '#eef2eb' : item.status === 'In Review' ? '#fdf6e2' : '#f1f5f9',
+                        color: item.status === 'Published' ? '#4b6b32' : item.status === 'In Review' ? '#b89047' : '#475569'
+                      }}>
+                        {item.status || 'Draft'}
+                      </span>
+                    </td>
+                    <td>
+                      <span style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: '#64748b' }} title={item.file_hash}>
+                        {item.file_hash ? `${item.file_hash.substring(0, 8)}...` : 'N/A'}
+                      </span>
+                      {item.file_hash && duplicateHashes.has(item.file_hash) && (
+                        <span style={{ marginLeft: '0.5rem', fontSize: '0.7rem', color: '#ef4444', fontWeight: 'bold' }}>DUPE</span>
+                      )}
+                    </td>
+                    <td>
+                      <span style={{ fontSize: '0.75rem', color: '#64748b', wordBreak: 'break-all' }}>
+                        {item.source_file || 'Unknown'}
+                      </span>
+                    </td>
+                    <td>
+                      <div className="table-actions-row">
+                        <button 
+                          className="btn-curate" 
+                          onClick={() => navigate(item._type === 'quiz' ? `/admin/quiz/${item.id}` : `/admin/content/${item.id}`)}
+                          title="Manage details & edit content"
+                        >
+                          Review Content
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        );
+      })()}
 
       {/* Tab 1: Content Catalog */}
       {activeTab === 'catalog' && (
