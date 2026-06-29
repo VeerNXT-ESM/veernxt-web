@@ -58,8 +58,8 @@ function App() {
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/jobs" element={<AdminJobs />} />
 
-        {/* Redirect root to dashboard (bypassing login) */}
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        {/* Redirect root to login — user must authenticate first */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );

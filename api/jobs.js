@@ -42,7 +42,9 @@ export default async function handler(req, res) {
       vacancies: job.vacancies,
       ageRange: job.age_range,
       url: job.url,
-      notes: job.raw_json?.notes || ''
+      notes: job.raw_json?.notes || '',
+      detailed_markdown: job.raw_json?.detailed_markdown || '',
+      standard_details: job.raw_json?.standard_details || null
     }));
 
     return res.status(200).json({ ok: true, jobs: mappedJobs });
