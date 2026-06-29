@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const JobBoard = ({ isAdmin = false }) => {
   const navigate = useNavigate();
@@ -438,12 +440,23 @@ const JobBoard = ({ isAdmin = false }) => {
 
                 {/* Match & Stands Out interactive cards block */}
                 <div className="premium-match-n-stand-out-block">
-                  <h4 className="block-title">Determine your fit and how to stand out</h4>
-                  <div className="chips-row">
-                    <button className="insight-chip"><Sparkles size={14} /> Show match details</button>
-                    <button className="insight-chip"><Sliders size={14} /> Tailor my resume</button>
-                    <button className="insight-chip"><Award size={14} /> Help me stand out</button>
-                  </div>
+                  {profileData ? (
+                    <>
+                      <h4 className="block-title">Determine your fit and how to stand out</h4>
+                      <div className="chips-row">
+                        <button className="insight-chip"><Sparkles size={14} /> Show match details</button>
+                        <button className="insight-chip"><Sliders size={14} /> Tailor my resume</button>
+                        <button className="insight-chip"><Award size={14} /> Help me stand out</button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h4 className="block-title">Find out if you are a match</h4>
+                      <div className="chips-row">
+                        <button className="insight-chip" onClick={() => navigate('/profiling')}><Sparkles size={14} /> Go to Profiling Engine</button>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* About the Job section */}
@@ -458,6 +471,38 @@ const JobBoard = ({ isAdmin = false }) => {
                     </p>
                   </div>
                 </div>
+
+                {/* Extracted Details */}
+                {selectedJob.standard_details ? (
+                  <div className="premium-about-job-section" style={{ marginTop: '2rem' }}>
+                    <h3 className="section-header-title">Important Details</h3>
+                    <div className="requisition-details-grid" style={{ gridTemplateColumns: '1fr', gap: '1rem' }}>
+                      <p><strong><Calendar size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'text-bottom' }} /> Exam Dates:</strong> {selectedJob.standard_details.exam_dates || 'Not specified'}</p>
+                      <p><strong><Clock size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'text-bottom' }} /> Last Date:</strong> {selectedJob.standard_details.last_date_for_application || 'Not specified'}</p>
+                      <p><strong><MapPin size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'text-bottom' }} /> Exam Centers:</strong> {selectedJob.standard_details.exam_centers || 'Not specified'}</p>
+                      <p><strong><Bookmark size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'text-bottom' }} /> Exam Fees:</strong> {selectedJob.standard_details.exam_fees || 'Not specified'}</p>
+                      
+                      <div style={{ marginTop: '0.5rem' }}>
+                        <strong>Documents Needed:</strong>
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginTop: '0.5rem', color: '#4b5563' }}>
+                          {Array.isArray(selectedJob.standard_details.documents_needed) && selectedJob.standard_details.documents_needed.length > 0 
+                            ? selectedJob.standard_details.documents_needed.map((doc, i) => <li key={i}>{doc}</li>)
+                            : <li>Not specified</li>
+                          }
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ) : selectedJob.detailed_markdown && (
+                  <div className="premium-about-job-section" style={{ marginTop: '2rem' }}>
+                    <h3 className="section-header-title">Listing Details</h3>
+                    <div className="markdown-body" style={{ color: '#4b5563', lineHeight: '1.6', fontSize: '14px' }}>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {selectedJob.detailed_markdown}
+                      </ReactMarkdown>
+                    </div>
+                  </div>
+                )}
 
                 {/* About the Company section */}
                 <div className="premium-about-company-section">

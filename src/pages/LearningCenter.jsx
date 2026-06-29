@@ -7,6 +7,7 @@ const LearningCenter = () => {
   const [resources, setResources] = useState([]);
   const [quizzes, setQuizzes] = useState([]);
   const [exams, setExams] = useState([]);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   
   // Filters
@@ -57,10 +58,19 @@ const LearningCenter = () => {
   useEffect(() => {
     const fetchInitialData = async () => {
       setLoading(true);
+      setError(null);
       try {
-        const { data: examData } = await supabase
+        const { data: examData, error: examError } = await supabase
           .from('resources')
           .select('exam_name');
+        
+        if (examError) {
+          console.error('Supabase exam fetch error:', examError);
+          setError(`Failed to load exams: ${examError.message}`);
+          setLoading(false);
+          return;
+        }
+
         if (examData) {
           const uniqueExams = [...new Set(examData.map(e => e.exam_name).filter(Boolean))].sort();
           setExams(uniqueExams);
@@ -68,6 +78,7 @@ const LearningCenter = () => {
         await fetchContent();
       } catch (err) {
         console.error('Error in initial load:', err);
+        setError('Unable to connect to the learning database. Please check your connection and try again.');
       } finally {
         setLoading(false);
       }
@@ -79,6 +90,7 @@ const LearningCenter = () => {
     setLoading(true);
     setResources([]);
     setQuizzes([]);
+    setError(null);
     
     try {
       let resQuery = supabase.from('resources').select('*').eq('status', 'Published');
@@ -111,10 +123,19 @@ const LearningCenter = () => {
         quizQuery.order('created_at', { ascending: false }).limit(40)
       ]);
       
+      // Check for Supabase-level errors
+      if (resData.error || quizData.error) {
+        const errMsg = resData.error?.message || quizData.error?.message || 'Unknown database error';
+        console.error('Supabase query error:', resData.error || quizData.error);
+        setError(`Database retrieval failed: ${errMsg}`);
+        return;
+      }
+
       setResources(resData.data || []);
       setQuizzes(quizData.data || []);
     } catch (err) {
       console.error('Error fetching learning content:', err);
+      setError('Unable to fetch learning resources. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -287,7 +308,31 @@ const LearningCenter = () => {
             </div>
           </div>
 
-          {loading ? (
+          {error ? (
+            <div className="empty-library" style={{ color: '#ef4444' }}>
+              <Book size={64} />
+              <h3 style={{ color: '#0f172a' }}>Unable to Load Resources</h3>
+              <p style={{ color: '#64748b', maxWidth: '500px', margin: '0.5rem auto 1.5rem' }}>{error}</p>
+              <button
+                onClick={() => { setError(null); fetchContent(); }}
+                style={{
+                  background: '#4b6b32',
+                  color: 'white',
+                  border: 'none',
+                  padding: '0.75rem 2rem',
+                  borderRadius: '12px',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontSize: '0.9rem',
+                }}
+              >
+                <RefreshCw size={16} /> Try Again
+              </button>
+            </div>
+          ) : loading ? (
             <div className="loading-state">
               <RefreshCw className="animate-spin" size={32} />
               <p>Fetching latest courses...</p>
