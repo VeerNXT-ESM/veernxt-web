@@ -94,6 +94,14 @@ const AuthGuard = ({ children, skipProfilingCheck = false }) => {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
+  // Employer Access Authorization Gate
+  if (location.pathname === '/find-candidates') {
+    const isEmployer = session.user?.user_metadata?.role === 'employer' || !!localStorage.getItem('employer_session');
+    if (!isEmployer) {
+      return <Navigate to="/dashboard" replace />;
+    }
+  }
+
   // If profiling check is skipped (e.g. the /profiling page itself), render children
   if (skipProfilingCheck) {
     return children;

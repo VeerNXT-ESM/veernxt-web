@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ShieldCheck, Mail, Phone as PhoneIcon, ArrowLeft, Briefcase, User, Eye, EyeOff, Lock, UserPlus, KeyRound } from 'lucide-react';
@@ -27,7 +27,35 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [otp, setOtp] = useState('');
   const [resetToken, setResetToken] = useState('');
+  const [registerToken, setRegisterToken] = useState('');
+  const [isDevMode, setIsDevMode] = useState(false);
+  const [otpToken, setOtpToken] = useState('');
+  const [resendCooldown, setResendCooldown] = useState(0);
   const [step, setStep] = useState('input'); // 'input' | 'otp' | 'set-password'
+
+  useEffect(() => {
+    let timer;
+    if (step === 'otp' && resendCooldown > 0) {
+      timer = setTimeout(() => {
+        setResendCooldown(prev => prev - 1);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [step, resendCooldown]);
+
+  const handleResendOTP = async (e) => {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    if (resendCooldown > 0 || loading) return;
+    await handleSendOTP();
+  };
+
+  const sanitizePhoneNumber = (val) => {
+    let digits = val.replace(/\D/g, '');
+    if (digits.startsWith('91') && digits.length > 10) {
+      digits = digits.slice(2);
+    }
+    return digits.slice(0, 10);
+  };
   
   // Employer
   const [employerEmail, setEmployerEmail] = useState('');
@@ -46,7 +74,7 @@ const Login = () => {
   // CANDIDATE: REGISTER FLOW
   // ═══════════════════════════════════════════
   const handleSendOTP = async (e) => {
-    e.preventDefault();
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
     if (!phone || phone.length < 10) {
       showMsg('Please enter a valid 10-digit mobile number.', 'error');
       return;
@@ -66,6 +94,9 @@ const Login = () => {
 
       if (data.ok) {
         setStep('otp');
+        setIsDevMode(!!data.devMode);
+        setOtpToken(data.otpToken || '');
+        setResendCooldown(30);
         showMsg(data.devMode
           ? 'DEV MODE: Use code 123456 to verify.'
           : `OTP sent to +91 ${phone}. Check your messages.`, 'success');
@@ -91,7 +122,7 @@ const Login = () => {
       const res = await fetch('/api/auth/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mobile: phone, otp, purpose }),
+        body: JSON.stringify({ mobile: phone, otp, purpose, otpToken }),
       });
       const data = await res.json();
 
@@ -99,6 +130,9 @@ const Login = () => {
         setVerifiedMobile(data.mobile);
         if (authMode === 'forgot' && data.resetToken) {
           setResetToken(data.resetToken);
+        }
+        if (authMode === 'register' && data.registerToken) {
+          setRegisterToken(data.registerToken);
         }
         setStep('set-password');
         showMsg(authMode === 'forgot'
@@ -131,29 +165,31 @@ const Login = () => {
 
     try {
       if (authMode === 'register') {
-        // Create new Supabase user with phone as email workaround
-        // Using phone@veernxt.in as synthetic email since Supabase requires email
-        const syntheticEmail = `${verifiedMobile}@veernxt.in`;
-        
-        const { data, error } = await supabase.auth.signUp({
-          email: syntheticEmail,
-          password: password,
-          options: {
-            data: {
-              mobile: verifiedMobile,
-              role: 'candidate',
-            },
-          },
+        // Call backend registration API instead of direct client-side signUp
+        const res = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            mobile: verifiedMobile,
+            password: password,
+            registerToken: registerToken,
+          }),
         });
 
-        if (error) {
-          if (error.message?.includes('already registered')) {
-            showMsg('This number is already registered. Please login instead.', 'error');
-          } else {
-            showMsg(error.message, 'error');
-          }
+        const data = await res.json();
+
+        if (!res.ok || !data.ok) {
+          showMsg(data.error || 'Failed to create account.', 'error');
         } else {
-          showMsg('Account created! Redirecting to profiling...', 'success');
+          showMsg('Account created! Auto-logging you in...', 'success');
+          
+          // Auto-login after successful registration
+          const syntheticEmail = `${verifiedMobile}@veernxt.in`;
+          await supabase.auth.signInWithPassword({
+            email: syntheticEmail,
+            password: password,
+          });
+
           setTimeout(() => navigate('/profiling'), 1000);
         }
       } else if (authMode === 'forgot') {
@@ -284,6 +320,10 @@ const Login = () => {
     setPassword('');
     setConfirmPassword('');
     setVerifiedMobile('');
+    setIsDevMode(false);
+    setRegisterToken('');
+    setOtpToken('');
+    setResendCooldown(0);
     clearMsg();
   };
 
@@ -331,14 +371,35 @@ const Login = () => {
                 required
                 style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
               />
-              <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#64748b', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
-                <span style={{ fontWeight: '600', color: 'var(--ios-olive)' }}>TEST MODE ACTIVE:</span> Please enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
-              </div>
+              {isDevMode && (
+                <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#64748b', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
+                  <span style={{ fontWeight: '600', color: 'var(--ios-olive)' }}>TEST MODE ACTIVE:</span> Please enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
+                </div>
+              )}
             </div>
             <button type="submit" className="btn-primary ios-pill" disabled={loading || otp.length !== 6}
               style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
               {loading ? 'Verifying...' : 'Verify OTP'}
             </button>
+            <div style={{ textAlign: 'center', marginTop: '0.75rem' }}>
+              <button 
+                type="button" 
+                onClick={handleResendOTP} 
+                disabled={resendCooldown > 0 || loading}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: resendCooldown > 0 ? '#94a3b8' : 'var(--ios-olive)', 
+                  fontWeight: '700', 
+                  fontSize: '0.85rem', 
+                  cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer',
+                  padding: '0.25rem 0.5rem',
+                  outline: 'none'
+                }}
+              >
+                {resendCooldown > 0 ? `Resend OTP in ${resendCooldown}s` : 'Resend OTP'}
+              </button>
+            </div>
           </form>
         </div>
       );
@@ -394,7 +455,7 @@ const Login = () => {
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
                 <input type="tel" placeholder="e.g. 9876543210" value={phone}
-                  onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))} required
+                  onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
                 />
               </div>
@@ -429,7 +490,7 @@ const Login = () => {
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
                 <input type="tel" placeholder="e.g. 9876543210" value={phone}
-                  onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))} required
+                  onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
                 />
               </div>
@@ -455,7 +516,7 @@ const Login = () => {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (val.includes('@')) { setEmail(val); setPhone(''); }
-                  else { setPhone(val.replace(/\D/g, '').slice(0, 10)); setEmail(''); }
+                  else { setPhone(sanitizePhoneNumber(val)); setEmail(''); }
                 }}
                 required style={{ ...inputStyle, flex: 1 }}
               />
