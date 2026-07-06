@@ -27,7 +27,9 @@ export default async function handler(req, res) {
   }
 
   const cleanMobile = mobile.replace(/[\s\-+]/g, '');
-  const fullMobile = cleanMobile.startsWith('91') ? cleanMobile : `91${cleanMobile}`;
+  const fullMobile = (cleanMobile.length === 10) 
+    ? `91${cleanMobile}` 
+    : (cleanMobile.startsWith('91') && cleanMobile.length === 12 ? cleanMobile : `91${cleanMobile}`);
   console.log('[verify-otp] Normalized mobile:', fullMobile, 'Purpose:', purpose);
 
   // --- Step 1: Verify OTP using the cryptographic token ---
