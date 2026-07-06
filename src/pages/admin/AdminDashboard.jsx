@@ -136,23 +136,22 @@ const AdminDashboard = () => {
     setLoading(true);
     try {
       const [resCount, quizCount, resources, quizzesList] = await Promise.all([
-        supabase.from('resources').select('*', { count: 'exact', head: true }),
+        supabase.from('resources_v2').select('*', { count: 'exact', head: true }),
         supabase.from('quizzes').select('*', { count: 'exact', head: true }),
-        supabase.from('resources').select('*').order('created_at', { ascending: false }), // Fetch all resources for high fidelity catalog operations
+        supabase.from('resources_v2').select('*').order('created_at', { ascending: false }), // Fetch all resources for high fidelity catalog operations
         supabase.from('quizzes').select('*').order('created_at', { ascending: false })
       ]);
 
       // Count unique exams from all resources
-      const { data: allResources } = await supabase.from('resources').select('exam_name');
+      const { data: allResources } = await supabase.from('resources_v2').select('exam_name');
       const uniqueExams = allResources ? new Set(allResources.map(r => r.exam_name)).size : 0;
 
-      // Fetch Jobs count from local engine server
+      // Fetch Jobs count from embedded API route
       let jobsCount = 0;
       try {
-        const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'http://localhost:5001';
-        const jobRes = await fetch(`${ENGINE_URL}/api/jobs`);
+        const jobRes = await fetch('/api/jobs');
         const jobData = await jobRes.json();
-        if (jobData.ok) jobsCount = jobData.count;
+        if (jobData.ok) jobsCount = jobData.jobs ? jobData.jobs.length : 0;
       } catch (e) {
         console.warn('Could not fetch jobs count for stats');
       }
@@ -283,7 +282,7 @@ const AdminDashboard = () => {
 
     if (window.confirm(`WARNING: Are you sure you want to permanently delete the ${type} "${title}" from the cloud database?`)) {
       try {
-        const table = type === 'quiz' ? 'quizzes' : 'resources';
+        const table = type === 'quiz' ? 'quizzes' : 'resources_v2';
         const { error } = await supabase.from(table).delete().eq('id', id);
         if (error) throw error;
         alert('Item successfully removed from Supabase.');

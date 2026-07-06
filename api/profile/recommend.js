@@ -9,14 +9,9 @@
  */
 
 import Joi from 'joi';
-import { readFileSync } from 'fs';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { createClient } from '@supabase/supabase-js';
 import { checkEligibility } from '../../backend/engine/eligibility.js';
 import { scoreExam } from '../../backend/engine/scoring.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 // --- Profile validation schema ---
 const profileSchema = Joi.object({
@@ -59,13 +54,73 @@ const profileSchema = Joi.object({
   consent:          Joi.boolean().valid(true).required(),
 });
 
-// --- Load exam master (cached across warm invocations) ---
+// --- Fetch exams from Supabase with pre-filtering for scalability ---
+// Cache the full exam list once per warm invocation, then JS-filter per profile.
 let EXAM_CACHE = null;
-function loadExamMaster() {
+let SUPABASE_CLIENT = null;
+
+function getSupabaseClient() {
+  if (SUPABASE_CLIENT) return SUPABASE_CLIENT;
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) throw new Error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY env vars');
+  SUPABASE_CLIENT = createClient(url, key, { auth: { persistSession: false } });
+  return SUPABASE_CLIENT;
+}
+
+async function loadAllExams() {
   if (EXAM_CACHE) return EXAM_CACHE;
-  const masterPath = resolve(__dirname, '../../backend/engine/data/exam_master.json');
-  EXAM_CACHE = JSON.parse(readFileSync(masterPath, 'utf-8'));
+  const client = getSupabaseClient();
+  console.log('[recommend] Loading all exams from Supabase (cold start)...');
+  const { data: rows, error } = await client.from('exams').select('*');
+  if (error) throw new Error(`Failed to fetch exams: ${error.message}`);
+  EXAM_CACHE = rows.map(row => ({
+    ...(row.metadata || {}),
+    exam_id:          row.exam_id,
+    exam_name:        row.exam_name,
+    conducting_body:  row.conducting_body,
+    career_track:     row.career_track,
+    state_ut:         row.state_ut,
+    website:          row.base_url || row.metadata?.website || null,
+    level:            row.metadata?.level || null,
+    domicile_required: row.is_state_specific ?? row.metadata?.domicile_required ?? false,
+  }));
+  console.log(`[recommend] Cached ${EXAM_CACHE.length} exams.`);
   return EXAM_CACHE;
+}
+
+// Qualification rank map (mirrors eligibility.js QUAL_RANK)
+const QUAL_RANK_MAP = { 'Class 10': 1, 'Class 12': 2, 'Graduate': 3, 'Post-Graduate': 4 };
+const QUAL_DB_RANK  = { '10': 1, '12': 2, 'graduate': 3, 'post_graduate': 4 };
+
+/**
+ * Returns the subset of exams that CANNOT be ruled out by fast JS checks.
+ * This is not the full eligibility logic — checkEligibility() still runs after —
+ * but it drops the largest bulk of ineligible exams before the scoring loop.
+ */
+async function fetchPreFilteredExams(profile) {
+  const allExams = await loadAllExams();
+  const userQualRank = QUAL_RANK_MAP[profile.highestQualification] || 0;
+  const isNonSHAPE1  = profile.medicalCategory && profile.medicalCategory !== 'SHAPE-1';
+  const wantsAnyState = profile.relocation === 'Anywhere in India';
+  const userState    = (profile.stateOfDomicile || '').toLowerCase().trim();
+
+  return allExams.filter(exam => {
+    // 1. Qualification pre-filter: drop exams whose requirement exceeds user's level
+    const needRank = QUAL_DB_RANK[exam.min_qualification] || 0;
+    if (needRank && userQualRank < needRank) return false;
+
+    // 2. Physical pre-filter: drop physical-required exams if user is non-SHAPE-1
+    if (isNonSHAPE1 && exam.physical_required) return false;
+
+    // 3. Domicile pre-filter: drop state exams from other states (unless open to all India)
+    if (!wantsAnyState && exam.domicile_required && exam.state_ut) {
+      const examState = (exam.state_ut || '').toLowerCase().trim();
+      if (examState && examState !== userState) return false;
+    }
+
+    return true;
+  });
 }
 
 function summariseProfile(p) {
@@ -125,18 +180,56 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, errors: error.details });
   }
 
+  // Extract and verify Supabase authorization token
+  const authHeader = req.headers.authorization;
+  let userId = null;
+  let supabaseAdmin = null;
+
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    const token = authHeader.substring(7);
+    if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      supabaseAdmin = createClient(
+        process.env.SUPABASE_URL,
+        process.env.SUPABASE_SERVICE_ROLE_KEY,
+        {
+          auth: { persistSession: false }
+        }
+      );
+      try {
+        console.log('[recommend] Verifying authorization token...');
+        const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token);
+        if (authError) {
+          console.error('[recommend] Token verification failed:', authError.message);
+          return res.status(401).json({ ok: false, error: 'Unauthorized: Invalid session token' });
+        }
+        if (user) {
+          userId = user.id;
+          console.log('[recommend] Authenticated user ID:', userId);
+        }
+      } catch (err) {
+        console.error('[recommend] Exception during token verification:', err);
+        return res.status(401).json({ ok: false, error: 'Unauthorized: Failed to verify token' });
+      }
+    }
+  }
+
   try {
-    const topN = req.query?.topN ? parseInt(req.query.topN) : 10;
+    let topN = req.query?.topN ? parseInt(req.query.topN) : 10;
+    // Bound topN to prevent memory/payload exhaustion attack vectors
+    topN = Math.min(Math.max(1, topN), 50);
     const priorityTracks = req.body.priorityTracks ||
       ['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'ENGINEERING', 'PSU'];
 
-    const master = loadExamMaster();
-    const exams = master.exams;
+    // Pre-filter in JS using fast checks (qual rank, physical, domicile).
+    // This replaces the blind for...of loop over all exams with a much smaller
+    // candidate set before the full checkEligibility() pass.
+    const preFiltered = await fetchPreFilteredExams(profile);
+    console.log(`[recommend] Pre-filter: ${preFiltered.length} exams passed (from ${(await loadAllExams()).length} total).`);
 
-    // 1. Hard eligibility filter
+    // 1. Hard eligibility filter on the pre-filtered set only
     const survivors = [];
     const rejected = [];
-    for (const exam of exams) {
+    for (const exam of preFiltered) {
       const e = checkEligibility(profile, exam);
       if (e.eligible) survivors.push(exam);
       else rejected.push({ exam_id: exam.exam_id, reasons: e.reasons });
@@ -190,6 +283,27 @@ export default async function handler(req, res) {
         },
       })),
     };
+
+    // 6. Write securely to database if user is authenticated
+    if (userId && supabaseAdmin) {
+      console.log('[recommend] Securely saving profile scoring to database for user:', userId);
+      const { error: dbError } = await supabaseAdmin
+        .from('user_profiles')
+        .upsert({
+          id: userId,
+          raw_profile_data: profile,
+          recommendations: result.recommendations,
+          veer_score: Math.round(overall_match_score),
+          profiling_completed: true,
+          updated_at: new Date().toISOString()
+        });
+
+      if (dbError) {
+        console.error('[recommend] Secure database upsert failed:', dbError.message);
+        return res.status(500).json({ ok: false, error: 'Failed to save recommendations to database' });
+      }
+      console.log('[recommend] Profile scoring securely updated in DB.');
+    }
 
     return res.status(200).json(result);
   } catch (e) {

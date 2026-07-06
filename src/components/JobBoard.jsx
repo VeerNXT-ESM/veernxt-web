@@ -24,17 +24,22 @@ const JobBoard = ({ isAdmin = false }) => {
   const [dismissedJobIds, setDismissedJobIds] = useState([]);
   const [showAllProfileMatched, setShowAllProfileMatched] = useState(false);
 
-  const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || 'http://localhost:5001';
 
   const fetchJobs = async () => {
     setLoading(true);
     try {
       const response = await axios.get('/api/jobs');
       if (response.data.ok) {
-        const loadedJobs = response.data.jobs || [];
-        setJobs(loadedJobs);
-        if (loadedJobs.length > 0) {
-          setSelectedJob(loadedJobs[0]);
+        // Sort by when the job was added/scraped (created_at) — newest first.
+        // publishedOn is the application deadline, NOT the notification date.
+        const sortedJobs = (response.data.jobs || []).sort((a, b) => {
+          const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+          const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+          return dateB - dateA;
+        });
+        setJobs(sortedJobs);
+        if (sortedJobs.length > 0) {
+          setSelectedJob(sortedJobs[0]);
         }
       }
     } catch (err) {
@@ -97,11 +102,22 @@ const JobBoard = ({ isAdmin = false }) => {
 
   const calculateDaysAgo = (publishedOn) => {
     if (!publishedOn) return 'Recent';
-    const diffTime = Math.abs(new Date() - new Date(publishedOn));
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const now = new Date();
+    const date = new Date(publishedOn);
+    const diffMs = date - now; // positive = future, negative = past
+    const diffDays = Math.ceil(Math.abs(diffMs) / (1000 * 60 * 60 * 24));
+
+    // Future date = application deadline
+    if (diffMs > 0) {
+      if (diffDays <= 1) return 'Closes today';
+      if (diffDays <= 7) return `Closes in ${diffDays} days`;
+      const weeks = Math.ceil(diffDays / 7);
+      return weeks === 1 ? 'Closes in 1 week' : `Closes in ${weeks} weeks`;
+    }
+
+    // Past date = when it was posted
     if (diffDays <= 1) return 'Today';
-    if (diffDays === 2) return '1 day ago';
-    if (diffDays < 30) return `${diffDays - 1} days ago`;
+    if (diffDays < 30) return `${diffDays} days ago`;
     const months = Math.floor(diffDays / 30);
     return months === 1 ? '1 month ago' : `${months} months ago`;
   };

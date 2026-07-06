@@ -5,44 +5,44 @@ import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw } from 'luci
 import 'react-quill-new/dist/quill.snow.css';
 
 const SecureReader = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // This is now resource_id
   const [resource, setResource] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isRead, setIsRead] = useState(false);
   const [chapters, setChapters] = useState(null);
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
+  const [chapterLoading, setChapterLoading] = useState(false);
+  const chapterCache = React.useRef({});
 
+  // Fetch resource metadata from resources_v2
   useEffect(() => {
     const fetchResource = async () => {
       const { data } = await supabase
-        .from('resources')
+        .from('resources_v2')
         .select('*')
-        .eq('id', id)
+        .eq('resource_id', id)
         .single();
       
+      if (!data) {
+        setLoading(false);
+        return;
+      }
+
       setResource(data);
-      console.log('[DEBUG VIEWER] raw body_html snippet:', data?.body_html?.substring(0, 300));
-      
-      let parsedChapters = null;
 
-      if (data && data.body_html && data.body_html.trim().startsWith('[')) {
-        try {
-          const parsed = JSON.parse(data.body_html);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            parsedChapters = parsed;
-          }
-        } catch (e) {
-          // Fallback to raw HTML
-        }
-      }
-
-      if (parsedChapters && parsedChapters.length > 0) {
-        setChapters(parsedChapters);
-      } else {
-        setChapters([{ id: 'page-1', title: 'Content', content: data?.body_html || '' }]);
-      }
-      
+      // Create chapter stubs from chapter_count
+      const count = data.chapter_count || 1;
+      const stubs = Array.from({ length: count }, (_, i) => ({
+        index: i,
+        title: `Chapter ${i + 1}`,
+        body_html: null, // Will be loaded lazily
+        loaded: false
+      }));
+      setChapters(stubs);
       setLoading(false);
+
+      // Immediately load the first chapter
+      loadChapter(data, 0, stubs);
     };
 
     fetchResource();
@@ -56,11 +56,88 @@ const SecureReader = () => {
     };
   }, [id]);
 
+  // Load a chapter from R2 storage
+  const loadChapter = async (res, index, currentChapters) => {
+    const cacheKey = `${res.resource_id}_${index}`;
+    if (chapterCache.current[cacheKey]) {
+      // Already cached — update chapters state with cached data
+      setChapters(prev => {
+        if (!prev) return prev;
+        const updated = [...prev];
+        updated[index] = { ...updated[index], ...chapterCache.current[cacheKey], loaded: true };
+        return updated;
+      });
+      return;
+    }
+
+    setChapterLoading(true);
+    try {
+      const chapterUrl = `${res.storage_base_url}chapters/chapter-${index + 1}.json`;
+      const response = await fetch(chapterUrl);
+      if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
+      
+      const chapterData = await response.json();
+      
+      // Cache the loaded chapter
+      chapterCache.current[cacheKey] = chapterData;
+
+      // Update the specific chapter in state
+      setChapters(prev => {
+        if (!prev) return prev;
+        const updated = [...prev];
+        updated[index] = {
+          ...updated[index],
+          title: chapterData.title || `Chapter ${index + 1}`,
+          body_html: chapterData.body_html || '',
+          images: chapterData.images || [],
+          loaded: true
+        };
+        return updated;
+      });
+    } catch (err) {
+      console.error(`Error loading chapter ${index + 1}:`, err);
+      setChapters(prev => {
+        if (!prev) return prev;
+        const updated = [...prev];
+        updated[index] = {
+          ...updated[index],
+          body_html: '<div class="empty-state"><p>Unable to load this chapter. Please try again.</p></div>',
+          loaded: true
+        };
+        return updated;
+      });
+    } finally {
+      setChapterLoading(false);
+    }
+  };
+
+  // Load chapter content when user navigates to a new chapter
+  useEffect(() => {
+    if (resource && chapters && !chapters[activeChapterIndex]?.loaded) {
+      loadChapter(resource, activeChapterIndex, chapters);
+    }
+  }, [activeChapterIndex, resource]);
+
   const handleMarkAsRead = () => {
     setIsRead(true);
   };
 
-  const currentContent = chapters ? chapters[activeChapterIndex].content : '';
+  const resolveImageSources = (html, baseUrl) => {
+    if (!html || !baseUrl) return html;
+    const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+    return html.replace(
+      /<img\s+([^>]*?)\bsrc=["']([^"']+)["']/gi,
+      (match, attributes, src) => {
+        if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('data:') || src.startsWith('/')) {
+          return match;
+        }
+        return `<img ${attributes}src="${normalizedBaseUrl}${src}"`;
+      }
+    );
+  };
+
+  const rawContent = chapters && chapters[activeChapterIndex]?.body_html || '';
+  const currentContent = resource ? resolveImageSources(rawContent, resource.storage_base_url) : rawContent;
   const isLastChapter = chapters ? activeChapterIndex === chapters.length - 1 : true;
 
   if (loading) return (
@@ -120,7 +197,13 @@ const SecureReader = () => {
 
           <div className="glass-panel reader-card">
             <div className="reader-content ql-snow">
-              <div className="ql-editor" dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} />
+              {chapterLoading && !chapters?.[activeChapterIndex]?.loaded ? (
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
+                  <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
+                </div>
+              ) : (
+                <div className="ql-editor" dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} />
+              )}
             </div>
             
             <div className="reader-footer">
