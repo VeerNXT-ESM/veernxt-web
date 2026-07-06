@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { supabase, getEngineUrl } from '../lib/supabase';
+import { supabase } from '../lib/supabase';
 import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark } from 'lucide-react';
 
 const PreparationPanel = ({ exam }) => {
@@ -13,7 +13,7 @@ const PreparationPanel = ({ exam }) => {
     const fetchPrepData = async () => {
       setLoading(true);
       try {
-        let resData = await supabase.from('resources').select('*').eq('exam_name', exam.exam_name).limit(3);
+        let resData = await supabase.from('resources_v2').select('*').eq('exam_name', exam.exam_name).limit(3);
         let quizData = await supabase.from('quizzes').select('*').eq('exam_name', exam.exam_name).limit(3);
         
         // Fallback: If no direct match, fetch generalized prep for this career track
@@ -25,7 +25,7 @@ const PreparationPanel = ({ exam }) => {
           else if (exam.career_track === 'BANKING') fallbackTerm = 'IBPS';
           else if (exam.career_track === 'DEFENCE') fallbackTerm = 'Defence';
           
-          resData = await supabase.from('resources').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
+          resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
           quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
         }
         
@@ -54,7 +54,7 @@ const PreparationPanel = ({ exam }) => {
           <h5 style={{ fontSize: '0.75rem', color: '#888', marginBottom: '0.5rem' }}>STUDY GUIDES</h5>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             {resources.map(res => (
-              <Link key={res.id} to={`/reader/${res.id}`} className="prep-item">
+              <Link key={res.id} to={`/reader/${res.resource_id}`} className="prep-item">
                 <FileText size={14} />
                 <span>{res.title}</span>
               </Link>
@@ -166,7 +166,8 @@ const Dashboard = () => {
 
     setLoading(true);
     try {
-      const ENGINE_URL = getEngineUrl();
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
       const formData = profile.raw_profile_data;
       
       // Transform raw formData to match engine schema (same as Profiling.jsx does)
@@ -180,23 +181,11 @@ const Dashboard = () => {
         chestExpansion: parseInt(formData.chestExpansion) || 0,
       };
 
-      const response = await axios.post(`${ENGINE_URL}/api/profile/recommend`, payload);
+      const response = await axios.post('/api/profile/recommend', payload, {
+        headers: token ? { 'Authorization': `Bearer ${token}` } : {}
+      });
       
       if (response.data.ok) {
-        if (profile.id !== '00000000-0000-0000-0000-000000000000') {
-          const { error } = await supabase
-            .from('user_profiles')
-            .update({
-              recommendations: response.data.recommendations,
-              veer_score: Math.round(response.data.summary?.overall_match_score || 0),
-              updated_at: new Date().toISOString()
-            })
-            .eq('id', profile.id);
-
-          if (error) throw error;
-        } else {
-          console.warn("Mock profile recalculate: skipped database update.");
-        }
         window.location.reload(); // Refresh to show new results
       }
     } catch (err) {

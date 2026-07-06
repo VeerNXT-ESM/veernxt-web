@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { supabase, getEngineUrl } from '../lib/supabase';
+import { supabase } from '../lib/supabase';
 import { STATE_DISTRICTS } from '../lib/districts';
 import { Check, ChevronRight, ChevronLeft, Loader2, Award, Target, BookOpen, Clock, Shield, Briefcase, GraduationCap, Heart } from 'lucide-react';
 import designationsData from '../data/designations.json';
 import PremiumSelect from '../components/PremiumSelect';
 
-const ENGINE_URL = getEngineUrl();
 
 const STEPS = [
   { id: 'identity', label: 'Identity', icon: Shield },
@@ -23,6 +22,7 @@ const Profiling = () => {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [showFullApplication, setShowFullApplication] = useState(false);
   
   const [formData, setFormData] = useState({
     fullName: '',
@@ -173,8 +173,9 @@ const Profiling = () => {
     setLoading(true);
     try {
       const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
       
-      const recommendResponse = await axios.post(`${ENGINE_URL}/api/profile/recommend`, {
+      const recommendResponse = await axios.post('/api/profile/recommend', {
         ...formData,
         dateOfBirth: `${formData.dobYear}-${formData.dobMonth}-${formData.dobDay}`,
         totalServiceDuration: `${formData.serviceYears} years ${formData.serviceMonths} months`,
@@ -182,31 +183,12 @@ const Profiling = () => {
         weightKg: parseInt(formData.weightKg),
         chestCm: parseInt(formData.chestCm),
         chestExpansion: parseInt(formData.chestExpansion),
+      }, {
+        headers: token ? { 'Authorization': `Bearer ${token}` } : {}
       });
 
       if (!recommendResponse.data.ok) throw new Error(recommendResponse.data.error || 'Failed to get recommendations');
-      const resultsData = recommendResponse.data;
-
-      if (session.user.id && session.user.id !== '00000000-0000-0000-0000-000000000000') {
-        const { error } = await supabase
-          .from('user_profiles')
-          .upsert({
-            id: session.user.id,
-            full_name: formData.fullName,
-            service_branch: formData.serviceBranch,
-            years_of_service: parseInt(formData.serviceYears) || 0,
-            education_level: formData.highestQualification,
-            raw_profile_data: formData,
-            recommendations: resultsData.recommendations,
-            veer_score: Math.round(resultsData.summary?.overall_match_score || 0),
-            profiling_completed: true,
-            updated_at: new Date().toISOString()
-          });
-
-        if (error) throw error;
-      } else {
-        console.warn("Mock session: skipped upserting profile to Supabase.");
-      }
+      
       navigate('/dashboard');
     } catch (error) {
       console.error('Error submitting profile:', error);
@@ -524,10 +506,28 @@ const Profiling = () => {
         return (
           <div className="form-section animate-fade-in">
             <h3 style={{ borderBottom: '1px solid #eee', paddingBottom: '0.5rem', marginBottom: '1.5rem', color: 'var(--ios-olive)' }}>Section G — Review</h3>
-            <div style={{ background: 'var(--ios-secondary)', padding: '1.5rem', borderRadius: '16px', marginBottom: '2rem' }}>
+            <div style={{ background: 'var(--ios-secondary)', padding: '1.5rem', borderRadius: '16px', marginBottom: '1rem' }}>
               <p><strong>Name:</strong> {d.fullName}</p>
               <p><strong>Branch:</strong> {d.serviceBranch}</p>
               <p><strong>Qualification:</strong> {d.highestQualification}</p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '2rem' }}>
+              <button 
+                type="button" 
+                onClick={() => setShowFullApplication(true)}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: 'var(--ios-olive)', 
+                  fontWeight: '700', 
+                  fontSize: '0.9rem', 
+                  textDecoration: 'underline', 
+                  cursor: 'pointer',
+                  padding: 0
+                }}
+              >
+                View Full Application
+              </button>
             </div>
             <label style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer', background: 'rgba(75, 107, 50, 0.05)', padding: '1rem', borderRadius: '12px' }}>
               <input type="checkbox" name="consent" checked={d.consent} onChange={handleChange} />
@@ -539,8 +539,311 @@ const Profiling = () => {
     }
   };
 
+  const renderFullApplicationModal = () => {
+    const modalSectionStyle = {
+      backgroundColor: '#ffffff',
+      padding: '1.5rem',
+      borderRadius: '16px',
+      border: '1px solid #e2e8f0',
+    };
+
+    const modalSectionTitleStyle = {
+      fontSize: '0.85rem',
+      fontWeight: '800',
+      color: 'var(--ios-olive)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      marginTop: 0,
+      marginBottom: '1rem',
+      borderBottom: '1px solid #f1f5f9',
+      paddingBottom: '0.5rem'
+    };
+
+    const modalGridStyle = {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+      gap: '1rem'
+    };
+
+    const modalFieldStyle = {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.15rem'
+    };
+
+    const modalLabelStyle = {
+      fontSize: '0.7rem',
+      fontWeight: '600',
+      color: '#64748b',
+      textTransform: 'uppercase',
+      letterSpacing: '0.02em'
+    };
+
+    const modalValueStyle = {
+      fontSize: '0.85rem',
+      fontWeight: '700',
+      color: '#0f172a'
+    };
+
+    const modalBadgeStyle = {
+      backgroundColor: 'rgba(75, 107, 50, 0.06)',
+      color: 'var(--ios-olive)',
+      fontSize: '0.75rem',
+      fontWeight: '700',
+      padding: '0.25rem 0.6rem',
+      borderRadius: '20px',
+      border: '1px solid rgba(75, 107, 50, 0.12)'
+    };
+
+    const d = formData;
+
+    return (
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        backdropFilter: 'blur(8px)',
+        zIndex: 1000,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1rem',
+        animation: 'fadeIn 0.25s ease-out'
+      }}>
+        <div style={{
+          backgroundColor: '#ffffff',
+          borderRadius: '24px',
+          width: '100%',
+          maxWidth: '750px',
+          maxHeight: '85vh',
+          display: 'flex',
+          flexDirection: 'column',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+          border: '1px solid rgba(255, 255, 255, 0.8)',
+          overflow: 'hidden',
+          animation: 'slideUp 0.25s ease-out'
+        }}>
+          {/* Modal Header */}
+          <div style={{
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid #f1f5f9',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            background: 'linear-gradient(135deg, var(--ios-olive) 0%, #3e5828 100%)',
+            color: '#ffffff'
+          }}>
+            <div>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', margin: 0, letterSpacing: '-0.02em' }}>VeerNXT Application Profile</h2>
+              <p style={{ fontSize: '0.75rem', opacity: 0.9, margin: '0.15rem 0 0 0' }}>Review your full profiling answers prior to final submission</p>
+            </div>
+            <button 
+              type="button" 
+              onClick={() => setShowFullApplication(false)} 
+              style={{
+                background: 'rgba(255, 255, 255, 0.15)',
+                border: 'none',
+                color: '#ffffff',
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: '600',
+                transition: 'background 0.2s',
+                outline: 'none'
+              }}
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* Modal Body */}
+          <div style={{
+            padding: '1.5rem 2rem',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.5rem',
+            backgroundColor: '#f8fafc'
+          }}>
+            {/* Identity Section */}
+            <div style={modalSectionStyle}>
+              <h4 style={modalSectionTitleStyle}>Identity Details</h4>
+              <div style={modalGridStyle}>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Full Name</span>
+                  <span style={modalValueStyle}>{d.fullName || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Date of Birth</span>
+                  <span style={modalValueStyle}>
+                    {d.dobDay && d.dobMonth && d.dobYear ? `${d.dobDay}-${d.dobMonth}-${d.dobYear}` : '—'}
+                  </span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Reservation Category</span>
+                  <span style={modalValueStyle}>{d.category || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Marital Status</span>
+                  <span style={modalValueStyle}>{d.maritalStatus || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>State of Domicile</span>
+                  <span style={modalValueStyle}>{d.stateOfDomicile || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>District</span>
+                  <span style={modalValueStyle}>{d.district || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Email Address</span>
+                  <span style={modalValueStyle}>{d.email || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Mobile Number</span>
+                  <span style={modalValueStyle}>{d.mobile || '—'}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Service Record */}
+            <div style={modalSectionStyle}>
+              <h4 style={modalSectionTitleStyle}>Service Record</h4>
+              <div style={modalGridStyle}>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Service Branch</span>
+                  <span style={modalValueStyle}>{d.serviceBranch || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Arm / Corps / Trade</span>
+                  <span style={modalValueStyle}>{d.armCorpsTrade || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Role / Appointment</span>
+                  <span style={modalValueStyle}>{d.roleAppointment || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Service Duration</span>
+                  <span style={modalValueStyle}>
+                    {d.serviceYears || d.serviceMonths ? `${d.serviceYears || 0} Years, ${d.serviceMonths || 0} Months` : '—'}
+                  </span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Character on Discharge</span>
+                  <span style={modalValueStyle}>{d.characterOnDischarge || '—'}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Academics */}
+            <div style={modalSectionStyle}>
+              <h4 style={modalSectionTitleStyle}>Academic details</h4>
+              <div style={modalGridStyle}>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Highest Qualification</span>
+                  <span style={modalValueStyle}>{d.highestQualification || '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>NCC Certification</span>
+                  <span style={modalValueStyle}>{d.nccCertification || '—'}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Physical Profile */}
+            <div style={modalSectionStyle}>
+              <h4 style={modalSectionTitleStyle}>Physical Metrics</h4>
+              <div style={modalGridStyle}>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Height</span>
+                  <span style={modalValueStyle}>{d.heightCm ? `${d.heightCm} cm` : '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Weight</span>
+                  <span style={modalValueStyle}>{d.weightKg ? `${d.weightKg} kg` : '—'}</span>
+                </div>
+                <div style={modalFieldStyle}>
+                  <span style={modalLabelStyle}>Chest Dimension</span>
+                  <span style={modalValueStyle}>
+                    {d.chestCm && d.chestExpansion ? `${d.chestCm} cm (+${d.chestExpansion} cm expansion)` : '—'}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Career & Relocation */}
+            <div style={modalSectionStyle}>
+              <h4 style={modalSectionTitleStyle}>Career preferences</h4>
+              <div style={modalGridStyle}>
+                <div style={{ ...modalFieldStyle, gridColumn: 'span 2' }}>
+                  <span style={modalLabelStyle}>Career Preferences</span>
+                  <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
+                    {d.careerPreferences && d.careerPreferences.length > 0 ? (
+                      d.careerPreferences.map(pref => (
+                        <span key={pref} style={modalBadgeStyle}>{pref.replace('_', ' ')}</span>
+                      ))
+                    ) : (
+                      <span style={modalValueStyle}>—</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interests */}
+            <div style={modalSectionStyle}>
+              <h4 style={modalSectionTitleStyle}>Sewa Nidhi Interests</h4>
+              <div style={modalGridStyle}>
+                <div style={{ ...modalFieldStyle, gridColumn: 'span 2' }}>
+                  <span style={modalLabelStyle}>Interests</span>
+                  <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
+                    {d.sewaNidhiInterests && d.sewaNidhiInterests.length > 0 ? (
+                      d.sewaNidhiInterests.map(interest => (
+                        <span key={interest} style={modalBadgeStyle}>{interest}</span>
+                      ))
+                    ) : (
+                      <span style={modalValueStyle}>—</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Modal Footer */}
+          <div style={{
+            padding: '1rem 2rem',
+            borderTop: '1px solid #e2e8f0',
+            backgroundColor: '#ffffff',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            gap: '1rem'
+          }}>
+            <button 
+              type="button" 
+              className="btn-primary ios-pill" 
+              onClick={() => setShowFullApplication(false)}
+              style={{ padding: '0.5rem 2rem', fontSize: '0.85rem' }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="profiling-wrapper">
+      {showFullApplication && renderFullApplicationModal()}
       <div className="profiling-content animate-fade-in">
         <div className="profiling-hero">
           <div style={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
@@ -710,6 +1013,14 @@ const Profiling = () => {
         @media (max-width: 600px) {
           .grid-2, .grid-3 { grid-template-columns: 1fr; }
           .node-label { display: none; }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes slideUp {
+          from { transform: translateY(20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
         }
       `}} />
     </div>

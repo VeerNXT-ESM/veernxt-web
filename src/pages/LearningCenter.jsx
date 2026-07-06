@@ -17,10 +17,10 @@ const LearningCenter = () => {
   
   const AVAILABLE_CATEGORIES = [
     'Intro',
-    'Guide Book',
+    'Guide',
     'Precis',
-    '10 Years PYQ',
-    'Test Series'
+    'PYQ',
+    'Mock Test'
   ];
 
   const handleCategoryCheckboxChange = (category) => {
@@ -61,7 +61,7 @@ const LearningCenter = () => {
       setError(null);
       try {
         const { data: examData, error: examError } = await supabase
-          .from('resources')
+          .from('resources_v2')
           .select('exam_name');
         
         if (examError) {
@@ -93,8 +93,8 @@ const LearningCenter = () => {
     setError(null);
     
     try {
-      let resQuery = supabase.from('resources').select('*').eq('status', 'Published');
-      let quizQuery = supabase.from('quizzes').select('*').eq('status', 'Published');
+      let resQuery = supabase.from('resources_v2').select('*').eq('status', 'Published');
+      let quizQuery = supabase.from('quizzes').select('*');
 
       if (!selectedExams.includes('all')) {
         resQuery = resQuery.in('exam_name', selectedExams);
@@ -102,12 +102,7 @@ const LearningCenter = () => {
       }
 
       if (!selectedCategories.includes('all')) {
-        const catFilters = selectedCategories.map(c => {
-          if (c === '10 Years PYQ') return 'category.ilike."%PYQ%"';
-          if (c === 'Test Series') return 'category.ilike."%Mock Test%"';
-          if (c === 'Guide Book') return 'category.ilike."%Guide%"';
-          return `category.ilike."%${c}%"`;
-        }).join(',');
+        const catFilters = selectedCategories.map(c => `category.eq.${c}`).join(',');
         resQuery = resQuery.or(catFilters);
         quizQuery = quizQuery.or(catFilters);
       }
@@ -153,7 +148,7 @@ const LearningCenter = () => {
     return (
       <Link 
         key={item.id} 
-        to={type === 'resource' ? `/reader/${item.id}` : `/quiz/${item.id}`} 
+        to={type === 'resource' ? `/reader/${item.resource_id}` : `/quiz/${item.id}`} 
         className="course-card"
       >
         <div className="course-image-wrapper">
@@ -197,7 +192,7 @@ const LearningCenter = () => {
             {type === 'resource' ? (
               <>
                 <span><FileText size={12} /> {item.subject || 'Comprehensive Notes'}</span>
-                <span><Video size={12} /> Video Solutions</span>
+                <span><Book size={12} /> {item.chapter_count || 1} Chapters</span>
               </>
             ) : (
               <>
