@@ -240,7 +240,9 @@ const Login = () => {
       let loginEmail = email;
       if (!loginEmail && phone) {
         const cleanPhone = phone.replace(/[\s\-+]/g, '');
-        const fullPhone = cleanPhone.startsWith('91') ? cleanPhone : `91${cleanPhone}`;
+        const fullPhone = (cleanPhone.length === 10) 
+          ? `91${cleanPhone}` 
+          : (cleanPhone.startsWith('91') && cleanPhone.length === 12 ? cleanPhone : `91${cleanPhone}`);
         loginEmail = `${fullPhone}@veernxt.in`;
       }
 
