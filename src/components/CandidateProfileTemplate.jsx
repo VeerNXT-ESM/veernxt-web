@@ -2,10 +2,17 @@ import React from 'react';
 import { 
   Award, Shield, Calendar, MapPin, Briefcase, 
   MessageSquare, User, FileText, CheckCircle2, ChevronRight,
-  TrendingUp, Sparkles, Star
+  TrendingUp, Sparkles, Star, UserCheck, UserPlus, Clock
 } from 'lucide-react';
 
-const CandidateProfileTemplate = ({ candidate, onSendMessage, isCompact = false }) => {
+const CandidateProfileTemplate = ({ 
+  candidate, 
+  onSendMessage, 
+  isCompact = false,
+  connectionStatus = null,
+  onConnect = null,
+  onAcceptConnection = null
+}) => {
   if (!candidate) {
     return (
       <div style={{ 
@@ -100,10 +107,34 @@ const CandidateProfileTemplate = ({ candidate, onSendMessage, isCompact = false 
             </div>
           </div>
 
-          <button onClick={() => onSendMessage && onSendMessage(candidate)} className="btn-primary ios-pill start-chat-btn">
-            <MessageSquare size={16} />
-            <span>Message Candidate</span>
-          </button>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <button onClick={() => onSendMessage && onSendMessage(candidate)} className="btn-primary ios-pill start-chat-btn">
+              <MessageSquare size={16} />
+              <span>Message Candidate</span>
+            </button>
+
+            {connectionStatus === 'connected' ? (
+              <button className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: '#f1f5f9', color: '#1F3A2E', cursor: 'default', border: '1px solid #e2e8f0', padding: '0.65rem 1.25rem', height: '40px' }} disabled>
+                <UserCheck size={16} />
+                <span>Connected</span>
+              </button>
+            ) : connectionStatus === 'pending_sent' ? (
+              <button className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: '#f8fafc', color: '#64748b', cursor: 'default', border: '1px solid #e2e8f0', padding: '0.65rem 1.25rem', height: '40px' }} disabled>
+                <Clock size={16} />
+                <span>Pending</span>
+              </button>
+            ) : connectionStatus === 'pending_received' ? (
+              <button onClick={() => onAcceptConnection && onAcceptConnection(candidate)} className="btn-primary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'var(--ios-olive)', color: 'white', border: 'none', padding: '0.65rem 1.25rem', cursor: 'pointer', height: '40px' }}>
+                <UserPlus size={16} />
+                <span>Accept Request</span>
+              </button>
+            ) : (
+              <button onClick={() => onConnect && onConnect(candidate)} className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', borderColor: 'var(--ios-olive)', color: 'var(--ios-olive)', background: 'white', borderStyle: 'solid', borderWidth: '1px', padding: '0.65rem 1.25rem', cursor: 'pointer', height: '40px' }}>
+                <UserPlus size={16} />
+                <span>Connect</span>
+              </button>
+            )}
+          </div>
         </div>
       </div>
 

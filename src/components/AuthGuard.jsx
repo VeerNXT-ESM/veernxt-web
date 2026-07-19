@@ -40,6 +40,16 @@ const AuthGuard = ({ children, skipProfilingCheck = false }) => {
   useEffect(() => {
     if (!session?.user || skipProfilingCheck) return;
 
+    const metadataRole = session.user?.user_metadata?.role;
+    if (metadataRole === 'candidate') {
+      localStorage.removeItem('employer_session');
+    }
+    const isEmployer = metadataRole === 'employer' || (metadataRole !== 'candidate' && !!localStorage.getItem('employer_session'));
+    if (isEmployer) {
+      setProfilingDone(true);
+      return;
+    }
+
     const checkProfiling = async () => {
       try {
         const { data: profile } = await supabase
@@ -96,7 +106,11 @@ const AuthGuard = ({ children, skipProfilingCheck = false }) => {
 
   // Employer Access Authorization Gate
   if (location.pathname === '/find-candidates') {
-    const isEmployer = session.user?.user_metadata?.role === 'employer' || !!localStorage.getItem('employer_session');
+    const metadataRole = session.user?.user_metadata?.role;
+    if (metadataRole === 'candidate') {
+      localStorage.removeItem('employer_session');
+    }
+    const isEmployer = metadataRole === 'employer' || (metadataRole !== 'candidate' && !!localStorage.getItem('employer_session'));
     if (!isEmployer) {
       return <Navigate to="/dashboard" replace />;
     }

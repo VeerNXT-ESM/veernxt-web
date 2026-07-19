@@ -189,7 +189,7 @@ const Profiling = () => {
 
       if (!recommendResponse.data.ok) throw new Error(recommendResponse.data.error || 'Failed to get recommendations');
       
-      navigate('/dashboard');
+      navigate('/subscribe?from=profiling');
     } catch (error) {
       console.error('Error submitting profile:', error);
       alert('Error: ' + (error.response?.data?.error || error.message));

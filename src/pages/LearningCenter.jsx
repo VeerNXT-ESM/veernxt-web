@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Book, FileText, Lock, PlayCircle, RefreshCw, Search, Heart, Video, CheckCircle } from 'lucide-react';
+import { getEffectiveTier, isResourceLockedForUser, canTakeQuiz, TIERS } from '../lib/subscriptionAccess';
 
 const LearningCenter = () => {
   const [resources, setResources] = useState([]);
@@ -9,6 +10,17 @@ const LearningCenter = () => {
   const [exams, setExams] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [effectiveTier, setEffectiveTier] = useState(TIERS.FREE);
+  const [freeQuizUsed, setFreeQuizUsed] = useState(false);
+
+  // Infinite scroll state
+  const PAGE_SIZE = 20;
+  const [page, setPage] = useState(0);
+  const [hasMoreResources, setHasMoreResources] = useState(true);
+  const [hasMoreQuizzes, setHasMoreQuizzes] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [totalResourceCount, setTotalResourceCount] = useState(null);
+  const [totalQuizCount, setTotalQuizCount] = useState(null);
   
   // Filters
   const [selectedExams, setSelectedExams] = useState(['all']);
@@ -60,6 +72,20 @@ const LearningCenter = () => {
       setLoading(true);
       setError(null);
       try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user) {
+          const { data: profile } = await supabase
+            .from('user_profiles')
+            .select('subscription_tier, subscription_expires_at, free_quiz_used')
+            .eq('id', session.user.id)
+            .maybeSingle();
+          if (profile) {
+            const tier = getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
+            setEffectiveTier(tier);
+            setFreeQuizUsed(!!profile.free_quiz_used);
+          }
+        }
+
         const { data: examData, error: examError } = await supabase
           .from('resources_v2')
           .select('exam_name');
@@ -86,39 +112,62 @@ const LearningCenter = () => {
     fetchInitialData();
   }, []);
 
-  const fetchContent = async () => {
-    setLoading(true);
-    setResources([]);
-    setQuizzes([]);
-    setError(null);
-    
+  const buildQuery = (table, isCount = false) => {
+    let query;
+    if (isCount) {
+      query = supabase.from(table).select('*', { count: 'exact', head: true });
+    } else {
+      query = supabase.from(table).select('*');
+    }
+    if (table === 'resources_v2') query = query.eq('status', 'Published');
+
+    if (!selectedExams.includes('all')) {
+      query = query.in('exam_name', selectedExams);
+    }
+    if (!selectedCategories.includes('all')) {
+      const catFilters = selectedCategories.map(c => `category.eq.${c}`).join(',');
+      query = query.or(catFilters);
+    }
+    if (searchQuery) {
+      const filter = `title.ilike."%${searchQuery}%",subject.ilike."%${searchQuery}%",exam_name.ilike."%${searchQuery}%"`;
+      query = query.or(filter);
+    }
+    return query;
+  };
+
+  const fetchPage = async (pageNum, isInitial = false) => {
+    if (isInitial) {
+      setLoading(true);
+      setResources([]);
+      setQuizzes([]);
+      setError(null);
+      setHasMoreResources(true);
+      setHasMoreQuizzes(true);
+      setTotalResourceCount(null);
+      setTotalQuizCount(null);
+    } else {
+      setLoadingMore(true);
+    }
+
+    const from = pageNum * PAGE_SIZE;
+    const to = from + PAGE_SIZE - 1;
+
     try {
-      let resQuery = supabase.from('resources_v2').select('*').eq('status', 'Published');
-      let quizQuery = supabase.from('quizzes').select('*');
+      // Build data queries with range
+      const resQuery = buildQuery('resources_v2').order('created_at', { ascending: false }).range(from, to);
+      const quizQuery = buildQuery('quizzes').order('created_at', { ascending: false }).range(from, to);
 
-      if (!selectedExams.includes('all')) {
-        resQuery = resQuery.in('exam_name', selectedExams);
-        quizQuery = quizQuery.in('exam_name', selectedExams);
+      const fetches = [resQuery, quizQuery];
+
+      // On initial load, also fetch total counts for display
+      if (isInitial) {
+        fetches.push(buildQuery('resources_v2', true));
+        fetches.push(buildQuery('quizzes', true));
       }
 
-      if (!selectedCategories.includes('all')) {
-        const catFilters = selectedCategories.map(c => `category.eq.${c}`).join(',');
-        resQuery = resQuery.or(catFilters);
-        quizQuery = quizQuery.or(catFilters);
-      }
+      const results = await Promise.all(fetches);
+      const [resData, quizData] = results;
 
-      if (searchQuery) {
-        const filter = `title.ilike."%${searchQuery}%",subject.ilike."%${searchQuery}%",exam_name.ilike."%${searchQuery}%"`;
-        resQuery = resQuery.or(filter);
-        quizQuery = quizQuery.or(filter);
-      }
-
-      const [resData, quizData] = await Promise.all([
-        resQuery.order('created_at', { ascending: false }).limit(40),
-        quizQuery.order('created_at', { ascending: false }).limit(40)
-      ]);
-      
-      // Check for Supabase-level errors
       if (resData.error || quizData.error) {
         const errMsg = resData.error?.message || quizData.error?.message || 'Unknown database error';
         console.error('Supabase query error:', resData.error || quizData.error);
@@ -126,14 +175,46 @@ const LearningCenter = () => {
         return;
       }
 
-      setResources(resData.data || []);
-      setQuizzes(quizData.data || []);
+      const newResources = resData.data || [];
+      const newQuizzes = quizData.data || [];
+
+      if (isInitial) {
+        setResources(newResources);
+        setQuizzes(newQuizzes);
+        // Set total counts from count queries
+        const resCount = results[2];
+        const quizCount = results[3];
+        if (resCount && !resCount.error) setTotalResourceCount(resCount.count);
+        if (quizCount && !quizCount.error) setTotalQuizCount(quizCount.count);
+      } else {
+        setResources(prev => [...prev, ...newResources]);
+        setQuizzes(prev => [...prev, ...newQuizzes]);
+      }
+
+      // Determine if there's more to load
+      if (newResources.length < PAGE_SIZE) setHasMoreResources(false);
+      if (newQuizzes.length < PAGE_SIZE) setHasMoreQuizzes(false);
     } catch (err) {
       console.error('Error fetching learning content:', err);
       setError('Unable to fetch learning resources. Please try again.');
     } finally {
-      setLoading(false);
+      if (isInitial) setLoading(false);
+      setLoadingMore(false);
     }
+  };
+
+  const fetchContent = async () => {
+    setPage(0);
+    await fetchPage(0, true);
+  };
+
+  const hasMore = hasMoreResources || hasMoreQuizzes;
+
+  const loadNextPage = () => {
+    if (loadingMore || !hasMore) return;
+    const nextPage = page + 1;
+    setPage(nextPage);
+    fetchPage(nextPage, false);
   };
 
   useEffect(() => {
@@ -144,7 +225,32 @@ const LearningCenter = () => {
   }, [searchQuery, selectedExams, selectedCategories]);
 
   const renderCard = (item, type) => {
-    const isPremium = item.is_locked;
+    let isLocked = false;
+    let isPartial = false;
+    let badgeText = 'FREE ACCESS';
+
+    if (type === 'resource') {
+      isLocked = isResourceLockedForUser(effectiveTier, item.category);
+      const cat = (item.category || '').toLowerCase().trim();
+      if (cat === 'guide' || cat === 'precis') {
+        if (effectiveTier === TIERS.FREE || effectiveTier === TIERS.SCORE_UNLOCK || effectiveTier === TIERS.SCORE_CV) {
+          isPartial = true;
+          badgeText = 'PREVIEW';
+        }
+      } else if (isLocked) {
+        badgeText = 'PREMIUM';
+      }
+    } else {
+      // Quiz / Mock Test
+      const quizAccess = canTakeQuiz(effectiveTier, freeQuizUsed);
+      isLocked = !quizAccess.allowed;
+      if (isLocked) {
+        badgeText = 'PREMIUM';
+      } else if (quizAccess.isFreeAttempt) {
+        badgeText = '1 FREE ATTEMPT';
+      }
+    }
+
     return (
       <Link 
         key={item.id} 
@@ -168,12 +274,21 @@ const LearningCenter = () => {
             )}
           </div>
           {/* Top Right Badges */}
-          <div className="course-badges">
-            <span className="badge-alpha">A</span>
+          <div className="course-badges" style={{ display: 'flex', gap: '0.25rem' }}>
+            {isLocked && (
+              <span className="badge-alpha" style={{ background: '#ef4444', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px' }}>
+                <Lock size={12} color="white" />
+              </span>
+            )}
+            {isPartial && (
+              <span className="badge-alpha" style={{ background: '#f59e0b', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px' }}>
+                <Lock size={12} color="white" />
+              </span>
+            )}
           </div>
           {/* Bottom Tags */}
           <div className="course-bottom-tags">
-             <span className="tag-sale">{isPremium ? 'PREMIUM' : 'FREE ACCESS'}</span>
+             <span className="tag-sale" style={isLocked ? { color: '#ef4444', borderColor: 'rgba(239, 68, 68, 0.2)', background: '#fef2f2' } : isPartial ? { color: '#d97706', borderColor: 'rgba(217, 119, 6, 0.2)', background: '#fffbeb' } : {}}>{badgeText}</span>
           </div>
         </div>
 
@@ -204,12 +319,10 @@ const LearningCenter = () => {
 
           <div className="course-footer">
             <div className="price-section">
-              {isPremium ? (
-                <>
-                  <span className="price-current">₹999</span>
-                  <span className="price-original">₹2999</span>
-                  <span className="price-discount">(66% off)</span>
-                </>
+              {isLocked ? (
+                <span className="price-current" style={{ color: '#ef4444' }}>PREMIUM</span>
+              ) : isPartial ? (
+                <span className="price-current" style={{ color: '#d97706' }}>PREVIEW</span>
               ) : (
                 <span className="price-current" style={{ color: '#4b6b32' }}>FREE</span>
               )}
@@ -338,8 +451,7 @@ const LearningCenter = () => {
               {resources.length > 0 && (
                 <div className="course-section">
                   <div className="section-header">
-                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Study Materials ({resources.length})</h2>
-                    <button className="view-all">View All</button>
+                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Study Materials ({totalResourceCount !== null ? `${resources.length} of ${totalResourceCount}` : resources.length})</h2>
                   </div>
                   <div className="course-grid">
                     {resources.map(item => renderCard(item, 'resource'))}
@@ -350,8 +462,7 @@ const LearningCenter = () => {
               {quizzes.length > 0 && (
                 <div className="course-section">
                   <div className="section-header">
-                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Mock Tests ({quizzes.length})</h2>
-                    <button className="view-all">View All</button>
+                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Mock Tests ({totalQuizCount !== null ? `${quizzes.length} of ${totalQuizCount}` : quizzes.length})</h2>
                   </div>
                   <div className="course-grid">
                     {quizzes.map(item => renderCard(item, 'quiz'))}
@@ -359,7 +470,28 @@ const LearningCenter = () => {
                 </div>
               )}
 
-              {resources.length === 0 && quizzes.length === 0 ? (
+              {/* Load More / End indicator */}
+              <div className="load-more-section">
+                {loadingMore ? (
+                  <div className="loading-more">
+                    <RefreshCw className="animate-spin" size={20} />
+                    <span>Loading more resources...</span>
+                  </div>
+                ) : hasMore && (resources.length > 0 || quizzes.length > 0) ? (
+                  <button className="load-more-btn" onClick={loadNextPage}>
+                    Load More Resources
+                    <span className="load-more-count">
+                      Showing {resources.length + quizzes.length} of {(totalResourceCount || '?') + ' + ' + (totalQuizCount || '?')}
+                    </span>
+                  </button>
+                ) : !hasMore && (resources.length > 0 || quizzes.length > 0) ? (
+                  <div className="end-of-results">
+                    <p>You've reached the end — all {(totalResourceCount || resources.length) + (totalQuizCount || quizzes.length)} resources loaded.</p>
+                  </div>
+                ) : null}
+              </div>
+
+              {resources.length === 0 && quizzes.length === 0 && !loading ? (
                 <div className="empty-library">
                   <Book size={64} />
                   <h3>No courses found</h3>
@@ -772,6 +904,73 @@ const LearningCenter = () => {
         }
         .loading-state p { margin-top: 1rem; font-weight: 600; }
         .empty-library h3 { color: #1e293b; margin: 1.5rem 0 0.5rem; }
+
+        /* Load More */
+        .load-more-section {
+          padding: 2rem 0 1rem;
+          text-align: center;
+        }
+        .load-more-btn {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.35rem;
+          background: #4b6b32;
+          color: #fff;
+          border: none;
+          padding: 0.9rem 2.5rem;
+          border-radius: 12px;
+          font-size: 1rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+          box-shadow: 0 2px 8px rgba(75, 107, 50, 0.2);
+        }
+        .load-more-btn:hover {
+          background: #3d5828;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(75, 107, 50, 0.3);
+        }
+        .load-more-btn:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 4px rgba(75, 107, 50, 0.15);
+        }
+        .load-more-count {
+          font-size: 0.7rem;
+          font-weight: 500;
+          opacity: 0.8;
+        }
+        .loading-more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          color: #64748b;
+          font-size: 0.9rem;
+          font-weight: 600;
+          padding: 1.5rem 0;
+        }
+        .loading-more svg {
+          color: #4b6b32;
+        }
+        .end-of-results {
+          text-align: center;
+          padding: 1.5rem 0;
+          color: #94a3b8;
+          font-size: 0.85rem;
+          border-top: 1px dashed #e2e8f0;
+          margin-top: 1rem;
+        }
+        .end-of-results p {
+          margin: 0;
+        }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+          animation: spin 1s linear infinite;
+        }
       `}} />
     </div>
   );

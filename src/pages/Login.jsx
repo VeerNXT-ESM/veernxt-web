@@ -59,6 +59,7 @@ const Login = () => {
   
   // Employer
   const [employerEmail, setEmployerEmail] = useState('');
+  const [employerPhone, setEmployerPhone] = useState('');
   const [employerPassword, setEmployerPassword] = useState('');
   
   const [loading, setLoading] = useState(false);
@@ -173,6 +174,7 @@ const Login = () => {
             mobile: verifiedMobile,
             password: password,
             registerToken: registerToken,
+            role: role,
           }),
         });
 
@@ -190,7 +192,17 @@ const Login = () => {
             password: password,
           });
 
-          setTimeout(() => navigate('/profiling'), 1000);
+          if (role === 'employer') {
+            const employerSession = {
+              email: syntheticEmail,
+              name: 'NEW CORPORATE',
+              role: 'Employer Partner',
+            };
+            localStorage.setItem('employer_session', JSON.stringify(employerSession));
+            setTimeout(() => navigate('/dashboard'), 1000);
+          } else {
+            setTimeout(() => navigate('/profiling'), 1000);
+          }
         }
       } else if (authMode === 'forgot') {
         // Reset password via secure backend API
@@ -234,6 +246,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     clearMsg();
+    localStorage.removeItem('employer_session');
 
     try {
       // If user entered a phone number, convert to synthetic email
@@ -285,16 +298,29 @@ const Login = () => {
   };
 
   // ═══════════════════════════════════════════
-  // EMPLOYER: LOGIN FLOW
-  // ═══════════════════════════════════════════
   const handleEmployerLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     clearMsg();
 
     try {
+      let loginEmail = employerEmail;
+      if (!loginEmail && employerPhone) {
+        const cleanPhone = employerPhone.replace(/[\s\-+]/g, '');
+        const fullPhone = (cleanPhone.length === 10) 
+          ? `91${cleanPhone}` 
+          : (cleanPhone.startsWith('91') && cleanPhone.length === 12 ? cleanPhone : `91${cleanPhone}`);
+        loginEmail = `${fullPhone}@veernxt.in`;
+      }
+
+      if (!loginEmail) {
+        showMsg('Please enter your recruiter phone number or email.', 'error');
+        setLoading(false);
+        return;
+      }
+
       const { data, error } = await supabase.auth.signInWithPassword({
-        email: employerEmail,
+        email: loginEmail,
         password: employerPassword,
       });
 
@@ -302,8 +328,10 @@ const Login = () => {
         showMsg('Invalid employer credentials.', 'error');
       } else {
         const employerSession = {
-          email: employerEmail,
-          name: employerEmail.split('@')[0].toUpperCase() + ' CORP',
+          email: loginEmail,
+          name: loginEmail.includes('@veernxt.in') 
+            ? `RECRUITER (+91 ${employerPhone || loginEmail.split('@')[0].slice(2)})` 
+            : loginEmail.split('@')[0].toUpperCase() + ' CORP',
           role: 'Employer Partner',
         };
         localStorage.setItem('employer_session', JSON.stringify(employerSession));
@@ -326,6 +354,8 @@ const Login = () => {
     setRegisterToken('');
     setOtpToken('');
     setResendCooldown(0);
+    setEmployerEmail('');
+    setEmployerPhone('');
     clearMsg();
   };
 
@@ -559,6 +589,180 @@ const Login = () => {
     );
   };
 
+  const renderEmployerContent = () => {
+    // ── REGISTER / FORGOT PASSWORD — OTP STEP ──
+    if ((authMode === 'register' || authMode === 'forgot') && step === 'otp') {
+      return (
+        <div className="animate-fade-in">
+          <button onClick={resetFlow} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
+            <ArrowLeft size={16} /> Back
+          </button>
+          <form onSubmit={handleVerifyOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ textAlign: 'left' }}>
+              <label style={labelStyle}>Enter 6-Digit OTP</label>
+              <input type="text" placeholder="------" value={otp}
+                onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                required
+                style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
+              />
+              {isDevMode && (
+                <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#64748b', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
+                  <span style={{ fontWeight: '600', color: 'var(--ios-olive)' }}>TEST MODE ACTIVE:</span> Please enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
+                </div>
+              )}
+            </div>
+            <button type="submit" className="btn-primary ios-pill" disabled={loading || otp.length !== 6}
+              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
+              {loading ? 'Verifying...' : 'Verify OTP'}
+            </button>
+            <div style={{ textAlign: 'center', marginTop: '0.75rem' }}>
+              <button 
+                type="button" 
+                onClick={handleResendOTP} 
+                disabled={resendCooldown > 0 || loading}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: resendCooldown > 0 ? '#94a3b8' : 'var(--ios-olive)', 
+                  fontWeight: '700', 
+                  fontSize: '0.85rem', 
+                  cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer',
+                  padding: '0.25rem 0.5rem',
+                  outline: 'none'
+                }}
+              >
+                {resendCooldown > 0 ? `Resend OTP in ${resendCooldown}s` : 'Resend OTP'}
+              </button>
+            </div>
+          </form>
+        </div>
+      );
+    }
+
+    // ── REGISTER / FORGOT PASSWORD — SET PASSWORD STEP ──
+    if ((authMode === 'register' || authMode === 'forgot') && step === 'set-password') {
+      return (
+        <div className="animate-fade-in">
+          <button onClick={resetFlow} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
+            <ArrowLeft size={16} /> Back
+          </button>
+          <div style={{ background: 'rgba(75, 107, 50, 0.06)', borderRadius: '12px', padding: '0.75rem 1rem', marginBottom: '1.5rem', fontSize: '0.8rem', color: 'var(--ios-olive)', fontWeight: 600 }}>
+            ✓ Mobile +91 {phone} verified
+          </div>
+          <form onSubmit={handleSetPassword} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
+            <div>
+              <label style={labelStyle}>{authMode === 'forgot' ? 'New Password' : 'Create Recruiter Password'}</label>
+              <div style={{ position: 'relative' }}>
+                <input type={showPassword ? 'text' : 'password'} placeholder="Min 6 characters"
+                  value={password} onChange={(e) => setPassword(e.target.value)} required
+                  style={{ ...inputStyle, paddingRight: '3rem' }}
+                />
+                <button type="button" onClick={() => setShowPassword(!showPassword)}
+                  style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', padding: 0, display: 'flex' }}>
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+            </div>
+            <div>
+              <label style={labelStyle}>Confirm Password</label>
+              <input type="password" placeholder="Re-enter password"
+                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required
+                style={inputStyle}
+              />
+            </div>
+            <button type="submit" className="btn-primary ios-pill" disabled={loading}
+              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
+              {loading ? 'Processing...' : (authMode === 'forgot' ? 'Reset Password' : 'Create Recruiter Account')}
+            </button>
+          </form>
+        </div>
+      );
+    }
+
+    // ── REGISTER — PHONE INPUT ──
+    if (authMode === 'register') {
+      return (
+        <div className="animate-fade-in">
+          <form onSubmit={handleSendOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ textAlign: 'left' }}>
+              <label style={labelStyle}>Recruiter / Corporate Mobile</label>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <input type="tel" placeholder="e.g. 9876543210" value={phone}
+                  onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
+                  style={{ ...inputStyle, flex: 1 }}
+                />
+              </div>
+            </div>
+            <button type="submit" className="btn-primary ios-pill" disabled={loading}
+              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
+              {loading ? 'Sending OTP...' : 'Verify Mobile & Register Company'}
+            </button>
+          </form>
+          <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+            <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Already have a recruiter account? </span>
+            <button onClick={() => { setAuthMode('login'); resetFlow(); }}
+              style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.85rem', cursor: 'pointer' }}>
+              Login
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // ── LOGIN — DEFAULT ──
+    return (
+      <div className="animate-fade-in">
+        <form onSubmit={handleEmployerLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
+          <div>
+            <label style={labelStyle}>Recruiter / Corporate Mobile or Email</label>
+            <div style={{ display: 'flex', gap: '0.5rem' }}>
+              <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
+              <input type="text" placeholder="Phone or email" value={employerPhone || employerEmail}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val.includes('@')) {
+                    setEmployerEmail(val);
+                    setEmployerPhone('');
+                  } else {
+                    setEmployerPhone(sanitizePhoneNumber(val));
+                    setEmployerEmail('');
+                  }
+                }}
+                required style={{ ...inputStyle, flex: 1 }}
+              />
+            </div>
+          </div>
+          <div>
+            <label style={labelStyle}>Security Password</label>
+            <div style={{ position: 'relative' }}>
+              <input type={showPassword ? 'text' : 'password'} placeholder="••••••••"
+                value={employerPassword} onChange={(e) => setEmployerPassword(e.target.value)} required
+                style={{ ...inputStyle, paddingRight: '3rem' }}
+              />
+              <button type="button" onClick={() => setShowPassword(!showPassword)}
+                style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', display: 'flex', padding: 0 }}>
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+          </div>
+          <button type="submit" className="btn-primary ios-pill" disabled={loading}
+            style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)', cursor: 'pointer', width: '100%', marginTop: '0.5rem' }}>
+            {loading ? 'Authenticating...' : 'Access Recruiting Panel'}
+          </button>
+        </form>
+
+        <div style={{ marginTop: '1.25rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <button onClick={() => { setAuthMode('register'); resetFlow(); }}
+            style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 700 }}>
+            <UserPlus size={12} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+            Register Corporate Account
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="login-splash-container" style={{
       display: 'flex',
@@ -592,10 +796,10 @@ const Login = () => {
         <h2 style={{ fontSize: '1.6rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.4rem', letterSpacing: '-0.02em' }}>VeerNXT Access</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.875rem' }}>National portal for corporate transitioning & hiring</p>
 
-        {/* Role Selector Tabs (Hidden for now) */}
-        <div style={{ display: 'none', background: '#f1f5f9', borderRadius: '14px', padding: '0.3rem', marginBottom: '2rem' }}>
+        {/* Role Selector Tabs (Activated) */}
+        <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '14px', padding: '0.3rem', marginBottom: '2rem' }}>
           <button type="button"
-            onClick={() => { setRole('candidate'); setAuthMode('login'); resetFlow(); }}
+            onClick={() => { setRole('candidate'); setAuthMode('login'); resetFlow(); localStorage.removeItem('employer_session'); }}
             style={{
               flex: 1, padding: '0.85rem 0.5rem', borderRadius: '11px', border: 'none',
               background: role === 'candidate' ? 'white' : 'transparent',
@@ -623,35 +827,7 @@ const Login = () => {
         </div>
 
         {/* Auth Content */}
-        {role === 'candidate' ? renderCandidateContent() : (
-          /* ═══ EMPLOYER FLOW ═══ */
-          <form onSubmit={handleEmployerLogin} className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
-            <div>
-              <label style={labelStyle}>Recruiter / Corporate Email</label>
-              <input type="email" placeholder="e.g. recruiting@tata.com"
-                value={employerEmail} onChange={(e) => setEmployerEmail(e.target.value)} required
-                style={inputStyle}
-              />
-            </div>
-            <div>
-              <label style={labelStyle}>Security Password</label>
-              <div style={{ position: 'relative' }}>
-                <input type={showPassword ? 'text' : 'password'} placeholder="••••••••"
-                  value={employerPassword} onChange={(e) => setEmployerPassword(e.target.value)} required
-                  style={{ ...inputStyle, paddingRight: '3rem' }}
-                />
-                <button type="button" onClick={() => setShowPassword(!showPassword)}
-                  style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', display: 'flex', padding: 0 }}>
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
-              </div>
-            </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)', cursor: 'pointer', width: '100%', marginTop: '0.5rem' }}>
-              {loading ? 'Authenticating...' : 'Access Recruiting Panel'}
-            </button>
-          </form>
-        )}
+        {role === 'candidate' ? renderCandidateContent() : renderEmployerContent()}
 
         {/* Message Display */}
         {message.text && (

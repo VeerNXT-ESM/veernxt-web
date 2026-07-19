@@ -9,20 +9,41 @@ import { supabase } from '../lib/supabase';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [userProfileName, setUserProfileName] = useState('Rahul Kumar');
+  const [avatarUrl, setAvatarUrl] = useState(null);
+  const [isEmployer, setIsEmployer] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const { data: { session } } = await supabase.auth.getSession();
-        if (session && session.user.id !== '00000000-0000-0000-0000-000000000000') {
-          const { data } = await supabase
-            .from('user_profiles')
-            .select('full_name')
-            .eq('id', session.user.id)
-            .single();
-          if (data && data.full_name) {
-            setUserProfileName(data.full_name);
+        if (session && session.user && session.user.id !== '00000000-0000-0000-0000-000000000000') {
+          const metadataRole = session.user?.user_metadata?.role;
+          if (metadataRole === 'candidate') {
+            localStorage.removeItem('employer_session');
+          }
+          const isEmp = metadataRole === 'employer' || (metadataRole !== 'candidate' && !!localStorage.getItem('employer_session'));
+          setIsEmployer(isEmp);
+          if (isEmp) {
+            const { data } = await supabase
+              .from('employer_profiles')
+              .select('contact_name, avatar_url')
+              .eq('id', session.user.id)
+              .maybeSingle();
+            if (data) {
+              if (data.contact_name) setUserProfileName(data.contact_name);
+              if (data.avatar_url) setAvatarUrl(data.avatar_url);
+            }
+          } else {
+            const { data } = await supabase
+              .from('user_profiles')
+              .select('full_name, avatar_url')
+              .eq('id', session.user.id)
+              .maybeSingle();
+            if (data) {
+              if (data.full_name) setUserProfileName(data.full_name);
+              if (data.avatar_url) setAvatarUrl(data.avatar_url);
+            }
           }
         }
       } catch (e) {
@@ -33,6 +54,7 @@ const Header = () => {
   }, []);
 
   const handleLogout = async () => {
+    localStorage.removeItem('employer_session');
     await supabase.auth.signOut();
     navigate('/login');
   };
@@ -53,33 +75,49 @@ const Header = () => {
             <Home size={22} />
           </Link>
 
-          <Link to="/learning-center" className={`nav-link-item ${window.location.pathname === '/learning-center' ? 'active' : ''}`} title="Learning">
+          <Link to="/network" className={`nav-link-item ${window.location.pathname === '/network' ? 'active' : ''}`} title="My Network">
             <Users size={22} />
           </Link>
 
-          <Link to="/jobs" className={`nav-link-item ${window.location.pathname === '/jobs' ? 'active' : ''}`} title="Jobs">
-            <Briefcase size={22} />
-            <span className="dot-badge"></span>
-          </Link>
+          {!isEmployer && (
+            <Link to="/learning-center" className={`nav-link-item ${window.location.pathname === '/learning-center' ? 'active' : ''}`} title="Learning">
+              <Target size={22} />
+            </Link>
+          )}
 
-          <Link to="/find-candidates" className={`nav-link-item ${window.location.pathname === '/find-candidates' ? 'active' : ''}`} title="Find Candidates">
-            <Search size={22} />
-          </Link>
+          {!isEmployer && (
+            <Link to="/jobs" className={`nav-link-item ${window.location.pathname === '/jobs' ? 'active' : ''}`} title="Jobs">
+              <Briefcase size={22} />
+              <span className="dot-badge"></span>
+            </Link>
+          )}
+
+          {isEmployer && (
+            <Link to="/find-candidates" className={`nav-link-item ${window.location.pathname === '/find-candidates' ? 'active' : ''}`} title="Find Candidates">
+              <Search size={22} />
+            </Link>
+          )}
 
           <Link to="/messaging" className={`nav-link-item ${window.location.pathname === '/messaging' ? 'active' : ''}`} title="Messages">
             <MessageSquare size={22} />
             <span className="dot-badge" style={{ backgroundColor: '#fbbf24' }}></span>
           </Link>
 
-          <Link to="/financial-guidance" className={`nav-link-item ${window.location.pathname === '/financial-guidance' ? 'active' : ''}`} title="Finance">
-            <Landmark size={22} />
-          </Link>
+          {!isEmployer && (
+            <Link to="/financial-guidance" className={`nav-link-item ${window.location.pathname === '/financial-guidance' ? 'active' : ''}`} title="Finance">
+              <Landmark size={22} />
+            </Link>
+          )}
 
           {/* User Profile / Dropdown */}
           <div className="nav-profile-dropdown" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <div className="nav-profile-trigger">
-              <div className="nav-avatar-placeholder">
-                <User size={14} />
+              <div className="nav-avatar-placeholder" style={{ overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {avatarUrl ? (
+                  <img src={avatarUrl} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : (
+                  <User size={14} />
+                )}
               </div>
               <span className="me-text">
                 Me <ChevronDown size={12} />
@@ -89,12 +127,16 @@ const Header = () => {
             {isMenuOpen && (
               <div className="profile-dropdown-menu">
                 <div className="dropdown-user-header">
-                  <div className="menu-avatar-placeholder">
-                    <User size={18} />
+                  <div className="menu-avatar-placeholder" style={{ overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {avatarUrl ? (
+                      <img src={avatarUrl} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      <User size={18} />
+                    )}
                   </div>
                   <div className="dropdown-user-details">
                     <span className="details-name">{userProfileName}</span>
-                    <span className="details-role">Active Candidate</span>
+                    <span className="details-role">{isEmployer ? 'Employer Partner' : 'Active Candidate'}</span>
                   </div>
                 </div>
                 

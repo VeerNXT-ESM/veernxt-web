@@ -1,27 +1,21 @@
 /**
  * POST /api/payments/create-subscription
  * 
- * Creates a Razorpay Subscription for the PREMIUM tier (₹99/month).
- * The plan is created on-the-fly if it doesn't exist yet.
+ * Creates a Razorpay Order for any of the 6 pricing tiers.
  * 
- * Body: { userId: "supabase-user-id", email: "user@email.com", mobile: "919876543210" }
+ * Body: { userId, email, mobile, planId }
  */
 
 import Razorpay from 'razorpay';
 
-const PREMIUM_PLAN = {
-  period: 'monthly',
-  interval: 1,
-  item: {
-    name: 'VeerNXT Premium',
-    amount: 9900, // ₹99 in paise
-    currency: 'INR',
-    description: 'VeerNXT Premium — Priority Job Alerts, Mock Tests, 1:1 Guidance',
-  },
+const PLAN_AMOUNTS = {
+  SCORE_UNLOCK: 900,     // ₹9 in paise
+  SCORE_CV: 1000,        // ₹10 in paise
+  MONTHLY: 4900,         // ₹49 in paise
+  ANNUAL: 29900,         // ₹299 in paise
+  BIENNIAL: 39900,       // ₹399 in paise
+  PREMIUM: 49900,        // ₹499 in paise
 };
-
-// Cache plan_id across invocations (Vercel keeps warm instances for ~5 min)
-let cachedPlanId = null;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -36,56 +30,41 @@ export default async function handler(req, res) {
   }
 
   const instance = new Razorpay({ key_id: keyId, key_secret: keySecret });
-  const { userId, email, mobile } = req.body || {};
+  const { userId, email, mobile, planId } = req.body || {};
+
+  if (!planId || !PLAN_AMOUNTS[planId]) {
+    return res.status(400).json({ ok: false, error: 'Invalid or missing planId' });
+  }
+
+  let planAmount = PLAN_AMOUNTS[planId];
+  if (process.env.DEVTEST === 'true') {
+    planAmount = 100; // Force ₹1 (100 paise) for testing
+  }
 
   try {
-    // 1. Ensure plan exists
-    let planId = cachedPlanId;
-    if (!planId) {
-      // Try to find existing plan, or create one
-      try {
-        const plans = await instance.plans.all({ count: 10 });
-        const existing = plans.items?.find(
-          (p) => p.item?.name === 'VeerNXT Premium' && p.item?.amount === 9900
-        );
-        if (existing) {
-          planId = existing.id;
-        }
-      } catch (e) {
-        // plans.all may fail, just create fresh
-      }
-
-      if (!planId) {
-        const plan = await instance.plans.create(PREMIUM_PLAN);
-        planId = plan.id;
-      }
-      cachedPlanId = planId;
-    }
-
-    // 2. Create subscription
-    const subscription = await instance.subscriptions.create({
-      plan_id: planId,
-      total_count: 12, // 12 billing cycles
-      customer_notify: 1,
-      quantity: 1,
+    // Create a Razorpay Order (works domain-wide and simplifies setup)
+    const order = await instance.orders.create({
+      amount: planAmount,
+      currency: 'INR',
+      receipt: `rcpt_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
       notes: {
         userId: userId || 'unknown',
         email: email || '',
         mobile: mobile || '',
-        tier: 'PREMIUM',
+        planId: planId,
       },
     });
 
     return res.status(200).json({
       ok: true,
-      subscriptionId: subscription.id,
-      planId: planId,
-      amount: 9900,
+      orderId: order.id,
+      amount: planAmount,
       currency: 'INR',
-      key_id: keyId, // Frontend needs this for Razorpay Checkout
+      key_id: keyId,
+      planId: planId,
     });
   } catch (err) {
-    console.error('Razorpay create-subscription error:', err);
+    console.error('Razorpay create order error:', err);
     return res.status(500).json({ ok: false, error: err.error?.description || err.message });
   }
 }

@@ -6,8 +6,10 @@
  * Body: {
  *   razorpay_payment_id,
  *   razorpay_subscription_id,
+ *   razorpay_order_id,
  *   razorpay_signature,
- *   userId
+ *   userId,
+ *   planId
  * }
  */
 
@@ -22,11 +24,13 @@ export default async function handler(req, res) {
   const {
     razorpay_payment_id,
     razorpay_subscription_id,
+    razorpay_order_id,
     razorpay_signature,
     userId,
+    planId,
   } = req.body || {};
 
-  if (!razorpay_payment_id || !razorpay_subscription_id || !razorpay_signature) {
+  if (!razorpay_payment_id || (!razorpay_subscription_id && !razorpay_order_id) || !razorpay_signature) {
     return res.status(400).json({ ok: false, error: 'Missing payment verification fields' });
   }
 
@@ -36,9 +40,16 @@ export default async function handler(req, res) {
   }
 
   // 1. Verify signature
-  const expectedSignature = createHmac('sha256', keySecret)
-    .update(`${razorpay_payment_id}|${razorpay_subscription_id}`)
-    .digest('hex');
+  let expectedSignature;
+  if (razorpay_subscription_id) {
+    expectedSignature = createHmac('sha256', keySecret)
+      .update(`${razorpay_payment_id}|${razorpay_subscription_id}`)
+      .digest('hex');
+  } else {
+    expectedSignature = createHmac('sha256', keySecret)
+      .update(`${razorpay_order_id}|${razorpay_payment_id}`)
+      .digest('hex');
+  }
 
   if (expectedSignature !== razorpay_signature) {
     console.error('Payment signature mismatch');
@@ -54,29 +65,44 @@ export default async function handler(req, res) {
       if (supabaseUrl && serviceKey) {
         const supabase = createClient(supabaseUrl, serviceKey);
 
+        // Calculate subscription expiry
+        let expiresAt = null;
+        const now = new Date();
+        if (planId === 'MONTHLY') {
+          expiresAt = new Date(now.setMonth(now.getMonth() + 1)).toISOString();
+        } else if (planId === 'ANNUAL') {
+          expiresAt = new Date(now.setFullYear(now.getFullYear() + 1)).toISOString();
+        } else if (planId === 'BIENNIAL' || planId === 'PREMIUM') {
+          expiresAt = new Date(now.setFullYear(now.getFullYear() + 2)).toISOString();
+        }
+
+        const updatePayload = {
+          subscription_tier: planId || 'FREE',
+          subscription_id: razorpay_subscription_id || razorpay_order_id || null,
+          payment_id: razorpay_payment_id,
+          subscription_started_at: new Date().toISOString(),
+          subscription_expires_at: expiresAt,
+        };
+
         const { error } = await supabase
           .from('user_profiles')
-          .update({
-            subscription_tier: 'PREMIUM',
-            subscription_id: razorpay_subscription_id,
-            payment_id: razorpay_payment_id,
-            subscription_started_at: new Date().toISOString(),
-          })
+          .update(updatePayload)
           .eq('id', userId);
 
         if (error) {
           console.error('Supabase update error:', error);
-          // Don't fail the payment verification over a DB write error
+          return res.status(500).json({ ok: false, error: `Database update failed: ${error.message}` });
         }
       }
     } catch (dbErr) {
       console.error('DB update exception:', dbErr);
+      return res.status(500).json({ ok: false, error: 'Database connection failed' });
     }
   }
 
   return res.status(200).json({
     ok: true,
     message: 'Payment verified successfully',
-    tier: 'PREMIUM',
+    tier: planId || 'FREE',
   });
 }

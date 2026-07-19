@@ -15,6 +15,7 @@ import PublicJobs from './pages/PublicJobs';
 import FindCandidates from './pages/FindCandidates';
 import MessagingWorkspace from './components/MessagingWorkspace';
 import Subscribe from './pages/Subscribe';
+import Network from './pages/Network';
 
 // New Legal Pages
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -25,6 +26,7 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
+import CVBuilder from './pages/CVBuilder';
 import './index.css';
 
 function App() {
@@ -44,11 +46,13 @@ function App() {
           <Route path="/jobs" element={<AuthGuard><PublicJobs /></AuthGuard>} />
           <Route path="/find-candidates" element={<AuthGuard><FindCandidates /></AuthGuard>} />
           <Route path="/messaging" element={<AuthGuard><MessagingWorkspace /></AuthGuard>} />
+          <Route path="/network" element={<AuthGuard><Network /></AuthGuard>} />
           <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
           <Route path="/quiz/:id" element={<AuthGuard><InteractiveQuiz /></AuthGuard>} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/support" element={<Support />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/cv" element={<AuthGuard><CVBuilder /></AuthGuard>} />
         </Route>
 
         {/* Admin Routes */}
