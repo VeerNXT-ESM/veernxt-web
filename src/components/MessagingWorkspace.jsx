@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from '../lib/supabase';
+import { Link } from 'react-router-dom';
 import { 
   Send, User, Search, RefreshCw, MessageSquare, 
   ShieldCheck, Phone, Video, Info, MoreVertical, 
   Image, Paperclip, Smile, Edit3, Star, Play, 
-  MoreHorizontal, ChevronDown, CheckSquare
+  MoreHorizontal, ChevronDown, CheckSquare, ExternalLink, FileText
 } from 'lucide-react';
 
 const MessagingWorkspace = ({ initialRecipient = null }) => {
@@ -16,137 +17,221 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const messagesEndRef = useRef(null);
 
-  // Initialize and load mock/active partners list
+  // File sending states
+  const fileInputRef = useRef(null);
+  const imageInputRef = useRef(null);
+  const [attachedFile, setAttachedFile] = useState(null);
+  const [uploadingFile, setUploadingFile] = useState(false);
+
+  // Connection Gate states
+  const [canMessage, setCanMessage] = useState(true);
+  const [checkingGate, setCheckingGate] = useState(false);
+
+  // 1. Initialize and load dynamic active recipients (connections + message threads)
   useEffect(() => {
     const initializeChat = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      const user = session?.user || { id: '00000000-0000-0000-0000-000000000000', email: 'test@veernxt.in' };
+      const user = session?.user;
+      if (!user) return;
       setCurrentUser(user);
 
-      // Generate list aligning exactly with the candidates database
-      const baseRecipients = [
-        {
-          id: '1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d',
-          full_name: 'Rahul Kumar (Clerk SD)',
-          snippet: 'Melany: The darkness of their souls. Terrible.',
-          date: 'May 28',
-          service_branch: 'Indian Army',
-          trade: 'Clerk SD',
-          veer_score: 94,
-          active: true
-        },
-        {
-          id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
-          full_name: 'Amit Singh',
-          snippet: 'Amit: Just a reminder, I am still available for the free...',
-          date: 'May 24',
-          service_branch: 'Indian Navy',
-          trade: 'Seaman Branch',
-          veer_score: 87,
-          active: true
-        },
-        {
-          id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
-          full_name: 'Vikram Vardhan',
-          snippet: 'Vikram: ok great',
-          date: 'May 1',
-          service_branch: 'Indian Air Force',
-          trade: 'Mechanical Fitter',
-          veer_score: 91,
-          active: false
-        },
-        {
-          id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
-          full_name: 'Deepak Sharma',
-          snippet: 'Deepak sent a post',
-          date: 'Apr 18',
-          service_branch: 'Indian Army',
-          trade: 'Signals Branch',
-          veer_score: 89,
-          active: true
-        },
-        {
-          id: '5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b',
-          full_name: 'Sandhya Rani',
-          snippet: 'You: Good Morning. Sorry I was on a project and then...',
-          date: 'Apr 13',
-          service_branch: 'Indian Air Force',
-          trade: 'Meteorological Branch',
-          veer_score: 93,
-          active: false
+      try {
+        // Fetch accepted connections
+        const { data: activeConns } = await supabase
+          .from('connections')
+          .select('*')
+          .eq('status', 'accepted')
+          .or(`sender_id.eq.${user.id},receiver_id.eq.${user.id}`);
+
+        // Fetch distinct message partners from public.chat_messages
+        const { data: sentMsgs } = await supabase
+          .from('chat_messages')
+          .select('receiver_id')
+          .eq('sender_id', user.id);
+        const { data: recMsgs } = await supabase
+          .from('chat_messages')
+          .select('sender_id')
+          .eq('receiver_id', user.id);
+
+        const partnerIds = new Set();
+        if (activeConns) {
+          activeConns.forEach(c => {
+            partnerIds.add(c.sender_id === user.id ? c.receiver_id : c.sender_id);
+          });
         }
-      ];
+        if (sentMsgs) sentMsgs.forEach(m => partnerIds.add(m.receiver_id));
+        if (recMsgs) recMsgs.forEach(m => partnerIds.add(m.sender_id));
 
-      setConversations(baseRecipients);
+        // Resolve profiles for all partnerIds
+        const idsArray = Array.from(partnerIds);
+        let resolvedRecipients = [];
 
-      if (initialRecipient) {
-        setSelectedRecipient(initialRecipient);
-      } else {
-        setSelectedRecipient(baseRecipients[0]);
+        // Always fetch all database profiles for sidebar lookup
+        const { data: cands } = await supabase
+          .from('user_profiles')
+          .select('id, full_name, service_branch, trade, raw_profile_data, veer_score');
+        
+        const { data: emps } = await supabase
+          .from('employer_profiles')
+          .select('id, company_name, contact_name, designation');
+
+        const lookup = {};
+        if (cands) {
+          cands.forEach(c => {
+            lookup[c.id] = {
+              id: c.id,
+              full_name: c.full_name || 'Unnamed Candidate',
+              headline: `${c.trade || 'Veteran'} • ${c.service_branch}`,
+              role: 'candidate',
+              veer_score: c.veer_score || 85,
+              initials: (c.full_name || 'C').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
+            };
+          });
+        }
+        if (emps) {
+          emps.forEach(e => {
+            lookup[e.id] = {
+              id: e.id,
+              full_name: e.contact_name || 'Unnamed Recruiter',
+              headline: `${e.designation || 'Partner'} at ${e.company_name}`,
+              role: 'employer',
+              veer_score: 95,
+              initials: (e.contact_name || 'E').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
+            };
+          });
+        }
+
+        if (idsArray.length > 0) {
+          resolvedRecipients = idsArray.map(id => {
+            return lookup[id] || {
+              id,
+              full_name: 'VeerNXT Member',
+              headline: 'Transitioning Member',
+              role: 'unknown',
+              veer_score: 80,
+              initials: 'VM'
+            };
+          });
+        }
+
+        // Fallback: if user has no connections/messages yet, populate with first few completing user_profiles as suggestions
+        if (resolvedRecipients.length === 0) {
+          if (cands) {
+            resolvedRecipients = cands.slice(0, 5).map(c => lookup[c.id]);
+          }
+        }
+
+        setConversations(resolvedRecipients);
+
+        if (initialRecipient) {
+          setSelectedRecipient(initialRecipient);
+        } else if (resolvedRecipients.length > 0) {
+          setSelectedRecipient(resolvedRecipients[0]);
+        }
+      } catch (err) {
+        console.error("Error initializing conversations list:", err);
       }
     };
     initializeChat();
   }, [initialRecipient]);
 
-  // Load message logs for selected user from actual Supabase messages table
+  // 2. Check Connection Limit Guard for Selected Recipient
+  useEffect(() => {
+    const checkConnectionAndMessages = async () => {
+      if (!currentUser || !selectedRecipient) return;
+      if (currentUser.id === '00000000-0000-0000-0000-000000000000') {
+        setCanMessage(true);
+        return;
+      }
+      setCheckingGate(true);
+      try {
+        // 1. Check if they are connected (accepted)
+        const { data: conn } = await supabase
+          .from('connections')
+          .select('*')
+          .eq('status', 'accepted')
+          .or(`and(sender_id.eq.${currentUser.id},receiver_id.eq.${selectedRecipient.id}),and(sender_id.eq.${selectedRecipient.id},receiver_id.eq.${currentUser.id})`)
+          .maybeSingle();
+
+        if (conn) {
+          setCanMessage(true);
+          return;
+        }
+
+        // 2. If not connected, check if a message has already been sent
+        const { count } = await supabase
+          .from('chat_messages')
+          .select('*', { count: 'exact', head: true })
+          .eq('sender_id', currentUser.id)
+          .eq('receiver_id', selectedRecipient.id);
+
+        if (count && count >= 1) {
+          setCanMessage(false);
+        } else {
+          setCanMessage(true);
+        }
+      } catch (err) {
+        console.error("Error checking connection messages limit:", err);
+        setCanMessage(true);
+      } finally {
+        setCheckingGate(false);
+      }
+    };
+    checkConnectionAndMessages();
+  }, [selectedRecipient, currentUser]);
+
+  // 3. Load message logs for selected user from actual Supabase chat_messages table
   useEffect(() => {
     if (!selectedRecipient || !currentUser) return;
 
     const fetchRealMessages = async () => {
-      if (currentUser.id === '00000000-0000-0000-0000-000000000000') {
-        // Instant mock dialogue fallback to skip remote table lookup
-        setMessages([
-          {
-            id: 'msg-1',
-            sender_id: selectedRecipient.id,
-            content: `Thank you for sharing this transition pathway opportunity. I'm ready to review the details and submit my service verification certificate.`,
-            created_at: new Date(Date.now() - 3600000 * 2).toISOString(),
-            hasArticle: true
-          }
-        ]);
-        scrollToBottom();
-        return;
-      }
-
       try {
         const { data, error } = await supabase
-          .from('messages')
+          .from('chat_messages')
           .select('*')
           .or(`and(sender_id.eq.${currentUser.id},receiver_id.eq.${selectedRecipient.id}),and(sender_id.eq.${selectedRecipient.id},receiver_id.eq.${currentUser.id})`)
           .order('created_at', { ascending: true });
 
         if (error) throw error;
-        
-        if (data && data.length > 0) {
-          setMessages(data);
-        } else {
-          // Standard starting conversation threads fallback
-          setMessages([
-            {
-              id: 'msg-1',
-              sender_id: selectedRecipient.id,
-              content: `Thank you for sharing this transition pathway opportunity. I'm ready to review the details and submit my service verification certificate.`,
-              created_at: new Date(Date.now() - 3600000 * 2).toISOString(),
-              hasArticle: true
-            }
-          ]);
-        }
+        setMessages(data || []);
       } catch (err) {
         console.warn('Fallback to local memory dialogue feed:', err.message);
-        setMessages([
-          {
-            id: 'msg-1',
-            sender_id: selectedRecipient.id,
-            content: `Thank you for sharing this transition pathway opportunity. I'm ready to review the details and submit my service verification certificate.`,
-            created_at: new Date(Date.now() - 3600000 * 2).toISOString(),
-            hasArticle: true
-          }
-        ]);
       }
       scrollToBottom();
     };
 
     fetchRealMessages();
+  }, [selectedRecipient, currentUser]);
+
+  // 4. Realtime subscription for incoming messages
+  useEffect(() => {
+    if (!currentUser || !selectedRecipient) return;
+    if (currentUser.id === '00000000-0000-0000-0000-000000000000') return;
+
+    const channel = supabase
+      .channel('public:chat_messages')
+      .on('postgres_changes', {
+        event: 'INSERT',
+        schema: 'public',
+        table: 'chat_messages'
+      }, payload => {
+        const newMsg = payload.new;
+        const isFromRecipient = newMsg.sender_id === selectedRecipient.id && newMsg.receiver_id === currentUser.id;
+        const isToRecipient = newMsg.sender_id === currentUser.id && newMsg.receiver_id === selectedRecipient.id;
+        
+        if (isFromRecipient || isToRecipient) {
+          setMessages(prev => {
+            if (prev.some(m => m.id === newMsg.id)) return prev;
+            return [...prev, newMsg];
+          });
+          scrollToBottom();
+        }
+      })
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, [selectedRecipient, currentUser]);
 
   const scrollToBottom = () => {
@@ -155,52 +240,122 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
     }, 50);
   };
 
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setUploadingFile(true);
+    try {
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Math.random().toString(36).substring(2, 15)}_${Date.now()}.${fileExt}`;
+      const filePath = `${currentUser.id}/${fileName}`;
+      const { data, error } = await supabase.storage
+        .from('chat-attachments')
+        .upload(filePath, file);
+
+      if (error) throw error;
+
+      const { data: { publicUrl } } = supabase.storage
+        .from('chat-attachments')
+        .getPublicUrl(filePath);
+
+      setAttachedFile({
+        name: file.name,
+        url: publicUrl,
+        type: file.type
+      });
+    } catch (err) {
+      console.error("Error uploading file:", err);
+      alert("Failed to upload attachment: " + err.message);
+    } finally {
+      setUploadingFile(false);
+    }
+  };
+
   const handleSendMessage = async (textToSend) => {
     const text = typeof textToSend === 'string' ? textToSend : inputText;
-    if (!text.trim() || !selectedRecipient || !currentUser) return;
+    if ((!text.trim() && !attachedFile) || !selectedRecipient || !currentUser) return;
 
     const userMessage = {
       sender_id: currentUser.id,
       receiver_id: selectedRecipient.id,
       content: text,
+      file_url: attachedFile?.url || null,
+      file_name: attachedFile?.name || null,
+      file_type: attachedFile?.type || null,
       created_at: new Date().toISOString()
     };
 
     // Optimistically update the UI
-    setMessages(prev => [...prev, { ...userMessage, id: `msg-${Date.now()}` }]);
+    const tempId = `msg-${Date.now()}`;
+    setMessages(prev => [...prev, { ...userMessage, id: tempId }]);
+    
     if (typeof textToSend !== 'string') {
       setInputText('');
     }
+    setAttachedFile(null);
     scrollToBottom();
 
-    if (currentUser.id !== '00000000-0000-0000-0000-000000000000') {
-      try {
-        const { error } = await supabase.from('messages').insert([userMessage]);
-        if (error) throw error;
-      } catch (err) {
-        console.warn('Saved message to memory thread (schema migration pending):', err.message);
-      }
-    } else {
-      console.log('Saved message to local memory thread (mock session).');
-    }
+    try {
+      const { data, error } = await supabase
+        .from('chat_messages')
+        .insert([userMessage])
+        .select()
+        .single();
+      
+      if (error) throw error;
 
-    // Simulates quick responses from candidates
-    setTimeout(() => {
-      const candidateReply = {
-        id: `reply-${Date.now()}`,
-        sender_id: selectedRecipient.id,
-        receiver_id: currentUser.id,
-        content: `Yes, completely agree. I am reviewing the transition resources right now.`,
-        created_at: new Date().toISOString()
-      };
-      setMessages(prev => [...prev, candidateReply]);
-      scrollToBottom();
-    }, 1200);
+      // Replace optimistic message with actual db record
+      setMessages(prev => prev.map(m => m.id === tempId ? data : m));
+
+      // After sending, re-check connection limits (which will block future messages if limit reached)
+      const { data: conn } = await supabase
+        .from('connections')
+        .select('*')
+        .eq('status', 'accepted')
+        .or(`and(sender_id.eq.${currentUser.id},receiver_id.eq.${selectedRecipient.id}),and(sender_id.eq.${selectedRecipient.id},receiver_id.eq.${currentUser.id})`)
+        .maybeSingle();
+
+      if (!conn) {
+        setCanMessage(false);
+      }
+
+    } catch (err) {
+      console.error('Failed to send database message:', err.message);
+    }
   };
 
   const getInitials = (name) => {
     if (!name) return 'V';
     return name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+  };
+
+  const renderLinkPreview = (text) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const urls = text ? text.match(urlRegex) : null;
+    if (!urls) return null;
+    const url = urls[0];
+    let domain = 'link';
+    try {
+      domain = new URL(url).hostname;
+    } catch (e) {}
+
+    return (
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', marginTop: '0.5rem' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '0.75rem', transition: 'all 0.2s ease', cursor: 'pointer' }}>
+          <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: '#eef2f6', color: 'var(--ios-olive)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <ExternalLink size={20} />
+          </div>
+          <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
+            <h4 style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              Visit {domain}
+            </h4>
+            <p style={{ margin: '0.15rem 0 0 0', fontSize: '0.75rem', color: '#64748b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {url}
+            </p>
+          </div>
+        </div>
+      </a>
+    );
   };
 
   return (
@@ -251,10 +406,14 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
               
               <div className="partner-details">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span className="partner-name">{partner.full_name.split(' (')[0]}</span>
-                  <span className="partner-date-tag">{partner.date}</span>
+                  <span className="partner-name">{partner.full_name}</span>
+                  <span className="partner-date-tag" style={{ textTransform: 'uppercase', fontSize: '0.65rem', fontWeight: 800, color: 'var(--ios-olive)', background: 'rgba(75,107,50,0.08)', padding: '0.1rem 0.4rem', borderRadius: '100px' }}>
+                    {partner.role === 'employer' ? 'Recruiter' : 'Veteran'}
+                  </span>
                 </div>
-                <p className="partner-snippet">{partner.snippet}</p>
+                <p className="partner-snippet" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '200px' }}>
+                  {partner.headline}
+                </p>
               </div>
             </div>
           ))}
@@ -291,6 +450,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
 
               {messages.map(msg => {
                 const isMe = msg.sender_id === currentUser?.id;
+                const timeString = msg.created_at ? new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '8:59 AM';
                 return (
                   <div key={msg.id} className={`message-bubble-wrapper ${isMe ? 'sent' : 'received'}`}>
                     {!isMe && (
@@ -302,9 +462,44 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
                       <div className="message-meta-row">
                         <span className="sender-name-bold">{isMe ? 'You' : selectedRecipient.full_name}</span>
                         {selectedRecipient.veer_score > 90 && !isMe && <ShieldCheck size={12} color="#1F3A2E" />}
-                        <span className="msg-time-stamp">• 8:59 AM</span>
+                        <span className="msg-time-stamp">• {timeString}</span>
                       </div>
-                      <p className="msg-text-paragraph">{msg.content}</p>
+                      
+                      {msg.content && <p className="msg-text-paragraph">{msg.content}</p>}
+
+                      {/* Display image attachments */}
+                      {msg.file_url && msg.file_type?.startsWith('image/') && (
+                        <div style={{ marginTop: '0.5rem', maxWidth: '250px' }}>
+                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer">
+                            <img src={msg.file_url} alt="Attachment" style={{ width: '100%', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }} />
+                          </a>
+                        </div>
+                      )}
+
+                      {/* Display PDF attachments */}
+                      {msg.file_url && msg.file_type === 'application/pdf' && (
+                        <div style={{ marginTop: '0.5rem' }}>
+                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.5rem 0.75rem', borderRadius: '8px', textDecoration: 'none', color: '#0f172a', width: 'fit-content' }}>
+                            <FileText size={16} color="var(--ios-olive)" />
+                            <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{msg.file_name || 'View PDF document'}</span>
+                            <ExternalLink size={12} color="#64748b" />
+                          </a>
+                        </div>
+                      )}
+
+                      {/* Display other attachments */}
+                      {msg.file_url && !msg.file_type?.startsWith('image/') && msg.file_type !== 'application/pdf' && (
+                        <div style={{ marginTop: '0.5rem' }}>
+                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.5rem 0.75rem', borderRadius: '8px', textDecoration: 'none', color: '#0f172a', width: 'fit-content' }}>
+                            <Paperclip size={16} color="#64748b" />
+                            <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{msg.file_name || 'Download file'}</span>
+                            <ExternalLink size={12} color="#64748b" />
+                          </a>
+                        </div>
+                      )}
+
+                      {/* URL Link Previews */}
+                      {msg.content && renderLinkPreview(msg.content)}
 
                       {/* Case Article mock card as shown in the screenshot */}
                       {msg.hasArticle && (
@@ -352,37 +547,90 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
               ))}
             </div>
 
-            {/* Input Action Panel */}
-            <form onSubmit={handleSendMessage} className="chat-input-form-bar">
-              <div className="input-textarea-wrapper">
-                <textarea 
-                  placeholder="Write a message..."
-                  value={inputText}
-                  onChange={e => setInputText(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
-                      handleSendMessage();
-                    }
-                  }}
-                  className="chat-keyboard-textarea"
-                  rows="2"
-                />
+            {/* Attachment preview panel */}
+            {attachedFile && (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 1rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Paperclip size={16} color="var(--ios-olive)" />
+                  <span style={{ fontSize: '0.85rem', color: '#0f172a', fontWeight: 600 }}>
+                    {attachedFile.name}
+                  </span>
+                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                    (Ready to send)
+                  </span>
+                </div>
+                <button type="button" onClick={() => setAttachedFile(null)} style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 700 }}>
+                  Remove
+                </button>
               </div>
+            )}
 
-              {/* Footer toolbar actions menu (Strict professional military parameters: Attachments and Images only) */}
-              <div className="input-toolbar-menu">
-                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-                  <button type="button" className="toolbar-btn" title="Add Image attachment"><Image size={18} /></button>
-                  <button type="button" className="toolbar-btn" title="Add Documents attachment"><Paperclip size={18} /></button>
+            {uploadingFile && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+                <RefreshCw size={14} className="animate-spin" color="var(--ios-olive)" />
+                <span style={{ fontSize: '0.8rem', color: '#64748b' }}>Uploading file attachment...</span>
+              </div>
+            )}
+
+            {/* Hidden Input Files */}
+            <input 
+              type="file" 
+              ref={fileInputRef} 
+              onChange={handleFileUpload} 
+              style={{ display: 'none' }} 
+            />
+            <input 
+              type="file" 
+              accept="image/*" 
+              ref={imageInputRef} 
+              onChange={handleFileUpload} 
+              style={{ display: 'none' }} 
+            />
+
+            {!canMessage ? (
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '2rem 1.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', textAlign: 'center' }}>
+                <ShieldCheck size={36} color="var(--ios-olive)" style={{ marginBottom: '0.5rem', opacity: 0.8 }} />
+                <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 800, color: '#1F3A2E' }}>Connection Request Required</h4>
+                <p style={{ margin: '0.25rem 0 1.25rem 0', fontSize: '0.8rem', color: '#64748b', maxWidth: '400px', lineHeight: 1.4 }}>
+                  You are not connected with {selectedRecipient.full_name} yet. You can only send 1 introductory message before they accept your connection request.
+                </p>
+                <Link to="/network" className="btn-primary ios-pill" style={{ textDecoration: 'none', padding: '0.55rem 1.5rem', fontSize: '0.85rem' }}>
+                  Manage Network
+                </Link>
+              </div>
+            ) : (
+              /* Input Action Panel */
+              <form onSubmit={(e) => { e.preventDefault(); handleSendMessage(); }} className="chat-input-form-bar">
+                <div className="input-textarea-wrapper">
+                  <textarea 
+                    placeholder="Write a message..."
+                    value={inputText}
+                    onChange={e => setInputText(e.target.value)}
+                    onKeyDown={e => {
+                      if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSendMessage();
+                      }
+                    }}
+                    className="chat-keyboard-textarea"
+                    rows="2"
+                  />
                 </div>
 
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                  <span className="press-enter-hint">Press Enter to Send</span>
-                  <button type="submit" className="toolbar-btn"><MoreHorizontal size={18} /></button>
+                {/* Footer toolbar actions menu */}
+                <div className="input-toolbar-menu">
+                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                    <button type="button" onClick={() => imageInputRef.current?.click()} className="toolbar-btn" title="Add Image attachment"><Image size={18} /></button>
+                    <button type="button" onClick={() => fileInputRef.current?.click()} className="toolbar-btn" title="Add Documents attachment"><Paperclip size={18} /></button>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <span className="press-enter-hint">Press Enter to Send</span>
+                    <button type="submit" className="toolbar-btn"><Send size={18} color="var(--ios-olive)" /></button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            )}
           </>
         ) : (
           <div className="no-chat-selected-wrapper">

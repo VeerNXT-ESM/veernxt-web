@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { ArrowLeft, CheckCircle, XCircle, RefreshCw, Trophy, ChevronRight, HelpCircle } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, RefreshCw, Trophy, ChevronRight, HelpCircle, Lock, Crown } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
+import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
 
 const InteractiveQuiz = () => {
   const { id } = useParams();
@@ -15,11 +16,52 @@ const InteractiveQuiz = () => {
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [effectiveTier, setEffectiveTier] = useState('FREE');
+  const [freeQuizUsed, setFreeQuizUsed] = useState(false);
+  const [isFreeAttempt, setIsFreeAttempt] = useState(false);
 
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const { data: quizData } = await supabase.from('quizzes').select('*').eq('id', id).single();
+        let tier = 'FREE';
+        let quizUsed = false;
+
+        try {
+          const { data: { session } } = await supabase.auth.getSession();
+          if (session?.user) {
+            const { data: profile } = await supabase
+              .from('user_profiles')
+              .select('subscription_tier, subscription_expires_at, free_quiz_used')
+              .eq('id', session.user.id)
+              .maybeSingle();
+            if (profile) {
+              tier = getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
+              setEffectiveTier(tier);
+              quizUsed = !!profile.free_quiz_used;
+              setFreeQuizUsed(quizUsed);
+            }
+          }
+        } catch (err) {
+          console.error('Error fetching subscription tier:', err);
+        }
+
+        const quizDataRes = await supabase.from('quizzes').select('*').eq('id', id).single();
+        const quizData = quizDataRes.data;
+
+        if (!quizData) {
+          setLoading(false);
+          return;
+        }
+
+        const quizAccess = canTakeQuiz(tier, quizUsed);
+        if (!quizAccess.allowed) {
+          setQuiz(quizData);
+          setLoading(false);
+          return;
+        }
+
+        setIsFreeAttempt(!!quizAccess.isFreeAttempt);
+
         const { data: questionsData } = await supabase.from('questions').select('*').eq('quiz_id', id).order('question_number');
         
         const parsedQuestions = (questionsData || []).map(q => {
@@ -97,8 +139,22 @@ const InteractiveQuiz = () => {
         answers: answers,
         completed_at: new Date().toISOString()
       });
+
+      if (isFreeAttempt) {
+        try {
+          await supabase
+            .from('user_profiles')
+            .update({ free_quiz_used: true })
+            .eq('id', session.user.id);
+          setFreeQuizUsed(true);
+        } catch (e) {
+          console.error('Error updating free_quiz_used:', e);
+        }
+      }
     }
   };
+
+  const access = canTakeQuiz(effectiveTier, freeQuizUsed);
 
   if (loading) return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'var(--ios-bg)' }}>
@@ -107,6 +163,59 @@ const InteractiveQuiz = () => {
   );
 
   if (!quiz) return <div style={{ padding: '4rem', textAlign: 'center' }}>Quiz not found.</div>;
+
+  if (!access.allowed) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1F3A2E 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '2rem 1.5rem',
+        fontFamily: "'Inter', sans-serif"
+      }}>
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.98)',
+          borderRadius: '24px',
+          padding: '3rem 2.25rem',
+          maxWidth: '460px',
+          width: '100%',
+          textAlign: 'center',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+        }}>
+          <div style={{
+            width: '60px', height: '60px', borderRadius: '50%',
+            background: 'rgba(239, 68, 68, 0.08)', display: 'flex',
+            alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem'
+          }}>
+            <Lock size={30} color="#ef4444" />
+          </div>
+          <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
+            Mock Test Locked
+          </h3>
+          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
+            {access.reason || "You have already used your 1 free mock test. Upgrade to access all exams, practice resources, and unlimited mock tests."}
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <Link to="/subscribe" className="btn-primary ios-pill" style={{
+              textDecoration: 'none', padding: '0.85rem 2rem', fontSize: '0.95rem',
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+              color: 'white',
+            }}>
+              <Crown size={16} /> View Upgrade Options
+            </Link>
+            <Link to="/learning-center" style={{
+              textDecoration: 'none', color: '#64748b', fontSize: '0.85rem', fontWeight: 600,
+              marginTop: '0.5rem'
+            }}>
+              Back to Learning Center
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 

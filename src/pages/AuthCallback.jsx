@@ -17,6 +17,16 @@ const AuthCallback = () => {
           return;
         }
 
+        const metadataRole = session.user?.user_metadata?.role;
+        if (metadataRole === 'candidate') {
+          localStorage.removeItem('employer_session');
+        }
+        const isEmployer = metadataRole === 'employer' || (metadataRole !== 'candidate' && !!localStorage.getItem('employer_session'));
+        if (isEmployer) {
+          navigate('/dashboard');
+          return;
+        }
+
         // Fetch user profile to check completeness
         const { data: profile, error: profileError } = await supabase
           .from('user_profiles')

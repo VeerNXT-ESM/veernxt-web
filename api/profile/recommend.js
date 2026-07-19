@@ -39,6 +39,7 @@ const profileSchema = Joi.object({
   mathInClass12:    Joi.boolean().default(false),
 
   heightCm:         Joi.number().min(100).max(250).required(),
+  weightKg:         Joi.number().min(30).max(200).allow(null),
   chestCm:          Joi.number().allow(null),
   chestExpansion:   Joi.number().allow(null),
   vision:           Joi.string().allow('', null),
@@ -287,6 +288,12 @@ export default async function handler(req, res) {
     // 6. Write securely to database if user is authenticated
     if (userId && supabaseAdmin) {
       console.log('[recommend] Securely saving profile scoring to database for user:', userId);
+      let yearsOfService = 0;
+      const match = profile.totalServiceDuration ? profile.totalServiceDuration.match(/^(\d+)\s*years?/i) : null;
+      if (match) {
+        yearsOfService = parseInt(match[1]);
+      }
+
       const { error: dbError } = await supabaseAdmin
         .from('user_profiles')
         .upsert({
@@ -295,7 +302,24 @@ export default async function handler(req, res) {
           recommendations: result.recommendations,
           veer_score: Math.round(overall_match_score),
           profiling_completed: true,
-          updated_at: new Date().toISOString()
+          updated_at: new Date().toISOString(),
+
+          // Map profile fields to structured database columns
+          full_name: profile.fullName,
+          rank: profile.roleAppointment,
+          service_branch: profile.serviceBranch,
+          years_of_service: yearsOfService,
+          education_level: profile.highestQualification,
+          height_cm: profile.heightCm,
+          weight_kg: profile.weightKg || null,
+          chest_cm: profile.chestCm || null,
+          trade: profile.armCorpsTrade,
+          preferred_states: JSON.stringify([profile.stateOfDomicile]),
+          preferred_sectors: JSON.stringify(profile.careerPreferences || []),
+          preferred_job_types: JSON.stringify([profile.relocation]),
+          skills: JSON.stringify(profile.specificSkills || []),
+          consent_given: !!profile.consent,
+          consent_timestamp: new Date().toISOString()
         });
 
       if (dbError) {

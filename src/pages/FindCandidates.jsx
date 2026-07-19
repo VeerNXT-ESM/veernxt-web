@@ -19,13 +19,63 @@ const FindCandidates = () => {
   const [selectedBranch, setSelectedBranch] = useState('All');
   const [selectedQuota, setSelectedQuota] = useState('All');
   const [minVeerScore, setMinVeerScore] = useState(0);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [userConnections, setUserConnections] = useState([]);
+  const [actionLoading, setActionLoading] = useState({});
 
   useEffect(() => {
     const loadCandidates = async () => {
       setLoading(true);
       try {
-        // Load profiles from database or fallback to rich mock data mapping tri-service csv profiles
-        const mockProfilesList = [
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+          setCurrentUser(session.user);
+          const { data: connRecords } = await supabase
+            .from('connections')
+            .select('*')
+            .or(`sender_id.eq.${session.user.id},receiver_id.eq.${session.user.id}`);
+          setUserConnections(connRecords || []);
+        }
+
+        const { data: dbProfiles, error: dbError } = await supabase
+          .from('user_profiles')
+          .select('*')
+          .eq('profiling_completed', true);
+
+        if (dbError) throw dbError;
+
+        let profiles = [];
+        if (dbProfiles && dbProfiles.length > 0) {
+          profiles = dbProfiles.map(row => {
+            let parsedSkills = [];
+            try {
+              parsedSkills = typeof row.skills === 'string' ? JSON.parse(row.skills) : (row.skills || []);
+            } catch (e) {
+              parsedSkills = [];
+            }
+            
+            const rawData = row.raw_profile_data || {};
+            
+            return {
+              id: row.id,
+              full_name: row.full_name || 'Unnamed Candidate',
+              veer_score: row.veer_score || 0,
+              service_branch: row.service_branch || 'Indian Army',
+              reservation_category: rawData.category || 'General',
+              profile_data: {
+                armCorpsTrade: row.trade || rawData.armCorpsTrade || 'General Service',
+                roleAppointment: rawData.roleAppointment || row.rank || 'N/A',
+                totalServiceDuration: rawData.totalServiceDuration || (row.years_of_service ? `${row.years_of_service} Years` : 'N/A'),
+                educationLevel: row.education_level || rawData.highestQualification || 'N/A',
+                stateOfDomicile: rawData.stateOfDomicile || 'N/A',
+                district: rawData.district || 'N/A',
+                skills: parsedSkills
+              }
+            };
+          });
+        }
+
+        const fallbackProfiles = [
           {
             id: '1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d',
             full_name: 'Rahul Kumar (Clerk SD)',
@@ -108,9 +158,10 @@ const FindCandidates = () => {
           }
         ];
 
-        setCandidates(mockProfilesList);
-        setFilteredCandidates(mockProfilesList);
-        setSelectedCandidate(mockProfilesList[0]);
+        const finalCandidatesList = profiles.length > 0 ? profiles : fallbackProfiles;
+        setCandidates(finalCandidatesList);
+        setFilteredCandidates(finalCandidatesList);
+        setSelectedCandidate(finalCandidatesList[0]);
       } catch (err) {
         console.error('Error fetching candidates:', err);
       } finally {
@@ -156,6 +207,76 @@ const FindCandidates = () => {
       setSelectedCandidate(null);
     }
   }, [searchQuery, selectedBranch, selectedQuota, minVeerScore, candidates]);
+
+  const getConnectionStatus = (candidateId) => {
+    if (!currentUser) return null;
+    const conn = userConnections.find(
+      c => (c.sender_id === currentUser.id && c.receiver_id === candidateId) || 
+           (c.sender_id === candidateId && c.receiver_id === currentUser.id)
+    );
+    if (!conn) return null;
+    if (conn.status === 'accepted') return 'connected';
+    if (conn.status === 'pending') {
+      return conn.sender_id === currentUser.id ? 'pending_sent' : 'pending_received';
+    }
+    return null;
+  };
+
+  const handleConnect = async (candidate) => {
+    if (!currentUser) {
+      alert("Please log in to connect.");
+      return;
+    }
+    setActionLoading(prev => ({ ...prev, [candidate.id]: 'connecting' }));
+    try {
+      const { data, error } = await supabase
+        .from('connections')
+        .insert({
+          sender_id: currentUser.id,
+          receiver_id: candidate.id,
+          status: 'pending'
+        })
+        .select()
+        .single();
+      if (error) throw error;
+
+      // Update local state
+      setUserConnections(prev => [...prev, data]);
+      alert(`Connection request sent to ${candidate.full_name}!`);
+    } catch (err) {
+      console.error('Error connecting:', err);
+      alert('Failed to send connection request: ' + err.message);
+    } finally {
+      setActionLoading(prev => ({ ...prev, [candidate.id]: null }));
+    }
+  };
+
+  const handleAcceptConnection = async (candidate) => {
+    if (!currentUser) return;
+    setActionLoading(prev => ({ ...prev, [candidate.id]: 'accepting' }));
+    try {
+      const conn = userConnections.find(
+        c => c.sender_id === candidate.id && c.receiver_id === currentUser.id && c.status === 'pending'
+      );
+      if (!conn) return;
+
+      const { data, error } = await supabase
+        .from('connections')
+        .update({ status: 'accepted' })
+        .eq('id', conn.id)
+        .select()
+        .single();
+      if (error) throw error;
+
+      setUserConnections(prev => prev.map(c => c.id === conn.id ? data : c));
+      alert(`Connected with ${candidate.full_name}!`);
+    } catch (err) {
+      console.error('Error accepting connection:', err);
+      alert('Failed to accept request: ' + err.message);
+    } finally {
+      setActionLoading(prev => ({ ...prev, [candidate.id]: null }));
+    }
+  };
 
   const handleStartChat = (candidate) => {
     navigate('/messaging', { state: { recipient: candidate } });
@@ -289,6 +410,10 @@ const FindCandidates = () => {
             <CandidateProfileTemplate 
               candidate={selectedCandidate} 
               onSendMessage={handleStartChat}
+              connectionStatus={getConnectionStatus(selectedCandidate.id)}
+              onConnect={handleConnect}
+              onAcceptConnection={handleAcceptConnection}
+              actionLoading={actionLoading[selectedCandidate.id]}
             />
           ) : (
             <div className="profile-placeholder-card">

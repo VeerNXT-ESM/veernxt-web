@@ -18,10 +18,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
-  const { mobile, password, registerToken } = req.body || {};
+  const { mobile, password, registerToken, role } = req.body || {};
 
   if (!mobile || !password || !registerToken) {
-    console.error('[register] Missing required fields. mobile:', mobile, 'password:', !!password, 'registerToken:', !!registerToken);
+    console.error('[register] Missing required fields. mobile:', mobile, 'password:', !!password, 'registerToken:', !!registerToken, 'role:', role);
     return res.status(400).json({ ok: false, error: 'mobile, password, and registerToken are required' });
   }
 
@@ -101,7 +101,7 @@ export default async function handler(req, res) {
       email_confirm: true, // Auto-confirm email because mobile was verified via OTP
       user_metadata: {
         mobile: fullMobile,
-        role: 'candidate',
+        role: role === 'employer' ? 'employer' : 'candidate',
       },
     });
 
