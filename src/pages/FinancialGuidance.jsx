@@ -29,6 +29,7 @@ import {
   Heart,
   XCircle,
 } from 'lucide-react';
+import './FinancialGuidance.css';
 
 // ─── Phase Constants ────────────────────────────────────────────
 const PHASE = {
@@ -36,6 +37,7 @@ const PHASE = {
   QUIZ: 'quiz',
   RESULT: 'result',
   SUBMITTED: 'submitted',
+  PORTAL: 'portal',
 };
 
 const FinancialGuidance = () => {
@@ -76,7 +78,18 @@ const FinancialGuidance = () => {
       }
     };
     loadUser();
+    setTimeout(() => {
+      const el = document.getElementById('quiz-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 400);
   }, []);
+
+  const scrollToQuiz = () => {
+    setTimeout(() => {
+      const el = document.getElementById('quiz-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  };
 
   // ─── Handlers ─────────────────────────────────────────────────
   const startQuiz = () => {
@@ -86,6 +99,7 @@ const FinancialGuidance = () => {
     setCorpusAmount(null);
     setProfileKey(null);
     setAllocation(null);
+    scrollToQuiz();
   };
 
   const selectOption = (qid, key) => {
@@ -115,7 +129,7 @@ const FinancialGuidance = () => {
     setProfileKey(pKey);
     setAllocation(alloc);
     setPhase(PHASE.RESULT);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToQuiz();
   };
 
   const restartQuiz = () => {
@@ -125,6 +139,7 @@ const FinancialGuidance = () => {
     setCorpusAmount(null);
     setProfileKey(null);
     setAllocation(null);
+    scrollToQuiz();
   };
 
   // Save to Supabase + open WhatsApp
@@ -188,405 +203,1285 @@ const FinancialGuidance = () => {
   const currentQuestion = QUESTIONS[step];
   const profile = profileKey ? PROFILES[profileKey] : null;
 
-  // ─── RENDER: LANDING ─────────────────────────────────────────
-  if (phase === PHASE.LANDING) {
+  // ─── RENDER: PORTAL ──────────────────────────────────────────
+  if (phase === PHASE.PORTAL) {
     return (
-      <div className="fg-wrapper">
-        {/* Hero */}
-        <div className="fg-hero">
-          <div className="fg-hero-content animate-fade-in">
-            <div className="fg-hero-badge">
-              <Sparkles size={14} /> Financial Guidance
-            </div>
-            <h1>Discover Your Financial Profile</h1>
-            <p className="fg-hero-sub">
-              Your Seva Nidhi took 4 years to earn. Answer 7 simple questions and get a personalised investment plan — designed specifically for Agniveers.
-            </p>
-            <div className="fg-hero-stats">
-              <div className="fg-stat">
-                <span className="fg-stat-num">7</span>
-                <span className="fg-stat-label">Questions</span>
-              </div>
-              <div className="fg-stat">
-                <span className="fg-stat-num">8</span>
-                <span className="fg-stat-label">Profiles</span>
-              </div>
-              <div className="fg-stat">
-                <span className="fg-stat-num">₹0</span>
-                <span className="fg-stat-label">Cost</span>
-              </div>
-            </div>
-            <button className="fg-cta-btn" onClick={startQuiz}>
-              Start My Financial Profile <ArrowRight size={18} />
-            </button>
-          </div>
-        </div>
-
-        {/* Trust Section */}
-        <div className="fg-container">
-          <div className="fg-trust-banner animate-fade-in" style={{ animationDelay: '0.15s' }}>
-            <ShieldCheck size={24} color="var(--ios-olive)" />
-            <div className="fg-trust-text">
-              <strong>VeerNXT Financial Guidance</strong>
-              <span>Free, personalised, and built by experts who understand the Agniveer journey. No product selling — only unbiased guidance.</span>
-            </div>
-          </div>
-
-          {/* Golden Rules */}
-          <div className="fg-section animate-fade-in" style={{ animationDelay: '0.25s' }}>
-            <h2 className="fg-section-title">
-              <AlertTriangle size={20} color="#DC2626" />
-              The 5 Things Every Agniveer Must Avoid
-            </h2>
-            <div className="fg-rules-grid">
-              {GOLDEN_RULES.map((rule, i) => (
-                <div key={i} className="fg-rule-card">
-                  <div className="fg-rule-icon">
-                    <XCircle size={18} color="#DC2626" />
-                  </div>
-                  <div>
-                    <h4 className="fg-rule-title">{rule.title}</h4>
-                    <p className="fg-rule-desc">{rule.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 5 Laws */}
-          <div className="fg-section animate-fade-in" style={{ animationDelay: '0.35s' }}>
-            <h2 className="fg-section-title">
-              <ShieldCheck size={20} color="var(--ios-olive)" />
-              The 5 Laws That Never Change
-            </h2>
-            <div className="fg-laws-list">
-              {FIVE_LAWS.map((law, i) => (
-                <div key={i} className="fg-law-item">
-                  <div className="fg-law-num">{i + 1}</div>
-                  <span>{law}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="fg-bottom-cta animate-fade-in" style={{ animationDelay: '0.45s' }}>
-            <h3>Ready to discover your profile?</h3>
-            <p>7 questions. 2 minutes. A personalised plan for your future.</p>
-            <button className="fg-cta-btn" onClick={startQuiz}>
-              Start Now <ArrowRight size={18} />
-            </button>
-          </div>
-        </div>
-
+      <div className="finance-site-root">
+        <ClientNavbar onGoPortal={() => setPhase(PHASE.PORTAL)} onGoLanding={() => setPhase(PHASE.LANDING)} isPortalView />
+        <InvestorPortal onBack={() => setPhase(PHASE.LANDING)} />
+        <ClientFooter />
         <FinancialGuidanceStyles />
       </div>
     );
   }
 
-  // ─── RENDER: QUIZ ─────────────────────────────────────────────
-  if (phase === PHASE.QUIZ) {
-    const q = currentQuestion;
-    const isLast = step === QUESTIONS.length - 1;
-    const selectedAnswer = answers[q.id];
+  // ─── RENDER: MAIN GUIDANCE PAGE WITH EMBEDDED QUIZ/RESULT ────
+  return (
+    <div className="finance-site-root">
+      <ClientNavbar
+        onGoPortal={() => { setPhase(PHASE.PORTAL); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        onGoLanding={() => { setPhase(PHASE.LANDING); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+      />
+      <ClientLandingPage
+        onStartQuiz={startQuiz}
+        onGoPortal={() => { setPhase(PHASE.PORTAL); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        phase={phase}
+        setPhase={setPhase}
+        step={step}
+        nextStep={nextStep}
+        prevStep={prevStep}
+        selectOption={selectOption}
+        selectAmount={selectAmount}
+        answers={answers}
+        corpusAmount={corpusAmount}
+        finishQuiz={finishQuiz}
+        restartQuiz={restartQuiz}
+        profile={profile}
+        allocation={allocation}
+        userName={userName}
+        setUserName={setUserName}
+        userPhone={userPhone}
+        setUserPhone={setUserPhone}
+        userEmail={userEmail}
+        setUserEmail={setUserEmail}
+        saving={saving}
+        handleSubmitProfile={handleConsultantHandoff}
+        profileKey={profileKey}
+        currentQuestion={QUESTIONS[step] || QUESTIONS[0]}
+        QUESTIONS={QUESTIONS}
+        AMOUNT_OPTIONS={AMOUNT_OPTIONS}
+        PROFILES={PROFILES}
+        formatINR={formatINR}
+      />
+      <ClientFooter />
+      <FinancialGuidanceStyles />
+    </div>
+  );
 
-    return (
-      <div className="fg-wrapper">
-        <div className="fg-quiz-container animate-fade-in">
-          {/* Progress Bar */}
-          <div className="fg-progress-header">
-            <div className="fg-progress-bar">
-              {QUESTIONS.map((_, i) => (
-                <div
-                  key={i}
-                  className={`fg-progress-step ${i < step ? 'done' : i === step ? 'active' : ''}`}
-                />
-              ))}
-            </div>
-            <span className="fg-progress-label">{step + 1} of {QUESTIONS.length}</span>
+};
+
+// ─── CLIENT NAVBAR ──────────────────────────────────────────────
+const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
+  <nav className="nav" role="navigation" aria-label="Main navigation">
+    <div className="nav-inner">
+      <div className="nav-logo" onClick={onGoLanding} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+        <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '76px', width: 'auto', objectFit: 'contain' }} />
+      </div>
+      <ul className="nav-links">
+        <li><a href="/" style={{ color: 'var(--g)', fontWeight: 700 }}>← Main Site</a></li>
+        <li><a href="#pillars" onClick={onGoLanding}>What We Offer</a></li>
+        <li><a href="#tools" onClick={onGoLanding}>Tools</a></li>
+        <li><a href="#quiz-section" onClick={onGoLanding}>Quiz</a></li>
+        <li><a href="#community" onClick={onGoLanding}>Community</a></li>
+        <li><a href="#seva-dividend" onClick={onGoLanding}>Seva Dividend</a></li>
+        <li>
+          {isPortalView ? (
+            <button className="nav-cta" onClick={onGoLanding}>← Back to Guidance</button>
+          ) : (
+            <button className="nav-cta" onClick={onGoPortal}>Go to Finance Portal</button>
+          )}
+        </li>
+      </ul>
+      <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <span className="nav-amfi" aria-label="AMFI Registration">AMFI ARN-XXXXX</span>
+        <img src="/finance/AOG%20logo.jpeg" alt="AOG Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
+      </div>
+    </div>
+  </nav>
+);
+
+// ─── CLIENT FOOTER ──────────────────────────────────────────────
+const ClientFooter = () => (
+  <footer className="footer" role="contentinfo">
+    <div className="container">
+      <div className="footer-grid">
+        <div className="footer-brand">
+          <div className="footer-logo">Veer<span>NXT</span></div>
+          <p>
+            An Agniveer &amp; Ex-Serviceman empowerment platform.
+            Built by veterans. Advised by service chiefs. Serving those who served.
+          </p>
+          <div className="footer-tagline">सेवा से समृद्ध कल की ओर</div>
+        </div>
+        <div className="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#mission">The Mission</a></li>
+            <li><a href="#profiling">Agniveer Profiling</a></li>
+            <li><a href="#pillars">Six Pillars</a></li>
+            <li><a href="#tools">Calculators</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#seva-dividend">Seva Dividend</a></li>
+            <li><a href="#quiz-section">Interactive Guidance Quiz</a></li>
+            <li><a href="mailto:foundation@veteranworks.in">Veteran Works Foundation</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Regulatory &amp; Legal</h4>
+          <ul>
+            <li><a href="#partners">AMFI &amp; SEBI Disclosure</a></li>
+            <li><a href="#login">Prudent Execution</a></li>
+            <li><a href="#disclaimer">Risk Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        &copy; {new Date().getFullYear()} VeerNXT. All rights reserved. • Veteran Works Foundation
+      </div>
+    </div>
+  </footer>
+);
+
+// ─── INVESTOR PORTAL COMPONENT (PHASE.PORTAL) ───────────────────
+const InvestorPortal = ({ onBack }) => (
+  <div className="portal-container animate-fade-in">
+    <button className="portal-back-btn" onClick={onBack}>
+      <ArrowLeft size={16} /> Back to Financial Guidance
+    </button>
+    
+    <div>
+      <span className="portal-badge">INVESTOR PORTAL</span>
+      <h1 className="portal-title">Portfolio Login</h1>
+    </div>
+
+    <div className="portal-cards-grid">
+      {/* New Investor Registration */}
+      <div className="portal-card">
+        <div className="portal-logo-box">
+          <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '70px', width: 'auto', objectFit: 'contain' }} />
+        </div>
+        <div className="portal-card-brand">FundzBazar</div>
+        <div className="portal-card-sub">New Investor Registration</div>
+        <a
+          href="https://fundzbazar.com/Link/vI0QeHtSo8Y"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portal-action-btn"
+        >
+          Click To Register <ArrowRight size={16} />
+        </a>
+      </div>
+
+      {/* Existing Client Login */}
+      <div className="portal-card">
+        <div className="portal-logo-box">
+          <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '70px', width: 'auto', objectFit: 'contain' }} />
+        </div>
+        <div className="portal-card-brand">FundzBazar</div>
+        <div className="portal-card-sub">Existing Client Login</div>
+        <a
+          href="https://fundzbazar.com/Link/w_VNahzPG5U"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portal-action-btn"
+        >
+          Click To Login <ArrowRight size={16} />
+        </a>
+      </div>
+    </div>
+
+    <div className="portal-scan-section">
+      <h2 className="portal-scan-title">Scan to Access FundzBazar</h2>
+      <p className="portal-scan-sub">
+        Quickly access the FundzBazar website or download the mobile application by scanning the QR codes below with your smartphone.
+      </p>
+
+      <div className="portal-qr-grid">
+        {/* Website QR */}
+        <div className="portal-qr-card">
+          <div className="portal-qr-title">FundzBazar Website</div>
+          <div className="portal-qr-frame">
+            <img src="/finance/WebQR.jpeg" alt="FundzBazar Website QR Code" />
           </div>
+          <div className="portal-qr-footer">Scan to visit the web portal</div>
+        </div>
 
-          {/* Question */}
-          <div className="fg-question-card">
-            <div className="fg-q-label">{q.label}</div>
-            <h2 className="fg-q-text">{q.text}</h2>
-            <p className="fg-q-sub">{q.sub}</p>
+        {/* Mobile App QR */}
+        <div className="portal-qr-card">
+          <div className="portal-qr-title">FundzBazar Mobile App</div>
+          <div className="portal-qr-frame">
+            <img src="/finance/MobileQR.jpeg" alt="FundzBazar Mobile App QR Code" />
+          </div>
+          <div className="portal-qr-footer">Scan to download the app</div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
-            {/* Amount selector */}
-            {q.isAmount ? (
-              <div className="fg-amount-grid">
-                {AMOUNT_OPTIONS.map(a => (
-                  <div
-                    key={a.value}
-                    className={`fg-amt-card ${corpusAmount === a.value ? 'selected' : ''}`}
-                    onClick={() => selectAmount(a.value)}
-                  >
-                    <div className="fg-amt-main">{a.label}</div>
-                    <div className="fg-amt-sub">{a.sub}</div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              /* Option selector */
-              <div className="fg-options">
-                {q.options.map(opt => (
-                  <div
-                    key={opt.key}
-                    className={`fg-option ${selectedAnswer === opt.key ? 'selected' : ''}`}
-                    onClick={() => selectOption(q.id, opt.key)}
-                  >
-                    <div className={`fg-opt-key ${selectedAnswer === opt.key ? 'selected' : ''}`}>
-                      {opt.key}
-                    </div>
-                    <div className="fg-opt-body">
-                      <div className="fg-opt-title">{opt.title}</div>
-                      {opt.sub && <div className="fg-opt-sub">{opt.sub}</div>}
-                    </div>
-                    {selectedAnswer === opt.key && (
-                      <CheckCircle size={18} color="#1D9E75" style={{ flexShrink: 0 }} />
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
+// ─── EMBEDDED GUIDANCE QUIZ & RESULTS COMPONENT ─────────────────
+const EmbeddedQuizSection = ({
+  phase,
+  setPhase,
+  step,
+  nextStep,
+  prevStep,
+  selectOption,
+  selectAmount,
+  answers,
+  corpusAmount,
+  finishQuiz,
+  restartQuiz,
+  profile,
+  allocation,
+  userName,
+  setUserName,
+  userPhone,
+  setUserPhone,
+  userEmail,
+  setUserEmail,
+  saving,
+  handleSubmitProfile,
+  profileKey,
+  currentQuestion,
+  QUESTIONS,
+  AMOUNT_OPTIONS,
+  PROFILES,
+  formatINR
+}) => {
+  const isLast = step === QUESTIONS.length - 1;
+  const selectedAnswer = currentQuestion ? answers[currentQuestion.id] : null;
 
-            {/* Navigation */}
-            <div className="fg-nav-row">
-              {step > 0 && (
-                <button className="fg-nav-btn fg-nav-back" onClick={prevStep}>
-                  <ArrowLeft size={16} /> Back
-                </button>
-              )}
-              <div style={{ flex: 1 }} />
-              {isLast ? (
-                <button
-                  className={`fg-nav-btn fg-nav-primary ${!corpusAmount ? 'disabled' : ''}`}
-                  onClick={finishQuiz}
-                  disabled={!corpusAmount}
-                >
-                  See My Plan <Target size={16} />
-                </button>
-              ) : (
-                <button
-                  className={`fg-nav-btn fg-nav-primary ${!selectedAnswer ? 'disabled' : ''}`}
-                  onClick={nextStep}
-                  disabled={!selectedAnswer}
-                >
-                  Next <ArrowRight size={16} />
-                </button>
-              )}
-            </div>
+  // 1. SUBMITTED VIEW
+  if (phase === PHASE.SUBMITTED) {
+    return (
+      <div className="fg-submitted-container animate-fade-in" style={{ margin: '0 auto', maxWidth: '760px' }}>
+        <div className="fg-success-icon">
+          <CheckCircle size={64} color="#1D9E75" />
+        </div>
+        <h3 className="fg-success-title" style={{ fontSize: '28px', marginTop: '16px' }}>
+          You're All Set, {userName.split(' ')[0]}!
+        </h3>
+        <p className="fg-success-sub" style={{ marginBottom: '24px' }}>
+          Your financial profile has been shared with our team. A VeerNXT financial consultant will contact you within 24 hours to create your detailed plan.
+        </p>
+
+        <div className="fg-submitted-summary">
+          <div className="fg-sub-item">
+            <span className="fg-sub-label">Profile</span>
+            <span className="fg-sub-val">{PROFILES[profileKey]?.name || profileKey}</span>
+          </div>
+          <div className="fg-sub-item">
+            <span className="fg-sub-label">Corpus</span>
+            <span className="fg-sub-val">{formatINR(corpusAmount)}</span>
+          </div>
+          <div className="fg-sub-item">
+            <span className="fg-sub-label">Recommended SIP</span>
+            <span className="fg-sub-val">{formatINR(Math.max(Math.round(corpusAmount * 0.05 / 12), 500))}/mo</span>
           </div>
         </div>
 
-        <FinancialGuidanceStyles />
+        <div className="fg-submitted-actions" style={{ marginTop: '32px' }}>
+          <button className="fg-cta-btn fg-cta-outline" onClick={() => setPhase(PHASE.RESULT)}>
+            View My Allocation <ArrowRight size={16} />
+          </button>
+          <button className="fg-cta-btn" onClick={restartQuiz}>
+            <RefreshCw size={16} /> New Profile
+          </button>
+        </div>
       </div>
     );
   }
 
-  // ─── RENDER: RESULT ───────────────────────────────────────────
+  // 2. RESULT VIEW
   if (phase === PHASE.RESULT && profile && allocation) {
     const sipMonthly = Math.max(Math.round(corpusAmount * 0.05 / 12), 500);
 
     return (
-      <div className="fg-wrapper">
-        <div className="fg-result-container animate-fade-in">
-          {/* Profile Header */}
-          <div className="fg-profile-header" style={{ background: profile.bgColor, borderColor: profile.borderColor }}>
-            <div className="fg-profile-emoji">{profile.emoji}</div>
-            <div className="fg-profile-badge" style={{ color: profile.color }}>{profile.badge} — {formatINR(corpusAmount)} corpus</div>
-            <h1 className="fg-profile-name" style={{ color: profile.color }}>{profile.name}</h1>
-            <p className="fg-profile-desc">{profile.desc}</p>
-            <div className="fg-profile-meta">
-              <span className="fg-meta-pill" style={{ background: profile.color, color: 'white' }}>
-                ⚖️ {profile.risk}
-              </span>
-              <span className="fg-meta-pill" style={{ background: 'rgba(0,0,0,0.06)' }}>
-                ⏱️ {profile.horizon}
-              </span>
-            </div>
+      <div className="fg-result-container animate-fade-in" style={{ margin: '0 auto', maxWidth: '960px' }}>
+        {/* Profile Header */}
+        <div className="fg-profile-header" style={{ background: profile.bgColor, borderColor: profile.borderColor }}>
+          <div className="fg-profile-tag" style={{ background: profile.color, color: '#fff' }}>
+            <Award size={14} /> {profileKey}
           </div>
+          <h3 className="fg-profile-name" style={{ color: profile.color, fontSize: '32px', margin: '12px 0 8px' }}>
+            {profile.name}
+          </h3>
+          <p className="fg-profile-tagline" style={{ fontWeight: '600', marginBottom: '8px' }}>{profile.tagline}</p>
+          <p className="fg-profile-desc">{profile.description}</p>
+        </div>
 
-          {/* Urgency Flags */}
-          <div className="fg-section">
-            <h3 className="fg-section-subtitle">Priority Flags</h3>
-            <div className="fg-urgency-strip">
-              {profile.urgencies.map((u, i) => (
-                <span
-                  key={i}
-                  className={`fg-urgency-pill ${u.level}`}
-                >
-                  {u.text}
-                </span>
-              ))}
-            </div>
+        {/* Total Corpus Display */}
+        <div className="fg-corpus-card">
+          <div className="fg-corpus-left">
+            <span className="fg-corpus-label">Your Seva Nidhi Corpus</span>
+            <span className="fg-corpus-amount">{formatINR(corpusAmount)}</span>
+            <span className="fg-corpus-tax">100% Tax-Free • Yours to Keep</span>
           </div>
-
-          {/* SIP Box */}
-          <div className="fg-sip-box">
-            <div className="fg-sip-label">Minimum SIP to start — regardless of everything else</div>
-            <div className="fg-sip-val">{formatINR(sipMonthly)} / month</div>
-            <div className="fg-sip-sub">The Agniveer served with discipline for 4 years. This SIP is that same discipline — applied to wealth.</div>
+          <div className="fg-corpus-right">
+            <span className="fg-sip-label">Recommended Monthly SIP</span>
+            <span className="fg-sip-amount">{formatINR(sipMonthly)}/mo</span>
+            <span className="fg-sip-sub">5% of corpus • Build recurring wealth</span>
           </div>
+        </div>
 
-          {/* Allocation Grid */}
-          <div className="fg-section">
-            <h3 className="fg-section-subtitle">{allocation.label} — {formatINR(corpusAmount)}</h3>
-            <div className="fg-alloc-grid">
-              {allocation.items.map((item, i) => (
-                <div key={i} className="fg-alloc-card">
-                  <div className="fg-alloc-pct" style={{ color: profile.color }}>{item.pct}%</div>
-                  <div className="fg-alloc-product">{item.product}</div>
-                  <div className="fg-alloc-amt">{formatINR(item.amount)}</div>
-                  <div className="fg-alloc-why">{item.why}</div>
-                </div>
-              ))}
-            </div>
+        {/* Allocation Table */}
+        <div className="fg-section animate-fade-in" style={{ animationDelay: '0.15s', marginTop: '32px' }}>
+          <h3 className="fg-section-title" style={{ fontSize: '22px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <TrendingUp size={22} color="var(--g)" />
+            Recommended Rupee-Level Allocation
+          </h3>
+          <p className="fg-section-sub" style={{ marginBottom: '20px', color: 'var(--mid)' }}>
+            Specific distribution across SEBI-regulated instruments for maximum growth and security.
+          </p>
+
+          <div className="fg-table-wrapper">
+            <table className="fg-allocation-table">
+              <thead>
+                <tr>
+                  <th>Instrument / Category</th>
+                  <th>Share</th>
+                  <th>Amount (₹)</th>
+                  <th>Why This Instrument</th>
+                  <th>Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                {allocation.map((item, idx) => (
+                  <tr key={idx}>
+                    <td>
+                      <div className="fg-inst-name">{item.name}</div>
+                      <div className="fg-inst-cat">{item.category}</div>
+                    </td>
+                    <td className="fg-td-pct">
+                      <span className="fg-pct-badge" style={{ backgroundColor: item.color + '18', color: item.color }}>
+                        {item.percentage}%
+                      </span>
+                    </td>
+                    <td className="fg-td-amt">{formatINR(item.amount)}</td>
+                    <td className="fg-td-why">{item.rationale}</td>
+                    <td>
+                      <span className={`fg-priority-flag ${item.priority.toLowerCase()}`}>
+                        {item.priority}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+        </div>
 
-          {/* Visual Allocation Bar */}
-          <div className="fg-alloc-bar-container">
-            <div className="fg-alloc-bar">
-              {allocation.items.map((item, i) => {
-                const colors = ['#1D9E75', '#EF9F27', '#2563EB', '#7C3AED', '#DC2626'];
-                return (
-                  <div
-                    key={i}
-                    className="fg-alloc-bar-segment"
-                    style={{ width: `${item.pct}%`, background: colors[i % colors.length] }}
-                    title={`${item.product}: ${item.pct}%`}
-                  />
-                );
-              })}
-            </div>
-            <div className="fg-alloc-bar-labels">
-              {allocation.items.map((item, i) => {
-                const colors = ['#1D9E75', '#EF9F27', '#2563EB', '#7C3AED', '#DC2626'];
-                return (
-                  <div key={i} className="fg-alloc-bar-label">
-                    <span className="fg-bar-dot" style={{ background: colors[i % colors.length] }} />
-                    <span className="fg-bar-text">{item.product.split('(')[0].trim()}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* 5 Laws */}
-          <div className="fg-pillars" style={{ borderColor: profile.borderColor, background: profile.bgColor }}>
-            <div className="fg-pillars-title">Five laws that never change — for any profile</div>
-            {FIVE_LAWS.map((law, i) => (
-              <div key={i} className="fg-pillar-row">
-                <div className="fg-pillar-num" style={{ background: profile.color }}>{i + 1}</div>
-                <span>{law}</span>
+        {/* 3 Golden Rules */}
+        <div className="fg-section animate-fade-in" style={{ animationDelay: '0.25s', marginTop: '40px' }}>
+          <h3 className="fg-section-title" style={{ fontSize: '22px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <ShieldCheck size={22} color="var(--g)" />
+            3 Rules for Your Seva Nidhi
+          </h3>
+          <div className="fg-rules-grid">
+            {GOLDEN_RULES.map((rule, idx) => (
+              <div key={idx} className="fg-rule-card">
+                <div className="fg-rule-num">Rule 0{idx + 1}</div>
+                <h4 className="fg-rule-title">{rule.title}</h4>
+                <p className="fg-rule-text">{rule.description}</p>
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Consultant CTA */}
-          <div className="fg-consultant-cta">
-            <div className="fg-consultant-icon">
-              <MessageCircle size={32} color="white" />
+        {/* WhatsApp Consultant CTA Box */}
+        <div className="fg-handoff-card animate-fade-in" style={{ animationDelay: '0.35s', marginTop: '40px' }}>
+          <div className="fg-handoff-header">
+            <div className="fg-handoff-icon">
+              <MessageCircle size={28} color="#25D366" />
             </div>
-            <h3>Talk to a VeerNXT Financial Consultant</h3>
-            <p>Our SEBI-registered advisors will review your profile and create a detailed, actionable plan — completely free.</p>
-            <div className="fg-consultant-user-info">
-              <div className="fg-user-detail">
-                <span className="fg-user-label">Name</span>
-                <span className="fg-user-value">{userName}</span>
+            <div>
+              <h3 className="fg-handoff-title" style={{ fontSize: '24px' }}>Get Your Custom Investment Plan on WhatsApp</h3>
+              <p className="fg-handoff-sub">
+                A VeerNXT financial consultant will review your profile and send a step-by-step execution guide. Zero spam. 100% free for Agniveers.
+              </p>
+            </div>
+          </div>
+
+          <div className="fg-handoff-form">
+            <div className="fg-form-row">
+              <div className="fg-input-group">
+                <label>Your Name</label>
+                <input
+                  type="text"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  placeholder="e.g. Havildar Rajesh"
+                />
               </div>
-              {userPhone && (
-                <div className="fg-user-detail">
-                  <span className="fg-user-label">Phone</span>
-                  <span className="fg-user-value">{userPhone}</span>
-                </div>
-              )}
-              {userEmail && (
-                <div className="fg-user-detail">
-                  <span className="fg-user-label">Email</span>
-                  <span className="fg-user-value">{userEmail}</span>
-                </div>
-              )}
+              <div className="fg-input-group">
+                <label>WhatsApp Number</label>
+                <input
+                  type="tel"
+                  value={userPhone}
+                  onChange={(e) => setUserPhone(e.target.value)}
+                  placeholder="e.g. 9876543210"
+                />
+              </div>
             </div>
+            <div className="fg-input-group">
+              <label>Email (for PDF report)</label>
+              <input
+                type="email"
+                value={userEmail}
+                onChange={(e) => setUserEmail(e.target.value)}
+                placeholder="e.g. rajesh@veernxt.com"
+              />
+            </div>
+
+            <div className="fg-handoff-actions">
+              <button
+                className="fg-cta-btn btn-whatsapp"
+                onClick={handleSubmitProfile}
+                disabled={saving || !userPhone}
+              >
+                <MessageCircle size={18} />
+                {saving ? 'Connecting...' : 'Connect with a Consultant on WhatsApp'}
+              </button>
+              <button
+                className="fg-cta-btn fg-cta-outline"
+                onClick={restartQuiz}
+              >
+                <RefreshCw size={16} /> Retake Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // 3. QUIZ VIEW (DEFAULT: PHASE.LANDING or PHASE.QUIZ)
+  if (!currentQuestion) return null;
+  return (
+    <div className="fg-quiz-container animate-fade-in" style={{ margin: '0 auto', maxWidth: '760px', background: '#fff', padding: '36px', borderRadius: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+      {/* Progress Bar */}
+      <div className="fg-progress-header">
+        <div className="fg-progress-bar">
+          {QUESTIONS.map((_, i) => (
+            <div
+              key={i}
+              className={`fg-progress-step ${i < step ? 'done' : i === step ? 'active' : ''}`}
+            />
+          ))}
+        </div>
+        <span className="fg-progress-label">{step + 1} of {QUESTIONS.length}</span>
+      </div>
+
+      {/* Question Card */}
+      <div className="fg-question-card" style={{ marginTop: '24px' }}>
+        <div className="fg-q-label">{currentQuestion.label}</div>
+        <h3 className="fg-q-text" style={{ fontSize: '26px', marginTop: '6px', color: 'var(--ink)' }}>{currentQuestion.text}</h3>
+        <p className="fg-q-sub">{currentQuestion.sub}</p>
+
+        {/* Amount selector */}
+        {currentQuestion.isAmount ? (
+          <div className="fg-amount-grid">
+            {AMOUNT_OPTIONS.map(a => (
+              <div
+                key={a.value}
+                className={`fg-amt-card ${corpusAmount === a.value ? 'selected' : ''}`}
+                onClick={() => selectAmount(a.value)}
+              >
+                <div className="fg-amt-main">{a.label}</div>
+                <div className="fg-amt-sub">{a.sub}</div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* Option selector */
+          <div className="fg-options">
+            {currentQuestion.options.map(opt => (
+              <div
+                key={opt.key}
+                className={`fg-option ${selectedAnswer === opt.key ? 'selected' : ''}`}
+                onClick={() => selectOption(currentQuestion.id, opt.key)}
+              >
+                <div className={`fg-opt-key ${selectedAnswer === opt.key ? 'selected' : ''}`}>
+                  {opt.key}
+                </div>
+                <div className="fg-opt-body">
+                  <div className="fg-opt-title">{opt.title}</div>
+                  {opt.sub && <div className="fg-opt-sub">{opt.sub}</div>}
+                </div>
+                {selectedAnswer === opt.key && (
+                  <CheckCircle size={18} color="#1D9E75" style={{ flexShrink: 0 }} />
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Navigation buttons */}
+        <div className="fg-q-nav" style={{ marginTop: '32px' }}>
+          <button
+            className="fg-nav-btn fg-nav-prev"
+            onClick={prevStep}
+            disabled={step === 0}
+          >
+            <ArrowLeft size={16} /> Previous
+          </button>
+
+          {isLast ? (
             <button
-              className="fg-wa-btn"
-              onClick={handleConsultantHandoff}
-              disabled={saving}
+              className="fg-cta-btn"
+              onClick={finishQuiz}
+              disabled={!corpusAmount}
             >
-              {saving ? (
-                <><RefreshCw size={18} className="animate-spin" /> Connecting...</>
-              ) : (
-                <><MessageCircle size={18} /> Connect on WhatsApp</>
-              )}
+              See My Allocation <ArrowRight size={18} />
             </button>
-            <p className="fg-wa-note">
-              Your profile summary will be shared with our team. A financial consultant will contact you within 24 hours.
-            </p>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="fg-action-row">
-            <button className="fg-action-btn" onClick={handleDownload}>
-              <Download size={16} /> Download Plan
+          ) : (
+            <button
+              className="fg-cta-btn fg-nav-next"
+              onClick={nextStep}
+              disabled={!answers[currentQuestion.id]}
+            >
+              Next <ArrowRight size={16} />
             </button>
-            <button className="fg-action-btn fg-action-restart" onClick={restartQuiz}>
-              <RefreshCw size={16} /> Start Again
-            </button>
-          </div>
+          )}
         </div>
-
-        <FinancialGuidanceStyles />
       </div>
-    );
-  }
-
-  // ─── RENDER: SUBMITTED ────────────────────────────────────────
-  if (phase === PHASE.SUBMITTED) {
-    return (
-      <div className="fg-wrapper">
-        <div className="fg-submitted-container animate-fade-in">
-          <div className="fg-success-icon">
-            <CheckCircle size={64} color="#1D9E75" />
-          </div>
-          <h1 className="fg-success-title">You're All Set, {userName.split(' ')[0]}!</h1>
-          <p className="fg-success-sub">
-            Your financial profile has been shared with our team. A VeerNXT financial consultant will contact you within 24 hours to create your detailed plan.
-          </p>
-
-          <div className="fg-success-card">
-            <div className="fg-success-row">
-              <span className="fg-success-label">Your Profile</span>
-              <span className="fg-success-value">{profile?.emoji} {profile?.name}</span>
-            </div>
-            <div className="fg-success-row">
-              <span className="fg-success-label">Corpus</span>
-              <span className="fg-success-value">{formatINR(corpusAmount)}</span>
-            </div>
-            <div className="fg-success-row">
-              <span className="fg-success-label">Risk Level</span>
-              <span className="fg-success-value">{profile?.risk}</span>
-            </div>
-          </div>
-
-          <div className="fg-success-actions">
-            <button className="fg-cta-btn fg-cta-outline" onClick={() => setPhase(PHASE.RESULT)}>
-              <ArrowLeft size={16} /> View My Plan Again
-            </button>
-            <button className="fg-cta-btn" onClick={restartQuiz}>
-              <RefreshCw size={16} /> New Profile
-            </button>
-          </div>
-        </div>
-
-        <FinancialGuidanceStyles />
-      </div>
-    );
-  }
-
-  return null;
+    </div>
+  );
 };
 
-// ─── Scoped Styles Component ────────────────────────────────────
+// ─── CLIENT LANDING PAGE COMPONENT ──────────────────────────────
+const ClientLandingPage = ({
+  onStartQuiz,
+  onGoPortal,
+  phase,
+  setPhase,
+  step,
+  nextStep,
+  prevStep,
+  selectOption,
+  selectAmount,
+  answers,
+  corpusAmount,
+  finishQuiz,
+  restartQuiz,
+  profile,
+  allocation,
+  userName,
+  setUserName,
+  userPhone,
+  setUserPhone,
+  userEmail,
+  setUserEmail,
+  saving,
+  handleSubmitProfile,
+  profileKey,
+  currentQuestion,
+  QUESTIONS,
+  AMOUNT_OPTIONS,
+  PROFILES,
+  formatINR
+}) => {
+  const [calcTab, setCalcTab] = useState('sip');
+  const [sipAmt, setSipAmt] = useState(500);
+  const [sipYr, setSipYr] = useState(10);
+  const [corpAmt, setCorpAmt] = useState(1000000);
+  const [corpYr, setCorpYr] = useState(5);
+
+  // Math calculations
+  const sipR = 12 / 100 / 12;
+  const sipN = sipYr * 12;
+  const sipFV = Math.round(sipAmt * ((Math.pow(1 + sipR, sipN) - 1) / sipR) * (1 + sipR));
+  const sipInvested = Math.round(sipAmt * sipN);
+  const sipGain = sipFV - sipInvested;
+
+  const corpR = 7.5 / 100;
+  const corpN = corpYr;
+  const corpFV = Math.round(corpAmt * Math.pow(1 + corpR, corpN));
+  const corpGain = corpFV - corpAmt;
+
+  return (
+    <div>
+      {/* ── VERIFIED AGNIVEER STRIP ─────────────────────────────── */}
+      <div className="verified-strip" role="banner">
+        <div className="verified-strip-inner">
+          <p>🎖️ Verified Agniveers get full platform access — FREE. <a href="#quiz-section">Take the Interactive Guidance Quiz →</a></p>
+        </div>
+      </div>
+
+      {/* ── HERO ────────────────────────────────────────────────── */}
+      <section className="hero" aria-labelledby="hero-headline">
+        <div className="hero-inner">
+          <div className="hero-left">
+            <div className="hero-eyebrow" aria-hidden="true">
+              <span className="hero-dot"></span>
+              <span className="hero-eyebrow-text">Built by Veterans. For Agniveers.</span>
+            </div>
+            <h1 className="hero-headline" id="hero-headline">
+              The parade is over.<br />
+              Your <em>second mission</em><br />
+              starts here.
+            </h1>
+            <p className="hero-hindi" lang="hi" aria-label="Sewa se samriddh kal ki or">सेवा से समृद्ध कल की ओर</p>
+            <p className="hero-sub">
+              You served India with discipline for four years.
+              VeerNXT exists to make sure that same discipline now builds you
+              <strong> a career, a community, and a prosperous future.</strong>
+              One platform. Built only for you.
+            </p>
+            <div className="hero-actions">
+              <button onClick={onStartQuiz} className="btn btn-gold">
+                <span>🎯</span> Start My Mission Profile
+              </button>
+              <a href="#mission" className="btn btn-outline">See How It Works</a>
+            </div>
+            <div className="hero-trust" aria-label="Trust signals">
+              <span className="trust-item"><span className="trust-icon" aria-hidden="true">🛡️</span> AMFI Registered Distributor</span>
+              <span className="trust-item"><span className="trust-icon" aria-hidden="true">🏦</span> Execution via Prudent (BSE/NSE Listed)</span>
+              <span className="trust-item"><span className="trust-icon" aria-hidden="true">✅</span> Zero cost to Agniveer</span>
+            </div>
+          </div>
+          <div className="hero-right" aria-hidden="true">
+            <div className="stat-card">
+              <div className="stat-card-num">₹10–12L</div>
+              <div className="stat-card-label">Seva Nidhi in your hands. Tax-free.</div>
+              <div className="stat-card-sub">The corpus that can change your family's trajectory — if invested right.</div>
+            </div>
+            <div className="stat-grid">
+              <div className="stat-card">
+                <div className="stat-card-num">50K+</div>
+                <div className="stat-card-label">Agniveers released every year</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-card-num">4 Yrs</div>
+                <div className="stat-card-label">Of discipline. Now applied to wealth.</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-card-num">8</div>
+                <div className="stat-card-label">Distinct Agniveer profiles mapped</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-card-num">Zero</div>
+                <div className="stat-card-label">Competing platforms. VeerNXT is first.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SITUATION ────────────────────────────────────────────── */}
+      <section className="situation" id="mission" aria-labelledby="situation-headline">
+        <div className="container">
+          <div className="situation-grid">
+            <div className="situation-left">
+              <div className="section-eyebrow">The situation</div>
+              <h2 className="section-headline" id="situation-headline">The day the uniform comes off is the day the system stops guiding you.</h2>
+              <p className="section-sub">Nobody tells you this. But every Agniveer feels it the moment they walk out of the gate.</p>
+              <div className="fact-list">
+                <div className="fact-item">
+                  <div className="fact-num">01</div>
+                  <div className="fact-text"><strong>Zero income on Day 1</strong>After 4 years of structured salary, monthly income becomes zero overnight. The financial runway is your Seva Nidhi — and it must last.</div>
+                </div>
+                <div className="fact-item">
+                  <div className="fact-num">02</div>
+                  <div className="fact-text"><strong>Predatory advisors are already waiting</strong>The moment you receive your corpus, local agents — well-meaning or otherwise — will offer you plans that serve their commission, not your future.</div>
+                </div>
+                <div className="fact-item">
+                  <div className="fact-num">03</div>
+                  <div className="fact-text"><strong>No structured civilian transition pathway</strong>No government scheme. No platform. No community. Just thousands of disconnected opportunities and no map to navigate them.</div>
+                </div>
+                <div className="fact-item">
+                  <div className="fact-num">04</div>
+                  <div className="fact-text"><strong>The 18-month window is critical</strong>Decisions made in the first 18 months after service — about career, education, investment — define the next 40 years. This is the window VeerNXT was built for.</div>
+                </div>
+              </div>
+            </div>
+            <div className="situation-right">
+              <p className="situation-quote">"A soldier should not have to rediscover direction the day the uniform comes off."</p>
+              <div className="three-stats">
+                <div className="mini-stat">
+                  <div className="mini-stat-num">50K+</div>
+                  <div className="mini-stat-label">Agniveers released every year</div>
+                </div>
+                <div className="mini-stat">
+                  <div className="mini-stat-num">₹500Cr+</div>
+                  <div className="mini-stat-label">Seva Nidhi entering civilian market annually</div>
+                </div>
+                <div className="mini-stat">
+                  <div className="mini-stat-num">Zero</div>
+                  <div className="mini-stat-label">Community-specific platforms before VeerNXT</div>
+                </div>
+              </div>
+              <div className="truth-box">
+                <p>Most Agniveers lose a significant portion of their Seva Nidhi within 18 months — not because they are careless, but because no one gave them the right information, in the right language, at the right time.</p>
+                <cite>VeerNXT exists because that stops now.</cite>
+              </div>
+
+              <div className="profiling-cta">
+                <div className="profiling-cta-left">
+                  <h3>Find out who you are — financially.</h3>
+                  <p>7 questions. 3 minutes. A plan built only for your situation.</p>
+                </div>
+                <button onClick={onStartQuiz} className="btn btn-gold">Start Profile →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PROFILING PATHWAY ────────────────────────────────────── */}
+      <section className="section" id="profiling" aria-labelledby="profiling-headline">
+        <div className="container">
+          <div className="section-eyebrow">How it works</div>
+          <h2 className="section-headline" id="profiling-headline">VeerNXT walks you through, step by step.</h2>
+          <p className="section-sub">No jargon. No pressure. No advisor earning commission before you understand what you are investing in.</p>
+          <div className="profiling-steps" role="list" aria-label="VeerNXT pathway steps">
+            <div className="pstep active" role="listitem">
+              <div className="pstep-num">1</div>
+              <div className="pstep-label">Profile</div>
+              <div className="pstep-sub">7-question financial &amp; life profiling</div>
+              <div className="pstep-arrow" aria-hidden="true"></div>
+            </div>
+            <div className="pstep" role="listitem">
+              <div className="pstep-num">2</div>
+              <div className="pstep-label">Match</div>
+              <div className="pstep-sub">Mapped to 1 of 8 Agniveer profiles</div>
+              <div className="pstep-arrow" aria-hidden="true"></div>
+            </div>
+            <div className="pstep" role="listitem">
+              <div className="pstep-num">3</div>
+              <div className="pstep-label">Prepare</div>
+              <div className="pstep-sub">Exam prep + career guidance</div>
+              <div className="pstep-arrow" aria-hidden="true"></div>
+            </div>
+            <div className="pstep" role="listitem">
+              <div className="pstep-num">4</div>
+              <div className="pstep-label">Invest</div>
+              <div className="pstep-sub">Rupee-level plan via Prudent</div>
+              <div className="pstep-arrow" aria-hidden="true"></div>
+            </div>
+            <div className="pstep" role="listitem">
+              <div className="pstep-num">5</div>
+              <div className="pstep-label">Prosper</div>
+              <div className="pstep-sub">Reviewed every 6 months as life changes</div>
+            </div>
+          </div>
+          <div style={{ marginTop: '32px', textAlign: 'center' }}>
+            <button onClick={onStartQuiz} className="btn btn-green">
+              Start My Mission Profile <ArrowRight size={16} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SIX PILLARS ─────────────────────────────────────────── */}
+      <section className="section section-alt" id="pillars" aria-labelledby="pillars-headline">
+        <div className="container">
+          <div className="section-eyebrow">What VeerNXT offers</div>
+          <h2 className="section-headline" id="pillars-headline">Six pillars. One mission.</h2>
+          <p className="section-sub">Every service you need to build a successful life after uniform — in one place, in your language, at your pace.</p>
+          <div className="pillars-grid">
+            <div className="pillar-card">
+              <div className="pillar-icon" aria-hidden="true">🗺️</div>
+              <h3><span>Opportunity</span> Mapping</h3>
+              <p>Profiled against your training, trade, Arm/Service background, domicile and goals. The right pathways — not thousands of disconnected options.</p>
+              <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
+            </div>
+            <div className="pillar-card">
+              <div className="pillar-icon" aria-hidden="true">📋</div>
+              <h3><span>Exam</span> Intelligence</h3>
+              <p>Central and State Govt opportunities, eligibility, reservations, notifications and personalised alerts — matched to who you are.</p>
+              <div className="pillar-tag"><span class="badge badge-green">EdTech</span></div>
+            </div>
+            <div className="pillar-card">
+              <div className="pillar-icon" aria-hidden="true">📚</div>
+              <h3><span>Exam</span> Preparation</h3>
+              <p>Guidebook, précis, 10-year PYQ, 10 mock tests — for every relevant exam. Hindi-first content. Structured for how a soldier learns.</p>
+              <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
+            </div>
+            <div className="pillar-card">
+              <div className="pillar-icon" aria-hidden="true">💼</div>
+              <h3><span>Career</span> Transition</h3>
+              <p>Military experience translated into civilian employability. Skill mapping, CV building, interview prep, employer linkage.</p>
+              <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
+            </div>
+            <div className="pillar-card">
+              <div className="pillar-icon" aria-hidden="true">📈</div>
+              <h3><span>Financial</span> Empowerment</h3>
+              <p>Intelligent risk profiling → rupee-level investment plan → execution via Prudent. MF, NPS, insurance, post office. Zero cost to you.</p>
+              <div className="pillar-tag"><span className="badge badge-gold">FinTech</span></div>
+            </div>
+            <div className="pillar-card">
+              <div className="pillar-icon" aria-hidden="true">🤝</div>
+              <h3><span>Community</span> &amp; Mentorship</h3>
+              <p>A network of Agniveers navigating the same road. Mentors who have walked ahead. Because the loneliness of transition is real.</p>
+              <div className="pillar-tag"><span className="badge badge-green">Both</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TOOLS / CALCULATORS ─────────────────────────────────── */}
+      <section className="section" id="tools" aria-labelledby="tools-headline">
+        <div className="container">
+          <div className="section-eyebrow">Free tools</div>
+          <h2 className="section-headline" id="tools-headline">See your money's future. Before you invest a rupee.</h2>
+          <p className="section-sub">Interactive calculators built with the Agniveer's real corpus in mind. No login needed.</p>
+          <div className="calc-wrapper">
+            <div>
+              <div className="calc-tabs" role="tablist" aria-label="Calculator type">
+                <button
+                  className={`calc-tab ${calcTab === 'sip' ? 'active' : ''}`}
+                  role="tab"
+                  aria-selected={calcTab === 'sip'}
+                  onClick={() => setCalcTab('sip')}
+                >
+                  SIP Calculator
+                </button>
+                <button
+                  className={`calc-tab ${calcTab === 'corpus' ? 'active' : ''}`}
+                  role="tab"
+                  aria-selected={calcTab === 'corpus'}
+                  onClick={() => setCalcTab('corpus')}
+                >
+                  Corpus Planner
+                </button>
+                <button
+                  className={`calc-tab ${calcTab === 'seva' ? 'active' : ''}`}
+                  role="tab"
+                  aria-selected={calcTab === 'seva'}
+                  onClick={() => setCalcTab('seva')}
+                >
+                  Seva Nidhi
+                </button>
+              </div>
+
+              {/* SIP Calculator */}
+              {calcTab === 'sip' && (
+                <div className="calc-box">
+                  <div className="calc-field">
+                    <label>Monthly SIP amount <span>₹{sipAmt.toLocaleString('en-IN')}</span></label>
+                    <input
+                      type="range" min="500" max="10000" step="500"
+                      value={sipAmt} onChange={e => setSipAmt(Number(e.target.value))}
+                      aria-label="Monthly SIP amount"
+                    />
+                  </div>
+                  <div className="calc-field">
+                    <label>Expected return (p.a.) <span>12%</span></label>
+                    <input type="range" min="8" max="18" step="1" value="12" disabled aria-label="Expected return" />
+                  </div>
+                  <div className="calc-field">
+                    <label>Time period <span>{sipYr} years</span></label>
+                    <input
+                      type="range" min="3" max="25" step="1"
+                      value={sipYr} onChange={e => setSipYr(Number(e.target.value))}
+                      aria-label="Time period in years"
+                    />
+                  </div>
+                  <div className="calc-result">
+                    <div className="cr-item">
+                      <div className="cr-label">Total Invested</div>
+                      <div className="cr-val">₹{sipInvested.toLocaleString('en-IN')}</div>
+                    </div>
+                    <div className="cr-item">
+                      <div className="cr-label">Estimated Gains</div>
+                      <div className="cr-val gold">₹{sipGain.toLocaleString('en-IN')}</div>
+                    </div>
+                    <div className="cr-item">
+                      <div className="cr-label">Total Value</div>
+                      <div className="cr-val">₹{sipFV.toLocaleString('en-IN')}</div>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
+                    Projections are indicative. Actual returns depend on market conditions. Mutual Fund investments are subject to market risk.
+                  </p>
+                </div>
+              )}
+
+              {/* Corpus Planner */}
+              {calcTab === 'corpus' && (
+                <div className="calc-box">
+                  <div className="calc-field">
+                    <label>Seva Nidhi corpus <span>₹{corpAmt.toLocaleString('en-IN')}</span></label>
+                    <input
+                      type="range" min="300000" max="1500000" step="50000"
+                      value={corpAmt} onChange={e => setCorpAmt(Number(e.target.value))}
+                      aria-label="Seva Nidhi corpus"
+                    />
+                  </div>
+                  <div className="calc-field">
+                    <label>Conservative return (p.a.) <span>7.5%</span></label>
+                    <input type="range" min="5" max="12" step="0.5" value="7.5" disabled aria-label="Expected return" />
+                  </div>
+                  <div className="calc-field">
+                    <label>Time period <span>{corpYr} years</span></label>
+                    <input
+                      type="range" min="1" max="15" step="1"
+                      value={corpYr} onChange={e => setCorpYr(Number(e.target.value))}
+                      aria-label="Time period"
+                    />
+                  </div>
+                  <div className="calc-result">
+                    <div className="cr-item">
+                      <div className="cr-label">Principal</div>
+                      <div className="cr-val">₹{corpAmt.toLocaleString('en-IN')}</div>
+                    </div>
+                    <div className="cr-item">
+                      <div className="cr-label">Interest Earned</div>
+                      <div className="cr-val gold">₹{corpGain.toLocaleString('en-IN')}</div>
+                    </div>
+                    <div className="cr-item">
+                      <div className="cr-label">Total Value</div>
+                      <div className="cr-val">₹{corpFV.toLocaleString('en-IN')}</div>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
+                    Projections are indicative. Actual returns depend on market conditions. Mutual Fund investments are subject to market risk.
+                  </p>
+                </div>
+              )}
+
+              {/* Seva Nidhi Breakdown */}
+              {calcTab === 'seva' && (
+                <div className="calc-box">
+                  <p style={{ fontSize: '14px', color: 'var(--mid)', lineHeight: '1.7', marginBottom: '16px' }}>
+                    Your Seva Nidhi is approximately <strong>₹10–12 Lakhs</strong> upon completion of 4 years.
+                    It is 100% tax-free under Section 10(10D) of the Income Tax Act.
+                  </p>
+                  <div className="calc-result">
+                    <div className="cr-item">
+                      <div className="cr-label">1 Year (FD/Liquid)</div>
+                      <div className="cr-val">₹10.7L</div>
+                    </div>
+                    <div className="cr-item">
+                      <div className="cr-label">3 Years (Balanced)</div>
+                      <div className="cr-val gold">₹13.4L</div>
+                    </div>
+                    <div className="cr-item">
+                      <div className="cr-label">5 Years (Growth)</div>
+                      <div className="cr-val">₹16.8L</div>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
+                    Projections are indicative. Actual returns depend on market conditions. Mutual Fund investments are subject to market risk.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', color: 'var(--ink)', marginBottom: '8px' }}>More planning tools</h3>
+              <p style={{ fontSize: '13px', color: 'var(--mid)', marginBottom: '20px' }}>All free. No login required. Built for the Agniveer's real numbers.</p>
+              <div className="calc-tools-grid">
+                <div className="tool-chip">
+                  <div className="tool-chip-icon" aria-hidden="true">💰</div>
+                  <div>
+                    <div className="tool-chip-label">Seva Nidhi Splitter</div>
+                    <div className="tool-chip-sub">Spend / Save / Invest ratios</div>
+                  </div>
+                </div>
+                <div className="tool-chip">
+                  <div className="tool-chip-icon" aria-hidden="true">🏡</div>
+                  <div>
+                    <div className="tool-chip-label">Home / Plot Goal</div>
+                    <div className="tool-chip-sub">Timeline &amp; SIP needed</div>
+                  </div>
+                </div>
+                <div className="tool-chip">
+                  <div className="tool-chip-icon" aria-hidden="true">🎓</div>
+                  <div>
+                    <div className="tool-chip-label">Higher Ed Planner</div>
+                    <div className="tool-chip-sub">Course fee + stipend math</div>
+                  </div>
+                </div>
+                <div className="tool-chip">
+                  <div className="tool-chip-icon" aria-hidden="true">🛡️</div>
+                  <div>
+                    <div className="tool-chip-label">Term Insurance Check</div>
+                    <div className="tool-chip-sub">How much cover do you need?</div>
+                  </div>
+                </div>
+                <div className="tool-chip">
+                  <div className="tool-chip-icon" aria-hidden="true">📈</div>
+                  <div>
+                    <div className="tool-chip-label">NPS vs PPF vs MF</div>
+                    <div className="tool-chip-sub">Honest side-by-side comparison</div>
+                  </div>
+                </div>
+                <div className="tool-chip">
+                  <div className="tool-chip-icon" aria-hidden="true">🚨</div>
+                  <div>
+                    <div className="tool-chip-label">Emergency Fund Calc</div>
+                    <div className="tool-chip-sub">Your minimum safety net</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMBEDDED GUIDANCE QUIZ & RESULTS ─────────────────────── */}
+      <section className="section section-alt" id="quiz-section" aria-labelledby="quiz-headline">
+        <div className="container">
+          <div className="section-eyebrow" style={{ color: 'var(--g)' }}>Interactive Financial Guidance</div>
+          <h2 className="section-headline" id="quiz-headline">
+            {phase === PHASE.RESULT && "Your Personalised Allocation Plan"}
+            {phase === PHASE.SUBMITTED && "Profile Submitted Successfully"}
+            {(phase !== PHASE.RESULT && phase !== PHASE.SUBMITTED) && "Discover Your Personalised Investment Plan"}
+          </h2>
+          <p className="section-sub">
+            {phase === PHASE.RESULT && "Unbiased, military-tailored investment breakdown based on your responses."}
+            {phase === PHASE.SUBMITTED && "A VeerNXT financial consultant will reach out within 24 hours to create your detailed plan."}
+            {(phase !== PHASE.RESULT && phase !== PHASE.SUBMITTED) && "Answer 7 simple questions to unlock your custom asset allocation. Free permanently for Agniveers."}
+          </p>
+
+          <div style={{ marginTop: '32px' }}>
+            <EmbeddedQuizSection
+              phase={phase}
+              setPhase={setPhase}
+              step={step}
+              nextStep={nextStep}
+              prevStep={prevStep}
+              selectOption={selectOption}
+              selectAmount={selectAmount}
+              answers={answers}
+              corpusAmount={corpusAmount}
+              finishQuiz={finishQuiz}
+              restartQuiz={restartQuiz}
+              profile={profile}
+              allocation={allocation}
+              userName={userName}
+              setUserName={setUserName}
+              userPhone={userPhone}
+              setUserPhone={setUserPhone}
+              userEmail={userEmail}
+              setUserEmail={setUserEmail}
+              saving={saving}
+              handleSubmitProfile={handleSubmitProfile}
+              profileKey={profileKey}
+              currentQuestion={currentQuestion}
+              QUESTIONS={QUESTIONS}
+              AMOUNT_OPTIONS={AMOUNT_OPTIONS}
+              PROFILES={PROFILES}
+              formatINR={formatINR}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ── COMMUNITY ────────────────────────────────────────────── */}
+      <section className="section section-dark" id="community" aria-labelledby="community-headline">
+        <div className="container">
+          <div className="section-eyebrow" style={{ color: 'var(--gold)' }}>Community</div>
+          <h2 className="section-headline section-headline-white" id="community-headline">You are not walking this road alone.</h2>
+          <p className="section-sub section-sub-white">Thousands of Agniveers across India are making the same transition. Learn from those who walked ahead.</p>
+          <div className="community-grid">
+            <div className="community-card">
+              <p className="community-card-quote">"When I left after 4 years, my village told me to prepare for police constable. VeerNXT showed me I was eligible for SSC CGL and helped me invest my Seva Nidhi in a simple SIP. Today I have a stable job and my corpus is growing."</p>
+              <div className="community-card-meta">
+                <div className="community-avatar">S</div>
+                <div>
+                  <div className="community-name">Sunil K.</div>
+                  <div className="community-detail">Ex-Agniveer • Rajputana Rifles • Batch 2022–26</div>
+                </div>
+              </div>
+            </div>
+            <div className="community-card">
+              <p className="community-card-quote">"The financial advisor in my town tried to sell me an endowment policy with 20-year lock-in. The VeerNXT Corpus Planner showed me the difference between that and a balanced mutual fund. That one calculator saved me ₹4 Lakhs."</p>
+              <div className="community-card-meta">
+                <div className="community-avatar">R</div>
+                <div>
+                  <div className="community-name">Rahul M.</div>
+                  <div className="community-detail">Ex-Agniveer • EME • Batch 2022–26</div>
+                </div>
+              </div>
+            </div>
+            <div className="community-card">
+              <p className="community-card-quote">"What I respect most is that VeerNXT is built by veterans. The language is ours. The exam prep understands that a soldier doesn't study like a college kid — we study with target-orientation."</p>
+              <div className="community-card-meta">
+                <div className="community-avatar">A</div>
+                <div>
+                  <div className="community-name">Amit P.</div>
+                  <div className="community-detail">Ex-Agniveer • Signals • Batch 2022–26</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="community-strip">
+            <div>
+              <div className="cs-num">50,000+</div>
+              <div className="cs-label">Agniveer community members target</div>
+            </div>
+            <div>
+              <div className="cs-num">100%</div>
+              <div className="cs-label">Verified service backgrounds</div>
+            </div>
+            <div>
+              <div className="cs-num">0 ₹</div>
+              <div className="cs-label">Commission charged to any Agniveer</div>
+            </div>
+            <div>
+              <div className="cs-num">24/7</div>
+              <div className="cs-label">Peer-to-peer forum &amp; mentor access</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEVA DIVIDEND ────────────────────────────────────────── */}
+      <section className="section seva-section" id="seva-dividend" aria-labelledby="seva-headline">
+        <div className="container">
+          <div className="section-eyebrow" style={{ color: 'var(--gold)' }}>Our commitment</div>
+          <h2 className="section-headline section-headline-white" id="seva-headline">The Seva Dividend.</h2>
+          <div className="seva-sub-head">How we fund the platform — and why we give back.</div>
+          <div className="seva-intro-grid">
+            <div className="seva-intro-text">
+              <p>Every platform needs revenue to survive. We believe you deserve to know exactly where ours comes from.</p>
+              <p style={{ marginTop: '14px' }}>What we do differently is what happens next.</p>
+              <p style={{ marginTop: '14px' }}>
+                A defined portion of every rupee VeerNXT earns from its financial partnerships is contributed to the <strong>Veteran Works Foundation</strong> — a not-for-profit initiative established by the same veterans who built this platform. The Foundation deploys those funds exclusively for the benefit of the Agniveer community. We call this the <strong className="seva-highlight">Seva Dividend</strong>.
+              </p>
+            </div>
+            <div className="seva-pull-quote-wrap">
+              <blockquote className="seva-pull-quote">
+                <span className="seva-quote-hindi" lang="hi">सेवालाभ</span>
+                <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,.8)', margin: 0, fontSize: '14px' }}>"Seva-laabh: The return that flows back to those who served."</p>
+                <cite>— The Veteran Works Foundation Charter</cite>
+              </blockquote>
+            </div>
+          </div>
+          <div className="seva-steps">
+            <div className="seva-step">
+              <div className="seva-step-num">Step 01</div>
+              <div className="seva-step-icon" aria-hidden="true">🎯</div>
+              <div className="seva-step-title">You use VeerNXT</div>
+              <div className="seva-step-body">Free platform access. You prepare for exams, map opportunities, and invest your Seva Nidhi through Prudent.</div>
+              <span className="seva-step-tag">Zero cost to you</span>
+            </div>
+            <div className="seva-step-arrow" aria-hidden="true">→</div>
+            <div className="seva-step">
+              <div className="seva-step-num">Step 02</div>
+              <div className="seva-step-icon" aria-hidden="true">🏦</div>
+              <div className="seva-step-title">Partners pay commission</div>
+              <div className="seva-step-body">When you invest through Prudent, the AMC pays a standard distributor commission. Your NAV is identical to direct investing.</div>
+              <span className="seva-step-tag">Standard industry fee</span>
+            </div>
+            <div className="seva-step-arrow" aria-hidden="true">→</div>
+            <div className="seva-step featured">
+              <div className="seva-step-num">Step 03 — Seva Dividend</div>
+              <div className="seva-step-icon" aria-hidden="true">🌱</div>
+              <div className="seva-step-title">We share with the Foundation</div>
+              <div className="seva-step-body">A defined portion of that commission is contributed to Veteran Works Foundation — funding scholarships, emergency grants, and transition support.</div>
+              <span className="seva-step-tag featured-tag">Shared with community</span>
+            </div>
+          </div>
+          <div className="seva-disclosure">
+            <div className="seva-disclosure-header">
+              <span style={{ fontSize: '18px' }} aria-hidden="true">📋</span>
+              <h3>Full Financial Disclosure — Nothing Hidden</h3>
+            </div>
+            <div className="seva-disclosure-grid">
+              <div className="seva-disclosure-col">
+                <p><strong>How mutual fund commissions work:</strong> Under SEBI regulations, when an investor routes mutual fund investments through a registered distributor (AMFI ARN-XXXXX), the Asset Management Company (AMC) pays the distributor a trail commission — typically between 0.5% and 1.0% per annum of the asset value.</p>
+              </div>
+              <div className="seva-disclosure-col">
+                <p><strong>Where the money goes:</strong> This commission is our operating revenue. From this revenue, a defined portion is contributed to the <strong>Veteran Works Foundation</strong> — our registered not-for-profit arm. The Foundation is a separate legal entity. It does not distribute profits. It exists for one purpose: the welfare, empowerment, and financial security of India's Agniveers and ex-servicemen community.</p>
+                <p style={{ marginTop: '12px' }}>It does not reduce or alter the NAV at which you invest. It does not constitute investment advice. It is entirely separate from your investment account.</p>
+                <p style={{ marginTop: '12px' }}>If you have any questions about how the Seva Dividend works, write to us at <a href="mailto:foundation@veteranworks.in" style={{ color: 'var(--g)', fontWeight: 600 }}>foundation@veteranworks.in</a>. We will answer every question. Openly.</p>
+              </div>
+            </div>
+          </div>
+          <div className="seva-commitments">
+            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Five commitments — in writing, on this page</span>
+            <div style={{ marginTop: '16px' }}>
+              <div className="seva-commit-item">
+                <div className="seva-commit-num">01</div>
+                <div className="seva-commit-body">
+                  <strong>Zero markup or cost to the Agniveer</strong>
+                  <p>The Seva Dividend comes entirely from distributor revenue paid by financial partners. You pay nothing extra — ever.</p>
+                </div>
+              </div>
+              <div className="seva-commit-item">
+                <div className="seva-commit-num">02</div>
+                <div className="seva-commit-body">
+                  <strong>Separate legal entity — audited annually</strong>
+                  <p>Veteran Works Foundation is a distinct Section 8 / Trust entity with its own governing board and statutory audit.</p>
+                </div>
+              </div>
+              <div className="seva-commit-item">
+                <div className="seva-commit-num">03</div>
+                <div className="seva-commit-body">
+                  <strong>100% deployed for Agniveer &amp; veteran welfare</strong>
+                  <p>Foundation funds go exclusively to: emergency transition grants, vocational scholarships, family healthcare support, and community infrastructure.</p>
+                </div>
+              </div>
+              <div className="seva-commit-item">
+                <div className="seva-commit-num">04</div>
+                <div className="seva-commit-body">
+                  <strong>Annual transparency report published publicly</strong>
+                  <p>Every financial year, we publish an open statement showing total contributions made to the Foundation and how every rupee was utilised.</p>
+                </div>
+              </div>
+              <div className="seva-commit-item">
+                <div className="seva-commit-num">05</div>
+                <div className="seva-commit-body">
+                  <strong>No product bias — guidance remains neutral</strong>
+                  <p>Our financial guidance is driven by what suits your profile, never by which fund pays higher commission. Prudent's open-architecture platform ensures unbiased fund selection.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="seva-closing">
+            <div className="seva-closing-line">"We earned from the nation's service. Now we build for those who serve next."</div>
+            <div className="seva-closing-sub">— The Founders of VeerNXT &amp; Veteran Works Foundation</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PARTNERS ─────────────────────────────────────────────── */}
+      <section className="section section-alt" id="partners" aria-labelledby="partners-headline">
+        <div className="container" style={{ textAlign: 'center' }}>
+          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Regulated &amp; trusted</div>
+          <h2 className="section-headline" id="partners-headline" style={{ margin: '0 auto 8px' }}>Your money is always in safe, regulated hands.</h2>
+          <p className="section-sub" style={{ margin: '0 auto 0' }}>VeerNXT does not hold your money. Investment execution is through Prudent Corporate Advisory Services Ltd — SEBI registered, listed on BSE and NSE.</p>
+          <div className="partners-row">
+            <div className="partner-chip">🛡️ AMFI Registered Distributor (ARN-XXXXX)</div>
+            <div className="partner-chip">🏦 Prudent Corporate Advisory — BSE &amp; NSE Listed</div>
+            <div className="partner-chip">📜 SEBI Regulated Execution</div>
+            <div className="partner-chip">🔒 256-Bit Bank-Grade Encryption</div>
+            <div className="partner-chip">🏛️ NPS via PFRDA Registered POP</div>
+            <div className="partner-chip">📮 India Post / Small Savings Guidance</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LOGIN / PORTAL GATEWAY ──────────────────────────────── */}
+      <section className="section" id="login" aria-labelledby="login-headline">
+        <div className="container" style={{ textAlign: 'center', maxWidth: '660px' }}>
+          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Already a member?</div>
+          <h2 className="section-headline" id="login-headline" style={{ margin: '0 auto 12px' }}>Your portfolio, your progress — one login.</h2>
+          <p className="section-sub" style={{ margin: '0 auto 32px' }}>Access your financial dashboard, exam preparation, VeerCoins balance, and service rep — all in one place.</p>
+          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <button onClick={onGoPortal} className="btn btn-green">
+              Go to Finance Portal <ArrowRight size={16} />
+            </button>
+            <button onClick={onGoPortal} className="btn btn-outline" style={{ borderColor: 'var(--g)', color: 'var(--g)' }}>
+              View My Portfolio
+            </button>
+          </div>
+          <p style={{ fontSize: '12px', color: 'var(--mid)', marginTop: '20px' }}>Investment execution powered by <strong>Prudent Corporate Advisory Services Ltd</strong> (BSE/NSE Listed)</p>
+        </div>
+      </section>
+
+      {/* ── DISCLAIMER ────────────────────────────────────────────── */}
+      <section id="disclaimer" aria-label="Regulatory Disclaimer">
+        <div className="container" style={{ padding: '40px 20px' }}>
+          <div className="disclaimer-box">
+            <p><strong>REGULATORY &amp; LEGAL DISCLAIMER:</strong> VeerNXT is a technology and educational guidance platform operated for the benefit of Agniveers and ex-servicemen. VeerNXT is registered with the Association of Mutual Funds in India (AMFI) as a Mutual Fund Distributor (ARN-XXXXX). Investment execution services are provided through <strong>Prudent Corporate Advisory Services Ltd</strong>, a SEBI-registered entity listed on the Bombay Stock Exchange (BSE) and National Stock Exchange (NSE). Mutual Fund investments are subject to market risks, read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. The financial calculators and model portfolios presented on this website are for educational and illustrative purposes only and do not constitute personal investment advice under SEBI (Investment Advisers) Regulations, 2013. Investors should consult a qualified financial adviser before making investment decisions. The "Seva Dividend" refers to a voluntary contribution made from operating revenues to the Veteran Works Foundation (a registered not-for-profit trust); it does not impact the Net Asset Value (NAV) of any mutual fund scheme or impose any additional charge on the investor.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+// ─── FINANCIAL GUIDANCE STYLES (QUIZ & RESULT) ──────────────────
 const FinancialGuidanceStyles = () => (
   <style dangerouslySetInnerHTML={{ __html: `
     /* ══════════════════════════════════════════════════════════

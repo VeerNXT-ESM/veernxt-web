@@ -794,7 +794,34 @@ const Login = () => {
         </div>
 
         <h2 style={{ fontSize: '1.6rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.4rem', letterSpacing: '-0.02em' }}>VeerNXT Access</h2>
-        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.875rem' }}>National portal for corporate transitioning & hiring</p>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem', fontSize: '0.875rem' }}>National portal for corporate transitioning & hiring</p>
+
+        {/* Temporary Client Demo Link */}
+        <div style={{ marginBottom: '1.5rem' }}>
+          <button
+            type="button"
+            onClick={() => navigate('/financial-guidance')}
+            style={{
+              width: '100%',
+              padding: '0.85rem 1.25rem',
+              backgroundColor: '#1A5C2A',
+              color: '#FFFFFF',
+              border: 'none',
+              borderRadius: '14px',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+              boxShadow: '0 4px 12px rgba(26, 92, 42, 0.25)',
+              transition: 'background 0.15s',
+            }}
+          >
+            🚀 Demo: Open Financial Guidance Page →
+          </button>
+        </div>
 
         {/* Role Selector Tabs (Activated) */}
         <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '14px', padding: '0.3rem', marginBottom: '2rem' }}>
