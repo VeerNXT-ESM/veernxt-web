@@ -35,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/auth/callback" element={<AuthCallback />} />
+        <Route path="/financial-guidance" element={<FinancialGuidance />} />
         
         {/* Routes with Global Header */}
         <Route element={<Layout />}>
@@ -42,7 +43,6 @@ function App() {
           <Route path="/subscribe" element={<AuthGuard skipProfilingCheck><Subscribe /></AuthGuard>} />
           <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
           <Route path="/learning-center" element={<AuthGuard><LearningCenter /></AuthGuard>} />
-          <Route path="/financial-guidance" element={<AuthGuard><FinancialGuidance /></AuthGuard>} />
           <Route path="/jobs" element={<AuthGuard><PublicJobs /></AuthGuard>} />
           <Route path="/find-candidates" element={<AuthGuard><FindCandidates /></AuthGuard>} />
           <Route path="/messaging" element={<AuthGuard><MessagingWorkspace /></AuthGuard>} />
@@ -62,7 +62,7 @@ function App() {
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/jobs" element={<AdminJobs />} />
 
-        {/* Redirect root to login — user must authenticate first */}
+        {/* Root route directs to login where client demo button is located */}
         <Route path="/" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
