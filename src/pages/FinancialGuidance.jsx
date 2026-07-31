@@ -13,14 +13,18 @@ import {
 } from '../data/financialProfiles';
 import {
   ShieldCheck,
+  Shield,
   ArrowRight,
   ArrowLeft,
   ChevronRight,
   RefreshCw,
   CheckCircle,
+  CheckCircle2,
   AlertTriangle,
   MessageCircle,
+  MessageSquare,
   Landmark,
+  Building2,
   TrendingUp,
   Award,
   Download,
@@ -28,8 +32,19 @@ import {
   Target,
   Heart,
   XCircle,
+  MapPin,
+  Phone,
+  Mail,
+  Map,
+  BookOpen,
+  Briefcase,
+  Users,
+  FileText,
 } from 'lucide-react';
 import './FinancialGuidance.css';
+import FinancialServicesSuite from '../components/finance/FinancialServicesSuite';
+import GoalPlanningSuite from '../components/finance/GoalPlanningSuite';
+import FinancialPlanningSuite from '../components/finance/FinancialPlanningSuite';
 
 // ─── Phase Constants ────────────────────────────────────────────
 const PHASE = {
@@ -78,16 +93,51 @@ const FinancialGuidance = () => {
       }
     };
     loadUser();
-    setTimeout(() => {
-      const el = document.getElementById('quiz-section');
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 400);
   }, []);
+
+  useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+      const targetId = href.slice(1);
+
+      e.preventDefault();
+      if (phase !== PHASE.LANDING) {
+        setPhase(PHASE.LANDING);
+      }
+
+      setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          const headerOffset = 80;
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 50);
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    return () => document.removeEventListener('click', handleAnchorClick);
+  }, [phase]);
 
   const scrollToQuiz = () => {
     setTimeout(() => {
       const el = document.getElementById('quiz-section');
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (el) {
+        const headerOffset = 80;
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }, 50);
   };
 
@@ -273,7 +323,8 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
         <li><a href="#tools" onClick={onGoLanding}>Tools</a></li>
         <li><a href="#quiz-section" onClick={onGoLanding}>Quiz</a></li>
         <li><a href="#community" onClick={onGoLanding}>Community</a></li>
-        <li><a href="#seva-dividend" onClick={onGoLanding}>Seva Dividend</a></li>
+        <li><a href="#seva-dividend" onClick={onGoLanding}>Seva Labh/Rewards</a></li>
+        <li><a href="#contact-section" onClick={onGoLanding}>Contact</a></li>
         <li>
           {isPortalView ? (
             <button className="nav-cta" onClick={onGoLanding}>← Back to Guidance</button>
@@ -284,7 +335,7 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
       </ul>
       <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
         <span className="nav-amfi" aria-label="AMFI Registration" style={{ fontSize: '11px', color: '#777', fontWeight: 500, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
-          AMFI ARN – 362619
+          AMFI ARN - 362619
         </span>
         <img src="/finance/AOG%20logo.jpeg" alt="AOG Logo" style={{ height: '54px', width: 'auto', objectFit: 'contain', borderRadius: '4px' }} />
       </div>
@@ -294,49 +345,59 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
 
 // ─── CLIENT FOOTER ──────────────────────────────────────────────
 const ClientFooter = () => (
-  <footer className="footer" role="contentinfo">
-    <div className="container">
-      <div className="footer-grid">
-        <div className="footer-brand">
-          <div className="footer-logo">Veer<span>NXT</span></div>
-          <p>
-            An Agniveer &amp; Ex-Serviceman empowerment platform.
-            Built by veterans. Advised by service chiefs. Serving those who served.
+  <footer className="bg-[#0a0a0a] text-white pt-16 pb-8 border-t border-white/5" role="contentinfo">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="VeerNXT" className="w-8 h-8 object-contain" />
+            <span className="text-xl font-black tracking-tight">VeerNXT</span>
+          </div>
+          <p className="text-gray-400 text-sm font-light leading-relaxed max-w-xs">
+            An Agniveer &amp; Ex-Serviceman empowerment platform. Built by veterans. Advised by service chiefs. Serving those who served.
           </p>
-          <div className="footer-tagline">सेवा से समृद्ध कल की ओर</div>
-          <div style={{ marginTop: '12px', fontSize: '12px', color: 'var(--mid)' }}>
-            <strong>AMFI ARN – 362619</strong> | Regulated Financial Distribution
+          <div className="text-sm font-semibold text-emerald-500">
+            AMFI ARN - 362619 | Regulated Financial Distribution
           </div>
         </div>
-        <div className="footer-col">
-          <h4>Platform</h4>
-          <ul>
-            <li><a href="#mission">The Mission</a></li>
-            <li><a href="#profiling">Agniveer Profiling</a></li>
-            <li><a href="#pillars">Six Pillars</a></li>
-            <li><a href="#tools">Calculators</a></li>
+
+        <div>
+          <h4 className="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">Contact &amp; Operations</h4>
+          <ul className="space-y-4 text-sm text-gray-400">
+            <li className="flex items-start gap-3">
+              <Mail className="w-4 h-4 text-[#C9A84C] mt-0.5 flex-shrink-0" />
+              <a href="mailto:support@veernxt.in" className="hover:text-[#C9A84C] transition-colors">support@veernxt.in</a>
+            </li>
+            <li className="flex items-start gap-3">
+              <Phone className="w-4 h-4 text-[#C9A84C] mt-0.5 flex-shrink-0" />
+              <a href="tel:+917889530025" className="hover:text-[#C9A84C] transition-colors">+91-7889530025</a>
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-[#C9A84C] mt-0.5 flex-shrink-0" />
+              <span>225, 3rd C Cross Rd, Block 2, 3rd Stage, Basaveshwar Nagar, Bengaluru, Karnataka 560079</span>
+            </li>
           </ul>
         </div>
-        <div className="footer-col">
-          <h4>Community &amp; Operations</h4>
-          <ul>
-            <li><a href="#seva-dividend">Sewa Labh / Rewards</a></li>
-            <li><a href="#quiz-section">Interactive Guidance Quiz</a></li>
-            <li><strong>Company Operating Base (COB):</strong> #227</li>
-            <li><strong>Working Hours:</strong> Operational 24×7</li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h4>Regulatory &amp; Legal</h4>
-          <ul>
-            <li><a href="#partners">AMFI &amp; SEBI Disclosure</a></li>
-            <li><a href="#login">Prudent Execution</a></li>
-            <li><a href="#disclaimer">Risk Disclaimer</a></li>
+
+        <div>
+          <h4 className="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">Regulatory &amp; Legal</h4>
+          <ul className="space-y-3 text-sm">
+            <li><a href="#mission" className="text-gray-400 hover:text-[#C9A84C] transition-colors">The Mission</a></li>
+            <li><a href="#profiling" className="text-gray-400 hover:text-[#C9A84C] transition-colors">Agniveer Profiling</a></li>
+            <li><a href="#pillars" className="text-gray-400 hover:text-[#C9A84C] transition-colors">Six Pillars</a></li>
+            <li><a href="#tools" className="text-gray-400 hover:text-[#C9A84C] transition-colors">Calculators</a></li>
+            <li><a href="#disclaimer" className="text-gray-400 hover:text-[#C9A84C] transition-colors">Risk Disclaimer</a></li>
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} VeerNXT. All rights reserved. • Veteran Works Foundation • AMFI ARN – 362619
+
+      <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-xs text-gray-500">
+          &copy; {new Date().getFullYear()} VeerNXT. Veteran Works Private Limited. All Rights Reserved. Built with Discipline. &bull; AMFI ARN - 362619
+        </p>
+        <div className="text-xs font-bold tracking-widest text-white/40 uppercase mb-4 md:mb-0">
+          BUILT BY VETERANS. FOR VETERANS.
+        </div>
       </div>
     </div>
   </footer>
@@ -348,7 +409,7 @@ const InvestorPortal = ({ onBack }) => (
     <button className="portal-back-btn" onClick={onBack}>
       <ArrowLeft size={16} /> Back to Financial Guidance
     </button>
-    
+
     <div>
       <span className="portal-badge">INVESTOR PORTAL</span>
       <h1 className="portal-title">Portfolio Login</h1>
@@ -500,15 +561,15 @@ const EmbeddedQuizSection = ({
     return (
       <div className="fg-result-container animate-fade-in" style={{ margin: '0 auto', maxWidth: '960px' }}>
         {/* Profile Header */}
-        <div className="fg-profile-header" style={{ background: profile.bgColor, borderColor: profile.borderColor }}>
-          <div className="fg-profile-tag" style={{ background: profile.color, color: '#fff' }}>
-            <Award size={14} /> {profileKey}
+        <div className="fg-profile-header">
+          <div className="fg-profile-tag">
+            <Award size={14} /> {profile.badge} • {profile.risk} Risk Profile
           </div>
-          <h3 className="fg-profile-name" style={{ color: profile.color, fontSize: '32px', margin: '12px 0 8px' }}>
+          <h3 className="fg-profile-name">
             {profile.name}
           </h3>
-          <p className="fg-profile-tagline" style={{ fontWeight: '600', marginBottom: '8px' }}>{profile.tagline}</p>
-          <p className="fg-profile-desc">{profile.description}</p>
+          <p className="fg-profile-tagline">Investment Horizon: {profile.horizon}</p>
+          <p className="fg-profile-desc">{profile.desc || profile.description}</p>
         </div>
 
         {/* Total Corpus Display */}
@@ -547,26 +608,34 @@ const EmbeddedQuizSection = ({
                 </tr>
               </thead>
               <tbody>
-                {allocation.map((item, idx) => (
-                  <tr key={idx}>
-                    <td>
-                      <div className="fg-inst-name">{item.name}</div>
-                      <div className="fg-inst-cat">{item.category}</div>
-                    </td>
-                    <td className="fg-td-pct">
-                      <span className="fg-pct-badge" style={{ backgroundColor: item.color + '18', color: item.color }}>
-                        {item.percentage}%
-                      </span>
-                    </td>
-                    <td className="fg-td-amt">{formatINR(item.amount)}</td>
-                    <td className="fg-td-why">{item.rationale}</td>
-                    <td>
-                      <span className={`fg-priority-flag ${item.priority.toLowerCase()}`}>
-                        {item.priority}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
+                {(Array.isArray(allocation) ? allocation : (allocation?.items || [])).map((item, idx) => {
+                  const pct = item.percentage || item.pct || 0;
+                  const name = item.name || item.product || 'Asset Allocation';
+                  const category = item.category || 'SEBI Regulated';
+                  const why = item.rationale || item.why || '';
+                  const priority = item.priority || 'High';
+                  const color = item.color || '#10B981';
+                  return (
+                    <tr key={idx}>
+                      <td>
+                        <div className="fg-inst-name">{name}</div>
+                        <div className="fg-inst-cat">{category}</div>
+                      </td>
+                      <td className="fg-td-pct">
+                        <span className="fg-pct-badge">
+                          {pct}%
+                        </span>
+                      </td>
+                      <td className="fg-td-amt">{formatINR(item.amount || 0)}</td>
+                      <td className="fg-td-why">{why}</td>
+                      <td>
+                        <span className={`fg-priority-flag ${priority.toLowerCase()}`}>
+                          {priority}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -583,7 +652,7 @@ const EmbeddedQuizSection = ({
               <div key={idx} className="fg-rule-card">
                 <div className="fg-rule-num">Rule 0{idx + 1}</div>
                 <h4 className="fg-rule-title">{rule.title}</h4>
-                <p className="fg-rule-text">{rule.description}</p>
+                <p className="fg-rule-text">{rule.desc || rule.description}</p>
               </div>
             ))}
           </div>
@@ -593,7 +662,7 @@ const EmbeddedQuizSection = ({
         <div className="fg-handoff-card animate-fade-in" style={{ animationDelay: '0.35s', marginTop: '40px' }}>
           <div className="fg-handoff-header">
             <div className="fg-handoff-icon">
-              <MessageCircle size={28} color="#25D366" />
+              <MessageCircle size={28} color="#C9A84C" />
             </div>
             <div>
               <h3 className="fg-handoff-title" style={{ fontSize: '24px' }}>Get Your Custom Investment Plan on WhatsApp</h3>
@@ -805,7 +874,7 @@ const ClientLandingPage = ({
       {/* ── VERIFIED AGNIVEER STRIP ─────────────────────────────── */}
       <div className="verified-strip" role="banner">
         <div className="verified-strip-inner">
-          <p>🎖️ Built By Veterans. For Veterans, ESM and Agniveers — <strong>AMFI ARN – 362619</strong> <a href="#quiz-section">Start My Mission Profile →</a></p>
+          <p><Award className="inline-block w-4 h-4 mr-1 text-[#C9A84C]" /> Built By Veterans. For Veterans, ESM and Agniveers - <strong>AMFI ARN - 362619</strong> <a href="#quiz-section">Start My Mission Profile →</a></p>
         </div>
       </div>
 
@@ -833,14 +902,14 @@ const ClientLandingPage = ({
 
             <div className="hero-actions">
               <button onClick={onStartQuiz} className="btn btn-gold">
-                <span>🎯</span> Start My Mission Profile
+                <Target className="inline-block w-4 h-4 mr-2" /> Start My Mission Profile
               </button>
-              <a href="#mission" className="btn btn-outline">See How it Works</a>
+              <a href="#mission" className="btn btn-outline" style={{ background: 'rgba(255, 255, 255, 0.15)', border: '2px solid #FFFFFF', color: '#FFFFFF', fontWeight: 700, padding: '14px 28px', borderRadius: '12px', boxShadow: '0 4px 14px rgba(0,0,0,0.25)' }}>See How it Works</a>
             </div>
             <div className="hero-trust" aria-label="Trust signals">
-              <span className="trust-item"><span className="trust-icon" aria-hidden="true">🛡️</span> AMFI ARN – 362619</span>
-              <span className="trust-item"><span className="trust-icon" aria-hidden="true">🏦</span> Execution via Prudent (BSE/NSE Listed)</span>
-              <span className="trust-item"><span className="trust-icon" aria-hidden="true">✅</span> Zero cost to Agniveer &amp; ESM</span>
+              <span className="trust-item"><Shield className="inline-block w-4 h-4 mr-1 text-[#C9A84C]" /> AMFI ARN - 362619</span>
+              <span className="trust-item"><Building2 className="inline-block w-4 h-4 mr-1 text-[#C9A84C]" /> Execution via Prudent (BSE/NSE Listed)</span>
+              <span className="trust-item"><CheckCircle2 className="inline-block w-4 h-4 mr-1 text-[#C9A84C]" /> Zero cost to Agniveer &amp; ESM</span>
             </div>
           </div>
 
@@ -857,7 +926,7 @@ const ClientLandingPage = ({
               </div>
               <div className="stat-card">
                 <div className="stat-card-num">4 Yrs</div>
-                <div className="stat-card-label">Of discipline. Now applied to wealth.</div>
+                <div className="stat-card-label">Apply  years of discipline to your wealth.</div>
               </div>
               <div className="stat-card">
                 <div className="stat-card-num">8</div>
@@ -881,7 +950,7 @@ const ClientLandingPage = ({
             A plan. A community. A good advice. A platform that understands him. In his language. And at the moment he needs it the most.<br />
             <strong>They deserved it then. VeerNXT delivers it now</strong>
           </p>
-          
+
           <div className="situation-grid">
             <div className="situation-left">
               <div className="fact-list">
@@ -1026,37 +1095,37 @@ const ClientLandingPage = ({
           <p className="section-sub">Our complete suite of services, smart tools and insights to help you make better financial decisions on the go.</p>
           <div className="pillars-grid">
             <div className="pillar-card pop-out-card">
-              <div className="pillar-icon" aria-hidden="true">🗺️</div>
+              <div className="pillar-icon" aria-hidden="true"><Map className="w-8 h-8 text-[#C9A84C]" /></div>
               <h3><span>Opportunity</span> Mapping</h3>
               <p>Profiled against your training, trade, Arm/Service background, domicile and goals. The right pathways — not thousands of disconnected options.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
             <div className="pillar-card pop-out-card">
-              <div className="pillar-icon" aria-hidden="true">📋</div>
+              <div className="pillar-icon" aria-hidden="true"><FileText className="w-8 h-8 text-[#C9A84C]" /></div>
               <h3><span>Exam</span> Intelligence</h3>
               <p>Central and State Govt opportunities, eligibility, reservations, notifications and personalised alerts — matched to who you are.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
             <div className="pillar-card pop-out-card">
-              <div className="pillar-icon" aria-hidden="true">📚</div>
+              <div className="pillar-icon" aria-hidden="true"><BookOpen className="w-8 h-8 text-[#C9A84C]" /></div>
               <h3><span>Exam</span> Preparation</h3>
               <p>Guidebook, précis, 10-year PYQ, 10 mock tests — for every relevant exam. Hindi-first content. Structured for how a soldier learns.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
             <div className="pillar-card pop-out-card">
-              <div className="pillar-icon" aria-hidden="true">💼</div>
+              <div className="pillar-icon" aria-hidden="true"><Briefcase className="w-8 h-8 text-[#C9A84C]" /></div>
               <h3><span>Career</span> Transition</h3>
               <p>Military experience translated into civilian employability. Skill mapping, CV building, interview prep, employer linkage.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
             <div className="pillar-card pop-out-card">
-              <div className="pillar-icon" aria-hidden="true">📈</div>
+              <div className="pillar-icon" aria-hidden="true"><TrendingUp className="w-8 h-8 text-[#C9A84C]" /></div>
               <h3><span>Financial</span> Empowerment</h3>
               <p>Intelligent risk profiling → rupee-level investment plan → execution via Prudent. MF, NPS, insurance, post office. Zero cost to you.</p>
               <div className="pillar-tag"><span className="badge badge-gold">FinTech</span></div>
             </div>
             <div className="pillar-card pop-out-card">
-              <div className="pillar-icon" aria-hidden="true">🤝</div>
+              <div className="pillar-icon" aria-hidden="true"><Users className="w-8 h-8 text-[#C9A84C]" /></div>
               <h3><span>Community</span> &amp; Mentorship</h3>
               <p>A network of Agniveers navigating the same road. Mentors who have walked ahead. What is Community &amp; What is it doing?</p>
               <div className="pillar-tag"><span className="badge badge-green">Both</span></div>
@@ -1065,198 +1134,16 @@ const ClientLandingPage = ({
         </div>
       </section>
 
-      {/* ── TOOLS / CALCULATORS & GOAL PLANNING ────────────────── */}
-      <section className="section" id="tools" aria-labelledby="tools-headline">
-        <div className="container">
-          <div className="section-eyebrow">Free Tools</div>
-          <h2 className="section-headline" id="tools-headline">See your money's future. Before you invest a rupee.</h2>
-          <p className="section-sub">Interactive calculators built with the real corpus in mind. No login needed.</p>
+      {/* ── IMPLANTED FOLD 1: COMPLETE SUITE OF FINANCIAL SERVICES ── */}
+      <FinancialServicesSuite />
 
-          {/* Goal Planning Pop-Out Box */}
-          <div style={{ background: 'linear-gradient(135deg, var(--g-dk) 0%, #162B1C 100%)', color: '#fff', padding: '28px 36px', borderRadius: '16px', marginBottom: '32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px', border: '1px solid var(--gold)' }}>
-            <div>
-              <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>VEERNXT GOAL PLANNING</div>
-              <h3 style={{ fontSize: '24px', margin: '4px 0 6px', color: '#fff' }}>Let's start creating goals</h3>
-              <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>Define your home, education, and family security milestones with tailored tools.</p>
-            </div>
-            <a href="#quiz-section" className="btn btn-gold" style={{ padding: '12px 24px', fontSize: '14px' }}>
-              Click here to see all our Goal Planning Tools →
-            </a>
-          </div>
+      {/* ── IMPLANTED FOLD 2: GOAL CREATOR & PLANNING SUITE ────────── */}
+      <GoalPlanningSuite />
 
-          <div className="calc-wrapper">
-            <div>
-              <div className="calc-tabs" role="tablist" aria-label="Calculator type">
-                <button
-                  className={`calc-tab ${calcTab === 'sip' ? 'active' : ''}`}
-                  role="tab"
-                  aria-selected={calcTab === 'sip'}
-                  onClick={() => setCalcTab('sip')}
-                >
-                  SIP Calculator
-                </button>
-                <button
-                  className={`calc-tab ${calcTab === 'corpus' ? 'active' : ''}`}
-                  role="tab"
-                  aria-selected={calcTab === 'corpus'}
-                  onClick={() => setCalcTab('corpus')}
-                >
-                  Corpus Planner
-                </button>
-                <button
-                  className={`calc-tab ${calcTab === 'seva' ? 'active' : ''}`}
-                  role="tab"
-                  aria-selected={calcTab === 'seva'}
-                  onClick={() => setCalcTab('seva')}
-                >
-                  Seva Nidhi &amp; Gratuity
-                </button>
-              </div>
-
-              {/* SIP Calculator */}
-              {calcTab === 'sip' && (
-                <div className="calc-box">
-                  <div className="calc-field">
-                    <label>Monthly SIP amount <span>₹{sipAmt.toLocaleString('en-IN')}</span></label>
-                    <input
-                      type="range" min="500" max="10000" step="500"
-                      value={sipAmt} onChange={e => setSipAmt(Number(e.target.value))}
-                      aria-label="Monthly SIP amount"
-                    />
-                  </div>
-                  <div className="calc-field">
-                    <label>Expected return (p.a.) <span>12%</span></label>
-                    <input type="range" min="8" max="18" step="1" value="12" disabled aria-label="Expected return" />
-                  </div>
-                  <div className="calc-field">
-                    <label>Time period <span>{sipYr} years</span></label>
-                    <input
-                      type="range" min="3" max="25" step="1"
-                      value={sipYr} onChange={e => setSipYr(Number(e.target.value))}
-                      aria-label="Time period in years"
-                    />
-                  </div>
-                  <div className="calc-result">
-                    <div className="cr-item">
-                      <div className="cr-label">Total Invested</div>
-                      <div className="cr-val">₹{sipInvested.toLocaleString('en-IN')}</div>
-                    </div>
-                    <div className="cr-item">
-                      <div className="cr-label">Estimated Gains</div>
-                      <div className="cr-val gold">₹{sipGain.toLocaleString('en-IN')}</div>
-                    </div>
-                    <div className="cr-item">
-                      <div className="cr-label">Total Value</div>
-                      <div className="cr-val">₹{sipFV.toLocaleString('en-IN')}</div>
-                    </div>
-                  </div>
-                  <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
-                    Projections are indicative. Actual returns depend on market conditions. AMFI Registered Distributor (ARN – 362619).
-                  </p>
-                </div>
-              )}
-
-              {/* Corpus Planner */}
-              {calcTab === 'corpus' && (
-                <div className="calc-box">
-                  <div className="calc-field">
-                    <label>Corpus amount <span>₹{corpAmt.toLocaleString('en-IN')}</span></label>
-                    <input
-                      type="range" min="300000" max="5000000" step="100000"
-                      value={corpAmt} onChange={e => setCorpAmt(Number(e.target.value))}
-                      aria-label="Corpus amount"
-                    />
-                  </div>
-                  <div className="calc-field">
-                    <label>Conservative return (p.a.) <span>7.5%</span></label>
-                    <input type="range" min="5" max="12" step="0.5" value="7.5" disabled aria-label="Expected return" />
-                  </div>
-                  <div className="calc-field">
-                    <label>Time period <span>{corpYr} years</span></label>
-                    <input
-                      type="range" min="1" max="15" step="1"
-                      value={corpYr} onChange={e => setCorpYr(Number(e.target.value))}
-                      aria-label="Time period"
-                    />
-                  </div>
-                  <div className="calc-result">
-                    <div className="cr-item">
-                      <div className="cr-label">Principal</div>
-                      <div className="cr-val">₹{corpAmt.toLocaleString('en-IN')}</div>
-                    </div>
-                    <div className="cr-item">
-                      <div className="cr-label">Interest Earned</div>
-                      <div className="cr-val gold">₹{corpGain.toLocaleString('en-IN')}</div>
-                    </div>
-                    <div className="cr-item">
-                      <div className="cr-label">Total Value</div>
-                      <div className="cr-val">₹{corpFV.toLocaleString('en-IN')}</div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Seva Nidhi Breakdown */}
-              {calcTab === 'seva' && (
-                <div className="calc-box">
-                  <p style={{ fontSize: '14px', color: 'var(--mid)', lineHeight: '1.7', marginBottom: '16px' }}>
-                    Your Seva Nidhi &amp; Gratuity corpus is approximately <strong>₹10L – ₹1Cr</strong> depending on service duration. 100% tax-free.
-                  </p>
-                  <div className="calc-result">
-                    <div className="cr-item">
-                      <div className="cr-label">1 Year (Liquid/FD)</div>
-                      <div className="cr-val">₹10.7L</div>
-                    </div>
-                    <div className="cr-item">
-                      <div className="cr-label">3 Years (Balanced)</div>
-                      <div className="cr-val gold">₹13.4L</div>
-                    </div>
-                    <div className="cr-item">
-                      <div className="cr-label">5 Years (Growth)</div>
-                      <div className="cr-val">₹16.8L</div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', color: 'var(--ink)', marginBottom: '8px' }}>More Planning Tools</h3>
-              <p style={{ fontSize: '13px', color: 'var(--mid)', marginBottom: '20px' }}>All free. No login needed. Built for the soldier's real numbers.</p>
-              <div className="calc-tools-grid">
-                <div className="tool-chip">
-                  <div className="tool-chip-icon" aria-hidden="true">💰</div>
-                  <div>
-                    <div className="tool-chip-label">Seva Nidhi Splitter</div>
-                    <div className="tool-chip-sub">Spend / Save / Invest ratios</div>
-                  </div>
-                </div>
-                <div className="tool-chip">
-                  <div className="tool-chip-icon" aria-hidden="true">🏡</div>
-                  <div>
-                    <div className="tool-chip-label">Home / Plot Goal</div>
-                    <div className="tool-chip-sub">Timeline &amp; SIP needed</div>
-                  </div>
-                </div>
-                <div className="tool-chip">
-                  <div className="tool-chip-icon" aria-hidden="true">🎓</div>
-                  <div>
-                    <div className="tool-chip-label">Higher Ed Planner</div>
-                    <div className="tool-chip-sub">Course fee + stipend math</div>
-                  </div>
-                </div>
-                <div className="tool-chip">
-                  <div className="tool-chip-icon" aria-hidden="true">🛡️</div>
-                  <div>
-                    <div className="tool-chip-label">Term Insurance Check</div>
-                    <div className="tool-chip-sub">How much cover do you need?</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ── IMPLANTED FOLD 3: FINANCIAL PLANNING & INTERACTIVE TOOLS ── */}
+      <div id="tools">
+        <FinancialPlanningSuite />
+      </div>
 
       {/* ── EMBEDDED GUIDANCE QUIZ & RESULTS ─────────────────────── */}
       <section className="section section-alt" id="quiz-section" aria-labelledby="quiz-headline">
@@ -1362,7 +1249,7 @@ const ClientLandingPage = ({
             <div className="seva-step">
               <div className="seva-step-top">
                 <div className="seva-step-num">Step 1</div>
-                <div className="seva-step-icon" aria-hidden="true">🎯</div>
+                <div className="seva-step-icon" aria-hidden="true"><Target className="w-8 h-8 text-[#C9A84C]" /></div>
                 <div className="seva-step-title">You use VeerNXT</div>
                 <div className="seva-step-body">
                   Free platform access. Prepare for exams, map opportunities, and invest your corpus.
@@ -1374,7 +1261,7 @@ const ClientLandingPage = ({
             <div className="seva-step">
               <div className="seva-step-top">
                 <div className="seva-step-num">Step 2</div>
-                <div className="seva-step-icon" aria-hidden="true">🏦</div>
+                <div className="seva-step-icon" aria-hidden="true"><Building2 className="w-8 h-8 text-[#C9A84C]" /></div>
                 <div className="seva-step-title">You Earn Your Bonuses</div>
                 <div className="seva-step-body">
                   Your investment comes back to you with maximum transparency and zero platform markup.
@@ -1386,7 +1273,7 @@ const ClientLandingPage = ({
             <div className="seva-step featured">
               <div className="seva-step-top">
                 <div className="seva-step-num">Step 3</div>
-                <div className="seva-step-icon" aria-hidden="true">🌱</div>
+                <div className="seva-step-icon" aria-hidden="true"><Sparkles className="w-8 h-8 text-[#C9A84C]" /></div>
                 <div className="seva-step-title">Sewa Labh / Reward</div>
                 <div className="seva-step-body">
                   The platform funds scholarships, emergency grants and transition support for the community.
@@ -1452,13 +1339,142 @@ const ClientLandingPage = ({
 
           <div className="partners-grid-rows" style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
             <div className="partners-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <div className="partner-chip">🏦 Prudent Corporate Advisory — BSE &amp; NSE Listed</div>
+              <div className="partner-chip">🏦 Prudent Corporate Advisory - BSE &amp; NSE Listed</div>
               <div className="partner-chip">📜 SEBI Regulated Execution</div>
               <div className="partner-chip">🔒 256-Bit Bank-Grade Encryption</div>
             </div>
             <div className="partners-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <div className="partner-chip">🏛️ Company Operating Base #227</div>
-              <div className="partner-chip">⏱️ Operational 24×7</div>
+              <div className="partner-chip">⏱️ Operational 24/7</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── VETERAN ADVISORY DESK & CONTACT MAP ─────────────────── */}
+      <section className="section" id="contact-section" aria-labelledby="contact-headline" style={{ background: '#F7F5F0', padding: '80px 0', borderTop: '1px solid rgba(197, 160, 89, 0.3)' }}>
+        <div id="contact" className="container">
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 48px' }}>
+            <div className="section-eyebrow" style={{ justifyContent: 'center', color: '#0F3A1A' }}>
+              <Award className="w-4 h-4 mr-1.5 text-[#C9A84C]" /> VEERNXT VETERAN ADVISORY DESK
+            </div>
+            <h2 className="section-headline" id="contact-headline" style={{ color: '#0F3A1A', marginBottom: '14px' }}>
+              Connect with our Veteran Advisory Team
+            </h2>
+            <p className="section-sub" style={{ color: '#4A5D4E' }}>
+              Army-veteran SEBI-registered mentors &amp; financial counselors available for one-on-one guidance.
+              Drop by our Company Operating Base (COB) or reach out across any channel.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', alignItems: 'stretch' }}>
+            {/* Contact Details Card */}
+            <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '36px', border: '1px solid rgba(197, 160, 89, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#0F3A1A', marginBottom: '8px' }}>
+                  Company Operating Base (COB) #227
+                </h3>
+                <p style={{ fontSize: '14px', color: '#666', marginBottom: '28px' }}>
+                  Dedicated financial transition mentorship for Agniveers, ESM, and Armed Forces Personnel.
+                </p>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <MapPin className="w-5 h-5 text-emerald-600" />
+                    </div>
+                    <div>
+                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>Headquarters &amp; Advisory Center</div>
+                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                        225, 3rd C Cross Rd, Block 2, 3rd Stage, Basaveshwar Nagar, Bengaluru, Karnataka 560079
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'rgba(197, 160, 89, 0.1)', border: '1px solid rgba(197, 160, 89, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Phone className="w-5 h-5 text-[#C5A059]" />
+                    </div>
+                    <div>
+                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>24/7 Helpline &amp; WhatsApp</div>
+                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                        <a href="tel:+917889530025" style={{ color: 'inherit', textDecoration: 'none' }}>+91 788 953 0025</a> • Toll-free ESM Desk: 1800-VEER-NXT
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Mail className="w-5 h-5 text-emerald-600" />
+                    </div>
+                    <div>
+                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>Official Dispatch</div>
+                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                        <a href="mailto:support@veernxt.in" style={{ color: 'inherit', textDecoration: 'none' }}>support@veernxt.in</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'rgba(197, 160, 89, 0.1)', border: '1px solid rgba(197, 160, 89, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Shield className="w-5 h-5 text-[#C5A059]" />
+                    </div>
+                    <div>
+                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>AMFI &amp; SEBI Regulated</div>
+                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                        AMFI ARN - 362619 • Execution via Prudent Corporate Advisory Services Ltd
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid rgba(0,0,0,0.08)', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <a
+                  href="https://wa.me/917889530025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-green"
+                  style={{ flex: '1 1 auto', textAlign: 'center', padding: '12px 20px', borderRadius: '12px', fontSize: '14px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                >
+                  <MessageSquare className="w-4 h-4" /> WhatsApp Veteran Mentor
+                </a>
+                <a
+                  href="mailto:support@veernxt.in"
+                  className="btn btn-gold"
+                  style={{ flex: '1 1 auto', textAlign: 'center', padding: '12px 20px', borderRadius: '12px', fontSize: '14px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                >
+                  <Mail className="w-4 h-4" /> Request Confidential Callback
+                </a>
+              </div>
+            </div>
+
+            {/* Interactive Map Card */}
+            <div style={{ background: '#FFFFFF', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(197, 160, 89, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', minHeight: '420px' }}>
+              <div style={{ padding: '20px 24px', background: 'linear-gradient(135deg, #0F3A1A 0%, #162B1C 100%)', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Map className="w-5 h-5 text-[#C5A059]" />
+                  <div>
+                    <div style={{ fontWeight: 800, fontSize: '15px' }}>VeerNXT Advisory HQ Map</div>
+                    <div style={{ fontSize: '11px', color: '#C5A059' }}>Basaveshwar Nagar, Bengaluru &amp; Karnataka Reach</div>
+                  </div>
+                </div>
+                <span style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#10B981', border: '1px solid rgba(16, 185, 129, 0.4)', padding: '4px 10px', borderRadius: '20px', fontSize: '11px', fontWeight: 700 }}>
+                  ACTIVE 24/7
+                </span>
+              </div>
+              <div style={{ flex: '1 1 auto', width: '100%', position: 'relative', minHeight: '340px', background: '#e5e3df' }}>
+                <iframe
+                  title="VeerNXT Headquarters Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.809565576136!2d77.536128!3d12.983981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ddbc71a8123%3A0x8e82c595085d3419!2sBasaveshwar%20Nagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1714567890123!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -1468,7 +1484,7 @@ const ClientLandingPage = ({
       <section id="disclaimer" aria-label="Regulatory Disclaimer">
         <div className="container" style={{ padding: '40px 20px' }}>
           <div className="disclaimer-box">
-            <p><strong>REGULATORY &amp; LEGAL DISCLAIMER:</strong> VeerNXT is a technology and educational guidance platform operated for the benefit of Agniveers and ex-servicemen. VeerNXT is registered with the Association of Mutual Funds in India (AMFI) as a Mutual Fund Distributor (AMFI ARN – 362619). Investment execution services are provided through <strong>Prudent Corporate Advisory Services Ltd</strong>, a SEBI-registered entity listed on BSE and NSE. Mutual Fund investments are subject to market risks, read all scheme-related documents carefully before investing. Company Operating Base (COB) #227 • Operational 24×7.</p>
+            <p><strong>REGULATORY &amp; LEGAL DISCLAIMER:</strong> VeerNXT is a technology and educational guidance platform operated for the benefit of Agniveers and ex-servicemen. VeerNXT is registered with the Association of Mutual Funds in India (AMFI) as a Mutual Fund Distributor (AMFI ARN - 362619). Investment execution services are provided through <strong>Prudent Corporate Advisory Services Ltd</strong>, a SEBI-registered entity listed on BSE and NSE. Mutual Fund investments are subject to market risks, read all scheme-related documents carefully before investing. Company Operating Base (COB) #227 • Operational 24/7.</p>
           </div>
         </div>
       </section>
@@ -1478,7 +1494,8 @@ const ClientLandingPage = ({
 
 // ─── FINANCIAL GUIDANCE STYLES (QUIZ & RESULT) ──────────────────
 const FinancialGuidanceStyles = () => (
-  <style dangerouslySetInnerHTML={{ __html: `
+  <style dangerouslySetInnerHTML={{
+    __html: `
     /* ══════════════════════════════════════════════════════════
        FINANCIAL GUIDANCE — SCOPED STYLES
        ══════════════════════════════════════════════════════════ */

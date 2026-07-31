@@ -12,7 +12,7 @@ import { AnimatePresence } from 'motion/react';
 // ─── NAVBAR ──────────────────────────────────────────────────────────────────
 
 const NavBar = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isLangOpen, setIsLangOpen] = useState(false);
 
   const languages = [
@@ -31,37 +31,45 @@ const NavBar = () => {
       <nav className="w-full py-4 md:py-6 flex justify-between items-center px-6 max-w-7xl mx-auto">
         <img src="/logo.png" alt="VeerNXT" className="h-10 md:h-14 w-auto object-contain" style={{ maxHeight: '56px', width: 'auto' }} />
         
-        <div className="relative" onMouseEnter={() => setIsLangOpen(true)} onMouseLeave={() => setIsLangOpen(false)}>
-          <button className={`text-sm font-medium hover:text-ios-olive transition-colors flex items-center gap-1 text-white h-10 ${isLangOpen ? 'text-ios-olive' : ''}`}>
-            <Languages className="w-4 h-4" />
-            <span className="hidden sm:inline uppercase">{currentLang.code}</span>
-            <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
-          </button>
+        <div className="flex items-center gap-4">
+          <div className="relative" onMouseEnter={() => setIsLangOpen(true)} onMouseLeave={() => setIsLangOpen(false)}>
+            <button className={`text-sm font-medium hover:text-ios-olive transition-colors flex items-center gap-1 text-white h-10 ${isLangOpen ? 'text-ios-olive' : ''}`}>
+              <Languages className="w-4 h-4" />
+              <span className="hidden sm:inline uppercase">{currentLang.code}</span>
+              <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+            </button>
 
-          <AnimatePresence>
-            {isLangOpen && (
-              <motion.div 
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                className="absolute top-full right-0 mt-0 w-48 bg-[#1a1a1a] rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 z-50"
-              >
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      i18n.changeLanguage(lang.code);
-                      setIsLangOpen(false);
-                    }}
-                    className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-colors text-left group ${i18n.language === lang.code ? 'text-ios-olive bg-white/5' : 'text-gray-300'}`}
-                  >
-                    <span className={`text-xs font-bold tracking-tight ${i18n.language === lang.code ? 'text-ios-olive' : 'text-gray-300'}`}>{lang.name}</span>
-                    {i18n.language === lang.code && <Check className="w-3 h-3 text-ios-olive ml-auto" />}
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
+            <AnimatePresence>
+              {isLangOpen && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-full right-0 mt-0 w-48 bg-[#1a1a1a] rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 z-50"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        i18n.changeLanguage(lang.code);
+                        setIsLangOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-colors text-left group ${i18n.language === lang.code ? 'text-ios-olive bg-white/5' : 'text-gray-300'}`}
+                    >
+                      <span className={`text-xs font-bold tracking-tight ${i18n.language === lang.code ? 'text-ios-olive' : 'text-gray-300'}`}>{lang.name}</span>
+                      {i18n.language === lang.code && <Check className="w-3 h-3 text-ios-olive ml-auto" />}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <Link
+            to="/login"
+            className="bg-ios-olive text-black font-black px-6 py-2.5 rounded-full text-xs uppercase tracking-wider hover:bg-ios-olive/90 transition-all shadow-lg shadow-ios-olive/20 inline-flex items-center gap-1.5"
+          >
+            {t('landing.hero.cta')}
+          </Link>
         </div>
       </nav>
     </header>
@@ -189,6 +197,15 @@ const WhatIsVeerNXT = () => {
               <p className="text-xs md:text-sm text-ios-olive font-bold uppercase tracking-widest mt-2">{t('landing.whatIs.stat_3_label')}</p>
             </div>
           </div>
+
+          <div className="mt-12 flex justify-center">
+            <Link
+              to="/login"
+              className="ios-btn-primary ios-pill px-10 py-5 text-sm font-black tracking-widest uppercase inline-flex items-center gap-3 group shadow-2xl shadow-ios-olive/30 hover:scale-105 transition-transform"
+            >
+              {t('landing.hero.cta')} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
@@ -275,7 +292,7 @@ const PrimaryServiceOfferings = () => {
             to="/login"
             className="ios-btn-primary ios-pill px-10 py-5 text-sm font-black tracking-widest uppercase inline-flex items-center gap-3 group shadow-2xl shadow-ios-olive/30 hover:scale-105 transition-transform"
           >
-            Get Started <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            {t('landing.hero.cta')} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>
@@ -435,6 +452,14 @@ const EmployerPortal = () => {
             <p className="text-gray-300 font-light leading-relaxed text-lg max-w-xl">
               {t('landing.employer.desc')}
             </p>
+            <div className="pt-4">
+              <Link
+                to="/login"
+                className="ios-btn-primary ios-pill px-8 py-4 text-sm font-black tracking-widest uppercase inline-flex items-center gap-3 group shadow-2xl shadow-ios-olive/30 hover:scale-105 transition-transform"
+              >
+                {t('landing.hero.cta')} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </motion.div>
           
           <motion.div 

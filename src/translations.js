@@ -134,7 +134,7 @@ export const resources = {
           "s3_d": "Activate targeted examination preparation modules or engage with curated investment vehicles based on the diagnostic output.",
           "s4_t": "Continuous Monitoring & Execution",
           "s4_d": "Monitor job application statuses, track academic preparation metrics, and review investment portfolio performance via the centralized interface.",
-          "cta": "Get Started"
+          "cta": "Open App"
         },
         "regulatory": {
           "title_1": "Regulatory Compliance &",
@@ -674,7 +674,7 @@ export const resources = {
           "s3_d": "Activate targeted examination preparation modules or engage with curated investment vehicles based on the diagnostic output.",
           "s4_t": "Continuous Monitoring & Execution",
           "s4_d": "Monitor job application statuses, track academic preparation metrics, and review investment portfolio performance via the centralized interface.",
-          "cta": "Get Started"
+          "cta": "Open App"
         },
         "regulatory": {
           "title_1": "Regulatory Compliance &",
@@ -1034,7 +1034,7 @@ export const resources = {
           "s3_d": "Activate targeted examination preparation modules or engage with curated investment vehicles based on the diagnostic output.",
           "s4_t": "Continuous Monitoring & Execution",
           "s4_d": "Monitor job application statuses, track academic preparation metrics, and review investment portfolio performance via the centralized interface.",
-          "cta": "Get Started"
+          "cta": "Open App"
         },
         "regulatory": {
           "title_1": "Regulatory Compliance &",
@@ -1394,7 +1394,7 @@ export const resources = {
           "s3_d": "Activate targeted examination preparation modules or engage with curated investment vehicles based on the diagnostic output.",
           "s4_t": "Continuous Monitoring & Execution",
           "s4_d": "Monitor job application statuses, track academic preparation metrics, and review investment portfolio performance via the centralized interface.",
-          "cta": "Get Started"
+          "cta": "Open App"
         },
         "regulatory": {
           "title_1": "Regulatory Compliance &",

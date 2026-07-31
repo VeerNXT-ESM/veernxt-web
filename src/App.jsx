@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import AuthGuard from './components/AuthGuard';
 import Header from './components/Header';
@@ -32,6 +32,7 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import CVBuilder from './pages/CVBuilder';
+import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
 import './index.css';
 
 /**
@@ -102,6 +103,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/auth/callback" element={<AuthCallback />} />
         <Route path="/financial-guidance" element={<FinancialGuidance />} />
+        <Route path="/preview-services" element={<PreviewFinanceSuites />} />
         <Route path="/pay" element={<PaymentPage />} />
 
         {/* Routes with Global Header */}
