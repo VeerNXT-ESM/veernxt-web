@@ -985,8 +985,8 @@ const ClientLandingPage = ({
                   <div className="mini-stat-label">Corpus every transitioning soldier carries is Nation's way of saying Thank You!</div>
                 </div>
                 <div className="mini-stat">
-                  <div className="mini-stat-num">Zero</div>
-                  <div className="mini-stat-label">Platform fees charged to soldiers</div>
+                  <div className="mini-stat-num" style={{ fontSize: '18px', lineHeight: 1.3 }}>Built for You</div>
+                  <div className="mini-stat-label">Not for an opportunity, because Nation feels obligated</div>
                 </div>
               </div>
               <div className="truth-box">
