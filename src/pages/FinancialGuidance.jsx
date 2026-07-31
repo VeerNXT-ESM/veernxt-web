@@ -1438,10 +1438,10 @@ const ClientLandingPage = ({
       {/* ── PARTNERS & COB BRIEFING ──────────────────────────────── */}
       <section className="section section-alt" id="partners" aria-labelledby="partners-headline">
         <div className="container" style={{ textAlign: 'center' }}>
-          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Company Operating Base (COB) #227</div>
+          {/* <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Company Operating Base (COB) #227</div> */}
           <h2 className="section-headline" id="partners-headline" style={{ margin: '0 auto 8px' }}>Operational 24×7</h2>
           <p className="section-sub" style={{ margin: '0 auto 24px' }}>
-            Let's Start the Mission and Request Your Briefing. AMFI ARN – 362619 registered distributor.
+            Let's Start the Mission and Request Your Briefing. AMFI ARN – 362619
           </p>
 
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '32px' }}>
