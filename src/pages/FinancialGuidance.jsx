@@ -853,19 +853,19 @@ const ClientLandingPage = ({
             <div className="stat-grid">
               <div className="stat-card">
                 <div className="stat-card-num">50K+</div>
-                <div className="stat-card-label">Finest soldiers released every year</div>
+                <div className="stat-card-label">Agniveers released every year</div>
               </div>
               <div className="stat-card">
-                <div className="stat-card-num">ESM+</div>
-                <div className="stat-card-label">Finest soldiers transition to civilian life every year</div>
+                <div className="stat-card-num">4 Yrs</div>
+                <div className="stat-card-label">Of discipline. Now applied to wealth.</div>
               </div>
               <div className="stat-card">
-                <div className="stat-card-num">24×7</div>
-                <div className="stat-card-label">Company Operating Base (COB #227)</div>
+                <div className="stat-card-num">8</div>
+                <div className="stat-card-label">Distinct Agniveer profiles mapped</div>
               </div>
               <div className="stat-card">
                 <div className="stat-card-num">Zero</div>
-                <div className="stat-card-label">Cost to Soldiers &amp; Ex-Servicemen</div>
+                <div className="stat-card-label">Competing platforms. VeerNXT is first.</div>
               </div>
             </div>
           </div>
@@ -876,8 +876,11 @@ const ClientLandingPage = ({
       <section className="situation" id="mission" aria-labelledby="situation-headline">
         <div className="container">
           <div className="section-eyebrow">Life Situation — The Situation Changes</div>
-          <h2 className="section-headline" id="situation-headline">After 4 years, the uniform comes off — but direction remains.</h2>
-          <p className="section-sub">Nobody tells you this. But every Agniveer and ESM feels it the moment they walk out of the gate.</p>
+          <h2 className="section-headline" id="situation-headline">The soldier who served his country without hesitation deserves a structured transition without compromise.</h2>
+          <p className="section-sub">
+            A plan. A community. A good advice. A platform that understands him. In his language. And at the moment he needs it the most.<br />
+            <strong>They deserved it then. VeerNXT delivers it now</strong>
+          </p>
           
           <div className="situation-grid">
             <div className="situation-left">
