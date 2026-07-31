@@ -1451,7 +1451,6 @@ const ClientLandingPage = ({
           </div>
 
           <div className="partners-row">
-            <div className="partner-chip">🛡️ AMFI Registered Distributor (ARN – 362619)</div>
             <div className="partner-chip">🏦 Prudent Corporate Advisory — BSE &amp; NSE Listed</div>
             <div className="partner-chip">📜 SEBI Regulated Execution</div>
             <div className="partner-chip">🔒 256-Bit Bank-Grade Encryption</div>
