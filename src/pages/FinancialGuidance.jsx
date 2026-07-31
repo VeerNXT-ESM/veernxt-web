@@ -1396,43 +1396,38 @@ const ClientLandingPage = ({
             </div>
           </div>
 
-          {/* Five Commitments */}
+          {/* Sewa Labh / Reward Core Principles */}
           <div className="seva-commitments" style={{ marginTop: '48px' }}>
-            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Five Commitments — In Writing</span>
+            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Sewa Labh / Reward</span>
             <div style={{ marginTop: '16px' }}>
               <div className="seva-commit-item">
                 <div className="seva-commit-num">1</div>
                 <div className="seva-commit-body">
-                  <strong>Zero cost to soldiers &amp; veterans</strong>
-                  <p>Full platform access permanently at 0₹ cost.</p>
+                  <strong>Standing orders from Day One were granted.</strong>
                 </div>
               </div>
               <div className="seva-commit-item">
                 <div className="seva-commit-num">2</div>
                 <div className="seva-commit-body">
-                  <strong>Annual statutory audit</strong>
-                  <p>Full financial audit conducted and certified each year.</p>
+                  <strong>VeerNXT was built on one standing order</strong> — this platform would never profit from soldiers.
                 </div>
               </div>
               <div className="seva-commit-item">
                 <div className="seva-commit-num">3</div>
                 <div className="seva-commit-body">
-                  <strong>100% deployed for soldiers &amp; veterans</strong>
-                  <p>All rewards and initiatives deployed directly to the community.</p>
+                  <strong>Everything you invest goes back to you</strong> — because it was always yours. We simply make sure it finds its way back.
                 </div>
               </div>
               <div className="seva-commit-item">
                 <div className="seva-commit-num">4</div>
                 <div className="seva-commit-body">
-                  <strong>Annual transparency report published</strong>
-                  <p>Open disclosures published annually for public review.</p>
+                  <strong>We do not call this generosity. We call it Sewa Labh / Reward.</strong>
                 </div>
               </div>
               <div className="seva-commit-item">
                 <div className="seva-commit-num">5</div>
                 <div className="seva-commit-body">
-                  <strong>No product bias — guidance remains neutral</strong>
-                  <p>Unbiased recommendations driven strictly by your profile.</p>
+                  <strong>Because the soldier community was always owed everything in return.</strong>
                 </div>
               </div>
             </div>
