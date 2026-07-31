@@ -109,11 +109,8 @@ const Subscribe = () => {
   }, [session, selectedPlan, redirectedFrom, navigate]);
 
   const launchCheckoutPopup = (paymentData, email, mobile, fullName) => {
-    // Check if executing locally or in production
-    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    
-    // Determine the base URL of the VeerNXT target portal
-    const targetPortalBase = isLocal ? 'http://localhost:3000' : 'https://veernxt.in';
+    // Determine the base URL of the VeerNXT portal (same origin)
+    const targetPortalBase = window.location.origin;
     
     const isDevTest = paymentData.amount === 100;
     const payUrl = `${targetPortalBase}/pay?key_id=${paymentData.key_id}&order_id=${paymentData.orderId}&amount=${paymentData.amount}&name=${encodeURIComponent(fullName)}&email=${encodeURIComponent(email)}&contact=${encodeURIComponent(mobile)}&origin=${encodeURIComponent(window.location.origin)}${isDevTest ? '&devtest=true' : ''}`;

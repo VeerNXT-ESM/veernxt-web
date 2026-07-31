@@ -56,7 +56,7 @@ const Header = () => {
   const handleLogout = async () => {
     localStorage.removeItem('employer_session');
     await supabase.auth.signOut();
-    navigate('/login');
+    navigate('/');
   };
 
   return (

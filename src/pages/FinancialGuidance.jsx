@@ -265,7 +265,7 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
   <nav className="nav" role="navigation" aria-label="Main navigation">
     <div className="nav-inner">
       <div className="nav-logo" onClick={onGoLanding} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-        <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '76px', width: 'auto', objectFit: 'contain' }} />
+        <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
       </div>
       <ul className="nav-links">
         <li><a href="/" style={{ color: 'var(--g)', fontWeight: 700 }}>← Main Site</a></li>
@@ -283,8 +283,10 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
         </li>
       </ul>
       <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-        <span className="nav-amfi" aria-label="AMFI Registration">AMFI ARN-XXXXX</span>
-        <img src="/finance/AOG%20logo.jpeg" alt="AOG Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
+        <span className="nav-amfi" aria-label="AMFI Registration" style={{ fontSize: '11px', color: '#777', fontWeight: 500, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+          AMFI ARN – 362619
+        </span>
+        <img src="/finance/AOG%20logo.jpeg" alt="AOG Logo" style={{ height: '54px', width: 'auto', objectFit: 'contain', borderRadius: '4px' }} />
       </div>
     </div>
   </nav>
@@ -302,6 +304,9 @@ const ClientFooter = () => (
             Built by veterans. Advised by service chiefs. Serving those who served.
           </p>
           <div className="footer-tagline">सेवा से समृद्ध कल की ओर</div>
+          <div style={{ marginTop: '12px', fontSize: '12px', color: 'var(--mid)' }}>
+            <strong>AMFI ARN – 362619</strong> | Regulated Financial Distribution
+          </div>
         </div>
         <div className="footer-col">
           <h4>Platform</h4>
@@ -313,11 +318,12 @@ const ClientFooter = () => (
           </ul>
         </div>
         <div className="footer-col">
-          <h4>Community</h4>
+          <h4>Community &amp; Operations</h4>
           <ul>
-            <li><a href="#seva-dividend">Seva Dividend</a></li>
+            <li><a href="#seva-dividend">Sewa Labh / Rewards</a></li>
             <li><a href="#quiz-section">Interactive Guidance Quiz</a></li>
-            <li><a href="mailto:foundation@veteranworks.in">Veteran Works Foundation</a></li>
+            <li><strong>Company Operating Base (COB):</strong> #227</li>
+            <li><strong>Working Hours:</strong> Operational 24×7</li>
           </ul>
         </div>
         <div className="footer-col">
@@ -330,7 +336,7 @@ const ClientFooter = () => (
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} VeerNXT. All rights reserved. • Veteran Works Foundation
+        &copy; {new Date().getFullYear()} VeerNXT. All rights reserved. • Veteran Works Foundation • AMFI ARN – 362619
       </div>
     </div>
   </footer>
@@ -799,7 +805,7 @@ const ClientLandingPage = ({
       {/* ── VERIFIED AGNIVEER STRIP ─────────────────────────────── */}
       <div className="verified-strip" role="banner">
         <div className="verified-strip-inner">
-          <p>🎖️ Verified Agniveers get full platform access — FREE. <a href="#quiz-section">Take the Interactive Guidance Quiz →</a></p>
+          <p>🎖️ Built By Veterans. For Veterans, ESM and Agniveers — <strong>AMFI ARN – 362619</strong> <a href="#quiz-section">Start My Mission Profile →</a></p>
         </div>
       </div>
 
@@ -809,7 +815,7 @@ const ClientLandingPage = ({
           <div className="hero-left">
             <div className="hero-eyebrow" aria-hidden="true">
               <span className="hero-dot"></span>
-              <span className="hero-eyebrow-text">Built by Veterans. For Agniveers.</span>
+              <span className="hero-eyebrow-text">Built By Veterans. For Veterans, ESM and Agniveers</span>
             </div>
             <h1 className="hero-headline" id="hero-headline">
               The parade is over.<br />
@@ -819,83 +825,98 @@ const ClientLandingPage = ({
             <p className="hero-hindi" lang="hi" aria-label="Sewa se samriddh kal ki or">सेवा से समृद्ध कल की ओर</p>
             <p className="hero-sub">
               You served India with discipline for four years.
-              VeerNXT exists to make sure that same discipline now builds you
-              <strong> a career, a community, and a prosperous future.</strong>
-              One platform. Built only for you.
+              VeerNXT helps you deploy it right and work as hard as you did.
+              <strong> A career, a community, and a prosperous future.</strong>
             </p>
+
+            {/* Step 1 Flow Bar */}
+            <div className="hero-flow-bar" style={{ background: 'rgba(255,255,255,0.06)', padding: '12px 18px', borderRadius: '12px', marginBottom: '24px', border: '1px solid rgba(255,255,255,0.12)' }}>
+              <div style={{ fontSize: '13px', color: 'var(--gold)', fontWeight: 700, marginBottom: '4px' }}>STEP 1: You Served...</div>
+              <div style={{ fontSize: '14px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                <span>Discover</span>
+                <span style={{ color: 'var(--gold)' }}>↓</span>
+                <span>Answer 7 simple questions</span>
+                <span style={{ color: 'var(--gold)' }}>↓</span>
+                <span style={{ fontWeight: 600 }}>For Agniveers and ESMs</span>
+              </div>
+            </div>
+
             <div className="hero-actions">
               <button onClick={onStartQuiz} className="btn btn-gold">
                 <span>🎯</span> Start My Mission Profile
               </button>
-              <a href="#mission" className="btn btn-outline">See How It Works</a>
+              <a href="#mission" className="btn btn-outline">See How it Works</a>
             </div>
             <div className="hero-trust" aria-label="Trust signals">
-              <span className="trust-item"><span className="trust-icon" aria-hidden="true">🛡️</span> AMFI Registered Distributor</span>
+              <span className="trust-item"><span className="trust-icon" aria-hidden="true">🛡️</span> AMFI ARN – 362619</span>
               <span className="trust-item"><span className="trust-icon" aria-hidden="true">🏦</span> Execution via Prudent (BSE/NSE Listed)</span>
-              <span className="trust-item"><span className="trust-icon" aria-hidden="true">✅</span> Zero cost to Agniveer</span>
+              <span className="trust-item"><span className="trust-icon" aria-hidden="true">✅</span> Zero cost to Agniveer &amp; ESM</span>
             </div>
           </div>
+
           <div className="hero-right" aria-hidden="true">
-            <div className="stat-card">
-              <div className="stat-card-num">₹10–12L</div>
-              <div className="stat-card-label">Seva Nidhi in your hands. Tax-free.</div>
-              <div className="stat-card-sub">The corpus that can change your family's trajectory — if invested right.</div>
+            <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.15), rgba(26,92,42,0.25))', border: '1px solid var(--gold)' }}>
+              <div className="stat-card-num" style={{ fontSize: '26px' }}>₹10L | ₹25L | ₹50L | ₹1Cr</div>
+              <div className="stat-card-label" style={{ fontWeight: 700, color: 'var(--gold)' }}>Sewa Nidhi • Gratuity • Pension • Savings</div>
+              <div className="stat-card-sub">The corpus that changes your family's trajectory — deployed right.</div>
             </div>
             <div className="stat-grid">
               <div className="stat-card">
                 <div className="stat-card-num">50K+</div>
-                <div className="stat-card-label">Agniveers released every year</div>
+                <div className="stat-card-label">Finest soldiers released every year</div>
               </div>
               <div className="stat-card">
-                <div className="stat-card-num">4 Yrs</div>
-                <div className="stat-card-label">Of discipline. Now applied to wealth.</div>
+                <div className="stat-card-num">ESM+</div>
+                <div className="stat-card-label">Finest soldiers transition to civilian life every year</div>
               </div>
               <div className="stat-card">
-                <div className="stat-card-num">8</div>
-                <div className="stat-card-label">Distinct Agniveer profiles mapped</div>
+                <div className="stat-card-num">24×7</div>
+                <div className="stat-card-label">Company Operating Base (COB #227)</div>
               </div>
               <div className="stat-card">
                 <div className="stat-card-num">Zero</div>
-                <div className="stat-card-label">Competing platforms. VeerNXT is first.</div>
+                <div className="stat-card-label">Cost to Soldiers &amp; Ex-Servicemen</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SITUATION ────────────────────────────────────────────── */}
+      {/* ── SITUATION & ETHOS ────────────────────────────────────── */}
       <section className="situation" id="mission" aria-labelledby="situation-headline">
         <div className="container">
+          <div className="section-eyebrow">Life Situation — The Situation Changes</div>
+          <h2 className="section-headline" id="situation-headline">After 4 years, the uniform comes off — but direction remains.</h2>
+          <p className="section-sub">Nobody tells you this. But every Agniveer and ESM feels it the moment they walk out of the gate.</p>
+          
           <div className="situation-grid">
             <div className="situation-left">
-              <div className="section-eyebrow">The situation</div>
-              <h2 className="section-headline" id="situation-headline">The day the uniform comes off is the day the system stops guiding you.</h2>
-              <p className="section-sub">Nobody tells you this. But every Agniveer feels it the moment they walk out of the gate.</p>
               <div className="fact-list">
                 <div className="fact-item">
                   <div className="fact-num">01</div>
-                  <div className="fact-text"><strong>Zero income on Day 1</strong>After 4 years of structured salary, monthly income becomes zero overnight. The financial runway is your Seva Nidhi — and it must last.</div>
+                  <div className="fact-text"><strong>Zero income on Day 1</strong>After structured service, monthly income pauses. Your financial runway is your Seva Nidhi &amp; Gratuity — and it must last.</div>
                 </div>
                 <div className="fact-item">
                   <div className="fact-num">02</div>
-                  <div className="fact-text"><strong>Predatory advisors are already waiting</strong>The moment you receive your corpus, local agents — well-meaning or otherwise — will offer you plans that serve their commission, not your future.</div>
+                  <div className="fact-text"><strong>Predatory advisors are waiting</strong>The moment you receive your corpus, local agents offer plans serving their commission, not your future.</div>
                 </div>
                 <div className="fact-item">
                   <div className="fact-num">03</div>
-                  <div className="fact-text"><strong>No structured civilian transition pathway</strong>No government scheme. No platform. No community. Just thousands of disconnected opportunities and no map to navigate them.</div>
+                  <div className="fact-text"><strong>No structured civilian pathway</strong>Thousands of disconnected opportunities with no single map to navigate them — until now.</div>
                 </div>
                 <div className="fact-item">
                   <div className="fact-num">04</div>
-                  <div className="fact-text"><strong>The 18-month window is critical</strong>Decisions made in the first 18 months after service — about career, education, investment — define the next 40 years. This is the window VeerNXT was built for.</div>
+                  <div className="fact-text"><strong>The critical 18-month window</strong>Decisions made in the first 18 months define the next 40 years. This is the window VeerNXT was built for.</div>
                 </div>
               </div>
             </div>
+
             <div className="situation-right">
               <p className="situation-quote">"A soldier should not have to rediscover direction the day the uniform comes off."</p>
               <div className="three-stats">
                 <div className="mini-stat">
                   <div className="mini-stat-num">50K+</div>
-                  <div className="mini-stat-label">Agniveers released every year</div>
+                  <div className="mini-stat-label">Finest soldiers released every year</div>
                 </div>
                 <div className="mini-stat">
                   <div className="mini-stat-num">₹500Cr+</div>
@@ -903,21 +924,63 @@ const ClientLandingPage = ({
                 </div>
                 <div className="mini-stat">
                   <div className="mini-stat-num">Zero</div>
-                  <div className="mini-stat-label">Community-specific platforms before VeerNXT</div>
+                  <div className="mini-stat-label">Platform fees charged to soldiers</div>
                 </div>
               </div>
               <div className="truth-box">
-                <p>Most Agniveers lose a significant portion of their Seva Nidhi within 18 months — not because they are careless, but because no one gave them the right information, in the right language, at the right time.</p>
-                <cite>VeerNXT exists because that stops now.</cite>
+                <p>VeerNXT helps you deploy your corpus right and work as hard as you did during your service.</p>
+                <cite>VeerNXT — Standing Orders from Day One</cite>
               </div>
 
               <div className="profiling-cta">
                 <div className="profiling-cta-left">
                   <h3>Find out who you are — financially.</h3>
-                  <p>7 questions. 3 minutes. A plan built only for your situation.</p>
+                  <p>Answer 7 simple questions for Agniveers and ESMs.</p>
                 </div>
-                <button onClick={onStartQuiz} className="btn btn-gold">Start Profile →</button>
+                <button onClick={onStartQuiz} className="btn btn-gold">Start Mission Profile →</button>
               </div>
+            </div>
+          </div>
+
+          {/* ── ETHOS CARDS (One Uniform, Only One, Built for You, Gratitude Card) ── */}
+          <div style={{ marginTop: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1rem))', gap: '20px' }}>
+            <div className="ethos-card" style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--g)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--g)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>CORE VALUE</div>
+              <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: 'var(--ink)' }}>One Uniform</h3>
+              <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '14px', color: 'var(--mid)', lineHeight: '1.8' }}>
+                <li>Trained.</li>
+                <li>Proven.</li>
+                <li>Ready and deployed.</li>
+                <li><strong>For prosperity.</strong></li>
+              </ul>
+            </div>
+
+            <div className="ethos-card" style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--gold)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>STANDBY ORDER</div>
+              <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: 'var(--ink)' }}>Only One</h3>
+              <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '14px', color: 'var(--mid)', lineHeight: '1.8' }}>
+                <li>First to serve, last to be...</li>
+                <li>No one left behind.</li>
+                <li><strong>Not even after the uniform.</strong></li>
+              </ul>
+            </div>
+
+            <div className="ethos-card" style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--g-dk)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--g-dk)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>PURPOSE</div>
+              <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: 'var(--ink)' }}>Built for You</h3>
+              <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '14px', color: 'var(--mid)', lineHeight: '1.8' }}>
+                <li>Not for an institution.</li>
+                <li>But because...</li>
+                <li><strong>Nation comes first.</strong></li>
+              </ul>
+            </div>
+
+            <div className="ethos-card" style={{ background: 'linear-gradient(135deg, #1C1C1C 0%, #0F3A1A 100%)', color: '#fff', padding: '24px', borderRadius: '16px' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>HONOUR CARD</div>
+              <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: '#fff' }}>Gratitude Card</h3>
+              <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.85)', lineHeight: '1.6', margin: 0 }}>
+                "A nation's gratitude appears every time returning soldiers choose its nation's way of saying <strong>'Thank You.'</strong>"
+              </p>
             </div>
           </div>
         </div>
@@ -939,7 +1002,7 @@ const ClientLandingPage = ({
             <div className="pstep" role="listitem">
               <div className="pstep-num">2</div>
               <div className="pstep-label">Match</div>
-              <div className="pstep-sub">Mapped to 1 of 8 Agniveer profiles</div>
+              <div className="pstep-sub">Mapped to 1 of 8 Agniveer/ESM profiles</div>
               <div className="pstep-arrow" aria-hidden="true"></div>
             </div>
             <div className="pstep" role="listitem">
@@ -971,56 +1034,69 @@ const ClientLandingPage = ({
       {/* ── SIX PILLARS ─────────────────────────────────────────── */}
       <section className="section section-alt" id="pillars" aria-labelledby="pillars-headline">
         <div className="container">
-          <div className="section-eyebrow">What VeerNXT offers</div>
-          <h2 className="section-headline" id="pillars-headline">Six pillars. One mission.</h2>
-          <p className="section-sub">Every service you need to build a successful life after uniform — in one place, in your language, at your pace.</p>
+          <div className="section-eyebrow">What We Offer</div>
+          <h2 className="section-headline" id="pillars-headline">Six Pillars. One Mission.</h2>
+          <p className="section-sub">Our complete suite of services, smart tools and insights to help you make better financial decisions on the go.</p>
           <div className="pillars-grid">
-            <div className="pillar-card">
+            <div className="pillar-card pop-out-card">
               <div className="pillar-icon" aria-hidden="true">🗺️</div>
               <h3><span>Opportunity</span> Mapping</h3>
               <p>Profiled against your training, trade, Arm/Service background, domicile and goals. The right pathways — not thousands of disconnected options.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
-            <div className="pillar-card">
+            <div className="pillar-card pop-out-card">
               <div className="pillar-icon" aria-hidden="true">📋</div>
               <h3><span>Exam</span> Intelligence</h3>
               <p>Central and State Govt opportunities, eligibility, reservations, notifications and personalised alerts — matched to who you are.</p>
-              <div className="pillar-tag"><span class="badge badge-green">EdTech</span></div>
+              <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
-            <div className="pillar-card">
+            <div className="pillar-card pop-out-card">
               <div className="pillar-icon" aria-hidden="true">📚</div>
               <h3><span>Exam</span> Preparation</h3>
               <p>Guidebook, précis, 10-year PYQ, 10 mock tests — for every relevant exam. Hindi-first content. Structured for how a soldier learns.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
-            <div className="pillar-card">
+            <div className="pillar-card pop-out-card">
               <div className="pillar-icon" aria-hidden="true">💼</div>
               <h3><span>Career</span> Transition</h3>
               <p>Military experience translated into civilian employability. Skill mapping, CV building, interview prep, employer linkage.</p>
               <div className="pillar-tag"><span className="badge badge-green">EdTech</span></div>
             </div>
-            <div className="pillar-card">
+            <div className="pillar-card pop-out-card">
               <div className="pillar-icon" aria-hidden="true">📈</div>
               <h3><span>Financial</span> Empowerment</h3>
               <p>Intelligent risk profiling → rupee-level investment plan → execution via Prudent. MF, NPS, insurance, post office. Zero cost to you.</p>
               <div className="pillar-tag"><span className="badge badge-gold">FinTech</span></div>
             </div>
-            <div className="pillar-card">
+            <div className="pillar-card pop-out-card">
               <div className="pillar-icon" aria-hidden="true">🤝</div>
               <h3><span>Community</span> &amp; Mentorship</h3>
-              <p>A network of Agniveers navigating the same road. Mentors who have walked ahead. Because the loneliness of transition is real.</p>
+              <p>A network of Agniveers navigating the same road. Mentors who have walked ahead. What is Community &amp; What is it doing?</p>
               <div className="pillar-tag"><span className="badge badge-green">Both</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── TOOLS / CALCULATORS ─────────────────────────────────── */}
+      {/* ── TOOLS / CALCULATORS & GOAL PLANNING ────────────────── */}
       <section className="section" id="tools" aria-labelledby="tools-headline">
         <div className="container">
-          <div className="section-eyebrow">Free tools</div>
+          <div className="section-eyebrow">Free Tools</div>
           <h2 className="section-headline" id="tools-headline">See your money's future. Before you invest a rupee.</h2>
-          <p className="section-sub">Interactive calculators built with the Agniveer's real corpus in mind. No login needed.</p>
+          <p className="section-sub">Interactive calculators built with the real corpus in mind. No login needed.</p>
+
+          {/* Goal Planning Pop-Out Box */}
+          <div style={{ background: 'linear-gradient(135deg, var(--g-dk) 0%, #162B1C 100%)', color: '#fff', padding: '28px 36px', borderRadius: '16px', marginBottom: '32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px', border: '1px solid var(--gold)' }}>
+            <div>
+              <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>VEERNXT GOAL PLANNING</div>
+              <h3 style={{ fontSize: '24px', margin: '4px 0 6px', color: '#fff' }}>Let's start creating goals</h3>
+              <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>Define your home, education, and family security milestones with tailored tools.</p>
+            </div>
+            <a href="#quiz-section" className="btn btn-gold" style={{ padding: '12px 24px', fontSize: '14px' }}>
+              Click here to see all our Goal Planning Tools →
+            </a>
+          </div>
+
           <div className="calc-wrapper">
             <div>
               <div className="calc-tabs" role="tablist" aria-label="Calculator type">
@@ -1046,7 +1122,7 @@ const ClientLandingPage = ({
                   aria-selected={calcTab === 'seva'}
                   onClick={() => setCalcTab('seva')}
                 >
-                  Seva Nidhi
+                  Seva Nidhi &amp; Gratuity
                 </button>
               </div>
 
@@ -1088,7 +1164,7 @@ const ClientLandingPage = ({
                     </div>
                   </div>
                   <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
-                    Projections are indicative. Actual returns depend on market conditions. Mutual Fund investments are subject to market risk.
+                    Projections are indicative. Actual returns depend on market conditions. AMFI Registered Distributor (ARN – 362619).
                   </p>
                 </div>
               )}
@@ -1097,11 +1173,11 @@ const ClientLandingPage = ({
               {calcTab === 'corpus' && (
                 <div className="calc-box">
                   <div className="calc-field">
-                    <label>Seva Nidhi corpus <span>₹{corpAmt.toLocaleString('en-IN')}</span></label>
+                    <label>Corpus amount <span>₹{corpAmt.toLocaleString('en-IN')}</span></label>
                     <input
-                      type="range" min="300000" max="1500000" step="50000"
+                      type="range" min="300000" max="5000000" step="100000"
                       value={corpAmt} onChange={e => setCorpAmt(Number(e.target.value))}
-                      aria-label="Seva Nidhi corpus"
+                      aria-label="Corpus amount"
                     />
                   </div>
                   <div className="calc-field">
@@ -1130,9 +1206,6 @@ const ClientLandingPage = ({
                       <div className="cr-val">₹{corpFV.toLocaleString('en-IN')}</div>
                     </div>
                   </div>
-                  <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
-                    Projections are indicative. Actual returns depend on market conditions. Mutual Fund investments are subject to market risk.
-                  </p>
                 </div>
               )}
 
@@ -1140,12 +1213,11 @@ const ClientLandingPage = ({
               {calcTab === 'seva' && (
                 <div className="calc-box">
                   <p style={{ fontSize: '14px', color: 'var(--mid)', lineHeight: '1.7', marginBottom: '16px' }}>
-                    Your Seva Nidhi is approximately <strong>₹10–12 Lakhs</strong> upon completion of 4 years.
-                    It is 100% tax-free under Section 10(10D) of the Income Tax Act.
+                    Your Seva Nidhi &amp; Gratuity corpus is approximately <strong>₹10L – ₹1Cr</strong> depending on service duration. 100% tax-free.
                   </p>
                   <div className="calc-result">
                     <div className="cr-item">
-                      <div className="cr-label">1 Year (FD/Liquid)</div>
+                      <div className="cr-label">1 Year (Liquid/FD)</div>
                       <div className="cr-val">₹10.7L</div>
                     </div>
                     <div className="cr-item">
@@ -1157,16 +1229,13 @@ const ClientLandingPage = ({
                       <div className="cr-val">₹16.8L</div>
                     </div>
                   </div>
-                  <p style={{ fontSize: '11px', color: 'var(--mid)', marginTop: '12px', lineHeight: '1.6' }}>
-                    Projections are indicative. Actual returns depend on market conditions. Mutual Fund investments are subject to market risk.
-                  </p>
                 </div>
               )}
             </div>
 
             <div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', color: 'var(--ink)', marginBottom: '8px' }}>More planning tools</h3>
-              <p style={{ fontSize: '13px', color: 'var(--mid)', marginBottom: '20px' }}>All free. No login required. Built for the Agniveer's real numbers.</p>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', color: 'var(--ink)', marginBottom: '8px' }}>More Planning Tools</h3>
+              <p style={{ fontSize: '13px', color: 'var(--mid)', marginBottom: '20px' }}>All free. No login needed. Built for the soldier's real numbers.</p>
               <div className="calc-tools-grid">
                 <div className="tool-chip">
                   <div className="tool-chip-icon" aria-hidden="true">💰</div>
@@ -1196,20 +1265,6 @@ const ClientLandingPage = ({
                     <div className="tool-chip-sub">How much cover do you need?</div>
                   </div>
                 </div>
-                <div className="tool-chip">
-                  <div className="tool-chip-icon" aria-hidden="true">📈</div>
-                  <div>
-                    <div className="tool-chip-label">NPS vs PPF vs MF</div>
-                    <div className="tool-chip-sub">Honest side-by-side comparison</div>
-                  </div>
-                </div>
-                <div className="tool-chip">
-                  <div className="tool-chip-icon" aria-hidden="true">🚨</div>
-                  <div>
-                    <div className="tool-chip-label">Emergency Fund Calc</div>
-                    <div className="tool-chip-sub">Your minimum safety net</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -1228,7 +1283,7 @@ const ClientLandingPage = ({
           <p className="section-sub">
             {phase === PHASE.RESULT && "Unbiased, military-tailored investment breakdown based on your responses."}
             {phase === PHASE.SUBMITTED && "A VeerNXT financial consultant will reach out within 24 hours to create your detailed plan."}
-            {(phase !== PHASE.RESULT && phase !== PHASE.SUBMITTED) && "Answer 7 simple questions to unlock your custom asset allocation. Free permanently for Agniveers."}
+            {(phase !== PHASE.RESULT && phase !== PHASE.SUBMITTED) && "Answer 7 simple questions to unlock your custom asset allocation. Free permanently for Agniveers & ESMs."}
           </p>
 
           <div style={{ marginTop: '32px' }}>
@@ -1265,207 +1320,162 @@ const ClientLandingPage = ({
         </div>
       </section>
 
-      {/* ── COMMUNITY ────────────────────────────────────────────── */}
+      {/* ── COMMUNITY & STATS ────────────────────────────────────── */}
       <section className="section section-dark" id="community" aria-labelledby="community-headline">
         <div className="container">
           <div className="section-eyebrow" style={{ color: 'var(--gold)' }}>Community</div>
           <h2 className="section-headline section-headline-white" id="community-headline">You are not walking this road alone.</h2>
-          <p className="section-sub section-sub-white">Thousands of Agniveers across India are making the same transition. Learn from those who walked ahead.</p>
-          <div className="community-grid">
-            <div className="community-card">
-              <p className="community-card-quote">"When I left after 4 years, my village told me to prepare for police constable. VeerNXT showed me I was eligible for SSC CGL and helped me invest my Seva Nidhi in a simple SIP. Today I have a stable job and my corpus is growing."</p>
-              <div className="community-card-meta">
-                <div className="community-avatar">S</div>
-                <div>
-                  <div className="community-name">Sunil K.</div>
-                  <div className="community-detail">Ex-Agniveer • Rajputana Rifles • Batch 2022–26</div>
-                </div>
-              </div>
-            </div>
-            <div className="community-card">
-              <p className="community-card-quote">"The financial advisor in my town tried to sell me an endowment policy with 20-year lock-in. The VeerNXT Corpus Planner showed me the difference between that and a balanced mutual fund. That one calculator saved me ₹4 Lakhs."</p>
-              <div className="community-card-meta">
-                <div className="community-avatar">R</div>
-                <div>
-                  <div className="community-name">Rahul M.</div>
-                  <div className="community-detail">Ex-Agniveer • EME • Batch 2022–26</div>
-                </div>
-              </div>
-            </div>
-            <div className="community-card">
-              <p className="community-card-quote">"What I respect most is that VeerNXT is built by veterans. The language is ours. The exam prep understands that a soldier doesn't study like a college kid — we study with target-orientation."</p>
-              <div className="community-card-meta">
-                <div className="community-avatar">A</div>
-                <div>
-                  <div className="community-name">Amit P.</div>
-                  <div className="community-detail">Ex-Agniveer • Signals • Batch 2022–26</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p className="section-sub section-sub-white">Thousands of Agniveers and ESMs across India are making the same transition.</p>
+
           <div className="community-strip">
             <div>
-              <div className="cs-num">50,000+</div>
-              <div className="cs-label">Agniveer community members target</div>
+              <div className="cs-num">50K+</div>
+              <div className="cs-label">Soldier Community Insight</div>
             </div>
             <div>
               <div className="cs-num">100%</div>
-              <div className="cs-label">Verified service backgrounds</div>
-            </div>
-            <div>
-              <div className="cs-num">0 ₹</div>
-              <div className="cs-label">Commission charged to any Agniveer</div>
+              <div className="cs-label">0 ₹ Charged to Soldiers</div>
             </div>
             <div>
               <div className="cs-num">24/7</div>
-              <div className="cs-label">Peer-to-peer forum &amp; mentor access</div>
+              <div className="cs-label">Operational Support (COB #227)</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SEVA DIVIDEND ────────────────────────────────────────── */}
+      {/* ── SEWA LABH / REWARD — THREE STEP MODEL ────────────────── */}
       <section className="section seva-section" id="seva-dividend" aria-labelledby="seva-headline">
         <div className="container">
-          <div className="section-eyebrow" style={{ color: 'var(--gold)' }}>Our commitment</div>
-          <h2 className="section-headline section-headline-white" id="seva-headline">The Seva Dividend.</h2>
-          <div className="seva-sub-head">How we fund the platform — and why we give back.</div>
+          <div className="section-eyebrow" style={{ color: 'var(--gold)' }}>Our Core Ethos</div>
+          <h2 className="section-headline section-headline-white" id="seva-headline">Sewa Labh / Reward</h2>
+          <div className="seva-sub-head" style={{ color: 'rgba(255,255,255,0.9)', fontStyle: 'italic', marginBottom: '28px' }}>
+            "Standing orders from Day One were granted. VeerNXT was built on one standing order — this platform would never profit from soldiers."
+          </div>
+
           <div className="seva-intro-grid">
             <div className="seva-intro-text">
-              <p>Every platform needs revenue to survive. We believe you deserve to know exactly where ours comes from.</p>
-              <p style={{ marginTop: '14px' }}>What we do differently is what happens next.</p>
+              <p>Everything you invest goes back to you — because it was always yours. We simply make sure it finds its way back.</p>
               <p style={{ marginTop: '14px' }}>
-                A defined portion of every rupee VeerNXT earns from its financial partnerships is contributed to the <strong>Veteran Works Foundation</strong> — a not-for-profit initiative established by the same veterans who built this platform. The Foundation deploys those funds exclusively for the benefit of the Agniveer community. We call this the <strong className="seva-highlight">Seva Dividend</strong>.
+                We do not call this generosity. We call it <strong>Sewa Labh / Reward</strong> because the soldier community was always owed everything in return.
               </p>
             </div>
             <div className="seva-pull-quote-wrap">
               <blockquote className="seva-pull-quote">
                 <span className="seva-quote-hindi" lang="hi">सेवालाभ</span>
-                <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,.8)', margin: 0, fontSize: '14px' }}>"Seva-laabh: The return that flows back to those who served."</p>
-                <cite>— The Veteran Works Foundation Charter</cite>
+                <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,.9)', margin: 0, fontSize: '14px' }}>
+                  "The return that flows back to those who served."
+                </p>
               </blockquote>
             </div>
           </div>
-          <div className="seva-steps">
+
+          {/* Three-Step Model */}
+          <div className="seva-steps" style={{ marginTop: '40px' }}>
             <div className="seva-step">
-              <div className="seva-step-num">Step 01</div>
-              <div className="seva-step-icon" aria-hidden="true">🎯</div>
-              <div className="seva-step-title">You use VeerNXT</div>
-              <div className="seva-step-body">Free platform access. You prepare for exams, map opportunities, and invest your Seva Nidhi through Prudent.</div>
-              <span className="seva-step-tag">Zero cost to you</span>
+              <div className="seva-step-top">
+                <div className="seva-step-num">Step 1</div>
+                <div className="seva-step-icon" aria-hidden="true">🎯</div>
+                <div className="seva-step-title">You use VeerNXT</div>
+                <div className="seva-step-body">
+                  Free platform access. Prepare for exams, map opportunities, and invest your corpus.
+                </div>
+              </div>
+              <span className="seva-step-tag" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff' }}>Badge: Zero Cost to You</span>
             </div>
             <div className="seva-step-arrow" aria-hidden="true">→</div>
             <div className="seva-step">
-              <div className="seva-step-num">Step 02</div>
-              <div className="seva-step-icon" aria-hidden="true">🏦</div>
-              <div className="seva-step-title">Partners pay commission</div>
-              <div className="seva-step-body">When you invest through Prudent, the AMC pays a standard distributor commission. Your NAV is identical to direct investing.</div>
-              <span className="seva-step-tag">Standard industry fee</span>
+              <div className="seva-step-top">
+                <div className="seva-step-num">Step 2</div>
+                <div className="seva-step-icon" aria-hidden="true">🏦</div>
+                <div className="seva-step-title">You Earn Your Bonuses</div>
+                <div className="seva-step-body">
+                  Your investment comes back to you with maximum transparency and zero platform markup.
+                </div>
+              </div>
+              <span className="seva-step-tag" style={{ background: 'var(--gold)', color: '#000' }}>Badge: Only One</span>
             </div>
             <div className="seva-step-arrow" aria-hidden="true">→</div>
             <div className="seva-step featured">
-              <div className="seva-step-num">Step 03 — Seva Dividend</div>
-              <div className="seva-step-icon" aria-hidden="true">🌱</div>
-              <div className="seva-step-title">We share with the Foundation</div>
-              <div className="seva-step-body">A defined portion of that commission is contributed to Veteran Works Foundation — funding scholarships, emergency grants, and transition support.</div>
-              <span className="seva-step-tag featured-tag">Shared with community</span>
+              <div className="seva-step-top">
+                <div className="seva-step-num">Step 3</div>
+                <div className="seva-step-icon" aria-hidden="true">🌱</div>
+                <div className="seva-step-title">Sewa Labh / Reward</div>
+                <div className="seva-step-body">
+                  The platform funds scholarships, emergency grants and transition support for the community.
+                </div>
+              </div>
+              <span className="seva-step-tag featured-tag">Badge: Shared with Community</span>
             </div>
           </div>
-          <div className="seva-disclosure">
-            <div className="seva-disclosure-header">
-              <span style={{ fontSize: '18px' }} aria-hidden="true">📋</span>
-              <h3>Full Financial Disclosure — Nothing Hidden</h3>
-            </div>
-            <div className="seva-disclosure-grid">
-              <div className="seva-disclosure-col">
-                <p><strong>How mutual fund commissions work:</strong> Under SEBI regulations, when an investor routes mutual fund investments through a registered distributor (AMFI ARN-XXXXX), the Asset Management Company (AMC) pays the distributor a trail commission — typically between 0.5% and 1.0% per annum of the asset value.</p>
-              </div>
-              <div className="seva-disclosure-col">
-                <p><strong>Where the money goes:</strong> This commission is our operating revenue. From this revenue, a defined portion is contributed to the <strong>Veteran Works Foundation</strong> — our registered not-for-profit arm. The Foundation is a separate legal entity. It does not distribute profits. It exists for one purpose: the welfare, empowerment, and financial security of India's Agniveers and ex-servicemen community.</p>
-                <p style={{ marginTop: '12px' }}>It does not reduce or alter the NAV at which you invest. It does not constitute investment advice. It is entirely separate from your investment account.</p>
-                <p style={{ marginTop: '12px' }}>If you have any questions about how the Seva Dividend works, write to us at <a href="mailto:foundation@veteranworks.in" style={{ color: 'var(--g)', fontWeight: 600 }}>foundation@veteranworks.in</a>. We will answer every question. Openly.</p>
-              </div>
-            </div>
-          </div>
-          <div className="seva-commitments">
-            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Five commitments — in writing, on this page</span>
+
+          {/* Five Commitments */}
+          <div className="seva-commitments" style={{ marginTop: '48px' }}>
+            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Five Commitments — In Writing</span>
             <div style={{ marginTop: '16px' }}>
               <div className="seva-commit-item">
-                <div className="seva-commit-num">01</div>
+                <div className="seva-commit-num">1</div>
                 <div className="seva-commit-body">
-                  <strong>Zero markup or cost to the Agniveer</strong>
-                  <p>The Seva Dividend comes entirely from distributor revenue paid by financial partners. You pay nothing extra — ever.</p>
+                  <strong>Zero cost to soldiers &amp; veterans</strong>
+                  <p>Full platform access permanently at 0₹ cost.</p>
                 </div>
               </div>
               <div className="seva-commit-item">
-                <div className="seva-commit-num">02</div>
+                <div className="seva-commit-num">2</div>
                 <div className="seva-commit-body">
-                  <strong>Separate legal entity — audited annually</strong>
-                  <p>Veteran Works Foundation is a distinct Section 8 / Trust entity with its own governing board and statutory audit.</p>
+                  <strong>Annual statutory audit</strong>
+                  <p>Full financial audit conducted and certified each year.</p>
                 </div>
               </div>
               <div className="seva-commit-item">
-                <div className="seva-commit-num">03</div>
+                <div className="seva-commit-num">3</div>
                 <div className="seva-commit-body">
-                  <strong>100% deployed for Agniveer &amp; veteran welfare</strong>
-                  <p>Foundation funds go exclusively to: emergency transition grants, vocational scholarships, family healthcare support, and community infrastructure.</p>
+                  <strong>100% deployed for soldiers &amp; veterans</strong>
+                  <p>All rewards and initiatives deployed directly to the community.</p>
                 </div>
               </div>
               <div className="seva-commit-item">
-                <div className="seva-commit-num">04</div>
+                <div className="seva-commit-num">4</div>
                 <div className="seva-commit-body">
-                  <strong>Annual transparency report published publicly</strong>
-                  <p>Every financial year, we publish an open statement showing total contributions made to the Foundation and how every rupee was utilised.</p>
+                  <strong>Annual transparency report published</strong>
+                  <p>Open disclosures published annually for public review.</p>
                 </div>
               </div>
               <div className="seva-commit-item">
-                <div className="seva-commit-num">05</div>
+                <div className="seva-commit-num">5</div>
                 <div className="seva-commit-body">
                   <strong>No product bias — guidance remains neutral</strong>
-                  <p>Our financial guidance is driven by what suits your profile, never by which fund pays higher commission. Prudent's open-architecture platform ensures unbiased fund selection.</p>
+                  <p>Unbiased recommendations driven strictly by your profile.</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="seva-closing">
-            <div className="seva-closing-line">"We earned from the nation's service. Now we build for those who serve next."</div>
-            <div className="seva-closing-sub">— The Founders of VeerNXT &amp; Veteran Works Foundation</div>
           </div>
         </div>
       </section>
 
-      {/* ── PARTNERS ─────────────────────────────────────────────── */}
+      {/* ── PARTNERS & COB BRIEFING ──────────────────────────────── */}
       <section className="section section-alt" id="partners" aria-labelledby="partners-headline">
         <div className="container" style={{ textAlign: 'center' }}>
-          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Regulated &amp; trusted</div>
-          <h2 className="section-headline" id="partners-headline" style={{ margin: '0 auto 8px' }}>Your money is always in safe, regulated hands.</h2>
-          <p className="section-sub" style={{ margin: '0 auto 0' }}>VeerNXT does not hold your money. Investment execution is through Prudent Corporate Advisory Services Ltd — SEBI registered, listed on BSE and NSE.</p>
+          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Company Operating Base (COB) #227</div>
+          <h2 className="section-headline" id="partners-headline" style={{ margin: '0 auto 8px' }}>Operational 24×7</h2>
+          <p className="section-sub" style={{ margin: '0 auto 24px' }}>
+            Let's Start the Mission and Request Your Briefing. AMFI ARN – 362619 registered distributor.
+          </p>
+
+          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '32px' }}>
+            <button onClick={onStartQuiz} className="btn btn-green">
+              Let's Start the Mission and Request Your Briefing <ArrowRight size={16} />
+            </button>
+          </div>
+
           <div className="partners-row">
-            <div className="partner-chip">🛡️ AMFI Registered Distributor (ARN-XXXXX)</div>
+            <div className="partner-chip">🛡️ AMFI Registered Distributor (ARN – 362619)</div>
             <div className="partner-chip">🏦 Prudent Corporate Advisory — BSE &amp; NSE Listed</div>
             <div className="partner-chip">📜 SEBI Regulated Execution</div>
             <div className="partner-chip">🔒 256-Bit Bank-Grade Encryption</div>
-            <div className="partner-chip">🏛️ NPS via PFRDA Registered POP</div>
-            <div className="partner-chip">📮 India Post / Small Savings Guidance</div>
+            <div className="partner-chip">🏛️ Company Operating Base #227</div>
+            <div className="partner-chip">⏱️ Operational 24×7</div>
           </div>
-        </div>
-      </section>
-
-      {/* ── LOGIN / PORTAL GATEWAY ──────────────────────────────── */}
-      <section className="section" id="login" aria-labelledby="login-headline">
-        <div className="container" style={{ textAlign: 'center', maxWidth: '660px' }}>
-          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>Already a member?</div>
-          <h2 className="section-headline" id="login-headline" style={{ margin: '0 auto 12px' }}>Your portfolio, your progress — one login.</h2>
-          <p className="section-sub" style={{ margin: '0 auto 32px' }}>Access your financial dashboard, exam preparation, VeerCoins balance, and service rep — all in one place.</p>
-          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={onGoPortal} className="btn btn-green">
-              Go to Finance Portal <ArrowRight size={16} />
-            </button>
-            <button onClick={onGoPortal} className="btn btn-outline" style={{ borderColor: 'var(--g)', color: 'var(--g)' }}>
-              View My Portfolio
-            </button>
-          </div>
-          <p style={{ fontSize: '12px', color: 'var(--mid)', marginTop: '20px' }}>Investment execution powered by <strong>Prudent Corporate Advisory Services Ltd</strong> (BSE/NSE Listed)</p>
         </div>
       </section>
 
@@ -1473,7 +1483,7 @@ const ClientLandingPage = ({
       <section id="disclaimer" aria-label="Regulatory Disclaimer">
         <div className="container" style={{ padding: '40px 20px' }}>
           <div className="disclaimer-box">
-            <p><strong>REGULATORY &amp; LEGAL DISCLAIMER:</strong> VeerNXT is a technology and educational guidance platform operated for the benefit of Agniveers and ex-servicemen. VeerNXT is registered with the Association of Mutual Funds in India (AMFI) as a Mutual Fund Distributor (ARN-XXXXX). Investment execution services are provided through <strong>Prudent Corporate Advisory Services Ltd</strong>, a SEBI-registered entity listed on the Bombay Stock Exchange (BSE) and National Stock Exchange (NSE). Mutual Fund investments are subject to market risks, read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. The financial calculators and model portfolios presented on this website are for educational and illustrative purposes only and do not constitute personal investment advice under SEBI (Investment Advisers) Regulations, 2013. Investors should consult a qualified financial adviser before making investment decisions. The "Seva Dividend" refers to a voluntary contribution made from operating revenues to the Veteran Works Foundation (a registered not-for-profit trust); it does not impact the Net Asset Value (NAV) of any mutual fund scheme or impose any additional charge on the investor.</p>
+            <p><strong>REGULATORY &amp; LEGAL DISCLAIMER:</strong> VeerNXT is a technology and educational guidance platform operated for the benefit of Agniveers and ex-servicemen. VeerNXT is registered with the Association of Mutual Funds in India (AMFI) as a Mutual Fund Distributor (AMFI ARN – 362619). Investment execution services are provided through <strong>Prudent Corporate Advisory Services Ltd</strong>, a SEBI-registered entity listed on BSE and NSE. Mutual Fund investments are subject to market risks, read all scheme-related documents carefully before investing. Company Operating Base (COB) #227 • Operational 24×7.</p>
           </div>
         </div>
       </section>
