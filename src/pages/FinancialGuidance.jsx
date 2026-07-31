@@ -830,17 +830,6 @@ const ClientLandingPage = ({
               One platform. Built for every soldier who ever served.
             </p>
 
-            {/* Step 1 Flow Bar */}
-            <div className="hero-flow-bar" style={{ background: 'rgba(255,255,255,0.06)', padding: '12px 18px', borderRadius: '12px', marginBottom: '24px', border: '1px solid rgba(255,255,255,0.12)' }}>
-              <div style={{ fontSize: '13px', color: 'var(--gold)', fontWeight: 700, marginBottom: '4px' }}>STEP 1: You Served...</div>
-              <div style={{ fontSize: '14px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                <span>Discover</span>
-                <span style={{ color: 'var(--gold)' }}>↓</span>
-                <span>Answer 7 simple questions</span>
-                <span style={{ color: 'var(--gold)' }}>↓</span>
-                <span style={{ fontWeight: 600 }}>For Agniveers and ESMs</span>
-              </div>
-            </div>
 
             <div className="hero-actions">
               <button onClick={onStartQuiz} className="btn btn-gold">
