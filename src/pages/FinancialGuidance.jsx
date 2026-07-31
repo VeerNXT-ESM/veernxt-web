@@ -981,8 +981,8 @@ const ClientLandingPage = ({
                   <div className="mini-stat-label">Finest soldiers released every year</div>
                 </div>
                 <div className="mini-stat">
-                  <div className="mini-stat-num">₹500Cr+</div>
-                  <div className="mini-stat-label">Seva Nidhi entering civilian market annually</div>
+                  <div className="mini-stat-num" style={{ fontSize: '18px', lineHeight: 1.3 }}>A Nation's Gratitude</div>
+                  <div className="mini-stat-label">Corpus every transitioning soldier carries is Nation's way of saying Thank You!</div>
                 </div>
                 <div className="mini-stat">
                   <div className="mini-stat-num">Zero</div>
