@@ -824,9 +824,10 @@ const ClientLandingPage = ({
             </h1>
             <p className="hero-hindi" lang="hi" aria-label="Sewa se samriddh kal ki or">सेवा से समृद्ध कल की ओर</p>
             <p className="hero-sub">
-              You served India with discipline for four years.
-              VeerNXT helps you deploy it right and work as hard as you did.
-              <strong> A career, a community, and a prosperous future.</strong>
+              You wore the uniform. You served this Nation with Honour.<br />
+              VeerNXT exists to make sure that same commitment now builds you
+              <strong> a career, a community, and a prosperous future.</strong><br />
+              One platform. Built for every soldier who ever served.
             </p>
 
             {/* Step 1 Flow Bar */}
