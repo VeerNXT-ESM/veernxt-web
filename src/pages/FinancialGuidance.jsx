@@ -1450,12 +1450,16 @@ const ClientLandingPage = ({
             </button>
           </div>
 
-          <div className="partners-row">
-            <div className="partner-chip">🏦 Prudent Corporate Advisory — BSE &amp; NSE Listed</div>
-            <div className="partner-chip">📜 SEBI Regulated Execution</div>
-            <div className="partner-chip">🔒 256-Bit Bank-Grade Encryption</div>
-            <div className="partner-chip">🏛️ Company Operating Base #227</div>
-            <div className="partner-chip">⏱️ Operational 24×7</div>
+          <div className="partners-grid-rows" style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
+            <div className="partners-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <div className="partner-chip">🏦 Prudent Corporate Advisory — BSE &amp; NSE Listed</div>
+              <div className="partner-chip">📜 SEBI Regulated Execution</div>
+              <div className="partner-chip">🔒 256-Bit Bank-Grade Encryption</div>
+            </div>
+            <div className="partners-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <div className="partner-chip">🏛️ Company Operating Base #227</div>
+              <div className="partner-chip">⏱️ Operational 24×7</div>
+            </div>
           </div>
         </div>
       </section>
