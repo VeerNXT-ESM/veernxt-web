@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap');
+@import "tailwindcss";
+@source "./";
+
+@theme {
+  --color-ios-bg: #FFFFFF;
+  --color-ios-secondary: #F2F2F7;
+  --color-ios-olive: #4b6b32;
+  --color-ios-text: #333333;
+  --radius-ios: 20px;
+  --shadow-ios: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
 
 :root {
   /* Marketing Design Tokens */
@@ -21,149 +32,172 @@
   --glass-shadow: var(--shadow-ios);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    background-color: var(--ios-bg);
+    color: var(--ios-text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
 }
 
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px; /* LinkedIn 0.875rem body text */
-  font-weight: 400;
-  line-height: 1.42857;
-  background-color: var(--ios-bg);
-  color: var(--ios-text);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-}
+@layer components {
+  .glass-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
 
-.glass-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
+  .ios-card, .glass-panel {
+    background: white;
+    border: 1px solid #f1f1f1;
+    border-radius: var(--radius-ios);
+    box-shadow: var(--shadow-ios);
+    padding: 1.5rem;
+  }
 
-.ios-card, .glass-panel {
-  background: white;
-  border: 1px solid #f1f1f1;
-  border-radius: var(--radius-ios);
-  box-shadow: var(--shadow-ios);
-  padding: 1.5rem;
-}
+  /* LinkedIn-aligned Typography Scale */
+  .text-caption {
+    font-size: 0.75rem !important;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: var(--ios-text);
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
-}
+  .text-body {
+    font-size: 0.875rem !important;
+    font-weight: 400;
+    line-height: 1.42857;
+    color: var(--ios-text);
+  }
 
-/* LinkedIn-aligned Typography Scale */
-.text-caption {
-  font-size: 0.75rem !important; /* ~12px */
-  font-weight: 400;
-  color: var(--text-secondary);
-}
+  .text-subheader, .user-name {
+    font-size: 1rem !important;
+    font-weight: 600;
+    color: var(--ios-text);
+  }
 
-.text-body {
-  font-size: 0.875rem !important; /* ~14px */
-  font-weight: 400;
-  line-height: 1.42857;
-  color: var(--ios-text);
-}
+  .text-heading-large {
+    font-size: 1.25rem !important;
+    font-weight: 700;
+    color: var(--ios-text);
+  }
 
-.text-subheader, .user-name {
-  font-size: 1rem !important; /* ~16px */
-  font-weight: 600;
-  color: var(--ios-text);
-}
+  .text-heading-xlarge {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    color: var(--ios-text);
+  }
 
-.text-heading-large {
-  font-size: 1.25rem !important; /* ~20px */
-  font-weight: 700;
-  color: var(--ios-text);
-}
+  .font-cta {
+    font-family: "Quicksand", sans-serif;
+  }
 
-.text-heading-xlarge {
-  font-size: 1.5rem !important; /* ~24px */
-  font-weight: 700;
-  color: var(--ios-text);
-}
+  button, .btn-primary, .btn-gold {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
 
-.font-cta {
-  font-family: "Quicksand", sans-serif;
-}
+  .btn-primary {
+    background: var(--ios-olive);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(75, 107, 50, 0.2);
+  }
 
-button, .btn-primary, .btn-gold {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  border-radius: 9999px; /* Pills */
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
-}
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
 
-.btn-primary {
-  background: var(--ios-olive);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(75, 107, 50, 0.2);
-}
+  .btn-secondary {
+    background: var(--ios-secondary);
+    color: var(--ios-olive);
+    padding: 0.75rem 1.5rem;
+  }
 
-.btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-}
+  .ios-pill {
+    border-radius: 9999px;
+  }
 
-.btn-secondary {
-  background: var(--ios-secondary);
-  color: var(--ios-olive);
-  padding: 0.75rem 1.5rem;
-}
+  .ios-btn-primary {
+    background-color: var(--ios-olive);
+    color: #ffffff;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
 
-.ios-pill {
-  border-radius: 9999px;
-}
+  .ios-btn-primary:hover {
+    opacity: 0.9;
+  }
 
-/* Learning Center Styles */
-.learning-header {
-  padding: 3rem 0;
-}
+  .ios-btn-secondary {
+    background-color: var(--ios-secondary);
+    color: var(--ios-olive);
+    font-weight: 700;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
 
-.tab-switcher {
-  display: flex;
-  gap: 0.5rem;
-  background: var(--ios-secondary);
-  padding: 0.25rem;
-  border-radius: 12px;
-  width: fit-content;
-  margin-top: 1rem;
-}
+  .ios-btn-secondary:hover {
+    opacity: 0.9;
+  }
 
-.tab-switcher button {
-  padding: 0.5rem 1.25rem;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  background: transparent;
-  color: var(--text-secondary);
-  font-family: inherit;
-  font-weight: 600;
-}
+  /* Learning Center Styles */
+  .learning-header {
+    padding: 3rem 0;
+  }
 
-.tab-switcher button.active {
-  background: white;
-  color: var(--ios-olive);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+  .tab-switcher {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--ios-secondary);
+    padding: 0.25rem;
+    border-radius: 12px;
+    width: fit-content;
+    margin-top: 1rem;
+  }
 
-.filter-controls select:focus, .filter-controls input:focus {
-  outline: 2px solid var(--ios-olive);
-  outline-offset: 2px;
+  .tab-switcher button {
+    padding: 0.5rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-weight: 600;
+  }
+
+  .tab-switcher button.active {
+    background: white;
+    color: var(--ios-olive);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .filter-controls select:focus, .filter-controls input:focus {
+    outline: 2px solid var(--ios-olive);
+    outline-offset: 2px;
+  }
 }
 
 /* Animations */
