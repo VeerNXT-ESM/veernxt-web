@@ -922,13 +922,7 @@ const ClientLandingPage = ({
                 <cite>VeerNXT — Standing Orders from Day One</cite>
               </div>
 
-              <div className="profiling-cta">
-                <div className="profiling-cta-left">
-                  <h3>Find out who you are — financially.</h3>
-                  <p>Answer 7 simple questions for Agniveers and ESMs.</p>
-                </div>
-                <button onClick={onStartQuiz} className="btn btn-gold">Start Mission Profile →</button>
-              </div>
+
             </div>
           </div>
 
