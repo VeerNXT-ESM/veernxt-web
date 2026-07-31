@@ -921,8 +921,8 @@ const ClientLandingPage = ({
                 </div>
               </div>
               <div className="truth-box">
-                <p>VeerNXT helps you deploy your corpus right and work as hard as you did during your service.</p>
-                <cite>VeerNXT — Standing Orders from Day One</cite>
+                <p>"To every soldier who stood at the border so we could sleep safely — VeerNXT was built so you can sleep peacefully too."</p>
+                <cite>— The Founders, VeerNXT &amp; Antogattva Foundation</cite>
               </div>
 
 
