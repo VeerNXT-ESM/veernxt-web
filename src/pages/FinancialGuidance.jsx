@@ -925,8 +925,8 @@ const ClientLandingPage = ({
                 <div className="stat-card-label">Agniveers released every year</div>
               </div>
               <div className="stat-card">
-                <div className="stat-card-num">4 Yrs</div>
-                <div className="stat-card-label">Apply  years of discipline to your wealth.</div>
+                <div className="stat-card-num">4/15/25+ Yrs</div>
+                <div className="stat-card-label">Apply years of discipline to your wealth.</div>
               </div>
               <div className="stat-card">
                 <div className="stat-card-num">8</div>
