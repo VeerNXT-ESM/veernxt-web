@@ -859,7 +859,7 @@ const ClientLandingPage = ({
             <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.15), rgba(26,92,42,0.25))', border: '1px solid var(--gold)' }}>
               <div className="stat-card-num" style={{ fontSize: '26px' }}>₹10L | ₹25L | ₹50L | ₹1Cr</div>
               <div className="stat-card-label" style={{ fontWeight: 700, color: 'var(--gold)' }}>Sewa Nidhi • Gratuity • Pension • Savings</div>
-              <div className="stat-card-sub">The corpus that changes your family's trajectory — deployed right.</div>
+              <div className="stat-card-sub">VeerNXT helps you to deploy it right and work as hard as you did</div>
             </div>
             <div className="stat-grid">
               <div className="stat-card">
