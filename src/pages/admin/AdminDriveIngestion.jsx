@@ -342,7 +342,7 @@ export default function AdminDriveIngestion() {
       // 3. Save to Supabase resources_v2
       addLog(item.id, `Registering resource metadata in Supabase (resources_v2)...`);
 
-      const res = await fetch('/api/admin/save-resource-v2', {
+      const res = await fetch('/api/admin/save-resource', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -8,15 +8,55 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  if (!supabaseUrl || !supabaseServiceKey) {
+  if (!supabaseUrl) {
     return res.status(500).json({ error: 'Missing Supabase credentials on server' });
   }
 
   try {
-    // We use the Service Role key here to completely bypass Row Level Security (RLS)
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
-    const { id, dataToSave } = req.body;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey || process.env.VITE_SUPABASE_ANON_KEY);
 
+    // Check if this is a V2 resource save call
+    if (req.body.metadata || req.body.version === 2) {
+      const { metadata, r2Urls } = req.body;
+      if (!metadata || !metadata.resource_id) {
+        return res.status(400).json({ error: 'Invalid resource metadata provided' });
+      }
+
+      const record = {
+        resource_id: metadata.resource_id,
+        file_hash: metadata.file_hash || '',
+        source_file: metadata.source_file || '',
+        title: metadata.title,
+        exam_name: metadata.exam_name || 'General Exam',
+        subject: metadata.subject || 'General',
+        category: metadata.category || 'Guide',
+        conducting_body: metadata.conducting_body || '',
+        website_url: metadata.website_url || '',
+        chapter_count: metadata.chapter_count || 0,
+        storage_base_url: r2Urls?.storage_base_url || `${process.env.R2_PUBLIC_URL || 'https://pub-82194047da2d4c1c8ff3a6284533ac21.r2.dev'}/structured_resources/${metadata.resource_id}/`,
+        metadata_url: r2Urls?.metadata_url || `${process.env.R2_PUBLIC_URL || 'https://pub-82194047da2d4c1c8ff3a6284533ac21.r2.dev'}/structured_resources/${metadata.resource_id}/metadata.json`,
+        thumbnail_url: r2Urls?.thumbnail_url || `${process.env.R2_PUBLIC_URL || 'https://pub-82194047da2d4c1c8ff3a6284533ac21.r2.dev'}/structured_resources/${metadata.resource_id}/thumbnail.png`,
+        is_freemium: metadata.is_freemium || false,
+        is_locked: metadata.is_locked !== undefined ? metadata.is_locked : true,
+        status: 'Published',
+        updated_at: new Date().toISOString()
+      };
+
+      const { data, error } = await supabase
+        .from('resources_v2')
+        .upsert(record, { onConflict: 'resource_id' })
+        .select();
+
+      if (error) {
+        console.error('Supabase V2 Upsert Error:', error);
+        return res.status(400).json({ error: error.message });
+      }
+
+      return res.status(200).json({ success: true, data });
+    }
+
+    // Standard V1 resource save call
+    const { id, dataToSave } = req.body;
     if (!dataToSave) {
       return res.status(400).json({ error: 'No data provided' });
     }
@@ -36,7 +76,6 @@ export default async function handler(req, res) {
     }
 
     const { data, error } = result;
-
     if (error) {
       return res.status(400).json({ error: error.message });
     }
