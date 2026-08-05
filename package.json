@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1103.0",
     "@supabase/supabase-js": "^2.105.1",
     "axios": "^1.15.2",
     "i18next": "^26.0.8",
     "i18next-browser-languagedetector": "^8.2.1",
     "joi": "^17.13.1",
+    "jszip": "^3.10.1",
     "lucide-react": "^1.14.0",
     "motion": "^12.23.24",
     "pg": "^8.22.0",

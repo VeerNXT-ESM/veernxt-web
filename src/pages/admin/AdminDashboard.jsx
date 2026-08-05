@@ -4,16 +4,18 @@ import { supabase } from '../../lib/supabase';
 import { 
   Plus, Book, FileText, HelpCircle, ChevronLeft, ChevronRight, Search, Briefcase, 
   RefreshCw, LogOut, Users, Shield, Trash2, Settings, Key, Check, X, ShieldAlert,
-  MapPin, GraduationCap, Heart, Eye, Dumbbell, Award, Phone, Mail, Calendar, UserCheck
+  MapPin, GraduationCap, Heart, Eye, Dumbbell, Award, Phone, Mail, Calendar, UserCheck,
+  Cloud, HardDrive
 } from 'lucide-react';
+import AdminDriveIngestion from './AdminDriveIngestion';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({ resources: 0, quizzes: 0, exams: 0, jobs: 0 });
   
-  // Tab control: 'catalog', 'scraper', 'permissions', 'users'
-  const [activeTab, setActiveTab] = useState('catalog');
+  // Tab control: 'drive', 'catalog', 'scraper', 'permissions', 'users'
+  const [activeTab, setActiveTab] = useState('drive');
 
   // Users Management
   const [userProfiles, setUserProfiles] = useState([]);
@@ -339,6 +341,14 @@ const AdminDashboard = () => {
           {/* Right Side: Tab Links & Profile Dropdown */}
           <div className="header-right-nav">
             <button 
+              className={`nav-link-item ${activeTab === 'drive' ? 'active' : ''}`}
+              onClick={() => setActiveTab('drive')}
+            >
+              <Cloud size={20} />
+              <span>Drive & R2 Ingestion</span>
+            </button>
+
+            <button 
               className={`nav-link-item ${activeTab === 'pipeline' ? 'active' : ''}`}
               onClick={() => setActiveTab('pipeline')}
             >
@@ -436,6 +446,9 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
+
+      {/* Tab: Drive & R2 Ingestion Engine */}
+      {activeTab === 'drive' && <AdminDriveIngestion />}
 
       {/* Tab 0: Content Pipeline */}
       {activeTab === 'pipeline' && (() => {
