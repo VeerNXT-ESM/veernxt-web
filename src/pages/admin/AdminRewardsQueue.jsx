@@ -26,7 +26,7 @@ const AdminRewardsQueue = () => {
 
   const fetchRedemptions = async () => {
     try {
-      const res = await axios.get('/api/admin/list-redemptions', {
+      const res = await axios.get('/api/admin/redemptions', {
         headers: { 'x-admin-api-secret': ADMIN_SECRET },
       });
       setRedemptions(res.data.redemptions || []);
@@ -59,7 +59,7 @@ const AdminRewardsQueue = () => {
     setSaving(true);
     setActionError('');
     try {
-      const res = await axios.post('/api/admin/update-redemption', {
+      const res = await axios.post('/api/admin/redemptions', {
         redemption_id: selected.id,
         status,
         tracking_number: formState.tracking_number,

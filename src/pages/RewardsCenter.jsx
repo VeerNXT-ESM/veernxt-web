@@ -62,7 +62,8 @@ const RedemptionModal = ({ reward, pointsBalance, prefill, onClose, onRedeemed }
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
-      const res = await axios.post('/api/rewards/redeem', {
+      const res = await axios.post('/api/points/actions', {
+        type: 'redeem',
         reward_id: reward.id,
         size: reward.requires_size ? size : null,
         shipping,
