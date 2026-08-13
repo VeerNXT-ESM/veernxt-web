@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
-import { 
-  Plus, Book, FileText, HelpCircle, ChevronLeft, ChevronRight, Search, Briefcase, 
+import {
+  Plus, Book, FileText, HelpCircle, ChevronLeft, ChevronRight, Search, Briefcase,
   RefreshCw, LogOut, Users, Shield, Trash2, Settings, Key, Check, X, ShieldAlert,
   MapPin, GraduationCap, Heart, Eye, Dumbbell, Award, Phone, Mail, Calendar, UserCheck,
-  Cloud, HardDrive
+  Cloud, HardDrive, Gift
 } from 'lucide-react';
 import AdminDriveIngestion from './AdminDriveIngestion';
 
@@ -39,7 +39,20 @@ const AdminDashboard = () => {
   const [currentSession, setCurrentSession] = useState(null);
   const [adminsList, setAdminsList] = useState([]);
   const [showAddModal, setShowAddModal] = useState(false);
-  
+
+  // Resource editing (rename/recategorize a single resources_v2 row)
+  const [editingResource, setEditingResource] = useState(null);
+  const [editDraft, setEditDraft] = useState(null);
+  const [savingEdit, setSavingEdit] = useState(false);
+
+  // Bulk find & replace on titles — scoped to whatever the catalog filters
+  // above are currently showing, so "filter down, then rename" is one flow.
+  const [bulkFindText, setBulkFindText] = useState('');
+  const [bulkReplaceText, setBulkReplaceText] = useState('');
+  const [bulkPreview, setBulkPreview] = useState(null);
+  const [bulkApplying, setBulkApplying] = useState(false);
+  const [bulkMessage, setBulkMessage] = useState('');
+
   // New Admin Form State
   const [newAdmin, setNewAdmin] = useState({
     name: '',
@@ -295,6 +308,89 @@ const AdminDashboard = () => {
     }
   };
 
+  // Resource editing — resources_v2 rows are keyed by resource_id (text),
+  // not the table's own `id`, and this table has no RLS gate the way
+  // reward_redemptions does, so the anon client (already used to read
+  // resources_v2 above) can write directly, same as AdminDriveIngestion.jsx.
+  const openResourceEditor = (item) => {
+    setEditingResource(item);
+    setEditDraft({
+      title: item.title || '',
+      exam_name: item.exam_name || '',
+      subject: item.subject || '',
+      category: item.category || 'Guide',
+      conducting_body: item.conducting_body || '',
+      status: item.status || 'Draft',
+    });
+  };
+
+  const closeResourceEditor = () => {
+    setEditingResource(null);
+    setEditDraft(null);
+  };
+
+  const saveResourceEdit = async () => {
+    if (!editingResource || !editDraft) return;
+    setSavingEdit(true);
+    try {
+      const { error } = await supabase
+        .from('resources_v2')
+        .update(editDraft)
+        .eq('resource_id', editingResource.resource_id);
+      if (error) throw error;
+      setRecentExams(prev => prev.map(r =>
+        r.resource_id === editingResource.resource_id ? { ...r, ...editDraft } : r
+      ));
+      closeResourceEditor();
+    } catch (err) {
+      alert('Failed to save changes: ' + err.message);
+    } finally {
+      setSavingEdit(false);
+    }
+  };
+
+  // Bulk rename preview/apply — deliberately scoped to `filteredResources`
+  // (the catalog tab's search/exam/category/tier filters already narrow
+  // that list), so "filter down to what you want, then rename" is one
+  // flow instead of a blind find/replace across the whole table.
+  const previewBulkRename = () => {
+    setBulkMessage('');
+    if (!bulkFindText) { setBulkPreview(null); return; }
+    const matches = filteredResources
+      .filter(item => item._type === 'resource' && item.title && item.title.includes(bulkFindText))
+      .map(item => ({
+        resource_id: item.resource_id,
+        before: item.title,
+        after: item.title.split(bulkFindText).join(bulkReplaceText),
+      }));
+    setBulkPreview(matches);
+  };
+
+  const applyBulkRename = async () => {
+    if (!bulkPreview || bulkPreview.length === 0) return;
+    setBulkApplying(true);
+    try {
+      const results = await Promise.all(bulkPreview.map(m =>
+        supabase.from('resources_v2').update({ title: m.after }).eq('resource_id', m.resource_id)
+      ));
+      const failed = results.filter(r => r.error);
+      setRecentExams(prev => prev.map(r => {
+        const match = bulkPreview.find(m => m.resource_id === r.resource_id);
+        return match ? { ...r, title: match.after } : r;
+      }));
+      setBulkMessage(failed.length
+        ? `Updated ${bulkPreview.length - failed.length} of ${bulkPreview.length} titles — ${failed.length} failed.`
+        : `Updated ${bulkPreview.length} title${bulkPreview.length === 1 ? '' : 's'}.`);
+      setBulkPreview(null);
+      setBulkFindText('');
+      setBulkReplaceText('');
+    } catch (err) {
+      setBulkMessage('Bulk rename failed: ' + err.message);
+    } finally {
+      setBulkApplying(false);
+    }
+  };
+
   // Dynamic filter compilation
   const uniqueExamsList = [...new Set(recentExams.map(item => item.exam_name).filter(Boolean))].sort();
 
@@ -380,14 +476,19 @@ const AdminDashboard = () => {
               <span>Admins & Permissions</span>
             </button>
 
-            <button 
+            <button
               className={`nav-link-item ${activeTab === 'users' ? 'active' : ''}`}
               onClick={() => setActiveTab('users')}
             >
               <Users size={20} />
               <span>Users</span>
             </button>
-            
+
+            <Link to="/admin/rewards" className="nav-link-item">
+              <Gift size={20} />
+              <span>Rewards</span>
+            </Link>
+
             {currentSession && (
               <div className="nav-profile-dropdown">
                 <div className="nav-profile-trigger">
@@ -637,6 +738,7 @@ const AdminDashboard = () => {
                 <option value="Intro">Intro (Introduction)</option>
                 <option value="Precis">Precis (Short Summaries)</option>
                 <option value="Guide">Guide (Study Books)</option>
+                <option value="PYQ">PYQ (Previous Year Questions)</option>
                 <option value="Mock Test">Mock Test (Quizzes)</option>
               </select>
             </div>
@@ -650,6 +752,68 @@ const AdminDashboard = () => {
               </select>
             </div>
           </div>
+
+          {/* Bulk Rename — scoped to whatever the filters above are currently
+              showing, so narrowing the catalog first (e.g. one exam) then
+              renaming is a single flow. */}
+          <div className="bulk-rename-bar">
+            <div className="input-group">
+              <label>Bulk rename — find in title</label>
+              <input
+                type="text"
+                value={bulkFindText}
+                onChange={(e) => { setBulkFindText(e.target.value); setBulkPreview(null); }}
+                placeholder="e.g. _Final_v2 or a repeated prefix"
+              />
+            </div>
+            <div className="input-group">
+              <label>Replace with</label>
+              <input
+                type="text"
+                value={bulkReplaceText}
+                onChange={(e) => { setBulkReplaceText(e.target.value); setBulkPreview(null); }}
+                placeholder="(leave blank to remove)"
+              />
+            </div>
+            <button type="button" className="btn-action" onClick={previewBulkRename} disabled={!bulkFindText}>
+              Preview
+            </button>
+            {bulkMessage && <span className="bulk-rename-message">{bulkMessage}</span>}
+          </div>
+
+          {bulkPreview && (
+            <div className="bulk-rename-preview">
+              {bulkPreview.length === 0 ? (
+                <p className="bulk-rename-empty">No titles in the current filtered view contain &quot;{bulkFindText}&quot;.</p>
+              ) : (
+                <>
+                  <p className="bulk-rename-count">
+                    {bulkPreview.length} title{bulkPreview.length === 1 ? '' : 's'} will change (scoped to the filters above):
+                  </p>
+                  <div className="bulk-rename-list">
+                    {bulkPreview.slice(0, 30).map(m => (
+                      <div key={m.resource_id} className="bulk-rename-row">
+                        <span className="bulk-rename-before">{m.before}</span>
+                        <span className="bulk-rename-arrow">→</span>
+                        <span className="bulk-rename-after">{m.after}</span>
+                      </div>
+                    ))}
+                    {bulkPreview.length > 30 && (
+                      <p className="bulk-rename-more">...and {bulkPreview.length - 30} more.</p>
+                    )}
+                  </div>
+                  <div className="bulk-rename-actions">
+                    <button type="button" className="btn-action primary" onClick={applyBulkRename} disabled={bulkApplying}>
+                      {bulkApplying ? 'Applying...' : `Apply to ${bulkPreview.length} resource${bulkPreview.length === 1 ? '' : 's'}`}
+                    </button>
+                    <button type="button" className="btn-secondary-modal" onClick={() => setBulkPreview(null)} disabled={bulkApplying}>
+                      Cancel
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
 
           {/* Corporate Catalog Dense Data Table */}
           <div className="table-responsive">
@@ -696,14 +860,14 @@ const AdminDashboard = () => {
                     </td>
                     <td>
                       <div className="table-actions-row">
-                        <button 
-                          className="btn-curate" 
-                          onClick={() => navigate(item._type === 'quiz' ? `/admin/quiz/${item.id}` : `/admin/content/${item.id}`)}
-                          title="Manage details & edit content"
+                        <button
+                          className="btn-curate"
+                          onClick={() => item._type === 'quiz' ? navigate(`/admin/quiz/${item.id}`) : openResourceEditor(item)}
+                          title={item._type === 'quiz' ? 'Manage details & edit content' : 'Rename, recategorize, or publish/unpublish this resource'}
                         >
-                          Curate Content
+                          {item._type === 'quiz' ? 'Curate Content' : 'Edit Details'}
                         </button>
-                        <button 
+                        <button
                           className="btn-row-delete" 
                           onClick={() => handleDeleteResource(item.id, item.title, item._type)}
                           title="Delete permanently from Supabase"
@@ -1263,6 +1427,96 @@ const AdminDashboard = () => {
         );
       })()}
 
+      {/* Resource Edit Modal — rename/recategorize/publish a single resources_v2 row */}
+      {editingResource && editDraft && (
+        <div className="modal-backdrop" onClick={closeResourceEditor}>
+          <div className="modal-card animate-fade-in" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>Edit Resource</h3>
+              <button type="button" onClick={closeResourceEditor} className="btn-close">
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <p className="hint" style={{ margin: '-0.5rem 0 0' }} title={editingResource.source_file}>
+                Source file: {editingResource.source_file || 'Unknown'}
+              </p>
+
+              <div className="input-group">
+                <label>Title</label>
+                <input
+                  type="text"
+                  value={editDraft.title}
+                  onChange={(e) => setEditDraft(d => ({ ...d, title: e.target.value }))}
+                />
+              </div>
+
+              <div className="input-group">
+                <label>Exam Name</label>
+                <input
+                  type="text"
+                  value={editDraft.exam_name}
+                  onChange={(e) => setEditDraft(d => ({ ...d, exam_name: e.target.value }))}
+                />
+              </div>
+
+              <div className="input-group">
+                <label>Subject</label>
+                <input
+                  type="text"
+                  value={editDraft.subject}
+                  onChange={(e) => setEditDraft(d => ({ ...d, subject: e.target.value }))}
+                />
+              </div>
+
+              <div className="input-group">
+                <label>Category</label>
+                <select
+                  value={editDraft.category}
+                  onChange={(e) => setEditDraft(d => ({ ...d, category: e.target.value }))}
+                >
+                  <option value="Intro">Intro</option>
+                  <option value="Guide">Guide</option>
+                  <option value="Precis">Precis</option>
+                  <option value="PYQ">PYQ</option>
+                  <option value="Mock Test">Mock Test</option>
+                </select>
+              </div>
+
+              <div className="input-group">
+                <label>Conducting Body</label>
+                <input
+                  type="text"
+                  value={editDraft.conducting_body}
+                  onChange={(e) => setEditDraft(d => ({ ...d, conducting_body: e.target.value }))}
+                />
+              </div>
+
+              <div className="input-group">
+                <label>Status</label>
+                <select
+                  value={editDraft.status}
+                  onChange={(e) => setEditDraft(d => ({ ...d, status: e.target.value }))}
+                >
+                  <option value="Published">Published</option>
+                  <option value="Draft">Draft (hidden from Learning Center)</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="modal-footer">
+              <button type="button" onClick={closeResourceEditor} className="btn-secondary-modal" disabled={savingEdit}>
+                Cancel
+              </button>
+              <button type="button" onClick={saveResourceEdit} className="btn-primary-modal" disabled={savingEdit}>
+                {savingEdit ? 'Saving...' : 'Save Changes'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Add Admin Modal Dialog */}
 
       {showAddModal && (
@@ -1652,6 +1906,75 @@ const AdminDashboard = () => {
           border-color: #1F3A2E;
           box-shadow: 0 0 0 3px rgba(31,58,46,0.06);
         }
+
+        /* Bulk Rename Bar */
+        .bulk-rename-bar {
+          display: flex;
+          gap: 1rem;
+          align-items: flex-end;
+          flex-wrap: wrap;
+          background: #fffbeb;
+          border: 1px solid #fde68a;
+          padding: 1.1rem 1.5rem;
+          border-radius: 18px;
+          margin-bottom: 1.5rem;
+          text-align: left;
+        }
+        .bulk-rename-bar .input-group {
+          flex: 1;
+          min-width: 200px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+        .bulk-rename-bar label {
+          font-size: 0.72rem;
+          font-weight: 800;
+          color: #92400e;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .bulk-rename-bar input {
+          padding: 0.6rem 0.85rem;
+          border: 1px solid #fcd34d;
+          border-radius: 10px;
+          font-size: 0.85rem;
+          background: white;
+          outline: none;
+        }
+        .bulk-rename-bar input:focus {
+          border-color: #b89047;
+          box-shadow: 0 0 0 3px rgba(184,144,71,0.12);
+        }
+        .bulk-rename-message {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: #92400e;
+        }
+        .bulk-rename-preview {
+          background: white;
+          border: 1px solid #e2e8f0;
+          border-radius: 18px;
+          padding: 1.25rem 1.5rem;
+          margin-bottom: 2rem;
+          text-align: left;
+        }
+        .bulk-rename-empty { margin: 0; color: #64748b; font-size: 0.85rem; }
+        .bulk-rename-count { margin: 0 0 0.75rem; font-size: 0.85rem; font-weight: 800; color: #0f172a; }
+        .bulk-rename-list {
+          max-height: 240px;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          margin-bottom: 1rem;
+        }
+        .bulk-rename-row { font-size: 0.78rem; }
+        .bulk-rename-before { color: #94a3b8; text-decoration: line-through; }
+        .bulk-rename-arrow { margin: 0 0.5rem; color: #cbd5e1; }
+        .bulk-rename-after { color: #166534; font-weight: 700; }
+        .bulk-rename-more { margin: 0; font-size: 0.75rem; color: #94a3b8; }
+        .bulk-rename-actions { display: flex; gap: 0.75rem; }
 
         /* Corporate Dense Data Table Curation */
         .corporate-table {

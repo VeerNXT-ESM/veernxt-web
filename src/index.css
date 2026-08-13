@@ -7,7 +7,7 @@
   --color-ios-secondary: #F2F2F7;
   --color-ios-olive: #4b6b32;
   --color-ios-text: #333333;
-  --radius-ios: 20px;
+  --radius-ios: 14px;
   --shadow-ios: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
@@ -17,9 +17,36 @@
   --ios-secondary: #FFFFFF;
   --ios-olive: #4b6b32;
   --ios-text: rgba(0, 0, 0, 0.9); /* LinkedIn deep charcoal body text */
-  --radius-ios: 20px;
-  --shadow-ios: 0 4px 20px rgba(0, 0, 0, 0.02);
-  
+
+  /* Radius scale — deliberate hierarchy, not rounded-everything.
+     Pill (999px) is reserved for true pills: badges, tags, the points
+     counter. Buttons, cards and sheets each get their own tier below. */
+  --radius-sm: 8px;   /* inputs, chips, buttons, small controls */
+  --radius-md: 14px;  /* cards, panels */
+  --radius-lg: 22px;  /* modals, sheets, hero panels */
+  --radius-pill: 999px;
+  --radius-ios: var(--radius-md); /* legacy alias, do not use in new code */
+
+  /* Elevation scale — three tiers instead of one-off rgba() per file */
+  --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 1px rgba(15, 23, 42, 0.03); /* resting */
+  --shadow-2: 0 8px 24px rgba(15, 23, 42, 0.08); /* raised card */
+  --shadow-3: 0 16px 48px rgba(15, 23, 42, 0.16); /* floating / modal / sheet */
+  --shadow-ios: var(--shadow-2); /* legacy alias, do not use in new code */
+
+  /* Neutral surface scale */
+  --surface: #FFFFFF;
+  --surface-alt: #F4F4F8;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+
+  /* Semantic colors */
+  --success: #1a9c5e;
+  --success-bg: rgba(26, 156, 94, 0.1);
+  --warning: #b45309;
+  --warning-bg: rgba(217, 119, 6, 0.12);
+  --danger: #dc2626;
+  --danger-bg: rgba(220, 38, 38, 0.1);
+
   /* Mapping to existing app variables for compatibility */
   --primary-color: var(--ios-bg);
   --secondary-color: var(--ios-secondary);
@@ -66,10 +93,10 @@
   }
 
   .ios-card, .glass-panel {
-    background: white;
-    border: 1px solid #f1f1f1;
-    border-radius: var(--radius-ios);
-    box-shadow: var(--shadow-ios);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-2);
     padding: 1.5rem;
   }
 
@@ -112,7 +139,7 @@
   button, .btn-primary, .btn-gold {
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
-    border-radius: 9999px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     transition: all 0.2s ease;
   }
@@ -135,8 +162,10 @@
     padding: 0.75rem 1.5rem;
   }
 
+  /* Reserved for true pills only: badges, tags, the points counter —
+     not buttons. See --radius-pill. */
   .ios-pill {
-    border-radius: 9999px;
+    border-radius: var(--radius-pill);
   }
 
   .ios-btn-primary {
@@ -170,17 +199,17 @@
 
   .tab-switcher {
     display: flex;
-    gap: 0.5rem;
-    background: var(--ios-secondary);
+    gap: 0.25rem;
+    background: var(--surface-alt);
     padding: 0.25rem;
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     width: fit-content;
     margin-top: 1rem;
   }
 
   .tab-switcher button {
     padding: 0.5rem 1.25rem;
-    border-radius: 10px;
+    border-radius: calc(var(--radius-sm) - 2px);
     font-size: 0.9rem;
     background: transparent;
     color: var(--text-secondary);
@@ -189,9 +218,9 @@
   }
 
   .tab-switcher button.active {
-    background: white;
+    background: var(--surface);
     color: var(--ios-olive);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-1);
   }
 
   .filter-controls select:focus, .filter-controls input:focus {

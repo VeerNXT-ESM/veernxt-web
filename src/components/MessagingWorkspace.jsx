@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 import { Link } from 'react-router-dom';
-import { 
-  Send, User, Search, RefreshCw, MessageSquare, 
-  ShieldCheck, Phone, Video, Info, MoreVertical, 
-  Image, Paperclip, Smile, Edit3, Star, Play, 
-  MoreHorizontal, ChevronDown, CheckSquare, ExternalLink, FileText
+import {
+  Send, Search, RefreshCw, MessageSquare,
+  ShieldCheck, ArrowLeft, Users,
+  Image, Paperclip, Edit3, Star,
+  MoreHorizontal, ChevronDown, ExternalLink, FileText
 } from 'lucide-react';
 
 const MessagingWorkspace = ({ initialRecipient = null }) => {
@@ -15,7 +15,12 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
   const [inputText, setInputText] = useState('');
   const [activeTab, setActiveTab] = useState('Focused');
   const [currentUser, setCurrentUser] = useState(null);
+  const [isEmployer, setIsEmployer] = useState(false);
   const messagesEndRef = useRef(null);
+
+  // Mobile master-detail: which pane is showing on narrow widths — desktop
+  // ignores this entirely and always shows both panes (see CSS).
+  const [mobileView, setMobileView] = useState('list');
 
   // File sending states
   const fileInputRef = useRef(null);
@@ -34,6 +39,12 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
       const user = session?.user;
       if (!user) return;
       setCurrentUser(user);
+
+      const metadataRole = user.user_metadata?.role;
+      if (metadataRole === 'candidate') {
+        localStorage.removeItem('employer_session');
+      }
+      setIsEmployer(metadataRole === 'employer' || (metadataRole !== 'candidate' && !!localStorage.getItem('employer_session')));
 
       try {
         // Fetch accepted connections
@@ -95,7 +106,6 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
               full_name: e.contact_name || 'Unnamed Recruiter',
               headline: `${e.designation || 'Partner'} at ${e.company_name}`,
               role: 'employer',
-              veer_score: 95,
               initials: (e.contact_name || 'E').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
             };
           });
@@ -114,13 +124,10 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           });
         }
 
-        // Fallback: if user has no connections/messages yet, populate with first few completing user_profiles as suggestions
-        if (resolvedRecipients.length === 0) {
-          if (cands) {
-            resolvedRecipients = cands.slice(0, 5).map(c => lookup[c.id]);
-          }
-        }
-
+        // No fallback here on purpose — conversations only ever contains
+        // real accepted connections or people already messaged. Anyone else
+        // is found via the "Find Contacts" empty-state CTA, not shown as if
+        // already a contact.
         setConversations(resolvedRecipients);
 
         if (initialRecipient) {
@@ -359,7 +366,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
   };
 
   return (
-    <div className="messaging-workspace-container animate-fade-in">
+    <div className={`messaging-workspace-container animate-fade-in mobile-${mobileView}`}>
       {/* Sidebar: Conversation contacts & filter tabs */}
       <div className="conversations-sidebar-panel">
         {/* Search header bar */}
@@ -391,19 +398,27 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         </div>
 
         <div className="conversations-feed-list">
-          {conversations.map(partner => (
-            <div 
-              key={partner.id} 
+          {conversations.length === 0 ? (
+            <div className="no-contacts-empty-state">
+              <Users size={36} style={{ opacity: 0.25 }} />
+              <h4>No conversations yet</h4>
+              <p>Messages only show up here once you&apos;re connected with someone. Find people to connect with first.</p>
+              <Link to={isEmployer ? '/find-candidates' : '/network'} className="btn-primary ios-pill find-contacts-btn">
+                <Users size={14} /> Find Contacts
+              </Link>
+            </div>
+          ) : conversations.map(partner => (
+            <div
+              key={partner.id}
               className={`conversation-partner-item ${selectedRecipient?.id === partner.id ? 'active' : ''}`}
-              onClick={() => setSelectedRecipient(partner)}
+              onClick={() => { setSelectedRecipient(partner); setMobileView('chat'); }}
             >
               <div className="partner-avatar-wrapper">
                 <div className="partner-avatar">
                   {getInitials(partner.full_name)}
                 </div>
-                {partner.active && <span className="active-dot-indicator"></span>}
               </div>
-              
+
               <div className="partner-details">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span className="partner-name">{partner.full_name}</span>
@@ -426,11 +441,11 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           <>
             {/* Header */}
             <div className="chat-header-bar">
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                  <h3 className="partner-header-title">{selectedRecipient.full_name}</h3>
-                  <span className="mobile-active-bullet">• Mobile • 6m ago</span>
-                </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <button type="button" className="back-to-list-btn" onClick={() => setMobileView('list')} aria-label="Back to conversations">
+                  <ArrowLeft size={20} />
+                </button>
+                <h3 className="partner-header-title">{selectedRecipient.full_name}</h3>
               </div>
 
               <div className="header-actions-row">
@@ -441,13 +456,6 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
 
             {/* Message Dialogue History */}
             <div className="chat-history-container">
-              {/* Mock Dosa Chain Valuation Image watermarked above */}
-              <div className="dosa-chain-valuation-box">
-                <span className="valuation-bold-heading">Agniveer Transition Pathways: Over 10,000+ candidates placed in corporate security & logistics roles</span>
-              </div>
-
-              <div className="history-date-divider">THURSDAY</div>
-
               {messages.map(msg => {
                 const isMe = msg.sender_id === currentUser?.id;
                 const timeString = msg.created_at ? new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '8:59 AM';
@@ -461,7 +469,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
                     <div className="message-content-block">
                       <div className="message-meta-row">
                         <span className="sender-name-bold">{isMe ? 'You' : selectedRecipient.full_name}</span>
-                        {selectedRecipient.veer_score > 90 && !isMe && <ShieldCheck size={12} color="#1F3A2E" />}
+                        {selectedRecipient.role === 'candidate' && selectedRecipient.veer_score > 90 && !isMe && <ShieldCheck size={12} color="#1F3A2E" />}
                         <span className="msg-time-stamp">• {timeString}</span>
                       </div>
                       
@@ -500,33 +508,6 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
 
                       {/* URL Link Previews */}
                       {msg.content && renderLinkPreview(msg.content)}
-
-                      {/* Case Article mock card as shown in the screenshot */}
-                      {msg.hasArticle && (
-                        <div className="times-of-india-case-card">
-                          <div className="card-top-branding">
-                            <div className="toi-avatar">VNXT</div>
-                            <div>
-                              <h4 className="card-source-title">VeerNXT Transitions</h4>
-                              <p className="card-followers-info">52,794 active recruiters • 1d • 🌐</p>
-                            </div>
-                          </div>
-                          
-                          <p className="case-card-hashtags">
-                            <strong>#TransitionSuccess</strong> | A proud day for <strong>#VeerNXT</strong>! The transition team has successfully placed candidate <strong>Rahul Kumar (ex-Agniveer Clerk SD)</strong> in corporate operations support... <span className="more-link">more</span>
-                          </p>
-
-                          {/* Interactive video placeholder player with play button */}
-                          <div className="case-card-video-box">
-                            <div className="video-overlay-play-circle">
-                              <Play size={20} color="white" fill="white" />
-                            </div>
-                            <div className="video-bottom-caption">
-                              <strong>'Tri-Service Transition':</strong> Real-time placement metrics for ex-servicemen quota reservation matching
-                            </div>
-                          </div>
-                        </div>
-                      )}
                     </div>
                   </div>
                 );
@@ -776,16 +757,6 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           font-size: 0.95rem;
           border: 1px solid #cbd5e1;
         }
-        .active-dot-indicator {
-          width: 10px;
-          height: 10px;
-          background: #16a34a;
-          border-radius: 50%;
-          border: 2px solid white;
-          position: absolute;
-          bottom: 2px;
-          right: 2px;
-        }
         .partner-details {
           flex: 1;
           min-width: 0;
@@ -832,10 +803,20 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           font-weight: 850;
           color: #0f172a;
         }
-        .mobile-active-bullet {
-          font-size: 0.72rem;
-          color: #64748b;
-          font-weight: 550;
+        .back-to-list-btn {
+          display: none;
+          background: none;
+          border: none;
+          color: #0f172a;
+          cursor: pointer;
+          padding: 0.4rem;
+          margin: -0.4rem;
+          border-radius: 8px;
+          align-items: center;
+          justify-content: center;
+        }
+        .back-to-list-btn:hover {
+          background: #f1f5f9;
         }
         .partner-header-subtitle {
           font-size: 0.72rem;
@@ -867,33 +848,6 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           flex-direction: column;
           gap: 1.5rem;
         }
-        .dosa-chain-valuation-box {
-          background: #000000ea;
-          border-radius: 12px;
-          padding: 1.5rem;
-          color: white;
-          text-align: left;
-        }
-        .valuation-bold-heading {
-          font-size: 1.35rem;
-          font-weight: 850;
-          letter-spacing: -0.01em;
-          line-height: 1.3;
-          background: linear-gradient(90deg, #93c5fd, #60a5fa);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        .history-date-divider {
-          text-align: center;
-          font-size: 0.7rem;
-          font-weight: 800;
-          color: #94a3b8;
-          letter-spacing: 0.05em;
-          border-bottom: 1px solid #f1f5f9;
-          line-height: 0.1em;
-          margin: 1rem 0;
-        }
-        
         .message-bubble-wrapper {
           display: flex;
           align-items: start;
@@ -942,96 +896,6 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           font-size: 0.88rem;
           color: #334155;
           line-height: 1.5;
-        }
-        
-        /* Times of India Article post card styling */
-        .times-of-india-case-card {
-          border: 1px solid #e2e8f0;
-          border-radius: 12px;
-          padding: 1.25rem;
-          background: white;
-          margin-top: 1rem;
-          max-width: 500px;
-        }
-        .card-top-branding {
-          display: flex;
-          gap: 0.75rem;
-          align-items: center;
-        }
-        .toi-avatar {
-          width: 38px;
-          height: 38px;
-          background: #ee1c24;
-          color: white;
-          font-weight: 900;
-          font-size: 0.85rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 4px;
-        }
-        .card-source-title {
-          font-size: 0.88rem;
-          font-weight: 850;
-          color: #0f172a;
-          margin: 0;
-        }
-        .card-followers-info {
-          font-size: 0.72rem;
-          color: #64748b;
-        }
-        .case-card-hashtags {
-          font-size: 0.82rem;
-          color: #1e293b;
-          line-height: 1.45;
-          margin-top: 1rem;
-        }
-        .case-card-hashtags strong {
-          color: #1F3A2E;
-          font-weight: 600;
-        }
-        .more-link {
-          color: #64748b;
-          cursor: pointer;
-        }
-        .case-card-video-box {
-          height: 240px;
-          background: linear-gradient(180deg, #64748b, #1e293b);
-          border-radius: 8px;
-          margin-top: 1rem;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-          box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
-        }
-        .video-overlay-play-circle {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background: rgba(0,0,0,0.6);
-          backdrop-filter: blur(2px);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: transform 0.2s;
-        }
-        .video-overlay-play-circle:hover {
-          transform: scale(1.08);
-        }
-        .video-bottom-caption {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(0,0,0,0.7);
-          color: white;
-          padding: 0.75rem 1rem;
-          font-size: 0.78rem;
-          line-height: 1.35;
-          text-align: left;
         }
         
         .suggestion-chips-row {
@@ -1114,16 +978,77 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           flex: 1;
           color: #64748b;
         }
-        
+
+        .no-contacts-empty-state {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 0.5rem;
+          padding: 3rem 1.5rem;
+          color: #64748b;
+        }
+        .no-contacts-empty-state h4 {
+          margin: 0.25rem 0 0;
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: #0f172a;
+        }
+        .no-contacts-empty-state p {
+          margin: 0;
+          font-size: 0.82rem;
+          line-height: 1.5;
+          max-width: 260px;
+        }
+        .find-contacts-btn {
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin-top: 0.5rem;
+          padding: 0.65rem 1.25rem;
+          font-size: 0.85rem;
+        }
+
+        /* Mobile: master-detail — one pane fills the screen at a time,
+           switched by the mobile-list/mobile-chat class on the
+           container (set from mobileView state). Desktop is untouched;
+           both panes always render side by side above this breakpoint. */
         @media (max-width: 768px) {
-          .conversations-sidebar-panel {
-            width: 80px;
+          .messaging-workspace-container {
+            grid-template-columns: 1fr;
+            height: auto;
+            min-height: 70vh;
+            margin: 0;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            max-width: 100%;
           }
-          .category-toggles-bar, .sidebar-search-box, .sidebar-top-branding, .partner-details, .partner-date-tag {
+          .mobile-list .dialogue-chat-panel {
             display: none;
           }
+          .mobile-chat .conversations-sidebar-panel {
+            display: none;
+          }
+          .back-to-list-btn {
+            display: flex;
+          }
           .conversation-partner-item {
+            min-height: 44px;
+            padding: 0.85rem 1.25rem;
+          }
+          .small-action-btn,
+          .icon-action-btn,
+          .toolbar-btn {
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
             justify-content: center;
+          }
+          .category-toggle-chip {
+            min-height: 36px;
           }
         }
       `}} />

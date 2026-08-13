@@ -1,11 +1,70 @@
 import { createClient } from '@supabase/supabase-js';
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
+/**
+ * POST /api/admin/save-resource with { type: 'r2-upload', key, contentType, dataBase64 }
+ *
+ * Proxies a single file to Cloudflare R2 using backend-only env vars.
+ * Used by src/lib/r2Uploader.js — that file used to hold the R2 account ID,
+ * access key, and secret access key as literal strings, which shipped them
+ * into the browser bundle (a live write-credential leak into a public repo).
+ * Gated by the same shared x-admin-api-secret header as the redemption
+ * admin endpoints; not real auth (see AdminLogin.jsx), just closes this off
+ * from being a fully public write API.
+ */
+async function handleR2Upload(req, res) {
+  const expectedSecret = process.env.ADMIN_API_SECRET;
+  if (!expectedSecret || req.headers['x-admin-api-secret'] !== expectedSecret) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+
+  const { key, contentType, dataBase64 } = req.body;
+  if (!key || !dataBase64) {
+    return res.status(400).json({ ok: false, error: 'Missing key or file data' });
+  }
+
+  const r2AccountId = process.env.R2_ACCOUNT_ID;
+  const r2Bucket = process.env.R2_BUCKET_NAME;
+  const r2AccessKeyId = process.env.R2_ACCESS_KEY_ID;
+  const r2SecretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+  const r2PublicUrl = process.env.R2_PUBLIC_URL;
+  if (!r2AccountId || !r2Bucket || !r2AccessKeyId || !r2SecretAccessKey || !r2PublicUrl) {
+    console.error('[admin/save-resource] Missing R2 env vars on server');
+    return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 credentials not set' });
+  }
+
+  try {
+    const s3Client = new S3Client({
+      region: 'auto',
+      endpoint: `https://${r2AccountId}.r2.cloudflarestorage.com`,
+      credentials: { accessKeyId: r2AccessKeyId, secretAccessKey: r2SecretAccessKey },
+    });
+
+    await s3Client.send(new PutObjectCommand({
+      Bucket: r2Bucket,
+      Key: key,
+      Body: Buffer.from(dataBase64, 'base64'),
+      ContentType: contentType || 'application/octet-stream',
+      CacheControl: 'public, max-age=31536000',
+    }));
+
+    return res.status(200).json({ ok: true, url: `${r2PublicUrl}/${key}` });
+  } catch (err) {
+    console.error('[admin/save-resource] R2 upload error:', err.message);
+    return res.status(500).json({ ok: false, error: 'Failed to upload to R2' });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+
+  if (req.body?.type === 'r2-upload') {
+    return handleR2Upload(req, res);
   }
 
   if (!supabaseUrl) {

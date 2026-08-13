@@ -1,9 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark, Users, MessageSquare, User, Lock, Crown, ArrowRight } from 'lucide-react';
-import { getEffectiveTier, canViewVeerScore, canViewRecommendations, canGenerateCV, TIERS } from '../lib/subscriptionAccess';
+import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark, Users, MessageSquare, User, Lock, Crown, ArrowRight, Gift } from 'lucide-react';
+import { getEffectiveTier, canViewVeerScore, canViewRecommendations, canGenerateCV, higherTier, TIERS } from '../lib/subscriptionAccess';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import Select from '../components/ui/Select';
+import GuidedStep from '../components/ui/GuidedStep';
+import { ChoiceGroup } from '../components/ui/ChoiceGroup';
+import { getEmployerInsights } from '../lib/employerInsights';
+import { useLocalDraft } from '../lib/useLocalDraft';
+import { useInlineUnlock } from '../lib/useInlineUnlock';
 
 const PreparationPanel = ({ exam }) => {
   const [resources, setResources] = useState([]);
@@ -78,74 +86,34 @@ const PreparationPanel = ({ exam }) => {
   );
 };
 
-const inputStyle = {
-  width: '100%',
-  padding: '0.85rem 1rem',
-  borderRadius: '12px',
-  border: '1px solid #cbd5e1',
-  background: 'white',
-  color: '#0f172a',
-  outline: 'none',
-  fontFamily: 'inherit',
-  fontSize: '0.95rem',
-  transition: 'all 0.2s ease',
-  boxSizing: 'border-box',
-};
-
-const selectStyle = {
-  width: '100%',
-  padding: '0.85rem 1rem',
-  borderRadius: '12px',
-  border: '1px solid #cbd5e1',
-  background: 'white',
-  color: '#0f172a',
-  outline: 'none',
-  fontFamily: 'inherit',
-  fontSize: '0.95rem',
-  transition: 'all 0.2s ease',
-  boxSizing: 'border-box',
-  height: '48px',
-};
-
-const textareaStyle = {
-  width: '100%',
-  padding: '0.85rem 1rem',
-  borderRadius: '12px',
-  border: '1px solid #cbd5e1',
-  background: 'white',
-  color: '#0f172a',
-  outline: 'none',
-  fontFamily: 'inherit',
-  fontSize: '0.95rem',
-  transition: 'all 0.2s ease',
-  boxSizing: 'border-box',
-  resize: 'vertical',
-};
-
-const labelStyle = {
-  fontSize: '0.75rem',
-  fontWeight: '800',
-  color: '#64748b',
-  textTransform: 'uppercase',
-  marginBottom: '0.5rem',
-  display: 'block',
-  letterSpacing: '0.05em',
-};
-
 const Dashboard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [expandedExamId, setExpandedExamId] = useState(null);
   const [isEmployer, setIsEmployer] = useState(false);
   const [session, setSession] = useState(null);
   const [onboardingSubmitLoading, setOnboardingSubmitLoading] = useState(false);
+
+  // Employer guided-onboarding journey
+  const [employerFormData, setEmployerFormData] = useState({
+    companyName: '', website: '', contactName: '', designation: '', industry: '', location: '', about: '',
+    hiringRoles: '', requiredSkills: '', candidatePreferences: '', hiringReadiness: '',
+  });
+  const [employerStep, setEmployerStep] = useState(0);
+  const { hasDraft: employerHasDraft, loadDraft: loadEmployerDraft, saveDraft: saveEmployerDraft, clearDraft: clearEmployerDraft } = useLocalDraft('veernxt_employer_onboarding_draft_v1');
+  const [employerDraftPrompt, setEmployerDraftPrompt] = useState(() => (employerHasDraft ? 'pending' : null));
   const [activePostingsCount, setActivePostingsCount] = useState(0);
   const [shortlistedCount, setShortlistedCount] = useState(0);
   const [activeChatsCount, setActiveChatsCount] = useState(0);
   const [spotlightCandidates, setSpotlightCandidates] = useState([]);
   const [connectionsCount, setConnectionsCount] = useState(0);
   const [effectiveTier, setEffectiveTier] = useState(TIERS.FREE);
+  // Set right after a successful in-place purchase (see handleUnlockScore/
+  // handleAddCv below) so VeerScore/matches/CV unlock instantly without a
+  // reload — merged with the server-fetched tier via higherTier().
+  const [localTierOverride, setLocalTierOverride] = useState(null);
 
   // Edit Profile States
   const [showEditProfileModal, setShowEditProfileModal] = useState(false);
@@ -153,6 +121,29 @@ const Dashboard = () => {
   const [avatarUploading, setAvatarUploading] = useState(false);
   const [avatarPreview, setAvatarPreview] = useState(null);
   const avatarInputRef = useRef(null);
+
+  const { purchase, statusFor, errorFor } = useInlineUnlock({
+    userId: session?.user?.id,
+    email: session?.user?.email,
+    mobile: session?.user?.user_metadata?.mobile,
+    fullName: profile?.full_name,
+  });
+
+  const handleUnlockScore = async () => {
+    const { ok, tier: newTier } = await purchase('SCORE_UNLOCK');
+    if (ok) setLocalTierOverride((prev) => higherTier(prev, newTier));
+  };
+
+  const handleAddCv = async () => {
+    const { ok, tier: newTier } = await purchase('CV_ADDON');
+    if (ok) setLocalTierOverride((prev) => higherTier(prev, newTier));
+  };
+
+  useEffect(() => {
+    if (employerDraftPrompt === 'pending') return;
+    saveEmployerDraft({ formData: employerFormData, step: employerStep });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [employerFormData, employerStep, employerDraftPrompt]);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -200,28 +191,14 @@ const Dashboard = () => {
             setEffectiveTier(tier);
           }
         } else if (!isEmp) {
-          // Fallback to mock profile for dummy testing
-          setProfile({
-            full_name: 'Rahul Kumar',
-            veer_score: 92,
-            profiling_completed: true,
-            subscription_tier: 'FREE',
-            recommendations: [
-              {
-                exam_name: "SSC Stenographer Grade ‘C’ & ‘D’",
-                match_score: 95,
-                career_track: "SSC",
-                website: "https://ssc.gov.in"
-              },
-              {
-                exam_name: "RRB Jr. Engineer",
-                match_score: 88,
-                career_track: "Railways",
-                website: "https://indianrailways.gov.in"
-              }
-            ]
-          });
-          setEffectiveTier(TIERS.FREE);
+          // No profile row (or no session at all) — AuthGuard should already
+          // have kept us from reaching this page in that state, but if that
+          // invariant is ever broken, fail safe by sending the user to
+          // profiling rather than fabricating a fake "completed" profile
+          // (this page previously showed a hardcoded demo profile here,
+          // which would have masked a real user never having onboarded).
+          navigate('/profiling');
+          return;
         }
 
         // Fetch employer metrics dynamically
@@ -312,12 +289,17 @@ const Dashboard = () => {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
       const formData = profile.raw_profile_data;
-      
-      // Transform raw formData to match engine schema (same as Profiling.jsx does)
+
+      // `raw_profile_data` is exactly the payload /api/profile/recommend
+      // already validated and persisted once before — it stores the
+      // *computed* `dateOfBirth`/`totalServiceDuration` strings directly,
+      // not the discrete dobYear/dobMonth/dobDay or serviceYears/
+      // serviceMonths fields (those only ever exist in Profiling.jsx's live
+      // form state). Recomputing them from formData.dobYear etc. here was a
+      // bug — those fields don't exist on this object, so it silently sent
+      // "undefined-undefined-undefined" and failed Joi validation server-side.
       const payload = {
         ...formData,
-        dateOfBirth: `${formData.dobYear}-${formData.dobMonth}-${formData.dobDay}`,
-        totalServiceDuration: `${formData.serviceYears} years ${formData.serviceMonths} months`,
         heightCm: parseInt(formData.heightCm) || 0,
         weightKg: parseInt(formData.weightKg) || 0,
         chestCm: parseInt(formData.chestCm) || 0,
@@ -378,6 +360,21 @@ const Dashboard = () => {
     setAvatarPreview(profile.avatar_url || null);
     setShowEditProfileModal(true);
   };
+
+  // The account menu's "Edit Profile" action deep-links here with
+  // `state: { openEditProfile: true }` instead of duplicating this page's
+  // edit modal elsewhere — open it once profile data is available, then
+  // clear the nav state via `replace` so it doesn't reopen on re-renders.
+  useEffect(() => {
+    if (!profile || !location.state?.openEditProfile) return;
+    // One-time deep-link consumption, not a hot-path effect — the immediate
+    // setState here (opening the modal) is intentional and self-limiting,
+    // since the replace navigation below clears the triggering state.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    handleOpenEditModal();
+    navigate('/dashboard', { replace: true, state: {} });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profile, location.state]);
 
   const handleAvatarUpload = async (e) => {
     const file = e.target.files[0];
@@ -472,10 +469,10 @@ const Dashboard = () => {
       }}>
         <div className="ios-card" style={{
           background: 'white',
-          borderRadius: '24px',
+          borderRadius: 'var(--radius-lg)',
           width: '100%',
           maxWidth: '550px',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+          boxShadow: 'var(--shadow-3)',
           maxHeight: '90vh',
           overflowY: 'auto',
           display: 'flex',
@@ -511,7 +508,7 @@ const Dashboard = () => {
           <form onSubmit={handleSaveProfile} style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             
             {/* Avatar Upload block */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: '#f8fafc', padding: '1rem', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: '#f8fafc', padding: '1rem', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0' }}>
               <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#cbd5e1', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid var(--ios-olive)', position: 'relative' }}>
                 {avatarPreview ? (
                   <img src={avatarPreview} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -520,15 +517,16 @@ const Dashboard = () => {
                 )}
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', alignItems: 'flex-start' }}>
-                <button 
+                <Button
                   type="button"
+                  variant="secondary"
+                  size="sm"
                   onClick={() => avatarInputRef.current?.click()}
                   disabled={avatarUploading}
-                  className="btn-secondary ios-pill"
-                  style={{ padding: '0.4rem 1rem', fontSize: '0.8rem', background: 'white', borderColor: '#cbd5e1', color: '#0f172a', cursor: 'pointer' }}
+                  style={{ borderColor: '#cbd5e1', color: '#0f172a' }}
                 >
                   {avatarUploading ? 'Uploading...' : 'Upload Profile Picture'}
-                </button>
+                </Button>
                 <span style={{ fontSize: '0.7rem', color: '#64748b' }}>JPG, PNG or WEBP. Max 2MB.</span>
                 <input 
                   type="file"
@@ -550,7 +548,7 @@ const Dashboard = () => {
                     required
                     value={editFormData.contact_name || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, contact_name: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -561,7 +559,7 @@ const Dashboard = () => {
                     required
                     value={editFormData.company_name || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, company_name: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -571,7 +569,7 @@ const Dashboard = () => {
                     type="url"
                     value={editFormData.website || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, website: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -581,7 +579,7 @@ const Dashboard = () => {
                     type="text"
                     value={editFormData.designation || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, designation: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -591,7 +589,7 @@ const Dashboard = () => {
                     type="text"
                     value={editFormData.location || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, location: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -601,7 +599,7 @@ const Dashboard = () => {
                     value={editFormData.about || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, about: e.target.value }))}
                     rows="3"
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem', fontFamily: 'inherit' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', fontFamily: 'inherit' }}
                   />
                 </div>
               </>
@@ -614,7 +612,7 @@ const Dashboard = () => {
                     required
                     value={editFormData.full_name || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, full_name: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -623,7 +621,7 @@ const Dashboard = () => {
                   <select 
                     value={editFormData.service_branch || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, service_branch: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem', background: 'white' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', background: 'white' }}
                   >
                     <option value="Indian Army">Indian Army</option>
                     <option value="Indian Navy">Indian Navy</option>
@@ -637,7 +635,7 @@ const Dashboard = () => {
                     type="text"
                     value={editFormData.rank || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, rank: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -649,7 +647,7 @@ const Dashboard = () => {
                     min="0"
                     value={editFormData.years_of_service || 0}
                     onChange={e => setEditFormData(prev => ({ ...prev, years_of_service: parseInt(e.target.value) || 0 }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -658,7 +656,7 @@ const Dashboard = () => {
                   <select 
                     value={editFormData.education_level || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, education_level: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '0.6rem 0.75rem', fontSize: '0.9rem', background: 'white' }}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', background: 'white' }}
                   >
                     <option value="Class 10">Class 10</option>
                     <option value="Class 12">Class 12</option>
@@ -671,21 +669,20 @@ const Dashboard = () => {
 
             {/* Submit Buttons */}
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1.25rem' }}>
-              <button 
+              <Button
                 type="submit"
-                className="btn-primary ios-pill"
-                style={{ flex: 1, padding: '0.75rem', border: 'none', fontSize: '0.95rem', cursor: 'pointer' }}
+                style={{ flex: 1, padding: '0.75rem', fontSize: '0.95rem' }}
               >
                 Save Changes
-              </button>
-              <button 
+              </Button>
+              <Button
                 type="button"
+                variant="secondary"
                 onClick={() => setShowEditProfileModal(false)}
-                className="btn-secondary ios-pill"
-                style={{ flex: 1, padding: '0.75rem', border: '1px solid #cbd5e1', background: 'white', color: '#0f172a', fontSize: '0.95rem', cursor: 'pointer' }}
+                style={{ flex: 1, padding: '0.75rem', borderColor: '#cbd5e1', color: '#0f172a', fontSize: '0.95rem' }}
               >
                 Cancel
-              </button>
+              </Button>
             </div>
 
           </form>
@@ -694,18 +691,9 @@ const Dashboard = () => {
     );
   };
 
-  const handleEmployerOnboardingSubmit = async (e) => {
-    e.preventDefault();
+  const handleEmployerOnboardingSubmit = async () => {
     setOnboardingSubmitLoading(true);
-
-    const formData = new FormData(e.target);
-    const companyName = formData.get('companyName');
-    const contactName = formData.get('contactName');
-    const designation = formData.get('designation');
-    const industry = formData.get('industry');
-    const website = formData.get('website');
-    const locationName = formData.get('location');
-    const about = formData.get('about');
+    const d = employerFormData;
 
     try {
       const { data: { session: currentSession } } = await supabase.auth.getSession();
@@ -719,28 +707,49 @@ const Dashboard = () => {
         .from('employer_profiles')
         .upsert({
           id: currentSession.user.id,
-          company_name: companyName,
-          website: website,
-          contact_name: contactName,
-          designation: designation,
-          industry: industry,
-          location: locationName,
-          about: about,
+          company_name: d.companyName,
+          website: d.website,
+          contact_name: d.contactName,
+          designation: d.designation,
+          industry: d.industry,
+          location: d.location,
+          about: d.about,
           updated_at: new Date().toISOString()
         });
 
       if (dbError) throw dbError;
 
+      // hiring_profile is a newer, additive column (sql/employer_hiring_profile.sql)
+      // written as its own request so a database that hasn't run that migration
+      // yet still completes onboarding on the 7 core fields above — same
+      // defensive pattern as this app's points_balance fallback elsewhere.
+      const { error: hiringProfileError } = await supabase
+        .from('employer_profiles')
+        .update({
+          hiring_profile: {
+            hiringRoles: d.hiringRoles,
+            requiredSkills: d.requiredSkills,
+            candidatePreferences: d.candidatePreferences,
+            hiringReadiness: d.hiringReadiness,
+          },
+        })
+        .eq('id', currentSession.user.id);
+      if (hiringProfileError) {
+        console.warn('hiring_profile column not available yet — run sql/employer_hiring_profile.sql in Supabase.', hiringProfileError);
+      }
+
+      clearEmployerDraft();
+
       // Update local state to trigger render
       setProfile({
         id: currentSession.user.id,
-        company_name: companyName,
-        website: website,
-        contact_name: contactName,
-        designation: designation,
-        industry: industry,
-        location: locationName,
-        about: about
+        company_name: d.companyName,
+        website: d.website,
+        contact_name: d.contactName,
+        designation: d.designation,
+        industry: d.industry,
+        location: d.location,
+        about: d.about
       });
     } catch (err) {
       console.error('Error during employer onboarding upsert:', err);
@@ -750,87 +759,209 @@ const Dashboard = () => {
     }
   };
 
+  const setEmployerField = (name, value) => setEmployerFormData(prev => ({ ...prev, [name]: value }));
+
+  const EMPLOYER_STAGES = [
+    { id: 'company', label: 'Company' },
+    { id: 'hiring', label: 'Hiring Needs' },
+    { id: 'review', label: 'Review' },
+  ];
+  const EMPLOYER_QUESTION_STAGE = [
+    'company', 'company', 'company', 'company', 'company', 'company', 'company',
+    'hiring', 'hiring', 'hiring', 'hiring',
+    'review',
+  ];
+  const EMPLOYER_TOTAL_STEPS = EMPLOYER_QUESTION_STAGE.length;
+  const EMPLOYER_TITLES = [
+    "What's your company called?",
+    "What's your company website?",
+    "Who's the point of contact?",
+    "What's their designation?",
+    'Which industry are you in?',
+    "Where's your head office?",
+    'Tell us about your hiring goals',
+    "Which roles are you hiring for right now?",
+    'What skills or trade backgrounds matter most?',
+    'Any candidate preferences?',
+    'How soon are you looking to hire?',
+    'Review and confirm',
+  ];
+  const EMPLOYER_HELP = [
+    undefined,
+    "We'll link to this from your public listings.",
+    'The primary recruiter or hiring manager on this account.',
+    undefined,
+    'This helps us prioritise which veteran trade backgrounds we surface to you first.',
+    undefined,
+    'A short overview candidates will see on your listings.',
+    'e.g. "Security Supervisor, Logistics Coordinator, IT Support" — free text is fine.',
+    'Optional — specific certifications, trade backgrounds, or experience level.',
+    'Optional — preferred service branch, rank range, or years of experience.',
+    "We'll pace candidate introductions to match your timeline.",
+    'Take one last look before we save your hiring profile.',
+  ];
+
+  const validateEmployerQuestion = (step) => {
+    const d = employerFormData;
+    switch (step) {
+      case 0: return !!d.companyName;
+      case 1: return !!d.website;
+      case 2: return !!d.contactName;
+      case 3: return !!d.designation;
+      case 4: return !!d.industry;
+      case 5: return !!d.location;
+      case 6: return !!d.about;
+      case 7: return !!d.hiringRoles;
+      case 8: return true;
+      case 9: return true;
+      case 10: return !!d.hiringReadiness;
+      default: return true;
+    }
+  };
+
+  const goEmployerNext = () => {
+    if (!validateEmployerQuestion(employerStep)) return;
+    if (employerStep === EMPLOYER_TOTAL_STEPS - 1) {
+      handleEmployerOnboardingSubmit();
+      return;
+    }
+    setEmployerStep(s => s + 1);
+    window.scrollTo(0, 0);
+  };
+
+  const goEmployerBack = () => {
+    if (employerStep === 0) return;
+    setEmployerStep(s => s - 1);
+    window.scrollTo(0, 0);
+  };
+
+  const renderEmployerQuestion = () => {
+    const d = employerFormData;
+    switch (employerStep) {
+      case 0:
+        return <input className="vx-field" type="text" value={d.companyName} onChange={e => setEmployerField('companyName', e.target.value)} placeholder="e.g. Tata Motors" autoComplete="organization" autoFocus />;
+      case 1:
+        return <input className="vx-field" type="url" value={d.website} onChange={e => setEmployerField('website', e.target.value)} placeholder="https://yourcompany.com" autoComplete="url" />;
+      case 2:
+        return <input className="vx-field" type="text" value={d.contactName} onChange={e => setEmployerField('contactName', e.target.value)} placeholder="e.g. Vikram Sharma" autoComplete="name" />;
+      case 3:
+        return <input className="vx-field" type="text" value={d.designation} onChange={e => setEmployerField('designation', e.target.value)} placeholder="e.g. Head of Talent Acquisition" />;
+      case 4:
+        return (
+          <Select searchable value={d.industry} onChange={e => setEmployerField('industry', e.target.value)} placeholder="Select or search an industry…"
+            options={['IT & Software', 'Security Services', 'Aerospace & Defence', 'Logistics & Supply Chain', 'Manufacturing', 'Finance & Banking', 'Retail & E-commerce', 'Other'].map(i => ({ value: i, label: i }))} />
+        );
+      case 5:
+        return <input className="vx-field" type="text" value={d.location} onChange={e => setEmployerField('location', e.target.value)} placeholder="e.g. Gurugram, India" autoComplete="address-level2" />;
+      case 6:
+        return <textarea className="vx-field" rows={4} value={d.about} onChange={e => setEmployerField('about', e.target.value)} placeholder="Tell us about the roles you are hiring for and how military talent fits into your team..." />;
+      case 7:
+        return <input className="vx-field" type="text" value={d.hiringRoles} onChange={e => setEmployerField('hiringRoles', e.target.value)} placeholder="e.g. Security Supervisor, Logistics Coordinator, IT Support" />;
+      case 8:
+        return <input className="vx-field" type="text" value={d.requiredSkills} onChange={e => setEmployerField('requiredSkills', e.target.value)} placeholder="e.g. Convoy operations, warehouse management, network security" />;
+      case 9:
+        return <input className="vx-field" type="text" value={d.candidatePreferences} onChange={e => setEmployerField('candidatePreferences', e.target.value)} placeholder="e.g. JCOs with 5+ years, Indian Army preferred" />;
+      case 10:
+        return (
+          <ChoiceGroup columns={1} value={d.hiringReadiness} onChange={(v) => setEmployerField('hiringReadiness', v)}
+            options={['Immediately', 'Within 30 days', 'Within 90 days', 'Just exploring'].map(r => ({ value: r, label: r }))} />
+        );
+      case 11:
+        return (
+          <div className="pf-summary-card">
+            <p><strong>Company:</strong> {d.companyName || '—'}</p>
+            <p><strong>Industry:</strong> {d.industry || '—'}</p>
+            <p><strong>Hiring for:</strong> {d.hiringRoles || '—'}</p>
+            <p><strong>Readiness:</strong> {d.hiringReadiness || '—'}</p>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
   const renderEmployerOnboarding = () => {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: 'calc(100vh - 80px)',
-        background: 'var(--ios-bg)',
-        padding: '2rem 1.5rem'
-      }}>
-        <div className="ios-card animate-fade-in" style={{
-          maxWidth: '650px',
-          width: '100%',
-          padding: '2.5rem',
-          background: 'rgba(255, 255, 255, 0.9)',
-          backdropFilter: 'blur(20px)',
-          borderRadius: '24px',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.06)',
-          border: '1px solid rgba(0,0,0,0.05)'
-        }}>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem', letterSpacing: '-0.02em', textAlign: 'center' }}>
-            Corporate Partner Onboarding
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.925rem', textAlign: 'center' }}>
-            Complete your profile to start hiring transitioning Agniveers and Ex-Servicemen.
-          </p>
-
-          <form onSubmit={handleEmployerOnboardingSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
-              <div>
-                <label style={labelStyle}>Company Name</label>
-                <input type="text" placeholder="e.g. Tata Motors" name="companyName" required style={inputStyle} />
-              </div>
-              <div>
-                <label style={labelStyle}>Company Website</label>
-                <input type="url" placeholder="e.g. https://tata.com" name="website" required style={inputStyle} />
-              </div>
+    if (employerDraftPrompt === 'pending') {
+      return (
+        <div className="pf-draft-prompt">
+          <div className="pf-draft-card">
+            <h2>Welcome back</h2>
+            <p>We saved your onboarding progress from last time. Pick up where you left off, or start fresh.</p>
+            <div className="pf-draft-actions">
+              <Button variant="secondary" onClick={() => { clearEmployerDraft(); setEmployerDraftPrompt(null); }}>Start fresh</Button>
+              <Button onClick={() => {
+                const draft = loadEmployerDraft();
+                if (draft?.formData) setEmployerFormData(prev => ({ ...prev, ...draft.formData }));
+                if (typeof draft?.step === 'number') setEmployerStep(draft.step);
+                setEmployerDraftPrompt(null);
+              }}>
+                Resume onboarding
+              </Button>
             </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
-              <div>
-                <label style={labelStyle}>Representative Name</label>
-                <input type="text" placeholder="e.g. Vikram Sharma" name="contactName" required style={inputStyle} />
-              </div>
-              <div>
-                <label style={labelStyle}>Designation</label>
-                <input type="text" placeholder="e.g. Head of Talent Acquisition" name="designation" required style={inputStyle} />
-              </div>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
-              <div>
-                <label style={labelStyle}>Industry / Sector</label>
-                <select name="industry" required style={selectStyle}>
-                  <option value="">Select Industry</option>
-                  <option value="IT & Software">IT & Software</option>
-                  <option value="Security Services">Security Services</option>
-                  <option value="Aerospace & Defence">Aerospace & Defence</option>
-                  <option value="Logistics & Supply Chain">Logistics & Supply Chain</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="Finance & Banking">Finance & Banking</option>
-                  <option value="Retail & E-commerce">Retail & E-commerce</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label style={labelStyle}>Head Office Location</label>
-                <input type="text" placeholder="e.g. Gurugram, India" name="location" required style={inputStyle} />
-              </div>
-            </div>
-
-            <div>
-              <label style={labelStyle}>Hiring Requirements & Sourcing Goals</label>
-              <textarea placeholder="Tell us about the roles you are hiring for and how military talent fits into your team..." name="about" required style={textareaStyle} rows={4} />
-            </div>
-
-            <button type="submit" className="btn-primary ios-pill" disabled={onboardingSubmitLoading} style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)', width: '100%', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
-              {onboardingSubmitLoading ? 'Saving Profile...' : 'Complete Onboarding'}
-            </button>
-          </form>
+          </div>
+          <style>{`
+            .pf-draft-prompt { min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+            .pf-draft-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-2); padding: 2rem; max-width: 420px; text-align: center; }
+            .pf-draft-card h2 { margin: 0 0 0.5rem; font-size: 1.3rem; }
+            .pf-draft-card p { color: var(--text-secondary); margin: 0 0 1.5rem; font-size: 0.9rem; }
+            .pf-draft-actions { display: flex; gap: 0.75rem; justify-content: center; }
+          `}</style>
         </div>
+      );
+    }
+
+    const insights = getEmployerInsights(employerFormData);
+
+    return (
+      <div style={{ background: 'var(--ios-bg)', minHeight: '100%' }}>
+        <div className="pf-hero">
+          <h1>Corporate Partner Onboarding</h1>
+          <p>A few focused questions to set up your hiring profile — we'll show you what it means for your candidate matches as you go.</p>
+        </div>
+
+        <GuidedStep
+          stages={EMPLOYER_STAGES}
+          activeStageId={EMPLOYER_QUESTION_STAGE[employerStep]}
+          stepNumber={employerStep + 1}
+          totalSteps={EMPLOYER_TOTAL_STEPS}
+          title={EMPLOYER_TITLES[employerStep]}
+          helpText={EMPLOYER_HELP[employerStep]}
+          insights={insights}
+          onBack={goEmployerBack}
+          backDisabled={employerStep === 0}
+          onNext={goEmployerNext}
+          nextDisabled={!validateEmployerQuestion(employerStep) || (employerStep === EMPLOYER_TOTAL_STEPS - 1 && onboardingSubmitLoading)}
+          nextLabel={employerStep === EMPLOYER_TOTAL_STEPS - 1 ? (onboardingSubmitLoading ? 'Saving…' : 'Complete onboarding') : 'Continue'}
+          loading={employerStep === EMPLOYER_TOTAL_STEPS - 1 && onboardingSubmitLoading}
+        >
+          {renderEmployerQuestion()}
+        </GuidedStep>
+
+        <style>{`
+          .pf-hero { max-width: 920px; margin: 0 auto; padding: 2rem 1.25rem 0; }
+          .pf-hero h1 { font-size: 1.75rem; font-weight: 800; color: var(--ios-text); margin: 0 0 0.35rem; letter-spacing: -0.01em; }
+          .pf-hero p { color: var(--text-secondary); margin: 0; font-size: 0.95rem; }
+
+          .vx-field {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--vx-border, #64748b);
+            background: white;
+            color: #0f172a;
+            outline: none;
+            font-family: inherit;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+          }
+          .vx-field:hover:not(:focus) { --vx-border: #334155; }
+          .vx-field:focus { --vx-border: var(--ios-olive); box-shadow: 0 0 0 3px rgba(75,107,50,0.18); }
+
+          .pf-summary-card { background: var(--surface-alt); border-radius: var(--radius-sm); padding: 1.25rem; }
+          .pf-summary-card p { margin: 0 0 0.4rem; font-size: 0.9rem; }
+          .pf-summary-card p:last-child { margin-bottom: 0; }
+        `}</style>
       </div>
     );
   };
@@ -871,18 +1002,18 @@ const Dashboard = () => {
           <div className="welcome-hero animate-fade-in" style={{
             background: 'linear-gradient(135deg, #1e293b 0%, #1F3A2E 100%)',
             padding: '2.5rem',
-            borderRadius: '24px',
+            borderRadius: 'var(--radius-lg)',
             color: 'white',
             marginBottom: '2rem',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+            boxShadow: 'var(--shadow-3)',
             flexWrap: 'wrap',
             gap: '1.5rem'
           }}>
             <div style={{ textAlign: 'left', flex: 1, minWidth: '300px' }}>
-              <span style={{ fontSize: '0.8rem', fontWeight: 800, background: 'rgba(255,255,255,0.15)', padding: '0.4rem 0.8rem', borderRadius: '100px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              <span style={{ fontSize: '0.8rem', fontWeight: 800, background: 'rgba(255,255,255,0.15)', padding: '0.4rem 0.8rem', borderRadius: 'var(--radius-pill)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Recruiter Portal
               </span>
               <h1 style={{ fontSize: '2.25rem', fontWeight: 850, marginTop: '0.75rem', marginBottom: '0.35rem', letterSpacing: '-0.02em' }}>
@@ -896,17 +1027,17 @@ const Dashboard = () => {
                 <Link to="/find-candidates" className="btn-secondary ios-pill" style={{ textDecoration: 'none', background: 'white', color: '#1F3A2E', fontWeight: 700, padding: '0.75rem 1.5rem' }}>
                   Search Talent
                 </Link>
-                <button 
-                  onClick={handleOpenEditModal} 
-                  className="btn-secondary ios-pill" 
-                  style={{ background: 'rgba(255,255,255,0.2)', color: 'white', borderColor: 'rgba(255,255,255,0.3)', padding: '0.75rem 1.5rem', cursor: 'pointer' }}
+                <Button
+                  variant="ghost"
+                  onClick={handleOpenEditModal}
+                  style={{ background: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)', padding: '0.75rem 1.5rem' }}
                 >
                   Edit Profile
-                </button>
+                </Button>
               </div>
             </div>
 
-            <div style={{ width: '95px', height: '95px', borderRadius: '50%', background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '3px solid rgba(255,255,255,0.3)', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}>
+            <div style={{ width: '95px', height: '95px', borderRadius: '50%', background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '3px solid rgba(255,255,255,0.3)', overflow: 'hidden', boxShadow: 'var(--shadow-2)' }}>
               {profile?.avatar_url ? (
                 <img src={profile.avatar_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               ) : (
@@ -916,34 +1047,34 @@ const Dashboard = () => {
           </div>
 
           <div className="dashboard-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
-            <div className="ios-card score-card" style={{ padding: '1.75rem', background: 'white', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
+            <Card className="score-card" style={{ padding: '1.75rem' }}>
               <div className="card-top" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                 <Briefcase size={20} color="var(--ios-olive)" />
                 <span className="font-cta" style={{ fontWeight: '800', fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase' }}>Active Postings</span>
               </div>
               <div className="score-display" style={{ fontSize: '2.5rem', fontWeight: 850, color: '#0f172a', textAlign: 'left' }}>{activePostingsCount}</div>
               <p className="card-desc" style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '0.5rem', textAlign: 'left' }}>Jobs currently posted on the platform</p>
-            </div>
+            </Card>
 
-            <div className="ios-card score-card" style={{ padding: '1.75rem', background: 'white', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
+            <Card className="score-card" style={{ padding: '1.75rem' }}>
               <div className="card-top" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                 <Users size={20} color="var(--ios-olive)" />
                 <span className="font-cta" style={{ fontWeight: '800', fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase' }}>Shortlisted Veterans</span>
               </div>
               <div className="score-display" style={{ fontSize: '2.5rem', fontWeight: 850, color: '#0f172a', textAlign: 'left' }}>{shortlistedCount}</div>
               <p className="card-desc" style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '0.5rem', textAlign: 'left' }}>Candidates saved for hiring consideration</p>
-            </div>
+            </Card>
 
-            <div className="ios-card score-card" style={{ padding: '1.75rem', background: 'white', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
+            <Card className="score-card" style={{ padding: '1.75rem' }}>
               <div className="card-top" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                 <MessageSquare size={20} color="var(--ios-olive)" />
                 <span className="font-cta" style={{ fontWeight: '800', fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase' }}>Active Chats</span>
               </div>
               <div className="score-display" style={{ fontSize: '2.5rem', fontWeight: 850, color: '#0f172a', textAlign: 'left' }}>{activeChatsCount}</div>
               <p className="card-desc" style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '0.5rem', textAlign: 'left' }}>Conversations with transition candidates</p>
-            </div>
+            </Card>
 
-            <div className="ios-card score-card" style={{ padding: '1.75rem', background: 'white', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
+            <Card className="score-card" style={{ padding: '1.75rem' }}>
               <div className="card-top" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                 <Users size={20} color="var(--ios-olive)" />
                 <span className="font-cta" style={{ fontWeight: '800', fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase' }}>Network Connections</span>
@@ -954,23 +1085,23 @@ const Dashboard = () => {
                   Manage Network
                 </Link>
               </p>
-            </div>
+            </Card>
 
-            <div className="ios-card score-card" style={{ padding: '1.75rem', background: 'white', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
+            <Card className="score-card" style={{ padding: '1.75rem' }}>
               <div className="card-top" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                 <Award size={20} color="var(--ios-olive)" />
                 <span className="font-cta" style={{ fontWeight: '800', fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase' }}>Trust Verification</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
-                <span className="badge" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem', color: '#1F3A2E', background: '#eef2f0', fontWeight: 800, borderRadius: '100px', display: 'inline-block' }}>
+                <span className="badge" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem', color: '#1F3A2E', background: '#eef2f0', fontWeight: 800, borderRadius: 'var(--radius-pill)', display: 'inline-block' }}>
                   VERIFIED PARTNER
                 </span>
               </div>
               <p className="card-desc" style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '1rem', textAlign: 'left' }}>Verified credentials by national board</p>
-            </div>
+            </Card>
           </div>
 
-          <div className="ios-card" style={{ padding: '2.5rem', background: 'white', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
+          <div className="ios-card" style={{ padding: '2.5rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
               <div style={{ textAlign: 'left' }}>
                 <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
@@ -992,7 +1123,7 @@ const Dashboard = () => {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: '1.25rem 1.5rem',
-                  borderRadius: '16px',
+                  borderRadius: 'var(--radius-md)',
                   border: '1px solid #f1f5f9',
                   background: '#f8fafc',
                   transition: 'all 0.2s ease'
@@ -1030,7 +1161,7 @@ const Dashboard = () => {
                           background: 'white',
                           border: '1px solid #e2e8f0',
                           padding: '0.25rem 0.5rem',
-                          borderRadius: '6px',
+                          borderRadius: 'var(--radius-sm)',
                           color: '#475569',
                           fontWeight: 600
                         }}>
@@ -1045,13 +1176,14 @@ const Dashboard = () => {
                       </span>
                     </div>
 
-                    <button 
+                    <Button
+                      variant="secondary"
+                      size="sm"
                       onClick={() => navigate('/find-candidates')}
-                      className="btn-secondary ios-pill"
-                      style={{ padding: '0.5rem 1rem', fontSize: '0.8rem', fontWeight: 700 }}
+                      style={{ fontWeight: 700 }}
                     >
                       View Profile
-                    </button>
+                    </Button>
                   </div>
                 </div>
               ))}
@@ -1098,54 +1230,61 @@ const Dashboard = () => {
   }
 
   const recommendations = profile?.recommendations || [];
+  const tier = higherTier(effectiveTier, localTierOverride);
+  const scoreUnlockStatus = statusFor('SCORE_UNLOCK');
+  const cvAddonStatus = statusFor('CV_ADDON');
 
 
 
   return (
     <div className="dashboard-wrapper">
       <div className="dashboard-content animate-fade-in">
-        <div className="welcome-hero animate-fade-in" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
-          <div className="welcome-content" style={{ flex: 1, minWidth: '300px' }}>
-            <h1 style={{ fontSize: '2.5rem', tracking: '-0.03em', color: 'white' }}>Hello, {profile?.full_name?.split(' ')[0] || 'Agniveer'}</h1>
-            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Here are your top career recommendations based on your military profile.</p>
-            
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <button 
-                onClick={handleOpenEditModal} 
-                className="btn-secondary ios-pill" 
-                style={{ background: 'rgba(255,255,255,0.2)', color: 'white', borderColor: 'rgba(255,255,255,0.3)', cursor: 'pointer' }}
-              >
-                Edit Profile
-              </button>
-              <button 
-                onClick={handleRecalculate} 
-                disabled={loading}
-                className="btn-secondary ios-pill" 
-                style={{ background: 'rgba(255,255,255,0.1)', color: 'white', borderColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
-              >
-                {loading ? <RefreshCw className="animate-spin" size={14} /> : <RefreshCw size={14} />} 
-                Recalculate
-              </button>
+        <div className="welcome-hero animate-fade-in">
+          <div className="welcome-profile-row">
+            <div className="welcome-avatar">
+              {profile?.avatar_url ? (
+                <img src={profile.avatar_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              ) : (
+                <User size={38} color="white" />
+              )}
+            </div>
+            <div className="welcome-identity">
+              <h1 className="welcome-name">{profile?.full_name || 'Agniveer'}</h1>
+              <span className="welcome-status">
+                <span className={`welcome-status-dot ${profile?.profiling_completed ? 'ok' : 'pending'}`} />
+                {profile?.profiling_completed ? 'Profile Complete' : 'Profile Incomplete'}
+              </span>
             </div>
           </div>
 
-          <div style={{ width: '95px', height: '95px', borderRadius: '50%', background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '3px solid rgba(255,255,255,0.3)', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}>
-            {profile?.avatar_url ? (
-              <img src={profile.avatar_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            ) : (
-              <User size={42} color="white" />
-            )}
+          <div className="welcome-actions">
+            <Button
+              variant="ghost"
+              onClick={handleOpenEditModal}
+              style={{ background: 'rgba(255,255,255,0.22)', color: 'white', border: '1px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
+            >
+              Edit Profile
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={handleRecalculate}
+              disabled={loading}
+              style={{ background: 'rgba(255,255,255,0.12)', color: 'white', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
+            >
+              {loading ? <RefreshCw className="animate-spin" size={14} /> : <RefreshCw size={14} />}
+              Recalculate
+            </Button>
           </div>
         </div>
 
         <div className="dashboard-grid">
           {/* Veer Score Card */}
-          <div className="ios-card score-card" style={{ position: 'relative', overflow: 'hidden' }}>
+          <Card className="score-card" style={{ position: 'relative', overflow: 'hidden' }}>
             <div className="card-top">
               <Award size={24} color="var(--ios-olive)" />
               <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>VEER SCORE</span>
             </div>
-            {!isEmployer && !canViewVeerScore(effectiveTier) ? (
+            {!isEmployer && !canViewVeerScore(tier) ? (
               <>
                 <div className="score-display" style={{ filter: 'blur(12px)', userSelect: 'none', pointerEvents: 'none' }}>
                   {profile?.veer_score != null ? Math.round(profile.veer_score) : '87'}
@@ -1159,13 +1298,21 @@ const Dashboard = () => {
                   <Lock size={28} color="var(--ios-olive)" style={{ marginBottom: '0.75rem' }} />
                   <p style={{ fontWeight: 700, fontSize: '0.95rem', color: '#0f172a', marginBottom: '0.5rem' }}>Unlock Your VeerScore</p>
                   <p style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '1rem', lineHeight: 1.5 }}>See your career readiness score calculated from your military profile.</p>
-                  <Link to="/subscribe?plan=SCORE_UNLOCK" className="btn-primary ios-pill" style={{
-                    textDecoration: 'none', fontSize: '0.8rem', padding: '0.6rem 1.25rem',
-                    display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
-                    color: 'white',
-                  }}>
-                    <Crown size={14} /> Unlock — ₹9
-                  </Link>
+                  <Button
+                    type="button"
+                    size="sm"
+                    icon={Crown}
+                    disabled={scoreUnlockStatus === 'processing'}
+                    onClick={handleUnlockScore}
+                    style={{ whiteSpace: 'nowrap' }}
+                  >
+                    {scoreUnlockStatus === 'processing' ? 'Processing…' : 'Unlock — ₹9'}
+                  </Button>
+                  <p style={{ fontSize: '0.7rem', color: '#94a3b8', marginTop: '0.6rem' }}>
+                    <Gift size={11} style={{ verticalAlign: '-1px', marginRight: '3px' }} />
+                    Plus your CV for just ₹1 more
+                  </p>
+                  {errorFor('SCORE_UNLOCK') && <p style={{ fontSize: '0.7rem', color: 'var(--danger)', marginTop: '0.4rem' }}>{errorFor('SCORE_UNLOCK')}</p>}
                 </div>
               </>
             ) : (
@@ -1176,10 +1323,10 @@ const Dashboard = () => {
                 <p className="card-desc">Your overall readiness score calculated from service history, skills, and physical standards.</p>
               </>
             )}
-          </div>
+          </Card>
 
           {/* Learning Center CTA */}
-          <div className="ios-card library-card">
+          <Card className="library-card">
             <div className="card-top">
               <BookOpen size={24} color="var(--ios-olive)" />
               <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>LEARNING CENTER</span>
@@ -1187,13 +1334,14 @@ const Dashboard = () => {
             <p className="card-desc" style={{ marginBottom: '1.5rem' }}>
               Access curated textbooks, practice papers, and secure readers for your targeted exams.
             </p>
-            <Link to="/learning-center" className="btn-primary ios-pill" style={{ textDecoration: 'none', textAlign: 'center', fontSize: '0.9rem' }}>
+            <Button onClick={() => navigate('/learning-center')} style={{ textAlign: 'center', fontSize: '0.9rem' }}>
               Enter Library
-            </Link>
-          </div>
+            </Button>
+          </Card>
 
           {/* My Network CTA */}
-          <div className="ios-card library-card">
+          <Card className="library-card" style={{ position: 'relative', overflow: 'hidden' }}>
+            <img src="/hero/community_support.png" alt="" className="card-illustration" />
             <div className="card-top">
               <Users size={24} color="var(--ios-olive)" />
               <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>MY NETWORK</span>
@@ -1201,35 +1349,37 @@ const Dashboard = () => {
             <p className="card-desc" style={{ marginBottom: '1.5rem' }}>
               Connect with peers, transitioning military officers, and corporate recruiters.
             </p>
-            <Link to="/network" className="btn-primary ios-pill" style={{ textDecoration: 'none', textAlign: 'center', fontSize: '0.9rem' }}>
+            <Button onClick={() => navigate('/network')} style={{ textAlign: 'center', fontSize: '0.9rem' }}>
               View Connections ({connectionsCount})
-            </Link>
-          </div>
+            </Button>
+          </Card>
 
           {/* Financial Guidance CTA */}
-          <div className="ios-card library-card" style={{ gridColumn: 'span 2' }}>
+          <Card className="library-card" style={{ position: 'relative', overflow: 'hidden' }}>
+            <img src="/hero/financial_guidance.png" alt="" className="card-illustration" />
             <div className="card-top">
               <Landmark size={24} color="var(--ios-olive)" />
               <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>FINANCIAL GUIDANCE</span>
             </div>
-            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <p className="card-desc" style={{ flex: 1 }}>
+            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <p className="card-desc" style={{ flex: 1, minWidth: '220px' }}>
                 Explore tailored financial schemes, low-interest education loans, and start-up seed funding designed for candidates and transitioning service members.
               </p>
-              <Link to="/financial-guidance" className="btn-primary ios-pill" style={{ textDecoration: 'none', whiteSpace: 'nowrap', fontSize: '0.9rem' }}>
+              <Button onClick={() => navigate('/financial-guidance')} style={{ whiteSpace: 'nowrap', fontSize: '0.9rem' }}>
                 View Schemes
-              </Link>
+              </Button>
             </div>
-          </div>
+          </Card>
 
           {/* Matches Section */}
           <div className="ios-card matches-card" style={{ position: 'relative', overflow: 'hidden' }}>
+            <img src="/hero/career_mapping.png" alt="" className="card-illustration" />
             <div className="card-top" style={{ marginBottom: '2rem' }}>
               <Target size={24} color="var(--ios-olive)" />
               <h2 style={{ fontSize: '1.25rem', margin: 0 }}>Top Exam Matches</h2>
             </div>
             
-            {!isEmployer && !canViewRecommendations(effectiveTier) ? (
+            {!isEmployer && !canViewRecommendations(tier) ? (
               <div style={{ position: 'relative' }}>
                 {/* Blurred placeholder recommendations */}
                 <div style={{ filter: 'blur(8px)', userSelect: 'none', pointerEvents: 'none', opacity: 0.5 }}>
@@ -1254,18 +1404,20 @@ const Dashboard = () => {
                   position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
                   display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                   background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(2px)',
-                  borderRadius: '12px', zIndex: 2, padding: '2rem', textAlign: 'center',
+                  borderRadius: 'var(--radius-md)', zIndex: 2, padding: '2rem', textAlign: 'center',
                 }}>
                   <Lock size={32} color="var(--ios-olive)" style={{ marginBottom: '0.75rem' }} />
                   <p style={{ fontWeight: 700, fontSize: '1.05rem', color: '#0f172a', marginBottom: '0.5rem' }}>Your Exam Matches Are Ready</p>
                   <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1.25rem', lineHeight: 1.5, maxWidth: '350px' }}>See your personalised exam recommendations based on your military profile.</p>
-                  <Link to="/subscribe?plan=SCORE_UNLOCK" className="btn-primary ios-pill" style={{
-                    textDecoration: 'none', fontSize: '0.85rem', padding: '0.7rem 1.5rem',
-                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                    color: 'white',
-                  }}>
-                    <Crown size={14} /> Unlock — ₹9 one-time
-                  </Link>
+                  <Button
+                    type="button"
+                    icon={Crown}
+                    disabled={scoreUnlockStatus === 'processing'}
+                    onClick={handleUnlockScore}
+                    style={{ whiteSpace: 'nowrap' }}
+                  >
+                    {scoreUnlockStatus === 'processing' ? 'Processing…' : 'Unlock with VeerScore — ₹9'}
+                  </Button>
                 </div>
               </div>
             ) : recommendations.length > 0 ? (
@@ -1313,25 +1465,55 @@ const Dashboard = () => {
             )}
           </div>
 
-          {/* CV / Resume Card */}
+          {/* CV / Resume Card — three states: owned, post-unlock ₹1 bonus offer, or standalone bundle */}
           {!isEmployer && (
-            <div className="ios-card library-card" style={{ gridColumn: 'span 2', position: 'relative', overflow: 'hidden' }}>
-              <div className="card-top">
-                <FileText size={24} color="var(--ios-olive)" />
-                <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>INDUSTRY-FIT CV</span>
-              </div>
-              {canGenerateCV(effectiveTier) ? (
-                <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                  <p className="card-desc" style={{ flex: 1 }}>
+            canGenerateCV(tier) ? (
+              <div className="ios-card library-card">
+                <div className="card-top">
+                  <FileText size={24} color="var(--ios-olive)" />
+                  <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>INDUSTRY-FIT CV</span>
+                </div>
+                <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                  <p className="card-desc" style={{ flex: 1, minWidth: '220px' }}>
                     Your personalised industry-fit resume is ready. Download and share your professional profile with recruiters.
                   </p>
                   <Link to="/cv" className="btn-primary ios-pill" style={{ textDecoration: 'none', whiteSpace: 'nowrap', fontSize: '0.9rem', cursor: 'pointer', color: 'white', display: 'inline-flex', alignItems: 'center' }}>
                     Customize & Download CV
                   </Link>
                 </div>
-              ) : (
-                <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                  <div style={{ flex: 1 }}>
+              </div>
+            ) : canViewVeerScore(tier) ? (
+              <div className="offer-card">
+                <div className="card-top">
+                  <Gift size={24} color="var(--ios-olive)" />
+                  <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>BONUS OFFER</span>
+                </div>
+                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                  <div style={{ flex: 1, minWidth: '220px' }}>
+                    <p style={{ fontWeight: 700, fontSize: '1rem', color: '#0f172a', marginBottom: '0.35rem' }}>Add your industry-fit CV for just ₹1 more</p>
+                    <p className="card-desc" style={{ margin: 0 }}>
+                      You&apos;ve already unlocked your VeerScore — add professional CV generation for a token ₹1 while it&apos;s right here.
+                    </p>
+                    {errorFor('CV_ADDON') && <p style={{ fontSize: '0.75rem', color: 'var(--danger)', marginTop: '0.5rem' }}>{errorFor('CV_ADDON')}</p>}
+                  </div>
+                  <Button
+                    type="button"
+                    disabled={cvAddonStatus === 'processing'}
+                    onClick={handleAddCv}
+                    style={{ whiteSpace: 'nowrap' }}
+                  >
+                    {cvAddonStatus === 'processing' ? 'Processing…' : 'Add CV — ₹1'}
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <div className="ios-card library-card">
+                <div className="card-top">
+                  <FileText size={24} color="var(--ios-olive)" />
+                  <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>INDUSTRY-FIT CV</span>
+                </div>
+                <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                  <div style={{ flex: 1, minWidth: '220px' }}>
                     <p className="card-desc" style={{ marginBottom: '0.75rem' }}>
                       Get a professionally formatted, industry-fit CV generated from your military profile — tailored for the corporate world.
                     </p>
@@ -1340,12 +1522,12 @@ const Dashboard = () => {
                       color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.85rem',
                       textDecoration: 'none',
                     }}>
-                      <Lock size={14} /> Unlock CV — ₹10 one-time <ArrowRight size={14} />
+                      <Lock size={14} /> Unlock VeerScore + CV — ₹10 one-time <ArrowRight size={14} />
                     </Link>
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )
           )}
         </div>
       </div>
@@ -1363,19 +1545,96 @@ const Dashboard = () => {
           background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/hero/hero_image.png");
           background-size: cover;
           background-position: center;
-          padding: 4rem 3rem;
-          border-radius: 24px;
+          padding: 2rem;
+          border-radius: var(--radius-lg);
           position: relative;
           overflow: hidden;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+          box-shadow: var(--shadow-3);
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
         }
-        .welcome-content {
+        .welcome-profile-row {
           position: relative;
           z-index: 2;
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+        }
+        .welcome-avatar {
+          width: 88px;
+          height: 88px;
+          flex-shrink: 0;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.15);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 3px solid rgba(255,255,255,0.35);
+          overflow: hidden;
+          box-shadow: var(--shadow-2);
+        }
+        .welcome-identity {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          min-width: 0;
+        }
+        .welcome-name {
+          font-size: 1.9rem;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          color: white;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .welcome-status {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: rgba(255,255,255,0.85);
+          width: fit-content;
+        }
+        .welcome-status-dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
+        .welcome-status-dot.ok {
+          background: #8BD17C;
+        }
+        .welcome-status-dot.pending {
+          background: #fbbf24;
+        }
+        .welcome-actions {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+        .card-illustration {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          width: 76px;
+          height: 76px;
+          object-fit: contain;
+          opacity: 0.14;
+          pointer-events: none;
+          z-index: 0;
         }
         .dashboard-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          /* Single-column row stack — simpler and more predictable than a
+             multi-column grid (which was leaving cards half-width with an
+             empty column beside them at some viewport/zoom combinations). */
+          display: flex;
+          flex-direction: column;
           gap: 1.5rem;
         }
         .card-top {
@@ -1402,8 +1661,12 @@ const Dashboard = () => {
           flex-direction: column;
           justify-content: space-between;
         }
-        .matches-card {
-          grid-column: span 2;
+        .offer-card {
+          background: linear-gradient(135deg, rgba(75,107,50,0.08) 0%, rgba(75,107,50,0.03) 100%);
+          border: 1px dashed var(--ios-olive);
+          border-radius: var(--radius-md);
+          padding: 1.5rem;
+          box-shadow: var(--shadow-1);
         }
         .recommendations-list {
           display: flex;
@@ -1416,7 +1679,7 @@ const Dashboard = () => {
           gap: 1.25rem;
           padding: 1rem;
           background: var(--ios-secondary);
-          border-radius: 16px;
+          border-radius: var(--radius-md);
           transition: transform 0.2s;
         }
         .recommendation-item:hover {
@@ -1426,7 +1689,7 @@ const Dashboard = () => {
           width: 32px;
           height: 32px;
           background: white;
-          border-radius: 8px;
+          border-radius: var(--radius-sm);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1484,7 +1747,7 @@ const Dashboard = () => {
           gap: 0.5rem;
           padding: 0.5rem;
           background: white;
-          border-radius: 8px;
+          border-radius: var(--radius-sm);
           text-decoration: none;
           color: var(--ios-text);
           font-size: 0.8rem;
@@ -1505,10 +1768,24 @@ const Dashboard = () => {
           to { transform: rotate(360deg); }
         }
         @media (max-width: 850px) {
-          .dashboard-grid { grid-template-columns: 1fr; }
-          .matches-card { grid-column: auto; }
           .recommendation-item { flex-wrap: wrap; gap: 0.75rem; }
           .rec-score-section { width: 100%; order: 3; }
+        }
+        @media (max-width: 640px) {
+          .welcome-hero {
+            padding: 1.5rem;
+          }
+          .welcome-avatar {
+            width: 64px;
+            height: 64px;
+          }
+          .welcome-name {
+            font-size: 1.5rem;
+          }
+          .card-illustration {
+            width: 56px;
+            height: 56px;
+          }
         }
       `}} />
     </div>

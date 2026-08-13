@@ -2,15 +2,18 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import AuthGuard from './components/AuthGuard';
 import Header from './components/Header';
+import BottomNav from './components/ui/BottomNav';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
 import Profiling from './pages/Profiling';
+import ProfilingResults from './pages/ProfilingResults';
 import Dashboard from './pages/Dashboard';
 import LearningCenter from './pages/LearningCenter';
 import FinancialGuidance from './pages/FinancialGuidance';
 import SecureReader from './components/SecureReader';
 import Footer from './components/Footer';
 import AdminJobs from './pages/admin/AdminJobs';
+import AdminRewardsQueue from './pages/admin/AdminRewardsQueue';
 import PublicJobs from './pages/PublicJobs';
 import FindCandidates from './pages/FindCandidates';
 import MessagingWorkspace from './components/MessagingWorkspace';
@@ -32,6 +35,7 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import CVBuilder from './pages/CVBuilder';
+import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
 import './index.css';
 
@@ -109,6 +113,7 @@ function App() {
         {/* Routes with Global Header */}
         <Route element={<Layout />}>
           <Route path="/profiling" element={<AuthGuard skipProfilingCheck><Profiling /></AuthGuard>} />
+          <Route path="/profiling/results" element={<AuthGuard skipProfilingCheck><ProfilingResults /></AuthGuard>} />
           <Route path="/subscribe" element={<AuthGuard skipProfilingCheck><Subscribe /></AuthGuard>} />
           <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
           <Route path="/learning-center" element={<AuthGuard><LearningCenter /></AuthGuard>} />
@@ -122,6 +127,7 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/cv" element={<AuthGuard><CVBuilder /></AuthGuard>} />
+          <Route path="/rewards" element={<AuthGuard><RewardsCenter /></AuthGuard>} />
         </Route>
 
         {/* Admin Routes */}
@@ -130,6 +136,7 @@ function App() {
         <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/jobs" element={<AdminJobs />} />
+        <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
       </Routes>
     </Router>
   );
@@ -144,6 +151,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+      <BottomNav />
     </div>
   );
 };

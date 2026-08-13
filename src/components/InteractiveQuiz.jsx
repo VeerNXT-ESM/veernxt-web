@@ -4,6 +4,9 @@ import { supabase } from '../lib/supabase';
 import { ArrowLeft, CheckCircle, XCircle, RefreshCw, Trophy, ChevronRight, HelpCircle, Lock, Crown } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
+import { awardPoints } from '../lib/awardPoints';
+
+const MAX_QUIZ_QUESTIONS = 6;
 
 const InteractiveQuiz = () => {
   const { id } = useParams();
@@ -91,8 +94,18 @@ const InteractiveQuiz = () => {
           };
         });
 
+        // Cap quiz length: randomly sample a subset from the full bank so
+        // long admin-authored banks don't feel like a slog, then restore
+        // authored ordering so numbering/explanations still read naturally.
+        const sampled = parsedQuestions.length > MAX_QUIZ_QUESTIONS
+          ? [...parsedQuestions]
+              .sort(() => Math.random() - 0.5)
+              .slice(0, MAX_QUIZ_QUESTIONS)
+              .sort((a, b) => a.question_number - b.question_number)
+          : parsedQuestions;
+
         setQuiz(quizData);
-        setQuestions(parsedQuestions);
+        setQuestions(sampled);
       } catch (err) {
         console.error('Error fetching quiz:', err);
       } finally {
@@ -128,6 +141,8 @@ const InteractiveQuiz = () => {
 
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
+      const scorePercent = (calculatedScore / questions.length) * 100;
+
       await supabase.from('quiz_attempts').insert({
         user_id: session.user.id,
         quiz_id: id,
@@ -135,10 +150,12 @@ const InteractiveQuiz = () => {
         total_questions: questions.length,
         answered_questions: Object.keys(answers).length,
         correct_answers: calculatedScore,
-        score_percent: (calculatedScore / questions.length) * 100,
+        score_percent: scorePercent,
         answers: answers,
         completed_at: new Date().toISOString()
       });
+
+      awardPoints('QUIZ_COMPLETE', { refId: id, metadata: { score_percent: scorePercent } });
 
       if (isFreeAttempt) {
         try {

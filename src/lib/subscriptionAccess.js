@@ -285,3 +285,14 @@ export function isResourceLockedForUser(tier, category) {
 export function isTierAtLeast(currentTier, targetTier) {
   return (TIER_RANK[currentTier] || 0) >= (TIER_RANK[targetTier] || 0);
 }
+
+/**
+ * Merges a freshly-purchased tier with the server-fetched one, keeping
+ * whichever ranks higher — used right after an in-place purchase (see
+ * useInlineUnlock) so the UI can unlock instantly without a reload/refetch.
+ */
+export function higherTier(a, b) {
+  if (!a) return b;
+  if (!b) return a;
+  return (TIER_RANK[b] || 0) > (TIER_RANK[a] || 0) ? b : a;
+}

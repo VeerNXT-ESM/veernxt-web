@@ -12,6 +12,7 @@ import Joi from 'joi';
 import { createClient } from '@supabase/supabase-js';
 import { checkEligibility } from '../../backend/engine/eligibility.js';
 import { scoreExam } from '../../backend/engine/scoring.js';
+import { resolvePoints, buildIdempotencyKey } from '../../backend/points/pointsCatalog.js';
 
 // --- Profile validation schema ---
 const profileSchema = Joi.object({
@@ -134,6 +135,50 @@ function summariseProfile(p) {
     character: p.characterOnDischarge,
     preferences: p.careerPreferences,
   };
+}
+
+// Buckets checkEligibility()'s human-readable rejection reasons (which were
+// previously computed and then discarded — only the count reached the
+// client) into a small set of actionable "skill gap" categories for the
+// results page. Real, data-derived signal from the actual exam pool, not a
+// fabricated score.
+function summariseSkillGaps(rejected, userQualification) {
+  let qualificationCount = 0;
+  let domicileCount = 0;
+  let physicalCount = 0;
+
+  for (const { reasons } of rejected) {
+    for (const reason of reasons) {
+      if (reason.startsWith('needs ')) qualificationCount += 1;
+      else if (reason.startsWith('state-only exam') || reason === 'state of domicile missing') domicileCount += 1;
+      else if (reason.startsWith('physical')) physicalCount += 1;
+    }
+  }
+
+  const gaps = [];
+  if (qualificationCount > 0) {
+    gaps.push({
+      label: 'Qualification Gap',
+      detail: `${qualificationCount} exam${qualificationCount === 1 ? '' : 's'} you're currently ineligible for require a higher qualification than your ${userQualification || 'current level'} — completing the next level could open these up.`,
+      blockedCount: qualificationCount,
+    });
+  }
+  if (domicileCount > 0) {
+    gaps.push({
+      label: 'Relocation Opportunity',
+      detail: `${domicileCount} state-specific exam${domicileCount === 1 ? '' : 's'} are outside your home state — opting into "Anywhere in India" would open these up.`,
+      blockedCount: domicileCount,
+    });
+  }
+  if (physicalCount > 0) {
+    gaps.push({
+      label: 'Physical Standards Gap',
+      detail: `${physicalCount} exam${physicalCount === 1 ? '' : 's'} require physical/medical standards your profile doesn't currently meet.`,
+      blockedCount: physicalCount,
+    });
+  }
+
+  return gaps.sort((a, b) => b.blockedCount - a.blockedCount).slice(0, 3);
 }
 
 function diversify(scored, topN, capPerTrack) {
@@ -264,6 +309,7 @@ export default async function handler(req, res) {
       profileSummary: summariseProfile(profile),
       totalEligible: survivors.length,
       totalRejected: rejected.length,
+      skillGaps: summariseSkillGaps(rejected, profile.highestQualification),
       recommendations: diversified.map((r, i) => ({
         rank: i + 1,
         exam_id:         r.exam.exam_id,
@@ -327,6 +373,26 @@ export default async function handler(req, res) {
         return res.status(500).json({ ok: false, error: 'Failed to save recommendations to database' });
       }
       console.log('[recommend] Profile scoring securely updated in DB.');
+
+      // Award profiling-completion points (idempotency key = action code
+      // alone, so re-running via Dashboard's "Recalculate" doesn't re-award).
+      try {
+        const { data: pointsRow, error: pointsError } = await supabaseAdmin.rpc('award_points', {
+          p_user_id: userId,
+          p_action_code: 'PROFILING_COMPLETE',
+          p_points: resolvePoints('PROFILING_COMPLETE'),
+          p_idempotency_key: buildIdempotencyKey('PROFILING_COMPLETE'),
+        });
+        if (pointsError) {
+          console.error('[recommend] award_points RPC failed:', pointsError.message);
+        } else {
+          const row = Array.isArray(pointsRow) ? pointsRow[0] : pointsRow;
+          result.pointsAwarded = row?.awarded ? resolvePoints('PROFILING_COMPLETE') : 0;
+          result.pointsBalance = row?.new_balance ?? null;
+        }
+      } catch (pointsErr) {
+        console.error('[recommend] Exception awarding profiling points:', pointsErr);
+      }
     }
 
     return res.status(200).json(result);

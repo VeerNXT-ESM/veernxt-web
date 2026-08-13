@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ShieldCheck, Mail, Phone as PhoneIcon, ArrowLeft, Briefcase, User, Eye, EyeOff, Lock, UserPlus, KeyRound } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Tabs from '../components/ui/Tabs';
 
 /**
  * Login Page — Production Auth Flow
@@ -67,6 +69,7 @@ const Login = () => {
   const [verifiedMobile, setVerifiedMobile] = useState('');
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const showMsg = (text, type = 'info') => setMessage({ text, type });
   const clearMsg = () => setMessage({ text: '', type: 'info' });
@@ -285,7 +288,12 @@ const Login = () => {
           .single();
 
         if (profile?.profiling_completed) {
-          navigate('/dashboard');
+          // Honor the page AuthGuard originally redirected from (e.g. a
+          // deep link to /learning-center) instead of always landing on
+          // /dashboard — AuthGuard already sets this via `state: { from }`.
+          const from = location.state?.from;
+          const redirectPath = from ? `${from.pathname}${from.search || ''}` : '/dashboard';
+          navigate(redirectPath);
         } else {
           navigate('/profiling');
         }
@@ -363,28 +371,34 @@ const Login = () => {
   // RENDER
   // ═══════════════════════════════════════════
 
+  // Slate-600 — meets the 3:1 non-text (border) contrast minimum against
+  // white, unlike the lighter slate-300 this page used before.
+  const borderColor = '#64748b';
+
   const inputStyle = {
     width: '100%',
     padding: '0.85rem 1rem',
-    borderRadius: '12px',
-    border: '1px solid #cbd5e1',
+    borderRadius: 'var(--radius-sm)',
+    // Indirected through a custom property (rather than a literal color)
+    // so the .vx-field:focus rule below can actually override it — a
+    // plain `border` in an inline style outranks any class selector, focus
+    // state or not, so a stylesheet rule alone could never win here.
+    border: `1px solid var(--vx-border, ${borderColor})`,
     background: 'white',
     color: '#0f172a',
     outline: 'none',
     fontFamily: 'inherit',
-    fontSize: '0.95rem',
-    transition: 'all 0.2s ease',
+    fontSize: '1rem',
+    transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
     boxSizing: 'border-box',
   };
 
   const labelStyle = {
-    fontSize: '0.75rem',
-    fontWeight: '800',
-    color: '#64748b',
-    textTransform: 'uppercase',
-    marginBottom: '0.5rem',
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    color: '#334155',
+    marginBottom: '0.4rem',
     display: 'block',
-    letterSpacing: '0.05em',
   };
 
   const renderCandidateContent = () => {
@@ -392,44 +406,44 @@ const Login = () => {
     if ((authMode === 'register' || authMode === 'forgot') && step === 'otp') {
       return (
         <div className="animate-fade-in">
-          <button onClick={resetFlow} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
-            <ArrowLeft size={16} /> Back
-          </button>
+          <Button type="button" variant="ghost" size="sm" icon={ArrowLeft} onClick={resetFlow} style={{ padding: '0.5rem 0.25rem', marginBottom: '1.5rem' }}>
+            Back
+          </Button>
           <form onSubmit={handleVerifyOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div style={{ textAlign: 'left' }}>
-              <label style={labelStyle}>Enter 6-Digit OTP</label>
-              <input type="text" placeholder="------" value={otp}
+              <label style={labelStyle} htmlFor="cand-otp">Enter 6-digit code</label>
+              <input id="cand-otp" className="vx-field" type="text" inputMode="numeric" autoComplete="one-time-code" placeholder="------" value={otp}
                 onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
                 required
                 style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
               />
               {isDevMode && (
-                <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#64748b', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
-                  <span style={{ fontWeight: '600', color: 'var(--ios-olive)' }}>TEST MODE ACTIVE:</span> Please enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#475569', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: 'var(--radius-sm)', border: `1px dashed ${borderColor}` }}>
+                  <span style={{ fontWeight: '700', color: 'var(--ios-olive)' }}>TEST MODE:</span> enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
                 </div>
               )}
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading || otp.length !== 6}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Verifying...' : 'Verify OTP'}
-            </button>
-            <div style={{ textAlign: 'center', marginTop: '0.75rem' }}>
-              <button 
-                type="button" 
-                onClick={handleResendOTP} 
+            <Button type="submit" fullWidth size="lg" disabled={loading || otp.length !== 6}>
+              {loading ? 'Verifying…' : 'Verify code'}
+            </Button>
+            <div style={{ textAlign: 'center' }}>
+              <button
+                type="button"
+                className="vx-link"
+                onClick={handleResendOTP}
                 disabled={resendCooldown > 0 || loading}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  color: resendCooldown > 0 ? '#94a3b8' : 'var(--ios-olive)', 
-                  fontWeight: '700', 
-                  fontSize: '0.85rem', 
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: resendCooldown > 0 ? '#94a3b8' : 'var(--ios-olive)',
+                  fontWeight: '700',
+                  fontSize: '0.9rem',
                   cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer',
-                  padding: '0.25rem 0.5rem',
-                  outline: 'none'
+                  padding: '0.6rem 0.75rem',
+                  minHeight: '44px',
                 }}
               >
-                {resendCooldown > 0 ? `Resend OTP in ${resendCooldown}s` : 'Resend OTP'}
+                {resendCooldown > 0 ? `Resend code in ${resendCooldown}s` : 'Resend code'}
               </button>
             </div>
           </form>
@@ -441,37 +455,37 @@ const Login = () => {
     if ((authMode === 'register' || authMode === 'forgot') && step === 'set-password') {
       return (
         <div className="animate-fade-in">
-          <button onClick={resetFlow} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
-            <ArrowLeft size={16} /> Back
-          </button>
-          <div style={{ background: 'rgba(75, 107, 50, 0.06)', borderRadius: '12px', padding: '0.75rem 1rem', marginBottom: '1.5rem', fontSize: '0.8rem', color: 'var(--ios-olive)', fontWeight: 600 }}>
+          <Button type="button" variant="ghost" size="sm" icon={ArrowLeft} onClick={resetFlow} style={{ padding: '0.5rem 0.25rem', marginBottom: '1.5rem' }}>
+            Back
+          </Button>
+          <div role="status" style={{ background: 'var(--success-bg)', borderRadius: 'var(--radius-sm)', padding: '0.75rem 1rem', marginBottom: '1.5rem', fontSize: '0.85rem', color: 'var(--ios-olive)', fontWeight: 600, textAlign: 'left' }}>
             ✓ Mobile +91 {phone} verified
           </div>
           <form onSubmit={handleSetPassword} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
             <div>
-              <label style={labelStyle}>{authMode === 'forgot' ? 'New Password' : 'Create Password'}</label>
+              <label style={labelStyle} htmlFor="cand-new-password">{authMode === 'forgot' ? 'New password' : 'Create password'}</label>
               <div style={{ position: 'relative' }}>
-                <input type={showPassword ? 'text' : 'password'} placeholder="Min 6 characters"
-                  value={password} onChange={(e) => setPassword(e.target.value)} required
-                  style={{ ...inputStyle, paddingRight: '3rem' }}
+                <input id="cand-new-password" className="vx-field" type={showPassword ? 'text' : 'password'} autoComplete="new-password" placeholder="Minimum 6 characters"
+                  value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6}
+                  style={{ ...inputStyle, paddingRight: '3.25rem' }}
                 />
-                <button type="button" onClick={() => setShowPassword(!showPassword)}
-                  style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', padding: 0, display: 'flex' }}>
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
+                  style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                  {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
                 </button>
               </div>
             </div>
             <div>
-              <label style={labelStyle}>Confirm Password</label>
-              <input type="password" placeholder="Re-enter password"
-                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required
+              <label style={labelStyle} htmlFor="cand-confirm-password">Confirm password</label>
+              <input id="cand-confirm-password" className="vx-field" type="password" autoComplete="new-password" placeholder="Re-enter password"
+                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required minLength={6}
                 style={inputStyle}
               />
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Processing...' : (authMode === 'forgot' ? 'Reset Password' : 'Create Account & Continue')}
-            </button>
+            <Button type="submit" fullWidth size="lg" disabled={loading}>
+              {loading ? 'Processing…' : (authMode === 'forgot' ? 'Reset password' : 'Create account & continue')}
+            </Button>
           </form>
         </div>
       );
@@ -483,25 +497,24 @@ const Login = () => {
         <div className="animate-fade-in">
           <form onSubmit={handleSendOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div style={{ textAlign: 'left' }}>
-              <label style={labelStyle}>Mobile Number</label>
+              <label style={labelStyle} htmlFor="cand-reg-mobile">Mobile number</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
-                <input type="tel" placeholder="e.g. 9876543210" value={phone}
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <input id="cand-reg-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
                 />
               </div>
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Sending OTP...' : 'Verify Mobile & Register'}
-            </button>
+            <Button type="submit" fullWidth size="lg" disabled={loading}>
+              {loading ? 'Sending code…' : 'Verify mobile & register'}
+            </Button>
           </form>
-          <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
-            <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Already have an account? </span>
-            <button onClick={() => { setAuthMode('login'); resetFlow(); }}
-              style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.85rem', cursor: 'pointer' }}>
-              Login
+          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.9rem', color: '#475569' }}>
+            Already have an account?{' '}
+            <button className="vx-link" onClick={() => { setAuthMode('login'); resetFlow(); }}
+              style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.9rem', cursor: 'pointer', padding: '0.5rem', textDecoration: 'underline' }}>
+              Log in
             </button>
           </div>
         </div>
@@ -512,25 +525,23 @@ const Login = () => {
     if (authMode === 'forgot') {
       return (
         <div className="animate-fade-in">
-          <button onClick={() => { setAuthMode('login'); resetFlow(); }}
-            style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
-            <ArrowLeft size={16} /> Back to login
-          </button>
+          <Button type="button" variant="ghost" size="sm" icon={ArrowLeft} onClick={() => { setAuthMode('login'); resetFlow(); }} style={{ padding: '0.5rem 0.25rem', marginBottom: '1.5rem' }}>
+            Back to login
+          </Button>
           <form onSubmit={handleSendOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div style={{ textAlign: 'left' }}>
-              <label style={labelStyle}>Registered Mobile Number</label>
+              <label style={labelStyle} htmlFor="cand-forgot-mobile">Registered mobile number</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
-                <input type="tel" placeholder="e.g. 9876543210" value={phone}
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <input id="cand-forgot-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
                 />
               </div>
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Sending OTP...' : 'Send Reset OTP'}
-            </button>
+            <Button type="submit" fullWidth size="lg" disabled={loading}>
+              {loading ? 'Sending code…' : 'Send reset code'}
+            </Button>
           </form>
         </div>
       );
@@ -541,48 +552,45 @@ const Login = () => {
       <div className="animate-fade-in">
         <form onSubmit={handleCandidateLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
           <div>
-            <label style={labelStyle}>Mobile Number or Email</label>
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
-              <input type="text" placeholder="Phone or email" value={phone || email}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val.includes('@')) { setEmail(val); setPhone(''); }
-                  else { setPhone(sanitizePhoneNumber(val)); setEmail(''); }
-                }}
-                required style={{ ...inputStyle, flex: 1 }}
-              />
-            </div>
+            <label style={labelStyle} htmlFor="cand-login-id">Mobile number or email</label>
+            <input id="cand-login-id" className="vx-field" type="text" inputMode="email" autoComplete="username" placeholder="9876543210 or you@email.com" value={phone || email}
+              onChange={(e) => {
+                const val = e.target.value;
+                if (val.includes('@')) { setEmail(val); setPhone(''); }
+                else { setPhone(sanitizePhoneNumber(val)); setEmail(''); }
+              }}
+              required style={inputStyle}
+            />
           </div>
           <div>
-            <label style={labelStyle}>Password</label>
+            <label style={labelStyle} htmlFor="cand-login-password">Password</label>
             <div style={{ position: 'relative' }}>
-              <input type={showPassword ? 'text' : 'password'} placeholder="••••••••"
+              <input id="cand-login-password" className="vx-field" type={showPassword ? 'text' : 'password'} autoComplete="current-password" placeholder="Enter your password"
                 value={password} onChange={(e) => setPassword(e.target.value)} required
-                style={{ ...inputStyle, paddingRight: '3rem' }}
+                style={{ ...inputStyle, paddingRight: '3.25rem' }}
               />
-              <button type="button" onClick={() => setShowPassword(!showPassword)}
-                style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', padding: 0, display: 'flex' }}>
-                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
+                style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
               </button>
             </div>
           </div>
-          <button type="submit" className="btn-primary ios-pill" disabled={loading}
-            style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-            {loading ? 'Signing in...' : 'Login'}
-          </button>
+          <Button type="submit" fullWidth size="lg" disabled={loading}>
+            {loading ? 'Signing in…' : 'Login'}
+          </Button>
         </form>
 
-        <div style={{ marginTop: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <button onClick={() => { setAuthMode('forgot'); resetFlow(); }}
-            style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.8rem', cursor: 'pointer', fontWeight: 600 }}>
-            <KeyRound size={12} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+        <Button type="button" variant="secondary" fullWidth size="md" icon={UserPlus}
+          onClick={() => { setAuthMode('register'); resetFlow(); }} style={{ marginTop: '0.85rem' }}>
+          Create account
+        </Button>
+
+        <div style={{ textAlign: 'center', marginTop: '0.85rem' }}>
+          <button className="vx-link" onClick={() => { setAuthMode('forgot'); resetFlow(); }}
+            style={{ background: 'none', border: 'none', color: '#475569', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', padding: '0.6rem 0.75rem', minHeight: '44px', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+            <KeyRound size={14} />
             Forgot password?
-          </button>
-          <button onClick={() => { setAuthMode('register'); resetFlow(); }}
-            style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontSize: '0.8rem', cursor: 'pointer', fontWeight: 700 }}>
-            <UserPlus size={12} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
-            Create account
           </button>
         </div>
       </div>
@@ -594,44 +602,44 @@ const Login = () => {
     if ((authMode === 'register' || authMode === 'forgot') && step === 'otp') {
       return (
         <div className="animate-fade-in">
-          <button onClick={resetFlow} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
-            <ArrowLeft size={16} /> Back
-          </button>
+          <Button type="button" variant="ghost" size="sm" icon={ArrowLeft} onClick={resetFlow} style={{ padding: '0.5rem 0.25rem', marginBottom: '1.5rem' }}>
+            Back
+          </Button>
           <form onSubmit={handleVerifyOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div style={{ textAlign: 'left' }}>
-              <label style={labelStyle}>Enter 6-Digit OTP</label>
-              <input type="text" placeholder="------" value={otp}
+              <label style={labelStyle} htmlFor="emp-otp">Enter 6-digit code</label>
+              <input id="emp-otp" className="vx-field" type="text" inputMode="numeric" autoComplete="one-time-code" placeholder="------" value={otp}
                 onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
                 required
                 style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
               />
               {isDevMode && (
-                <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#64748b', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
-                  <span style={{ fontWeight: '600', color: 'var(--ios-olive)' }}>TEST MODE ACTIVE:</span> Please enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#475569', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: 'var(--radius-sm)', border: `1px dashed ${borderColor}` }}>
+                  <span style={{ fontWeight: '700', color: 'var(--ios-olive)' }}>TEST MODE:</span> enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
                 </div>
               )}
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading || otp.length !== 6}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Verifying...' : 'Verify OTP'}
-            </button>
-            <div style={{ textAlign: 'center', marginTop: '0.75rem' }}>
-              <button 
-                type="button" 
-                onClick={handleResendOTP} 
+            <Button type="submit" fullWidth size="lg" disabled={loading || otp.length !== 6}>
+              {loading ? 'Verifying…' : 'Verify code'}
+            </Button>
+            <div style={{ textAlign: 'center' }}>
+              <button
+                type="button"
+                className="vx-link"
+                onClick={handleResendOTP}
                 disabled={resendCooldown > 0 || loading}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  color: resendCooldown > 0 ? '#94a3b8' : 'var(--ios-olive)', 
-                  fontWeight: '700', 
-                  fontSize: '0.85rem', 
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: resendCooldown > 0 ? '#94a3b8' : 'var(--ios-olive)',
+                  fontWeight: '700',
+                  fontSize: '0.9rem',
                   cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer',
-                  padding: '0.25rem 0.5rem',
-                  outline: 'none'
+                  padding: '0.6rem 0.75rem',
+                  minHeight: '44px',
                 }}
               >
-                {resendCooldown > 0 ? `Resend OTP in ${resendCooldown}s` : 'Resend OTP'}
+                {resendCooldown > 0 ? `Resend code in ${resendCooldown}s` : 'Resend code'}
               </button>
             </div>
           </form>
@@ -643,37 +651,37 @@ const Login = () => {
     if ((authMode === 'register' || authMode === 'forgot') && step === 'set-password') {
       return (
         <div className="animate-fade-in">
-          <button onClick={resetFlow} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', marginBottom: '1.5rem', padding: '0.5rem 0', fontWeight: '600' }}>
-            <ArrowLeft size={16} /> Back
-          </button>
-          <div style={{ background: 'rgba(75, 107, 50, 0.06)', borderRadius: '12px', padding: '0.75rem 1rem', marginBottom: '1.5rem', fontSize: '0.8rem', color: 'var(--ios-olive)', fontWeight: 600 }}>
+          <Button type="button" variant="ghost" size="sm" icon={ArrowLeft} onClick={resetFlow} style={{ padding: '0.5rem 0.25rem', marginBottom: '1.5rem' }}>
+            Back
+          </Button>
+          <div role="status" style={{ background: 'var(--success-bg)', borderRadius: 'var(--radius-sm)', padding: '0.75rem 1rem', marginBottom: '1.5rem', fontSize: '0.85rem', color: 'var(--ios-olive)', fontWeight: 600, textAlign: 'left' }}>
             ✓ Mobile +91 {phone} verified
           </div>
           <form onSubmit={handleSetPassword} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
             <div>
-              <label style={labelStyle}>{authMode === 'forgot' ? 'New Password' : 'Create Recruiter Password'}</label>
+              <label style={labelStyle} htmlFor="emp-new-password">{authMode === 'forgot' ? 'New password' : 'Create recruiter password'}</label>
               <div style={{ position: 'relative' }}>
-                <input type={showPassword ? 'text' : 'password'} placeholder="Min 6 characters"
-                  value={password} onChange={(e) => setPassword(e.target.value)} required
-                  style={{ ...inputStyle, paddingRight: '3rem' }}
+                <input id="emp-new-password" className="vx-field" type={showPassword ? 'text' : 'password'} autoComplete="new-password" placeholder="Minimum 6 characters"
+                  value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6}
+                  style={{ ...inputStyle, paddingRight: '3.25rem' }}
                 />
-                <button type="button" onClick={() => setShowPassword(!showPassword)}
-                  style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', padding: 0, display: 'flex' }}>
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
+                  style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                  {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
                 </button>
               </div>
             </div>
             <div>
-              <label style={labelStyle}>Confirm Password</label>
-              <input type="password" placeholder="Re-enter password"
-                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required
+              <label style={labelStyle} htmlFor="emp-confirm-password">Confirm password</label>
+              <input id="emp-confirm-password" className="vx-field" type="password" autoComplete="new-password" placeholder="Re-enter password"
+                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required minLength={6}
                 style={inputStyle}
               />
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Processing...' : (authMode === 'forgot' ? 'Reset Password' : 'Create Recruiter Account')}
-            </button>
+            <Button type="submit" fullWidth size="lg" disabled={loading}>
+              {loading ? 'Processing…' : (authMode === 'forgot' ? 'Reset password' : 'Create recruiter account')}
+            </Button>
           </form>
         </div>
       );
@@ -685,25 +693,24 @@ const Login = () => {
         <div className="animate-fade-in">
           <form onSubmit={handleSendOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div style={{ textAlign: 'left' }}>
-              <label style={labelStyle}>Recruiter / Corporate Mobile</label>
+              <label style={labelStyle} htmlFor="emp-reg-mobile">Recruiter / corporate mobile</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
-                <input type="tel" placeholder="e.g. 9876543210" value={phone}
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <input id="emp-reg-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
                 />
               </div>
             </div>
-            <button type="submit" className="btn-primary ios-pill" disabled={loading}
-              style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)' }}>
-              {loading ? 'Sending OTP...' : 'Verify Mobile & Register Company'}
-            </button>
+            <Button type="submit" fullWidth size="lg" disabled={loading}>
+              {loading ? 'Sending code…' : 'Verify mobile & register company'}
+            </Button>
           </form>
-          <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
-            <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Already have a recruiter account? </span>
-            <button onClick={() => { setAuthMode('login'); resetFlow(); }}
-              style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.85rem', cursor: 'pointer' }}>
-              Login
+          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.9rem', color: '#475569' }}>
+            Already have a recruiter account?{' '}
+            <button className="vx-link" onClick={() => { setAuthMode('login'); resetFlow(); }}
+              style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.9rem', cursor: 'pointer', padding: '0.5rem', textDecoration: 'underline' }}>
+              Log in
             </button>
           </div>
         </div>
@@ -715,50 +722,44 @@ const Login = () => {
       <div className="animate-fade-in">
         <form onSubmit={handleEmployerLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', textAlign: 'left' }}>
           <div>
-            <label style={labelStyle}>Recruiter / Corporate Mobile or Email</label>
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              <div style={{ padding: '0.85rem 0.75rem', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>+91</div>
-              <input type="text" placeholder="Phone or email" value={employerPhone || employerEmail}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val.includes('@')) {
-                    setEmployerEmail(val);
-                    setEmployerPhone('');
-                  } else {
-                    setEmployerPhone(sanitizePhoneNumber(val));
-                    setEmployerEmail('');
-                  }
-                }}
-                required style={{ ...inputStyle, flex: 1 }}
-              />
-            </div>
+            <label style={labelStyle} htmlFor="emp-login-id">Recruiter mobile number or email</label>
+            <input id="emp-login-id" className="vx-field" type="text" inputMode="email" autoComplete="username" placeholder="9876543210 or you@company.com" value={employerPhone || employerEmail}
+              onChange={(e) => {
+                const val = e.target.value;
+                if (val.includes('@')) {
+                  setEmployerEmail(val);
+                  setEmployerPhone('');
+                } else {
+                  setEmployerPhone(sanitizePhoneNumber(val));
+                  setEmployerEmail('');
+                }
+              }}
+              required style={inputStyle}
+            />
           </div>
           <div>
-            <label style={labelStyle}>Security Password</label>
+            <label style={labelStyle} htmlFor="emp-login-password">Password</label>
             <div style={{ position: 'relative' }}>
-              <input type={showPassword ? 'text' : 'password'} placeholder="••••••••"
+              <input id="emp-login-password" className="vx-field" type={showPassword ? 'text' : 'password'} autoComplete="current-password" placeholder="Enter your password"
                 value={employerPassword} onChange={(e) => setEmployerPassword(e.target.value)} required
-                style={{ ...inputStyle, paddingRight: '3rem' }}
+                style={{ ...inputStyle, paddingRight: '3.25rem' }}
               />
-              <button type="button" onClick={() => setShowPassword(!showPassword)}
-                style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', display: 'flex', padding: 0 }}>
-                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
+                style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
               </button>
             </div>
           </div>
-          <button type="submit" className="btn-primary ios-pill" disabled={loading}
-            style={{ padding: '0.9rem', fontSize: '0.95rem', background: 'var(--ios-olive)', cursor: 'pointer', width: '100%', marginTop: '0.5rem' }}>
-            {loading ? 'Authenticating...' : 'Access Recruiting Panel'}
-          </button>
+          <Button type="submit" fullWidth size="lg" disabled={loading}>
+            {loading ? 'Authenticating…' : 'Access recruiting panel'}
+          </Button>
         </form>
 
-        <div style={{ marginTop: '1.25rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <button onClick={() => { setAuthMode('register'); resetFlow(); }}
-            style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 700 }}>
-            <UserPlus size={12} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
-            Register Corporate Account
-          </button>
-        </div>
+        <Button type="button" variant="secondary" fullWidth size="md" icon={UserPlus}
+          onClick={() => { setAuthMode('register'); resetFlow(); }} style={{ marginTop: '0.85rem' }}>
+          Register corporate account
+        </Button>
       </div>
     );
   };
@@ -769,88 +770,50 @@ const Login = () => {
       justifyContent: 'center',
       alignItems: 'center',
       minHeight: '100vh',
-      padding: '2rem 1.5rem',
-      backgroundImage: 'linear-gradient(135deg, rgba(31, 58, 46, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%), url("/hero/hero_image.png")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed',
-      fontFamily: "'Inter', sans-serif",
+      padding: '1.5rem',
+      background: '#1F3A2E',
     }}>
-      <div className="login-modal-card ios-card animate-fade-in" style={{
-        padding: '3rem 2.25rem',
-        maxWidth: '460px',
+      <div className="login-modal-card" style={{
+        padding: '2rem 1.5rem',
+        maxWidth: '420px',
         width: '100%',
         textAlign: 'center',
-        background: 'rgba(255, 255, 255, 0.98)',
-        backdropFilter: 'blur(20px)',
-        border: '1px solid rgba(255, 255, 255, 0.8)',
-        borderRadius: '24px',
-        boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.3)',
+        background: '#ffffff',
+        border: '1px solid #e2e8f0',
+        borderRadius: 'var(--radius-md)',
+        boxShadow: 'var(--shadow-2)',
       }}>
 
         {/* Brand Header */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
-          <img src="/logo.png" alt="VeerNXT" style={{ width: '74px', height: '74px', objectFit: 'contain', borderRadius: '12px' }} />
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.85rem' }}>
+          <img src="/logo.png" alt="VeerNXT" style={{ width: '56px', height: '56px', objectFit: 'contain', borderRadius: 'var(--radius-sm)' }} />
         </div>
 
-        <h2 style={{ fontSize: '1.6rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.4rem', letterSpacing: '-0.02em' }}>VeerNXT Access</h2>
-        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem', fontSize: '0.875rem' }}>National portal for corporate transitioning & hiring</p>
+        <h1 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.3rem', letterSpacing: '-0.01em' }}>VeerNXT Access</h1>
+        <p style={{ color: '#475569', marginBottom: '1.5rem', fontSize: '0.9rem' }}>National employment portal for veteran transitioning &amp; hiring</p>
 
-        {/* Temporary Client Demo Link */}
+        {/* Role Selector */}
         <div style={{ marginBottom: '1.5rem' }}>
-          <button
-            type="button"
-            onClick={() => navigate('/financial-guidance')}
-            style={{
-              width: '100%',
-              padding: '0.85rem 1.25rem',
-              backgroundColor: '#1A5C2A',
-              color: '#FFFFFF',
-              border: 'none',
-              borderRadius: '14px',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              boxShadow: '0 4px 12px rgba(26, 92, 42, 0.25)',
-              transition: 'background 0.15s',
+          <Tabs
+            fullWidth
+            variant="filled"
+            value={role}
+            onChange={(val) => {
+              if (val === 'candidate') {
+                setRole('candidate');
+                setAuthMode('login');
+                resetFlow();
+                localStorage.removeItem('employer_session');
+              } else {
+                setRole('employer');
+                resetFlow();
+              }
             }}
-          >
-            🚀 Demo: Open Financial Guidance Page →
-          </button>
-        </div>
-
-        {/* Role Selector Tabs (Activated) */}
-        <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '14px', padding: '0.3rem', marginBottom: '2rem' }}>
-          <button type="button"
-            onClick={() => { setRole('candidate'); setAuthMode('login'); resetFlow(); localStorage.removeItem('employer_session'); }}
-            style={{
-              flex: 1, padding: '0.85rem 0.5rem', borderRadius: '11px', border: 'none',
-              background: role === 'candidate' ? 'white' : 'transparent',
-              color: role === 'candidate' ? 'var(--ios-olive)' : '#64748b',
-              boxShadow: role === 'candidate' ? '0 4px 12px rgba(0,0,0,0.06)' : 'none',
-              fontWeight: '700', fontSize: '0.875rem',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-              cursor: 'pointer', transition: 'all 0.2s ease',
-            }}>
-            <User size={16} /> CANDIDATES
-          </button>
-          <button type="button"
-            onClick={() => { setRole('employer'); resetFlow(); }}
-            style={{
-              flex: 1, padding: '0.85rem 0.5rem', borderRadius: '11px', border: 'none',
-              background: role === 'employer' ? 'white' : 'transparent',
-              color: role === 'employer' ? 'var(--ios-olive)' : '#64748b',
-              boxShadow: role === 'employer' ? '0 4px 12px rgba(0,0,0,0.06)' : 'none',
-              fontWeight: '700', fontSize: '0.875rem',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-              cursor: 'pointer', transition: 'all 0.2s ease',
-            }}>
-            <Briefcase size={16} /> EMPLOYERS
-          </button>
+            options={[
+              { value: 'candidate', label: 'Candidates', icon: User },
+              { value: 'employer', label: 'Employers', icon: Briefcase },
+            ]}
+          />
         </div>
 
         {/* Auth Content */}
@@ -858,25 +821,58 @@ const Login = () => {
 
         {/* Message Display */}
         {message.text && (
-          <div style={{
+          <div role="alert" aria-live="assertive" style={{
             marginTop: '1.5rem',
-            padding: '0.85rem',
-            borderRadius: '12px',
-            background: message.type === 'success' ? 'rgba(75, 107, 50, 0.06)' : 'rgba(239, 68, 68, 0.06)',
-            color: message.type === 'success' ? 'var(--ios-olive)' : '#ef4444',
-            fontSize: '0.85rem',
+            padding: '0.85rem 1rem',
+            borderRadius: 'var(--radius-sm)',
+            border: `1px solid ${message.type === 'success' ? 'var(--ios-olive)' : 'var(--danger)'}`,
+            background: message.type === 'success' ? 'var(--success-bg)' : 'var(--danger-bg)',
+            color: message.type === 'success' ? 'var(--ios-olive)' : 'var(--danger)',
+            fontSize: '0.9rem',
             fontWeight: '600',
+            textAlign: 'left',
           }}>
             {message.text}
           </div>
         )}
 
         {/* Footer */}
-        <div style={{ marginTop: '2.5rem', borderTop: '1px solid #e2e8f0', paddingTop: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: '#94a3b8' }}>
-          <ShieldCheck size={16} />
-          <span style={{ fontSize: '0.75rem', fontWeight: '600' }}>End-to-end encrypted session</span>
+        <div style={{ marginTop: '2rem', borderTop: '1px solid #e2e8f0', paddingTop: '1.1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', color: '#475569' }}>
+          <ShieldCheck size={15} aria-hidden="true" />
+          <span style={{ fontSize: '0.8rem', fontWeight: '600' }}>Secure connection</span>
         </div>
       </div>
+
+      <style>{`
+        .vx-field {
+          font-size: 16px;
+        }
+        .vx-field:hover:not(:focus) {
+          --vx-border: #334155;
+        }
+        .vx-field:focus {
+          outline: none;
+          --vx-border: var(--ios-olive);
+          box-shadow: 0 0 0 3px rgba(75, 107, 50, 0.2);
+        }
+        .vx-icon-btn {
+          width: 44px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: var(--radius-sm);
+        }
+        .vx-icon-btn:hover {
+          background: #f1f5f9;
+        }
+        .vx-icon-btn:focus-visible,
+        .vx-link:focus-visible,
+        button:focus-visible {
+          outline: 2px solid var(--ios-olive);
+          outline-offset: 2px;
+        }
+      `}</style>
     </div>
   );
 };

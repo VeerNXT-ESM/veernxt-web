@@ -4,6 +4,8 @@ import { supabase } from '../lib/supabase';
 import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
+import { awardPoints } from '../lib/awardPoints';
+import { cleanContentTitle } from '../lib/contentTitle';
 
 const SecureReader = () => {
   const { id } = useParams(); // This is now resource_id
@@ -49,6 +51,7 @@ const SecureReader = () => {
       }
 
       setResource(data);
+      awardPoints('RESOURCE_OPENED', { refId: data.resource_id });
 
       // Create chapter stubs from chapter_count
       const count = data.chapter_count || 1;
@@ -193,7 +196,7 @@ const SecureReader = () => {
             <span className="subject-tag">{resource.subject}</span>
             <span className="category-tag">{resource.category}</span>
           </div>
-          <h1 className="resource-title">{resource.title}</h1>
+          <h1 className="resource-title">{cleanContentTitle(resource.title, resource.exam_name)}</h1>
           <div className="reading-time">
             <Clock size={16} /> <span>{chapters ? `${chapters.length} Chapters` : '12 min read'}</span>
           </div>
