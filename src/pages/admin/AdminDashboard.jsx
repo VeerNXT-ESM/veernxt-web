@@ -137,7 +137,7 @@ const AdminDashboard = () => {
 
   const initializeAdminRegistry = async () => {
     try {
-      const res = await fetch('/api/admin/list-admins');
+      const res = await fetch('/api/admin/admins');
       const data = await res.json();
       if (data.ok) {
         setAdminsList(data.admins);
@@ -220,10 +220,10 @@ const AdminDashboard = () => {
     };
 
     try {
-      const res = await fetch('/api/admin/invite-admin', {
+      const res = await fetch('/api/admin/admins', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newAdminObj)
+        body: JSON.stringify({ action: 'invite', ...newAdminObj })
       });
       const data = await res.json();
 
@@ -267,10 +267,10 @@ const AdminDashboard = () => {
     
     if (window.confirm(`Are you sure you want to revoke administrative privileges for ${emailToDelete}?`)) {
       try {
-        const res = await fetch('/api/admin/remove-admin', {
+        const res = await fetch('/api/admin/admins', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: emailToDelete })
+          body: JSON.stringify({ action: 'remove', email: emailToDelete })
         });
         const data = await res.json();
         

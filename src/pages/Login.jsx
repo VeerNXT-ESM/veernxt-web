@@ -89,10 +89,10 @@ const Login = () => {
 
     try {
       const purpose = authMode === 'forgot' ? 'reset' : 'register';
-      const res = await fetch('/api/auth/send-otp', {
+      const res = await fetch('/api/auth/otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mobile: phone, purpose }),
+        body: JSON.stringify({ action: 'send', mobile: phone, purpose }),
       });
       const data = await res.json();
 
@@ -123,10 +123,10 @@ const Login = () => {
 
     try {
       const purpose = authMode === 'forgot' ? 'reset' : 'register';
-      const res = await fetch('/api/auth/verify-otp', {
+      const res = await fetch('/api/auth/otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mobile: phone, otp, purpose, otpToken }),
+        body: JSON.stringify({ action: 'verify', mobile: phone, otp, purpose, otpToken }),
       });
       const data = await res.json();
 
