@@ -1,57 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { 
-  Menu, Settings, LogOut, User, Bell, Landmark, Briefcase,
-  Home, Users, MessageSquare, ChevronDown, Grid, Target, Search
+import {
+  Menu, Settings, User, Bell, Landmark, Briefcase,
+  Home, Users, MessageSquare, Grid, Target, Search, Trophy
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { useAccountSummary } from '../lib/useAccountSummary';
+import AccountMenu from './ui/AccountMenu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [userProfileName, setUserProfileName] = useState('Rahul Kumar');
-  const [avatarUrl, setAvatarUrl] = useState(null);
-  const [isEmployer, setIsEmployer] = useState(false);
+  const { isEmployer, fullName, avatarUrl, profilingCompleted, pointsBalance } = useAccountSummary();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session && session.user && session.user.id !== '00000000-0000-0000-0000-000000000000') {
-          const metadataRole = session.user?.user_metadata?.role;
-          if (metadataRole === 'candidate') {
-            localStorage.removeItem('employer_session');
-          }
-          const isEmp = metadataRole === 'employer' || (metadataRole !== 'candidate' && !!localStorage.getItem('employer_session'));
-          setIsEmployer(isEmp);
-          if (isEmp) {
-            const { data } = await supabase
-              .from('employer_profiles')
-              .select('contact_name, avatar_url')
-              .eq('id', session.user.id)
-              .maybeSingle();
-            if (data) {
-              if (data.contact_name) setUserProfileName(data.contact_name);
-              if (data.avatar_url) setAvatarUrl(data.avatar_url);
-            }
-          } else {
-            const { data } = await supabase
-              .from('user_profiles')
-              .select('full_name, avatar_url')
-              .eq('id', session.user.id)
-              .maybeSingle();
-            if (data) {
-              if (data.full_name) setUserProfileName(data.full_name);
-              if (data.avatar_url) setAvatarUrl(data.avatar_url);
-            }
-          }
-        }
-      } catch (e) {
-        console.warn("Could not load user profile for header name");
-      }
-    };
-    fetchProfile();
-  }, []);
+  const profileTriggerRef = useRef(null);
 
   const handleLogout = async () => {
     localStorage.removeItem('employer_session');
@@ -73,15 +34,18 @@ const Header = () => {
         <div className="header-right">
           <Link to="/dashboard" className={`nav-link-item ${window.location.pathname === '/dashboard' ? 'active' : ''}`} title="Home">
             <Home size={22} />
+            <span className="nav-link-label">Home</span>
           </Link>
 
           <Link to="/network" className={`nav-link-item ${window.location.pathname === '/network' ? 'active' : ''}`} title="My Network">
             <Users size={22} />
+            <span className="nav-link-label">Network</span>
           </Link>
 
           {!isEmployer && (
             <Link to="/learning-center" className={`nav-link-item ${window.location.pathname === '/learning-center' ? 'active' : ''}`} title="Learning">
               <Target size={22} />
+              <span className="nav-link-label">Learning</span>
             </Link>
           )}
 
@@ -89,79 +53,66 @@ const Header = () => {
             <Link to="/jobs" className={`nav-link-item ${window.location.pathname === '/jobs' ? 'active' : ''}`} title="Jobs">
               <Briefcase size={22} />
               <span className="dot-badge"></span>
+              <span className="nav-link-label">Jobs</span>
             </Link>
           )}
 
           {isEmployer && (
             <Link to="/find-candidates" className={`nav-link-item ${window.location.pathname === '/find-candidates' ? 'active' : ''}`} title="Find Candidates">
               <Search size={22} />
+              <span className="nav-link-label">Find</span>
             </Link>
           )}
 
           <Link to="/messaging" className={`nav-link-item ${window.location.pathname === '/messaging' ? 'active' : ''}`} title="Messages">
             <MessageSquare size={22} />
             <span className="dot-badge" style={{ backgroundColor: '#fbbf24' }}></span>
+            <span className="nav-link-label">Messages</span>
           </Link>
 
           {!isEmployer && (
             <Link to="/financial-guidance" className={`nav-link-item ${window.location.pathname === '/financial-guidance' ? 'active' : ''}`} title="Finance">
               <Landmark size={22} />
+              <span className="nav-link-label">Finance</span>
             </Link>
           )}
 
-          {/* User Profile / Dropdown */}
-          <div className="nav-profile-dropdown" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <div className="nav-profile-trigger">
+          {!isEmployer && pointsBalance != null && (
+            <Link to="/rewards" className="points-pill" title="VeerNXT Points — Rewards Center">
+              <Trophy size={14} />
+              <span>{pointsBalance.toLocaleString()}</span>
+            </Link>
+          )}
+
+          {/* User Profile / Account menu */}
+          <div className="nav-profile-dropdown">
+            <button
+              type="button"
+              ref={profileTriggerRef}
+              className="nav-profile-trigger"
+              onClick={() => setIsMenuOpen((v) => !v)}
+              aria-haspopup="true"
+              aria-expanded={isMenuOpen}
+            >
               <div className="nav-avatar-placeholder" style={{ overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {avatarUrl ? (
-                  <img src={avatarUrl} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={avatarUrl} alt="Account" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
-                  <User size={14} />
+                  <User size={20} />
                 )}
               </div>
-              <span className="me-text">
-                Me <ChevronDown size={12} />
-              </span>
-            </div>
+            </button>
 
-            {isMenuOpen && (
-              <div className="profile-dropdown-menu">
-                <div className="dropdown-user-header">
-                  <div className="menu-avatar-placeholder" style={{ overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {avatarUrl ? (
-                      <img src={avatarUrl} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    ) : (
-                      <User size={18} />
-                    )}
-                  </div>
-                  <div className="dropdown-user-details">
-                    <span className="details-name">{userProfileName}</span>
-                    <span className="details-role">{isEmployer ? 'Employer Partner' : 'Active Candidate'}</span>
-                  </div>
-                </div>
-                
-                <div className="dropdown-divider"></div>
-                
-                <button onClick={() => { navigate('/dashboard'); setIsMenuOpen(false); }} className="dropdown-btn">
-                  <User size={14} /> My Profile
-                </button>
-                <button onClick={() => { navigate('/privacy'); setIsMenuOpen(false); }} className="dropdown-btn">
-                  Privacy Policy
-                </button>
-                <button onClick={() => { navigate('/support'); setIsMenuOpen(false); }} className="dropdown-btn">
-                  Support
-                </button>
-                <button onClick={() => { navigate('/legal'); setIsMenuOpen(false); }} className="dropdown-btn">
-                  Legal
-                </button>
-                
-                <div className="dropdown-divider"></div>
-                
-                <button onClick={handleLogout} className="dropdown-btn logout">
-                  <LogOut size={14} /> Sign Out
-                </button>
-              </div>
-            )}
+            <AccountMenu
+              open={isMenuOpen}
+              onClose={() => setIsMenuOpen(false)}
+              fullName={fullName}
+              avatarUrl={avatarUrl}
+              isEmployer={isEmployer}
+              profilingCompleted={profilingCompleted}
+              onLogout={handleLogout}
+              returnFocusRef={profileTriggerRef}
+            />
           </div>
         </div>
       </div>
@@ -175,7 +126,7 @@ const Header = () => {
           z-index: 100;
           width: 100%;
           font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-          padding: 1rem 0; /* Tightened layout spacing */
+          padding: calc(1rem + env(safe-area-inset-top, 0px)) 0 1rem; /* Tightened layout spacing */
           display: flex;
           align-items: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.02);
@@ -214,12 +165,19 @@ const Header = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          gap: 0.25rem;
           color: #64748b;
           text-decoration: none;
           padding: 0.75rem 0.5rem;
           cursor: pointer;
           position: relative;
           transition: all 0.15s;
+        }
+        .nav-link-label {
+          font-size: 0.68rem;
+          font-weight: 600;
+          line-height: 1;
+          white-space: nowrap;
         }
         .nav-link-item:hover {
           color: #0f172a;
@@ -246,6 +204,23 @@ const Header = () => {
           background: #ef4444;
           border-radius: 50%;
         }
+        .points-pill {
+          display: flex;
+          align-items: center;
+          gap: 0.35rem;
+          padding: 0.4rem 0.75rem;
+          background: rgba(75, 107, 50, 0.08);
+          color: #4b6b32;
+          border-radius: 999px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          flex-shrink: 0;
+          text-decoration: none;
+          transition: background 0.15s;
+        }
+        .points-pill:hover {
+          background: rgba(75, 107, 50, 0.16);
+        }
         .nav-profile-dropdown {
           position: relative;
           cursor: pointer;
@@ -258,26 +233,34 @@ const Header = () => {
           align-items: center;
           gap: 0.15rem;
           color: #666;
+          background: none;
+          border: none;
+          font: inherit;
+          cursor: pointer;
+          padding: 0.25rem;
+        }
+        .nav-profile-trigger:focus-visible {
+          outline: 2px solid var(--ios-olive);
+          outline-offset: 2px;
+          border-radius: 6px;
         }
         .nav-profile-trigger:hover {
           color: #191919;
         }
         .nav-avatar-placeholder {
-          width: 20px;
-          height: 20px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
           background: #eef3f8;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #666;
+          border: 2px solid transparent;
+          transition: border-color 0.15s;
         }
-        .me-text {
-          font-size: 0.72rem;
-          font-weight: 550;
-          display: flex;
-          align-items: center;
-          gap: 2px;
+        .nav-profile-trigger:hover .nav-avatar-placeholder {
+          border-color: #d8e0e6;
         }
         .vertical-divider {
           width: 1px;
@@ -293,82 +276,16 @@ const Header = () => {
           opacity: 1;
         }
 
-        /* Profile Dropdown Menu */
-        .profile-dropdown-menu {
-          position: absolute;
-          top: 100%;
-          right: 0;
-          margin-top: 0.25rem;
-          width: 240px;
-          background: white;
-          border: 1px solid #eef3f8;
-          border-radius: 12px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-          z-index: 200;
-          overflow: hidden;
-          padding: 0.5rem;
-          text-align: left;
-        }
-        .dropdown-user-header {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-          padding: 0.75rem 0.5rem;
-        }
-        .menu-avatar-placeholder {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          background: #f1f5f9;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #475569;
-        }
-        .dropdown-user-details {
-          display: flex;
-          flex-direction: column;
-        }
-        .details-name {
-          font-weight: 750;
-          font-size: 0.9rem;
-          color: #0f172a;
-        }
-        .details-role {
-          font-size: 0.72rem;
-          color: #64748b;
-        }
-        .dropdown-divider {
-          height: 1px;
-          background: #f1f5f9;
-          margin: 0.5rem 0;
-        }
-        .dropdown-btn {
-          width: 100%;
-          padding: 0.6rem 0.75rem;
-          border: none;
-          background: none;
-          display: flex;
-          align-items: center;
-          gap: 0.65rem;
-          cursor: pointer;
-          font-size: 0.82rem;
-          font-weight: 600;
-          color: #475569;
-          border-radius: 6px;
-          transition: background 0.2s, color 0.2s;
-          text-align: left;
-        }
-        .dropdown-btn:hover {
-          background: #f8fafc;
-          color: #0f172a;
-        }
-        .dropdown-btn.logout {
-          color: #ef4444;
-        }
-        .dropdown-btn.logout:hover {
-          background: #fef2f2;
-          color: #ef4444;
+        /* Below 768px, primary navigation lives in the fixed BottomNav
+           instead — keep just the logo, points pill and profile trigger
+           in the header so it doesn't duplicate the tab bar. */
+        @media (max-width: 767px) {
+          .nav-link-item {
+            display: none;
+          }
+          .header-right {
+            gap: 0.75rem;
+          }
         }
       `}} />
     </header>

@@ -16,6 +16,24 @@ const THUMBNAIL_THEMES = [
   { id: 'red', name: 'Royal Red Theme', path: '/thumbnils/thumbnil royal red.png' }
 ];
 
+// Folder-name → category detection, checked against the whole relative
+// path (not just the last segment) so nesting depth doesn't matter.
+// Order matters: more specific patterns first, "Guide" is the fallback.
+const CATEGORY_KEYWORD_RULES = [
+  { category: 'Mock Test', patterns: ['MOCK TEST', 'MOCK TESTS', 'MOCK EXAM', 'TEST SERIES', 'MOCKS', 'MOCK'] },
+  { category: 'PYQ', patterns: ['PYQ', 'PYQS', 'PREVIOUS YEAR', 'PREV YEAR', 'PAST PAPER', 'PAST PAPERS', 'PAST YEAR'] },
+  { category: 'Precis', patterns: ['PRECIS', 'PRÉCIS'] },
+  { category: 'Intro', patterns: ['INTRO', 'INTRODUCTION'] },
+];
+
+function detectCategoryFromPath(folderLevels) {
+  const haystack = folderLevels.join(' / ').toUpperCase();
+  for (const rule of CATEGORY_KEYWORD_RULES) {
+    if (rule.patterns.some((p) => haystack.includes(p))) return rule.category;
+  }
+  return 'Guide';
+}
+
 // Helper to recursively traverse dropped folder items in drag-and-drop (supports multiple folders & large directory trees)
 async function scanFilesFromDataTransferItems(items) {
   const fileList = [];
@@ -422,10 +440,8 @@ export default function AdminDriveIngestion() {
       const autoCaption = `${docTitle}\nMASTER GUIDE`;
       const duplicate = isDuplicateFile(fileName, targetPath);
 
-      let category = 'Guide';
       const lastFolder = folderLevels[folderLevels.length - 1] || '';
-      if (lastFolder.includes('INTRO')) category = 'Intro';
-      else if (lastFolder.includes('PRECIS')) category = 'Precis';
+      const category = detectCategoryFromPath(folderLevels);
 
       return {
         file,

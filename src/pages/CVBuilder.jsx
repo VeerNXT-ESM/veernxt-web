@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from '../lib/supabase';
+import { awardPoints } from '../lib/awardPoints';
 import { useNavigate } from 'react-router-dom';
 import { 
   FileText, Award, Shield, BookOpen, Layers, 
@@ -322,6 +323,7 @@ const CVBuilder = () => {
 
   const handlePrint = () => {
     window.print();
+    awardPoints('RESUME_BUILT');
   };
 
   const getSpacingStyle = () => {
@@ -351,10 +353,10 @@ const CVBuilder = () => {
           <button onClick={() => navigate('/dashboard')} className="back-btn-builder">
             <ArrowLeft size={16} /> Back
           </button>
-          <button 
-            onClick={() => { setCurrentStep(0); setRunTour(true); }} 
-            className="back-btn-builder" 
-            style={{ marginLeft: '0.75rem', background: 'rgba(139, 92, 246, 0.15)', borderColor: 'rgba(139, 92, 246, 0.4)', color: '#c084fc' }}
+          <button
+            onClick={() => { setCurrentStep(0); setRunTour(true); }}
+            className="back-btn-builder"
+            style={{ marginLeft: '0.75rem', background: 'rgba(75, 107, 50, 0.1)', borderColor: 'rgba(75, 107, 50, 0.3)', color: 'var(--ios-olive)' }}
           >
             <Sparkles size={14} /> Replay Tour
           </button>
@@ -975,8 +977,8 @@ const CVBuilder = () => {
             width: highlightRect.width + 8,
             height: highlightRect.height + 8,
             borderRadius: '8px',
-            boxShadow: '0 0 0 9999px rgba(15, 23, 42, 0.75), 0 0 15px #8b5cf6',
-            border: '2px solid #8b5cf6',
+            boxShadow: '0 0 0 9999px rgba(15, 23, 42, 0.65), 0 0 15px var(--ios-olive)',
+            border: '2px solid var(--ios-olive)',
             zIndex: 100,
             transition: 'all 0.3s ease',
             pointerEvents: 'none'
@@ -988,55 +990,55 @@ const CVBuilder = () => {
             top: tooltipPos.top,
             left: tooltipPos.left,
             width: '320px',
-            background: '#1e293b',
-            border: '1px solid rgba(139, 92, 246, 0.3)',
-            borderRadius: '16px',
+            background: 'var(--surface)',
+            border: '1px solid var(--border-strong)',
+            borderRadius: 'var(--radius-lg)',
             padding: '1.25rem',
-            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4)',
+            boxShadow: 'var(--shadow-3)',
             zIndex: 101,
-            color: 'white',
+            color: 'var(--ios-text)',
             fontFamily: "'Inter', sans-serif",
             transition: 'all 0.3s ease'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-              <span style={{ fontSize: '0.7rem', color: '#a78bfa', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <span style={{ fontSize: '0.7rem', color: 'var(--ios-olive)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Step {currentStep + 1} of {tourSteps.length}
               </span>
-              <button 
-                onClick={() => setRunTour(false)} 
+              <button
+                onClick={() => setRunTour(false)}
                 style={{ background: 'none', border: 'none', color: '#94a3b8', fontSize: '0.75rem', cursor: 'pointer', fontWeight: 600 }}
               >
                 Skip Tour
               </button>
             </div>
-            
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, margin: '0 0 0.5rem', color: 'white' }}>
+
+            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, margin: '0 0 0.5rem', color: 'var(--ios-text)' }}>
               {tourSteps[currentStep].title}
             </h4>
-            <p style={{ fontSize: '0.8rem', color: '#cbd5e1', lineHeight: 1.4, margin: '0 0 1rem' }}>
+            <p style={{ fontSize: '0.8rem', color: '#64748b', lineHeight: 1.4, margin: '0 0 1rem' }}>
               {tourSteps[currentStep].desc}
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <button 
-                onClick={handleTourPrev} 
+              <button
+                onClick={handleTourPrev}
                 disabled={currentStep === 0}
                 style={{
-                  background: 'transparent', border: '1px solid rgba(255,255,255,0.15)',
-                  color: currentStep === 0 ? '#64748b' : 'white',
-                  padding: '0.4rem 0.8rem', borderRadius: '8px', fontSize: '0.75rem',
+                  background: 'transparent', border: '1px solid var(--border)',
+                  color: currentStep === 0 ? '#cbd5e1' : 'var(--ios-text)',
+                  padding: '0.4rem 0.8rem', borderRadius: 'var(--radius-sm)', fontSize: '0.75rem',
                   cursor: currentStep === 0 ? 'default' : 'pointer', fontWeight: 600
                 }}
               >
                 Back
               </button>
-              
-              <button 
-                onClick={handleTourNext} 
+
+              <button
+                onClick={handleTourNext}
                 style={{
-                  background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)', border: 'none',
-                  color: 'white', padding: '0.4rem 1rem', borderRadius: '8px', fontSize: '0.75rem',
-                  cursor: 'pointer', fontWeight: 700, boxShadow: '0 4px 12px rgba(139, 92, 246, 0.3)'
+                  background: 'var(--ios-olive)', border: 'none',
+                  color: 'white', padding: '0.4rem 1rem', borderRadius: 'var(--radius-sm)', fontSize: '0.75rem',
+                  cursor: 'pointer', fontWeight: 700, boxShadow: 'var(--shadow-1)'
                 }}
               >
                 {currentStep === tourSteps.length - 1 ? 'Finish' : 'Next'}
@@ -1049,16 +1051,16 @@ const CVBuilder = () => {
       <style dangerouslySetInnerHTML={{ __html: `
         .cv-builder-wrapper {
           min-height: 100vh;
-          background: #0f172a; /* Sleek dark theme background */
-          color: #f8fafc;
+          background: var(--ios-bg);
+          color: var(--ios-text);
           padding-top: 64px;
         }
         .builder-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background: #1e293b;
-          border-bottom: 1px solid rgba(255,255,255,0.08);
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
           padding: 0.75rem 2rem;
           position: sticky;
           top: 64px;
@@ -1066,10 +1068,10 @@ const CVBuilder = () => {
         }
         .back-btn-builder {
           background: transparent;
-          border: 1px solid rgba(255,255,255,0.2);
-          color: white;
+          border: 1px solid var(--border-strong);
+          color: var(--ios-text);
           padding: 0.5rem 1rem;
-          border-radius: 8px;
+          border-radius: var(--radius-sm);
           cursor: pointer;
           font-weight: 600;
           font-size: 0.85rem;
@@ -1078,7 +1080,7 @@ const CVBuilder = () => {
           gap: 0.4rem;
         }
         .back-btn-builder:hover {
-          background: rgba(255,255,255,0.1);
+          background: var(--surface-alt);
         }
         .print-download-btn {
           display: flex;
@@ -1096,24 +1098,25 @@ const CVBuilder = () => {
           overflow: hidden;
         }
         .builder-sidebar {
-          background: #0f172a;
-          border-right: 1px solid rgba(255,255,255,0.08);
+          background: var(--ios-bg);
+          border-right: 1px solid var(--border);
           padding: 2rem 1.5rem;
           overflow-y: auto;
         }
         .form-card-segment {
-          background: #1e293b;
-          border-radius: 14px;
+          background: var(--surface);
+          border-radius: var(--radius-md);
           padding: 1.25rem;
           margin-bottom: 1.25rem;
-          border: 1px solid rgba(255,255,255,0.04);
+          border: 1px solid var(--border);
+          box-shadow: var(--shadow-1);
         }
         .segment-title {
           font-size: 0.88rem;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: #94a3b8;
+          color: #64748b;
           margin-bottom: 0.75rem;
         }
         .form-grid-inner {
@@ -1124,36 +1127,36 @@ const CVBuilder = () => {
         .ai-suggest-btn {
           font-size: 0.68rem;
           padding: 0.3rem 0.75rem;
-          background: rgba(139, 92, 246, 0.15);
-          color: #c084fc;
-          border: 1px solid rgba(139, 92, 246, 0.3);
+          background: rgba(75, 107, 50, 0.1);
+          color: var(--ios-olive);
+          border: 1px solid rgba(75, 107, 50, 0.3);
           cursor: pointer;
         }
         .ai-suggest-btn:hover {
-          background: rgba(139, 92, 246, 0.3);
+          background: rgba(75, 107, 50, 0.2);
         }
         .skill-item-pill {
-          background: rgba(255,255,255,0.08);
-          color: #cbd5e1;
+          background: rgba(75, 107, 50, 0.1);
+          color: var(--ios-olive);
           font-size: 0.75rem;
           padding: 0.3rem 0.6rem;
-          border-radius: 6px;
+          border-radius: var(--radius-sm);
           display: flex;
           align-items: center;
           gap: 0.25rem;
           font-weight: 600;
         }
         .form-array-item {
-          background: rgba(255,255,255,0.03);
-          border-radius: 10px;
+          background: var(--surface-alt);
+          border-radius: var(--radius-sm);
           padding: 0.75rem;
           margin-bottom: 0.75rem;
-          border: 1px solid rgba(255,255,255,0.03);
+          border: 1px solid var(--border);
         }
         .builder-preview-canvas {
           padding: 2.5rem;
           overflow-y: auto;
-          background: #334155;
+          background: var(--surface-alt);
           display: flex;
           justify-content: center;
           align-items: flex-start;
@@ -1217,15 +1220,15 @@ const labelHeaderStyle = {
   fontSize: '0.68rem',
   fontWeight: 700,
   textTransform: 'uppercase',
-  color: '#94a3b8',
+  color: '#64748b',
   marginBottom: '0.2rem',
   letterSpacing: '0.05em'
 };
 
 const selectStyle = {
-  background: '#0f172a',
-  color: '#f8fafc',
-  border: '1px solid rgba(255,255,255,0.12)',
+  background: 'var(--surface-alt)',
+  color: 'var(--ios-text)',
+  border: '1px solid var(--border-strong)',
   borderRadius: '8px',
   padding: '0.4rem 0.75rem',
   fontSize: '0.8rem',
@@ -1235,9 +1238,9 @@ const selectStyle = {
 };
 
 const inputFieldStyle = {
-  background: '#0f172a',
-  color: 'white',
-  border: '1px solid rgba(255,255,255,0.08)',
+  background: 'var(--surface-alt)',
+  color: 'var(--ios-text)',
+  border: '1px solid var(--border)',
   borderRadius: '8px',
   padding: '0.55rem 0.75rem',
   fontSize: '0.82rem',
@@ -1246,9 +1249,9 @@ const inputFieldStyle = {
 };
 
 const textareaFieldStyle = {
-  background: '#0f172a',
-  color: 'white',
-  border: '1px solid rgba(255,255,255,0.08)',
+  background: 'var(--surface-alt)',
+  color: 'var(--ios-text)',
+  border: '1px solid var(--border)',
   borderRadius: '8px',
   padding: '0.55rem 0.75rem',
   fontSize: '0.82rem',
@@ -1274,9 +1277,9 @@ const addBtnStyle = {
 };
 
 const circleAddBtnStyle = {
-  background: 'rgba(255,255,255,0.08)',
+  background: 'rgba(75, 107, 50, 0.1)',
   border: 'none',
-  color: '#94a3b8',
+  color: 'var(--ios-olive)',
   borderRadius: '50%',
   width: '24px',
   height: '24px',

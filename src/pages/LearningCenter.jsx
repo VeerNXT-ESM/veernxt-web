@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Book, FileText, Lock, PlayCircle, RefreshCw, Search, Heart, Video, CheckCircle } from 'lucide-react';
+import { Book, Lock, Eye, Unlock, PlayCircle, RefreshCw, Search, CheckCircle, ArrowRight, Layers } from 'lucide-react';
 import { getEffectiveTier, isResourceLockedForUser, canTakeQuiz, TIERS } from '../lib/subscriptionAccess';
+import { cleanContentTitle } from '../lib/contentTitle';
+import { getTransferableSkills } from '../lib/profilingInsights';
+import Card from '../components/ui/Card';
+
+const FILTER_CHIPS = [
+  { key: 'all', label: 'All' },
+  { key: 'my-exams', label: 'My Exams' },
+  { key: 'mock-tests', label: 'Mock Tests' },
+  { key: 'study-guides', label: 'Study Guides' },
+];
 
 const LearningCenter = () => {
   const [resources, setResources] = useState([]);
@@ -13,6 +23,17 @@ const LearningCenter = () => {
   const [effectiveTier, setEffectiveTier] = useState(TIERS.FREE);
   const [freeQuizUsed, setFreeQuizUsed] = useState(false);
 
+  // Real personalization signals — everything here comes from data that
+  // genuinely exists (profiling recommendations, transferable-skills copy,
+  // the points ledger's RESOURCE_OPENED events). Nothing here is a fabricated
+  // percentage; sections simply don't render when the backing data is empty.
+  const [examMatches, setExamMatches] = useState([]);
+  const [transferableSkills, setTransferableSkills] = useState([]);
+  const [continueItem, setContinueItem] = useState(null);
+  const [recommendedItems, setRecommendedItems] = useState([]);
+  const [examProgress, setExamProgress] = useState({});
+  const [activeFilterChip, setActiveFilterChip] = useState('all');
+
   // Infinite scroll state
   const PAGE_SIZE = 20;
   const [page, setPage] = useState(0);
@@ -21,12 +42,12 @@ const LearningCenter = () => {
   const [loadingMore, setLoadingMore] = useState(false);
   const [totalResourceCount, setTotalResourceCount] = useState(null);
   const [totalQuizCount, setTotalQuizCount] = useState(null);
-  
+
   // Filters
   const [selectedExams, setSelectedExams] = useState(['all']);
   const [selectedCategories, setSelectedCategories] = useState(['all']);
   const [searchQuery, setSearchQuery] = useState('');
-  
+
   const AVAILABLE_CATEGORIES = [
     'Intro',
     'Guide',
@@ -36,6 +57,7 @@ const LearningCenter = () => {
   ];
 
   const handleCategoryCheckboxChange = (category) => {
+    setActiveFilterChip('all');
     setSelectedCategories(prev => {
       if (category === 'all') return ['all'];
       let newSelection = prev.filter(c => c !== 'all');
@@ -50,6 +72,7 @@ const LearningCenter = () => {
   };
 
   const handleExamCheckboxChange = (examName) => {
+    setActiveFilterChip('all');
     setSelectedExams(prev => {
       if (examName === 'all') {
         return ['all'];
@@ -67,6 +90,98 @@ const LearningCenter = () => {
     });
   };
 
+  const applyFilterChip = (key) => {
+    setActiveFilterChip(key);
+    if (key === 'my-exams') {
+      const names = examMatches.map(m => m.exam_name).filter(Boolean);
+      setSelectedExams(names.length ? names : ['all']);
+      setSelectedCategories(['all']);
+    } else if (key === 'mock-tests') {
+      setSelectedExams(['all']);
+      setSelectedCategories(['Mock Test']);
+    } else if (key === 'study-guides') {
+      setSelectedExams(['all']);
+      setSelectedCategories(['Guide', 'Precis', 'Intro']);
+    } else {
+      setSelectedExams(['all']);
+      setSelectedCategories(['all']);
+    }
+  };
+
+  const filterToExam = (examName) => {
+    setActiveFilterChip('all');
+    setSelectedExams([examName]);
+    setSelectedCategories(['all']);
+    document.getElementById('full-library')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  // Best-effort personalization: exam matches + transferable skills come
+  // straight off the profile row; "Continue Learning" / "Recommended" /
+  // per-exam explored counts all key off the point_transactions ledger,
+  // which may not exist yet if sql/points_system.sql hasn't been run —
+  // this fails silently (empty sections) rather than showing an error,
+  // matching the same defensive pattern useAccountSummary.js uses.
+  const loadPersonalization = async (userId, matches) => {
+    let openedIds = [];
+    try {
+      const { data: opens, error: opensErr } = await supabase
+        .from('point_transactions')
+        .select('ref_id, created_at')
+        .eq('user_id', userId)
+        .eq('action_code', 'RESOURCE_OPENED')
+        .order('created_at', { ascending: false })
+        .limit(50);
+      if (!opensErr && opens) openedIds = opens.map(o => o.ref_id).filter(Boolean);
+    } catch {
+      // points system not migrated yet — no activity signal available
+    }
+
+    const matchExamNames = matches.slice(0, 4).map(m => m.exam_name).filter(Boolean);
+
+    try {
+      const [continueRes, recommendedRes, exploredRes] = await Promise.all([
+        openedIds[0]
+          ? supabase.from('resources_v2').select('*').eq('resource_id', openedIds[0]).maybeSingle()
+          : Promise.resolve({ data: null }),
+        matchExamNames.length
+          ? supabase.from('resources_v2').select('*').eq('status', 'Published').in('exam_name', matchExamNames).order('created_at', { ascending: false }).limit(20)
+          : Promise.resolve({ data: [] }),
+        openedIds.length
+          ? supabase.from('resources_v2').select('resource_id, exam_name').in('resource_id', openedIds)
+          : Promise.resolve({ data: [] }),
+      ]);
+
+      if (continueRes?.data) setContinueItem(continueRes.data);
+
+      const openedSet = new Set(openedIds);
+      setRecommendedItems((recommendedRes?.data || []).filter(r => !openedSet.has(r.resource_id)).slice(0, 4));
+
+      const exploredByExam = {};
+      (exploredRes?.data || []).forEach(r => {
+        if (!r.exam_name) return;
+        exploredByExam[r.exam_name] = (exploredByExam[r.exam_name] || 0) + 1;
+      });
+
+      if (matchExamNames.length) {
+        const counts = await Promise.all(
+          matchExamNames.map(name =>
+            supabase.from('resources_v2').select('*', { count: 'exact', head: true }).eq('status', 'Published').eq('exam_name', name)
+          )
+        );
+        const progress = {};
+        matchExamNames.forEach((name, i) => {
+          progress[name] = {
+            total: counts[i]?.count ?? null,
+            explored: exploredByExam[name] || 0,
+          };
+        });
+        setExamProgress(progress);
+      }
+    } catch (err) {
+      console.warn('Could not load learning personalization signals', err);
+    }
+  };
+
   useEffect(() => {
     const fetchInitialData = async () => {
       setLoading(true);
@@ -76,20 +191,27 @@ const LearningCenter = () => {
         if (session?.user) {
           const { data: profile } = await supabase
             .from('user_profiles')
-            .select('subscription_tier, subscription_expires_at, free_quiz_used')
+            .select('subscription_tier, subscription_expires_at, free_quiz_used, recommendations, raw_profile_data')
             .eq('id', session.user.id)
             .maybeSingle();
           if (profile) {
             const tier = getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
             setEffectiveTier(tier);
             setFreeQuizUsed(!!profile.free_quiz_used);
+
+            const matches = Array.isArray(profile.recommendations) ? profile.recommendations : [];
+            setExamMatches(matches);
+            if (profile.raw_profile_data) {
+              setTransferableSkills(getTransferableSkills(profile.raw_profile_data));
+            }
+            loadPersonalization(session.user.id, matches);
           }
         }
 
         const { data: examData, error: examError } = await supabase
           .from('resources_v2')
           .select('exam_name');
-        
+
         if (examError) {
           console.error('Supabase exam fetch error:', examError);
           setError(`Failed to load exams: ${examError.message}`);
@@ -227,7 +349,6 @@ const LearningCenter = () => {
   const renderCard = (item, type) => {
     let isLocked = false;
     let isPartial = false;
-    let badgeText = 'FREE ACCESS';
 
     if (type === 'resource') {
       isLocked = isResourceLockedForUser(effectiveTier, item.category);
@@ -235,103 +356,77 @@ const LearningCenter = () => {
       if (cat === 'guide' || cat === 'precis') {
         if (effectiveTier === TIERS.FREE || effectiveTier === TIERS.SCORE_UNLOCK || effectiveTier === TIERS.SCORE_CV) {
           isPartial = true;
-          badgeText = 'PREVIEW';
         }
-      } else if (isLocked) {
-        badgeText = 'PREMIUM';
       }
     } else {
       // Quiz / Mock Test
       const quizAccess = canTakeQuiz(effectiveTier, freeQuizUsed);
       isLocked = !quizAccess.allowed;
-      if (isLocked) {
-        badgeText = 'PREMIUM';
-      } else if (quizAccess.isFreeAttempt) {
-        badgeText = '1 FREE ATTEMPT';
-      }
     }
 
+    // One status, one badge — isLocked and isPartial used to be checked
+    // independently and could both be true at once (Guide/Precis on a free
+    // tier), stacking two lock icons on the same corner.
+    const status = isPartial ? 'preview' : isLocked ? 'premium' : 'free';
+    const STATUS_BADGE = {
+      premium: { icon: Lock, background: '#ef4444', label: 'Premium — upgrade to unlock' },
+      preview: { icon: Eye, background: '#f59e0b', label: 'Preview available, full access needs an upgrade' },
+      free: { icon: Unlock, background: '#16a34a', label: 'Free' },
+    }[status];
+
     return (
-      <Link 
-        key={item.id} 
-        to={type === 'resource' ? `/reader/${item.resource_id}` : `/quiz/${item.id}`} 
+      <Card
+        key={item.id}
+        as={Link}
+        to={type === 'resource' ? `/reader/${item.resource_id}` : `/quiz/${item.id}`}
+        interactive
+        elevated={false}
+        padding="none"
         className="course-card"
       >
-        <div className="course-image-wrapper">
-          <div 
-            className="course-image"
-            style={item.thumbnail_url ? { 
-              backgroundImage: `url(${item.thumbnail_url})` 
-            } : {
-              background: 'linear-gradient(135deg, #4b6b32 0%, #2d411e 100%)'
-            }}
-          >
-            {!item.thumbnail_url && (
-              <div className="course-image-fallback">
-                <span className="fallback-exam">{item.exam_name || 'Multi-Exam'}</span>
-                <span className="fallback-title">{item.title}</span>
-              </div>
-            )}
+        {item.thumbnail_url && (
+          <div className="course-image-wrapper">
+            <div className="course-image" style={{ backgroundImage: `url(${item.thumbnail_url})` }} />
+            <span className="status-badge" style={{ background: STATUS_BADGE.background }} title={STATUS_BADGE.label}>
+              <STATUS_BADGE.icon size={13} color="white" />
+            </span>
           </div>
-          {/* Top Right Badges */}
-          <div className="course-badges" style={{ display: 'flex', gap: '0.25rem' }}>
-            {isLocked && (
-              <span className="badge-alpha" style={{ background: '#ef4444', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px' }}>
-                <Lock size={12} color="white" />
-              </span>
-            )}
-            {isPartial && (
-              <span className="badge-alpha" style={{ background: '#f59e0b', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px' }}>
-                <Lock size={12} color="white" />
-              </span>
-            )}
-          </div>
-          {/* Bottom Tags */}
-          <div className="course-bottom-tags">
-             <span className="tag-sale" style={isLocked ? { color: '#ef4444', borderColor: 'rgba(239, 68, 68, 0.2)', background: '#fef2f2' } : isPartial ? { color: '#d97706', borderColor: 'rgba(217, 119, 6, 0.2)', background: '#fffbeb' } : {}}>{badgeText}</span>
-          </div>
-        </div>
+        )}
 
         <div className="course-content">
           <div className="course-tags">
-            <span className="tag-light">{item.subject || 'General'}</span>
+            <span className="tag-exam" title={item.exam_name}>{item.exam_name || 'Multi-Exam'}</span>
             <span className="tag-olive">{item.category || (type === 'resource' ? 'Study Material' : 'Mock Test')}</span>
-            <Heart size={16} className="heart-icon" />
+            {!item.thumbnail_url && (
+              <span className="status-badge-inline" style={{ background: STATUS_BADGE.background }} title={STATUS_BADGE.label}>
+                <STATUS_BADGE.icon size={11} color="white" />
+              </span>
+            )}
           </div>
 
           <h3 className="course-title" title={item.title}>
-            {item.title}
+            {cleanContentTitle(item.title, item.exam_name)}
           </h3>
 
           <div className="course-features">
-            {type === 'resource' ? (
-              <>
-                <span><FileText size={12} /> {item.subject || 'Comprehensive Notes'}</span>
-                <span><Book size={12} /> {item.chapter_count || 1} Chapters</span>
-              </>
-            ) : (
+            {type === 'resource' && item.chapter_count ? (
+              <span><Layers size={12} /> {item.chapter_count} {item.chapter_count === 1 ? 'chapter' : 'chapters'}</span>
+            ) : null}
+            {type === 'quiz' && (
               <>
                 <span><CheckCircle size={12} /> Latest Pattern</span>
                 <span><PlayCircle size={12} /> Detailed Analysis</span>
               </>
             )}
           </div>
-
-          <div className="course-footer">
-            <div className="price-section">
-              {isLocked ? (
-                <span className="price-current" style={{ color: '#ef4444' }}>PREMIUM</span>
-              ) : isPartial ? (
-                <span className="price-current" style={{ color: '#d97706' }}>PREVIEW</span>
-              ) : (
-                <span className="price-current" style={{ color: '#4b6b32' }}>FREE</span>
-              )}
-            </div>
-          </div>
         </div>
-      </Link>
+      </Card>
     );
   };
+
+  const matchedExamNames = examMatches.map(m => m.exam_name).filter(Boolean);
+  const heroSkillsCount = transferableSkills.length;
+  const heroReady = !loading || totalResourceCount != null;
 
   return (
     <div className="learning-wrapper">
@@ -340,25 +435,25 @@ const LearningCenter = () => {
         <aside className="sidebar">
           <div className="sidebar-section">
             <h3 className="sidebar-title">Filters</h3>
-            
+
             <div className="filter-group">
               <h4 className="filter-subtitle">Content Type</h4>
               <div className="checkbox-filter-group">
                 <label className="checkbox-label">
-                  <input 
-                    type="checkbox" 
-                    checked={selectedCategories.includes('all')} 
-                    onChange={() => handleCategoryCheckboxChange('all')} 
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes('all')}
+                    onChange={() => handleCategoryCheckboxChange('all')}
                   />
                   <span className="checkbox-custom"></span>
                   <span className="checkbox-text">All Content</span>
                 </label>
                 {AVAILABLE_CATEGORIES.map(category => (
                   <label key={category} className="checkbox-label">
-                    <input 
-                      type="checkbox" 
-                      checked={selectedCategories.includes(category)} 
-                      onChange={() => handleCategoryCheckboxChange(category)} 
+                    <input
+                      type="checkbox"
+                      checked={selectedCategories.includes(category)}
+                      onChange={() => handleCategoryCheckboxChange(category)}
                     />
                     <span className="checkbox-custom"></span>
                     <span className="checkbox-text">{category}</span>
@@ -372,20 +467,20 @@ const LearningCenter = () => {
             <h4 className="filter-subtitle">Important Exams</h4>
             <div className="checkbox-filter-group">
               <label className="checkbox-label">
-                <input 
-                  type="checkbox" 
-                  checked={selectedExams.includes('all')} 
-                  onChange={() => handleExamCheckboxChange('all')} 
+                <input
+                  type="checkbox"
+                  checked={selectedExams.includes('all')}
+                  onChange={() => handleExamCheckboxChange('all')}
                 />
                 <span className="checkbox-custom"></span>
                 <span className="checkbox-text">All Exams</span>
               </label>
               {exams.map(exam => (
                 <label key={exam} className="checkbox-label">
-                  <input 
-                    type="checkbox" 
-                    checked={selectedExams.includes(exam)} 
-                    onChange={() => handleExamCheckboxChange(exam)} 
+                  <input
+                    type="checkbox"
+                    checked={selectedExams.includes(exam)}
+                    onChange={() => handleExamCheckboxChange(exam)}
                   />
                   <span className="checkbox-custom"></span>
                   <span className="checkbox-text">{exam}</span>
@@ -398,21 +493,45 @@ const LearningCenter = () => {
         {/* Main Content */}
         <main className="main-content">
           <div className="content-header">
-            <h1 className="main-title">
-              {selectedExams.includes('all') ? 'Government Exams' : selectedExams.join(', ')} Study Material 2026, Study Plan, Notes
-            </h1>
+            <span className="hero-eyebrow">Your Learning Path</span>
+            <h1 className="main-title">Prepare for your next career move.</h1>
             <p className="main-subtitle">
-              Prepare effectively with the latest {selectedExams.includes('all') ? '' : selectedExams.join(', ')} study notes and comprehensive mock tests.
+              {matchedExamNames.length
+                ? "We've selected learning material based on your profile and career matches."
+                : "Study guides, precis, previous-year papers and mock tests for every exam you're matched with."}
             </p>
-            
+
+            {heroReady && (matchedExamNames.length > 0 || totalResourceCount != null || heroSkillsCount > 0) && (
+              <div className="hero-stat-line">
+                {matchedExamNames.length > 0 && <span><strong>{matchedExamNames.length}</strong> exam match{matchedExamNames.length === 1 ? '' : 'es'}</span>}
+                {totalResourceCount != null && <span><strong>{totalResourceCount}</strong> resources</span>}
+                {heroSkillsCount > 0 && <span><strong>{heroSkillsCount}</strong> transferable skill{heroSkillsCount === 1 ? '' : 's'} identified</span>}
+              </div>
+            )}
+
             <div className="search-box">
               <Search size={18} className="search-icon" />
-              <input 
+              <input
                 type="text"
-                placeholder="Search for courses, exams, or subjects..."
+                placeholder="Search courses, exams, skills..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
+            </div>
+
+            <div className="filter-chip-row">
+              {FILTER_CHIPS.map(chip => (
+                (chip.key !== 'my-exams' || matchedExamNames.length > 0) && (
+                  <button
+                    key={chip.key}
+                    type="button"
+                    className={`filter-chip ${activeFilterChip === chip.key ? 'active' : ''}`}
+                    onClick={() => applyFilterChip(chip.key)}
+                  >
+                    {chip.label}
+                  </button>
+                )
+              ))}
             </div>
           </div>
 
@@ -428,7 +547,7 @@ const LearningCenter = () => {
                   color: 'white',
                   border: 'none',
                   padding: '0.75rem 2rem',
-                  borderRadius: '12px',
+                  borderRadius: 'var(--radius-sm)',
                   fontWeight: 700,
                   cursor: 'pointer',
                   display: 'inline-flex',
@@ -447,57 +566,123 @@ const LearningCenter = () => {
             </div>
           ) : (
             <div className="course-sections">
-              
-              {resources.length > 0 && (
+
+              {continueItem && (
                 <div className="course-section">
                   <div className="section-header">
-                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Study Materials ({totalResourceCount !== null ? `${resources.length} of ${totalResourceCount}` : resources.length})</h2>
+                    <h2>Continue Learning</h2>
                   </div>
+                  <Link to={`/reader/${continueItem.resource_id}`} className="continue-card">
+                    <div className="continue-card-icon"><Book size={22} color="#fff" /></div>
+                    <div className="continue-card-body">
+                      <span className="tag-exam">{continueItem.exam_name || 'Multi-Exam'}</span>
+                      <h3>{cleanContentTitle(continueItem.title, continueItem.exam_name)}</h3>
+                      <span className="continue-card-meta">Resume where you left off</span>
+                    </div>
+                    <ArrowRight size={20} className="continue-card-arrow" />
+                  </Link>
+                </div>
+              )}
+
+              {recommendedItems.length > 0 && (
+                <div className="course-section">
+                  <div className="section-header">
+                    <h2>Recommended For You</h2>
+                  </div>
+                  <div className="course-grid">
+                    {recommendedItems.map(item => renderCard(item, 'resource'))}
+                  </div>
+                </div>
+              )}
+
+              {examMatches.length > 0 && (
+                <div className="course-section">
+                  <div className="section-header">
+                    <h2>Your Exams</h2>
+                  </div>
+                  <div className="exam-progress-grid">
+                    {examMatches.slice(0, 3).map(match => {
+                      const prog = examProgress[match.exam_name];
+                      return (
+                        <div key={match.exam_id || match.exam_name} className="exam-progress-card">
+                          <div className="exam-progress-header">
+                            <h3>{match.exam_name}</h3>
+                            {match.score != null && <span className="exam-match-score">{Math.round(match.score)}% match</span>}
+                          </div>
+                          {match.conducting_body && <p className="exam-progress-body">{match.conducting_body}</p>}
+                          <p className="exam-progress-explored">
+                            {prog && prog.total
+                              ? `${prog.explored} of ${prog.total} resource${prog.total === 1 ? '' : 's'} explored`
+                              : 'Resources available in the full library below'}
+                          </p>
+                          <button type="button" className="exam-progress-cta" onClick={() => filterToExam(match.exam_name)}>
+                            View Resources <ArrowRight size={14} />
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {transferableSkills.length > 0 && (
+                <div className="course-section">
+                  <div className="section-header">
+                    <h2>Skill Development</h2>
+                  </div>
+                  <p className="skill-section-subtitle">Strengths identified from your service profile.</p>
+                  <ul className="skill-list">
+                    {transferableSkills.map((skill, i) => <li key={i}>{skill}</li>)}
+                  </ul>
+                </div>
+              )}
+
+              <div id="full-library" className="course-section">
+                <div className="section-header">
+                  <h2>Full Library</h2>
+                </div>
+
+                {resources.length > 0 && (
                   <div className="course-grid">
                     {resources.map(item => renderCard(item, 'resource'))}
                   </div>
-                </div>
-              )}
+                )}
 
-              {quizzes.length > 0 && (
-                <div className="course-section">
-                  <div className="section-header">
-                    <h2>{selectedExams.includes('all') ? 'All' : selectedExams.join(', ')} Mock Tests ({totalQuizCount !== null ? `${quizzes.length} of ${totalQuizCount}` : quizzes.length})</h2>
-                  </div>
-                  <div className="course-grid">
+                {quizzes.length > 0 && (
+                  <div className="course-grid" style={{ marginTop: resources.length > 0 ? '1.5rem' : 0 }}>
                     {quizzes.map(item => renderCard(item, 'quiz'))}
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Load More / End indicator */}
-              <div className="load-more-section">
-                {loadingMore ? (
-                  <div className="loading-more">
-                    <RefreshCw className="animate-spin" size={20} />
-                    <span>Loading more resources...</span>
-                  </div>
-                ) : hasMore && (resources.length > 0 || quizzes.length > 0) ? (
-                  <button className="load-more-btn" onClick={loadNextPage}>
-                    Load More Resources
-                    <span className="load-more-count">
-                      Showing {resources.length + quizzes.length} of {(totalResourceCount || '?') + ' + ' + (totalQuizCount || '?')}
-                    </span>
-                  </button>
-                ) : !hasMore && (resources.length > 0 || quizzes.length > 0) ? (
-                  <div className="end-of-results">
-                    <p>You've reached the end — all {(totalResourceCount || resources.length) + (totalQuizCount || quizzes.length)} resources loaded.</p>
+                {/* Load More / End indicator */}
+                <div className="load-more-section">
+                  {loadingMore ? (
+                    <div className="loading-more">
+                      <RefreshCw className="animate-spin" size={20} />
+                      <span>Loading more resources...</span>
+                    </div>
+                  ) : hasMore && (resources.length > 0 || quizzes.length > 0) ? (
+                    <button className="load-more-btn" onClick={loadNextPage}>
+                      Load More Resources
+                      <span className="load-more-count">
+                        Showing {resources.length + quizzes.length} of {(totalResourceCount || '?') + ' + ' + (totalQuizCount || '?')}
+                      </span>
+                    </button>
+                  ) : !hasMore && (resources.length > 0 || quizzes.length > 0) ? (
+                    <div className="end-of-results">
+                      <p>You've reached the end — all {(totalResourceCount || resources.length) + (totalQuizCount || quizzes.length)} resources loaded.</p>
+                    </div>
+                  ) : null}
+                </div>
+
+                {resources.length === 0 && quizzes.length === 0 && !loading ? (
+                  <div className="empty-library">
+                    <Book size={64} />
+                    <h3>No courses found</h3>
+                    <p>Try adjusting your search or filters.</p>
                   </div>
                 ) : null}
               </div>
-
-              {resources.length === 0 && quizzes.length === 0 && !loading ? (
-                <div className="empty-library">
-                  <Book size={64} />
-                  <h3>No courses found</h3>
-                  <p>Try adjusting your search or filters.</p>
-                </div>
-              ) : null}
 
             </div>
           )}
@@ -534,7 +719,7 @@ const LearningCenter = () => {
         .sidebar-section {
           background: #fff;
           border: 1px solid #e2e8f0;
-          border-radius: 12px;
+          border-radius: var(--radius-md);
           padding: 1.5rem;
         }
         .sidebar-title {
@@ -556,7 +741,7 @@ const LearningCenter = () => {
           flex-direction: column;
           gap: 0.75rem;
         }
-        
+
         /* Premium Custom Checkboxes */
         .checkbox-label {
           display: flex;
@@ -580,7 +765,7 @@ const LearningCenter = () => {
           width: 18px;
           height: 18px;
           border: 2px solid #cbd5e1;
-          border-radius: 4px;
+          border-radius: var(--radius-sm);
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -626,6 +811,15 @@ const LearningCenter = () => {
         .content-header {
           margin-bottom: 2rem;
         }
+        .hero-eyebrow {
+          display: inline-block;
+          font-size: 0.72rem;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #4b6b32;
+          margin-bottom: 0.5rem;
+        }
         .main-title {
           font-size: 1.75rem;
           font-weight: 700;
@@ -635,7 +829,19 @@ const LearningCenter = () => {
         .main-subtitle {
           color: #64748b;
           font-size: 0.95rem;
+          margin-bottom: 1rem;
+        }
+        .hero-stat-line {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem 1.25rem;
+          font-size: 0.85rem;
+          color: #475569;
           margin-bottom: 1.5rem;
+        }
+        .hero-stat-line strong {
+          color: #1F3A2E;
+          font-weight: 800;
         }
 
         .search-box {
@@ -652,17 +858,44 @@ const LearningCenter = () => {
         .search-box input {
           width: 100%;
           padding: 1rem 1rem 1rem 3rem;
-          border-radius: 12px;
+          border-radius: var(--radius-sm);
           border: 1px solid #e2e8f0;
           background: #fff;
           font-size: 1rem;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+          box-shadow: var(--shadow-1);
           transition: all 0.2s;
         }
         .search-box input:focus {
           border-color: #4b6b32;
           box-shadow: 0 0 0 3px rgba(75, 107, 50, 0.1);
           outline: none;
+        }
+
+        .filter-chip-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 1rem;
+        }
+        .filter-chip {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          color: #475569;
+          font-size: 0.82rem;
+          font-weight: 600;
+          padding: 0.45rem 0.9rem;
+          border-radius: var(--radius-pill);
+          cursor: pointer;
+          transition: all 0.15s;
+        }
+        .filter-chip:hover {
+          border-color: #4b6b32;
+          color: #1F3A2E;
+        }
+        .filter-chip.active {
+          background: #4b6b32;
+          border-color: #4b6b32;
+          color: #fff;
         }
 
         /* Course Sections */
@@ -696,14 +929,173 @@ const LearningCenter = () => {
           text-decoration: underline;
         }
 
+        /* Continue Learning */
+        .continue-card {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          background: linear-gradient(135deg, #4b6b32 0%, #2d411e 100%);
+          border-radius: var(--radius-md);
+          padding: 1.25rem 1.5rem;
+          text-decoration: none;
+          box-shadow: var(--shadow-1);
+          transition: transform 0.15s, box-shadow 0.2s;
+        }
+        .continue-card:hover {
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-2);
+        }
+        .continue-card-icon {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.15);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .continue-card-body {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+        .continue-card-body h3 {
+          color: #fff;
+          font-size: 1.05rem;
+          font-weight: 700;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .continue-card-meta {
+          color: rgba(255,255,255,0.75);
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        .continue-card .tag-exam {
+          background: rgba(255,255,255,0.18);
+          color: #fff;
+          align-self: flex-start;
+        }
+        .continue-card-arrow {
+          color: #fff;
+          flex-shrink: 0;
+        }
+
+        /* Your Exams */
+        .exam-progress-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 1.25rem;
+        }
+        .exam-progress-card {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: var(--radius-md);
+          padding: 1.25rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .exam-progress-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+        .exam-progress-header h3 {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: #0f172a;
+          line-height: 1.35;
+        }
+        .exam-match-score {
+          flex-shrink: 0;
+          background: rgba(75, 107, 50, 0.14);
+          color: #2d411e;
+          font-size: 0.72rem;
+          font-weight: 800;
+          padding: 0.2rem 0.55rem;
+          border-radius: var(--radius-pill);
+          white-space: nowrap;
+        }
+        .exam-progress-body {
+          color: #64748b;
+          font-size: 0.82rem;
+        }
+        .exam-progress-explored {
+          color: #475569;
+          font-size: 0.82rem;
+          font-weight: 600;
+        }
+        .exam-progress-cta {
+          margin-top: 0.5rem;
+          align-self: flex-start;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          background: none;
+          border: none;
+          color: #4b6b32;
+          font-size: 0.85rem;
+          font-weight: 700;
+          cursor: pointer;
+          padding: 0;
+        }
+        .exam-progress-cta:hover {
+          color: #2d411e;
+          text-decoration: underline;
+        }
+
+        /* Skill Development */
+        .skill-section-subtitle {
+          color: #64748b;
+          font-size: 0.85rem;
+          margin-bottom: 1rem;
+        }
+        .skill-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+        .skill-list li {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: var(--radius-sm);
+          padding: 0.75rem 1rem;
+          font-size: 0.88rem;
+          color: #334155;
+          position: relative;
+          padding-left: 2.25rem;
+        }
+        .skill-list li::before {
+          content: '';
+          position: absolute;
+          left: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #4b6b32;
+        }
+
         .course-grid {
           display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          gap: 1.5rem;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
         }
         @media (min-width: 600px) {
           .course-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
           }
         }
         @media (min-width: 1024px) {
@@ -713,103 +1105,54 @@ const LearningCenter = () => {
         }
 
         /* Flat Course Card */
+        /* background/border/radius/shadow/hover now come from the shared <Card> primitive */
         .course-card {
-          background: #fff;
-          border: 1px solid #e2e8f0;
-          border-radius: 12px;
           overflow: hidden;
           display: flex;
           flex-direction: column;
           text-decoration: none;
           color: inherit;
-          transition: transform 0.2s, box-shadow 0.2s;
         }
-        .course-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0,0,0,0.06);
-        }
-        
+
         .course-image-wrapper {
           position: relative;
-          aspect-ratio: 3 / 4; /* Portrait book cover shape */
+          aspect-ratio: 16 / 9;
           background: #f8fafc;
           overflow: hidden;
         }
         .course-image {
           width: 100%;
           height: 100%;
-          background-size: contain; /* Ensure the full cover thumbnail is fully visible */
+          background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
           background-color: #f8fafc;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .course-image-fallback {
-          padding: 1.5rem;
-          text-align: center;
-          color: white;
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-        .fallback-exam {
-          font-size: 0.75rem;
-          font-weight: 800;
-          letter-spacing: 0.05em;
-          color: rgba(255,255,255,0.8);
-          background: rgba(0,0,0,0.3);
-          padding: 0.2rem 0.5rem;
-          border-radius: 4px;
-          display: inline-block;
-          margin: 0 auto;
-        }
-        .fallback-title {
-          font-size: 1.25rem;
-          font-weight: 800;
-          line-height: 1.2;
         }
 
-        .course-badges {
+        .status-badge {
           position: absolute;
           top: 0.5rem;
           right: 0.5rem;
-        }
-        .badge-alpha {
-          background: #4b6b32;
-          color: #fff;
-          width: 24px;
-          height: 24px;
+          width: 26px;
+          height: 26px;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: 800;
-          font-size: 0.8rem;
-          border-radius: 4px;
+          border-radius: 50%;
+          box-shadow: var(--shadow-1);
         }
-
-        .course-bottom-tags {
-          position: absolute;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 10;
-        }
-        .tag-sale {
-          background: #eef2eb;
-          color: #4b6b32;
-          border: 1px solid rgba(75, 107, 50, 0.2);
-          font-size: 0.7rem;
-          font-weight: 800;
-          padding: 0.25rem 0.75rem;
-          border-radius: 12px;
-          white-space: nowrap;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        .status-badge-inline {
+          width: 18px;
+          height: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-left: auto;
         }
 
         .course-content {
-          padding: 1.5rem 1.25rem 1.25rem;
+          padding: 1.25rem 1.25rem 1.25rem;
           display: flex;
           flex-direction: column;
           flex: 1;
@@ -817,16 +1160,19 @@ const LearningCenter = () => {
         .course-tags {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          flex-wrap: wrap;
+          gap: 0.4rem;
           margin-bottom: 0.75rem;
         }
-        .tag-light {
-          background: #f1f5f9;
-          color: #475569;
-          font-size: 0.65rem;
-          font-weight: 600;
-          padding: 0.2rem 0.4rem;
-          border-radius: 4px;
+        .tag-exam {
+          background: rgba(75, 107, 50, 0.14);
+          color: #2d411e;
+          font-size: 0.66rem;
+          font-weight: 800;
+          padding: 0.22rem 0.5rem;
+          border-radius: var(--radius-pill);
+          white-space: normal;
+          line-height: 1.3;
         }
         .tag-olive {
           background: #eef2eb;
@@ -834,16 +1180,7 @@ const LearningCenter = () => {
           font-size: 0.65rem;
           font-weight: 600;
           padding: 0.2rem 0.4rem;
-          border-radius: 4px;
-        }
-        .heart-icon {
-          margin-left: auto;
-          color: #cbd5e1;
-          transition: color 0.2s, fill 0.2s;
-        }
-        .heart-icon:hover {
-          color: #4b6b32;
-          fill: #4b6b32;
+          border-radius: var(--radius-pill);
         }
 
         .course-title {
@@ -851,7 +1188,7 @@ const LearningCenter = () => {
           font-weight: 700;
           color: #0f172a;
           line-height: 1.4;
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -861,7 +1198,7 @@ const LearningCenter = () => {
         .course-features {
           display: flex;
           gap: 1rem;
-          margin-bottom: 1.25rem;
+          margin-top: auto;
         }
         .course-features span {
           display: flex;
@@ -869,32 +1206,6 @@ const LearningCenter = () => {
           gap: 0.25rem;
           font-size: 0.75rem;
           color: #64748b;
-        }
-
-        .course-footer {
-          margin-top: auto;
-          padding-top: 1rem;
-          border-top: 1px dashed #e2e8f0;
-        }
-        .price-section {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .price-current {
-          font-size: 1.1rem;
-          font-weight: 800;
-          color: #0f172a;
-        }
-        .price-original {
-          font-size: 0.8rem;
-          color: #94a3b8;
-          text-decoration: line-through;
-        }
-        .price-discount {
-          font-size: 0.8rem;
-          color: #4b6b32;
-          font-weight: 600;
         }
 
         .loading-state, .empty-library {
@@ -919,21 +1230,21 @@ const LearningCenter = () => {
           color: #fff;
           border: none;
           padding: 0.9rem 2.5rem;
-          border-radius: 12px;
+          border-radius: var(--radius-sm);
           font-size: 1rem;
           font-weight: 700;
           cursor: pointer;
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-          box-shadow: 0 2px 8px rgba(75, 107, 50, 0.2);
+          box-shadow: var(--shadow-1);
         }
         .load-more-btn:hover {
           background: #3d5828;
           transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(75, 107, 50, 0.3);
+          box-shadow: var(--shadow-2);
         }
         .load-more-btn:active {
           transform: translateY(0);
-          box-shadow: 0 2px 4px rgba(75, 107, 50, 0.15);
+          box-shadow: var(--shadow-1);
         }
         .load-more-count {
           font-size: 0.7rem;
@@ -977,4 +1288,3 @@ const LearningCenter = () => {
 };
 
 export default LearningCenter;
-

@@ -56,6 +56,10 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Payment verification failed — invalid signature' });
   }
 
+  // CV_ADDON is a checkout SKU (the ₹1 post-unlock bonus), not a real tier —
+  // it upgrades the user to the SCORE_CV tier that already exists.
+  const tierToPersist = planId === 'CV_ADDON' ? 'SCORE_CV' : (planId || 'FREE');
+
   // 2. Update user subscription in Supabase
   if (userId) {
     try {
@@ -77,7 +81,7 @@ export default async function handler(req, res) {
         }
 
         const updatePayload = {
-          subscription_tier: planId || 'FREE',
+          subscription_tier: tierToPersist,
           subscription_id: razorpay_subscription_id || razorpay_order_id || null,
           payment_id: razorpay_payment_id,
           subscription_started_at: new Date().toISOString(),
@@ -103,6 +107,6 @@ export default async function handler(req, res) {
   return res.status(200).json({
     ok: true,
     message: 'Payment verified successfully',
-    tier: planId || 'FREE',
+    tier: tierToPersist,
   });
 }
