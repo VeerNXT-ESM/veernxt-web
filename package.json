@@ -12,6 +12,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1103.0",
     "@supabase/supabase-js": "^2.105.1",
+    "@xmldom/xmldom": "^0.9.11",
     "axios": "^1.15.2",
     "i18next": "^26.0.8",
     "i18next-browser-languagedetector": "^8.2.1",

@@ -26,12 +26,27 @@ const CATEGORY_KEYWORD_RULES = [
   { category: 'Intro', patterns: ['INTRO', 'INTRODUCTION'] },
 ];
 
-function detectCategoryFromPath(folderLevels) {
-  const haystack = folderLevels.join(' / ').toUpperCase();
-  for (const rule of CATEGORY_KEYWORD_RULES) {
-    if (rule.patterns.some((p) => haystack.includes(p))) return rule.category;
+// Finds which folder level is actually the category folder (searched from
+// the deepest/most-specific level backward, since that's where it lives in
+// real content) and returns its index alongside the matched category, so
+// callers can split the rest of the path into "identity" segments
+// (state/department/exam/...) vs. the category itself — plus anything
+// nested *inside* the category folder (e.g. a post/cadre split like
+// .../5. 10 MOCK TESTS/clerk vs .../steno).
+// When no segment matches any keyword at all (e.g. "GUIDEBOOK", which has
+// no keyword of its own but is still structurally a category folder), the
+// immediate parent folder is still treated as the category slot — it just
+// defaults to "Guide" — rather than being absorbed into the identity chain.
+function findCategoryFolder(folderLevels) {
+  for (let i = folderLevels.length - 1; i >= 0; i--) {
+    const segment = folderLevels[i].toUpperCase();
+    for (const rule of CATEGORY_KEYWORD_RULES) {
+      if (rule.patterns.some((p) => segment.includes(p))) {
+        return { index: i, category: rule.category };
+      }
+    }
   }
-  return 'Guide';
+  return { index: folderLevels.length - 1, category: 'Guide' };
 }
 
 // Helper to recursively traverse dropped folder items in drag-and-drop (supports multiple folders & large directory trees)
@@ -441,14 +456,32 @@ export default function AdminDriveIngestion() {
       const duplicate = isDuplicateFile(fileName, targetPath);
 
       const lastFolder = folderLevels[folderLevels.length - 1] || '';
-      const category = detectCategoryFromPath(folderLevels);
+      const { index: categoryIndex, category } = findCategoryFolder(folderLevels);
+
+      // Everything above the category folder is the "identity" chain for
+      // this file — for state exams that's State / Department / Exam.
+      // First two levels become conducting_body ("State — Department");
+      // the rest becomes exam_name. Some exams also split *inside* the
+      // category folder by post/cadre (e.g. .../5. 10 MOCK TESTS/clerk vs
+      // .../steno) — those trailing segments get appended to exam_name too,
+      // so "Clerk" and "Steno" mock tests don't collapse into one
+      // indistinguishable exam.
+      const identitySegments = folderLevels.slice(0, categoryIndex);
+      const postCategorySegments = folderLevels.slice(categoryIndex + 1);
+      const conductingBody = identitySegments.slice(0, 2).join(' — ') || 'General Body';
+      const examNameBase = identitySegments.length > 2
+        ? identitySegments.slice(2).join(' — ')
+        : (identitySegments[identitySegments.length - 1] || 'General Exam');
+      const examName = postCategorySegments.length > 0
+        ? `${examNameBase} — ${postCategorySegments.join(' — ')}`
+        : examNameBase;
 
       return {
         file,
         id: Math.random().toString(36).substring(7),
-        root: fullPathSegments[0] || 'General',
+        root: conductingBody,
         group: fullPathSegments[1] || 'General',
-        exam: fullPathSegments[2] || 'General',
+        exam: examName,
         fullPathDisplay: targetPath,
         category: category,
         materialFolder: lastFolder,
