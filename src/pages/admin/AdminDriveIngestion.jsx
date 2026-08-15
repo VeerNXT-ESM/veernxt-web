@@ -202,17 +202,29 @@ export default function AdminDriveIngestion() {
     }
   }, [isSingleUploadModalOpen, singleUploadTheme, singleUploadCaption]);
 
+  // "My Drive" is a real reflection of resources_v2 (folders/files are
+  // derived from storage_base_url below, not tracked separately) — it used
+  // to be capped at the 500 most-recently-created rows, which silently
+  // hid most of the catalog and made the browser show only whichever
+  // states/exams happened to be newest. Paginated fetch, no cap.
   const fetchExistingResources = async () => {
     setLoadingResources(true);
     try {
-      const { data, error } = await supabase
-        .from('resources_v2')
-        .select('*')
-        .order('created_at', { ascending: false })
-        .limit(500);
-      if (!error && data) {
-        setExistingResources(data);
+      const all = [];
+      const PAGE = 1000;
+      let from = 0;
+      for (;;) {
+        const { data, error } = await supabase
+          .from('resources_v2')
+          .select('*')
+          .order('created_at', { ascending: false })
+          .range(from, from + PAGE - 1);
+        if (error) throw error;
+        all.push(...(data || []));
+        if (!data || data.length < PAGE) break;
+        from += PAGE;
       }
+      setExistingResources(all);
     } catch (e) {
       console.error('Error fetching resources:', e);
     } finally {
