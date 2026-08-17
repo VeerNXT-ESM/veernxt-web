@@ -278,47 +278,8 @@ const Dashboard = () => {
     fetchProfile();
   }, [navigate]);
 
-  const handleRecalculate = async () => {
-    if (!profile?.raw_profile_data) {
-      navigate('/profiling');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      const { data: { session } } = await supabase.auth.getSession();
-      const token = session?.access_token;
-      const formData = profile.raw_profile_data;
-
-      // `raw_profile_data` is exactly the payload /api/profile/recommend
-      // already validated and persisted once before — it stores the
-      // *computed* `dateOfBirth`/`totalServiceDuration` strings directly,
-      // not the discrete dobYear/dobMonth/dobDay or serviceYears/
-      // serviceMonths fields (those only ever exist in Profiling.jsx's live
-      // form state). Recomputing them from formData.dobYear etc. here was a
-      // bug — those fields don't exist on this object, so it silently sent
-      // "undefined-undefined-undefined" and failed Joi validation server-side.
-      const payload = {
-        ...formData,
-        heightCm: parseInt(formData.heightCm) || 0,
-        weightKg: parseInt(formData.weightKg) || 0,
-        chestCm: parseInt(formData.chestCm) || 0,
-        chestExpansion: parseInt(formData.chestExpansion) || 0,
-      };
-
-      const response = await axios.post('/api/profile/recommend', payload, {
-        headers: token ? { 'Authorization': `Bearer ${token}` } : {}
-      });
-      
-      if (response.data.ok) {
-        window.location.reload(); // Refresh to show new results
-      }
-    } catch (err) {
-      console.error('Recalculation failed:', err);
-      alert('Failed to recalculate: ' + err.message);
-    } finally {
-      setLoading(false);
-    }
+  const handleRecalculate = () => {
+    navigate('/profiling');
   };
 
   const handleOpenEditModal = () => {
@@ -340,11 +301,12 @@ const Dashboard = () => {
       } catch (e) {
         prefStates = [];
       }
-      let candSkills = {};
+      let candSkills = [];
       try {
-        candSkills = typeof profile.skills === 'string' ? JSON.parse(profile.skills) : (profile.skills || {});
+        const parsed = typeof profile.skills === 'string' ? JSON.parse(profile.skills) : (profile.skills || []);
+        candSkills = Array.isArray(parsed) ? parsed : Object.keys(parsed);
       } catch (e) {
-        candSkills = {};
+        candSkills = [];
       }
       setEditFormData({
         full_name: profile.full_name || '',
@@ -663,6 +625,26 @@ const Dashboard = () => {
                     <option value="Graduate">Graduate</option>
                     <option value="Post Graduate">Post Graduate</option>
                   </select>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
+                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Preferred States (comma-separated)</label>
+                  <input 
+                    type="text"
+                    value={Array.isArray(editFormData.preferred_states) ? editFormData.preferred_states.join(', ') : ''}
+                    onChange={e => setEditFormData(prev => ({ ...prev, preferred_states: e.target.value.split(',').map(s => s.trim()).filter(Boolean) }))}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                  />
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
+                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Skills (comma-separated)</label>
+                  <input 
+                    type="text"
+                    value={Array.isArray(editFormData.skills) ? editFormData.skills.join(', ') : ''}
+                    onChange={e => setEditFormData(prev => ({ ...prev, skills: e.target.value.split(',').map(s => s.trim()).filter(Boolean) }))}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
+                  />
                 </div>
               </>
             )}

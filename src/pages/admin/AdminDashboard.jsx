@@ -147,19 +147,44 @@ const AdminDashboard = () => {
     }
   };
 
+  // Supabase/PostgREST caps an unranged `.select()` at 1000 rows (its default
+  // max_rows), silently — no error, just a truncated result. resources_v2 has
+  // 4,000+ rows, so a single .select('*') here would drop most of the catalog
+  // from every admin view (search, bulk rename, delete) with no indication.
+  // Page through with .range() until a page comes back short.
+  const fetchAllRows = async (table, orderColumn) => {
+    const pageSize = 1000;
+    let allRows = [];
+    let page = 0;
+    while (true) {
+      const { data, error } = await supabase
+        .from(table)
+        .select('*')
+        .order(orderColumn, { ascending: false })
+        .order('id', { ascending: false }) // tiebreaker: many rows share the same created_at from bulk inserts, which would otherwise make .range() paging skip/duplicate rows
+        .range(page * pageSize, page * pageSize + pageSize - 1);
+      if (error) throw error;
+      allRows = allRows.concat(data || []);
+      if (!data || data.length < pageSize) break;
+      page++;
+    }
+    return allRows;
+  };
+
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const [resCount, quizCount, resources, quizzesList] = await Promise.all([
+      const [resCount, quizCount, resourceRows, quizRows] = await Promise.all([
         supabase.from('resources_v2').select('*', { count: 'exact', head: true }),
         supabase.from('quizzes').select('*', { count: 'exact', head: true }),
-        supabase.from('resources_v2').select('*').order('created_at', { ascending: false }), // Fetch all resources for high fidelity catalog operations
-        supabase.from('quizzes').select('*').order('created_at', { ascending: false })
+        fetchAllRows('resources_v2', 'created_at'), // Fetch all resources for high fidelity catalog operations
+        fetchAllRows('quizzes', 'created_at')
       ]);
 
-      // Count unique exams from all resources
-      const { data: allResources } = await supabase.from('resources_v2').select('exam_name');
-      const uniqueExams = allResources ? new Set(allResources.map(r => r.exam_name)).size : 0;
+      // Count unique exams — derived from resourceRows (already the full,
+      // unpaged set) rather than a second unranged query, which would hit
+      // the same 1000-row cap fetchAllRows exists to work around.
+      const uniqueExams = new Set(resourceRows.map(r => r.exam_name)).size;
 
       // Fetch Jobs count from embedded API route
       let jobsCount = 0;
@@ -177,9 +202,9 @@ const AdminDashboard = () => {
         exams: uniqueExams,
         jobs: jobsCount
       });
-      
-      const resourcesData = (resources.data || []).map(r => ({ ...r, _type: 'resource' }));
-      const quizzesData = (quizzesList.data || []).map(q => ({
+
+      const resourcesData = resourceRows.map(r => ({ ...r, _type: 'resource' }));
+      const quizzesData = quizRows.map(q => ({
         ...q,
         _type: 'quiz',
         category: 'Mock Test',
