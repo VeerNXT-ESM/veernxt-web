@@ -90,7 +90,7 @@ const Hero = () => {
           loop
           muted
           playsInline
-          poster="/hero/hero_image.png"
+          poster="/hero/hero_image.jpg"
           src="/hero_video1.mp4"
           className="w-full h-full object-cover"
         />
