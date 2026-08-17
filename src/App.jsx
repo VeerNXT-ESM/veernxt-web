@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import AuthGuard from './components/AuthGuard';
 import Header from './components/Header';
 import BottomNav from './components/ui/BottomNav';
@@ -38,6 +38,23 @@ import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
 import './index.css';
+
+/**
+ * index.html has an inline script that sets a dark <body> background on
+ * first load if the URL is "/", so the dark landing page doesn't flash
+ * light before React mounts. That's a one-time inline style (highest CSS
+ * specificity) that's never otherwise cleared — so it silently stuck
+ * around on every page reached via client-side navigation afterward (no
+ * full reload resets it) until the user hard-refreshed. Keeps it in sync
+ * with the actual current route instead.
+ */
+const BodyThemeSync = () => {
+  const location = useLocation();
+  useEffect(() => {
+    document.body.style.background = location.pathname === '/' ? '#0a0a0a' : '';
+  }, [location.pathname]);
+  return null;
+};
 
 /**
  * RootRoute Component
@@ -100,6 +117,7 @@ const RootRoute = () => {
 function App() {
   return (
     <Router>
+      <BodyThemeSync />
       <Routes>
         {/* Landing / Root Handler */}
         <Route path="/" element={<RootRoute />} />
