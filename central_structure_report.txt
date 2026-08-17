@@ -1,0 +1,654 @@
+CENTRAL EXAMS — Folder Structure Completeness Report
+====================================================================================================
+Total exam folders analyzed: 443
+Fully complete (all 5 categories present, real content): 136
+Missing at least one category folder entirely: 18
+All 5 folders present, but at least one has no real content yet (placeholder/README only): 289
+
+----------------------------------------------------------------------------------------------------
+BY TOP-LEVEL CATEGORY
+----------------------------------------------------------------------------------------------------
+Category                                            Total  Complete  Missing-cat  Placeholder-only
+01.SSC                                                 13        12            0                 1
+02.BANKING                                             37         0           11                26
+03.TEACHING                                            72         2            0                70
+04.RRB                                                  9         9            0                 0
+05. UNIVERSITY GRANTS COMMISSION NATIONAL ELIGIBILITY TEST (UGC-NET)      3         0            0                 3
+06.NURSING                                             78         3            0                75
+07.CIVIL SERVICES                                       2         1            0                 1
+08.ENGINEERING RECRUITMENT                              6         0            0                 6
+09.DEFENCE                                             19         1            7                11
+10. JUDICIARY EXAMS                                    27        26            0                 1
+11. INSURANCE EXAMS                                    17         0            0                17
+12. OTHER GOVERNMENT EXAMS                             21         0            0                21
+13.INDIA POST                                           4         0            0                 4
+14.BHABHA ATOMIC RESEARCH CENTRE                        5         0            0                 5
+15.Indian Council of Agricultural Research (ICAR)- IARI      1         0            0                 1
+16. NATIONAL INFORMATICS CENTRE                         3         0            0                 3
+17. ACCOUNTS AND COMMERCE                               5         0            0                 5
+18.POLICE EXAMS                                        62        62            0                 0
+19.PSU MAHARATNA                                       14         0            0                14
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA                 25         0            0                25
+21.METRO RAIL                                          20        20            0                 0
+
+----------------------------------------------------------------------------------------------------
+EXAMS MISSING AT LEAST ONE CATEGORY FOLDER ENTIRELY (most severe — 17 folders)
+----------------------------------------------------------------------------------------------------
+02.BANKING/11.CENTRAL BANK OF INDIA/CBI Credit Officer (PGDBF)
+  MISSING: Intro
+02.BANKING/12.BIHAR STATE CO-OPERATIVE BANK/BSCB MANAGER
+  MISSING: Intro
+02.BANKING/13.RAJASTHAN STATE COOPERATIVE BANK/1. SENIOR MANAGER
+  MISSING: Intro
+02.BANKING/13.RAJASTHAN STATE COOPERATIVE BANK/2. COMPUTER PROGRAMMER
+  MISSING: Intro
+02.BANKING/13.RAJASTHAN STATE COOPERATIVE BANK/3.RSCB Banking Assistant
+  MISSING: Intro
+02.BANKING/14.HIMACHAL PRADESH STATE COOPERATIVE BANK/HP SCB Assistant Manager
+  MISSING: Intro
+02.BANKING/14.HIMACHAL PRADESH STATE COOPERATIVE BANK/HPSCB Junior Clerk
+  MISSING: Intro
+02.BANKING/6. NATIONAL BANK FOR AGRICULTURE AND RURAL DEVELOPMENT (NABARD)/2.NABARD GRADE B (ASSSITANT MANAGER)
+  MISSING: Guide, Precis, PYQ, Mock/TestSeries
+02.BANKING/7. BANK OF BARODA/3.BOB Local Bank Officer (LBO)
+  MISSING: Intro
+02.BANKING/7. BANK OF BARODA/4.BOB Office Assistants (Peon)
+  MISSING: Intro
+09.DEFENCE/1. UPSC/1. CAPF
+  MISSING: Intro
+09.DEFENCE/1. UPSC/3. NDA
+  MISSING: Intro
+09.DEFENCE/2. IAF/1. AFCAT
+  MISSING: PYQ
+09.DEFENCE/2. IAF/2. IAF AIRMEN
+  MISSING: Intro
+09.DEFENCE/2. IAF/3. IAF GROUP C
+  MISSING: Intro, PYQ
+09.DEFENCE/5. IND ARMY/5. IA TEACHER
+  MISSING: Intro
+09.DEFENCE/6. SSB/1. SSB CONSTABLE
+  MISSING: Intro
+02.BANKING/6. NATIONAL BANK FOR AGRICULTURE AND RURAL DEVELOPMENT (NABARD)/1. NABARD GRADE A (ASSISTANT MANAGER)
+  MISSING: Guide, Precis, Mock/TestSeries  [Intro folder is typo'd as 'INTODUCTION' in source — still has real content though.]
+
+----------------------------------------------------------------------------------------------------
+EXAMS WHERE STRUCTURE IS PRESENT BUT CONTENT ISN'T UPLOADED YET (placeholder-only categories)
+----------------------------------------------------------------------------------------------------
+01.SSC/12.SSC Scientific Assistant (IMD)
+  EMPTY (scaffold only): PYQ
+02.BANKING/1. IBPS/1.IBPS RRB PO
+  EMPTY (scaffold only): Precis, PYQ
+02.BANKING/1. IBPS/2.IBPS RRB SO
+  EMPTY (scaffold only): Precis, PYQ
+02.BANKING/1. IBPS/3.IBPS RRB Clerk
+  EMPTY (scaffold only): Precis, PYQ
+02.BANKING/1. IBPS/4.IBPS PO
+  EMPTY (scaffold only): Precis, Mock/TestSeries
+02.BANKING/1. IBPS/5.IBPS SO IT Officer
+  EMPTY (scaffold only): Precis, PYQ
+02.BANKING/1. IBPS/6.IBPS Clerk
+  EMPTY (scaffold only): Precis
+02.BANKING/1. IBPS/7.IBPS RRB GBO (Scale-II)
+  EMPTY (scaffold only): Precis, PYQ
+02.BANKING/1. IBPS/8.IBPS SO
+  EMPTY (scaffold only): Precis
+02.BANKING/10.UNION BANK/Union Bank Apprentice exam
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/10.UNION BANK/Union Bank SO
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/12.BIHAR STATE CO-OPERATIVE BANK/BIHAR SCB Clerk
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/12.BIHAR STATE CO-OPERATIVE BANK/BSCB Assistant
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/2.SBI/1.SBI Clerk
+  EMPTY (scaffold only): Precis
+02.BANKING/2.SBI/2.SBI SO
+  EMPTY (scaffold only): Precis, PYQ
+02.BANKING/2.SBI/3.SBI PO
+  EMPTY (scaffold only): Precis
+02.BANKING/2.SBI/4.SBI CBO (Circle Based Officer)
+  EMPTY (scaffold only): Precis
+02.BANKING/3. SEBI/1. SEBI GRADE A OFFICER (ASSISTANT MANAGER)
+  EMPTY (scaffold only): Guide, Precis
+02.BANKING/4.EXPORT CREDIT GURANTEE BOARD OF INDIA LTD (ECGC)/ECGC PO
+  EMPTY (scaffold only): Precis, Mock/TestSeries
+02.BANKING/5. RESERVE BANK OF INDIA/1. RBI GRADE B OFFICERS
+  EMPTY (scaffold only): Guide, Precis, Mock/TestSeries
+02.BANKING/5. RESERVE BANK OF INDIA/2. RBI ASSISTANT
+  EMPTY (scaffold only): Guide, Precis, Mock/TestSeries
+02.BANKING/7. BANK OF BARODA/1.BOB Probationary Officers (PO)
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/7. BANK OF BARODA/2.BOB  Specialist Officers (SO)
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/8.INDIAN BANK/1.INDIAN BANK Specialist Officer (SO)
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/8.INDIAN BANK/2.INDIAN BANK Local Bank Officer (LBO)
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/9.INDIA OVERSEAS BANK/1.IOB Local Bank Officer (LBO)
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+02.BANKING/9.INDIA OVERSEAS BANK/2.Indian Overseas Bank Apprentice
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/01. KENDRIYA VIDYALAYA SANGATHAN/01. Assistant Commissioner
+  EMPTY (scaffold only): PYQ
+03.TEACHING/01. KENDRIYA VIDYALAYA SANGATHAN/03. KVS TGT (Trained Graduate Teacher)
+  EMPTY (scaffold only): PYQ
+03.TEACHING/01. KENDRIYA VIDYALAYA SANGATHAN/05. KVS Principal
+  EMPTY (scaffold only): Precis
+03.TEACHING/01. KENDRIYA VIDYALAYA SANGATHAN/06. KVS Vice-Principal
+  EMPTY (scaffold only): Precis
+03.TEACHING/01. KENDRIYA VIDYALAYA SANGATHAN/07. KVS Librarian
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/02. NAVODAYA VIDYALAYA SAMITI/01. Assistant Commissioner
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/02. NAVODAYA VIDYALAYA SAMITI/02. Principal
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/02. NAVODAYA VIDYALAYA SAMITI/03. Vice-Principal
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/02. NAVODAYA VIDYALAYA SAMITI/04. PGT (Post Graduate Teacher)
+  EMPTY (scaffold only): Precis, Mock/TestSeries
+03.TEACHING/02. NAVODAYA VIDYALAYA SAMITI/05. TGT (Trained Graduate Teacher)
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/03. BPSC TRE/01. PGT
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/03. BPSC TRE/02. TGT
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/03. BPSC TRE/03. PRT
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/04. UTTAR PRADESH SECONDARY EDUCATION SERVICES SELECTION BOARD/01. UPTET
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/04. UTTAR PRADESH SECONDARY EDUCATION SERVICES SELECTION BOARD/02. UPTGT
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/04. UTTAR PRADESH SECONDARY EDUCATION SERVICES SELECTION BOARD/03. SUPER TET
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/04. UTTAR PRADESH SECONDARY EDUCATION SERVICES SELECTION BOARD/04. UP PGT
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/04. UTTAR PRADESH SECONDARY EDUCATION SERVICES SELECTION BOARD/05. UP LT
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/04. UTTAR PRADESH SECONDARY EDUCATION SERVICES SELECTION BOARD/06. UP GIC Lecturer
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/05. Madhya Pradesh Professional Examination Board/01. MP TET
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/06. Punjab State Council of Educational Research and Training/01. PSTET
+  EMPTY (scaffold only): Precis, PYQ
+03.TEACHING/07. Himachal Pradesh Board of School Education/01. HP TET
+  EMPTY (scaffold only): Precis
+03.TEACHING/08. Uttarakhand Board of School Education/01. UTET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/09. Board of School Education, Haryana/01. HTET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/10. Jammu Kashmir Public Service Commission/01. JKSSB
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/10. Jammu Kashmir Public Service Commission/02. JKPSC
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/10. Jammu Kashmir Public Service Commission/03. JKTET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/11. Rajasthan Public Service Commission/01. REET Grade I
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/11. Rajasthan Public Service Commission/02. REET Grade II
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/12. Gujarat State Education Board/01. Gujarat TET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/12. Gujarat State Education Board/02. Gujarat GSET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/12. Gujarat State Education Board/03. Gujarat TAT
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/13. Maharashtra State Council of Examination/01. MAHATET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/14. Jharkhand Staff Selection Commission/01. JSSC
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/14. Jharkhand Staff Selection Commission/02. JTET
+  EMPTY (scaffold only): Precis, PYQ, Mock/TestSeries
+03.TEACHING/15. Chhattisgarh Professional Examination Board/01. CG TET
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/16. West Bengal Board of Primary Education/01. WBTET
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/17. West Bengal School Service Commission/01. WBSSC SLST
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/18. Directorate of Secondary Education, Assam/01. Assam Teacher Eligibility Test
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/19. Arunachal Pradesh Public Service Commission/01. Arunachal Pradesh TET PGT
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/19. Arunachal Pradesh Public Service Commission/02. Arunachal Pradesh TET TGT
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/20. Meghalaya Education Department/01. Meghalaya TET
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/21. State Council of Educational Research and Training, Nagaland/01. Nagaland Teacher Eligibility Test
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/22. Department of Education, Manipur/01. Manipur TET (MTET)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/22. Department of Education, Manipur/02. Contract Lecturers GTs
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/22. Department of Education, Manipur/03. Primary Teachers (PTs)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/23. Teachers Recruitment Board Tripura/01. Tripura-TET
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/24. Mizoram Board of School Education/01. Mizoram TET
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/25. Board of Secondary Education (BSE), Odisha/01. OTET (Odisha Teacher Eligibility Test)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/25. Board of Secondary Education (BSE), Odisha/02. OSSTET (Odisha Secondary School Teacher Eligibility Test)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/26. Department of School Education, Government of Andhra Pradesh/01. Andhra Pradesh TET
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+03.TEACHING/27. School Education Department, Government of Telangana/01. Telangana TET
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/28. Teachers Recruitment Board, Tamil Nadu/01. TNTET (Tamil Nadu Teacher Eligibility Test)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/28. Teachers Recruitment Board, Tamil Nadu/02. PG TRB (Post Graduate Teacher Recruitment)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/28. Teachers Recruitment Board, Tamil Nadu/03. UG TRB (Graduate Teacher Recruitment)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/29. Kerala Pareeksha Bhavan/01. KTET Category 1 (Classes 1-5)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/29. Kerala Pareeksha Bhavan/02. KTET Category 2 (Classes 6-8)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/29. Kerala Pareeksha Bhavan/03. KTET Category 3 (Classes 9-10)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/29. Kerala Pareeksha Bhavan/04. KTET Category 4 (Language Teachers, Special Teachers and Physical Education Teachers)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/30. Department of School Education & Literacy, Karnataka/01. KPSC Teacher Recruitment Exam
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/30. Department of School Education & Literacy, Karnataka/02. KARTET
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/31. Goa Board of Secondary and Higher Secondary Education/01. Goa TET
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/32. Delhi Subordinate Services Selection Board/01. PRT (Primary)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/32. Delhi Subordinate Services Selection Board/02. TGT (Trained Graduate)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/32. Delhi Subordinate Services Selection Board/03. PGT (Post Graduate)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/33. Samagra Shiksha Abhiyan (SSA), Chandigarh/01. JBT (Junior Basic Teacher Primary Teacher)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/33. Samagra Shiksha Abhiyan (SSA), Chandigarh/02. TGT (Trained Graduate Teacher)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/33. Samagra Shiksha Abhiyan (SSA), Chandigarh/03. PGT (Post Graduate Teacher)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/34. Railway Recruitment Board/01. RRB Railway Teacher Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+03.TEACHING/35. Andaman and Nicobar Administration/01. Andaman and Nicobar TGT
+  EMPTY (scaffold only): Guide, Precis, PYQ
+05. UNIVERSITY GRANTS COMMISSION NATIONAL ELIGIBILITY TEST (UGC-NET)/01. National Testing Agency/01. Assistant Professor
+  EMPTY (scaffold only): Guide, Precis, PYQ
+05. UNIVERSITY GRANTS COMMISSION NATIONAL ELIGIBILITY TEST (UGC-NET)/01. National Testing Agency/02. JRF (Junior Research Fellowship)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+05. UNIVERSITY GRANTS COMMISSION NATIONAL ELIGIBILITY TEST (UGC-NET)/01. National Testing Agency/03. PHD
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/01. RRB (Railway Recruitment Board)/01. Nursing Superintendent
+  EMPTY (scaffold only): PYQ
+06.NURSING/02. AIIMS CRE/01. Medical Superintendent
+  EMPTY (scaffold only): PYQ
+06.NURSING/02. AIIMS CRE/03. CRE-4 (Senior Nursing Officer)
+  EMPTY (scaffold only): PYQ
+06.NURSING/03. Uttarakhand Medical Service Selection Board/01. Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/03. Uttarakhand Medical Service Selection Board/02. GNM & ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/03. Uttarakhand Medical Service Selection Board/03. Pharmacist
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/04. Health & Medical Education Department, J&K/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/04. Health & Medical Education Department, J&K/02. Female Multipurpose Health Worker (FMPHW)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/04. Health & Medical Education Department, J&K/03. Nursing Aid
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/04. Health & Medical Education Department, J&K/04. Pharmacist
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/05. Delhi Subordinate Services Selection Board (DSSSB)/01. DSSSB Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/06. Delhi Health & Family Welfare Department/01. Delhi NHM Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/07. Rajasthan Staff Selection Board/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ
+06.NURSING/07. Rajasthan Staff Selection Board/02. Community Health Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/07. Rajasthan Staff Selection Board/03. Nursing Tutors
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/08. Haryana Staff Selection Commission/01. Community Health Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/08. Haryana Staff Selection Commission/02. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/09. Himachal Pradesh Rajya Chayan Aayog (HP RCA)/01. Staff Nurses
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/09. Himachal Pradesh Rajya Chayan Aayog (HP RCA)/02. Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/10. Chandigarh Administration/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/10. Chandigarh Administration/02. Sister Grade II
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/10. Chandigarh Administration/03. PGIMER Chandigarh
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/11. Punjab Health & Family Welfare Department/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/11. Punjab Health & Family Welfare Department/02. PPSC Medical Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/12. Uttar Pradesh Government/01. Community Health Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/12. Uttar Pradesh Government/02. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/12. Uttar Pradesh Government/03. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/12. Uttar Pradesh Government/04. KGMU SGPGI for Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/12. Uttar Pradesh Government/05. Directorate General of Medical Education & Training
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/13. Bihar Technical Service Commission/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/13. Bihar Technical Service Commission/02. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/14. West Bengal Health Recruitment Board/01. Staff Nurse Grade II
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/15. Sikkim Public Service Commission/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/15. Sikkim Public Service Commission/02. Sister Grade-II
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/15. Sikkim Public Service Commission/03. Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/16. Directorate of Medical Education, Assam/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/16. Directorate of Medical Education, Assam/02. Community Health Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/16. Directorate of Medical Education, Assam/03. Grade-III (Non-Technical)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/17. Meghalaya Medical Services Recruitment Board/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/17. Meghalaya Medical Services Recruitment Board/02. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/18. Directorate of Health Services, Arunachal Pradesh/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/18. Directorate of Health Services, Arunachal Pradesh/02. Nursing Tutors Lecturers
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/19. Department of Health & Family Welfare, Nagaland/01. Staff Nurse (Class-III)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/19. Department of Health & Family Welfare, Nagaland/02. Medical Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/20. Directorate of Health Services, Manipur/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/20. Directorate of Health Services, Manipur/02. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/20. Directorate of Health Services, Manipur/03. Nursing Sister, Tutor etc
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/21. Mizoram Public Service Commission/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/21. Mizoram Public Service Commission/02. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/22. Health & Family Welfare Department, Tripura/01. Staff Nurses
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/22. Health & Family Welfare Department, Tripura/02. ANMs
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/22. Health & Family Welfare Department, Tripura/03. GNM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/23. Jharkhand Staff Selection Commission/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/24. Chhattisgarh Vyapam/01. CG Staff Nurse Exam
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/25. Odisha Subordinate Staff Selection Commission/01. Nursing Officer Exam
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/26. Directorate of Health Services, Maharashtra/01. Staff Nurse Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/26. Directorate of Health Services, Maharashtra/02. Community Health Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/27. Madhya Pradesh Employees Selection Board (Vyapam)/01. Staff Nursing
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/28. Gujarat Public Service Commission & Arogyasathi/01. Nursing Superintendent Tutor
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/28. Gujarat Public Service Commission & Arogyasathi/02. Staff Nurses
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/28. Gujarat Public Service Commission & Arogyasathi/03. Community Health Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/29. Telangana Medical Health and Services Recruitment Board/01. Staff Nurses
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/30. Health Medical & Family Welfare Department, Andhra Pradesh/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/30. Health Medical & Family Welfare Department, Andhra Pradesh/02. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/31. Medical Services Recruitment Board, Tamil Nadu/01. Staff Nurses
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/31. Medical Services Recruitment Board, Tamil Nadu/02. ANM
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/32. Kerala Public Service Commission/01. Staff Nurse Grade-II
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/32. Kerala Public Service Commission/02. Nursing Officer
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/33. Karnataka Public Service Commission/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/33. Karnataka Public Service Commission/02. Community Health Officers
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/34. Directorate of Health Services, Goa/01. Staff Nurse
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/34. Directorate of Health Services, Goa/02. Matron
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/34. Directorate of Health Services, Goa/03. Walk-in Interviews for specific posts
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/35. Directorate of Health Services, Andaman/01. Staff Nurses
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+06.NURSING/35. Directorate of Health Services, Andaman/02. ANMs
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+07.CIVIL SERVICES/UPSC/INDIAN ECONOMIC SERVICE
+  EMPTY (scaffold only): Mock/TestSeries
+08.ENGINEERING RECRUITMENT/1.IITs/GATE (Graduate Aptitude Test in Engineering)
+  EMPTY (scaffold only): Guide, Precis, PYQ
+08.ENGINEERING RECRUITMENT/2.UPSC/ESE (Engineering Services Examination)
+  EMPTY (scaffold only): Guide, Precis
+08.ENGINEERING RECRUITMENT/3.SSC/Staff Selection Commission Junior Engineer
+  EMPTY (scaffold only): Guide, Precis, PYQ
+08.ENGINEERING RECRUITMENT/4.RRB/Railway Recruitment Board Junior Engineer
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ
+08.ENGINEERING RECRUITMENT/5.ISRO/ScientistEngineer
+  EMPTY (scaffold only): Guide, Precis, PYQ
+08.ENGINEERING RECRUITMENT/5.ISRO/Technical Assistant
+  EMPTY (scaffold only): Guide, Precis, PYQ
+09.DEFENCE/3. ICG/1. ICG AC
+  EMPTY (scaffold only): PYQ
+09.DEFENCE/3. ICG/2. ICG NAVIK
+  EMPTY (scaffold only): PYQ
+09.DEFENCE/4. IND NAVY/1. INET
+  EMPTY (scaffold only): PYQ
+09.DEFENCE/4. IND NAVY/2. NAVY_S 10+2 B.TECH
+  EMPTY (scaffold only): PYQ, Mock/TestSeries
+09.DEFENCE/4. IND NAVY/3. TES (SSC TECH)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+09.DEFENCE/5. IND ARMY/1. JUDGE ADV GEN
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+09.DEFENCE/5. IND ARMY/3. TES (SSC TECH)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+09.DEFENCE/5. IND ARMY/4. IA JUNIOR COMMISSIONED OFFICE
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+09.DEFENCE/5. IND ARMY/6. ARMY ORDINANCE CORPS
+  EMPTY (scaffold only): PYQ
+09.DEFENCE/5. IND ARMY/7. IA NCC
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+09.DEFENCE/5. IND ARMY/8. TA
+  EMPTY (scaffold only): PYQ
+10. JUDICIARY EXAMS/27.Sikkim_Judicial_Services_(SJS)/01.Sikkim_High_Court
+  EMPTY (scaffold only): Precis
+11. INSURANCE EXAMS/1. Life Insurance Corporation of India (LIC)/1. LIC ADO (Apprentice Development Officer)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/1. Life Insurance Corporation of India (LIC)/2. LIC AAO (Assistant Administrative Officer)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/1. Life Insurance Corporation of India (LIC)/3. LIC HFL (Housing Finance Ltd)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/2. New India Assurance Company Limited (NIACL)/1. Administrative Officer (AO)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/2. New India Assurance Company Limited (NIACL)/2. Assistant
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/3. National Insurance Company Limited (NICL)/1. Administrative Officer (AO)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/4. Oriental Insurance Company Limited (OICL)/1. Administrative Officer (AO)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/5. United India Insurance Company (UIIC)/1. Administrative Officer (AO)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/6. Insurance Regulatory and Development Authority (IRDAI)/1. Assistant Manager
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/6. Insurance Regulatory and Development Authority (IRDAI)/2. Assistant
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/7. Employees State Insurance Corporation (ESIC)/1. Upper Division Clerk (UDC)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/7. Employees State Insurance Corporation (ESIC)/2. Stenographer
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/7. Employees State Insurance Corporation (ESIC)/3. Junior Engineer (JE)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/7. Employees State Insurance Corporation (ESIC)/4. Nursing Officer - Staff Nurse
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/7. Employees State Insurance Corporation (ESIC)/5. Doctors (IMO - GDMO)
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ
+11. INSURANCE EXAMS/8. General Insurance Corporation of India (GIC)/1. Assistant Manager - Scale I (SO)
+  EMPTY (scaffold only): Intro, PYQ
+11. INSURANCE EXAMS/9. United India Insurance Company Limited (UIICL)/1. Administrative Officer (AO)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/1. Reserve Bank of India (RBI)/1. Grade B Officers
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/1. Reserve Bank of India (RBI)/2. RBI Assistant
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/2. Intelligence Bureau (IB)/1. Assistant Central Intelligence Officer (ACIO)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/2. Intelligence Bureau (IB)/2. Security Assistant
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/2. Intelligence Bureau (IB)/3. Multi-Tasking Staff (MTS)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/3. Food Corporation of India (FCI)/1. Manager
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/3. Food Corporation of India (FCI)/2. Assistant Grade III
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/3. Food Corporation of India (FCI)/3. Junior Engineer (JE)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/3. Food Corporation of India (FCI)/4. Stenographer Grade-II
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/3. Food Corporation of India (FCI)/5. Typist
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/3. Food Corporation of India (FCI)/6. Watchman
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/4. Navodaya Vidyalaya Samiti (NVS)/1. Jr. Secretariat Assistant (HQ-RO Cadre)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/4. Navodaya Vidyalaya Samiti (NVS)/2. Jr. Secretariat Assistant
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/4. Navodaya Vidyalaya Samiti (NVS)/3. Lab Attendant
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/4. Navodaya Vidyalaya Samiti (NVS)/4. Multi-Tasking Staff (MTS)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/5. Kendriya Vidyalaya Sangathan (KVS)/1. Assistant Section Officer (ASO)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/5. Kendriya Vidyalaya Sangathan (KVS)/2. Administrative Officer
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/5. Kendriya Vidyalaya Sangathan (KVS)/3. Finance Officer
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/5. Kendriya Vidyalaya Sangathan (KVS)/4. Assistant Engineer
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/5. Kendriya Vidyalaya Sangathan (KVS)/5. Secretariat Assistant (Sr. and Jr.)
+  EMPTY (scaffold only): Intro, PYQ
+12. OTHER GOVERNMENT EXAMS/5. Kendriya Vidyalaya Sangathan (KVS)/6. Stenographer
+  EMPTY (scaffold only): Intro, PYQ
+13.INDIA POST/1.MTS
+  EMPTY (scaffold only): PYQ, Mock/TestSeries
+13.INDIA POST/2.Assistant Branch Postmaster (ABPM)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+13.INDIA POST/3.Dak Sevak
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+13.INDIA POST/4.Branch Postmaster (BPM)
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+14.BHABHA ATOMIC RESEARCH CENTRE/1.Scientific Officer
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+14.BHABHA ATOMIC RESEARCH CENTRE/2.Administration
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+14.BHABHA ATOMIC RESEARCH CENTRE/3.Accountant,
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+14.BHABHA ATOMIC RESEARCH CENTRE/4.Security
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+14.BHABHA ATOMIC RESEARCH CENTRE/5.Assistants
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+15.Indian Council of Agricultural Research (ICAR)- IARI/ASSISTANT
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+16. NATIONAL INFORMATICS CENTRE/1. SCIENTIST
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+16. NATIONAL INFORMATICS CENTRE/2. ENGINEER
+  EMPTY (scaffold only): Intro, Guide, Precis, PYQ, Mock/TestSeries
+16. NATIONAL INFORMATICS CENTRE/3. TECHNICAL ASSISTANT
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+17. ACCOUNTS AND COMMERCE/1. INSTITUTE OF CHARTERED ACCOUNTANTS OF INDIA/1. CHARTERED ACCOUNTANCY
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+17. ACCOUNTS AND COMMERCE/1. INSTITUTE OF CHARTERED ACCOUNTANTS OF INDIA/2. ASSOCIATION OF CHARTERED CERTIFIED ACCOUNTANTS
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+17. ACCOUNTS AND COMMERCE/2. INSTITUTE OF COMAPANY SECRETARIES OF INDIA/1. COMPANY SECRETARY
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+17. ACCOUNTS AND COMMERCE/3. THE CHARTERED FINANCIAL ANALYST/1. CHARTERED FINANCIAL ANALYST
+  EMPTY (scaffold only): Guide, Precis, PYQ
+17. ACCOUNTS AND COMMERCE/4. AMERICAN INSTITUTE OF CERTIFIED PUBLIC ACCOUNTANTS (AICPA)/1.CERTIFIED PUBLIC ACCOUNTANT
+  EMPTY (scaffold only): Guide, Precis, PYQ, Mock/TestSeries
+19.PSU MAHARATNA/1.Oil and Natural Gas Corporationá(ONGC)/ONGC Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/10.Power Finance Corporation Limited (PFCL)/PFCL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/11.Rural Electrification Corporation Limited (REC)/REC Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/12.Steel Authority of India Limited (SAIL)/SAIL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/13.Oil India Limited (OIL)/OIL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/14.Hindustan Aeronautics Limited (HAL )/HAL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/2.Bharat Heavy Electricals Limitedá(BHEL)/BHEL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/3.Bharat Petroleum Corporation Limited(BPCL)/BPCL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/4.Coal India Limitedá(CIL)/CIL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/5.Gas Authority of India Limitedá(GAIL)/GAIL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/6.Hindustan Petroleum Corporation Limitedá(HPCL)/HPCL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/7.Indian Oil Corporation Limitedá(IOCL)/IOCL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/8.National Thermal Power Corporationá(NTPC)/NTPC Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+19.PSU MAHARATNA/9.Power Grid Corporation of India (PGCIL)/PGCIL Recruitment
+  EMPTY (scaffold only): Guide, Precis, PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/1. BEL - BHARAT ELECTRONICS LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/10. RVNL - RAIL VIKAS NIGAM LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/11. RCF - RASHTRIYA CHEMICALS & FERTILIZERS LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/12. IRCON INTERNATIONAL
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/13. RITES LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/14. NFL - NATIONAL FERTILIZERS LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/15. HUDCO - HOUSING AND URBAN DEVELOPMENT CORPORATION
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/16. IREDA - INDIAN RENEWABLE ENERGY DEVELOPMENT AGENCY
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/17. CWC - CENTRAL WAREHOUSING CORPORATION
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/18. MAZAGON DOCKYARD LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/19. RCIL - RAILTEL CORPORATION OF INDIA LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/2. CONCOR - CONTAINER CORPORATION OF INDIA
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/20. SJVN LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/21. NHPC LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/22. SECI - SOLAR ENERGY CORPORATION OF INDIA
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/23. IRCTC - INDIAN RAILWAY CATERING AND TOURISM CORPORATION
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/24. IRFC - INDIAN RAILWAY FINANCE CORPORATION
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/25. NRL - NUMALIGARH REFINERY
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/3. EIL - ENGINEERS INDIA LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/4. NALCO - NATIONAL ALUMINIUM COMPANY
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/5. NBCC (INDIA) LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/6. NMDC - NATIONAL MINERAL DEVELOPMENT CORPORATION
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/7. NLC INDIA LIMITED (NEYVELI LIGNITE)
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/8. RINL - RASHTRIYA ISPAT NIGAM LIMITED
+  EMPTY (scaffold only): PYQ
+20. PUBLIC SECTOR UNDERTAKING NAVRATNA/9. SCI - SHIPPING CORPORATION OF INDIA
+  EMPTY (scaffold only): PYQ

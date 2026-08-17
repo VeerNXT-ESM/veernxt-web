@@ -1,0 +1,82 @@
+====================================================================================================
+PER-STATE / UT COVERAGE  (master-list target vs current resources_v2 content)
+====================================================================================================
+[state ] Andhra Pradesh                         target_bodies=  5  matched_in_db=  5 (100%)  db_resources=  198  db_distinct_bodies=  5
+[state ] Arunachal Pradesh                      target_bodies=  7  matched_in_db=  7 (100%)  db_resources=  338  db_distinct_bodies=  7
+[state ] Assam                                  target_bodies= 19  matched_in_db= 19 (100%)  db_resources=  323  db_distinct_bodies= 19
+[state ] Bihar                                  target_bodies= 10  matched_in_db= 10 (100%)  db_resources=  247  db_distinct_bodies= 10
+[state ] Chhattisgarh                           target_bodies= 13  matched_in_db= 13 (100%)  db_resources=  267  db_distinct_bodies= 13
+[state ] Goa                                    target_bodies=  8  matched_in_db=  8 (100%)  db_resources=  250  db_distinct_bodies=  9
+[state ] Gujarat                                target_bodies= 11  matched_in_db= 11 (100%)  db_resources=  301  db_distinct_bodies= 12
+[state ] Haryana                                target_bodies= 11  matched_in_db= 11 (100%)  db_resources=  276  db_distinct_bodies= 11
+[state ] Himachal Pradesh                       target_bodies= 11  matched_in_db= 11 (100%)  db_resources=  287  db_distinct_bodies= 11
+[state ] Jharkhand                              target_bodies= 10  matched_in_db= 10 (100%)  db_resources=  238  db_distinct_bodies=  9
+[state ] Karnataka                              target_bodies= 13  matched_in_db= 13 (100%)  db_resources=  242  db_distinct_bodies= 13
+[state ] Kerala                                 target_bodies= 13  matched_in_db= 13 (100%)  db_resources=  110  db_distinct_bodies= 13
+[state ] Madhya Pradesh                         target_bodies= 10  matched_in_db= 10 (100%)  db_resources=   99  db_distinct_bodies= 10
+[state ] Maharashtra                            target_bodies= 16  matched_in_db= 14 ( 88%)  db_resources=  179  db_distinct_bodies= 11
+[state ] Manipur                                target_bodies= 13  matched_in_db= 13 (100%)  db_resources=  166  db_distinct_bodies= 13
+[state ] Meghalaya                              target_bodies= 14  matched_in_db= 14 (100%)  db_resources=  201  db_distinct_bodies= 13
+[state ] Mizoram                                target_bodies= 14  matched_in_db= 12 ( 86%)  db_resources=  162  db_distinct_bodies= 12
+[state ] Nagaland                               target_bodies= 18  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Odisha                                 target_bodies= 12  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Punjab                                 target_bodies= 18  matched_in_db=  3 ( 17%)  db_resources=    1  db_distinct_bodies=  1
+[state ] Rajasthan                              target_bodies=  6  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Sikkim                                 target_bodies= 16  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Tamil Nadu                             target_bodies= 13  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Telangana                              target_bodies= 12  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Tripura                                target_bodies= 16  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Uttar Pradesh                          target_bodies= 13  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] Uttarakhand                            target_bodies= 12  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[state ] West Bengal                            target_bodies= 15  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] Andaman and Nicobar Islands            target_bodies= 25  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] CHANDIGARH                             target_bodies= 32  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] DADRA & NAGAR HAVELI AND DAMAN & DIU   target_bodies= 27  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] Delhi                                  target_bodies= 19  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] Jammu & Kashmir                        target_bodies= 29  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] Ladakh                                 target_bodies= 33  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] Lakshadwee p                           target_bodies= 30  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+[ut    ] Puducherry                             target_bodies= 35  matched_in_db=  0 (  0%)  db_resources=    0  db_distinct_bodies=  0
+
+====================================================================================================
+CENTRAL
+====================================================================================================
+Target: 226 conducting bodies, 446 exam rows
+Current DB: 0 resources (0 conducting-body groups, since we purged it and it's awaiting fresh re-upload)
+
+====================================================================================================
+STATES WITH BIGGEST GAPS (fewest target bodies matched, sorted worst first)
+====================================================================================================
+
+Nagaland — 0/18 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): Directorate of School Education, Gauhati High Court Kohima Bench, IBPS RRB, IBPS RRB (Nagaland Rural Bank), NHM Nagaland, Nagaland Board of School Education, Nagaland Forest Department, Nagaland Health & Family Welfare, Nagaland Health Department, Nagaland Information Commission, Nagaland Labour Department, Nagaland PSC/Agriculture Dept, Nagaland PSC/NSSB, Nagaland Police, Nagaland Public Service Commission, Nagaland Registrar Cooperative, Nagaland Soil & Water Conservation, Nagaland Village Council Election Dept
+
+Odisha — 0/12 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): BSE Odisha, IBPS RRB, NHM Odisha, OPRB, OPSC, OSSC, OSSSC, Odisha High Court, Odisha Police, Odisha Police/State Selection Board, Odisha Postal Circle, SSB Odisha
+
+Rajasthan — 0/6 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): IBPS RRB, RPSC, RSMSSB, Rajasthan Education, Rajasthan High Court, Rajasthan Police
+
+Sikkim — 0/16 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): High Court Sikkim, High Court of Sikkim, IBPS RRB, IBPS RRB Sikkim, SPSC, Sikkim Agriculture, Sikkim Agriculture Department, Sikkim Education, Sikkim Education Department, Sikkim Health Department, Sikkim Health Dept, Sikkim PSC, Sikkim Police, Sikkim Public Service Commission, Sikkim SSSC, Sikkim State Services
+
+Tamil Nadu — 0/13 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): IBPS RRB, IBPS RRB Tamil Nadu, Madras HC, Madras High Court, TN Agri Dept, TN Agriculture Department, TN MRB, TNPSC, TNUSRB, TRB, Tamil Nadu Medical Services, Tamil Nadu Uniformed Services, Teachers Recruitment Board
+
+Telangana — 0/12 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): DMHO Telangana, DSC Telangana, DST Telangana, IBPS RRB, IBPS RRB Telangana, TS Agri Dept, TS Agriculture Department, TSLPRB, TSPSC, Telangana HC, Telangana High Court, Telangana Medical
+
+Tripura — 0/16 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): IBPS RRB, IBPS RRB Tripura, TPSC, TPSC/TSSSC, TRBT, TSSSC, Tripura Agriculture, Tripura Agriculture Department, Tripura Education Department, Tripura HC, Tripura Health, Tripura Health Department, Tripura High Court, Tripura Police, Tripura Public Service Commission, Tripura Staff Selection Commission
+
+Uttar Pradesh — 0/13 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): Allahabad HC, Allahabad High Court, IBPS RRB, IBPS RRB UP, UP Agriculture Department, UP Basic Education, UP Basic Education Board, UP Health, UP Health Department, UPPRPB, UPPSC, UPSESSB, UPSSSC
+
+Uttarakhand — 0/12 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): IBPS RRB, IBPS RRB Uttarakhand, UBSE, UK Agriculture Department, UK Health Department, UK Health Dept, UKPSC, UKSSSC, Uttarakhand Education, Uttarakhand HC, Uttarakhand High Court, Uttarakhand Police
+
+West Bengal — 0/15 target bodies matched (0%), 0 resources in DB
+  Missing (in master list, no matching DB conducting_body): Calcutta HC, Calcutta High Court, IBPS RRB, IBPS RRB West Bengal, WB Agriculture Department, WB Agriculture Marketing Board, WB Health Department, WB Health Recruitment Board, WB Primary Education, WB School Service Commission, WB Secondary Education, WBBPE/WBBSE, WBPRB, WBPSC, WBSSC
+
+Punjab — 3/18 target bodies matched (17%), 1 resources in DB
+  Missing (in master list, no matching DB conducting_body): Agriculture Dept, Animal Husbandry, BFUHS/NHSRNC, Education Dept, Health Dept, Horticulture Dept, IBPS RRB, India Post, PPSC, PSEB, Punjab & Haryana HC, Punjab Forest & Wildlife, Punjab Public Service Commission, Punjab Subordinate Services, Rural Development
