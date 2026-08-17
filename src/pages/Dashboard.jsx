@@ -2,8 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark, Users, MessageSquare, User, Lock, Crown, ArrowRight, Gift } from 'lucide-react';
+import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark, Users, MessageSquare, User, Lock, Crown, ArrowRight, Gift, CheckCircle2, Compass, ListChecks } from 'lucide-react';
 import { getEffectiveTier, canViewVeerScore, canViewRecommendations, canGenerateCV, higherTier, TIERS } from '../lib/subscriptionAccess';
+import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import Select from '../components/ui/Select';
@@ -468,6 +469,20 @@ const Dashboard = () => {
 
           {/* Modal Form Content */}
           <form onSubmit={handleSaveProfile} style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            
+            {!isEmployer && (
+              <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 'var(--radius-md)', padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                  <ShieldCheck size={18} color="var(--ios-olive)" style={{ marginTop: '2px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, fontSize: '0.85rem', color: '#475569', lineHeight: 1.5 }}>
+                    Only basic identity details can be updated here. To update your physical standards, career preferences, or service details, you must recalculate your profile.
+                  </p>
+                </div>
+                <Button type="button" variant="secondary" onClick={() => navigate('/profiling')} style={{ width: '100%' }}>
+                  Recalculate Full Profile
+                </Button>
+              </div>
+            )}
             
             {/* Avatar Upload block */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: '#f8fafc', padding: '1rem', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0' }}>
@@ -1216,6 +1231,13 @@ const Dashboard = () => {
   const scoreUnlockStatus = statusFor('SCORE_UNLOCK');
   const cvAddonStatus = statusFor('CV_ADDON');
 
+  const rawProfile = profile?.raw_profile_data;
+  const insights = rawProfile ? getProfilingInsights(rawProfile, { context: 'dashboard' }) : [];
+  const careerDirection = insights.find((i) => i.label === 'Career Alignment');
+  const topStrengths = insights.filter((i) => i.label !== 'Career Alignment').slice(0, 3);
+  const transferableSkills = rawProfile ? getTransferableSkills(rawProfile) : [];
+  const pathsCount = recommendations.length;
+
 
 
   return (
@@ -1258,6 +1280,35 @@ const Dashboard = () => {
             </Button>
           </div>
         </div>
+
+        {/* Free insights — strengths, career direction, transferable skills, paths count */}
+        {!isEmployer && (
+          <div className="dashboard-insights-grid animate-fade-in" style={{ marginBottom: '2rem' }}>
+            <Card padding="sm" className="dashboard-insight-card">
+              <div className="card-top" style={{ marginBottom: '0.75rem' }}><CheckCircle2 size={18} color="var(--ios-olive)" /><span className="dashboard-card-label" style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--ios-olive)' }}>TOP STRENGTHS</span></div>
+              {topStrengths.length > 0 ? (
+                <ul className="dashboard-insight-list">
+                  {topStrengths.map((s, i) => <li key={i}><strong>{s.label}.</strong> {s.detail}</li>)}
+                </ul>
+              ) : <p className="card-desc">Strengths will appear here once your profile is loaded.</p>}
+            </Card>
+            <Card padding="sm" className="dashboard-insight-card">
+              <div className="card-top" style={{ marginBottom: '0.75rem' }}><Compass size={18} color="var(--ios-olive)" /><span className="dashboard-card-label" style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--ios-olive)' }}>CAREER DIRECTION</span></div>
+              <p className="card-desc">{careerDirection?.detail || 'Set your career preferences during profiling to see your direction here.'}</p>
+            </Card>
+            <Card padding="sm" className="dashboard-insight-card">
+              <div className="card-top" style={{ marginBottom: '0.75rem' }}><ListChecks size={18} color="var(--ios-olive)" /><span className="dashboard-card-label" style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--ios-olive)' }}>TRANSFERABLE SKILLS</span></div>
+              <ul className="dashboard-insight-list">
+                {transferableSkills.map((s, i) => <li key={i}>{s}</li>)}
+              </ul>
+            </Card>
+            <Card padding="sm" className="dashboard-insight-card dashboard-paths-card">
+              <div className="card-top" style={{ marginBottom: '0.75rem' }}><Target size={18} color="var(--ios-olive)" /><span className="dashboard-card-label" style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--ios-olive)' }}>CAREER PATHS IDENTIFIED</span></div>
+              <div className="dashboard-paths-stat">{pathsCount}</div>
+              <p className="card-desc">exams &amp; roles you&apos;re eligible for, based on your profile.</p>
+            </Card>
+          </div>
+        )}
 
         <div className="dashboard-grid">
           {/* Veer Score Card */}
@@ -1921,6 +1972,42 @@ const Dashboard = () => {
             right: -5px;
             opacity: 0.7;
           }
+        }
+
+        .dashboard-insights-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1rem;
+        }
+        @media (max-width: 1024px) {
+          .dashboard-insights-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 640px) {
+          .dashboard-insights-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        .dashboard-insight-card { display: flex; flex-direction: column; }
+        .dashboard-insight-list {
+          margin: 0;
+          padding-left: 1.1rem;
+          font-size: 0.82rem;
+          color: #555;
+          line-height: 1.5;
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+        .dashboard-insight-list strong { color: var(--ios-text); }
+        .dashboard-paths-card { align-items: flex-start; }
+        .dashboard-paths-stat {
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: var(--ios-olive);
+          line-height: 1;
+          margin-bottom: 0.35rem;
         }
       `}} />
     </div>
