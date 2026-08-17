@@ -7,6 +7,19 @@ import { cleanContentTitle } from '../lib/contentTitle';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 
+const INDIAN_STATES = [
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", 
+  "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", 
+  "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", 
+  "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", 
+  "Uttar Pradesh", "Uttarakhand", "West Bengal"
+];
+
+const INDIAN_UTS = [
+  "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli", "Daman and Diu", 
+  "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
+];
+
 const FILTER_CHIPS = [
   { key: 'all', label: 'All' },
   { key: 'my-exams', label: 'My Exams' },
@@ -33,6 +46,9 @@ const LearningCenter = () => {
   const [recommendedItems, setRecommendedItems] = useState([]);
   const [examProgress, setExamProgress] = useState({});
   const [activeFilterChip, setActiveFilterChip] = useState('all');
+
+  const [regionMode, setRegionMode] = useState('central'); // 'central' or 'state'
+  const [selectedStateMap, setSelectedStateMap] = useState('');
 
   // Infinite scroll state
   const PAGE_SIZE = 20;
@@ -241,10 +257,22 @@ const LearningCenter = () => {
     } else {
       query = supabase.from(table).select('*');
     }
-    if (table === 'resources_v2') query = query.eq('status', 'Published');
+    if (table === 'resources_v2') {
+      query = query.eq('status', 'Published');
 
-    if (!selectedExams.includes('all')) {
-      query = query.in('exam_name', selectedExams);
+      // State/department lives in conducting_body ("16. Meghalaya — 13.
+      // Meghalaya High Court"), not exam_name (just "2. High Court Assistant
+      // Grade II") — see the STATE EXAMS ingestion mapping fix. Central rows
+      // have a literal conducting_body of "CENTRAL EXAMS". quizzes has no
+      // conducting_body column at all (it's currently central-only content),
+      // so this filter only applies to resources_v2.
+      if (regionMode === 'state' || regionMode === 'ut') {
+        if (selectedStateMap) {
+          query = query.ilike('conducting_body', `%${selectedStateMap}%`);
+        }
+      } else if (regionMode === 'central') {
+        query = query.eq('conducting_body', 'CENTRAL EXAMS');
+      }
     }
     if (!selectedCategories.includes('all')) {
       const catFilters = selectedCategories.map(c => `category.eq.${c}`).join(',');
@@ -344,7 +372,7 @@ const LearningCenter = () => {
       fetchContent();
     }, 500);
     return () => clearTimeout(timer);
-  }, [searchQuery, selectedExams, selectedCategories]);
+  }, [searchQuery, selectedExams, selectedCategories, regionMode, selectedStateMap]);
 
   const renderCard = (item, type) => {
     let isLocked = false;
@@ -462,32 +490,6 @@ const LearningCenter = () => {
               </div>
             </div>
           </div>
-
-          <div className="sidebar-section">
-            <h4 className="filter-subtitle">Important Exams</h4>
-            <div className="checkbox-filter-group">
-              <label className="checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={selectedExams.includes('all')}
-                  onChange={() => handleExamCheckboxChange('all')}
-                />
-                <span className="checkbox-custom"></span>
-                <span className="checkbox-text">All Exams</span>
-              </label>
-              {exams.map(exam => (
-                <label key={exam} className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={selectedExams.includes(exam)}
-                    onChange={() => handleExamCheckboxChange(exam)}
-                  />
-                  <span className="checkbox-custom"></span>
-                  <span className="checkbox-text">{exam}</span>
-                </label>
-              ))}
-            </div>
-          </div>
         </aside>
 
         {/* Main Content */}
@@ -500,6 +502,99 @@ const LearningCenter = () => {
                 ? "We've selected learning material based on your profile and career matches."
                 : "Study guides, precis, previous-year papers and mock tests for every exam you're matched with."}
             </p>
+
+            <div className="region-toggle" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
+              <button 
+                onClick={() => setRegionMode('central')}
+                style={{ 
+                  padding: '0.75rem 1.5rem', 
+                  borderRadius: 'var(--radius-pill)',
+                  background: regionMode === 'central' ? '#4b6b32' : '#f1f5f9',
+                  color: regionMode === 'central' ? '#fff' : '#475569',
+                  border: 'none',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s'
+                }}
+              >
+                Central Exams
+              </button>
+              <button 
+                onClick={() => { setRegionMode('state'); setSelectedStateMap(''); }}
+                style={{ 
+                  padding: '0.75rem 1.5rem', 
+                  borderRadius: 'var(--radius-pill)',
+                  background: regionMode === 'state' ? '#4b6b32' : '#f1f5f9',
+                  color: regionMode === 'state' ? '#fff' : '#475569',
+                  border: 'none',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s'
+                }}
+              >
+                State Exams
+              </button>
+              <button 
+                onClick={() => { setRegionMode('ut'); setSelectedStateMap(''); }}
+                style={{ 
+                  padding: '0.75rem 1.5rem', 
+                  borderRadius: 'var(--radius-pill)',
+                  background: regionMode === 'ut' ? '#4b6b32' : '#f1f5f9',
+                  color: regionMode === 'ut' ? '#fff' : '#475569',
+                  border: 'none',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s'
+                }}
+              >
+                UT Exams
+              </button>
+            </div>
+
+            {(regionMode === 'state' || regionMode === 'ut') && (
+              <div className="state-grid-section" style={{ marginBottom: '3rem' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#0f172a', marginBottom: '1.25rem' }}>
+                  Select {regionMode === 'state' ? 'State' : 'Union Territory'}
+                </h3>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
+                  gap: '0.85rem'
+                }}>
+                  {(regionMode === 'state' ? INDIAN_STATES : INDIAN_UTS).map(loc => {
+                    const isSelected = selectedStateMap === loc;
+                    return (
+                      <button
+                        key={loc}
+                        onClick={() => {
+                          setSelectedStateMap(loc);
+                          document.getElementById('full-library')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }}
+                        style={{
+                          padding: '1rem 0.5rem',
+                          background: isSelected ? '#4b6b32' : '#fff',
+                          color: isSelected ? '#fff' : '#475569',
+                          border: `1px solid ${isSelected ? '#4b6b32' : '#e2e8f0'}`,
+                          borderRadius: 'var(--radius-md)',
+                          fontSize: '0.9rem',
+                          fontWeight: isSelected ? '700' : '600',
+                          cursor: 'pointer',
+                          transition: 'all 0.2s',
+                          boxShadow: isSelected ? 'var(--shadow-2)' : 'var(--shadow-1)',
+                          textAlign: 'center',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          lineHeight: '1.2'
+                        }}
+                      >
+                        {loc}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {heroReady && (matchedExamNames.length > 0 || totalResourceCount != null || heroSkillsCount > 0) && (
               <div className="hero-stat-line">
