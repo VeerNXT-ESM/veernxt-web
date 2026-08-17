@@ -422,43 +422,126 @@ const SecureReader = () => {
         }
         
         .reader-card {
-          padding: 4rem;
+          padding: 4rem 5rem;
           user-select: none;
-          line-height: 1.8;
-          font-size: 1.15rem;
-          color: #334155;
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
-          min-width: 0; /* Prevent flex overflow */
+          background: #ffffff;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+          border-radius: 12px;
+          border: 1px solid #e2e8f0;
+          min-width: 0;
           overflow-wrap: break-word;
           word-wrap: break-word;
         }
-        .reader-content h2, .reader-content h3 {
-          margin: 2rem 0 1rem;
-          color: #0f172a;
+        .reader-content {
+          font-family: 'Merriweather', serif;
+          line-height: 1.8;
+          font-size: 1.1rem;
+          color: #1e293b;
         }
+        .reader-content h1, .reader-content h2, .reader-content h3, .reader-content h4 {
+          font-family: 'Inter', sans-serif;
+          color: var(--ios-olive);
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          margin-top: 2.5rem;
+          margin-bottom: 1.25rem;
+          line-height: 1.3;
+        }
+        .reader-content h1 { font-size: 2.25rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem; }
+        .reader-content h2 { font-size: 1.75rem; }
+        .reader-content h3 { font-size: 1.4rem; }
+        
         .reader-content p { margin-bottom: 1.5rem; }
-        .reader-content img { max-width: 100%; height: auto; border-radius: 8px; }
-        .reader-content pre { white-space: pre-wrap; word-break: break-all; overflow-x: auto; max-width: 100%; }
+        
+        /* Premium Blockquote styling */
+        .reader-content blockquote {
+          margin: 2rem 0;
+          padding: 1.25rem 1.5rem;
+          background: #f8fafc;
+          border-left: 4px solid var(--ios-olive);
+          border-radius: 0 8px 8px 0;
+          font-style: italic;
+          color: #475569;
+        }
+        .reader-content blockquote p:last-child { margin-bottom: 0; }
+        
+        /* Highlight EX / Solution bolding */
+        .reader-content p strong:first-child {
+          color: var(--ios-olive);
+        }
+        
+        /* Lists */
+        .reader-content ul, .reader-content ol {
+          margin-bottom: 1.5rem;
+          padding-left: 1.5rem;
+        }
+        .reader-content li {
+          margin-bottom: 0.5rem;
+        }
+        .reader-content li::marker {
+          color: var(--ios-olive);
+          font-weight: 600;
+        }
+        
+        /* Inline code */
+        .reader-content code {
+          background: #f1f5f9;
+          padding: 0.2rem 0.4rem;
+          border-radius: 4px;
+          font-family: monospace;
+          font-size: 0.9em;
+          color: #ef4444;
+        }
+
+        .reader-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        
+        .reader-content pre { 
+          white-space: pre-wrap; 
+          word-break: break-all; 
+          overflow-x: auto; 
+          max-width: 100%; 
+          background: #0f172a;
+          color: #f8fafc;
+          padding: 1.5rem;
+          border-radius: 8px;
+          font-family: monospace;
+          font-size: 0.95rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        /* Table Styling */
         .reader-content table { 
           width: 100%; 
-          border-collapse: collapse; 
-          margin: 1.5em 0; 
+          border-collapse: separate; 
+          border-spacing: 0;
+          margin: 2rem 0; 
           display: block;
           overflow-x: auto;
           -webkit-overflow-scrolling: touch;
+          border-radius: 8px;
+          border: 1px solid #e2e8f0;
+          font-family: 'Inter', sans-serif;
+          font-size: 0.95rem;
         }
         .reader-content th, .reader-content td { 
-          border: 1px solid #cbd5e1; 
-          padding: 0.75rem 1.25rem; 
+          padding: 1rem 1.25rem; 
           text-align: left; 
-          word-break: normal;
-          overflow-wrap: normal;
-          min-width: 120px;
+          border-bottom: 1px solid #e2e8f0;
+          border-right: 1px solid #e2e8f0;
+        }
+        .reader-content th:last-child, .reader-content td:last-child {
+          border-right: none;
+        }
+        .reader-content tr:last-child td {
+          border-bottom: none;
         }
         .reader-content th { 
-          background-color: #f1f5f9; 
+          background-color: #f8fafc; 
           font-weight: 600; 
-          color: #0f172a; 
+          color: #334155; 
+        }
+        .reader-content tr:nth-child(even) td {
+          background-color: #fcfcfd;
         }
         
         .reader-footer {
