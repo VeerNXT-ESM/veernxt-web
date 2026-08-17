@@ -2,15 +2,11 @@
 
 **Purpose:** Handoff document, updated after the "tonight" session referenced in the previous version of this report. Covers: three landing-page/theme bugs found and fixed, a real query bug caught before shipping the Central/State/UT Learning Center filter, and — the largest piece — migrating the entire R2 storage account away from a developer (`souvikgupta64@gmail.com`, per git history) who's gone unreachable, onto a bucket the team fully controls.
 
-Everything from tonight — landing-page bugs, Central/State/UT filter fix, the R2 account migration and its two scripts (`scripts/migrate-r2-account.js`, `scripts/cutover-r2-urls.js`) — **is committed and pushed.** See §5 for the exact git state.
+Everything from tonight — landing-page bugs, Central/State/UT filter fix, the R2 account migration and its two scripts (`scripts/migrate-r2-account.js`, `scripts/cutover-r2-urls.js`), this report itself — **is committed and pushed.** See §5 for the exact git state.
 
-**⚠️ Vercel env vars were updated** (user confirmed) to the new R2 bucket's credentials — that part of the migration is done.
+**R2 migration is fully done**: Vercel env vars updated (user confirmed) and the CORS gap that broke resource loading right after cutover has a fix in hand — see §3.1. **Not yet independently re-verified live** (no browser access here) — worth a quick real click-through before trusting it fully closed.
 
-**⚠️ New issue found right after the Vercel update, needs a dashboard action**: the new R2 bucket has **no CORS policy**, so every direct browser `fetch()` to it (chapter JSON, images — `SecureReader.jsx` fetches these client-side straight from the R2 public URL, not proxied through the server) is blocked by the browser with a CORS error. This is why resources stopped showing up right after the cutover — not a code bug, a bucket configuration gap that never existed on the old bucket. **Fix**: Cloudflare dashboard → R2 → the bucket → Settings → CORS Policy → add:
-```json
-[{ "AllowedOrigins": ["*"], "AllowedMethods": ["GET", "HEAD"], "AllowedHeaders": ["*"], "MaxAgeSeconds": 3600 }]
-```
-Can't be done via the R2 API token in `.env` — it's scoped to Object Read & Write only, `GetBucketCors`/`PutBucketCors` returned `AccessDenied`. Needs the dashboard specifically. **Not yet confirmed fixed** — waiting on this to be applied and re-tested live.
+**🎯 Next session starts here**: user wants to open `/admin` and actually look at the resources currently in the catalog — a real audit of what's there, not just the row/object counts already verified during the migration. No specific findings yet; this is the starting point, not a known issue.
 
 ---
 
@@ -53,21 +49,37 @@ Someone (not this session originally) had built a Central/State/UT toggle + stat
 
 **Both migration scripts are real, reusable tools** (kept in the repo, not deleted) in case a similar cross-account move is ever needed again.
 
+### 3.1 CORS gap — found right after Vercel cutover, fix given, not yet re-verified
+
+Once Vercel's env vars were updated to the new bucket, resources stopped loading — a new, real issue, not the same as anything above. Root cause: the new bucket had no CORS policy, so the browser blocked every direct `fetch()` `SecureReader.jsx` makes straight to the R2 public URL for chapter JSON/images (never proxied through the server). The old bucket had this configured; a brand-new bucket doesn't, by default.
+
+Can't be fixed via the R2 API token in `.env` — it's scoped to Object Read & Write only, `GetBucketCors`/`PutBucketCors` both returned `AccessDenied`. Needs the Cloudflare dashboard specifically. Corrected policy handed off (the user's first draft only had `http://localhost:3000`, which isn't even this project's real dev port — confirmed via `vite.config.js`, it's `8080`):
+```json
+[
+  {
+    "AllowedOrigins": ["https://veernxt.in", "https://www.veernxt.in", "http://localhost:8080"],
+    "AllowedMethods": ["GET", "HEAD"],
+    "AllowedHeaders": ["*"],
+    "MaxAgeSeconds": 3600
+  }
+]
+```
+`www.veernxt.in` matters most — that's the exact origin the real CORS error was thrown from (`www` and bare domain are different origins for CORS purposes). **Status: guidance given, not yet confirmed applied or re-tested live** — first thing to check next time if resource pages still look broken.
+
 ---
 
-## 4. Still outstanding from this migration
+## 4. Still outstanding
 
-1. **Vercel env vars not updated** — see the banner at the top. Local `.env` is correct; the deployed app isn't yet. This is the single most important thing to do before anyone touches content ingestion again, otherwise new uploads will silently try to write to a bucket the team can't administer.
+1. **CORS fix (§3.1)** — confirm applied, re-test live.
 2. Consider whether to pursue reclaiming the *old* Cloudflare account (support ticket, proving ownership) now that it's no longer urgent — no rush, since the app no longer depends on it, but the ~47GB sitting there costs whoever's account it's on real money each month.
-3. `scripts/migrate-r2-account.js` / `scripts/cutover-r2-urls.js` need to be committed (see banner).
 
 ---
 
 ## 5. Git state
 
-**Committed and pushed** (in order, today + tonight): `669dd70`, `1ccad8d`, `05d9d07`, `b14a740`, `6b3a552` (landing FOUC fix), `6100223` (hero poster fix), `201fd82` (Central/State/UT filter), `a04ffe7` (body theme sync fix).
+**Committed and pushed** (in order, today + tonight): `669dd70`, `1ccad8d`, `05d9d07`, `b14a740`, `6b3a552` (landing FOUC fix), `6100223` (hero poster fix), `201fd82` (Central/State/UT filter), `a04ffe7` (body theme sync fix), `32c74d8` (R2 migration scripts), `d9b2f02` (this report).
 
-**Not committed**: `scripts/migrate-r2-account.js`, `scripts/cutover-r2-urls.js` (§3).
+Nothing outstanding — working tree is clean except the items below (deliberately never committed).
 
 Still untracked, unrelated, deliberately excluded from every commit (separate visual-asset-generation workstream): `generate_veernxt_assets.py`, `image-generation.txt`, `veernxt_assets/`, `public/veernxt_assets/`.
 
@@ -104,8 +116,7 @@ Still untracked, unrelated, deliberately excluded from every commit (separate vi
 
 ## 9. Suggested pickup order next time
 
-1. Update Vercel's env vars to the new R2 bucket (§4.1) — do this first, before any content work.
-2. Commit the two migration scripts (§5).
-3. Spot-check the live site (not just API-level checks) — Learning Center filters, a few resource pages, thumbnails.
-4. Mock Test/PYQ parser investigation (§8).
-5. Central/UT exam ingestion, once Mock/PYQ is sorted or explicitly deprioritized.
+1. **Confirm the CORS fix (§3.1) is applied and resources actually load live** — quick sanity check before anything else.
+2. **`/admin` resource audit** — the explicit starting point for the next session. Open the admin panel and actually look at what's in the catalog now that the migration + cutover are done: does it look right, are there obvious gaps or mislabeled entries, does the Resource Manager (bulk rename/recategorize, built earlier this session) hold up against the real post-migration data. No known issues yet — this is discovery, not a fix list.
+3. Mock Test/PYQ parser investigation (§8) — still the big deferred feature.
+4. Central/UT exam ingestion, once Mock/PYQ is sorted or explicitly deprioritized.
