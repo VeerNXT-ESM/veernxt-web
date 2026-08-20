@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "name": "Testbook PYP",
+      "module": "testbook_pyp.js",
+      "enabled": true
+    },
+    {
+      "name": "Adda247 PYP",
+      "module": "adda247_pyp.js",
+      "enabled": true
+    },
+    {
+      "name": "Oliveboard PYP",
+      "module": "oliveboard_pyp.js",
+      "enabled": true
+    }
+  ]
+}

@@ -11,9 +11,11 @@ import { uploadFilesToR2, R2_PUBLIC_URL } from '../../lib/r2Uploader';
 
 const THUMBNAIL_THEMES = [
   { id: 'default', name: 'Auto Extracted from Docx', path: '' },
-  { id: 'green', name: 'Royal Green Theme (Default)', path: '/thumbnils/thumbnil royal green.png' },
-  { id: 'blue', name: 'Royal Blue Theme', path: '/thumbnils/thumbnil royal blue.png' },
-  { id: 'red', name: 'Royal Red Theme', path: '/thumbnils/thumbnil royal red.png' }
+  { id: 'guide', name: 'Guide Theme (Royal Green)', path: '/thumbnails/bg_guide.jpg' },
+  { id: 'intro', name: 'Intro Theme (Royal Blue)', path: '/thumbnails/bg_intro.jpg' },
+  { id: 'pyq', name: 'PYQ Theme (Burgundy)', path: '/thumbnails/bg_pyq.jpg' },
+  { id: 'mock', name: 'Mock Theme (Charcoal)', path: '/thumbnails/bg_mock.jpg' },
+  { id: 'precis', name: 'Precis Theme (Gold)', path: '/thumbnails/bg_precis.jpg' }
 ];
 
 // Folder-name → category detection, checked against the whole relative
@@ -122,7 +124,7 @@ export default function AdminDriveIngestion() {
   const [isSingleUploadModalOpen, setIsSingleUploadModalOpen] = useState(false);
   const [selectedSingleFiles, setSelectedSingleFiles] = useState([]);
   const [singleUploadSubject, setSingleUploadSubject] = useState('');
-  const [singleUploadTheme, setSingleUploadTheme] = useState(THUMBNAIL_THEMES[1]); // Default Royal Green
+  const [singleUploadTheme, setSingleUploadTheme] = useState(THUMBNAIL_THEMES[1]); // Default Guide Theme
   const [singleUploadCaption, setSingleUploadCaption] = useState('');
   const previewCanvasRef = useRef(null);
 
@@ -435,8 +437,6 @@ export default function AdminDriveIngestion() {
   // BATCH FOLDER UPLOAD SELECTION (Any level)
   // ----------------------------------------------------
   const processFolderFiles = (docxFiles) => {
-    const defaultRoyalGreenTheme = THUMBNAIL_THEMES[1]; // Royal Green Theme Default
-
     const newQueueItems = docxFiles.map(file => {
       const relPath = file.webkitRelativePath || file.relativePath || file.name;
       const parts = relPath.split('/').map(p => p.trim()).filter(Boolean);
@@ -488,6 +488,13 @@ export default function AdminDriveIngestion() {
         ? `${examNameBase} — ${postCategorySegments.join(' — ')}`
         : examNameBase;
 
+      // Automatically assign correct thumbnail theme based on category
+      let themeToUse = THUMBNAIL_THEMES.find(t => t.id === 'guide'); // Default fallback
+      if (category === 'Mock Test') themeToUse = THUMBNAIL_THEMES.find(t => t.id === 'mock');
+      else if (category === 'PYQ') themeToUse = THUMBNAIL_THEMES.find(t => t.id === 'pyq');
+      else if (category === 'Precis') themeToUse = THUMBNAIL_THEMES.find(t => t.id === 'precis');
+      else if (category === 'Intro') themeToUse = THUMBNAIL_THEMES.find(t => t.id === 'intro');
+
       return {
         file,
         id: Math.random().toString(36).substring(7),
@@ -498,7 +505,7 @@ export default function AdminDriveIngestion() {
         category: category,
         materialFolder: lastFolder,
         subject: docTitle,
-        theme: defaultRoyalGreenTheme, // Default Royal Green for folder drops
+        theme: themeToUse,
         caption: autoCaption,
         status: duplicate ? 'skipped' : 'pending',
         progress: duplicate ? 100 : 0,
