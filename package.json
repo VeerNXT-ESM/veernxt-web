@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1103.0",
+    "@google/generative-ai": "^0.24.1",
     "@supabase/supabase-js": "^2.105.1",
     "@xmldom/xmldom": "^0.9.11",
     "axios": "^1.15.2",
@@ -20,6 +21,7 @@
     "jszip": "^3.10.1",
     "lucide-react": "^1.14.0",
     "motion": "^12.23.24",
+    "openai": "^7.4.0",
     "pg": "^8.22.0",
     "razorpay": "^2.9.2",
     "react": "^19.2.5",
