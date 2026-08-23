@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { ArrowLeft, RefreshCw, X, Package, Truck, CheckCircle2, Ban } from 'lucide-react';
+import { RefreshCw, X, Package, Truck, CheckCircle2, Ban } from 'lucide-react';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -84,7 +84,6 @@ const AdminRewardsQueue = () => {
   return (
     <div className="arq-wrapper">
       <header className="arq-header">
-        <Link to="/admin" className="arq-back"><ArrowLeft size={16} /> Back to Admin</Link>
         <h1>Rewards Redemption Queue</h1>
         <button type="button" className="arq-refresh" onClick={fetchRedemptions}>
           <RefreshCw size={14} className={loading ? 'arq-spin' : ''} /> Refresh
@@ -207,10 +206,8 @@ const AdminRewardsQueue = () => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .arq-wrapper {
-          padding: 2.5rem;
-          max-width: 1200px;
-          margin: 0 auto;
-          font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+          font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+          color: var(--admin-text);
         }
         .arq-header {
           display: flex;
@@ -218,28 +215,18 @@ const AdminRewardsQueue = () => {
           gap: 1.5rem;
           margin-bottom: 1.5rem;
         }
-        .arq-header h1 { font-size: 1.4rem; margin: 0; flex: 1; }
-        .arq-back {
-          display: flex;
-          align-items: center;
-          gap: 0.4rem;
-          color: #64748b;
-          text-decoration: none;
-          font-size: 0.85rem;
-          font-weight: 600;
-        }
-        .arq-back:hover { color: #0f172a; }
+        .arq-header h1 { font-size: 1.4rem; margin: 0; flex: 1; color: var(--admin-text); }
         .arq-refresh {
           display: flex;
           align-items: center;
           gap: 0.4rem;
-          background: #f1f5f9;
-          border: none;
+          background: var(--surface-alt);
+          border: 1px solid var(--border);
           padding: 0.5rem 1rem;
           border-radius: 8px;
           font-size: 0.8rem;
           font-weight: 700;
-          color: #475569;
+          color: var(--admin-text-muted);
           cursor: pointer;
         }
         .arq-tabs {
@@ -254,56 +241,56 @@ const AdminRewardsQueue = () => {
           gap: 0.4rem;
           padding: 0.5rem 1rem;
           border-radius: 999px;
-          border: 1px solid #e2e8f0;
-          background: white;
+          border: 1px solid var(--border);
+          background: var(--surface);
           font-size: 0.8rem;
           font-weight: 700;
-          color: #64748b;
+          color: var(--admin-text-muted);
           cursor: pointer;
         }
         .arq-tab.active {
-          background: #1F3A2E;
-          border-color: #1F3A2E;
-          color: white;
+          background: var(--admin-accent);
+          border-color: var(--admin-accent);
+          color: #06281c;
         }
         .arq-tab-count {
-          background: rgba(0,0,0,0.08);
+          background: rgba(255,255,255,0.08);
           border-radius: 999px;
           padding: 0.05rem 0.5rem;
           font-size: 0.7rem;
         }
-        .arq-tab.active .arq-tab-count { background: rgba(255,255,255,0.2); }
-        .arq-loading, .arq-empty { text-align: center; padding: 3rem; color: #94a3b8; }
+        .arq-tab.active .arq-tab-count { background: rgba(6,40,28,0.2); }
+        .arq-loading, .arq-empty { text-align: center; padding: 3rem; color: var(--admin-text-muted); }
         .arq-table {
           width: 100%;
           border-collapse: collapse;
-          background: white;
-          border-radius: 16px;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
         .arq-table th {
-          background: #f8fafc;
+          background: var(--surface-alt);
           padding: 0.85rem 1rem;
           font-size: 0.72rem;
           font-weight: 800;
-          color: #475569;
+          color: var(--admin-text-muted);
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          border-bottom: 2px solid #e2e8f0;
+          border-bottom: 1px solid var(--border);
           text-align: left;
         }
         .arq-table td {
           padding: 1rem;
-          border-bottom: 1px solid #f1f5f9;
+          border-bottom: 1px solid var(--border);
           font-size: 0.85rem;
-          color: #334155;
+          color: var(--admin-text);
         }
         .arq-row { cursor: pointer; }
-        .arq-row:hover { background: #f8fafc; }
-        .arq-item-title { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: #0f172a; }
-        .arq-muted { color: #94a3b8; font-size: 0.78rem; }
-        .arq-view { color: #1F3A2E; font-weight: 700; font-size: 0.78rem; text-align: right; }
+        .arq-row:hover { background: var(--surface-alt); }
+        .arq-item-title { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--admin-text); }
+        .arq-muted { color: var(--admin-text-muted); font-size: 0.78rem; }
+        .arq-view { color: var(--admin-accent); font-weight: 700; font-size: 0.78rem; text-align: right; }
         .arq-status {
           font-size: 0.68rem;
           font-weight: 800;
@@ -311,17 +298,17 @@ const AdminRewardsQueue = () => {
           border-radius: 999px;
           text-transform: uppercase;
         }
-        .arq-status-pending { background: #fef3c7; color: #92400e; }
-        .arq-status-approved { background: #dbeafe; color: #1e40af; }
-        .arq-status-shipped { background: #e0e7ff; color: #4338ca; }
-        .arq-status-delivered { background: #d1fae5; color: #065f46; }
-        .arq-status-cancelled { background: #fee2e2; color: #991b1b; }
+        .arq-status-pending { background: var(--admin-warn-bg); color: var(--admin-warn); }
+        .arq-status-approved { background: rgba(96,165,250,0.15); color: #93c5fd; }
+        .arq-status-shipped { background: rgba(167,139,250,0.15); color: #c4b5fd; }
+        .arq-status-delivered { background: var(--admin-accent-soft); color: var(--admin-accent); }
+        .arq-status-cancelled { background: var(--admin-danger-bg); color: var(--admin-danger); }
         .arq-spin { animation: arq-spin 1s linear infinite; }
         @keyframes arq-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .arq-modal-backdrop {
           position: fixed;
           inset: 0;
-          background: rgba(15,23,42,0.45);
+          background: rgba(0,0,0,0.6);
           backdrop-filter: blur(6px);
           display: flex;
           align-items: center;
@@ -330,47 +317,50 @@ const AdminRewardsQueue = () => {
           padding: 1.5rem;
         }
         .arq-modal-card {
-          background: white;
-          border-radius: 24px;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 18px;
           width: 100%;
           max-width: 520px;
           max-height: 90vh;
           overflow-y: auto;
-          box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);
+          box-shadow: var(--shadow-3);
         }
         .arq-modal-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: 1.5rem 1.75rem;
-          border-bottom: 1px solid #f1f5f9;
+          border-bottom: 1px solid var(--border);
         }
-        .arq-modal-header h3 { font-size: 1.05rem; margin: 0; color: #0f172a; }
-        .arq-modal-close { background: none; border: none; color: #94a3b8; cursor: pointer; }
+        .arq-modal-header h3 { font-size: 1.05rem; margin: 0; color: var(--admin-text); }
+        .arq-modal-close { background: none; border: none; color: var(--admin-text-muted); cursor: pointer; }
         .arq-modal-body { padding: 1.5rem 1.75rem; display: flex; flex-direction: column; gap: 1rem; }
         .arq-detail-row {
           display: flex;
           justify-content: space-between;
           gap: 1rem;
           font-size: 0.82rem;
-          color: #334155;
+          color: var(--admin-text);
         }
-        .arq-detail-row > span:first-child { color: #94a3b8; font-weight: 700; flex-shrink: 0; }
+        .arq-detail-row > span:first-child { color: var(--admin-text-muted); font-weight: 700; flex-shrink: 0; }
         .arq-detail-row > span:last-child { text-align: right; }
-        .arq-field label { display: block; font-size: 0.72rem; font-weight: 800; color: #475569; margin-bottom: 0.35rem; }
+        .arq-field label { display: block; font-size: 0.72rem; font-weight: 800; color: var(--admin-text-muted); margin-bottom: 0.35rem; }
         .arq-field input, .arq-field textarea {
           width: 100%;
           padding: 0.65rem 0.85rem;
           border-radius: 10px;
-          border: 1px solid #cbd5e1;
+          border: 1px solid var(--border);
+          background: var(--surface-alt);
+          color: var(--admin-text);
           font-size: 0.85rem;
           font-family: inherit;
           outline: none;
         }
         .arq-error {
-          background: #fef2f2;
-          color: #ef4444;
-          border: 1px solid #fee2e2;
+          background: var(--admin-danger-bg);
+          color: var(--admin-danger);
+          border: 1px solid var(--admin-danger-bg);
           padding: 0.6rem 0.85rem;
           border-radius: 10px;
           font-size: 0.8rem;
@@ -380,7 +370,7 @@ const AdminRewardsQueue = () => {
           flex-wrap: wrap;
           gap: 0.6rem;
           padding: 1.25rem 1.75rem;
-          border-top: 1px solid #f1f5f9;
+          border-top: 1px solid var(--border);
         }
         .arq-btn {
           display: flex;
@@ -394,8 +384,8 @@ const AdminRewardsQueue = () => {
           cursor: pointer;
         }
         .arq-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .arq-btn-primary { background: #1F3A2E; color: white; }
-        .arq-btn-danger { background: #fef2f2; color: #ef4444; }
+        .arq-btn-primary { background: var(--admin-accent); color: #06281c; }
+        .arq-btn-danger { background: var(--admin-danger-bg); color: var(--admin-danger); }
       `}} />
     </div>
   );

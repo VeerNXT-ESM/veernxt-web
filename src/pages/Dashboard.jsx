@@ -25,7 +25,21 @@ const PreparationPanel = ({ exam }) => {
       try {
         let resData = await supabase.from('resources_v2').select('*').eq('exam_name', exam.exam_name).limit(3);
         let quizData = await supabase.from('quizzes').select('*').eq('exam_name', exam.exam_name).limit(3);
-        
+
+        // resources_v2/quizzes exam_name carries a "N. " ordinal prefix from
+        // the CMS ingestion that the recommendation engine's exam_name never
+        // has, so the exact match above misses real, published content.
+        // Retry as a substring match before falling back to the much looser
+        // career_track keyword below.
+        if (!resData.data || resData.data.length === 0) {
+          const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
+          resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${escaped}%`).limit(3);
+        }
+        if (!quizData.data || quizData.data.length === 0) {
+          const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
+          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`).limit(3);
+        }
+
         // Fallback: If no direct match, fetch generalized prep for this career track
         if ((!resData.data || resData.data.length === 0) && exam.career_track) {
           let fallbackTerm = exam.exam_name.split(' ')[0]; 

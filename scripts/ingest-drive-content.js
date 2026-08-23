@@ -32,6 +32,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import JSZip from 'jszip';
 import { DOMParser } from '@xmldom/xmldom';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
@@ -71,12 +72,13 @@ const RESOURCES_V2_ALLOWED_CATEGORIES = new Set(['Guide', 'Intro', 'Precis']);
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  const out = { root: null, limit: Infinity, dryRun: false, concurrency: 6 };
+  const out = { root: null, limit: Infinity, dryRun: false, concurrency: 6, onlyCategory: null };
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--root') out.root = args[++i];
     else if (args[i] === '--limit') out.limit = parseInt(args[++i], 10);
     else if (args[i] === '--dry-run') out.dryRun = true;
     else if (args[i] === '--concurrency') out.concurrency = parseInt(args[++i], 10);
+    else if (args[i] === '--only-category') out.onlyCategory = args[++i];
   }
   if (!out.root) {
     console.error('Usage: node scripts/ingest-drive-content.js --root "<folder>" [--limit N] [--dry-run] [--concurrency N]');
@@ -108,10 +110,27 @@ function findCategoryFolder(folderLevels) {
   return { index: folderLevels.length - 1, category: 'Guide' };
 }
 
+// Source folder names carry a "N. " or "N." list-ordinal (content team's
+// own filing convention, e.g. "2. Assistant", "11. INSURANCE EXAMS") that
+// the rebuilt exams/lc_conducting_bodies tables this session (see
+// rebuild_exams_from_datamap.mjs, preview_conducting_body_names.mjs)
+// deliberately don't carry. Stripped here so newly-ingested resources_v2
+// rows use the same clean convention -- without this, exam_name still
+// substring-matches fine (Dashboard.jsx/ProfilingResults.jsx's ilike
+// fallback), but the raw prefix would look inconsistent everywhere it's
+// displayed directly (admin tables, resource titles).
+function stripOrdinal(segment) {
+  const stripped = segment.replace(/^\s*\d+\.?\s*/, '').trim() || segment;
+  // Some source folders use underscores as filename-safe word separators
+  // (e.g. "Uttar_Pradesh_Public_Service_Commission_(UPPSC)") -- not a real
+  // naming choice, so normalize to spaces like every other folder already uses.
+  return stripped.replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
 function deriveMetadataFromPath(folderLevels) {
   const { index: categoryIndex, category } = findCategoryFolder(folderLevels);
-  const identitySegments = folderLevels.slice(0, categoryIndex);
-  const postCategorySegments = folderLevels.slice(categoryIndex + 1);
+  const identitySegments = folderLevels.slice(0, categoryIndex).map(stripOrdinal);
+  const postCategorySegments = folderLevels.slice(categoryIndex + 1).map(stripOrdinal);
   const conductingBody = identitySegments.slice(0, 2).join(' — ') || 'General Body';
   const examNameBase = identitySegments.length > 2
     ? identitySegments.slice(2).join(' — ')
@@ -174,7 +193,7 @@ const MIME_BY_EXT = {
   bmp: 'image/bmp', emf: 'image/x-emf', wmf: 'image/x-wmf', tif: 'image/tiff', tiff: 'image/tiff',
 };
 
-async function processDocxBuffer(buffer, fileName, fileSize, options) {
+export async function processDocxBuffer(buffer, fileName, fileSize, options) {
   const { examName, category, subject, conductingBody, drivePath } = options;
 
   const zip = new JSZip();
@@ -393,6 +412,13 @@ function walkDocxFiles(root) {
         // Skip Word's own hidden lock/temp files (~$filename.docx), created
         // while a document is open — same extension, not real zip content.
         if (entry.name.startsWith('~$')) continue;
+        // "_PENDING_CONTENT.docx" is the content team's placeholder sentinel
+        // for not-yet-written content (verified: one such file's entire text
+        // is just "<Exam Name> — Intro", nothing else) -- 3,753 of these
+        // exist across the whole CENTRAL/STATE/UT tree. exam_master_datamap.
+        // json's content_completeness field counts file PRESENCE, not
+        // whether the file is real, so this check can't be skipped.
+        if (entry.name === '_PENDING_CONTENT.docx') continue;
         const ext = path.extname(entry.name).toLowerCase();
         if (ext === '.docx' || ext === '.doc') {
           results.push({ fullPath: full, fileName: entry.name, folderLevels: relParts });
@@ -482,6 +508,7 @@ async function main() {
   for (const f of allFiles) {
     const { category } = deriveMetadataFromPath(f.folderLevels);
     if (!RESOURCES_V2_ALLOWED_CATEGORIES.has(category)) { skippedDeferredCategory++; continue; }
+    if (opts.onlyCategory && category !== opts.onlyCategory) { skippedDeferredCategory++; continue; }
     // Must match the separator used to build storage_base_url below
     // (plain '/', no spaces) — a mismatch here (this used to join with
     // ' / ') meant the substring check never matched anything, so re-runs
@@ -571,7 +598,16 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+// Guard so other scripts can `import { processDocxBuffer, ... }` from this
+// file (e.g. ingest_master_documents.mjs, reusing the docx parser for the
+// deduplicated FINAL_CONTENT documents) without also triggering this
+// file's own CLI main() on import.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) {
+  main().catch((err) => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}
+
+export { getS3Client, uploadToR2, generateSimpleHash, generateResourceId };

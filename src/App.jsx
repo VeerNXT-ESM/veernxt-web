@@ -31,12 +31,21 @@ import Support from './pages/Support';
 import Legal from './pages/Legal';
 import InteractiveQuiz from './components/InteractiveQuiz';
 import AdminLogin from './pages/admin/AdminLogin';
-import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminShell from './pages/admin/AdminShell';
+import OverviewPage from './pages/admin/OverviewPage';
+import ExamsPage from './pages/admin/ExamsPage';
+import SyllabusPage from './pages/admin/SyllabusPage';
+import ResourcesPage from './pages/admin/ResourcesPage';
+import ContentGraphPage from './pages/admin/ContentGraphPage';
+import UsersPage from './pages/admin/UsersPage';
+import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
+import QuizzesPage from './pages/admin/QuizzesPage';
 import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
+import BookReaderV2 from './pages/sandbox/BookReaderV2';
 import './index.css';
 
 /**
@@ -127,6 +136,7 @@ function App() {
         <Route path="/financial-guidance" element={<FinancialGuidance />} />
         <Route path="/preview-services" element={<PreviewFinanceSuites />} />
         <Route path="/pay" element={<PaymentPage />} />
+        <Route path="/sandbox/book-reader" element={<BookReaderV2 />} />
 
         {/* Routes with Global Header */}
         <Route element={<Layout />}>
@@ -150,11 +160,21 @@ function App() {
 
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin" element={<AdminDashboard />} />
+        <Route element={<AdminShell />}>
+          <Route path="/admin" element={<Navigate to="/admin/overview" replace />} />
+          <Route path="/admin/overview" element={<OverviewPage />} />
+          <Route path="/admin/exams" element={<ExamsPage />} />
+          <Route path="/admin/syllabus" element={<SyllabusPage />} />
+          <Route path="/admin/resources" element={<ResourcesPage />} />
+          <Route path="/admin/content-graph" element={<ContentGraphPage />} />
+          <Route path="/admin/users" element={<UsersPage />} />
+          <Route path="/admin/roles" element={<RolesPermissionsPage />} />
+          <Route path="/admin/quizzes" element={<QuizzesPage />} />
+          <Route path="/admin/jobs" element={<AdminJobs />} />
+          <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
+        </Route>
         <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
-        <Route path="/admin/jobs" element={<AdminJobs />} />
-        <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
       </Routes>
     </Router>
   );

@@ -74,8 +74,21 @@ async function loadAllExams() {
   if (EXAM_CACHE) return EXAM_CACHE;
   const client = getSupabaseClient();
   console.log('[recommend] Loading all exams from Supabase (cold start)...');
-  const { data: rows, error } = await client.from('exams').select('*');
-  if (error) throw new Error(`Failed to fetch exams: ${error.message}`);
+  // Unranged .select('*') is silently capped at 1,000 rows by PostgREST --
+  // with 1,534 exams in the table, this was truncating the pool for any
+  // profile that isn't domicile-filtered down below 1,000 (e.g. relocation
+  // === 'Anywhere in India'), same bug already found/fixed for
+  // AdminDashboard.jsx's resource fetch (status_report.md §4).
+  let rows = [];
+  let from = 0;
+  const pageSize = 1000;
+  while (true) {
+    const { data, error } = await client.from('exams').select('*').range(from, from + pageSize - 1);
+    if (error) throw new Error(`Failed to fetch exams: ${error.message}`);
+    rows = rows.concat(data);
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
   EXAM_CACHE = rows.map(row => ({
     ...(row.metadata || {}),
     exam_id:          row.exam_id,
