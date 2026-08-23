@@ -30,7 +30,7 @@ const Dashboard = () => {
   // useExamContent below is a hook and can't follow a conditional return.
   const recommendations = profile?.recommendations || [];
   const topExam = recommendations[0] || null;
-  const { byCategory: topExamByCategory, loading: topExamContentLoading } = useExamContent(topExam?.exam_name, topExam?.career_track);
+  const { byCategory: topExamByCategory, loading: topExamContentLoading } = useExamContent(topExam?.exam_name, topExam?.career_track, topExam?.exam_id);
 
   useEffect(() => {
     if (!session?.user || isEmployer) return;

@@ -92,7 +92,7 @@ function QuizRow({ quiz, examName, locked }) {
  * is unaffected — Dashboard.jsx opts into both for its 5-category view.
  */
 const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles' }) => {
-  const { byCategory, quizzes, loading, error } = useExamContent(examName, careerTrack);
+  const { byCategory, quizzes, loading, error } = useExamContent(examName, careerTrack, examId);
   const [openSubjectKey, setOpenSubjectKey] = useState(null);
 
   if (loading) {
