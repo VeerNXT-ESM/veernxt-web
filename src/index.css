@@ -16,6 +16,7 @@
   --ios-bg: #F4F4F8; /* High-contrast LinkedIn grey body background */
   --ios-secondary: #FFFFFF;
   --ios-olive: #4b6b32;
+  --ios-olive-soft: rgba(75, 107, 50, 0.1); /* option hover tint in Select.jsx — theme-scoped so dark surfaces (e.g. .admin-shell) can override it */
   --ios-text: rgba(0, 0, 0, 0.9); /* LinkedIn deep charcoal body text */
 
   /* Radius scale — deliberate hierarchy, not rounded-everything.

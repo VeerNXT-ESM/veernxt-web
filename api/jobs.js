@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   try {
     const { data, error } = await supabase
       .from('jobs')
-      .select('*, exams(conducting_body)')
+      .select('*, exams(conducting_body), lc_exams(name, lc_conducting_bodies(name))')
       .order('published_on', { ascending: false, nullsFirst: false });
 
     if (error) {
@@ -36,7 +36,10 @@ export default async function handler(req, res) {
       ...job,
       id: job.job_id,
       title: job.title,
-      body: job.exams?.conducting_body || extractCompany(job),
+      // Prefer the lc_exams-linked conducting body (scripts/match_jobs_to_lc_exams.mjs,
+      // matched against the canonical catalog) over the older exams.exam_id FK,
+      // which is separately known to be wrong on ~75% of its populated rows.
+      body: job.lc_exams?.lc_conducting_bodies?.name || job.exams?.conducting_body || extractCompany(job),
       publishedOn: job.published_on,
       lastDate: job.last_date,
       vacancies: job.vacancies,

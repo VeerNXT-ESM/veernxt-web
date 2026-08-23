@@ -89,6 +89,7 @@ const reactSelectStyles = {
   singleValue: (provided) => ({ ...provided, color: 'var(--ios-text)', fontSize: '0.9rem' }),
   menu: (provided) => ({
     ...provided,
+    backgroundColor: 'var(--surface)',
     borderRadius: 'var(--radius-sm)',
     marginTop: '4px',
     padding: '0.5rem',
@@ -99,13 +100,14 @@ const reactSelectStyles = {
   menuList: (provided) => ({
     ...provided,
     padding: 0,
+    backgroundColor: 'transparent',
     '::-webkit-scrollbar': { width: '6px' },
     '::-webkit-scrollbar-track': { background: 'transparent' },
     '::-webkit-scrollbar-thumb': { background: '#ddd', borderRadius: '3px' },
   }),
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isSelected ? 'var(--ios-olive)' : state.isFocused ? 'rgba(75, 107, 50, 0.1)' : 'transparent',
+    backgroundColor: state.isSelected ? 'var(--ios-olive)' : state.isFocused ? 'var(--ios-olive-soft)' : 'transparent',
     color: state.isSelected ? 'white' : 'var(--ios-text)',
     padding: '0.6rem 1rem',
     borderRadius: 'calc(var(--radius-sm) - 2px)',
