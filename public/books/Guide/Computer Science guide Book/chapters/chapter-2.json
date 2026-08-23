@@ -1,0 +1,325 @@
+{
+  "id": "7c98chi",
+  "title": "Chapter 2: Components of Computer System",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "xvyrc1g"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Components",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Physical Unit",
+          "value": "Hardware",
+          "icon": "check"
+        },
+        {
+          "label": "Logical Unit",
+          "value": "Software",
+          "icon": "info"
+        },
+        {
+          "label": "Embedded Code",
+          "value": "Firmware",
+          "icon": "clock"
+        },
+        {
+          "label": "Human Element",
+          "value": "Humanware",
+          "icon": "award"
+        }
+      ],
+      "id": "9vdxk3y"
+    },
+    {
+      "id": "ab45dou",
+      "type": "heading",
+      "level": 2,
+      "content": "2.1 Hardware"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Hardware encompasses all physical and tangible parts of a computer system.",
+        "Software consists of the programs, routines, and procedures that govern hardware operation.",
+        "Firmware acts as fixed software written into hardware devices like ROM.",
+        "Humanware highlights the role of users, programmers, and administrators operating computer systems."
+      ],
+      "id": "4tky4ek"
+    },
+    {
+      "type": "paragraph",
+      "id": "emqzq8q"
+    },
+    {
+      "id": "om7m40r",
+      "type": "heading",
+      "level": 3,
+      "content": "2.1.1 Types of Hardware"
+    },
+    {
+      "id": "qu6gdxg",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4z421xm",
+      "type": "heading",
+      "level": 3,
+      "content": "2.1.2 Examples of Hardware"
+    },
+    {
+      "id": "0pe5u5h",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "j1actw7",
+      "type": "heading",
+      "level": 3,
+      "content": "2.1.3 Important Exam Points"
+    },
+    {
+      "id": "53y9f0n",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "fmgex0s",
+      "type": "heading",
+      "level": 2,
+      "content": "2.2 Software"
+    },
+    {
+      "type": "paragraph",
+      "id": "oavxmm5"
+    },
+    {
+      "id": "d8pixxh",
+      "type": "heading",
+      "level": 3,
+      "content": "2.2.1 Types of Software"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Components of Computer System",
+      "id": "yky0vvf"
+    },
+    {
+      "id": "7d4wifx",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "t3jbjjd",
+      "type": "heading",
+      "level": 3,
+      "content": "2.2.2 Examples of Software"
+    },
+    {
+      "id": "9xz2eog",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "inenmhr",
+      "type": "heading",
+      "level": 3,
+      "content": "2.2.3 Important Exam Points"
+    },
+    {
+      "id": "dho6n5z",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "wf1uylf",
+      "type": "heading",
+      "level": 2,
+      "content": "2.3 Firmware"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Component Type",
+        "Core Definition",
+        "Primary Focus"
+      ],
+      "rows": [
+        [
+          "Hardware",
+          "Physical tangible components",
+          "Processing, storage, and I/O execution"
+        ],
+        [
+          "Software",
+          "Programs and operational instructions",
+          "Directing hardware functionality"
+        ],
+        [
+          "Firmware",
+          "Permanent code stored in ROM",
+          "Low-level hardware control"
+        ],
+        [
+          "Humanware",
+          "Human operators and designers",
+          "System operation, design, and management"
+        ]
+      ],
+      "id": "w02f1sw"
+    },
+    {
+      "type": "paragraph",
+      "id": "jhqhsd6"
+    },
+    {
+      "id": "nwsge9x",
+      "type": "heading",
+      "level": 3,
+      "content": "2.3.1 Characteristics of Firmware"
+    },
+    {
+      "id": "b53usor",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "3bvzfmb",
+      "type": "heading",
+      "level": 3,
+      "content": "2.3.2 Examples of Firmware"
+    },
+    {
+      "id": "vntzo67",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "66fowwd",
+      "type": "heading",
+      "level": 3,
+      "content": "2.3.3 Important Exam Points"
+    },
+    {
+      "id": "x50wpdp",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "q4b5rtw",
+      "type": "heading",
+      "level": 2,
+      "content": "2.4 Humanware"
+    },
+    {
+      "type": "paragraph",
+      "id": "beu7jcx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between Hardware, Software, Firmware, and Humanware for direct classification questions.",
+        "Identify ROM-embedded operational software specifically as Firmware in objective tests.",
+        "Recognize system users, administrators, and software developers under the umbrella of Humanware."
+      ],
+      "id": "n0163mk"
+    },
+    {
+      "id": "1z2wa3h",
+      "type": "heading",
+      "level": 3,
+      "content": "2.4.1 Types of Humanware"
+    },
+    {
+      "id": "znwlg4s",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "j3ewawy",
+      "type": "heading",
+      "level": 3,
+      "content": "2.4.2 Importance of Humanware"
+    },
+    {
+      "id": "keltz8q",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "58o8tv9",
+      "type": "heading",
+      "level": 3,
+      "content": "2.4.3 Important Exam Points"
+    },
+    {
+      "id": "0zmu87g",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,331 @@
+{
+  "id": "cssk2l4",
+  "title": "Chapter 3: Energy and Power",
+  "order": 52,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sv683ug"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Energy",
+          "value": "Joule (J)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "check"
+        },
+        {
+          "label": "1 Horsepower",
+          "value": "746 W",
+          "icon": "award"
+        },
+        {
+          "label": "1 Commercial Unit (kWh)",
+          "value": "3.6 × 10⁶ J",
+          "icon": "clock"
+        }
+      ],
+      "id": "8gjyzty"
+    },
+    {
+      "id": "ar8h7bw",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Energy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Energy is defined as the capacity to do work and is a scalar quantity.",
+        "Kinetic Energy (KE = ½mv²) depends on mass and the square of velocity.",
+        "Potential Energy (PE = mgh) is the energy stored due to position, shape, or configuration.",
+        "Mechanical Energy is the sum of Kinetic Energy and Potential Energy in a system.",
+        "Power represents the rate of doing work or rate of energy transfer (P = Work / Time)."
+      ],
+      "id": "mshpht3"
+    },
+    {
+      "type": "paragraph",
+      "id": "ryd4hka"
+    },
+    {
+      "type": "paragraph",
+      "id": "c0y0f6y"
+    },
+    {
+      "type": "paragraph",
+      "id": "i5yg4dq"
+    },
+    {
+      "id": "zhtm27j",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Forms of Energy"
+    },
+    {
+      "id": "grgr3zd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tkap6li",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Kinetic Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "rb37w1w"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j79e5kp"
+    },
+    {
+      "type": "paragraph",
+      "id": "2vbmi5c"
+    },
+    {
+      "type": "paragraph",
+      "id": "xibwm87"
+    },
+    {
+      "type": "paragraph",
+      "id": "dvki5ju"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Energy can neither be created nor destroyed; it can only be transformed from one form to another.",
+      "id": "nhtdzxz"
+    },
+    {
+      "id": "xbme72w",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Potential Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "asqrsfe"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1jxahas"
+    },
+    {
+      "type": "paragraph",
+      "id": "j1tsfzk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x020amm"
+    },
+    {
+      "type": "paragraph",
+      "id": "mzqqani"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hs8yih1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Energy",
+        "Power"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Capacity to perform work",
+          "Rate at which work is performed"
+        ],
+        [
+          "SI Unit",
+          "Joule (J)",
+          "Watt (W) or J/s"
+        ],
+        [
+          "Time Dependence",
+          "Independent of time taken",
+          "Inversely proportional to time taken"
+        ],
+        [
+          "Formula",
+          "E = Work Done",
+          "P = Work / Time"
+        ]
+      ],
+      "id": "0g2ew22"
+    },
+    {
+      "id": "322dud1",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Law of Conservation of Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "sb3qzao"
+    },
+    {
+      "id": "tugtl3p",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mechanical Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "szh5ues"
+    },
+    {
+      "type": "paragraph",
+      "id": "bwt1gki"
+    },
+    {
+      "id": "6xzzd5t",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Meaning of Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "nssfyd0"
+    },
+    {
+      "type": "paragraph",
+      "id": "gacoveb"
+    },
+    {
+      "type": "paragraph",
+      "id": "s5e1bct"
+    },
+    {
+      "id": "9y7ymbd",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Units of Power"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Commercial unit of energy is 1 kilowatt-hour (kWh), which equals 3.6 × 10⁶ Joules.",
+        "1 Horsepower (HP) is equal to 746 Watts, a frequent question in RRB and SSC exams.",
+        "If the velocity of a moving body is doubled, its Kinetic Energy becomes four times (KE ∝ v²)."
+      ],
+      "id": "spfshke"
+    },
+    {
+      "id": "c0fm9sy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hmkrnyt",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "ocpx13f"
+    },
+    {
+      "type": "paragraph",
+      "id": "99tggr1"
+    },
+    {
+      "type": "paragraph",
+      "id": "mz13yfp"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdsako4"
+    }
+  ],
+  "enriched": true
+}

@@ -2,8 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, PlayCircle, Landmark, Users, MessageSquare, User, Lock, Crown, ArrowRight, Gift, CheckCircle2, Compass, ListChecks } from 'lucide-react';
-import { getEffectiveTier, canViewVeerScore, canViewRecommendations, canGenerateCV, higherTier, TIERS } from '../lib/subscriptionAccess';
+import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, Landmark, Users, MessageSquare, User, ArrowRight, CheckCircle2, Compass, ListChecks } from 'lucide-react';
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -12,94 +11,8 @@ import GuidedStep from '../components/ui/GuidedStep';
 import { ChoiceGroup } from '../components/ui/ChoiceGroup';
 import { getEmployerInsights } from '../lib/employerInsights';
 import { useLocalDraft } from '../lib/useLocalDraft';
-import { useInlineUnlock } from '../lib/useInlineUnlock';
-
-const PreparationPanel = ({ exam }) => {
-  const [resources, setResources] = useState([]);
-  const [quizzes, setQuizzes] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPrepData = async () => {
-      setLoading(true);
-      try {
-        let resData = await supabase.from('resources_v2').select('*').eq('exam_name', exam.exam_name).limit(3);
-        let quizData = await supabase.from('quizzes').select('*').eq('exam_name', exam.exam_name).limit(3);
-
-        // resources_v2/quizzes exam_name carries a "N. " ordinal prefix from
-        // the CMS ingestion that the recommendation engine's exam_name never
-        // has, so the exact match above misses real, published content.
-        // Retry as a substring match before falling back to the much looser
-        // career_track keyword below.
-        if (!resData.data || resData.data.length === 0) {
-          const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
-          resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${escaped}%`).limit(3);
-        }
-        if (!quizData.data || quizData.data.length === 0) {
-          const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
-          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`).limit(3);
-        }
-
-        // Fallback: If no direct match, fetch generalized prep for this career track
-        if ((!resData.data || resData.data.length === 0) && exam.career_track) {
-          let fallbackTerm = exam.exam_name.split(' ')[0]; 
-          if (exam.career_track === 'POLICE_CAPF') fallbackTerm = 'Constable';
-          else if (exam.career_track === 'SSC') fallbackTerm = 'SSC';
-          else if (exam.career_track === 'RAILWAYS') fallbackTerm = 'RRB';
-          else if (exam.career_track === 'BANKING') fallbackTerm = 'IBPS';
-          else if (exam.career_track === 'DEFENCE') fallbackTerm = 'Defence';
-          
-          resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
-          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
-        }
-        
-        setResources(resData.data || []);
-        setQuizzes(quizData.data || []);
-      } catch (err) {
-        console.error('Error fetching prep materials:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    if (exam && exam.exam_name) fetchPrepData();
-  }, [exam]);
-
-  if (loading) return <div style={{ padding: '1rem', textAlign: 'center' }}><RefreshCw className="animate-spin" size={20} color="var(--ios-olive)" /></div>;
-
-  if (resources.length === 0 && quizzes.length === 0) {
-    return <div style={{ padding: '1rem', textAlign: 'center', color: '#999', fontSize: '0.9rem' }}>No specific preparation materials found for this exam.</div>;
-  }
-
-  return (
-    <div className="prep-panel animate-fade-in" style={{ padding: '1rem 0', borderTop: '1px solid rgba(0,0,0,0.05)', marginTop: '1rem' }}>
-      <h4 style={{ fontSize: '0.85rem', color: 'var(--ios-olive)', marginBottom: '1rem', fontWeight: '800' }}>RECOMMENDED PREPARATION</h4>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-        <div className="prep-section">
-          <h5 style={{ fontSize: '0.75rem', color: '#888', marginBottom: '0.5rem' }}>STUDY GUIDES</h5>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            {resources.map(res => (
-              <Link key={res.id} to={`/reader/${res.resource_id}`} className="prep-item">
-                <FileText size={14} />
-                <span>{res.title}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-        <div className="prep-section">
-          <h5 style={{ fontSize: '0.75rem', color: '#888', marginBottom: '0.5rem' }}>PRACTICE QUIZZES</h5>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            {quizzes.map(quiz => (
-              <Link key={quiz.id} to={`/quiz/${quiz.id}`} className="prep-item">
-                <PlayCircle size={14} />
-                <span>{quiz.title}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { getEffectiveTier } from '../lib/subscriptionAccess';
+import ExamContentPreview from '../components/ExamContentPreview';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -124,11 +37,6 @@ const Dashboard = () => {
   const [activeChatsCount, setActiveChatsCount] = useState(0);
   const [spotlightCandidates, setSpotlightCandidates] = useState([]);
   const [connectionsCount, setConnectionsCount] = useState(0);
-  const [effectiveTier, setEffectiveTier] = useState(TIERS.FREE);
-  // Set right after a successful in-place purchase (see handleUnlockScore/
-  // handleAddCv below) so VeerScore/matches/CV unlock instantly without a
-  // reload — merged with the server-fetched tier via higherTier().
-  const [localTierOverride, setLocalTierOverride] = useState(null);
 
   // Edit Profile States
   const [showEditProfileModal, setShowEditProfileModal] = useState(false);
@@ -136,23 +44,6 @@ const Dashboard = () => {
   const [avatarUploading, setAvatarUploading] = useState(false);
   const [avatarPreview, setAvatarPreview] = useState(null);
   const avatarInputRef = useRef(null);
-
-  const { purchase, statusFor, errorFor } = useInlineUnlock({
-    userId: session?.user?.id,
-    email: session?.user?.email,
-    mobile: session?.user?.user_metadata?.mobile,
-    fullName: profile?.full_name,
-  });
-
-  const handleUnlockScore = async () => {
-    const { ok, tier: newTier } = await purchase('SCORE_UNLOCK');
-    if (ok) setLocalTierOverride((prev) => higherTier(prev, newTier));
-  };
-
-  const handleAddCv = async () => {
-    const { ok, tier: newTier } = await purchase('CV_ADDON');
-    if (ok) setLocalTierOverride((prev) => higherTier(prev, newTier));
-  };
 
   useEffect(() => {
     if (employerDraftPrompt === 'pending') return;
@@ -200,11 +91,6 @@ const Dashboard = () => {
 
         if (data) {
           setProfile(data);
-          // Compute effective subscription tier
-          if (!isEmp) {
-            const tier = getEffectiveTier(data.subscription_tier, data.subscription_expires_at);
-            setEffectiveTier(tier);
-          }
         } else if (!isEmp) {
           // No profile row (or no session at all) — AuthGuard should already
           // have kept us from reaching this page in that state, but if that
@@ -1241,9 +1127,6 @@ const Dashboard = () => {
   }
 
   const recommendations = profile?.recommendations || [];
-  const tier = higherTier(effectiveTier, localTierOverride);
-  const scoreUnlockStatus = statusFor('SCORE_UNLOCK');
-  const cvAddonStatus = statusFor('CV_ADDON');
 
   const rawProfile = profile?.raw_profile_data;
   const insights = rawProfile ? getProfilingInsights(rawProfile, { context: 'dashboard' }) : [];
@@ -1328,46 +1211,17 @@ const Dashboard = () => {
           {/* Veer Score Card */}
           <div className="feature-split-card">
             <div className="feature-split-image">
-              {!isEmployer && !canViewVeerScore(tier) ? (
-                <img src="/veernxt_assets/promotional/R01_unlock_veerscore.png" alt="" />
-              ) : (
-                <img src="/veernxt_assets/banners/B02_veerscore.png" alt="" />
-              )}
+              <img src="/veernxt_assets/banners/B02_veerscore.png" alt="" />
             </div>
             <div className="feature-split-content">
               <div className="card-top" style={{ marginBottom: '1rem' }}>
                 <Award size={24} color="var(--ios-olive)" />
                 <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>VEER SCORE</span>
               </div>
-              {!isEmployer && !canViewVeerScore(tier) ? (
-                <>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#0f172a' }}>Unlock Your VeerScore</h3>
-                  <p className="card-desc" style={{ marginBottom: '1.5rem' }}>See your career readiness score calculated from your military profile.</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                    <Button
-                      type="button"
-                      icon={Crown}
-                      disabled={scoreUnlockStatus === 'processing'}
-                      onClick={handleUnlockScore}
-                      style={{ whiteSpace: 'nowrap' }}
-                    >
-                      {scoreUnlockStatus === 'processing' ? 'Processing…' : 'Unlock — ₹9'}
-                    </Button>
-                    <span style={{ fontSize: '0.8rem', color: '#64748b', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <Gift size={12} color="var(--ios-olive)" />
-                      Plus your CV for just ₹1 more
-                    </span>
-                  </div>
-                  {errorFor('SCORE_UNLOCK') && <p style={{ fontSize: '0.8rem', color: 'var(--danger)', marginTop: '0.75rem' }}>{errorFor('SCORE_UNLOCK')}</p>}
-                </>
-              ) : (
-                <>
-                  <div className="score-display" style={{ fontSize: '4rem', fontWeight: 800, color: 'var(--ios-olive)', marginBottom: '0.5rem', lineHeight: 1, letterSpacing: '-0.05em' }}>
-                    {profile?.veer_score != null ? Math.round(profile.veer_score) : '—'}
-                  </div>
-                  <p className="card-desc">Your overall readiness score calculated from service history, skills, and physical standards.</p>
-                </>
-              )}
+              <div className="score-display" style={{ fontSize: '4rem', fontWeight: 800, color: 'var(--ios-olive)', marginBottom: '0.5rem', lineHeight: 1, letterSpacing: '-0.05em' }}>
+                {profile?.veer_score != null ? Math.round(profile.veer_score) : '—'}
+              </div>
+              <p className="card-desc">Your overall readiness score calculated from service history, skills, and physical standards.</p>
             </div>
           </div>
 
@@ -1458,11 +1312,7 @@ const Dashboard = () => {
           {/* Matches Section */}
           <section>
             <div className="section-banner">
-              {!isEmployer && !canViewRecommendations(tier) ? (
-                <img src="/veernxt_assets/premium/P03_locked_exam_matches.png" alt="Exam Matches Locked" />
-              ) : (
-                <img src="/veernxt_assets/banners/B10_exam_matches.png" alt="Exam Matches" />
-              )}
+              <img src="/veernxt_assets/banners/B10_exam_matches.png" alt="Exam Matches" />
               <div className="section-banner-overlay">
                 <div className="section-banner-content">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
@@ -1475,52 +1325,18 @@ const Dashboard = () => {
             </div>
             
             <div className="ios-card matches-card" style={{ padding: '1.5rem', position: 'relative' }}>
-              {!isEmployer && !canViewRecommendations(tier) ? (
-                <div style={{ position: 'relative' }}>
-                  {/* Blurred placeholder recommendations */}
-                  <div style={{ filter: 'blur(8px)', userSelect: 'none', pointerEvents: 'none', opacity: 0.5 }}>
-                    {[{ exam_name: 'SSC Stenographer Grade C & D', career_track: 'SSC', score: 95 },
-                      { exam_name: 'RRB Junior Engineer', career_track: 'Railways', score: 88 },
-                      { exam_name: 'IBPS Clerk', career_track: 'Banking', score: 82 }].map((rec, idx) => (
-                      <div key={idx} className="recommendation-item" style={{ marginBottom: '0.75rem' }}>
-                        <div className="rec-rank">{idx + 1}</div>
-                        <div className="rec-info">
-                          <h3 style={{ fontSize: '1.05rem', marginBottom: '0.2rem' }}>{rec.exam_name}</h3>
-                          <div className="rec-meta"><span><Briefcase size={14} /> {rec.career_track}</span></div>
-                        </div>
-                        <div className="rec-score-section">
-                          <div className="score-bar-bg"><div className="score-bar-fill" style={{ width: `${rec.score}%` }}></div></div>
-                          <span className="score-text">{rec.score}% Match</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  {/* Lock overlay */}
-                  <div style={{
-                    position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(2px)',
-                    borderRadius: 'var(--radius-md)', zIndex: 2, padding: '2rem', textAlign: 'center',
-                  }}>
-                    <Lock size={32} color="var(--ios-olive)" style={{ marginBottom: '0.75rem' }} />
-                    <p style={{ fontWeight: 700, fontSize: '1.05rem', color: '#0f172a', marginBottom: '0.5rem' }}>Your Exam Matches Are Ready</p>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1.25rem', lineHeight: 1.5, maxWidth: '350px' }}>Unlock VeerScore to see your personalised exam recommendations.</p>
-                    <Button
-                      type="button"
-                      icon={Crown}
-                      disabled={scoreUnlockStatus === 'processing'}
-                      onClick={handleUnlockScore}
-                      style={{ whiteSpace: 'nowrap' }}
-                    >
-                      {scoreUnlockStatus === 'processing' ? 'Processing…' : 'Unlock with VeerScore — ₹9'}
-                    </Button>
-                  </div>
-                </div>
-              ) : recommendations.length > 0 ? (
+              {recommendations.length > 0 ? (
                 <div className="recommendations-list">
                   {recommendations.slice(0, 5).map((rec, idx) => (
                     <React.Fragment key={rec.exam_id || idx}>
-                      <div className="recommendation-item">
+                      <div
+                        className="recommendation-item"
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => setExpandedExamId(expandedExamId === rec.exam_id ? null : rec.exam_id)}
+                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setExpandedExamId(expandedExamId === rec.exam_id ? null : rec.exam_id); } }}
+                        style={{ cursor: 'pointer' }}
+                      >
                       <div className="rec-rank">{idx + 1}</div>
                       <div className="rec-info">
                         <h3 style={{ fontSize: '1.05rem', marginBottom: '0.2rem' }}>{rec.exam_name}</h3>
@@ -1535,21 +1351,27 @@ const Dashboard = () => {
                         </div>
                         <span className="score-text">{Math.min(Math.round(rec.score), 100)}% Match</span>
                       </div>
-                      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                        <button 
-                          onClick={() => setExpandedExamId(expandedExamId === rec.exam_id ? null : rec.exam_id)}
-                          className="btn-secondary ios-pill"
-                          style={{ padding: '0.5rem 1rem', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
-                        >
-                          {expandedExamId === rec.exam_id ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                          Prepare
-                        </button>
-                        <a href={rec.website} target="_blank" rel="noopener noreferrer" className="rec-link">
-                          <ExternalLink size={18} />
-                        </a>
+                      <div style={{ display: 'flex', color: 'var(--ios-olive)' }}>
+                        {expandedExamId === rec.exam_id ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                       </div>
                     </div>
-                    {expandedExamId === rec.exam_id && <PreparationPanel exam={rec} />}
+                    {expandedExamId === rec.exam_id && (
+                      <div style={{ padding: '0 0 1rem' }}>
+                        <ExamContentPreview
+                          examId={rec.exam_id}
+                          examName={rec.exam_name}
+                          careerTrack={rec.career_track}
+                          tier={getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at)}
+                          freeQuizUsed={!!profile?.free_quiz_used}
+                          variant="list"
+                        />
+                        {rec.website && (
+                          <a href={rec.website} rel="noopener" className="rec-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.5rem', fontSize: '0.85rem' }}>
+                            <ExternalLink size={16} /> Official exam website
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </React.Fragment>
                 ))}
                 </div>
@@ -1566,46 +1388,18 @@ const Dashboard = () => {
           {!isEmployer && (
             <div className="feature-split-card">
               <div className="feature-split-image">
-                {canGenerateCV(tier) ? (
-                  <img src="/veernxt_assets/banners/B01_industry_fit_cv.png" alt="" />
-                ) : canViewVeerScore(tier) ? (
-                  <img src="/veernxt_assets/promotional/R04_unlock_industry_fit_cv.png" alt="" />
-                ) : (
-                  <img src="/veernxt_assets/premium/P04_locked_cv.png" alt="" />
-                )}
+                <img src="/veernxt_assets/banners/B01_industry_fit_cv.png" alt="" />
               </div>
               <div className="feature-split-content">
                 <div className="card-top" style={{ marginBottom: '1rem' }}>
                   <FileText size={24} color="var(--ios-olive)" />
                   <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>INDUSTRY-FIT CV</span>
                 </div>
-                
-                {canGenerateCV(tier) ? (
-                  <>
-                    <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#0f172a' }}>Your CV is Ready</h3>
-                    <p className="card-desc" style={{ marginBottom: '1.5rem' }}>Your personalised industry-fit resume is ready. Download and share your professional profile with recruiters.</p>
-                    <Link to="/cv" className="btn-primary ios-pill" style={{ textDecoration: 'none', display: 'inline-flex', width: 'fit-content' }}>
-                      Customize & Download CV
-                    </Link>
-                  </>
-                ) : canViewVeerScore(tier) ? (
-                  <>
-                    <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#0f172a' }}>Add CV for ₹1</h3>
-                    <p className="card-desc" style={{ marginBottom: '1.5rem' }}>You've already unlocked your VeerScore — add professional CV generation for a token ₹1 while it's right here.</p>
-                    <Button type="button" disabled={cvAddonStatus === 'processing'} onClick={handleAddCv} style={{ width: 'fit-content', whiteSpace: 'nowrap' }}>
-                      {cvAddonStatus === 'processing' ? 'Processing…' : 'Add CV — ₹1'}
-                    </Button>
-                    {errorFor('CV_ADDON') && <p style={{ fontSize: '0.8rem', color: 'var(--danger)', marginTop: '0.5rem' }}>{errorFor('CV_ADDON')}</p>}
-                  </>
-                ) : (
-                  <>
-                    <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#0f172a' }}>Corporate Ready CV</h3>
-                    <p className="card-desc" style={{ marginBottom: '1.5rem' }}>Get a professionally formatted, industry-fit CV generated from your military profile.</p>
-                    <Link to="/subscribe?plan=SCORE_CV" className="btn-secondary ios-pill" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', width: 'fit-content', whiteSpace: 'nowrap' }}>
-                      <Lock size={14} /> Unlock VeerScore + CV — ₹10
-                    </Link>
-                  </>
-                )}
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#0f172a' }}>Your CV is Ready</h3>
+                <p className="card-desc" style={{ marginBottom: '1.5rem' }}>Your personalised industry-fit resume is ready. Download and share your professional profile with recruiters.</p>
+                <Link to="/cv" className="btn-primary ios-pill" style={{ textDecoration: 'none', display: 'inline-flex', width: 'fit-content' }}>
+                  Customize & Download CV
+                </Link>
               </div>
             </div>
           )}
@@ -1918,25 +1712,6 @@ const Dashboard = () => {
         }
         .rec-link:hover {
           color: var(--ios-olive);
-        }
-        .prep-item {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0.5rem;
-          background: white;
-          border-radius: var(--radius-sm);
-          text-decoration: none;
-          color: var(--ios-text);
-          font-size: 0.8rem;
-          font-weight: 600;
-          transition: all 0.2s;
-          border: 1px solid transparent;
-        }
-        .prep-item:hover {
-          border-color: var(--ios-olive);
-          color: var(--ios-olive);
-          transform: translateX(4px);
         }
         .animate-spin {
           animation: spin 1s linear infinite;

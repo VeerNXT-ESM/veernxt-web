@@ -36,36 +36,6 @@ export const TIER_RANK = {
 
 export const PLAN_DETAILS = [
   {
-    id: 'SCORE_UNLOCK',
-    name: 'VeerScore Unlock',
-    price: 9,
-    priceLabel: '₹9',
-    duration: 'one-time',
-    durationLabel: 'One-time purchase',
-    type: 'one-time',
-    badge: null,
-    features: [
-      'Unlock your VeerScore',
-      'View personalised exam recommendations',
-      'Career readiness breakdown',
-    ],
-  },
-  {
-    id: 'SCORE_CV',
-    name: 'VeerScore + CV',
-    price: 10,
-    priceLabel: '₹10',
-    duration: 'one-time',
-    durationLabel: 'One-time purchase',
-    type: 'one-time',
-    badge: null,
-    features: [
-      'Everything in VeerScore Unlock',
-      'Personalised industry-fit CV / Resume',
-      'Download & share your professional profile',
-    ],
-  },
-  {
     id: 'MONTHLY',
     name: 'Monthly Plan',
     price: 49,
@@ -166,19 +136,19 @@ export function getEffectiveTier(tier, expiresAt) {
 // ACCESS CONTROL FUNCTIONS
 // ═══════════════════════════════════════════
 
-/** Can user see their VeerScore number? */
-export function canViewVeerScore(tier) {
-  return (TIER_RANK[tier] || 0) >= TIER_RANK.SCORE_UNLOCK;
+/** Can user see their VeerScore number? Profiling is free for everyone. */
+export function canViewVeerScore() {
+  return true;
 }
 
-/** Can user see their personalised exam recommendations? */
-export function canViewRecommendations(tier) {
-  return (TIER_RANK[tier] || 0) >= TIER_RANK.SCORE_UNLOCK;
+/** Can user see their personalised exam recommendations? Free for everyone. */
+export function canViewRecommendations() {
+  return true;
 }
 
-/** Can user generate/download their personalised CV? */
-export function canGenerateCV(tier) {
-  return (TIER_RANK[tier] || 0) >= TIER_RANK.SCORE_CV;
+/** Can user generate/download their personalised CV? Free for everyone. */
+export function canGenerateCV() {
+  return true;
 }
 
 /** Can user access live mentorship features? */
@@ -188,20 +158,19 @@ export function canAccessMentorship(tier) {
 
 /**
  * Can user access full content of a resource?
- * 
+ *
  * Free tier rules:
  * - 'Intro' category: always fully accessible
- * - 'Guide' category: cover/first chapter only
- * - 'Precis' category: cover/first chapter only
- * - 'PYQ' category: always accessible (we treat all PYQ as recent/free)
+ * - 'Guide' category: always fully accessible
+ * - 'Precis' category: locked
+ * - 'PYQ' category: locked
  * - Everything else: locked
- * 
+ *
  * @param {string} tier - User's effective subscription tier
  * @param {string} category - Resource category (Intro, Guide, Precis, PYQ, Mock Test, etc.)
- * @param {number} chapterIndex - 0-based chapter index being accessed
  * @returns {{ allowed: boolean, reason?: string }}
  */
-export function canAccessResource(tier, category, chapterIndex = 0) {
+export function canAccessResource(tier, category) {
   // Paid tiers (MONTHLY and above) get full access
   if ((TIER_RANK[tier] || 0) >= TIER_RANK.MONTHLY) {
     return { allowed: true };
@@ -209,25 +178,12 @@ export function canAccessResource(tier, category, chapterIndex = 0) {
 
   const cat = (category || '').toLowerCase().trim();
 
-  // Intro — always fully accessible
-  if (cat === 'intro') {
+  // Intro & Guide — always fully accessible for free users
+  if (cat === 'intro' || cat === 'guide') {
     return { allowed: true };
   }
 
-  // PYQ — always accessible for free users (treating all PYQ as recent)
-  if (cat === 'pyq') {
-    return { allowed: true };
-  }
-
-  // Guide / Precis — first chapter only for free users
-  if (cat === 'guide' || cat === 'precis') {
-    if (chapterIndex === 0) {
-      return { allowed: true };
-    }
-    return { allowed: false, reason: 'Upgrade to access full guide content' };
-  }
-
-  // All other categories — locked for free/score-only tiers
+  // Precis, PYQ, and everything else — locked for free/score-only tiers
   return { allowed: false, reason: 'Upgrade to access this resource' };
 }
 
@@ -264,18 +220,14 @@ export function isResourceLockedForUser(tier, category) {
   if ((TIER_RANK[tier] || 0) >= TIER_RANK.MONTHLY) return false;
 
   const cat = (category || '').toLowerCase().trim();
-  
-  // Intro & PYQ are always free
-  if (cat === 'intro' || cat === 'pyq') return false;
 
-  // Guide & Precis show partial access (cover only) — show as "partial" not locked
-  // But for card display purposes, we mark them as requiring upgrade for full access
-  if (cat === 'guide' || cat === 'precis') return true;
+  // Intro & Guide are always free
+  if (cat === 'intro' || cat === 'guide') return false;
 
   // Mock Test — handled separately via canTakeQuiz
   if (cat === 'mock test') return false; // Quiz gating is handled in InteractiveQuiz
 
-  // Everything else is locked
+  // Precis, PYQ, and everything else is locked
   return true;
 }
 

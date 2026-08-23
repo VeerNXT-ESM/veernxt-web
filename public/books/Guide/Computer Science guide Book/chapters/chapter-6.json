@@ -1,0 +1,405 @@
+{
+  "id": "ic11k09",
+  "title": "Chapter 6: Computer Memory",
+  "order": 6,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zv5cr5r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Memory Types",
+          "value": "RAM & ROM",
+          "icon": "book"
+        },
+        {
+          "label": "Fastest Memory Layer",
+          "value": "Cache Memory",
+          "icon": "clock"
+        },
+        {
+          "label": "Basic Memory Unit",
+          "value": "1 Bit (0 or 1)",
+          "icon": "info"
+        },
+        {
+          "label": "Storage Categories",
+          "value": "Primary & Secondary",
+          "icon": "check"
+        }
+      ],
+      "id": "8x4hg41"
+    },
+    {
+      "id": "cdksjj8",
+      "type": "heading",
+      "level": 2,
+      "content": "6.1 Primary Memory (Main Memory)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Primary memory (Main Memory) directly interacts with the CPU and includes volatile RAM and non-volatile ROM.",
+        "RAM (Random Access Memory) provides temporary high-speed access for active programs, losing data when power is off.",
+        "ROM (Read Only Memory) holds permanent firmware instructions like BIOS required during the system startup process.",
+        "Cache memory acts as a high-speed semiconductor buffer between the CPU and main memory to accelerate processing.",
+        "Secondary memory devices (HDDs, SSDs, optical drives) provide non-volatile, mass storage capacity for long-term data preservation.",
+        "Memory measurement follows a hierarchy: 1 Nibble = 4 Bits, 1 Byte = 8 Bits, 1 KB = 1024 Bytes, progressing up to TB and beyond."
+      ],
+      "id": "6azk5ca"
+    },
+    {
+      "type": "paragraph",
+      "id": "vpjla69"
+    },
+    {
+      "id": "9umuz9m",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.1 Types of Primary Memory"
+    },
+    {
+      "id": "o4gogu2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ltq3t55",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.2 RAM (Random Access Memory)"
+    },
+    {
+      "type": "paragraph",
+      "id": "as62q3l"
+    },
+    {
+      "type": "paragraph",
+      "id": "i6lwz73"
+    },
+    {
+      "id": "e2zwmi6",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "6.1 Primary Memory (Main Memory)",
+      "id": "370c46t"
+    },
+    {
+      "id": "1ndayvi",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.3 ROM (Read Only Memory)"
+    },
+    {
+      "type": "paragraph",
+      "id": "rkycyp6"
+    },
+    {
+      "type": "paragraph",
+      "id": "wzf9pxv"
+    },
+    {
+      "id": "cih7ywf",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "7zb1o84",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.4 Cache Memory"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Primary Memory",
+        "Secondary Memory"
+      ],
+      "rows": [
+        [
+          "Data Volatility",
+          "Mostly volatile (RAM loses data without power)",
+          "Non-volatile (retains data permanently)"
+        ],
+        [
+          "CPU Direct Access",
+          "Directly accessible by the CPU",
+          "Indirectly accessible via I/O channels"
+        ],
+        [
+          "Speed & Performance",
+          "Much faster read/write speeds",
+          "Slower data transfer speeds"
+        ],
+        [
+          "Cost & Capacity",
+          "Higher cost per bit, lower storage capacity",
+          "Lower cost per bit, higher storage capacity"
+        ]
+      ],
+      "id": "15650p5"
+    },
+    {
+      "type": "paragraph",
+      "id": "skepdya"
+    },
+    {
+      "id": "1x1yxrj",
+      "type": "heading",
+      "level": 2,
+      "content": "6.2 Secondary Memory"
+    },
+    {
+      "type": "paragraph",
+      "id": "5pg038q"
+    },
+    {
+      "id": "5880xif",
+      "type": "heading",
+      "level": 3,
+      "content": "6.2.1 Types of Secondary Storage Devices"
+    },
+    {
+      "id": "fnobm8v",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2k2j1tq",
+      "type": "heading",
+      "level": 2,
+      "content": "6.3 Memory Units"
+    },
+    {
+      "type": "paragraph",
+      "id": "4q4nr79"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test memory hierarchy speed order: Registers > Cache > RAM > Secondary Storage.",
+        "Remember key conversions: 1 Byte = 8 Bits, 1 Nibble = 4 Bits, and 1 KB = 1024 Bytes.",
+        "Distinguish volatile memory (RAM) from non-volatile memory (ROM, HDD, SSD, Flash Memory) for classification questions."
+      ],
+      "id": "yz0d3ze"
+    },
+    {
+      "id": "ak68lra",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7srq2zn",
+      "type": "heading",
+      "level": 2,
+      "content": "6.4 Primary vs Secondary Memory"
+    },
+    {
+      "id": "g3z4z91",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b8bp0rd",
+      "type": "heading",
+      "level": 2,
+      "content": "6.5 Important Exam Points"
+    },
+    {
+      "id": "62aehvm",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

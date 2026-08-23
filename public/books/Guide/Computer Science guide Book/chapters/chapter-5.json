@@ -1,0 +1,360 @@
+{
+  "id": "zihzgti",
+  "title": "Chapter 5: Output Devices",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "irc72m6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Visual Output",
+          "value": "Monitor",
+          "icon": "info"
+        },
+        {
+          "label": "Hard Copy Output",
+          "value": "Printer & Plotter",
+          "icon": "book"
+        },
+        {
+          "label": "Audio Output",
+          "value": "Speaker",
+          "icon": "award"
+        },
+        {
+          "label": "Key Classification",
+          "value": "Impact vs Non-Impact",
+          "icon": "check"
+        }
+      ],
+      "id": "mn3v28x"
+    },
+    {
+      "id": "z4s0num",
+      "type": "heading",
+      "level": 2,
+      "content": "5.1 Monitor"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Monitors provide soft copy visual output and are classified by technology and display characteristics.",
+        "Printers are divided into two main categories: Impact printers (physical contact) and Non-Impact printers (no physical contact).",
+        "Plotters are specialized output devices designed for high-precision vector graphics and large-scale printing.",
+        "Speakers produce sound output by converting digital audio signals into audible sound waves."
+      ],
+      "id": "0hdh0nc"
+    },
+    {
+      "type": "paragraph",
+      "id": "09pqwcz"
+    },
+    {
+      "id": "smn15lw",
+      "type": "heading",
+      "level": 3,
+      "content": "5.1.1 Types of Monitors"
+    },
+    {
+      "id": "4lth5yf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qio4xr0",
+      "type": "heading",
+      "level": 3,
+      "content": "5.1.2 Monitor Characteristics"
+    },
+    {
+      "id": "4ks50hk",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "j7iitlw",
+      "type": "heading",
+      "level": 2,
+      "content": "5.2 Printer"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Impact vs Non-Impact Printers",
+      "id": "n5mcqdk"
+    },
+    {
+      "type": "paragraph",
+      "id": "y3fl8so"
+    },
+    {
+      "id": "0t0zj2g",
+      "type": "heading",
+      "level": 3,
+      "content": "5.2.1 Types of Printers"
+    },
+    {
+      "id": "ffu7em8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o0pwxra",
+      "type": "heading",
+      "level": 3,
+      "content": "5.2.2 Impact vs Non-Impact Printers"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Impact Printers",
+        "Non-Impact Printers"
+      ],
+      "rows": [
+        [
+          "Printing Mechanism",
+          "Strikes a ribbon against paper",
+          "Uses ink spray, heat, or laser technology without striking"
+        ],
+        [
+          "Noise Level",
+          "Noisy during operation",
+          "Quiet operation"
+        ],
+        [
+          "Print Quality & Speed",
+          "Lower quality, slower speed",
+          "High quality, faster speed"
+        ],
+        [
+          "Examples",
+          "Dot Matrix, Daisy Wheel, Line Printer",
+          "Laser Printer, Inkjet Printer, Thermal Printer"
+        ]
+      ],
+      "id": "nrkwmz3"
+    },
+    {
+      "id": "4hprycv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "84iivxj",
+      "type": "heading",
+      "level": 2,
+      "content": "5.3 Plotter"
+    },
+    {
+      "type": "paragraph",
+      "id": "aqrsmzw"
+    },
+    {
+      "id": "9esagf3",
+      "type": "heading",
+      "level": 3,
+      "content": "5.3.1 Types of Plotters"
+    },
+    {
+      "id": "gbg4dut",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7u50m1d",
+      "type": "heading",
+      "level": 2,
+      "content": "5.4 Speaker"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate between Impact (e.g., Dot Matrix) and Non-Impact printers (e.g., Laser, Inkjet) as this is a frequent objective question.",
+        "Understand key monitor characteristics such as resolution, refresh rate, and display types (LCD, LED, CRT).",
+        "Note that Plotters produce vector graphics hard copies, unlike standard raster printers."
+      ],
+      "id": "u713bb9"
+    },
+    {
+      "type": "paragraph",
+      "id": "vfkhkh2"
+    },
+    {
+      "type": "paragraph",
+      "id": "wiwq5ve"
+    },
+    {
+      "id": "p3n46r9",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "3fq645r",
+      "type": "heading",
+      "level": 2,
+      "content": "5.5 Important Exam Points"
+    },
+    {
+      "id": "9zt4j0q",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

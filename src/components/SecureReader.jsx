@@ -453,16 +453,46 @@ const SecureReader = () => {
         
         .reader-content p { margin-bottom: 1.5rem; }
         
-        /* Premium Blockquote styling */
+        /* Drop Cap for first paragraph of a chapter */
+        .reader-content > p:first-of-type::first-letter {
+          float: left;
+          font-size: 4.5rem;
+          line-height: 0.8;
+          padding-top: 4px;
+          padding-right: 8px;
+          padding-left: 3px;
+          font-family: 'Inter', sans-serif;
+          font-weight: 800;
+          color: var(--ios-olive);
+        }
+        
+        /* Premium Blockquote / Pull Quote styling */
         .reader-content blockquote {
-          margin: 2rem 0;
-          padding: 1.25rem 1.5rem;
+          margin: 2.5rem -1.5rem;
+          padding: 1.5rem 2rem;
           background: #f8fafc;
           border-left: 4px solid var(--ios-olive);
-          border-radius: 0 8px 8px 0;
           font-style: italic;
-          color: #475569;
+          color: #334155;
+          font-size: 1.25rem;
+          line-height: 1.6;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
+        
+        /* Educational Callout Boxes (e.g. DID YOU KNOW?) */
+        .reader-content blockquote:has(strong:first-child:contains('DID YOU KNOW')),
+        .reader-content blockquote:has(strong:first-child:contains('💡')) {
+          margin: 2.5rem 0;
+          padding: 1.5rem;
+          background: rgba(75, 107, 50, 0.05);
+          border: 1px solid rgba(75, 107, 50, 0.2);
+          border-left: 4px solid var(--ios-olive);
+          border-radius: 8px;
+          font-style: normal;
+          color: #1e293b;
+          font-size: 1.05rem;
+        }
+        
         .reader-content blockquote p:last-child { margin-bottom: 0; }
         
         /* Highlight EX / Solution bolding */
@@ -475,13 +505,8 @@ const SecureReader = () => {
           margin-bottom: 1.5rem;
           padding-left: 1.5rem;
         }
-        .reader-content li {
-          margin-bottom: 0.5rem;
-        }
-        .reader-content li::marker {
-          color: var(--ios-olive);
-          font-weight: 600;
-        }
+        .reader-content li { margin-bottom: 0.5rem; }
+        .reader-content li::marker { color: var(--ios-olive); font-weight: 600; }
         
         /* Inline code */
         .reader-content code {
@@ -493,7 +518,39 @@ const SecureReader = () => {
           color: #ef4444;
         }
 
-        .reader-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        /* Image Styling - Magazine layout */
+        .reader-content img { 
+          max-width: calc(100% + 3rem); 
+          width: calc(100% + 3rem);
+          margin: 2.5rem -1.5rem; 
+          height: auto; 
+          border-radius: 0; 
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+          display: block;
+        }
+        
+        @media (min-width: 768px) {
+          .reader-content img {
+            max-width: 100%;
+            width: 100%;
+            margin: 3rem 0;
+            border-radius: 12px;
+          }
+          .reader-content blockquote {
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+          }
+        }
+        
+        /* Image Captions (if italic text follows image) */
+        .reader-content img + p > em {
+          display: block;
+          text-align: center;
+          font-size: 0.9rem;
+          color: #64748b;
+          margin-top: -1.5rem;
+          margin-bottom: 2.5rem;
+        }
         
         .reader-content pre { 
           white-space: pre-wrap; 
@@ -509,19 +566,24 @@ const SecureReader = () => {
           margin-bottom: 1.5rem;
         }
         
-        /* Table Styling */
+        /* Table Styling - Premium */
+        .reader-content .table-responsive-wrapper {
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          margin: 2.5rem 0;
+          box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+          border-radius: 12px;
+          border: 1px solid #e2e8f0;
+        }
+        
         .reader-content table { 
           width: 100%; 
           border-collapse: separate; 
           border-spacing: 0;
-          margin: 2rem 0; 
-          display: block;
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-          border-radius: 8px;
-          border: 1px solid #e2e8f0;
           font-family: 'Inter', sans-serif;
           font-size: 0.95rem;
+          min-width: 600px;
         }
         .reader-content th, .reader-content td { 
           padding: 1rem 1.25rem; 

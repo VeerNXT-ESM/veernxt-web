@@ -1,0 +1,405 @@
+{
+  "id": "nm7xgbz",
+  "title": "Chapter 10: Acids, Bases and Salts",
+  "order": 59,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "biyzc6q"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "pH Scale Range",
+          "value": "0 - 14",
+          "icon": "info"
+        },
+        {
+          "label": "Neutral pH",
+          "value": "7.0",
+          "icon": "check"
+        },
+        {
+          "label": "Acidic pH",
+          "value": "< 7",
+          "icon": "book"
+        },
+        {
+          "label": "Basic pH",
+          "value": "> 7",
+          "icon": "award"
+        }
+      ],
+      "id": "mczicf1"
+    },
+    {
+      "id": "3q0thmi",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Acids"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Acids taste sour, turn blue litmus red, and release H+ ions in aqueous solutions.",
+        "Bases taste bitter, feel soapy, turn red litmus blue, and release OH- ions in aqueous solutions.",
+        "Alkalis are water-soluble bases such as Sodium Hydroxide (NaOH) and Potassium Hydroxide (KOH).",
+        "A neutralization reaction between an acid and a base produces salt and water.",
+        "The pH scale measures the concentration of hydrogen ions, where a lower pH indicates higher acidity."
+      ],
+      "id": "42emx0x"
+    },
+    {
+      "type": "paragraph",
+      "id": "rcj7ff6"
+    },
+    {
+      "type": "paragraph",
+      "id": "v8yp72o"
+    },
+    {
+      "type": "paragraph",
+      "id": "cjukqgi"
+    },
+    {
+      "type": "paragraph",
+      "id": "vyd7sw9"
+    },
+    {
+      "type": "paragraph",
+      "id": "mr94cic"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eqa1ygr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uuqelrs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rtjioan"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6r4smq0"
+    },
+    {
+      "id": "ux9lq9q",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Bases"
+    },
+    {
+      "type": "paragraph",
+      "id": "47avr6i"
+    },
+    {
+      "type": "paragraph",
+      "id": "qsuin0s"
+    },
+    {
+      "type": "paragraph",
+      "id": "zyzrln7"
+    },
+    {
+      "type": "paragraph",
+      "id": "zv95m0v"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rfs4mcs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e1v6wwv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o7mqp5q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "All alkalis are bases, but not all bases are alkalis.",
+      "id": "2z321oq"
+    },
+    {
+      "id": "5urr9px",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Alkalis"
+    },
+    {
+      "type": "paragraph",
+      "id": "1a9g4sf"
+    },
+    {
+      "id": "invvuc3",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Properties of Acids and Bases"
+    },
+    {
+      "id": "wly12lp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyhvtpk",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Strength of Acids and Bases"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0atmwm"
+    },
+    {
+      "type": "paragraph",
+      "id": "hmd5ivo"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8c853q"
+    },
+    {
+      "type": "paragraph",
+      "id": "d0x74ob"
+    },
+    {
+      "id": "f018uy5",
+      "type": "heading",
+      "level": 2,
+      "content": "6. pH Scale"
+    },
+    {
+      "type": "paragraph",
+      "id": "6s519r9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Acids",
+        "Bases"
+      ],
+      "rows": [
+        [
+          "Taste",
+          "Sour",
+          "Bitter"
+        ],
+        [
+          "Litmus Test",
+          "Turns blue litmus red",
+          "Turns red litmus blue"
+        ],
+        [
+          "Ions in Solution",
+          "H+ / H3O+ ions",
+          "OH- ions"
+        ],
+        [
+          "pH Range",
+          "Less than 7",
+          "Greater than 7"
+        ]
+      ],
+      "id": "1u37eop"
+    },
+    {
+      "type": "paragraph",
+      "id": "s9lokn8"
+    },
+    {
+      "type": "paragraph",
+      "id": "d68cbr8"
+    },
+    {
+      "type": "paragraph",
+      "id": "01rgoyf"
+    },
+    {
+      "id": "vz0htgo",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Indicators"
+    },
+    {
+      "id": "6i8mr6u",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37hr6w2",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Neutralization Reaction"
+    },
+    {
+      "type": "paragraph",
+      "id": "eaiwd9p"
+    },
+    {
+      "type": "paragraph",
+      "id": "8h4noew"
+    },
+    {
+      "type": "paragraph",
+      "id": "bkvh5zh"
+    },
+    {
+      "id": "ta1cny2",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Salts"
+    },
+    {
+      "type": "paragraph",
+      "id": "xxoauhv"
+    },
+    {
+      "type": "paragraph",
+      "id": "n2xnwlm"
+    },
+    {
+      "type": "paragraph",
+      "id": "hjewzln"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Litmus is a natural indicator obtained from lichens belonging to the division Thallophyta.",
+        "Plaster of Paris has the chemical formula CaSO4·1/2H2O and hardens into Gypsum (CaSO4·2H2O) upon mixing with water.",
+        "Ant stings contain Methanoic acid (Formic acid), which can be neutralized using mild bases like baking soda (NaHCO3).",
+        "Bleaching powder is chemically represented as Calcium Oxychloride (CaOCl2)."
+      ],
+      "id": "uammrj7"
+    },
+    {
+      "id": "hs6qws3",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Uses of Acids, Bases and Salts"
+    },
+    {
+      "type": "paragraph",
+      "id": "khrkj0w"
+    },
+    {
+      "type": "paragraph",
+      "id": "zi69cwk"
+    },
+    {
+      "type": "paragraph",
+      "id": "ppluxo1"
+    },
+    {
+      "id": "fqbng3o",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "ck4pzr5"
+    },
+    {
+      "type": "paragraph",
+      "id": "7gwb22v"
+    },
+    {
+      "type": "paragraph",
+      "id": "l0m4rcw"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ejti9d"
+    }
+  ],
+  "enriched": true
+}

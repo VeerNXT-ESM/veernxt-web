@@ -1,0 +1,406 @@
+{
+  "id": "8288fy4",
+  "title": "Chapter 4: Input Devices",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "us8u2fw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Device",
+          "value": "Keyboard",
+          "icon": "book"
+        },
+        {
+          "label": "Function Keys",
+          "value": "12 Keys",
+          "icon": "info"
+        },
+        {
+          "label": "MICR Code",
+          "value": "9 Digits",
+          "icon": "check"
+        },
+        {
+          "label": "Cheque Reader",
+          "value": "MICR",
+          "icon": "award"
+        }
+      ],
+      "id": "pgjx334"
+    },
+    {
+      "id": "mxvinme",
+      "type": "heading",
+      "level": 2,
+      "content": "4.1 Keyboard"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Keyboards are the primary input devices containing alphanumeric, numeric, control, and 12 function keys (F1 to F12).",
+        "Computer mice are categorized into mechanical, optical, and wireless types based on movement detection technology.",
+        "Scanners convert physical hard-copy documents into digital format, with main types being flatbed, handheld, and sheetfed.",
+        "Specialized optical input devices include OMR for detecting pencil marks, OCR for converting printed text to editable data, and MICR for reading magnetic ink on bank cheques."
+      ],
+      "id": "skfqos6"
+    },
+    {
+      "type": "paragraph",
+      "id": "10ig9qr"
+    },
+    {
+      "id": "cdy0uic",
+      "type": "heading",
+      "level": 3,
+      "content": "4.1.1 Types of Keys"
+    },
+    {
+      "id": "hykrjmi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "25iuy8c"
+    },
+    {
+      "id": "bvv6upd",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "k2o1wt0",
+      "type": "heading",
+      "level": 2,
+      "content": "4.2 Mouse"
+    },
+    {
+      "type": "paragraph",
+      "id": "ykw6xnb"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Input devices convert human-understandable data into a form that a computer can process.",
+      "id": "9uy6heq"
+    },
+    {
+      "id": "og4dgs5",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2.1 Types of Mouse"
+    },
+    {
+      "id": "lruw51e",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "zmb6qxi"
+    },
+    {
+      "id": "md1h58l",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "sfqq5xs",
+      "type": "heading",
+      "level": 2,
+      "content": "4.3 Scanner"
+    },
+    {
+      "type": "paragraph",
+      "id": "wk18c2l"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Technology",
+        "Primary Function",
+        "Key Application"
+      ],
+      "rows": [
+        [
+          "OMR (Optical Mark Recognition)",
+          "Detects presence or absence of marks",
+          "Evaluating objective test answer sheets"
+        ],
+        [
+          "OCR (Optical Character Recognition)",
+          "Converts images of text into editable text",
+          "Digitizing printed books and documents"
+        ],
+        [
+          "MICR (Magnetic Ink Character Recognition)",
+          "Reads characters printed in magnetic ink",
+          "Processing and clearing bank cheques"
+        ]
+      ],
+      "id": "w6y75hy"
+    },
+    {
+      "id": "6hey6xk",
+      "type": "heading",
+      "level": 3,
+      "content": "4.3.1 Types of Scanners"
+    },
+    {
+      "id": "bxtxtiy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co7hoeo",
+      "type": "heading",
+      "level": 2,
+      "content": "4.4 Barcode Reader"
+    },
+    {
+      "type": "paragraph",
+      "id": "m0m3wfm"
+    },
+    {
+      "type": "paragraph",
+      "id": "m7m6w60"
+    },
+    {
+      "id": "0ccrv0w",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "xz6w25a",
+      "type": "heading",
+      "level": 2,
+      "content": "4.5 OMR, OCR, MICR"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "MICR uses a 9-digit code printed with magnetic ink: the first 3 digits denote the city, middle 3 denote the bank, and last 3 denote the branch.",
+        "OMR (Optical Mark Recognition) is specifically used for evaluating objective-type OMR answer sheets in competitive exams.",
+        "Function key F2 is used to rename a selected file or folder, while F5 refreshes the current window."
+      ],
+      "id": "q5dfnib"
+    },
+    {
+      "id": "ivtdzyf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8udmfu7",
+      "type": "heading",
+      "level": 2,
+      "content": "4.6 Other Input Devices"
+    },
+    {
+      "id": "5tad8i6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7h091in",
+      "type": "heading",
+      "level": 2,
+      "content": "4.7 Important Exam Points"
+    },
+    {
+      "id": "ybvtiag",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

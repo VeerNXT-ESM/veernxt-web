@@ -1,0 +1,359 @@
+{
+  "id": "5fjq3rk",
+  "title": "Chapter 13: Cyber Security",
+  "order": 13,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "xh94um5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topic",
+          "value": "Cyber Security",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Threats",
+          "value": "Viruses & Malware",
+          "icon": "info"
+        },
+        {
+          "label": "Defense Tools",
+          "value": "Firewall & Antivirus",
+          "icon": "check"
+        },
+        {
+          "label": "Cyber Attacks",
+          "value": "Phishing & Hacking",
+          "icon": "award"
+        }
+      ],
+      "id": "xlkckk6"
+    },
+    {
+      "id": "gimkxjm",
+      "type": "heading",
+      "level": 2,
+      "content": "13.1 Introduction to Cyber Security"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Cyber Security covers the protection of computer systems, networks, and data from digital attacks.",
+        "Computer Viruses and Malware represent malicious software designed to compromise or disrupt systems.",
+        "Firewalls and Antivirus software form essential defensive mechanisms against unauthorized network traffic and malicious code.",
+        "Phishing and Hacking are critical security threats involving social engineering and unauthorized system intrusion.",
+        "Cyber Safety Practices are fundamental protocols designed to safeguard personal and organizational digital assets."
+      ],
+      "id": "82p4x3b"
+    },
+    {
+      "type": "paragraph",
+      "id": "0bv225e"
+    },
+    {
+      "id": "9i8h3gy",
+      "type": "heading",
+      "level": 3,
+      "content": "13.1.1 Importance of Cyber Security"
+    },
+    {
+      "id": "dt5p4zh",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "da9cl31",
+      "type": "heading",
+      "level": 2,
+      "content": "13.2 Computer Virus"
+    },
+    {
+      "type": "paragraph",
+      "id": "umnsrqc"
+    },
+    {
+      "id": "hfq7rjr",
+      "type": "heading",
+      "level": 3,
+      "content": "13.2.1 Characteristics of Computer Virus"
+    },
+    {
+      "id": "w78axom",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "o7x3y6z",
+      "type": "heading",
+      "level": 3,
+      "content": "13.2.2 Types of Computer Viruses"
+    },
+    {
+      "id": "wkzhbn5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chapter 13: Cyber Security",
+      "id": "aw1wsnv"
+    },
+    {
+      "id": "mhdz9sb",
+      "type": "heading",
+      "level": 2,
+      "content": "13.3 Malware"
+    },
+    {
+      "type": "paragraph",
+      "id": "ah8cume"
+    },
+    {
+      "id": "6bbqhez",
+      "type": "heading",
+      "level": 3,
+      "content": "13.3.1 Types of Malware"
+    },
+    {
+      "id": "ky84v2j",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3f8oo4w",
+      "type": "heading",
+      "level": 2,
+      "content": "13.4 Firewall"
+    },
+    {
+      "type": "paragraph",
+      "id": "g8h253x"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Security Concept",
+        "Category",
+        "Primary Role / Impact"
+      ],
+      "rows": [
+        [
+          "Computer Virus",
+          "Malware / Threat",
+          "Attaches to host files and replicates to damage system data."
+        ],
+        [
+          "Firewall",
+          "Network Defense",
+          "Monitors and filters incoming/outgoing network traffic based on rules."
+        ],
+        [
+          "Antivirus",
+          "Software Defense",
+          "Scans, detects, and removes malicious code from storage and memory."
+        ],
+        [
+          "Phishing",
+          "Cyber Attack",
+          "Deceives users to fraudulently acquire passwords and sensitive data."
+        ]
+      ],
+      "id": "y0avp9m"
+    },
+    {
+      "type": "paragraph",
+      "id": "tozdwmt"
+    },
+    {
+      "id": "1jugd5n",
+      "type": "heading",
+      "level": 2,
+      "content": "13.5 Antivirus"
+    },
+    {
+      "type": "paragraph",
+      "id": "qmp0mpn"
+    },
+    {
+      "id": "htedpik",
+      "type": "heading",
+      "level": 3,
+      "content": "13.5.1 Functions of Antivirus Software"
+    },
+    {
+      "id": "qnq1r57",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "3ryjwmy",
+      "type": "heading",
+      "level": 2,
+      "content": "13.6 Phishing and Hacking"
+    },
+    {
+      "id": "t7y4cdb",
+      "type": "heading",
+      "level": 3,
+      "content": "13.6.1 Phishing"
+    },
+    {
+      "type": "paragraph",
+      "id": "0hpv9md"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between various types of Malware, including Viruses, Worms, Trojans, and Ransomware.",
+        "Differentiate the roles of Firewalls (traffic filtering at network boundary) versus Antivirus software (file scanning and malware detection).",
+        "Recognize common Phishing techniques and credential-harvesting mechanisms frequently targeted in exam questions."
+      ],
+      "id": "1p6tdos"
+    },
+    {
+      "id": "bwzyzyv",
+      "type": "heading",
+      "level": 3,
+      "content": "13.6.2 Hacking"
+    },
+    {
+      "type": "paragraph",
+      "id": "q3usedj"
+    },
+    {
+      "id": "eg3mcrx",
+      "type": "heading",
+      "level": 2,
+      "content": "13.7 Cyber Safety Practices"
+    },
+    {
+      "id": "87gro45",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "s5wxzg3",
+      "type": "heading",
+      "level": 2,
+      "content": "13.8 Important Exam Points"
+    },
+    {
+      "id": "yh2likt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,460 @@
+{
+  "id": "y9t7ey8",
+  "title": "Chapter 7: Computer Software",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "6hwbvyz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Software Categories",
+          "value": "3 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Primary System Focus",
+          "value": "Hardware & OS",
+          "icon": "info"
+        },
+        {
+          "label": "Core Comparison",
+          "value": "System vs Application",
+          "icon": "check"
+        },
+        {
+          "label": "Maintenance Focus",
+          "value": "Utility Software",
+          "icon": "award"
+        }
+      ],
+      "id": "6aekppw"
+    },
+    {
+      "id": "vhnnat7",
+      "type": "heading",
+      "level": 2,
+      "content": "7.1 Meaning of Computer Software"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Computer software is broadly divided into System Software, Application Software, and Utility Software.",
+        "System Software controls hardware operations and creates an execution platform for application software.",
+        "Application Software is designed to complete end-user specific tasks like word processing and calculations.",
+        "Utility Software performs supportive tasks including system optimization, antivirus scanning, and disk management."
+      ],
+      "id": "t2k1lp0"
+    },
+    {
+      "type": "paragraph",
+      "id": "cedn7u3"
+    },
+    {
+      "id": "uriv66y",
+      "type": "heading",
+      "level": 3,
+      "content": "7.1.1 Characteristics of Software"
+    },
+    {
+      "id": "86ljyu7",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "wov82ew",
+      "type": "heading",
+      "level": 2,
+      "content": "7.2 Types of Computer Software"
+    },
+    {
+      "id": "k3m6eho",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5lkoaq2",
+      "type": "heading",
+      "level": 2,
+      "content": "7.3 System Software"
+    },
+    {
+      "type": "paragraph",
+      "id": "maa6d1w"
+    },
+    {
+      "id": "jbzgs24",
+      "type": "heading",
+      "level": 3,
+      "content": "7.3.1 Functions of System Software"
+    },
+    {
+      "id": "50ddw8w",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "System Software vs Application Software",
+      "id": "oxkho10"
+    },
+    {
+      "id": "3u6cpqw",
+      "type": "heading",
+      "level": 3,
+      "content": "7.3.2 Types of System Software"
+    },
+    {
+      "id": "w3msslm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k97d6ou",
+      "type": "heading",
+      "level": 3,
+      "content": "7.3.3 Examples of System Software"
+    },
+    {
+      "id": "e7hanq1",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "run3fgm",
+      "type": "heading",
+      "level": 2,
+      "content": "7.4 Application Software"
+    },
+    {
+      "type": "paragraph",
+      "id": "o5r9k0g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "System Software",
+        "Application Software"
+      ],
+      "rows": [
+        [
+          "Function",
+          "Manages hardware resources and basic operations",
+          "Executes specific user-requested tasks"
+        ],
+        [
+          "Execution",
+          "Runs continuously in the background",
+          "Executed as needed by the user"
+        ],
+        [
+          "Dependency",
+          "Operates independently of application programs",
+          "Requires system software to run"
+        ],
+        [
+          "Examples",
+          "Operating Systems, Device Drivers, Compilers",
+          "MS Office, Web Browsers, Media Players"
+        ]
+      ],
+      "id": "f26abtm"
+    },
+    {
+      "id": "j214koi",
+      "type": "heading",
+      "level": 3,
+      "content": "7.4.1 Types of Application Software"
+    },
+    {
+      "id": "eg74uhb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fktla4v",
+      "type": "heading",
+      "level": 3,
+      "content": "7.4.2 Characteristics of Application Software"
+    },
+    {
+      "id": "6r3v786",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "gmq4072",
+      "type": "heading",
+      "level": 2,
+      "content": "7.5 Utility Software"
+    },
+    {
+      "type": "paragraph",
+      "id": "36zexrz"
+    },
+    {
+      "id": "kj8td53",
+      "type": "heading",
+      "level": 3,
+      "content": "7.5.1 Functions of Utility Software"
+    },
+    {
+      "id": "mfauvl3",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Categorizing software examples (e.g., Device Drivers as System Software vs. Antivirus as Utility Software) is a frequently tested topic.",
+        "Questions commonly test the core operational dependencies between System Software and Application Software.",
+        "Key functions of Utility Software like disk cleanup and defragmentation are frequently asked."
+      ],
+      "id": "dslkfqa"
+    },
+    {
+      "id": "yfvmylk",
+      "type": "heading",
+      "level": 3,
+      "content": "7.5.2 Examples of Utility Software"
+    },
+    {
+      "id": "d53oznm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "701e4pw",
+      "type": "heading",
+      "level": 2,
+      "content": "7.6 System Software vs Application Software"
+    },
+    {
+      "id": "dogrgmn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j2vnecw",
+      "type": "heading",
+      "level": 2,
+      "content": "7.7 Important Exam Points"
+    },
+    {
+      "id": "wovqhqd",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

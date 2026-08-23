@@ -1,0 +1,435 @@
+{
+  "id": "7f9dpup",
+  "title": "Chapter 32: Volcanoes and Earthquakes",
+  "order": 33,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "p1z76ju"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Seismic Wave Types",
+          "value": "3 (P, S, Surface)",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Volcanic Belt",
+          "value": "Pacific Ring of Fire",
+          "icon": "award"
+        },
+        {
+          "label": "Measurement Scales",
+          "value": "Richter & Mercalli",
+          "icon": "check"
+        },
+        {
+          "label": "Volcano Categories",
+          "value": "Active, Dormant, Extinct",
+          "icon": "book"
+        }
+      ],
+      "id": "g983pcv"
+    },
+    {
+      "id": "zo6g7tv",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Volcanoes"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Volcanoes are classified by activity (Active, Dormant, Extinct) and by physical shape (Shield, Composite/Stratovolcano, Cinder Cone).",
+        "Earthquake energy propagates via seismic body waves (P-waves and S-waves) and surface waves (L-waves).",
+        "Primary (P) waves are longitudinal, fastest, and travel through solids, liquids, and gases; Secondary (S) waves are transverse and pass only through solids.",
+        "The Circum-Pacific Belt (Ring of Fire) contains the highest concentration of active volcanoes and seismic activity worldwide.",
+        "Earthquake magnitude is measured quantitatively on the logarithmic Richter Scale, whereas earthquake intensity is measured qualitatively on the Mercalli Scale."
+      ],
+      "id": "fpc2vjr"
+    },
+    {
+      "type": "paragraph",
+      "id": "krogocn"
+    },
+    {
+      "id": "5dnj4iq",
+      "type": "heading",
+      "level": 3,
+      "content": "Structure of a Volcano"
+    },
+    {
+      "type": "paragraph",
+      "id": "fux22xn"
+    },
+    {
+      "type": "paragraph",
+      "id": "nuw82jo"
+    },
+    {
+      "type": "paragraph",
+      "id": "4q2tlpe"
+    },
+    {
+      "type": "paragraph",
+      "id": "7tas4sk"
+    },
+    {
+      "type": "paragraph",
+      "id": "kvm1r6s"
+    },
+    {
+      "id": "cjr9545",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Volcanoes Based on Activity"
+    },
+    {
+      "id": "ntecd0x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kqf7cdz",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Volcanoes Based on Shape"
+    },
+    {
+      "id": "qcgi389",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4v1xotj",
+      "type": "heading",
+      "level": 3,
+      "content": "Effects of Volcanoes"
+    },
+    {
+      "type": "paragraph",
+      "id": "31iusxm"
+    },
+    {
+      "type": "paragraph",
+      "id": "pjmtcue"
+    },
+    {
+      "type": "paragraph",
+      "id": "hgtvjti"
+    },
+    {
+      "type": "paragraph",
+      "id": "2d9a6yw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Major Earthquake Zones of the World",
+      "id": "y5ts9d7"
+    },
+    {
+      "id": "9l52j84",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "a8rfnh0"
+    },
+    {
+      "id": "gnrmsjr",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Terms"
+    },
+    {
+      "type": "paragraph",
+      "id": "hrpd4i3"
+    },
+    {
+      "type": "paragraph",
+      "id": "onda81c"
+    },
+    {
+      "type": "paragraph",
+      "id": "mexxsiy"
+    },
+    {
+      "type": "paragraph",
+      "id": "nie9x47"
+    },
+    {
+      "id": "qv43rhu",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Seismic Waves"
+    },
+    {
+      "id": "ln8njeu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Primary Waves (P-Waves)",
+        "Secondary Waves (S-Waves)"
+      ],
+      "rows": [
+        [
+          "Wave Type",
+          "Longitudinal (Compressional)",
+          "Transverse (Shear)"
+        ],
+        [
+          "Relative Velocity",
+          "Fastest (Arrives First)",
+          "Slower than P-Waves"
+        ],
+        [
+          "Medium Propagation",
+          "Solids, Liquids, and Gases",
+          "Solids Only"
+        ],
+        [
+          "Particle Motion",
+          "Parallel to wave propagation direction",
+          "Perpendicular to wave propagation direction"
+        ]
+      ],
+      "id": "t33eu06"
+    },
+    {
+      "id": "nkjqnc9",
+      "type": "heading",
+      "level": 3,
+      "content": "Causes of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "wu6b6rj"
+    },
+    {
+      "type": "paragraph",
+      "id": "g8ch04x"
+    },
+    {
+      "type": "paragraph",
+      "id": "01rnwly"
+    },
+    {
+      "type": "paragraph",
+      "id": "agv8itq"
+    },
+    {
+      "id": "c81f1gj",
+      "type": "heading",
+      "level": 3,
+      "content": "Measurement of Earthquakes"
+    },
+    {
+      "id": "w4m6uq5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1rwubp",
+      "type": "heading",
+      "level": 3,
+      "content": "Effects of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "y9pq7h3"
+    },
+    {
+      "type": "paragraph",
+      "id": "texrdet"
+    },
+    {
+      "type": "paragraph",
+      "id": "tgvz4bx"
+    },
+    {
+      "type": "paragraph",
+      "id": "376z76n"
+    },
+    {
+      "id": "z526f9a",
+      "type": "heading",
+      "level": 3,
+      "content": "Major Earthquake Zones of the World"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "S-waves cannot pass through liquid media, providing key evidence that the Earth's outer core is liquid.",
+        "Richter Scale measures total energy released (magnitude), whereas Mercalli Scale measures visible destruction (intensity).",
+        "P-waves are the fastest seismic waves and always register first on a seismograph.",
+        "Hypocenter (Focus) is the underground point of origin, while Epicenter is the point on the Earth's surface directly above it."
+      ],
+      "id": "d3gctaz"
+    },
+    {
+      "type": "paragraph",
+      "id": "4kpsbz8"
+    },
+    {
+      "type": "paragraph",
+      "id": "2wrybcz"
+    },
+    {
+      "type": "paragraph",
+      "id": "ujy47kk"
+    },
+    {
+      "id": "39qm9uz",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "fdebn7x"
+    },
+    {
+      "type": "paragraph",
+      "id": "qeq01rq"
+    },
+    {
+      "type": "paragraph",
+      "id": "vvqeijt"
+    },
+    {
+      "type": "paragraph",
+      "id": "g47wk2s"
+    }
+  ],
+  "enriched": true
+}

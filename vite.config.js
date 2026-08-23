@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath, parse as parseUrl } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -19,13 +19,18 @@ const vercelApiPlugin = () => {
             const filePath = path.join(__dirname, routePath + '.js');
             
             if (fs.existsSync(filePath)) {
+              // Vercel's real runtime parses ?query=params onto req.query —
+              // this local shim didn't, so any GET route reading req.query
+              // (e.g. api/exams.js) silently got undefined here.
+              req.query = parseUrl(req.url, true).query;
+
               let body = '';
               req.on('data', chunk => { body += chunk.toString(); });
               req.on('end', async () => {
                 if (body) {
                   try { req.body = JSON.parse(body); } catch(e) {}
                 }
-                
+
                 const moduleUrl = `file:///${filePath.replace(/\\/g, '/')}?t=${Date.now()}`;
                 const { default: handler } = await import(moduleUrl);
                 

@@ -40,6 +40,11 @@ export default async function handler(req, res) {
       // matched against the canonical catalog) over the older exams.exam_id FK,
       // which is separately known to be wrong on ~75% of its populated rows.
       body: job.lc_exams?.lc_conducting_bodies?.name || job.exams?.conducting_body || extractCompany(job),
+      // Required exam for this job, when matched — only ~14/549 rows have
+      // lc_exam_id populated today (scripts/match_jobs_to_lc_exams.mjs's
+      // conservative pass); the frontend must degrade gracefully when null.
+      examId: job.lc_exam_id || null,
+      examName: job.lc_exams?.name || null,
       publishedOn: job.published_on,
       lastDate: job.last_date,
       vacancies: job.vacancies,

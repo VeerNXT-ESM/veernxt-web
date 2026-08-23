@@ -1,0 +1,302 @@
+{
+  "id": "8zwdgrj",
+  "title": "Chapter 8: Matter and Its Properties",
+  "order": 57,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "uxzuey3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "States of Matter",
+          "value": "5 States",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Density",
+          "value": "kg/m³",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "award"
+        },
+        {
+          "label": "Hooke's Law",
+          "value": "Stress ∝ Strain",
+          "icon": "check"
+        }
+      ],
+      "id": "fff3ows"
+    },
+    {
+      "id": "sj4k0fq",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Matter"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Matter is anything that possesses mass and occupies physical space.",
+        "The primary physical states of matter are Solid, Liquid, Gas, Plasma, and Bose-Einstein Condensate.",
+        "Density measures mass per unit volume and determines whether an object floats or sinks.",
+        "Pressure is defined as force applied per unit area and is measured in Pascals (N/m²).",
+        "Elasticity is the property of a body to recover its original shape when deforming forces are removed."
+      ],
+      "id": "60cjn13"
+    },
+    {
+      "type": "paragraph",
+      "id": "r2bwrw1"
+    },
+    {
+      "type": "paragraph",
+      "id": "l8q7cih"
+    },
+    {
+      "type": "paragraph",
+      "id": "65nhw5x"
+    },
+    {
+      "id": "2er0ca5",
+      "type": "heading",
+      "level": 2,
+      "content": "2. States of Matter"
+    },
+    {
+      "id": "uzn8r1h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enx1eg9",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Physical Properties of Matter"
+    },
+    {
+      "type": "paragraph",
+      "id": "xn4rf18"
+    },
+    {
+      "type": "paragraph",
+      "id": "xq35ciu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Matter is defined as anything that has mass and occupies space.",
+      "id": "hdai95e"
+    },
+    {
+      "type": "paragraph",
+      "id": "q08xhfj"
+    },
+    {
+      "type": "paragraph",
+      "id": "rivjia9"
+    },
+    {
+      "id": "b6vnxwm",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Changes in States of Matter"
+    },
+    {
+      "id": "jt45zcz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xnf908n",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Density"
+    },
+    {
+      "type": "paragraph",
+      "id": "kbvnsrc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Solids",
+        "Liquids",
+        "Gases"
+      ],
+      "rows": [
+        [
+          "Shape & Volume",
+          "Fixed shape and volume",
+          "Fixed volume, no fixed shape",
+          "Neither fixed shape nor volume"
+        ],
+        [
+          "Compressibility",
+          "Negligible",
+          "Slight",
+          "High"
+        ],
+        [
+          "Intermolecular Force",
+          "Very Strong",
+          "Moderate",
+          "Very Weak"
+        ]
+      ],
+      "id": "t8imf2e"
+    },
+    {
+      "type": "paragraph",
+      "id": "x4xf1wv"
+    },
+    {
+      "type": "paragraph",
+      "id": "xz8d53o"
+    },
+    {
+      "id": "pghazdg",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Elasticity"
+    },
+    {
+      "type": "paragraph",
+      "id": "3xhtwh8"
+    },
+    {
+      "id": "365ymfo",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Pressure"
+    },
+    {
+      "type": "paragraph",
+      "id": "arh4u3n"
+    },
+    {
+      "type": "paragraph",
+      "id": "wkyxb8b"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3sfaye5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sublimation is the direct transition of a substance from solid to gas without entering the liquid phase.",
+        "Pascal's Law is the foundational principle behind hydraulic lifts and hydraulic brakes.",
+        "Atmospheric pressure decreases as altitude increases.",
+        "Hooke's Law states that within elastic limits, stress is directly proportional to strain."
+      ],
+      "id": "s8ff8ml"
+    },
+    {
+      "id": "jbhhi2j",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "2r3w63a"
+    },
+    {
+      "type": "paragraph",
+      "id": "w2xew1w"
+    },
+    {
+      "type": "paragraph",
+      "id": "df9dxef"
+    },
+    {
+      "type": "paragraph",
+      "id": "m22xrg8"
+    }
+  ],
+  "enriched": true
+}

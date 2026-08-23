@@ -1,0 +1,293 @@
+{
+  "id": "c00yec3",
+  "title": "Chapter 1: Basics of Computer",
+  "order": 1,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5z34dll"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Generations of Computers",
+          "value": "5 Generations",
+          "icon": "calendar"
+        },
+        {
+          "label": "Main Computer Types",
+          "value": "3 (Analog, Digital, Hybrid)",
+          "icon": "book"
+        },
+        {
+          "label": "Basic Functions",
+          "value": "4 (Input, Process, Output, Storage)",
+          "icon": "check"
+        },
+        {
+          "label": "Key Evaluation Focus",
+          "value": "Generations & Types",
+          "icon": "award"
+        }
+      ],
+      "id": "ng9oy2a"
+    },
+    {
+      "id": "wjc6wbq",
+      "type": "heading",
+      "level": 2,
+      "content": "1.1 Definition of Computer"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Computers perform four core operations: receiving input, processing data, producing output, and storing results.",
+        "Computers are classified based on operation into Analog (continuous physical data), Digital (discrete binary data), and Hybrid (combined features).",
+        "Computer evolution spans five generations, progressing from Vacuum Tubes to Transistors, Integrated Circuits, Microprocessors, and Artificial Intelligence.",
+        "Primary characteristics of a computer include high processing speed, extreme accuracy, high diligence, versatility, and vast storage capacity."
+      ],
+      "id": "1ftka80"
+    },
+    {
+      "type": "paragraph",
+      "id": "qyw82os"
+    },
+    {
+      "id": "sj8m24i",
+      "type": "heading",
+      "level": 3,
+      "content": "1.1.1 Basic Functions of Computer"
+    },
+    {
+      "type": "pullQuote",
+      "content": "1.3 Types of Computers (Analog, Digital, Hybrid)",
+      "id": "c4eyilw"
+    },
+    {
+      "id": "vrstn47",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rjxdicw",
+      "type": "heading",
+      "level": 2,
+      "content": "1.2 Characteristics of Computer"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Computer Type",
+        "Data/Signal Processed",
+        "Key Applications & Examples"
+      ],
+      "rows": [
+        [
+          "Analog Computer",
+          "Continuous physical variables (voltage, pressure, temperature)",
+          "Speedometers, traditional thermometers, analog clocks"
+        ],
+        [
+          "Digital Computer",
+          "Discrete binary data (0s and 1s)",
+          "Personal computers, laptops, digital calculators, smartphones"
+        ],
+        [
+          "Hybrid Computer",
+          "Combines continuous analog signals and discrete digital processing",
+          "ECG machines in hospitals, petrol pump dispensers, scientific research units"
+        ]
+      ],
+      "id": "ow74dsd"
+    },
+    {
+      "id": "mkh4j5d",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "52zep32",
+      "type": "heading",
+      "level": 2,
+      "content": "1.3 Types of Computers (Analog, Digital, Hybrid)"
+    },
+    {
+      "id": "8zkvxl5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6sgbyip",
+      "type": "heading",
+      "level": 2,
+      "content": "1.4 Generations of Computers"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "First-generation computers used Vacuum Tubes, second-generation used Transistors, third-generation used Integrated Circuits (ICs), fourth-generation used VLSI/Microprocessors, and fifth-generation rely on ULSI/AI.",
+        "Hybrid computers combine the continuous measurement of Analog computers with the precise logical counting of Digital computers (frequently cited example: ECG machines in medical units).",
+        "Questions frequently test the distinction between data processing stages: Input -> Processing -> Output -> Storage (IPOS cycle)."
+      ],
+      "id": "kmu6ipl"
+    },
+    {
+      "id": "p43ypls",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xyzo651",
+      "type": "heading",
+      "level": 2,
+      "content": "1.5 Important Exam Points"
+    },
+    {
+      "id": "n8vkgss",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

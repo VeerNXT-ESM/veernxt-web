@@ -1,0 +1,405 @@
+{
+  "id": "yzvlwqc",
+  "title": "Chapter 11: Computer Networking",
+  "order": 11,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "u91pw6b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Network Types",
+          "value": "3 Primary",
+          "icon": "book"
+        },
+        {
+          "label": "Core Topologies",
+          "value": "5 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Key Hardware Devices",
+          "value": "4 Essential",
+          "icon": "info"
+        }
+      ],
+      "id": "yyoyisf"
+    },
+    {
+      "id": "6q0kd07",
+      "type": "heading",
+      "level": 2,
+      "content": "11.1 Introduction to Computer Networks"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Computer networks enable efficient resource sharing, data communication, and centralized management across interconnected devices.",
+        "Networks are classified by geographical coverage into Local Area Network (LAN), Metropolitan Area Network (MAN), and Wide Area Network (WAN).",
+        "Network hardware includes Routers (route data across networks), Switches (smart local packet switching), Hubs (broadcasting devices), and Modems (signal conversion).",
+        "Network topologies represent physical or logical layouts including Bus, Star, Ring, Mesh, and Tree structures."
+      ],
+      "id": "yp7oaci"
+    },
+    {
+      "type": "paragraph",
+      "id": "metamg0"
+    },
+    {
+      "id": "szrz7u7",
+      "type": "heading",
+      "level": 3,
+      "content": "11.1.1 Advantages of Computer Networks"
+    },
+    {
+      "id": "kcwjuw9",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "x5d8x6b",
+      "type": "heading",
+      "level": 2,
+      "content": "11.2 Types of Computer Networks"
+    },
+    {
+      "id": "pcsu88z",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kroxa6e",
+      "type": "heading",
+      "level": 3,
+      "content": "11.2.1 Local Area Network (LAN)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vkp8axn"
+    },
+    {
+      "id": "psys1s3",
+      "type": "heading",
+      "level": 3,
+      "content": "11.2.2 Metropolitan Area Network (MAN)"
+    },
+    {
+      "type": "paragraph",
+      "id": "bjm2x2d"
+    },
+    {
+      "id": "68y9rxe",
+      "type": "heading",
+      "level": 3,
+      "content": "11.2.3 Wide Area Network (WAN)"
+    },
+    {
+      "type": "paragraph",
+      "id": "4w8rw55"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A computer network enables seamless resource sharing, efficient communication, and centralized data management across interconnected hardware systems.",
+      "id": "vxbmdsq"
+    },
+    {
+      "id": "ip3hlce",
+      "type": "heading",
+      "level": 2,
+      "content": "11.3 Network Devices"
+    },
+    {
+      "id": "14zinb1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "y7bdckl",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.1 Router"
+    },
+    {
+      "type": "paragraph",
+      "id": "fljkqp0"
+    },
+    {
+      "id": "5y3twpw",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.2 Switch"
+    },
+    {
+      "type": "paragraph",
+      "id": "r3yrasq"
+    },
+    {
+      "id": "e7z1h7r",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.3 Hub"
+    },
+    {
+      "type": "paragraph",
+      "id": "ng23zj8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "LAN (Local Area Network)",
+        "MAN (Metropolitan Area Network)",
+        "WAN (Wide Area Network)"
+      ],
+      "rows": [
+        [
+          "Geographical Scope",
+          "Small (Single room, office, or building)",
+          "Medium (Entire city or town)",
+          "Large (Country, continent, or global)"
+        ],
+        [
+          "Data Transfer Speed",
+          "Very High (e.g., 100 Mbps - 1 Gbps)",
+          "Moderate Speed",
+          "Relatively Low Speed"
+        ],
+        [
+          "Ownership & Cost",
+          "Private ownership; Low cost",
+          "Private/Public; Moderate cost",
+          "Private/Public; High cost"
+        ],
+        [
+          "Error Rate",
+          "Lowest error rate",
+          "Moderate error rate",
+          "Highest error rate"
+        ]
+      ],
+      "id": "naw8z4h"
+    },
+    {
+      "id": "3qtz23m",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.4 Modem"
+    },
+    {
+      "type": "paragraph",
+      "id": "arrel81"
+    },
+    {
+      "id": "i8t18oh",
+      "type": "heading",
+      "level": 2,
+      "content": "11.4 Network Topologies"
+    },
+    {
+      "id": "9kg4soo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "udmoevf",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.1 Bus Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "s4x7olp"
+    },
+    {
+      "id": "9yb9tob",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.2 Star Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "0uxcigi"
+    },
+    {
+      "id": "yhbyms2",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.3 Ring Topology"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Hub vs. Switch: A Hub broadcasts data packets to all connected ports (Layer 1), whereas a Switch intelligently forwards packets to specific destination ports using MAC addresses (Layer 2).",
+        "Mesh Topology: Provides maximum reliability and fault tolerance through redundant point-to-point links between all nodes, but incurs high installation costs.",
+        "Modem Functionality: Performs Modulation (Digital to Analog conversion) and Demodulation (Analog to Digital conversion) for network data transfer over standard communication lines."
+      ],
+      "id": "vene81b"
+    },
+    {
+      "type": "paragraph",
+      "id": "0yyf36h"
+    },
+    {
+      "id": "0gc7gz4",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.4 Mesh Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "3i10fwg"
+    },
+    {
+      "id": "tzfc6tf",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.5 Tree Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "mqzb0fb"
+    },
+    {
+      "id": "i8pciiz",
+      "type": "heading",
+      "level": 2,
+      "content": "11.5 Important Exam Points"
+    },
+    {
+      "id": "zpg3cie",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

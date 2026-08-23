@@ -1,0 +1,379 @@
+{
+  "id": "6a570w6",
+  "title": "Chapter 12: Internet & Email",
+  "order": 12,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "d2k3qm6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "WWW Invented",
+          "value": "1989",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Network",
+          "value": "ARPANET",
+          "icon": "info"
+        },
+        {
+          "label": "Mail Protocol",
+          "value": "SMTP",
+          "icon": "check"
+        },
+        {
+          "label": "Secure Web",
+          "value": "HTTPS",
+          "icon": "award"
+        }
+      ],
+      "id": "evpuj1u"
+    },
+    {
+      "id": "umir49q",
+      "type": "heading",
+      "level": 2,
+      "content": "12.1 Internet"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The World Wide Web (WWW) was created by Sir Tim Berners-Lee in 1989 at CERN.",
+        "A Web Browser is a client-side software application used to render and display web pages, whereas a Search Engine is a web-based service used to index and search content.",
+        "Email communication uses SMTP (Simple Mail Transfer Protocol) for sending messages, and POP3 or IMAP for receiving messages.",
+        "A Uniform Resource Locator (URL) serves as the unique global address of a web resource.",
+        "HTTPS encrypts communication between the browser and server using SSL/TLS over Port 443."
+      ],
+      "id": "3i2nk70"
+    },
+    {
+      "type": "paragraph",
+      "id": "275b77t"
+    },
+    {
+      "id": "tpdhjf4",
+      "type": "heading",
+      "level": 3,
+      "content": "12.1.1 Advantages of Internet"
+    },
+    {
+      "id": "4njghvt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "p93o40g",
+      "type": "heading",
+      "level": 2,
+      "content": "12.2 World Wide Web (WWW)"
+    },
+    {
+      "type": "paragraph",
+      "id": "sar6m4x"
+    },
+    {
+      "id": "efcfyps",
+      "type": "heading",
+      "level": 3,
+      "content": "12.2.1 Features of WWW"
+    },
+    {
+      "id": "4dsl6ub",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "15qopb7",
+      "type": "heading",
+      "level": 2,
+      "content": "12.3 Web Browser"
+    },
+    {
+      "type": "paragraph",
+      "id": "n3csk06"
+    },
+    {
+      "type": "pullQuote",
+      "content": "World Wide Web (WWW)",
+      "id": "10ed3ij"
+    },
+    {
+      "id": "7seslth",
+      "type": "heading",
+      "level": 3,
+      "content": "12.3.1 Examples of Web Browsers"
+    },
+    {
+      "id": "swfboz8",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "9pvfrpi",
+      "type": "heading",
+      "level": 3,
+      "content": "12.3.2 Functions of Web Browser"
+    },
+    {
+      "id": "fhid3wr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "hdrrrr2",
+      "type": "heading",
+      "level": 2,
+      "content": "12.4 Search Engine"
+    },
+    {
+      "type": "paragraph",
+      "id": "xnlvu5o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Web Browser",
+        "Search Engine"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Software program installed on a device to view web pages",
+          "Web service used to search for information across the web"
+        ],
+        [
+          "Installation",
+          "Requires local installation on the computer/mobile",
+          "Does not require installation; accessed inside a browser"
+        ],
+        [
+          "Core Function",
+          "Interprets HTML code and renders web pages",
+          "Indexes web pages and retrieves relevant URL results"
+        ],
+        [
+          "Examples",
+          "Google Chrome, Mozilla Firefox, Safari, Edge",
+          "Google, Bing, Yahoo, DuckDuckGo"
+        ]
+      ],
+      "id": "c5nhsbo"
+    },
+    {
+      "id": "m6yvvs6",
+      "type": "heading",
+      "level": 3,
+      "content": "12.4.1 Examples of Search Engines"
+    },
+    {
+      "id": "wkq2pyc",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4534szl",
+      "type": "heading",
+      "level": 3,
+      "content": "12.4.2 Functions of Search Engines"
+    },
+    {
+      "id": "eybcl0c",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "1k6asux",
+      "type": "heading",
+      "level": 2,
+      "content": "12.5 Email (Electronic Mail)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ho9drtq"
+    },
+    {
+      "id": "ymxylcv",
+      "type": "heading",
+      "level": 3,
+      "content": "12.5.1 Components of Email"
+    },
+    {
+      "id": "zkmpmlb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SMTP is strictly used for SENDING emails, whereas POP3 and IMAP are used for RECEIVING emails.",
+        "BCC (Blind Carbon Copy) keeps recipient email addresses hidden from all other message recipients.",
+        "HTTPS uses SSL/TLS encryption on Port 443, while unencrypted HTTP operates on Port 80.",
+        "Tim Berners-Lee developed the World Wide Web, HTML, HTTP, and the first web browser."
+      ],
+      "id": "626p0ve"
+    },
+    {
+      "id": "isk4ggn",
+      "type": "heading",
+      "level": 3,
+      "content": "12.5.2 Advantages of Email"
+    },
+    {
+      "id": "0zddlq1",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "l9yn1lk",
+      "type": "heading",
+      "level": 2,
+      "content": "12.6 URL / HTTP / HTTPS"
+    },
+    {
+      "id": "m2i55qk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3ea4gc",
+      "type": "heading",
+      "level": 2,
+      "content": "12.7 Important Exam Points (RRB)"
+    },
+    {
+      "id": "p7y2rad",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

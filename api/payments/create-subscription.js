@@ -9,9 +9,6 @@
 import Razorpay from 'razorpay';
 
 const PLAN_AMOUNTS = {
-  SCORE_UNLOCK: 900,     // ₹9 in paise
-  SCORE_CV: 1000,        // ₹10 in paise
-  CV_ADDON: 100,         // ₹1 in paise — post-unlock CV bonus add-on for users who already own SCORE_UNLOCK
   MONTHLY: 4900,         // ₹49 in paise
   ANNUAL: 29900,         // ₹299 in paise
   BIENNIAL: 39900,       // ₹399 in paise

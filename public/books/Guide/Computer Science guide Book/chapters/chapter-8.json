@@ -1,0 +1,349 @@
+{
+  "id": "wekyxmy",
+  "title": "Chapter 8: Operating System",
+  "order": 8,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9cqkh98"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Topic",
+          "value": "Operating System",
+          "icon": "book"
+        },
+        {
+          "label": "Key Types Covered",
+          "value": "Batch, Time Sharing, Multiprocessing",
+          "icon": "info"
+        },
+        {
+          "label": "Featured OS",
+          "value": "Windows OS Basics",
+          "icon": "check"
+        }
+      ],
+      "id": "dsgayo1"
+    },
+    {
+      "id": "g7xwj6h",
+      "type": "heading",
+      "level": 2,
+      "content": "8.1 Meaning of Operating System"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Operating System serves as the primary interface between computer hardware and the user.",
+        "Core OS types include Batch Operating Systems, Time Sharing Operating Systems, and Multiprocessing Operating Systems.",
+        "Key functions of an OS encompass resource management, task scheduling, memory control, and system security.",
+        "Windows OS basics include understanding its graphical user interface, key features, and essential desktop components."
+      ],
+      "id": "svi78gv"
+    },
+    {
+      "type": "paragraph",
+      "id": "dri05dg"
+    },
+    {
+      "id": "ohc9877",
+      "type": "heading",
+      "level": 3,
+      "content": "8.1.1 Examples of Operating Systems"
+    },
+    {
+      "id": "cv63jkw",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "vvivdxx",
+      "type": "heading",
+      "level": 2,
+      "content": "8.2 Functions of Operating System"
+    },
+    {
+      "id": "ana3fvv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d93mzgw",
+      "type": "heading",
+      "level": 2,
+      "content": "8.3 Types of Operating Systems"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Windows Operating System Basics",
+      "id": "6qduefk"
+    },
+    {
+      "id": "wi3cjpw",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.1 Batch Operating System"
+    },
+    {
+      "type": "paragraph",
+      "id": "wp90a7t"
+    },
+    {
+      "id": "s5id15x",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.2 Time Sharing Operating System"
+    },
+    {
+      "type": "paragraph",
+      "id": "oqzzd9u"
+    },
+    {
+      "id": "ki2sxo6",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.3 Multiprocessing Operating System"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "OS Type",
+        "Key Characteristics"
+      ],
+      "rows": [
+        [
+          "Batch Operating System",
+          "Executes jobs grouped into batches sequentially without direct user interaction."
+        ],
+        [
+          "Time Sharing Operating System",
+          "Allocates dedicated CPU time slices to multiple users or tasks concurrently."
+        ],
+        [
+          "Multiprocessing Operating System",
+          "Utilizes two or more central processing units (CPUs) within a single system."
+        ]
+      ],
+      "id": "pxglqk3"
+    },
+    {
+      "type": "paragraph",
+      "id": "i5j18b5"
+    },
+    {
+      "id": "7l9gnxz",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.4 Other Types of Operating Systems"
+    },
+    {
+      "id": "w7grhk9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ozp26qu",
+      "type": "heading",
+      "level": 2,
+      "content": "8.4 Windows Operating System Basics"
+    },
+    {
+      "type": "paragraph",
+      "id": "u0igx1t"
+    },
+    {
+      "id": "ejvdcza",
+      "type": "heading",
+      "level": 3,
+      "content": "8.4.1 Key Features of Windows OS"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Batch, Time Sharing, and Multiprocessing systems as these are frequently queried in objective questions.",
+        "Memorize the essential functions of an Operating System, including process and memory management.",
+        "Review key features of the Windows OS and main components of the Windows Desktop for practical theory questions."
+      ],
+      "id": "a16cayr"
+    },
+    {
+      "id": "ck4egp4",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "664w4aq",
+      "type": "heading",
+      "level": 3,
+      "content": "8.4.2 Main Components of Windows Desktop"
+    },
+    {
+      "id": "iwfrlub",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14eoec5",
+      "type": "heading",
+      "level": 2,
+      "content": "8.5 Important Exam Points"
+    },
+    {
+      "id": "u0vv0xr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}
