@@ -45,7 +45,6 @@ import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
-import BookReaderV2 from './pages/sandbox/BookReaderV2';
 import './index.css';
 
 /**
@@ -136,7 +135,6 @@ function App() {
         <Route path="/financial-guidance" element={<FinancialGuidance />} />
         <Route path="/preview-services" element={<PreviewFinanceSuites />} />
         <Route path="/pay" element={<PaymentPage />} />
-        <Route path="/sandbox/book-reader" element={<BookReaderV2 />} />
 
         {/* Routes with Global Header */}
         <Route element={<Layout />}>
