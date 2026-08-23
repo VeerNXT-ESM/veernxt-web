@@ -109,5 +109,5 @@ BookBlocks.jsx / .css  ← Component library (ParagraphBlock, HeadingBlock, Tabl
 2. **Wire to AdminDriveIngestion** — replace the old `contentEngineProcessor.js` pipeline with `mammothParser.js`. Store the semantic JSON chapters to R2 as `chapter-X.json`.
 3. **Wire SecureReader** — update `SecureReader.jsx` to use the new `BookReaderV2` layout instead of the raw `body_html` renderer.
 4. **Production Gemini proxy** — create a Supabase Edge Function `gemini-enricher` that proxies the API call server-side.
-5. **AI Image Generation** — use Gemini or Imagen to auto-generate contextual illustrations for each chapter based on the chapter title and key facts.
+5. **AI Image Generation & Density Optimization** — expand the Gemini image prompt during the image pass to analyze text density, identify text-heavy sections that need visual relief, and auto-generate detailed prompts for AI illustrations (Imagen 3) to insert clean diagrams, maps, or infographic aids dynamically.
 6. **Batch automation** — build a Node.js CLI script that runs the full pipeline (Mammoth parse → Gemini enrich → R2 upload) on all 100 books in the `MASTER DOCUMENTS` folder.

@@ -6,6 +6,8 @@ import 'react-quill-new/dist/quill.snow.css';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
 import { awardPoints } from '../lib/awardPoints';
 import { cleanContentTitle } from '../lib/contentTitle';
+import { BlockRenderer } from './book/BlockRenderer';
+import './book/BookBlocks.css';
 
 const SecureReader = () => {
   const { id } = useParams(); // This is now resource_id
@@ -102,11 +104,15 @@ const SecureReader = () => {
       if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
       
       const chapterData = await response.json();
-      
+
       // Cache the loaded chapter
       chapterCache.current[cacheKey] = chapterData;
 
-      // Update the specific chapter in state
+      // Two chapter-N.json shapes can come back depending on
+      // resources_v2.format: 'html' (legacy) is {title, body_html, images};
+      // 'blocks' (new enriched-content pipeline) is {title, order, blocks}.
+      // Storing whichever fields are present lets the render branch below
+      // pick the right one without needing to know format up front.
       setChapters(prev => {
         if (!prev) return prev;
         const updated = [...prev];
@@ -115,6 +121,7 @@ const SecureReader = () => {
           title: chapterData.title || `Chapter ${index + 1}`,
           body_html: chapterData.body_html || '',
           images: chapterData.images || [],
+          blocks: Array.isArray(chapterData.blocks) ? chapterData.blocks : null,
           loaded: true
         };
         return updated;
@@ -163,7 +170,9 @@ const SecureReader = () => {
     );
   };
 
-  const rawContent = chapters && chapters[activeChapterIndex]?.body_html || '';
+  const activeChapter = chapters ? chapters[activeChapterIndex] : null;
+  const activeBlocks = activeChapter?.blocks || null;
+  const rawContent = activeChapter?.body_html || '';
   const currentContent = resource ? resolveImageSources(rawContent, resource.storage_base_url) : rawContent;
   const isLastChapter = chapters ? activeChapterIndex === chapters.length - 1 : true;
   const access = resource ? canAccessResource(effectiveTier, resource.category, activeChapterIndex) : { allowed: true };
@@ -266,6 +275,10 @@ const SecureReader = () => {
               ) : chapterLoading && !chapters?.[activeChapterIndex]?.loaded ? (
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
                   <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
+                </div>
+              ) : activeBlocks ? (
+                <div className="ql-editor bk-blocks-container">
+                  {activeBlocks.map((block) => <BlockRenderer key={block.id} block={block} />)}
                 </div>
               ) : (
                 <div className="ql-editor" dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} />

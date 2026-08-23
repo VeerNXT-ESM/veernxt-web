@@ -37,6 +37,7 @@ import OverviewPage from './pages/admin/OverviewPage';
 import ExamsPage from './pages/admin/ExamsPage';
 import SyllabusPage from './pages/admin/SyllabusPage';
 import ResourcesPage from './pages/admin/ResourcesPage';
+import ConductingBodiesPage from './pages/admin/ConductingBodiesPage';
 import ContentGraphPage from './pages/admin/ContentGraphPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
@@ -169,6 +170,7 @@ function App() {
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/syllabus" element={<SyllabusPage />} />
           <Route path="/admin/resources" element={<ResourcesPage />} />
+          <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
           <Route path="/admin/content-graph" element={<ContentGraphPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />
