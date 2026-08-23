@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Award, Target, ExternalLink, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, Landmark, Users, MessageSquare, User, ArrowRight, CheckCircle2, Compass, ListChecks } from 'lucide-react';
+import { Award, ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, FileText, Users, MessageSquare, User, ArrowRight, CheckCircle2, Compass, ListChecks } from 'lucide-react';
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -11,18 +11,41 @@ import GuidedStep from '../components/ui/GuidedStep';
 import { ChoiceGroup } from '../components/ui/ChoiceGroup';
 import { getEmployerInsights } from '../lib/employerInsights';
 import { useLocalDraft } from '../lib/useLocalDraft';
-import { getEffectiveTier } from '../lib/subscriptionAccess';
-import ExamContentPreview from '../components/ExamContentPreview';
+import { useExamContent } from '../hooks/useExamContent';
+import { resolveSubjectForTitle } from '../lib/thumbnailTaxonomy';
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [expandedExamId, setExpandedExamId] = useState(null);
   const [isEmployer, setIsEmployer] = useState(false);
   const [session, setSession] = useState(null);
   const [onboardingSubmitLoading, setOnboardingSubmitLoading] = useState(false);
+  const [showCareerAnalysis, setShowCareerAnalysis] = useState(false);
+  const [openedResourceIds, setOpenedResourceIds] = useState(() => new Set());
+
+  // Top exam match — drives the "Your Next Step" module. Computed here
+  // (rather than after the onboarding/loading gates further down) because
+  // useExamContent below is a hook and can't follow a conditional return.
+  const recommendations = profile?.recommendations || [];
+  const topExam = recommendations[0] || null;
+  const { byCategory: topExamByCategory, loading: topExamContentLoading } = useExamContent(topExam?.exam_name, topExam?.career_track);
+
+  useEffect(() => {
+    if (!session?.user || isEmployer) return;
+    let cancelled = false;
+    supabase
+      .from('point_transactions')
+      .select('ref_id')
+      .eq('user_id', session.user.id)
+      .eq('action_code', 'RESOURCE_OPENED')
+      .then(({ data }) => {
+        if (cancelled) return;
+        setOpenedResourceIds(new Set((data || []).map((o) => o.ref_id).filter(Boolean)));
+      });
+    return () => { cancelled = true; };
+  }, [session, isEmployer]);
 
   // Employer guided-onboarding journey
   const [employerFormData, setEmployerFormData] = useState({
@@ -1126,15 +1149,26 @@ const Dashboard = () => {
     );
   }
 
-  const recommendations = profile?.recommendations || [];
-
   const rawProfile = profile?.raw_profile_data;
   const insights = rawProfile ? getProfilingInsights(rawProfile, { context: 'dashboard' }) : [];
   const careerDirection = insights.find((i) => i.label === 'Career Alignment');
   const topStrengths = insights.filter((i) => i.label !== 'Career Alignment').slice(0, 3);
   const transferableSkills = rawProfile ? getTransferableSkills(rawProfile) : [];
-  const pathsCount = recommendations.length;
+  const examMatchesCount = recommendations.length;
+  const careerTracksCount = new Set(recommendations.map((r) => r.career_track).filter(Boolean)).size;
 
+  const topExamResources = Object.values(topExamByCategory || {}).flat();
+  const topExamTotal = topExamResources.length;
+  const topExamExplored = topExamResources.filter((r) => openedResourceIds.has(r.resource_id)).length;
+  const topExamProgress = topExamTotal > 0 ? Math.round((topExamExplored / topExamTotal) * 100) : null;
+  const topExamSubjects = (() => {
+    const seen = new Map();
+    topExamResources.forEach((res) => {
+      const subject = resolveSubjectForTitle(res.title);
+      if (!seen.has(subject.key)) seen.set(subject.key, subject.label);
+    });
+    return [...seen.values()];
+  })();
 
 
   return (
@@ -1156,30 +1190,59 @@ const Dashboard = () => {
                 {profile?.profiling_completed ? 'Profile Complete' : 'Profile Incomplete'}
               </span>
             </div>
+
+            <div className="welcome-actions">
+              <Button
+                variant="ghost"
+                onClick={handleOpenEditModal}
+                style={{ background: 'rgba(255,255,255,0.22)', color: 'white', border: '1px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
+              >
+                Edit Profile
+              </Button>
+              {!isEmployer && (
+                <Button
+                  variant="ghost"
+                  onClick={handleRecalculate}
+                  disabled={loading}
+                  style={{ background: 'rgba(255,255,255,0.12)', color: 'white', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
+                >
+                  {loading ? <RefreshCw className="animate-spin" size={14} /> : <RefreshCw size={14} />}
+                  Recalculate Matches
+                </Button>
+              )}
+            </div>
           </div>
 
-          <div className="welcome-actions">
-            <Button
-              variant="ghost"
-              onClick={handleOpenEditModal}
-              style={{ background: 'rgba(255,255,255,0.22)', color: 'white', border: '1px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
-            >
-              Edit Profile
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={handleRecalculate}
-              disabled={loading}
-              style={{ background: 'rgba(255,255,255,0.12)', color: 'white', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
-            >
-              {loading ? <RefreshCw className="animate-spin" size={14} /> : <RefreshCw size={14} />}
-              Recalculate
-            </Button>
-          </div>
+          {!isEmployer && (
+            <>
+              <div className="welcome-stat-row">
+                <div className="welcome-stat">
+                  <span className="welcome-stat-value">{profile?.veer_score != null ? Math.round(profile.veer_score) : '—'}</span>
+                  <span className="welcome-stat-label">Veer Score</span>
+                </div>
+                <div className="welcome-stat">
+                  <span className="welcome-stat-value">{careerTracksCount}</span>
+                  <span className="welcome-stat-label">Career Paths</span>
+                </div>
+                <div className="welcome-stat">
+                  <span className="welcome-stat-value">{examMatchesCount}</span>
+                  <span className="welcome-stat-label">Exam Matches</span>
+                </div>
+                <div className="welcome-stat">
+                  <span className="welcome-stat-value">{transferableSkills.length}</span>
+                  <span className="welcome-stat-label">Skills</span>
+                </div>
+              </div>
+              <button type="button" className="welcome-analysis-toggle" onClick={() => setShowCareerAnalysis((v) => !v)}>
+                {showCareerAnalysis ? 'Hide' : 'View'} Career Analysis {showCareerAnalysis ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+              </button>
+            </>
+          )}
         </div>
 
-        {/* Free insights — strengths, career direction, transferable skills, paths count */}
-        {!isEmployer && (
+        {/* Longer-form insights — collapsed by default so the dashboard opens
+            on decisions, not a wall of text; still one click away. */}
+        {!isEmployer && showCareerAnalysis && (
           <div className="dashboard-insights-grid animate-fade-in" style={{ marginBottom: '2rem' }}>
             <Card padding="sm" className="dashboard-insight-card">
               <div className="card-top" style={{ marginBottom: '0.75rem' }}><CheckCircle2 size={18} color="var(--ios-olive)" /><span className="dashboard-card-label" style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--ios-olive)' }}>TOP STRENGTHS</span></div>
@@ -1199,144 +1262,92 @@ const Dashboard = () => {
                 {transferableSkills.map((s, i) => <li key={i}>{s}</li>)}
               </ul>
             </Card>
-            <Card padding="sm" className="dashboard-insight-card dashboard-paths-card">
-              <div className="card-top" style={{ marginBottom: '0.75rem' }}><Target size={18} color="var(--ios-olive)" /><span className="dashboard-card-label" style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--ios-olive)' }}>CAREER PATHS IDENTIFIED</span></div>
-              <div className="dashboard-paths-stat">{pathsCount}</div>
-              <p className="card-desc">exams &amp; roles you&apos;re eligible for, based on your profile.</p>
-            </Card>
           </div>
         )}
 
         <div className="dashboard-grid">
-          {/* Veer Score Card */}
-          <div className="feature-split-card">
-            <div className="feature-split-image">
-              <img src="/veernxt_assets/banners/B02_veerscore.png" alt="" />
-            </div>
-            <div className="feature-split-content">
-              <div className="card-top" style={{ marginBottom: '1rem' }}>
-                <Award size={24} color="var(--ios-olive)" />
-                <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>VEER SCORE</span>
+          {/* Your Next Step — the single highest-priority action, front and
+              center. Absent for employers and for anyone with no matches. */}
+          {!isEmployer && topExam && (
+            <section>
+              <div className="section-header-plain"><h2>Your Next Step</h2></div>
+              <div className="next-step-card">
+                <div className="next-step-top">
+                  <div>
+                    <span className="next-step-eyebrow">Prepare for</span>
+                    <h3>{topExam.exam_name}</h3>
+                    {topExam.career_track && <p className="next-step-body"><Briefcase size={13} /> {topExam.career_track}</p>}
+                  </div>
+                  {topExam.score != null && <span className="exam-match-score">{Math.min(Math.round(topExam.score), 100)}% Match</span>}
+                </div>
+
+                {topExamProgress != null ? (
+                  <div className="next-step-progress">
+                    <div className="score-bar-bg"><div className="score-bar-fill" style={{ width: `${topExamProgress}%` }}></div></div>
+                    <span>{topExamProgress}% prepared — {topExamExplored} of {topExamTotal} resources explored</span>
+                  </div>
+                ) : topExamTotal > 0 && (
+                  <p className="card-desc">You have {topExamTotal} resource{topExamTotal === 1 ? '' : 's'} available.</p>
+                )}
+
+                {!topExamContentLoading && topExamSubjects.length > 0 && (
+                  <div className="next-step-subjects">
+                    {topExamSubjects.map((label) => (
+                      <span key={label} className="next-step-subject"><CheckCircle2 size={13} color="#16a34a" /> {label}</span>
+                    ))}
+                  </div>
+                )}
+
+                {topExam.exam_id && (
+                  <Link to={`/exam/${topExam.exam_id}`} className="btn-primary ios-pill next-step-cta">
+                    Continue Preparation <ArrowRight size={16} />
+                  </Link>
+                )}
               </div>
-              <div className="score-display" style={{ fontSize: '4rem', fontWeight: 800, color: 'var(--ios-olive)', marginBottom: '0.5rem', lineHeight: 1, letterSpacing: '-0.05em' }}>
-                {profile?.veer_score != null ? Math.round(profile.veer_score) : '—'}
-              </div>
-              <p className="card-desc">Your overall readiness score calculated from service history, skills, and physical standards.</p>
-            </div>
-          </div>
+            </section>
+          )}
 
           {/* Learning Center Section */}
           <section>
-            <div className="section-banner">
-              <img src="/veernxt_assets/banners/B08_learning_path.png" alt="Learning Center" />
-              <div className="section-banner-overlay">
-                <div className="section-banner-content">
-                  <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Learning Center</h2>
-                  <p style={{ opacity: 0.9, fontSize: '0.95rem' }}>Access curated textbooks, practice papers, and secure readers.</p>
-                </div>
-              </div>
+            <div className="section-header-plain">
+              <h2>Learning Center</h2>
+              <p>Your preparation resources</p>
             </div>
             <div className="category-grid">
               {[
-                { id: 'mock-tests', title: 'Mock Tests', icon: 'S11_mock_test.png', desc: 'Full-length practice exams' },
-                { id: 'study-guides', title: 'Study Guides', icon: 'S10_study_guide.png', desc: 'Topic-wise material' },
-                { id: 'prev-papers', title: 'Previous Papers', icon: 'S09_learning_center.png', desc: 'Real past questions' }
+                { id: 'study-guides', title: 'Study Guides', icon: 'S10_study_guide.png', desc: 'Guides & précis' },
+                { id: 'pyq', title: 'PYQ Center', icon: 'S09_learning_center.png', desc: 'Coming soon' },
+                { id: 'quiz', title: 'Quiz Center', icon: 'S11_mock_test.png', desc: 'Coming soon' }
               ].map(cat => (
                 <div key={cat.id} className="category-card" onClick={() => navigate('/learning-center')}>
                   <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
                   <div className="category-card-content">
                     <h3>{cat.title}</h3>
                     <p>{cat.desc}</p>
+                    <span className="nav-card-cta">Explore <ArrowRight size={12} /></span>
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* My Network Section */}
+          {/* Top Exam Matches — capped at 3; the full list lives on the
+              Learning Center page (Search Results / My Exams) now, so this
+              stays a teaser rather than duplicating that whole interface. */}
           <section>
-            <div className="section-banner">
-              <img src="/veernxt_assets/banners/B12_my_network.png" alt="My Network" />
-              <div className="section-banner-overlay">
-                <div className="section-banner-content">
-                  <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>My Network</h2>
-                  <p style={{ opacity: 0.9, fontSize: '0.95rem' }}>Connect with peers, transitioning military officers, and corporate recruiters.</p>
-                </div>
-              </div>
+            <div className="section-header-plain">
+              <h2>Top Exam Matches</h2>
+              <p>Personalised exam recommendations based on your profile</p>
             </div>
-            <div className="category-grid">
-              {[
-                { id: 'peers', title: 'Peers', icon: 'S30_peer_network.png', desc: 'Fellow transitioning veterans' },
-                { id: 'mentors', title: 'Mentorship', icon: 'S26_mentor.png', desc: 'Guidance from veterans' },
-                { id: 'recruiters', title: 'Recruiters', icon: 'S29_recruiter.png', desc: 'Direct corporate connections' }
-              ].map(cat => (
-                <div key={cat.id} className="category-card" onClick={() => navigate('/network')}>
-                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
-                  <div className="category-card-content">
-                    <h3>{cat.title}</h3>
-                    <p>{cat.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Financial Guidance Section */}
-          <section>
-            <div className="section-banner">
-              <img src="/veernxt_assets/banners/B11_financial_guidance.png" alt="Financial Guidance" />
-              <div className="section-banner-overlay">
-                <div className="section-banner-content">
-                  <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Financial Guidance</h2>
-                  <p style={{ opacity: 0.9, fontSize: '0.95rem' }}>Explore tailored financial schemes, low-interest education loans, and start-up seed funding.</p>
-                </div>
-              </div>
-            </div>
-            <div className="category-grid">
-              {[
-                { id: 'loans', title: 'Education Loans', icon: 'S32_education_loan.png', desc: 'Low-interest rates' },
-                { id: 'seed', title: 'Start-up Funding', icon: 'S35_business_funding.png', desc: 'Seed capital schemes' },
-                { id: 'pension', title: 'Pension Guidance', icon: 'S36_financial_readiness.png', desc: 'Maximize your benefits' }
-              ].map(cat => (
-                <div key={cat.id} className="category-card" onClick={() => navigate('/financial-guidance')}>
-                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
-                  <div className="category-card-content">
-                    <h3>{cat.title}</h3>
-                    <p>{cat.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Matches Section */}
-          <section>
-            <div className="section-banner">
-              <img src="/veernxt_assets/banners/B10_exam_matches.png" alt="Exam Matches" />
-              <div className="section-banner-overlay">
-                <div className="section-banner-content">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                    <Target size={24} color="white" />
-                    <h2 style={{ fontSize: '1.5rem', margin: 0 }}>Top Exam Matches</h2>
-                  </div>
-                  <p style={{ opacity: 0.9, fontSize: '0.95rem' }}>Personalised exam recommendations based on your military profile.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="ios-card matches-card" style={{ padding: '1.5rem', position: 'relative' }}>
-              {recommendations.length > 0 ? (
+            {recommendations.length > 0 ? (
+              <>
                 <div className="recommendations-list">
-                  {recommendations.slice(0, 5).map((rec, idx) => (
-                    <React.Fragment key={rec.exam_id || idx}>
-                      <div
-                        className="recommendation-item"
-                        role="button"
-                        tabIndex={0}
-                        onClick={() => setExpandedExamId(expandedExamId === rec.exam_id ? null : rec.exam_id)}
-                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setExpandedExamId(expandedExamId === rec.exam_id ? null : rec.exam_id); } }}
-                        style={{ cursor: 'pointer' }}
-                      >
+                  {recommendations.slice(0, 3).map((rec, idx) => (
+                    <Link
+                      key={rec.exam_id || idx}
+                      to={rec.exam_id ? `/exam/${rec.exam_id}` : '/learning-center'}
+                      className="recommendation-item"
+                    >
                       <div className="rec-rank">{idx + 1}</div>
                       <div className="rec-info">
                         <h3 style={{ fontSize: '1.05rem', marginBottom: '0.2rem' }}>{rec.exam_name}</h3>
@@ -1351,57 +1362,83 @@ const Dashboard = () => {
                         </div>
                         <span className="score-text">{Math.min(Math.round(rec.score), 100)}% Match</span>
                       </div>
-                      <div style={{ display: 'flex', color: 'var(--ios-olive)' }}>
-                        {expandedExamId === rec.exam_id ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-                      </div>
-                    </div>
-                    {expandedExamId === rec.exam_id && (
-                      <div style={{ padding: '0 0 1rem' }}>
-                        <ExamContentPreview
-                          examId={rec.exam_id}
-                          examName={rec.exam_name}
-                          careerTrack={rec.career_track}
-                          tier={getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at)}
-                          freeQuizUsed={!!profile?.free_quiz_used}
-                          variant="list"
-                        />
-                        {rec.website && (
-                          <a href={rec.website} rel="noopener" className="rec-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.5rem', fontSize: '0.85rem' }}>
-                            <ExternalLink size={16} /> Official exam website
-                          </a>
-                        )}
-                      </div>
-                    )}
-                  </React.Fragment>
-                ))}
+                      <ArrowRight size={16} color="var(--ios-olive)" />
+                    </Link>
+                  ))}
                 </div>
-              ) : (
-                <div className="empty-matches">
-                  <p>No matches found yet.</p>
-                  <Link to="/profiling" className="btn-primary ios-pill" style={{ textDecoration: 'none' }}>Update Profile</Link>
+                <Link to="/learning-center" className="view-all-link">View all exam matches <ArrowRight size={14} /></Link>
+              </>
+            ) : (
+              <div className="empty-matches">
+                <p>No matches found yet.</p>
+                <Link to="/profiling" className="btn-primary ios-pill" style={{ textDecoration: 'none' }}>Update Profile</Link>
+              </div>
+            )}
+          </section>
+
+          {/* My Network Section */}
+          <section>
+            <div className="section-header-plain">
+              <h2>My Network</h2>
+              <p>Build connections that help your transition</p>
+            </div>
+            <div className="category-grid">
+              {[
+                { id: 'peers', title: 'Peers', icon: 'S30_peer_network.png', desc: 'Fellow transitioning veterans' },
+                { id: 'mentors', title: 'Mentorship', icon: 'S26_mentor.png', desc: 'Guidance from veterans' },
+                { id: 'recruiters', title: 'Recruiters', icon: 'S29_recruiter.png', desc: 'Direct corporate connections' }
+              ].map(cat => (
+                <div key={cat.id} className="category-card" onClick={() => navigate('/network')}>
+                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
+                  <div className="category-card-content">
+                    <h3>{cat.title}</h3>
+                    <p>{cat.desc}</p>
+                    <span className="nav-card-cta">Explore <ArrowRight size={12} /></span>
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
           </section>
 
-          {/* CV / Resume Card */}
-          {!isEmployer && (
-            <div className="feature-split-card">
-              <div className="feature-split-image">
-                <img src="/veernxt_assets/banners/B01_industry_fit_cv.png" alt="" />
-              </div>
-              <div className="feature-split-content">
-                <div className="card-top" style={{ marginBottom: '1rem' }}>
-                  <FileText size={24} color="var(--ios-olive)" />
-                  <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>INDUSTRY-FIT CV</span>
+          {/* Financial Guidance Section */}
+          <section>
+            <div className="section-header-plain">
+              <h2>Financial Guidance</h2>
+              <p>Schemes, loans, and pension support</p>
+            </div>
+            <div className="category-grid">
+              {[
+                { id: 'loans', title: 'Education Loans', icon: 'S32_education_loan.png', desc: 'Low-interest rates' },
+                { id: 'seed', title: 'Start-up Funding', icon: 'S35_business_funding.png', desc: 'Seed capital schemes' },
+                { id: 'pension', title: 'Pension Guidance', icon: 'S36_financial_readiness.png', desc: 'Maximize your benefits' }
+              ].map(cat => (
+                <div key={cat.id} className="category-card" onClick={() => navigate('/financial-guidance')}>
+                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
+                  <div className="category-card-content">
+                    <h3>{cat.title}</h3>
+                    <p>{cat.desc}</p>
+                    <span className="nav-card-cta">Explore <ArrowRight size={12} /></span>
+                  </div>
                 </div>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#0f172a' }}>Your CV is Ready</h3>
-                <p className="card-desc" style={{ marginBottom: '1.5rem' }}>Your personalised industry-fit resume is ready. Download and share your professional profile with recruiters.</p>
+              ))}
+            </div>
+          </section>
+
+          {/* Career Kit */}
+          {!isEmployer && (
+            <section>
+              <div className="section-header-plain"><h2>Career Kit</h2></div>
+              <div className="career-kit-card">
+                <div className="card-top" style={{ marginBottom: '0.75rem' }}>
+                  <FileText size={22} color="var(--ios-olive)" />
+                  <span className="font-cta" style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--ios-olive)' }}>INDUSTRY-READY CV</span>
+                </div>
+                <p className="card-desc" style={{ marginBottom: '1.25rem' }}>Your personalised CV is ready. Download it, or update your profile to refresh it.</p>
                 <Link to="/cv" className="btn-primary ios-pill" style={{ textDecoration: 'none', display: 'inline-flex', width: 'fit-content' }}>
-                  Customize & Download CV
+                  Preview &amp; Download CV
                 </Link>
               </div>
-            </div>
+            </section>
           )}
         </div>
       </div>
@@ -1433,11 +1470,12 @@ const Dashboard = () => {
           z-index: 2;
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 1.25rem;
         }
         .welcome-avatar {
-          width: 88px;
-          height: 88px;
+          width: 72px;
+          height: 72px;
           flex-shrink: 0;
           border-radius: 50%;
           background: rgba(255,255,255,0.15);
@@ -1453,6 +1491,7 @@ const Dashboard = () => {
           flex-direction: column;
           gap: 0.4rem;
           min-width: 0;
+          margin-right: auto;
         }
         .welcome-name {
           font-size: 1.9rem;
@@ -1489,8 +1528,55 @@ const Dashboard = () => {
           position: relative;
           z-index: 2;
           display: flex;
-          gap: 1rem;
+          gap: 0.75rem;
           flex-wrap: wrap;
+        }
+        .welcome-stat-row {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.75rem;
+          padding-top: 1.25rem;
+          border-top: 1px solid rgba(255,255,255,0.18);
+        }
+        .welcome-stat {
+          display: flex;
+          flex-direction: column;
+          gap: 0.15rem;
+        }
+        .welcome-stat-value {
+          font-size: 1.9rem;
+          font-weight: 800;
+          color: #fff;
+          line-height: 1;
+          letter-spacing: -0.03em;
+        }
+        .welcome-stat-label {
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: rgba(255,255,255,0.7);
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+        }
+        .welcome-analysis-toggle {
+          position: relative;
+          z-index: 2;
+          align-self: flex-start;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          background: none;
+          border: none;
+          padding: 0;
+          color: rgba(255,255,255,0.85);
+          font-size: 0.82rem;
+          font-weight: 700;
+          cursor: pointer;
+        }
+        .welcome-analysis-toggle:hover {
+          color: #fff;
+          text-decoration: underline;
         }
         .card-illustration {
           position: absolute;
@@ -1510,66 +1596,132 @@ const Dashboard = () => {
              empty column beside them at some viewport/zoom combinations). */
           display: flex;
           flex-direction: column;
-          gap: 2rem;
-        }
-        
-        .feature-split-card {
-          display: flex;
-          flex-direction: row;
-          background: var(--ios-card);
-          border-radius: var(--radius-lg);
-          overflow: hidden;
-          box-shadow: var(--shadow-2);
-          border: 1px solid rgba(0,0,0,0.05);
-        }
-        .feature-split-image {
-          flex: 0 0 40%;
-          min-height: 220px;
-          position: relative;
-          background: #f8fafc; /* Light background for 'contain' if needed */
-        }
-        .feature-split-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          position: absolute;
-          inset: 0;
-        }
-        .feature-split-content {
-          flex: 1;
-          padding: 2rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          gap: 2.5rem;
         }
 
-        .section-banner {
-          width: 100%;
-          height: 180px;
+        /* Compact plain-text section headers, replacing the old cinematic
+           image banners on every section — those are reserved for the
+           profile header only now (see .welcome-hero). */
+        .section-header-plain {
+          margin-bottom: 1rem;
+        }
+        .section-header-plain h2 {
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: var(--ios-text);
+          margin: 0 0 0.2rem;
+        }
+        .section-header-plain p {
+          font-size: 0.85rem;
+          color: #64748b;
+          margin: 0;
+        }
+
+        .next-step-card {
+          background: var(--ios-card);
+          border: 1px solid rgba(0,0,0,0.05);
           border-radius: var(--radius-lg);
-          overflow: hidden;
-          position: relative;
-          margin-bottom: 1.5rem;
+          padding: 1.5rem;
           box-shadow: var(--shadow-2);
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
         }
-        .section-banner img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        .next-step-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1rem;
+          flex-wrap: wrap;
         }
-        .section-banner-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 100%);
+        .next-step-eyebrow {
+          display: block;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--ios-olive);
+          margin-bottom: 0.2rem;
+        }
+        .next-step-top h3 {
+          font-size: 1.3rem;
+          font-weight: 800;
+          color: var(--ios-text);
+          margin: 0;
+        }
+        .next-step-body {
           display: flex;
           align-items: center;
-          padding: 2rem;
+          gap: 0.35rem;
+          color: #64748b;
+          font-size: 0.85rem;
+          margin: 0.3rem 0 0;
         }
-        .section-banner-content {
-          color: white;
-          max-width: 60%;
+        .next-step-progress {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
         }
-        
+        .next-step-progress span {
+          font-size: 0.78rem;
+          color: #64748b;
+          font-weight: 600;
+        }
+        .next-step-subjects {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem 1.25rem;
+        }
+        .next-step-subject {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.85rem;
+          color: var(--ios-text);
+          font-weight: 600;
+        }
+        .next-step-cta {
+          align-self: flex-start;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .nav-card-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          margin-top: 0.35rem;
+          color: var(--ios-olive);
+          font-size: 0.78rem;
+          font-weight: 700;
+        }
+
+        .view-all-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin-top: 0.85rem;
+          color: var(--ios-olive);
+          font-size: 0.85rem;
+          font-weight: 700;
+          text-decoration: none;
+        }
+        .view-all-link:hover {
+          text-decoration: underline;
+        }
+
+        .career-kit-card {
+          background: var(--ios-card);
+          border: 1px solid rgba(0,0,0,0.05);
+          border-radius: var(--radius-lg);
+          padding: 1.5rem;
+          box-shadow: var(--shadow-1);
+          display: flex;
+          flex-direction: column;
+        }
+
         .category-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1653,6 +1805,8 @@ const Dashboard = () => {
           background: var(--ios-secondary);
           border-radius: var(--radius-md);
           transition: transform 0.2s;
+          text-decoration: none;
+          color: inherit;
         }
         .recommendation-item:hover {
           transform: scale(1.01);
@@ -1706,13 +1860,6 @@ const Dashboard = () => {
           color: var(--ios-olive);
           text-align: right;
         }
-        .rec-link {
-          color: #ccc;
-          transition: color 0.2s;
-        }
-        .rec-link:hover {
-          color: var(--ios-olive);
-        }
         .animate-spin {
           animation: spin 1s linear infinite;
         }
@@ -1723,36 +1870,20 @@ const Dashboard = () => {
         @media (max-width: 850px) {
           .recommendation-item { flex-wrap: wrap; gap: 0.75rem; }
           .rec-score-section { width: 100%; order: 3; }
-          
-          .feature-split-card {
-            flex-direction: column;
-          }
-          .feature-split-image {
-            height: 200px;
-            flex: none;
-          }
-          .section-banner {
-            height: 140px;
-          }
-          .section-banner-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%);
-            align-items: flex-end;
-            padding: 1.5rem;
-          }
-          .section-banner-content {
-            max-width: 100%;
-          }
         }
         @media (max-width: 640px) {
           .welcome-hero {
             padding: 1.5rem;
           }
           .welcome-avatar {
-            width: 64px;
-            height: 64px;
+            width: 56px;
+            height: 56px;
           }
           .welcome-name {
             font-size: 1.5rem;
+          }
+          .welcome-stat-row {
+            gap: 1.25rem;
           }
           .card-illustration {
             width: 100px;
@@ -1765,13 +1896,8 @@ const Dashboard = () => {
 
         .dashboard-insights-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 1rem;
-        }
-        @media (max-width: 1024px) {
-          .dashboard-insights-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
         }
         @media (max-width: 640px) {
           .dashboard-insights-grid {
@@ -1790,14 +1916,6 @@ const Dashboard = () => {
           gap: 0.4rem;
         }
         .dashboard-insight-list strong { color: var(--ios-text); }
-        .dashboard-paths-card { align-items: flex-start; }
-        .dashboard-paths-stat {
-          font-size: 2.5rem;
-          font-weight: 800;
-          color: var(--ios-olive);
-          line-height: 1;
-          margin-bottom: 0.35rem;
-        }
       `}} />
     </div>
   );

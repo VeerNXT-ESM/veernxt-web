@@ -373,11 +373,13 @@ async function main() {
   let limit = Infinity;
   let onlyBook = null;
   let dryRun = false;
+  let processAll = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--limit') limit = parseInt(args[++i], 10);
     else if (args[i] === '--only-book') onlyBook = args[++i];
     else if (args[i] === '--dry-run') dryRun = true;
+    else if (args[i] === '--all') processAll = true;
   }
 
   console.log("=== VEERNXT CONTENT PIPELINE (BATCH ENRICHMENT) ===");
@@ -391,7 +393,7 @@ async function main() {
   }
 
   const allFiles = walkDocx(MASTER_DOCS_ROOT);
-  let filesToProcess = allFiles;
+  let filesToProcess = [];
 
   const FIRST_5_BOOKS = [
     'Guide\\English\\Cluster_005_ENGLISH.docx',
@@ -404,6 +406,9 @@ async function main() {
   if (onlyBook) {
     filesToProcess = allFiles.filter(f => f.fileName.includes(onlyBook));
     console.log(`Filtering to files matching '${onlyBook}': ${filesToProcess.length} found.`);
+  } else if (processAll) {
+    filesToProcess = allFiles;
+    console.log(`Queueing ALL docx files: ${filesToProcess.length} found.`);
   } else {
     filesToProcess = allFiles.filter(f => {
       const normRel = f.relPath.replace(/\//g, '\\');
