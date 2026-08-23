@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown, ChevronLeft, ChevronRight } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
 import { awardPoints } from '../lib/awardPoints';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { BlockRenderer } from './book/BlockRenderer';
+import { ChapterHeader } from './book/BookBlocks';
 import './book/BookBlocks.css';
+import '../pages/sandbox/BookReaderV2.css';
 
 const SecureReader = () => {
   const { id } = useParams(); // This is now resource_id
@@ -176,6 +178,46 @@ const SecureReader = () => {
   const currentContent = resource ? resolveImageSources(rawContent, resource.storage_base_url) : rawContent;
   const isLastChapter = chapters ? activeChapterIndex === chapters.length - 1 : true;
   const access = resource ? canAccessResource(effectiveTier, resource.category, activeChapterIndex) : { allowed: true };
+  const isBlocksFormat = resource?.format === 'blocks';
+
+  const goToChapter = (index) => {
+    setActiveChapterIndex(index);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const lockedOverlay = (
+    <div style={{
+      padding: '4rem 2rem',
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '300px',
+      background: 'rgba(255, 255, 255, 0.9)',
+    }}>
+      <div style={{
+        width: '60px', height: '60px', borderRadius: '50%',
+        background: 'rgba(239, 68, 68, 0.08)', display: 'flex',
+        alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem'
+      }}>
+        <Lock size={30} color="#ef4444" />
+      </div>
+      <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
+        Premium Content Locked
+      </h3>
+      <p style={{ color: '#64748b', fontSize: '0.9rem', maxWidth: '380px', margin: '0 auto 1.75rem', lineHeight: 1.5 }}>
+        {access.reason || 'Upgrade to a paid plan to unlock full guidebooks, precis covers, and advanced mock test resources.'}
+      </p>
+      <Link to="/subscribe" className="btn-primary ios-pill" style={{
+        textDecoration: 'none', padding: '0.85rem 2rem', fontSize: '0.95rem',
+        display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+        color: 'white',
+      }}>
+        <Crown size={16} /> View Upgrade Options
+      </Link>
+    </div>
+  );
 
   if (loading) return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'var(--ios-bg)' }}>
@@ -199,134 +241,177 @@ const SecureReader = () => {
         </div>
       </div>
       
-      <div className="reader-main">
-        <header className="reader-header">
-          <div className="resource-meta">
-            <span className="subject-tag">{resource.subject}</span>
-            <span className="category-tag">{resource.category}</span>
-          </div>
-          <h1 className="resource-title">{cleanContentTitle(resource.title, resource.exam_name)}</h1>
-          <div className="reading-time">
-            <Clock size={16} /> <span>{chapters ? `${chapters.length} Chapters` : '12 min read'}</span>
-          </div>
-        </header>
-
-        <div className="reader-layout">
-          {chapters && chapters.length > 1 && (
-            <div className="toc-tabs">
-              <div className="tabs-container">
-                {chapters.map((chap, idx) => {
-                  const chapAccess = canAccessResource(effectiveTier, resource.category, idx);
-                  return (
-                    <button 
-                      key={chap.id || idx} 
-                      className={`tab-btn ${activeChapterIndex === idx ? 'active' : ''}`}
-                      onClick={() => {
-                        setActiveChapterIndex(idx);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }}
-                      style={!chapAccess.allowed ? { opacity: 0.6 } : {}}
-                    >
-                      <span className="chap-num" style={!chapAccess.allowed ? { background: '#ef4444' } : {}}>
-                        {!chapAccess.allowed ? <Lock size={10} color="white" /> : idx + 1}
-                      </span> 
-                      <span className="tab-title">{chap.title}</span>
-                    </button>
-                  );
-                })}
-              </div>
+      {isBlocksFormat ? (
+        <div className="bk-reader-layout" style={{ minHeight: 'auto' }}>
+          <aside className="bk-sidebar" style={{ position: 'static', height: 'auto', maxHeight: 'calc(100vh - 65px)' }}>
+            <div className="bk-sidebar-header">
+              <BookOpen size={20} style={{ color: '#0f766e', flexShrink: 0 }} />
+              <h3>{cleanContentTitle(resource.title, resource.exam_name)}</h3>
             </div>
-          )}
+            <nav className="bk-toc">
+              {(chapters || []).map((chap, idx) => {
+                const chapAccess = canAccessResource(effectiveTier, resource.category, idx);
+                return (
+                  <button
+                    key={chap.id || idx}
+                    onClick={() => goToChapter(idx)}
+                    className={`bk-toc-item ${activeChapterIndex === idx ? 'active' : ''}`}
+                  >
+                    <span className="bk-toc-number">{chapAccess.allowed ? idx + 1 : <Lock size={11} />}</span>
+                    <span className="bk-toc-title">{chap.title}</span>
+                  </button>
+                );
+              })}
+            </nav>
+          </aside>
 
-          <div className="glass-panel reader-card">
-            <div className="reader-content ql-snow">
-              {!access.allowed ? (
-                <div style={{
-                  padding: '4rem 2rem',
-                  textAlign: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  minHeight: '300px',
-                  background: 'rgba(255, 255, 255, 0.9)',
-                }}>
-                  <div style={{
-                    width: '60px', height: '60px', borderRadius: '50%',
-                    background: 'rgba(239, 68, 68, 0.08)', display: 'flex',
-                    alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem'
-                  }}>
-                    <Lock size={30} color="#ef4444" />
-                  </div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
-                    Premium Content Locked
-                  </h3>
-                  <p style={{ color: '#64748b', fontSize: '0.9rem', maxWidth: '380px', margin: '0 auto 1.75rem', lineHeight: 1.5 }}>
-                    {access.reason || 'Upgrade to a paid plan to unlock full guidebooks, precis covers, and advanced mock test resources.'}
-                  </p>
-                  <Link to="/subscribe" className="btn-primary ios-pill" style={{
-                    textDecoration: 'none', padding: '0.85rem 2rem', fontSize: '0.95rem',
-                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                    color: 'white',
-                  }}>
-                    <Crown size={16} /> View Upgrade Options
-                  </Link>
-                </div>
-              ) : chapterLoading && !chapters?.[activeChapterIndex]?.loaded ? (
+          <main className="bk-main-content">
+            <article className="bk-article">
+              {!access.allowed ? lockedOverlay : chapterLoading && !activeChapter?.loaded ? (
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
                   <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
                 </div>
-              ) : activeBlocks ? (
-                <div className="ql-editor bk-blocks-container">
-                  {activeBlocks.map((block) => <BlockRenderer key={block.id} block={block} />)}
-                </div>
               ) : (
-                <div className="ql-editor" dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} />
-              )}
-            </div>
-            
-            {access.allowed && (
-              <div className="reader-footer">
-                {chapters && activeChapterIndex > 0 && (
-                  <button 
-                    onClick={() => {
-                      setActiveChapterIndex(activeChapterIndex - 1);
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="btn-paginate"
-                  >
-                    <ArrowLeft size={16} /> Previous
-                  </button>
-                )}
+                <>
+                  <ChapterHeader title={activeChapter?.title} order={activeChapterIndex + 1} />
+                  <div className="bk-blocks-container">
+                    {(activeBlocks || []).map((block) => <BlockRenderer key={block.id} block={block} />)}
+                  </div>
 
-                {isLastChapter ? (
-                  <button 
-                    onClick={handleMarkAsRead} 
-                    className={`mark-read-btn ${isRead ? 'completed' : ''}`}
-                    disabled={isRead}
-                  >
-                    {isRead ? (
-                      <><CheckCircle size={20} /> Completed</>
+                  <nav className="bk-pagination">
+                    <button
+                      className="bk-page-btn bk-page-prev"
+                      onClick={() => goToChapter(activeChapterIndex - 1)}
+                      disabled={activeChapterIndex === 0}
+                    >
+                      <ChevronLeft size={20} />
+                      <span>
+                        <small>Previous</small>
+                        <strong>{activeChapterIndex > 0 ? chapters[activeChapterIndex - 1].title : ''}</strong>
+                      </span>
+                    </button>
+
+                    <div className="bk-page-counter">
+                      <span>{activeChapterIndex + 1}</span>
+                      <span className="bk-page-sep">of</span>
+                      <span>{chapters?.length || 1}</span>
+                    </div>
+
+                    {isLastChapter ? (
+                      <button
+                        className="bk-page-btn bk-page-next"
+                        onClick={handleMarkAsRead}
+                        disabled={isRead}
+                      >
+                        <span>
+                          <small>{isRead ? 'Completed' : 'Finish'}</small>
+                          <strong>{isRead ? 'Marked as read' : 'Mark as Finished'}</strong>
+                        </span>
+                        {isRead ? <CheckCircle size={20} /> : <BookOpen size={20} />}
+                      </button>
                     ) : (
-                      <><BookOpen size={20} /> Mark as Finished</>
+                      <button
+                        className="bk-page-btn bk-page-next"
+                        onClick={() => goToChapter(activeChapterIndex + 1)}
+                      >
+                        <span>
+                          <small>Next</small>
+                          <strong>{chapters[activeChapterIndex + 1]?.title || ''}</strong>
+                        </span>
+                        <ChevronRight size={20} />
+                      </button>
                     )}
-                  </button>
-                ) : (
-                  <button 
-                    onClick={() => {
-                      setActiveChapterIndex(activeChapterIndex + 1);
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="btn-paginate primary"
-                  >
-                    Next Chapter <ArrowLeft size={16} style={{ transform: 'rotate(180deg)' }} />
-                  </button>
-                )}
+                  </nav>
+                </>
+              )}
+            </article>
+          </main>
+        </div>
+      ) : (
+        <div className="reader-main">
+          <header className="reader-header">
+            <div className="resource-meta">
+              <span className="subject-tag">{resource.subject}</span>
+              <span className="category-tag">{resource.category}</span>
+            </div>
+            <h1 className="resource-title">{cleanContentTitle(resource.title, resource.exam_name)}</h1>
+            <div className="reading-time">
+              <Clock size={16} /> <span>{chapters ? `${chapters.length} Chapters` : '12 min read'}</span>
+            </div>
+          </header>
+
+          <div className="reader-layout">
+            {chapters && chapters.length > 1 && (
+              <div className="toc-tabs">
+                <div className="tabs-container">
+                  {chapters.map((chap, idx) => {
+                    const chapAccess = canAccessResource(effectiveTier, resource.category, idx);
+                    return (
+                      <button
+                        key={chap.id || idx}
+                        className={`tab-btn ${activeChapterIndex === idx ? 'active' : ''}`}
+                        onClick={() => goToChapter(idx)}
+                        style={!chapAccess.allowed ? { opacity: 0.6 } : {}}
+                      >
+                        <span className="chap-num" style={!chapAccess.allowed ? { background: '#ef4444' } : {}}>
+                          {!chapAccess.allowed ? <Lock size={10} color="white" /> : idx + 1}
+                        </span>
+                        <span className="tab-title">{chap.title}</span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             )}
+
+            <div className="glass-panel reader-card">
+              <div className="reader-content ql-snow">
+                {!access.allowed ? lockedOverlay : chapterLoading && !chapters?.[activeChapterIndex]?.loaded ? (
+                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
+                    <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
+                  </div>
+                ) : (
+                  <div className="ql-editor" dangerouslySetInnerHTML={{ __html: currentContent || '<div class="empty-state"><p>Content is being securely processed. Please check back shortly.</p></div>' }} />
+                )}
+              </div>
+
+              {access.allowed && (
+                <div className="reader-footer">
+                  {chapters && activeChapterIndex > 0 && (
+                    <button
+                      onClick={() => goToChapter(activeChapterIndex - 1)}
+                      className="btn-paginate"
+                    >
+                      <ArrowLeft size={16} /> Previous
+                    </button>
+                  )}
+
+                  {isLastChapter ? (
+                    <button
+                      onClick={handleMarkAsRead}
+                      className={`mark-read-btn ${isRead ? 'completed' : ''}`}
+                      disabled={isRead}
+                    >
+                      {isRead ? (
+                        <><CheckCircle size={20} /> Completed</>
+                      ) : (
+                        <><BookOpen size={20} /> Mark as Finished</>
+                      )}
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => goToChapter(activeChapterIndex + 1)}
+                      className="btn-paginate primary"
+                    >
+                      Next Chapter <ArrowLeft size={16} style={{ transform: 'rotate(180deg)' }} />
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <style dangerouslySetInnerHTML={{ __html: `
         .reader-container {
