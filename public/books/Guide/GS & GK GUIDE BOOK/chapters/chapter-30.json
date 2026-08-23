@@ -1,0 +1,439 @@
+{
+  "id": "inng6ii",
+  "title": "Chapter 29: Structure of the Earth",
+  "order": 30,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "7bc21fe"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Mean Radius",
+          "value": "6,371 km",
+          "icon": "info"
+        },
+        {
+          "label": "Major Layers",
+          "value": "3 Layers",
+          "icon": "book"
+        },
+        {
+          "label": "Mantle Volume",
+          "value": "84%",
+          "icon": "check"
+        },
+        {
+          "label": "Discontinuities",
+          "value": "5 Zones",
+          "icon": "clock"
+        }
+      ],
+      "id": "1je59ju"
+    },
+    {
+      "id": "31skm8b",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Radius and General Facts about the Earth"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth is structurally divided into three concentric layers: Crust, Mantle, and Core.",
+        "The Crust consists of Continental Crust (SIAL - Silica and Aluminium) and Oceanic Crust (SIMA - Silica and Magnesium).",
+        "The Mantle extends to a depth of 2,900 km and contains the Asthenosphere, the primary source of magma.",
+        "The Core is composed mainly of Nickel and Iron (NIFE), featuring a liquid Outer Core and a solid Inner Core.",
+        "Seismic boundary zones called discontinuities (e.g., Moho, Gutenberg) mark abrupt changes in density and wave velocity."
+      ],
+      "id": "fjyjdip"
+    },
+    {
+      "type": "paragraph",
+      "id": "mvkei7a"
+    },
+    {
+      "type": "paragraph",
+      "id": "9nxyu41"
+    },
+    {
+      "type": "paragraph",
+      "id": "bhe007j"
+    },
+    {
+      "type": "paragraph",
+      "id": "x6ez3zt"
+    },
+    {
+      "id": "unpf6z8",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Sources of Information about the Earth's Interior"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4opaerp"
+    },
+    {
+      "type": "paragraph",
+      "id": "okglwqj"
+    },
+    {
+      "type": "paragraph",
+      "id": "sklfkwo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "06rhd51"
+    },
+    {
+      "type": "paragraph",
+      "id": "1qgs9hi"
+    },
+    {
+      "type": "paragraph",
+      "id": "tkifegk"
+    },
+    {
+      "type": "paragraph",
+      "id": "rxtb8vj"
+    },
+    {
+      "type": "paragraph",
+      "id": "iuqw23u"
+    },
+    {
+      "id": "quglavf",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Major Layers of the Earth"
+    },
+    {
+      "id": "keks32c",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zsxtucz",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Crust"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Important Discontinuities inside the Earth",
+      "id": "3gt7xs0"
+    },
+    {
+      "type": "paragraph",
+      "id": "6b3qezv"
+    },
+    {
+      "type": "paragraph",
+      "id": "fr1u01k"
+    },
+    {
+      "type": "paragraph",
+      "id": "zvr7ive"
+    },
+    {
+      "type": "paragraph",
+      "id": "qq1up2f"
+    },
+    {
+      "type": "paragraph",
+      "id": "jk90zbs"
+    },
+    {
+      "id": "34pg6a6",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Crust"
+    },
+    {
+      "id": "2b4ltjr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qbeqlpe",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Mantle"
+    },
+    {
+      "type": "paragraph",
+      "id": "r7s6uyr"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pej2py"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Crust (SIAL)",
+        "Oceanic Crust (SIMA)"
+      ],
+      "rows": [
+        [
+          "Dominant Minerals",
+          "Silica & Aluminium",
+          "Silica & Magnesium"
+        ],
+        [
+          "Average Thickness",
+          "Thicker (30 - 70 km)",
+          "Thinner (5 - 10 km)"
+        ],
+        [
+          "Average Density",
+          "Lighter (~2.7 g/cm³)",
+          "Denser (~3.0 g/cm³)"
+        ],
+        [
+          "Primary Rock Type",
+          "Granitic Rocks",
+          "Basaltic Rocks"
+        ]
+      ],
+      "id": "3utisw8"
+    },
+    {
+      "type": "paragraph",
+      "id": "xh24b6v"
+    },
+    {
+      "type": "paragraph",
+      "id": "l1atueg"
+    },
+    {
+      "type": "paragraph",
+      "id": "olclb2r"
+    },
+    {
+      "id": "h1rblmh",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Zones in the Mantle"
+    },
+    {
+      "type": "paragraph",
+      "id": "2uowgke"
+    },
+    {
+      "type": "paragraph",
+      "id": "scy49z5"
+    },
+    {
+      "type": "paragraph",
+      "id": "cymaklc"
+    },
+    {
+      "id": "uubrgh6",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Core"
+    },
+    {
+      "type": "paragraph",
+      "id": "sh6zte8"
+    },
+    {
+      "type": "paragraph",
+      "id": "dhc5hqi"
+    },
+    {
+      "type": "paragraph",
+      "id": "c2slwhd"
+    },
+    {
+      "type": "paragraph",
+      "id": "13orto3"
+    },
+    {
+      "id": "iugraqa",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Core"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Mohorovicic (Moho) Discontinuity lies between the Crust and the Mantle.",
+        "Gutenberg Discontinuity forms the boundary between the Mantle and the Outer Core.",
+        "Asthenosphere is the ductile upper region of the mantle on which lithospheric plates float.",
+        "The Earth's magnetic field is generated by convection currents in the liquid Outer Core."
+      ],
+      "id": "gg1rphu"
+    },
+    {
+      "id": "xrfw4tw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xefd55a",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Important Discontinuities inside the Earth"
+    },
+    {
+      "id": "1lu2cuz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vfse7nl",
+      "type": "heading",
+      "level": 2,
+      "content": "EXAM Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "dvuylo6"
+    },
+    {
+      "type": "paragraph",
+      "id": "4m0fzku"
+    },
+    {
+      "type": "paragraph",
+      "id": "rpzc30h"
+    },
+    {
+      "type": "paragraph",
+      "id": "lz6slj3"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,324 @@
+{
+  "id": "f4lxtbw",
+  "title": "Chapter 1: Motion",
+  "order": 50,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "itkjy6t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Title",
+          "value": "Motion",
+          "icon": "book"
+        },
+        {
+          "label": "Key Sections",
+          "value": "8 Topics",
+          "icon": "info"
+        },
+        {
+          "label": "Core Equations",
+          "value": "Equations of Motion",
+          "icon": "check"
+        }
+      ],
+      "id": "n38xkzw"
+    },
+    {
+      "id": "htt5gpy",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Motion"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Motion is analyzed through concepts of distance, displacement, speed, velocity, and acceleration.",
+        "A complete study of motion requires distinguishing between scalar quantities (distance, speed) and vector quantities (displacement, velocity).",
+        "Motion can be represented mathematically using equations of motion and visually through graphical representations."
+      ],
+      "id": "fcdsj5r"
+    },
+    {
+      "type": "paragraph",
+      "id": "55eqsjt"
+    },
+    {
+      "type": "paragraph",
+      "id": "rh09qfq"
+    },
+    {
+      "type": "paragraph",
+      "id": "jocnxj6"
+    },
+    {
+      "id": "3665ylg",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Motion"
+    },
+    {
+      "id": "kkr1dzt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a0pasw2",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Distance and Displacement"
+    },
+    {
+      "id": "16bmu5s",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojl6qqv",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Speed and Velocity"
+    },
+    {
+      "id": "7kpzyl0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opzuruf",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Speed"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Distance and Displacement",
+      "id": "v03bu9l"
+    },
+    {
+      "type": "paragraph",
+      "id": "75zju86"
+    },
+    {
+      "type": "paragraph",
+      "id": "go76po0"
+    },
+    {
+      "type": "paragraph",
+      "id": "88u7zx6"
+    },
+    {
+      "id": "99s0pcd",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Acceleration"
+    },
+    {
+      "type": "paragraph",
+      "id": "xjxizfz"
+    },
+    {
+      "type": "paragraph",
+      "id": "pv2le68"
+    },
+    {
+      "type": "paragraph",
+      "id": "rf5ggvv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Concept Pair",
+        "Scalar Quantity",
+        "Vector Quantity"
+      ],
+      "rows": [
+        [
+          "Position Change",
+          "Distance (Total path length)",
+          "Displacement (Shortest path with direction)"
+        ],
+        [
+          "Rate of Motion",
+          "Speed (Distance per unit time)",
+          "Velocity (Displacement per unit time)"
+        ]
+      ],
+      "id": "sel28hm"
+    },
+    {
+      "id": "tp2h0n7",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Equations of Motion"
+    },
+    {
+      "type": "paragraph",
+      "id": "aqrmmec"
+    },
+    {
+      "type": "paragraph",
+      "id": "ojmmnwe"
+    },
+    {
+      "type": "paragraph",
+      "id": "e33icdy"
+    },
+    {
+      "type": "paragraph",
+      "id": "rkoa8cs"
+    },
+    {
+      "id": "562dvre",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Graphs of Motion"
+    },
+    {
+      "type": "paragraph",
+      "id": "0x5cmu0"
+    },
+    {
+      "type": "paragraph",
+      "id": "vba7zaq"
+    },
+    {
+      "type": "paragraph",
+      "id": "r7czz9p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the difference between scalar quantities (Distance, Speed) and vector quantities (Displacement, Velocity).",
+        "Pay special attention to interpreting slope and area under Distance-Time and Velocity-Time graphs.",
+        "Derivations and numerical applications of the three primary Equations of Motion are highly tested."
+      ],
+      "id": "s6u1sau"
+    },
+    {
+      "type": "paragraph",
+      "id": "5sxb8g9"
+    },
+    {
+      "id": "yr5av0u",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "lsw0jrt"
+    },
+    {
+      "type": "paragraph",
+      "id": "f8jh7v1"
+    },
+    {
+      "type": "paragraph",
+      "id": "sncd6wf"
+    },
+    {
+      "type": "paragraph",
+      "id": "s0womhr"
+    }
+  ],
+  "enriched": true
+}

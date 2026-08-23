@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { supabase } from '../lib/supabase';
 import {
-  Award, Target, Briefcase, MapPin, ExternalLink, Lock, Crown,
+  Award, Target, Briefcase, MapPin, ExternalLink, Crown,
   FileText, PlayCircle, Sparkles, ArrowRight, ChevronDown, ChevronUp, RefreshCw,
-  Gift, Compass, ListChecks, AlertCircle, CheckCircle2,
+  Compass, ListChecks, AlertCircle, CheckCircle2,
 } from 'lucide-react';
-import { getEffectiveTier, canViewVeerScore, canViewRecommendations, canGenerateCV, higherTier } from '../lib/subscriptionAccess';
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
-import { useInlineUnlock } from '../lib/useInlineUnlock';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
@@ -40,16 +38,6 @@ const BREAKDOWN_LABELS = {
   preference_private: 'Private Sector Preference',
   preference_entrepreneurship: 'Entrepreneurship Preference',
 };
-
-// What VeerScore actually measures — shown on the locked preview so the
-// paywall explains itself instead of just blurring a number.
-const VEERSCORE_FACTORS = [
-  'Service history, rank & discharge character',
-  'Qualification & trade alignment with each exam',
-  'Domicile, category & reservation eligibility',
-  'Physical standards, NCC & sports credentials',
-  'Career preference alignment across sectors',
-];
 
 function topFactors(breakdown = {}, count = 3) {
   return Object.entries(breakdown)
@@ -166,28 +154,16 @@ const ProfilingResults = () => {
   const [recommendations, setRecommendations] = useState([]);
   const [veerScore, setVeerScore] = useState(null);
   const [fullName, setFullName] = useState('');
-  const [effectiveTier, setEffectiveTier] = useState('FREE');
-  const [localTierOverride, setLocalTierOverride] = useState(null);
   const [rawProfile, setRawProfile] = useState(null);
-  const [session, setSession] = useState(null);
   const [expandedExamId, setExpandedExamId] = useState(null);
   const [pointsAwarded, setPointsAwarded] = useState(0);
   const [pointsBalance, setPointsBalance] = useState(null);
-
-  const { purchase, statusFor, errorFor } = useInlineUnlock({
-    userId: session?.user?.id,
-    email: session?.user?.email,
-    mobile: session?.user?.user_metadata?.mobile,
-    fullName,
-  });
 
   useEffect(() => {
     const load = async () => {
       setLoading(true);
       try {
         const { data: { session: currentSession } } = await supabase.auth.getSession();
-        setSession(currentSession);
-        let tier = 'FREE';
 
         if (currentSession?.user) {
           const { data: profile } = await supabase
@@ -197,7 +173,6 @@ const ProfilingResults = () => {
             .maybeSingle();
 
           if (profile) {
-            tier = getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
             setFullName(profile.full_name || '');
             setRawProfile(profile.raw_profile_data || null);
 
@@ -234,7 +209,6 @@ const ProfilingResults = () => {
             }
           }
         }
-        setEffectiveTier(tier);
       } catch (err) {
         console.error('Error loading profiling results:', err);
       } finally {
@@ -253,12 +227,6 @@ const ProfilingResults = () => {
   }
 
   const topMatches = recommendations.slice(0, 5);
-  const tier = higherTier(effectiveTier, localTierOverride);
-  const canSeeScore = canViewVeerScore(tier);
-  const canSeeMatches = canViewRecommendations(tier);
-  const canSeeCv = canGenerateCV(tier);
-  const unlockStatus = statusFor('SCORE_UNLOCK');
-  const cvAddonStatus = statusFor('CV_ADDON');
 
   const insights = rawProfile ? getProfilingInsights(rawProfile, { context: 'results' }) : [];
   const careerDirection = insights.find((i) => i.label === 'Career Alignment');
@@ -266,16 +234,6 @@ const ProfilingResults = () => {
   const transferableSkills = rawProfile ? getTransferableSkills(rawProfile) : [];
   const pathsCount = location.state?.totalEligible ?? recommendations.length;
   const skillGaps = location.state?.skillGaps || [];
-
-  const handleUnlockScore = async () => {
-    const { ok, tier: newTier } = await purchase('SCORE_UNLOCK');
-    if (ok) setLocalTierOverride((prev) => higherTier(prev, newTier));
-  };
-
-  const handleAddCv = async () => {
-    const { ok, tier: newTier } = await purchase('CV_ADDON');
-    if (ok) setLocalTierOverride((prev) => higherTier(prev, newTier));
-  };
 
   return (
     <div className="results-wrapper">
@@ -345,41 +303,15 @@ const ProfilingResults = () => {
               <Award size={22} color="var(--ios-olive)" />
               <span className="results-card-label">VEER SCORE</span>
             </div>
-            {!canSeeScore ? (
-              <div className="results-locked">
-                <div className="results-score-display results-blurred">{veerScore != null ? veerScore : '87'}</div>
-                <div className="results-lock-overlay">
-                  <Lock size={26} color="var(--ios-olive)" />
-                  <p className="results-lock-title">Discover Your VeerScore</p>
-                  <p className="results-lock-desc">Your career readiness score, calculated from:</p>
-                  <ul className="results-explain-list">
-                    {VEERSCORE_FACTORS.map((f, i) => <li key={i}>{f}</li>)}
-                  </ul>
-                  <Button
-                    type="button"
-                    icon={Crown}
-                    disabled={unlockStatus === 'processing'}
-                    onClick={handleUnlockScore}
-                  >
-                    {unlockStatus === 'processing' ? 'Processing…' : 'Reveal My VeerScore — ₹9'}
-                  </Button>
-                  <p className="results-onetime-note">One-time career analysis — not a subscription.</p>
-                  {errorFor('SCORE_UNLOCK') && <p className="results-error-text">{errorFor('SCORE_UNLOCK')}</p>}
-                </div>
-              </div>
-            ) : (
-              <>
-                <motion.div
-                  className="results-score-display"
-                  initial={{ opacity: 0, scale: 0.85 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: 0.25, ease: 'easeOut' }}
-                >
-                  {veerScore != null ? veerScore : '—'}
-                </motion.div>
-                <p className="card-desc">Your overall readiness score, calculated from service history, skills, and physical standards.</p>
-              </>
-            )}
+            <motion.div
+              className="results-score-display"
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.25, ease: 'easeOut' }}
+            >
+              {veerScore != null ? veerScore : '—'}
+            </motion.div>
+            <p className="card-desc">Your overall readiness score, calculated from service history, skills, and physical standards.</p>
           </Card>
         </motion.div>
 
@@ -395,40 +327,7 @@ const ProfilingResults = () => {
               <h2 className="results-matches-title">Your Top Exam Matches</h2>
             </div>
 
-            {!canSeeMatches ? (
-              <div className="results-locked">
-                <div className="results-blurred">
-                  {[{ exam_name: 'SSC Stenographer Grade C & D', career_track: 'SSC', score: 95 },
-                    { exam_name: 'RRB Junior Engineer', career_track: 'Railways', score: 88 }].map((rec, idx) => (
-                    <div key={idx} className="results-rec-item">
-                      <div className="results-rec-rank">{idx + 1}</div>
-                      <div className="results-rec-info">
-                        <h3>{rec.exam_name}</h3>
-                        <div className="results-rec-meta"><span><Briefcase size={14} /> {rec.career_track}</span></div>
-                      </div>
-                      <div className="results-rec-score">
-                        <div className="results-score-bar-bg"><div className="results-score-bar-fill" style={{ width: `${rec.score}%` }} /></div>
-                        <span>{rec.score}% Match</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="results-lock-overlay">
-                  <Lock size={30} color="var(--ios-olive)" />
-                  <p className="results-lock-title">Your Exam Matches Are Ready</p>
-                  <p className="results-lock-desc">Ranked, personalised exam recommendations from the {pathsCount} paths we identified.</p>
-                  <Button
-                    type="button"
-                    variant="secondary"
-                    icon={Crown}
-                    disabled={unlockStatus === 'processing'}
-                    onClick={handleUnlockScore}
-                  >
-                    {unlockStatus === 'processing' ? 'Processing…' : 'Unlock with VeerScore — ₹9'}
-                  </Button>
-                </div>
-              </div>
-            ) : topMatches.length > 0 ? (
+            {topMatches.length > 0 ? (
               <div className="results-rec-list">
                 {topMatches.map((rec, idx) => (
                   <motion.div
@@ -498,92 +397,36 @@ const ProfilingResults = () => {
         </motion.div>
       </div>
 
-      {/* Career Opportunities reveal — skill gaps, CV add-on, subscription */}
-      <AnimatePresence>
-        {canSeeScore && (
-          <motion.div
-            className="results-opportunities"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-          >
-            {skillGaps.length > 0 && (
-              <Card className="results-gap-card">
-                <div className="card-top"><AlertCircle size={20} color="var(--ios-olive)" /><h3 className="results-matches-title">Where to Focus Next</h3></div>
-                <div className="results-gap-list">
-                  {skillGaps.map((gap, i) => (
-                    <div key={i} className="results-gap-item">
-                      <strong>{gap.label}</strong>
-                      <p>{gap.detail}</p>
-                    </div>
-                  ))}
+      {/* Career Opportunities reveal — skill gaps, CV, subscription */}
+      <motion.div
+        className="results-opportunities"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, ease: 'easeOut' }}
+      >
+        {skillGaps.length > 0 && (
+          <Card className="results-gap-card">
+            <div className="card-top"><AlertCircle size={20} color="var(--ios-olive)" /><h3 className="results-matches-title">Where to Focus Next</h3></div>
+            <div className="results-gap-list">
+              {skillGaps.map((gap, i) => (
+                <div key={i} className="results-gap-item">
+                  <strong>{gap.label}</strong>
+                  <p>{gap.detail}</p>
                 </div>
-              </Card>
-            )}
-
-            <div className="results-cta-row">
-              {canSeeCv ? (
-                <Card as={Link} to="/cv" interactive className="results-cta-card">
-                  <FileText size={22} color="var(--ios-olive)" />
-                  <div>
-                    <h4>Build Your Resume</h4>
-                    <p>Turn your service record into an industry-fit CV.</p>
-                  </div>
-                  <ArrowRight size={18} className="results-cta-arrow" />
-                </Card>
-              ) : (
-                <Card className="results-addon-card">
-                  <Gift size={22} color="var(--ios-olive)" />
-                  <div>
-                    <h4>Add your personalised CV for just ₹1 more</h4>
-                    <p>You&apos;ve unlocked your VeerScore — add CV generation as a bonus.</p>
-                  </div>
-                  <Button
-                    type="button"
-                    size="sm"
-                    disabled={cvAddonStatus === 'processing'}
-                    onClick={handleAddCv}
-                  >
-                    {cvAddonStatus === 'processing' ? 'Processing…' : 'Add CV — ₹1'}
-                  </Button>
-                  {errorFor('CV_ADDON') && <p className="results-error-text">{errorFor('CV_ADDON')}</p>}
-                </Card>
-              )}
-              <Card as={Link} to="/learning-center" interactive className="results-cta-card">
-                <PlayCircle size={22} color="var(--ios-olive)" />
-                <div>
-                  <h4>Explore the Learning Center</h4>
-                  <p>Study guides and quizzes for every matched exam.</p>
-                </div>
-                <ArrowRight size={18} className="results-cta-arrow" />
-              </Card>
-              <Card as={Link} to="/dashboard" interactive className="results-cta-card">
-                <Target size={22} color="var(--ios-olive)" />
-                <div>
-                  <h4>Go to Dashboard</h4>
-                  <p>See everything in one place, anytime.</p>
-                </div>
-                <ArrowRight size={18} className="results-cta-arrow" />
-              </Card>
+              ))}
             </div>
-
-            <Card className="results-subscribe-card">
-              <Crown size={24} color="white" />
-              <div>
-                <h3>Ready to act on these opportunities?</h3>
-                <p>Get unlimited mock tests, the full study library, and ongoing exam alerts — everything you need to prepare, not just discover.</p>
-              </div>
-              <Link to="/subscribe?from=profiling&plan=ANNUAL" className="results-btn-link results-btn-light">
-                View Subscription Plans <ArrowRight size={16} />
-              </Link>
-            </Card>
-          </motion.div>
+          </Card>
         )}
-      </AnimatePresence>
 
-      {!canSeeScore && (
-        <div className="results-cta-row results-cta-row-locked">
+        <div className="results-cta-row">
+          <Card as={Link} to="/cv" interactive className="results-cta-card">
+            <FileText size={22} color="var(--ios-olive)" />
+            <div>
+              <h4>Build Your Resume</h4>
+              <p>Turn your service record into an industry-fit CV.</p>
+            </div>
+            <ArrowRight size={18} className="results-cta-arrow" />
+          </Card>
           <Card as={Link} to="/learning-center" interactive className="results-cta-card">
             <PlayCircle size={22} color="var(--ios-olive)" />
             <div>
@@ -601,7 +444,18 @@ const ProfilingResults = () => {
             <ArrowRight size={18} className="results-cta-arrow" />
           </Card>
         </div>
-      )}
+
+        <Card className="results-subscribe-card">
+          <Crown size={24} color="white" />
+          <div>
+            <h3>Ready to act on these opportunities?</h3>
+            <p>Get unlimited mock tests, the full study library, and ongoing exam alerts — everything you need to prepare, not just discover.</p>
+          </div>
+          <Link to="/subscribe?from=profiling&plan=ANNUAL" className="results-btn-link results-btn-light">
+            View Subscription Plans <ArrowRight size={16} />
+          </Link>
+        </Card>
+      </motion.div>
 
       <style dangerouslySetInnerHTML={{ __html: `
         .results-loading {
@@ -714,61 +568,6 @@ const ProfilingResults = () => {
           line-height: 1;
           margin-bottom: 1rem;
           color: var(--ios-olive);
-        }
-        .results-blurred {
-          filter: blur(10px);
-          user-select: none;
-          pointer-events: none;
-          opacity: 0.6;
-        }
-        .results-locked {
-          position: relative;
-          min-height: 220px;
-        }
-        .results-lock-overlay {
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background: rgba(255,255,255,0.9);
-          backdrop-filter: blur(3px);
-          border-radius: var(--radius-md);
-          padding: 1.5rem;
-          text-align: center;
-        }
-        .results-lock-title {
-          font-weight: 700;
-          font-size: 1rem;
-          color: #0f172a;
-          margin-bottom: 0.4rem;
-        }
-        .results-lock-desc {
-          font-size: 0.85rem;
-          color: #64748b;
-          margin-bottom: 0.6rem;
-          line-height: 1.5;
-          max-width: 320px;
-        }
-        .results-explain-list {
-          text-align: left;
-          font-size: 0.78rem;
-          color: #64748b;
-          margin: 0 0 1.1rem;
-          padding-left: 1.1rem;
-          max-width: 300px;
-          line-height: 1.6;
-        }
-        .results-onetime-note {
-          font-size: 0.72rem;
-          color: #94a3b8;
-          margin-top: 0.6rem;
-        }
-        .results-error-text {
-          font-size: 0.75rem;
-          color: var(--danger, #dc2626);
-          margin-top: 0.5rem;
         }
         .results-btn-link {
           text-decoration: none;
@@ -935,7 +734,6 @@ const ProfilingResults = () => {
           grid-template-columns: repeat(3, 1fr);
           gap: 1.5rem;
         }
-        .results-cta-row-locked { margin-bottom: 1.5rem; grid-template-columns: repeat(2, 1fr); }
         .results-cta-card {
           display: flex;
           align-items: center;
@@ -946,15 +744,6 @@ const ProfilingResults = () => {
         .results-cta-card h4 { font-size: 0.95rem; margin: 0 0 0.2rem; }
         .results-cta-card p { font-size: 0.8rem; color: #888; margin: 0; }
         .results-cta-arrow { margin-left: auto; color: #ccc; flex-shrink: 0; }
-        .results-addon-card {
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-          background: linear-gradient(135deg, rgba(75,107,50,0.08) 0%, rgba(75,107,50,0.03) 100%);
-          border: 1px dashed var(--ios-olive);
-        }
-        .results-addon-card h4 { font-size: 0.95rem; margin: 0 0 0.2rem; }
-        .results-addon-card p { font-size: 0.8rem; color: #888; margin: 0; }
         .results-subscribe-card {
           display: flex;
           align-items: center;
@@ -971,7 +760,7 @@ const ProfilingResults = () => {
         @media (max-width: 850px) {
           .results-insights-grid { grid-template-columns: 1fr 1fr; }
           .results-grid { grid-template-columns: 1fr; }
-          .results-cta-row, .results-cta-row-locked { grid-template-columns: 1fr; }
+          .results-cta-row { grid-template-columns: 1fr; }
           .results-rec-item { flex-wrap: wrap; }
           .results-rec-score { width: 100%; order: 3; }
           .results-prep-grid { grid-template-columns: 1fr; }

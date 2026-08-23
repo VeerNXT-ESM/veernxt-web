@@ -1,0 +1,562 @@
+{
+  "id": "pmo5gec",
+  "title": "Chapter 17:Plant Biology",
+  "order": 66,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "50x42yp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topics",
+          "value": "10 Sections",
+          "icon": "book"
+        },
+        {
+          "label": "Key Mechanism",
+          "value": "Photosynthesis",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "High Priority",
+          "icon": "award"
+        },
+        {
+          "label": "Focus Subject",
+          "value": "Plant Biology",
+          "icon": "info"
+        }
+      ],
+      "id": "9ndrczp"
+    },
+    {
+      "id": "8f1ghyn",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Characteristics of Plants"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Plant cell walls are composed of cellulose, distinguishing them from animal cells.",
+        "Plant tissues are classified into dividing Meristematic Tissues and specialized Permanent Tissues.",
+        "Photosynthesis converts carbon dioxide and water into glucose and oxygen using light energy in chloroplasts.",
+        "Vascular tissues include Xylem (water transport) and Phloem (food transport).",
+        "Plant growth and responses are regulated by key hormones like Auxin, Gibberellin, Cytokinin, Ethylene, and Abscisic Acid."
+      ],
+      "id": "4ki4nmo"
+    },
+    {
+      "type": "paragraph",
+      "id": "t2aoyx0"
+    },
+    {
+      "type": "paragraph",
+      "id": "c6ysdl9"
+    },
+    {
+      "type": "paragraph",
+      "id": "ydzfhbx"
+    },
+    {
+      "type": "paragraph",
+      "id": "tonhrnn"
+    },
+    {
+      "type": "paragraph",
+      "id": "le92nd7"
+    },
+    {
+      "id": "4us15tc",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Classification of Plants"
+    },
+    {
+      "id": "hap5yuq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oyvkhts",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Plant Cell"
+    },
+    {
+      "id": "tntrhpb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foynfjr",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Plant Tissues"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chapter 17: Plant Biology",
+      "id": "iya230n"
+    },
+    {
+      "id": "szsc81o",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d0xv27s",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Parts of a Plant"
+    },
+    {
+      "id": "k5f7zsr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "87mqprm",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Photosynthesis"
+    },
+    {
+      "type": "paragraph",
+      "id": "f44gqgv"
+    },
+    {
+      "type": "paragraph",
+      "id": "pw165ry"
+    },
+    {
+      "id": "1kdd62a",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Plant Nutrition"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Xylem",
+        "Phloem"
+      ],
+      "rows": [
+        [
+          "Primary Function",
+          "Transports water and minerals",
+          "Transports food and nutrients"
+        ],
+        [
+          "Direction of Flow",
+          "Unidirectional (Roots to Leaves)",
+          "Bidirectional (Leaves to all parts)"
+        ],
+        [
+          "Composition",
+          "Mostly dead cells at maturity",
+          "Mostly living cells"
+        ]
+      ],
+      "id": "julkdtf"
+    },
+    {
+      "type": "paragraph",
+      "id": "a8la6dg"
+    },
+    {
+      "type": "paragraph",
+      "id": "ry5hfbk"
+    },
+    {
+      "type": "paragraph",
+      "id": "kp8sd82"
+    },
+    {
+      "type": "paragraph",
+      "id": "tzpmqv7"
+    },
+    {
+      "id": "g3ku0zg",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Plant Reproduction"
+    },
+    {
+      "id": "ul34dzb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7v8nxyv",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Vegetative Propagation"
+    },
+    {
+      "id": "d0evtyp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i0wli9n",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Plant Hormones"
+    },
+    {
+      "id": "4nmbev9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Xylem transports water unidirectionally, whereas Phloem transports food bidirectionally.",
+        "Ethylene is the only gaseous plant hormone responsible for natural fruit ripening.",
+        "Light reactions of photosynthesis take place in the Grana, while dark reactions (Calvin Cycle) take place in the Stroma."
+      ],
+      "id": "4yhqjfb"
+    },
+    {
+      "id": "57gmbkg",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Points"
+    },
+    {
+      "type": "paragraph",
+      "id": "h5eg669"
+    },
+    {
+      "type": "paragraph",
+      "id": "svxztvi"
+    },
+    {
+      "type": "paragraph",
+      "id": "fgo6o80"
+    },
+    {
+      "type": "paragraph",
+      "id": "pzeixam"
+    },
+    {
+      "type": "paragraph",
+      "id": "zknee81"
+    }
+  ],
+  "enriched": true
+}

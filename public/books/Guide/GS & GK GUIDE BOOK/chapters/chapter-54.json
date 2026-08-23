@@ -1,0 +1,310 @@
+{
+  "id": "prvjvjq",
+  "title": "Chapter 5: Light",
+  "order": 54,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ryye6rs"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed of Light",
+          "value": "3 × 10⁸ m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Primary Colors",
+          "value": "3 (RGB)",
+          "icon": "check"
+        },
+        {
+          "label": "Visible Wavelength",
+          "value": "400 - 700 nm",
+          "icon": "info"
+        },
+        {
+          "label": "Laws of Reflection",
+          "value": "2 Fundamental Laws",
+          "icon": "book"
+        }
+      ],
+      "id": "eds5sdf"
+    },
+    {
+      "id": "1vpqh7t",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nature of Light"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light is a transverse electromagnetic wave that can travel through a vacuum without requiring a material medium.",
+        "Reflection is the bouncing back of light when it strikes a boundary surface, following the law where the angle of incidence equals the angle of reflection.",
+        "Refraction occurs when light transitions between media of different optical densities, causing a change in its speed and path.",
+        "Dispersion refers to the splitting of composite white light into its constituent spectrum (VIBGYOR) when passing through a prism.",
+        "Optical instruments, such as microscopes and telescopes, utilize specific combinations of convex and concave lenses for magnification."
+      ],
+      "id": "7z2qwzu"
+    },
+    {
+      "type": "paragraph",
+      "id": "1yfbp4y"
+    },
+    {
+      "type": "paragraph",
+      "id": "81isuj0"
+    },
+    {
+      "type": "paragraph",
+      "id": "bcrhkvc"
+    },
+    {
+      "type": "paragraph",
+      "id": "a39c80r"
+    },
+    {
+      "id": "88f44d2",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Sources of Light"
+    },
+    {
+      "id": "8gt4ed6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vybf8b3",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Reflection of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "eb93wm1"
+    },
+    {
+      "type": "paragraph",
+      "id": "mvtgmko"
+    },
+    {
+      "type": "paragraph",
+      "id": "prxn2qa"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Dispersion of Light",
+      "id": "f31mtrk"
+    },
+    {
+      "type": "paragraph",
+      "id": "clz5um1"
+    },
+    {
+      "id": "zwld18g",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Types of Reflection"
+    },
+    {
+      "id": "04reotl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wvqwxnu",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Refraction of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "d1tnaoa"
+    },
+    {
+      "type": "paragraph",
+      "id": "ggadps6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Reflection of Light",
+        "Refraction of Light"
+      ],
+      "rows": [
+        [
+          "Medium Requirement",
+          "Occurs within the same medium",
+          "Occurs when traveling between two different media"
+        ],
+        [
+          "Speed of Light",
+          "Remains constant after reflection",
+          "Changes based on the optical density of the medium"
+        ],
+        [
+          "Governing Law",
+          "Angle of incidence equals angle of reflection",
+          "Snell's Law (Ratio of sines of incidence and refraction angles is constant)"
+        ],
+        [
+          "Phenomenon",
+          "Bouncing back of light rays",
+          "Bending or change in direction of light rays"
+        ]
+      ],
+      "id": "nzivfku"
+    },
+    {
+      "type": "paragraph",
+      "id": "t2zbdrh"
+    },
+    {
+      "type": "paragraph",
+      "id": "16z8rgp"
+    },
+    {
+      "id": "dh0bgyl",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Lenses"
+    },
+    {
+      "id": "tq3bort",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "latl3uo",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Optical Instruments"
+    },
+    {
+      "type": "paragraph",
+      "id": "ejtxq6d"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7q0a9j"
+    },
+    {
+      "type": "paragraph",
+      "id": "fcws9zs"
+    },
+    {
+      "id": "o43afd3",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Dispersion of Light"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Myopia (near-sightedness) is corrected using concave lenses, while Hypermetropia (far-sightedness) requires convex lenses.",
+        "Convex mirrors are used as rear-view mirrors in automobiles because they produce an erect and diminished image with a wider field of view.",
+        "Total Internal Reflection (TIR) is frequently tested and is the core principle behind optical fibers and mirages."
+      ],
+      "id": "rb21rju"
+    },
+    {
+      "type": "paragraph",
+      "id": "w30vrbn"
+    },
+    {
+      "id": "29aki4p",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "2k55o1z"
+    },
+    {
+      "type": "paragraph",
+      "id": "9v40j2l"
+    },
+    {
+      "type": "paragraph",
+      "id": "5lmalpl"
+    },
+    {
+      "type": "paragraph",
+      "id": "9idc2uw"
+    }
+  ],
+  "enriched": true
+}

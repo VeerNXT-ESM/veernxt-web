@@ -1,0 +1,413 @@
+{
+  "id": "3ltv85a",
+  "title": "Chapter 30: Latitudes and Longitudes",
+  "order": 31,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3cql78s"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Tropic of Cancer States",
+          "value": "8 States",
+          "icon": "map-pin"
+        },
+        {
+          "label": "IST Standard Meridian",
+          "value": "82.5° E",
+          "icon": "clock"
+        },
+        {
+          "label": "IST Passing States",
+          "value": "5 States",
+          "icon": "check"
+        },
+        {
+          "label": "Equator Latitude",
+          "value": "0°",
+          "icon": "globe"
+        }
+      ],
+      "id": "h50xf5d"
+    },
+    {
+      "id": "bs2gy2i",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Latitudes"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are parallel horizontal lines measuring distance north or south of the Equator (0°).",
+        "Longitudes are vertical lines running from the North Pole to the South Pole, measuring distance east or west of the Prime Meridian (0°).",
+        "Indian Standard Time (IST) is based on the 82.5° E longitude meridian, which is 5 hours 30 minutes ahead of GMT.",
+        "The Tropic of Cancer (23.5° N) divides India into almost two equal halves and passes through 8 states.",
+        "The Prime Meridian passes through Greenwich, London, and serves as the international reference for 0° longitude."
+      ],
+      "id": "nvvamus"
+    },
+    {
+      "type": "paragraph",
+      "id": "r1r52ex"
+    },
+    {
+      "type": "paragraph",
+      "id": "a2ij9i1"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvfpl8z"
+    },
+    {
+      "type": "paragraph",
+      "id": "947m88d"
+    },
+    {
+      "id": "89d8aox",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Latitudes"
+    },
+    {
+      "id": "qvbn49d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a7kx9if",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Longitudes"
+    },
+    {
+      "type": "paragraph",
+      "id": "acb05p2"
+    },
+    {
+      "type": "paragraph",
+      "id": "u3sg6ar"
+    },
+    {
+      "type": "paragraph",
+      "id": "btvuabg"
+    },
+    {
+      "type": "paragraph",
+      "id": "79ib6yk"
+    },
+    {
+      "id": "y3kjw4k",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Indian Standard Time (IST)"
+    },
+    {
+      "type": "paragraph",
+      "id": "3agepuh"
+    },
+    {
+      "type": "paragraph",
+      "id": "8mgrl2v"
+    },
+    {
+      "type": "paragraph",
+      "id": "gfdqev8"
+    },
+    {
+      "type": "paragraph",
+      "id": "4mf9or2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Standard Time is calculated on the basis of 82.5° E longitude.",
+      "id": "hoxsd7o"
+    },
+    {
+      "id": "6dwcy05",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Tropic of Cancer Passing Indian States"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "59j52q4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mg75vw7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zoxd9pf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t44a789"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gqcwxrt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "502hqdv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2rw3vbo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "32jl0je"
+    },
+    {
+      "id": "vkshgkp",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Equator Crossing Continents"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitude",
+        "Longitude"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Angular distance north or south of the Equator",
+          "Angular distance east or west of the Prime Meridian"
+        ],
+        [
+          "Direction",
+          "Horizontal parallel circles running East to West",
+          "Vertical semi-circles running North to South"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0°)"
+        ],
+        [
+          "Total Count",
+          "181 parallels (including poles)",
+          "360 meridians"
+        ],
+        [
+          "Distance Between Lines",
+          "Constant everywhere (approx. 111 km)",
+          "Maximum at Equator (111.3 km), decreases towards Poles"
+        ]
+      ],
+      "id": "ook6xiv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ioskj3e"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "azr7iql"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v3nh1ne"
+    },
+    {
+      "id": "m5wiq99",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Countries on the Equator"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f4clbpk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5khg7ue"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w7hweh5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "elb1zh4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bzzhm48"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "daddj8j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "spzmd81"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yu4698h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zplr5qi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "The Indian Standard Meridian (82.5° E) passes through 5 states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
+        "IST is ahead of Greenwich Mean Time (GMT) by 5 hours and 30 minutes (+5:30 UTC).",
+        "Mahi River is the only river in India that crosses the Tropic of Cancer twice."
+      ],
+      "id": "qq5aokf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j614xuo"
+    },
+    {
+      "id": "wgsr6j6",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Latitude vs Longitude (Comparison)"
+    },
+    {
+      "id": "ovlf396",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cf5ff9t",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "dxr3j9r"
+    },
+    {
+      "type": "paragraph",
+      "id": "07nu1nd"
+    },
+    {
+      "type": "paragraph",
+      "id": "iw3xpp6"
+    },
+    {
+      "type": "paragraph",
+      "id": "wujf8k4"
+    }
+  ],
+  "enriched": true
+}

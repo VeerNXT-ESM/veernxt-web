@@ -1,0 +1,291 @@
+{
+  "id": "etfg0z9",
+  "title": "Chapter 4: Heat",
+  "order": 53,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "kr4yknh"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Modes of Transfer",
+          "value": "3",
+          "icon": "check"
+        },
+        {
+          "label": "Key Temp Scales",
+          "value": "3",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Heat",
+          "value": "Joule (J)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Temp",
+          "value": "Kelvin (K)",
+          "icon": "clock"
+        }
+      ],
+      "id": "oj1mujt"
+    },
+    {
+      "id": "wa36vrl",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Heat"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Heat is a form of energy that flows from a body at a higher temperature to a body at a lower temperature.",
+        "Temperature is the measure of the degree of hotness or coldness of a body, measured using Celsius, Fahrenheit, and Kelvin scales.",
+        "Heat transfer occurs through three primary mechanisms: Conduction, Convection, and Radiation.",
+        "Thermal expansion is the tendency of matter to change in shape, area, and volume in response to a change in temperature."
+      ],
+      "id": "p1wzbhq"
+    },
+    {
+      "type": "paragraph",
+      "id": "ye0ixya"
+    },
+    {
+      "type": "paragraph",
+      "id": "flgde70"
+    },
+    {
+      "type": "paragraph",
+      "id": "i4vuree"
+    },
+    {
+      "type": "paragraph",
+      "id": "s0y48mt"
+    },
+    {
+      "id": "p2eegew",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "xt5jni3"
+    },
+    {
+      "type": "paragraph",
+      "id": "59ts5n0"
+    },
+    {
+      "type": "paragraph",
+      "id": "s4zexh0"
+    },
+    {
+      "id": "6ffiu8w",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Temperature Scales"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Modes of Heat Transfer",
+      "id": "pp53n0r"
+    },
+    {
+      "id": "8zuzd7f",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jh04711",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Modes of Heat Transfer"
+    },
+    {
+      "id": "27f0mqr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mdd7uk9",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Conduction"
+    },
+    {
+      "type": "paragraph",
+      "id": "14szkct"
+    },
+    {
+      "id": "3zyj4z4",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Convection"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Mode of Heat Transfer",
+        "Medium Requirement",
+        "Primary Occurrence"
+      ],
+      "rows": [
+        [
+          "Conduction",
+          "Requires medium (direct particle contact)",
+          "Solids"
+        ],
+        [
+          "Convection",
+          "Requires medium (actual particle movement)",
+          "Liquids and Gases"
+        ],
+        [
+          "Radiation",
+          "Does not require any medium",
+          "Vacuum / Free Space"
+        ]
+      ],
+      "id": "xkhm9kz"
+    },
+    {
+      "type": "paragraph",
+      "id": "pyr7aks"
+    },
+    {
+      "id": "9kitkoe",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Radiation"
+    },
+    {
+      "type": "paragraph",
+      "id": "un2o82f"
+    },
+    {
+      "id": "u9zmabg",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Effects of Heat"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nf3hj59"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ru51gu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jvnw56w"
+    },
+    {
+      "id": "spfc9cv",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Expansion due to Heat"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Radiation is the only mode of heat transfer that does not require any material medium to travel through.",
+        "Celsius and Fahrenheit scales show the exact same numerical value at -40 degrees (-40°C = -40°F).",
+        "Conduction is the primary mode of heat transfer in solids, while convection dominates in liquids and gases."
+      ],
+      "id": "6mpgtgt"
+    },
+    {
+      "type": "paragraph",
+      "id": "6fkrl5a"
+    },
+    {
+      "id": "v4pstx1",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "02sg9lb"
+    },
+    {
+      "type": "paragraph",
+      "id": "xcepicc"
+    },
+    {
+      "type": "paragraph",
+      "id": "fdlnwz7"
+    },
+    {
+      "type": "paragraph",
+      "id": "11wvbo7"
+    }
+  ],
+  "enriched": true
+}

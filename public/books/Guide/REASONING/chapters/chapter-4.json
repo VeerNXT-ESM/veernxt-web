@@ -1,0 +1,65 @@
+{
+  "id": "6znpkhm",
+  "title": "2. Check conclusions one by one3. Do not assume anything extra",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lwafbyu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Do not assume anything extra",
+      "id": "wk8fbr6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Rules",
+          "value": "2 Rules",
+          "icon": "check"
+        },
+        {
+          "label": "Topic",
+          "value": "Logical Reasoning",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Strategy",
+          "value": "Step-by-Step Evaluation",
+          "icon": "award"
+        },
+        {
+          "label": "Key Pitfall",
+          "value": "Over-assumption",
+          "icon": "info"
+        }
+      ],
+      "id": "29izfwg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Analyze every given conclusion independently and sequentially.",
+        "Base all deductions strictly on the given premise without incorporating external real-world knowledge.",
+        "Avoid making extra assumptions or extrapolating beyond the explicit context."
+      ],
+      "id": "ruhrvjv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exam questions often trick candidates with real-world facts that are logically invalid based on the given text alone.",
+        "Always evaluate each conclusion one by one to avoid combining conditions across different options."
+      ],
+      "id": "07m65nx"
+    },
+    {
+      "type": "paragraph",
+      "id": "2nxpz7c"
+    }
+  ],
+  "enriched": true
+}

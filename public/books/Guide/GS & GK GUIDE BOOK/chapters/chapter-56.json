@@ -1,0 +1,333 @@
+{
+  "id": "x50hrje",
+  "title": "Chapter 7: Electricity and Magnetism",
+  "order": 56,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "w3663zb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ohm's Law Formula",
+          "value": "V = IR",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Resistance",
+          "value": "Ohm (Ω)",
+          "icon": "check"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "award"
+        }
+      ],
+      "id": "yv1k7e5"
+    },
+    {
+      "id": "nasxmwj",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Electricity"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric current is the rate of flow of electric charge through a conductor per unit of time.",
+        "Voltage (potential difference) provides the electrical pressure required for current to flow.",
+        "Ohm's Law states that electric current is directly proportional to voltage and inversely proportional to resistance.",
+        "Magnetic poles always exist in pairs; magnetic monopoles do not exist.",
+        "Electromagnets are temporary magnets whose strength depends on current magnitude and the number of coil turns."
+      ],
+      "id": "1rhjpbs"
+    },
+    {
+      "type": "paragraph",
+      "id": "a6b796j"
+    },
+    {
+      "type": "paragraph",
+      "id": "bax75oi"
+    },
+    {
+      "type": "paragraph",
+      "id": "sdfj7wf"
+    },
+    {
+      "type": "paragraph",
+      "id": "ofcttjr"
+    },
+    {
+      "id": "lx7h08s",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Electric Current"
+    },
+    {
+      "type": "paragraph",
+      "id": "3subv13"
+    },
+    {
+      "type": "paragraph",
+      "id": "5gr8qga"
+    },
+    {
+      "type": "paragraph",
+      "id": "lcjrjjh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yg7e3iy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "canbgza"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x2uf5cs"
+    },
+    {
+      "id": "o1iodcx",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Voltage"
+    },
+    {
+      "type": "paragraph",
+      "id": "9vlmzxx"
+    },
+    {
+      "type": "paragraph",
+      "id": "fn2f5k6"
+    },
+    {
+      "id": "fatv0mu",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Resistance"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chapter 7: Electricity and Magnetism",
+      "id": "ykk80tg"
+    },
+    {
+      "type": "paragraph",
+      "id": "5emlbl9"
+    },
+    {
+      "type": "paragraph",
+      "id": "9hlvjmo"
+    },
+    {
+      "id": "9g3rkj6",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Ohm’s Law"
+    },
+    {
+      "type": "paragraph",
+      "id": "2yl5ma3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "em8cg37"
+    },
+    {
+      "id": "o5qfa8u",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Electric Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "jumu1vi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7an5j22"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uiuywzk"
+    },
+    {
+      "id": "x6vfzhn",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Electric Circuits"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Series Circuit",
+        "Parallel Circuit"
+      ],
+      "rows": [
+        [
+          "Current Flow",
+          "Identical through all components",
+          "Splits across different branches"
+        ],
+        [
+          "Voltage Drop",
+          "Divided across each component",
+          "Same across all parallel branches"
+        ],
+        [
+          "Equivalent Resistance",
+          "Increases (R_eq = R1 + R2 + ...)",
+          "Decreases (1/R_eq = 1/R1 + 1/R2 + ...)"
+        ],
+        [
+          "Fault Impact",
+          "One failure breaks the whole circuit",
+          "Other branches continue to function independently"
+        ]
+      ],
+      "id": "dl4xpem"
+    },
+    {
+      "id": "06ibyed",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "if3tkgl",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Magnetism"
+    },
+    {
+      "type": "paragraph",
+      "id": "t5hqj7b"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7notj0"
+    },
+    {
+      "id": "k347t31",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Properties of Magnets"
+    },
+    {
+      "type": "paragraph",
+      "id": "24rnkkr"
+    },
+    {
+      "type": "paragraph",
+      "id": "fwe9h4w"
+    },
+    {
+      "type": "paragraph",
+      "id": "gfy0gyf"
+    },
+    {
+      "type": "paragraph",
+      "id": "00vwase"
+    },
+    {
+      "id": "b898k55",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Electromagnet"
+    },
+    {
+      "type": "paragraph",
+      "id": "66wsww7"
+    },
+    {
+      "type": "paragraph",
+      "id": "gjlrtvo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An ammeter is always connected in series due to its very low resistance, whereas a voltmeter is connected in parallel due to its high resistance.",
+        "Soft iron is preferred for making electromagnet cores because of its high permeability and low retentivity.",
+        "Fuse wires are made of alloys with low melting points and high resistivity, always connected in series with the live wire."
+      ],
+      "id": "dvub0ym"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pknebp2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1iaonbt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vshjcfx"
+    },
+    {
+      "id": "peghk77",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "fvrtemi"
+    },
+    {
+      "type": "paragraph",
+      "id": "s7ljxtl"
+    },
+    {
+      "type": "paragraph",
+      "id": "7iesrzy"
+    },
+    {
+      "type": "paragraph",
+      "id": "jkyzrqf"
+    }
+  ],
+  "enriched": true
+}

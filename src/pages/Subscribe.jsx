@@ -188,8 +188,6 @@ const Subscribe = () => {
     return Check;
   };
 
-  // Split plans into one-time purchases and subscriptions
-  const oneTimePlans = PLAN_DETAILS.filter(p => p.type === 'one-time');
   const subscriptionPlans = PLAN_DETAILS.filter(p => p.type === 'subscription');
 
   return (
@@ -246,70 +244,6 @@ const Subscribe = () => {
             </div>
           </div>
         )}
-
-        {/* ONE-TIME PURCHASES */}
-        <div style={{ marginBottom: '2.5rem' }}>
-          <h2 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem', textAlign: 'center' }}>
-            INSTANT UNLOCKS
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', maxWidth: '700px', margin: '0 auto' }}>
-            {oneTimePlans.map((plan) => {
-              const isOwned = isCurrentOrHigher(plan.id);
-              const isHighlighted = highlightPlan === plan.id;
-              return (
-                <div key={plan.id} style={{
-                  background: isHighlighted
-                    ? 'linear-gradient(135deg, rgba(75, 107, 50, 0.2) 0%, rgba(75, 107, 50, 0.08) 100%)'
-                    : 'rgba(255,255,255,0.06)',
-                  backdropFilter: 'blur(20px)',
-                  border: isHighlighted ? '2px solid rgba(75, 107, 50, 0.5)' : '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: '20px',
-                  padding: '2rem 1.75rem',
-                  transition: 'all 0.3s ease',
-                  position: 'relative',
-                  opacity: isOwned ? 0.6 : 1,
-                }}>
-                  <h3 style={{ color: 'white', fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem' }}>{plan.name}</h3>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '1.5rem' }}>
-                    <span style={{ color: 'white', fontSize: '2.5rem', fontWeight: 800 }}>{plan.priceLabel}</span>
-                    <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem' }}>{plan.durationLabel}</span>
-                  </div>
-
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
-                    {plan.features.map((feat, i) => {
-                      const Icon = featureIcon(feat);
-                      return (
-                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                          <div style={{ width: '24px', height: '24px', borderRadius: '6px', background: 'rgba(75, 107, 50, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                            <Icon size={12} style={{ color: '#8BB85C' }} />
-                          </div>
-                          <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.85rem', fontWeight: 500 }}>{feat}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <button
-                    onClick={() => handleSelectPlan(plan.id)}
-                    disabled={loading || isOwned}
-                    style={{
-                      width: '100%', padding: '0.8rem', borderRadius: '12px',
-                      border: isOwned ? '1px solid rgba(75, 107, 50, 0.3)' : 'none',
-                      background: isOwned ? 'transparent' : 'linear-gradient(135deg, #4B6B32, #6B9B42)',
-                      color: 'white', fontSize: '0.9rem', fontWeight: 700,
-                      cursor: isOwned ? 'default' : 'pointer',
-                      transition: 'all 0.2s ease',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-                      boxShadow: !isOwned ? '0 6px 20px rgba(75, 107, 50, 0.25)' : 'none',
-                    }}
-                  >
-                    {isOwned ? 'Purchased ✓' : (loading && selectedPlan === plan.id ? 'Processing...' : <>Unlock Now <ArrowRight size={16} /></>)}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
         {/* SUBSCRIPTION PLANS */}
         <div style={{ marginBottom: '2rem' }}>
@@ -414,9 +348,9 @@ const Subscribe = () => {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem' }}>
             {[
               'Career Profiling Engine',
+              'Personalised CV / Resume',
               'Introductory Resources',
-              'Guide & Precis Covers',
-              'PYQ Papers (Recent)',
+              'Full Guidebooks',
               '1 Free Mock Test',
               'Live Job Board',
             ].map((item, i) => (

@@ -1,0 +1,363 @@
+{
+  "id": "bvv1k2h",
+  "title": "Chapter 10: Data Representation",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cpesm3e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Number Systems",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Key Standard",
+          "value": "ASCII",
+          "icon": "award"
+        },
+        {
+          "label": "Core System",
+          "value": "Binary",
+          "icon": "check"
+        }
+      ],
+      "id": "dh6nrbn"
+    },
+    {
+      "id": "9vz3lfp",
+      "type": "heading",
+      "level": 2,
+      "content": "10.1 Number System"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Data representation covers four primary number systems: Binary, Octal, Decimal, and Hexadecimal.",
+        "Binary conversions involve converting numbers between Decimal, Octal, Hexadecimal, and Binary formats.",
+        "ASCII stands for American Standard Code for Information Interchange.",
+        "Understanding number system comparisons and conversion logic is essential for computer data representation."
+      ],
+      "id": "ra9og0r"
+    },
+    {
+      "type": "paragraph",
+      "id": "5yvzjue"
+    },
+    {
+      "id": "jqnbqzk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o3xyphl",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.1 Binary Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "an3d9hi"
+    },
+    {
+      "id": "mxhrp7q",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.2 Octal Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "xmh46xb"
+    },
+    {
+      "id": "hjketfj",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.3 Decimal Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "z2gngl3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "ASCII (American Standard Code for Information Interchange)",
+      "id": "cvypqtb"
+    },
+    {
+      "id": "epcw5vf",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.4 Hexadecimal Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "u2mnd2g"
+    },
+    {
+      "id": "wjt4qjj",
+      "type": "heading",
+      "level": 2,
+      "content": "10.2 Binary Conversions"
+    },
+    {
+      "id": "3zzsbem",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.1 Decimal to Binary Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "dn81yf0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Number System",
+        "Associated Binary Conversions"
+      ],
+      "rows": [
+        [
+          "Decimal Number System",
+          "Decimal to Binary / Binary to Decimal"
+        ],
+        [
+          "Octal Number System",
+          "Binary to Octal"
+        ],
+        [
+          "Hexadecimal Number System",
+          "Binary to Hexadecimal"
+        ]
+      ],
+      "id": "tfbehn5"
+    },
+    {
+      "id": "wwkmn1i",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.2 Binary to Decimal Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "pg61u37"
+    },
+    {
+      "id": "8j61vey",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.3 Binary to Octal Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "1djjip6"
+    },
+    {
+      "id": "pn0li2o",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.4 Binary to Hexadecimal Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "6x8k11v"
+    },
+    {
+      "id": "olfb30e",
+      "type": "heading",
+      "level": 2,
+      "content": "10.3 ASCII (American Standard Code for Information Interchange)"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdcvwyd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Full form of ASCII (American Standard Code for Information Interchange) is frequently asked in competitive exams.",
+        "Conversion techniques between Decimal, Binary, Octal, and Hexadecimal are high-yield problem-solving topics."
+      ],
+      "id": "fam10wf"
+    },
+    {
+      "id": "cw9u3bm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bgucxx5",
+      "type": "heading",
+      "level": 2,
+      "content": "10.4 Comparison of Number Systems"
+    },
+    {
+      "id": "rylh5h5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ck5cvo5",
+      "type": "heading",
+      "level": 2,
+      "content": "10.5 Important Exam Points"
+    },
+    {
+      "id": "6gp0h4x",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

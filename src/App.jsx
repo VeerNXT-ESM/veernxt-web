@@ -9,6 +9,7 @@ import Profiling from './pages/Profiling';
 import ProfilingResults from './pages/ProfilingResults';
 import Dashboard from './pages/Dashboard';
 import LearningCenter from './pages/LearningCenter';
+import ExamSyllabus from './pages/ExamSyllabus';
 import FinancialGuidance from './pages/FinancialGuidance';
 import SecureReader from './components/SecureReader';
 import Footer from './components/Footer';
@@ -45,6 +46,7 @@ import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
+import DevReader from './pages/sandbox/DevReader';
 import './index.css';
 
 /**
@@ -143,6 +145,7 @@ function App() {
           <Route path="/subscribe" element={<AuthGuard skipProfilingCheck><Subscribe /></AuthGuard>} />
           <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
           <Route path="/learning-center" element={<AuthGuard><LearningCenter /></AuthGuard>} />
+          <Route path="/exam/:examId" element={<AuthGuard><ExamSyllabus /></AuthGuard>} />
           <Route path="/jobs" element={<AuthGuard><PublicJobs /></AuthGuard>} />
           <Route path="/find-candidates" element={<AuthGuard><FindCandidates /></AuthGuard>} />
           <Route path="/messaging" element={<AuthGuard><MessagingWorkspace /></AuthGuard>} />
@@ -155,6 +158,8 @@ function App() {
           <Route path="/cv" element={<AuthGuard><CVBuilder /></AuthGuard>} />
           <Route path="/rewards" element={<AuthGuard><RewardsCenter /></AuthGuard>} />
         </Route>
+
+        <Route path="/dev-reader" element={<DevReader />} />
 
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />

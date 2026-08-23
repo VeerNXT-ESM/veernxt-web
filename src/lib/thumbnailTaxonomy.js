@@ -92,6 +92,15 @@ const SUBJECT_PRIORITY = [
   'english', 'computer_science', 'hindi',
 ];
 
+// Single-title -> subject key lookup, shared by resolveThumbnailSubject
+// (one dominant subject per exam) and resolveSubjectForTitle (one subject
+// per individual resource, for the per-subject syllabus thumbnail grid).
+function subjectKeyForTitle(title) {
+  if (CORE_TITLE_TO_SUBJECT[title]) return CORE_TITLE_TO_SUBJECT[title];
+  if (REGION_GS_TITLE_PATTERN.test(title)) return 'general_studies';
+  return null;
+}
+
 /**
  * Resolves the dominant thumbnail subject for an exam from its ingested
  * resources_v2 rows (title + category). Guide/Precis titles from the core
@@ -104,14 +113,27 @@ export function resolveThumbnailSubject(resourceRows = []) {
   const present = new Set();
 
   for (const title of titles) {
-    if (CORE_TITLE_TO_SUBJECT[title]) present.add(CORE_TITLE_TO_SUBJECT[title]);
-    if (REGION_GS_TITLE_PATTERN.test(title)) present.add('general_studies');
+    const key = subjectKeyForTitle(title);
+    if (key) present.add(key);
   }
 
   for (const key of SUBJECT_PRIORITY) {
     if (present.has(key)) return { key, ...THUMBNAIL_SUBJECTS[key] };
   }
   return DEFAULT_THUMBNAIL_SUBJECT;
+}
+
+/**
+ * Per-resource subject, for grouping one exam's resources into the
+ * subject-thumbnail grid (src/pages/ExamSyllabus.jsx) rather than picking
+ * a single dominant subject for the whole exam. Same title-matching rules
+ * as resolveThumbnailSubject, applied to one resource at a time; anything
+ * unmatched falls back to the neutral default so it still gets a tile
+ * instead of being silently dropped.
+ */
+export function resolveSubjectForTitle(title) {
+  const key = subjectKeyForTitle((title || '').trim());
+  return key ? { key, ...THUMBNAIL_SUBJECTS[key] } : DEFAULT_THUMBNAIL_SUBJECT;
 }
 
 export function getSubjectByKey(key) {

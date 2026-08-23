@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { 
-  Briefcase, Calendar, ExternalLink, RefreshCw, Search, AlertCircle, Clock, 
-  MapPin, ArrowLeft, ChevronLeft, ChevronRight, X, Sliders, Bookmark, 
-  BarChart2, CheckCircle2, Award, ChevronDown, Sparkles
+import {
+  Briefcase, Calendar, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
+  MapPin, ArrowLeft, ChevronLeft, ChevronRight, X, Sliders, Bookmark,
+  BarChart2, CheckCircle2, Award, ChevronDown, ChevronUp, Sparkles, BookOpen
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import { getEffectiveTier } from '../lib/subscriptionAccess';
+import ExamContentPreview from './ExamContentPreview';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -23,6 +25,7 @@ const JobBoard = ({ isAdmin = false }) => {
   const [profileData, setProfileData] = useState(null);
   const [dismissedJobIds, setDismissedJobIds] = useState([]);
   const [showAllProfileMatched, setShowAllProfileMatched] = useState(false);
+  const [examAccordionOpen, setExamAccordionOpen] = useState(false);
 
 
   const fetchJobs = async () => {
@@ -80,6 +83,10 @@ const JobBoard = ({ isAdmin = false }) => {
   useEffect(() => {
     setCurrentPage(1);
   }, [search]);
+
+  useEffect(() => {
+    setExamAccordionOpen(false);
+  }, [selectedJob?.id]);
 
   const handleRefresh = async () => {
     setRefreshing(true);
@@ -290,6 +297,11 @@ const JobBoard = ({ isAdmin = false }) => {
                         <span className="body-badge" style={{ background: '#f0fdf4', color: '#1F3A2E', border: '1px solid #dcfce7' }}>
                           {job.body}
                         </span>
+                        {job.examName && (
+                          <span className="body-badge" style={{ display: 'block', marginTop: '0.3rem', background: '#eef2ff', color: '#3730a3', border: '1px solid #e0e7ff', fontSize: '0.7rem' }}>
+                            Exam: {job.examName}
+                          </span>
+                        )}
                       </td>
                       <td>
                         <div className="job-title-col">
@@ -434,14 +446,37 @@ const JobBoard = ({ isAdmin = false }) => {
                       <p className="premium-job-subtitle-line">
                         {selectedJob.body} • Chennai, Tamil Nadu, India • {selectedJob.publishedOn ? calculateDaysAgo(selectedJob.publishedOn) : '2 weeks ago'}
                       </p>
+                      {selectedJob.examId && (
+                        <button
+                          type="button"
+                          onClick={() => setExamAccordionOpen((open) => !open)}
+                          className="required-exam-badge"
+                          style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.3rem', marginTop: '0.4rem',
+                            fontSize: '0.8rem', color: 'var(--ios-olive)', fontWeight: 600,
+                            background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+                          }}
+                        >
+                          <BookOpen size={13} /> Associated exam: {selectedJob.examName || 'View syllabus'}
+                          {examAccordionOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                        </button>
+                      )}
+                      {examAccordionOpen && selectedJob.examId && (
+                        <ExamContentPreview
+                          examId={selectedJob.examId}
+                          examName={selectedJob.examName}
+                          tier={getEffectiveTier(profileData?.subscription_tier, profileData?.subscription_expires_at)}
+                          freeQuizUsed={!!profileData?.free_quiz_used}
+                        />
+                      )}
                     </div>
                   </div>
-                  
+
                   <div className="detail-actions-row" style={{ marginTop: '1.25rem' }}>
                     <span className="fulltime-badge">✓ Full-time</span>
                     <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
                       {selectedJob.url ? (
-                        <a href={selectedJob.url} target="_blank" rel="noopener noreferrer" className="btn-primary ios-pill premium-apply-btn">
+                        <a href={selectedJob.url} rel="noopener" className="btn-primary ios-pill premium-apply-btn">
                           Apply <ExternalLink size={14} />
                         </a>
                       ) : (
@@ -572,6 +607,14 @@ const JobBoard = ({ isAdmin = false }) => {
                 <span className="detail-label">Conducting Body</span>
                 <span className="detail-val">{selectedJob.body}</span>
               </div>
+              {selectedJob.examId && (
+                <div className="modal-detail-card">
+                  <span className="detail-label">Required Exam</span>
+                  <span className="detail-val">
+                    <Link to={`/exam/${selectedJob.examId}`} style={{ color: 'var(--ios-olive)', fontWeight: 600 }}>{selectedJob.examName || 'View syllabus'}</Link>
+                  </span>
+                </div>
+              )}
               <div className="modal-detail-card">
                 <span className="detail-label">Published On</span>
                 <span className="detail-val">
@@ -608,7 +651,7 @@ const JobBoard = ({ isAdmin = false }) => {
                 Close Details
               </button>
               {selectedJob.url && (
-                <a href={selectedJob.url} target="_blank" rel="noopener noreferrer" className="btn-primary ios-pill" style={{ textDecoration: 'none', padding: '0.65rem 1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#1F3A2E', color: 'white', borderRadius: '99px', fontWeight: 700 }}>
+                <a href={selectedJob.url} rel="noopener" className="btn-primary ios-pill" style={{ textDecoration: 'none', padding: '0.65rem 1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#1F3A2E', color: 'white', borderRadius: '99px', fontWeight: 700 }}>
                   Open Official Source <ExternalLink size={14} />
                 </a>
               )}

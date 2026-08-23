@@ -1,0 +1,381 @@
+.bk-upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2rem;
+}
+
+.bk-upload-box {
+  background: white;
+  padding: 4rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  border: 2px dashed #cbd5e1;
+  transition: all 0.2s;
+}
+
+.bk-upload-box:hover {
+  border-color: #0f766e;
+}
+
+.bk-upload-icon {
+  color: #0f766e;
+  margin-bottom: 1.5rem;
+}
+
+.bk-upload-box h2 {
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.bk-upload-box p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.bk-upload-btn {
+  background-color: #0f766e;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bk-upload-btn:hover:not(:disabled) {
+  background-color: #115e59;
+}
+
+.bk-upload-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Reader Layout */
+.bk-reader-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.bk-sidebar {
+  width: 320px;
+  background-color: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bk-sidebar-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bk-sidebar-header h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.bk-close-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  margin-left: auto;
+}
+
+.bk-toc {
+  padding: 1rem;
+}
+
+.bk-toc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bk-toc-item:hover {
+  background-color: #f1f5f9;
+}
+
+.bk-toc-item.active {
+  background-color: #e6f6f5;
+}
+
+.bk-toc-number {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #0f766e;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.bk-toc-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.bk-toc-item.active .bk-toc-title {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.bk-main-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.bk-article {
+  width: 100%;
+  max-width: 800px;
+  padding: 4rem 2rem;
+}
+
+/* Mobile Topbar */
+.bk-mobile-topbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 40;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.bk-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0f172a;
+  padding: 0.5rem;
+}
+
+.bk-mobile-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bk-mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 45;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bk-sidebar {
+    position: fixed;
+    left: -320px;
+    z-index: 50;
+    transition: transform 0.3s ease;
+  }
+
+  .bk-sidebar.open {
+    transform: translateX(320px);
+  }
+
+  .bk-close-btn {
+    display: block;
+  }
+
+  .bk-mobile-topbar {
+    display: flex;
+  }
+
+  .bk-mobile-overlay {
+    display: block;
+  }
+
+  .bk-main-content {
+    padding-top: 60px; /* Account for topbar */
+  }
+
+  .bk-article {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* TOC Enriched Badge */
+.bk-toc-enriched {
+  margin-left: auto;
+  color: #0f766e;
+  font-size: 0.75rem;
+}
+
+/* Chapter Pagination */
+.bk-pagination {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.bk-page-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+  min-width: 0;
+}
+
+.bk-page-btn:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #0f766e;
+  color: #0f766e;
+}
+
+.bk-page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.bk-page-btn > span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.bk-page-btn small {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  display: block;
+}
+
+.bk-page-btn strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.bk-page-next {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.bk-page-next > span {
+  align-items: flex-end;
+}
+
+.bk-page-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.bk-page-sep {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  .bk-pagination {
+    flex-direction: column;
+  }
+  .bk-page-counter {
+    justify-content: center;
+    padding: 0.5rem 0;
+    order: -1;
+  }
+}
+
+/* Book Selector Dropdown styles */
+.bk-book-selector {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.bk-book-selector label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+.bk-book-selector select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  font-weight: 600;
+  background-color: white;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.bk-book-selector select:focus {
+  border-color: #0f766e;
+}
+
