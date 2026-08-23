@@ -3,11 +3,11 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
   GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield,
-  HelpCircle, Briefcase, Gift, LogOut, ChevronsLeft, ChevronsRight,
+  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight,
 } from 'lucide-react';
 import './AdminCMS.css';
 
-const ICONS = { GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield, HelpCircle, Briefcase, Gift };
+const ICONS = { GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield, HelpCircle, Briefcase, Gift, Landmark };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it

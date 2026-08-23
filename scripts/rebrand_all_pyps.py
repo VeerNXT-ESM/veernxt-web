@@ -109,13 +109,35 @@ def process_pdf_worker(pdf_in, logo_path):
             except Exception:
                 pass
 
-        # Step 3: Draw VeerNXT bands on header and footer
+        # Step 3: Overlay VeerNXT branding, redact mid-page text links, and strip click-through hyperlinks
         logo_exists = os.path.exists(logo_path)
+        
+        redact_keywords = [
+            "adda247", "testbook", "play.google.com", "google play", 
+            "gradeup", "byjus", "mockbox", "qmaths", "careerpower", 
+            "superprofs", "kd campus", "unacademy", "www.", "http:", "https:",
+            "download", "telegram.me", "t.me"
+        ]
         
         for idx, page in enumerate(doc):
             rect = page.rect
             width, height = rect.width, rect.height
             
+            # 1. Clear any click-through hyperlinks (annotations)
+            links = page.get_links()
+            if links:
+                for l in links:
+                    page.delete_link(l)
+
+            # 2. Redact mid-page competitor and website text links
+            for kw in redact_keywords:
+                rects = page.search_for(kw)
+                for r in rects:
+                    # Overlay a solid white rectangle exactly over the text coordinates
+                    # Expand by 1pt horizontally and vertically for a clean cover
+                    expanded_r = fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + 1, r.y1 + 1)
+                    page.draw_rect(expanded_r, color=(1, 1, 1), fill=(1, 1, 1))
+
             # --- Draw Header ---
             # 1. Clear Y <= 45 with a white rectangle
             page.draw_rect(fitz.Rect(0, 0, width, 45), color=(1, 1, 1), fill=(1, 1, 1))
@@ -148,7 +170,7 @@ def process_pdf_worker(pdf_in, logo_path):
         return {"status": "error", "file": pdf_in, "error": str(e)}
 
 def main():
-    print("=== VEERNXT PYP REBRANDING PIPELINE (BATCH MODE) ===")
+    print("=== VEERNXT PYP REBRANDING & REDACTION PIPELINE ===")
     print(f"Input Directory:  {INPUT_DIR}")
     print(f"Output Directory: {OUTPUT_DIR}")
     
@@ -194,10 +216,10 @@ def main():
             
             if status == "success":
                 success_count += 1
-                print(f"[{idx}/{total_files}] REBRANDED: {res['out']}")
+                if idx % 10 == 0 or idx == total_files:
+                    print(f"[{idx}/{total_files}] REBRANDED: {res['out']}")
             elif status == "skipped":
                 skipped_count += 1
-                # Silent or low-level print for skipped to avoid flooding console
                 if idx % 50 == 0 or idx == total_files:
                     print(f"[{idx}/{total_files}] (Skipped/Existing: {skipped_count} files)")
             elif status == "error":

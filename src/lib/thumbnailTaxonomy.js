@@ -59,8 +59,12 @@ export const DEFAULT_THUMBNAIL_SUBJECT = { key: 'general', label: 'Study Materia
 
 // resources_v2.title -> thumbnail subject key, for the exact titles written
 // by scripts/ingest_master_documents.mjs's 12 core-subject documents.
-// Keyed on the cleaned title (see cleanTitle() in that script).
-const CORE_TITLE_TO_SUBJECT = {
+// Keyed on the cleaned title (see cleanTitle() in that script). Exported
+// (alongside REGION_GS_TITLE_PATTERN below) so scripts/map_exam_resources_
+// gemini.mjs can reuse the same "which resources_v2 rows are universal vs.
+// region-specific" classification when building a Gemini candidate list,
+// rather than re-deriving it.
+export const CORE_TITLE_TO_SUBJECT = {
   'ENGLISH': 'english',
   'GS & GK GUIDE BOOK': 'gk_general_awareness',
   'SSC COMPLETE GK': 'gk_general_awareness',
@@ -77,7 +81,7 @@ const CORE_TITLE_TO_SUBJECT = {
 // keyword rather than an exhaustive list, since these titles vary
 // (`{State}_GS`, `{State} GS`, `{State} CONSTABLE`, `{State}_SI`, etc.)
 // but were all placed under Guide/GS BOOK STATE or Guide/GS BOOK UT.
-const REGION_GS_TITLE_PATTERN = /_GS(_Book)?$|GS$|CONSTABLE$|SI$/i;
+export const REGION_GS_TITLE_PATTERN = /_GS(_Book)?$|GS$|CONSTABLE$|SI$/i;
 
 // Fixed dominance order for when an exam carries several core-subject
 // documents at once (most do -- avg 4.3 subjects/exam per status_report.md
