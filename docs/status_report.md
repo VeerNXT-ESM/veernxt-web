@@ -4,9 +4,11 @@
 
 **Most of this session (§1–§20) is content-audit/tooling work, not app code** — it happened on the local `CLIENT ASSETS` content library (`K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\`), **outside this git repo**; only the analysis scripts, reports, and prompts that resulted live in the repo. See §18 for exactly what's tracked where. **§21 is different** — it's real application architecture: a new schema applied directly to the production Supabase database and seeded with live data (still additive/non-destructive, nothing existing was touched, but it's not just local analysis anymore).
 
-**🎯 Next session starts here**: §31.8 — two explicit tasks from the user, in their own stated priority order. **Task 1**: swap the subject/exam thumbnails for a new set of images the user has already dropped at `public/thumbnails/` (15 files: Agriculture, Computer Science, Descriptive Writing, Electrical Engineering, English, Financial Awareness, General Knowledge, HR-Personnel, Hindi, Law, Mathematics, Nursing, Reasoning, Technical Trades, Traffic-Road Safety), replacing the old `bg_guide/intro/mock/precis/pyq.jpg` + `thumbnils/thumbnil royal {blue,green,red}.png` assets (already deleted from disk, still showing as `D` in git status — not yet committed). **Task 2**: apply the same design work just done on the candidate Job Board/Dashboard (career-track tags, filter pills, dark-CMS-consistent styling, "personal command center" restructuring) to the **employer** onboarding flow and employer dashboard. Neither task has been scoped or started yet — this note is the handoff point, not a summary of work done.
+**🎯 Next session starts here**: §34.4 — no explicit new task from the user yet as of this writing; the two tasks handed off at the end of the prior session (§31.8) are **both done** this session (§34.1 thumbnails, §34.2 employer portal). Read §34.3 first — a live-verified `resources_v2`/R2 gap (43 Group A resources from §31.5/§31.6 still have no exam linkage) is still open and was deliberately deferred twice now. **Also read §34.5 before running anything from §33.0's next-steps list** — a real collision risk between this session's `resources_v2` ingestion work and the parallel session's planned `sync_books_to_r2.mjs --execute` run.
 
-*(Prior pointer, now superseded — kept for history)* §30 — "we have still not improved the Job Board. It still looks horrendous" (§29.11 point 1) and the General Science/Delhi-GS resource-mapping gap. **Both fully resolved this session** — see §31.1 (Job Board dark rebuild) and §31.5 (`lc_resources` dedup + General Science linking). §30 also surfaced a much bigger, unrelated problem mid-session (the docx-enrichment content-loss bug) that consumed most of this session instead — see §31.2 onward.
+*(Prior pointer, now superseded — kept for history)* §31.8's Task 1 (thumbnail swap) and Task 2 (employer portal parity) — both done this session, see §34.1/§34.2.
+
+**Note on section numbering**: §32 and the `### 33.0` pointer immediately after it were written by a different, parallel session (Quiz Engine work) that used this same file concurrently — not this session's work, not reviewed or touched. This session's own write-up continues below as **§34** to avoid colliding with that numbering rather than because §33 was skipped by mistake.
 
 *(Prior pointer, now superseded — kept for history)* §29 — the user was waiting before further action on `scripts/map_exam_resources_gemini.mjs --execute` and `scripts/migrate_resources_to_blocks.mjs`; §30's session picked up §29.11's jobs+scraper instruction instead and completed it.
 
@@ -1350,9 +1352,98 @@ Two commits this session, both pushed to `main`:
 
 **Left deliberately untouched, not this session's work**: a `public/thumbnails/` asset swap already staged locally by the user (old `bg_*.jpg`/`thumbnils/thumbnil royal *.png` deleted, 15 new subject-named PNGs added, none of it committed yet — see §31.8 Task 1) and an in-progress Quiz Center feature (`src/pages/QuizCenter.jsx`, `src/components/quiz/`, `scripts/enrich_split_books.mjs`, `scripts/split_large_books.mjs`, modified `src/App.jsx`/`ExamContentPreview.jsx`/`InteractiveQuiz.jsx`/`index.css`/`LearningCenter.jsx`) visible in `git status` throughout this session but never touched — appears to be the user's own parallel work, not investigated or committed.
 
-### 31.8 🎯 Next session starts here
+### 31.8 🎯 Next session starts here (Superseded by Session 32)
 
-Two explicit tasks, user's own stated priority order:
+---
 
-1. **Task 1 — swap subject/exam thumbnails.** New images already dropped at `public/thumbnails/` (15 files, subject-named: Agriculture, Computer Science, Descriptive Writing, Electrical Engineering, English, Financial Awareness, General Knowledge, HR-Personnel, Hindi, Law, Mathematics, Nursing, Reasoning, Technical Trades, Traffic-Road Safety). Old assets already deleted from disk (`bg_guide/intro/mock/precis/pyq.jpg`, `thumbnils/thumbnil royal {blue,green,red}.png`) but nothing committed yet. **Not yet scoped**: exactly how thumbnails are keyed today (by the 5 fixed categories Guide/Intro/Mock/Precis/PYQ, or by a subject-key enum like `src/lib/thumbnailTaxonomy.js`'s `general_studies`/`gk_general_awareness`/`reasoning`/etc.) — the new filenames read as subject names, not category names, so this may not be a like-for-like swap. Check `thumbnailTaxonomy.js`, whatever component actually renders a thumbnail (likely `ExamThumbnail.jsx`), and `src/lib/contentEngineProcessor.js` before assuming the mapping is 1:1.
-2. **Task 2 — bring the employer portal up to the same standard as the candidate side.** User's own words: apply the same "tagging and improvements" sensibilities already built for the candidate Job Board/Dashboard (career-track tags from `src/lib/careerTrack.js`, filter pills, the "personal command center" stat-row restructure from §29.2) to the **employer onboarding flow** and **employer dashboard**. Not yet scoped this session — need to find what exists today for the employer side (onboarding flow, dashboard, any employer-facing routes in `src/App.jsx`) before planning what "parity" actually means here, since the employer side's current state wasn't established in any prior session's notes.
+## 32. Quiz Engine Makeover & Content Ingestion Pipeline (Session 32)
+
+### 32.1 Global Swiss-Theme Visual Makeover
+*   **Zero Rounded Corners**: Modified [`src/index.css`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/index.css) to set all design-token radius scales (`--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-pill`) to `0px`.
+*   **Global Reset**: Injected a global base CSS reset `* { border-radius: 0px !important; }` to flatten all cards, inputs, and buttons globally.
+*   **Learning Center Scroll Reduction**: Removed the long vertical mock test lists from [`LearningCenter.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/pages/LearningCenter.jsx) and replaced them with a direct button leading to a clean, dedicated Quiz Center dashboard.
+*   **Centralized Quiz Center**: Created [`QuizCenter.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/pages/QuizCenter.jsx) (registered route `/quiz-center` in [`src/App.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/App.jsx)) displaying all mock exams grouped by subject, with active search filters.
+*   **Exam Resource Dropdowns Updated**: Modified [`ExamContentPreview.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/components/ExamContentPreview.jsx) to replace the cluttered list of mock tests under expanded exams with a single clean "Visit Quiz Center" row.
+
+### 32.2 Quiz Engine UI Redesign
+Overhauled all three main quiz components in [`src/components/quiz/`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/components/quiz/) to match the high-contrast mockups:
+*   **[`QuizSetup.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/components/quiz/QuizSetup.jsx)**: Implemented flat, rectangular domain selectors, boxed question counts, and timer calibrations.
+*   **[`QuizView.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/components/quiz/QuizView.jsx)**: Integrated a monospaced digital score ticker (`00000`), linear progress bar, square action containers, a 2x2 options grid with left-separated letter prefixes, and bottom status indicator grids.
+*   **[`QuizResults.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/components/quiz/QuizResults.jsx)**: Rebuilt scorecards, monospaced average pace metrics, Flame streak records, Rank Tier badges (SS, S, A, B, C), and solution review cards.
+*   **Orchestration & Database Logging**: Wired the engine in [`InteractiveQuiz.jsx`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/src/components/InteractiveQuiz.jsx) to support local auto-save recovery and commit completed attempts to the Supabase `quiz_attempts` table.
+
+### 32.3 Universal R2 Synchronizer
+*   Created [`scripts/sync_books_to_r2.mjs`](file:///K:/H%20DRIVE/Quantum%20Climb/APPS/VeerNXT/VeerNXT%20Main%20Repo/VeerNXT%20APP/veernxt-web/scripts/sync_books_to_r2.mjs) which handles:
+    *   **Group A (Ingestion)**: Automatically generates a stable UUID `resource_id`, inserts the canonical metadata entry in Supabase, and uploads files to R2.
+    *   **Group B (Consolidation)**: Identifies duplicates, updates database records to point to a single lowest-UUID canonical R2 folder, and migrates to blocks format.
+    *   **Standard Books**: Uploads standard blocks chapters and updates image URLs to Cloudflare R2 path URLs.
+
+### 32.4 Ingestion Tool for Structured PYPs (Free/₹0 Cost)
+*   **`scripts/ingest_structured_pyps.mjs`** (new): Created a script to read all 956 successfully structured PYP JSONs from the local folder.
+*   It automatically converts standard options arrays into database option objects (`{ A: "...", B: "..." }`) and performs bulk-inserts into the Supabase `quizzes` and `questions` tables.
+*   Uses stable hash-based UUIDs from filenames to ensure 100% idempotent runs without creating duplicate quizzes.
+
+### 32.5 Master Book Cloning
+*   **`scripts/duplicate_enriched_books.mjs`** (new): Clones completed, enriched master GK books (`Cluster_014_SSC-GK-*` subjects) into target duplicate clusters (`Cluster_047` and `Cluster_075`), updating the internal `book_id` and metadata properties. This saves over 60% of the Gemini API costs.
+
+---
+
+### 33.0 🎯 Next session starts here
+
+1.  **Ingest Structured PYPs**: Have Claude run the free database ingestion tool:
+    ```bash
+    node scripts/ingest_structured_pyps.mjs --execute
+    ```
+2.  **Top up Prepay / Switch to Post-Pay Billing**: Link your Google AI Studio project to your active GCP billing account, or replace your API keys in `.env` with a standard post-pay GCP key.
+3.  **Complete GK Enrichment & Sync**:
+    Once billing is ready, have Claude run:
+    ```bash
+    node scripts/enrich_split_books.mjs
+    node scripts/duplicate_enriched_books.mjs
+    node scripts/sync_books_to_r2.mjs --execute
+    ```
+
+---
+
+## 34. New session (numbered to avoid colliding with §32/§33 above, written by a parallel session — see the note at the top of this file) — §31.8's two tasks done: thumbnail art wired in, employer portal split into its own dedicated pages
+
+### 34.1 Task 1 — real thumbnail art wired into the colour-block system
+
+Scoped first (hadn't been established anywhere): thumbnails are **pure CSS colour-block gradients today, no images anywhere** — `ExamThumbnail.jsx`'s `lg`/`sm` variants and `ExamContentPreview.jsx`'s subject-tile grid both render a `linear-gradient` keyed off `src/lib/thumbnailTaxonomy.js`'s 18-subject/8-colour-family taxonomy (`getFamilyHex()`), not an image file. The old deleted assets (`bg_guide/intro/mock/precis/pyq.jpg`, `thumbnils/thumbnil royal {blue,green,red}.png`) were never wired into that taxonomy at all — confirmed via repo-wide grep, zero references in any rendering path.
+
+The 15 new PNGs the user dropped at `public/thumbnails/` map onto the **subject** taxonomy (English, Reasoning, Mathematics, etc.), not the old 5-category or 3-colour systems — filenames read as subject names. Added `SUBJECT_THUMBNAIL_IMAGE` (a subject-key → filename map) and `getSubjectThumbnailImage()` to `thumbnailTaxonomy.js`, then used it in both `ExamThumbnail.jsx` (`lg` variant) and `ExamContentPreview.jsx` (subject-tile grid): where art exists, it's layered under the existing colour gradient (kept as a semi-transparent scrim so the subject/exam-name/badge text stays legible on top of the photo) instead of replacing the gradient outright; where it doesn't, the plain gradient still renders exactly as before. **3 of 18 subjects have no art yet** (`general_studies`, `general_science`, `information_technology`) plus the neutral default — those three plus any exam using the default fallback still show colour-only, same as before this change, no regression.
+
+Verified compiling via the Vite dev server (all four touched modules transform cleanly, including a direct fetch of `English.png` returning 200). Old unused assets removed. Committed and pushed (`fb68bc5a`).
+
+### 34.2 Task 2 — employer onboarding/dashboard split out of Dashboard.jsx, restyled to match the candidate side
+
+Scoped first: there was no dedicated employer onboarding or dashboard file at all — both lived as `isEmployer`-gated branches inside the same 1,924-line `Dashboard.jsx` the candidate view uses (`renderEmployerOnboarding()`/`renderEmployerDashboard()`). The onboarding flow was already reasonably built (reuses the same `GuidedStep` component candidate profiling uses); the dashboard was the weak point — styled entirely via ad-hoc inline hex colors, no reuse of the candidate side's `welcome-hero`/`welcome-stat-row` conventions, a flat 5-`Card` grid instead of a compact stat row.
+
+**Found and explicitly flagged before writing code, not silently worked around**: the employer dashboard's "Active Postings" stat is a platform-wide `SELECT count(*) FROM jobs`, not scoped to that employer — there's no `employer_id` column on `jobs` and no employer job-posting flow anywhere in the codebase. Asked the user how deep to go; **explicit decision: visual/structural parity only this pass, don't touch the data-scoping gap** (a separate, bigger task if ever picked up). Also asked whether to split into dedicated files vs. leave the `isEmployer` gating in place; **explicit decision: split**, matching the pattern already used for admin (its own shell/pages, not folded into a candidate file).
+
+Built:
+- **`src/pages/EmployerOnboarding.jsx`** (new) — the existing multi-step `GuidedStep` flow, now self-contained with its own session check and a redirect to `/employer/dashboard` once `company_name` exists (previously handled by `Dashboard.jsx`'s shared fetch).
+- **`src/pages/EmployerDashboard.jsx`** (new) — rebuilt to the candidate "command center" pattern: one hero with the stat row built directly into it (Active Postings/Shortlisted/Active Chats/Network/Verified) instead of a separate `Card` grid below, and the Veteran Talent Spotlight list now tags each candidate's service branch with a colour pill (`BranchTag`, reusing `careerTrack.js`'s `hexToRgba()` helper but with its **own** branch → colour map — Army/Navy/Air Force are a different axis from `CAREER_TRACK_META`'s civilian job sectors, so it doesn't reuse that map directly, just the colour-mixing utility).
+- **`src/pages/Dashboard.jsx`**: employer sessions now hit a single `if (isEmployer) return <Navigate to="/employer/dashboard" replace />;` instead of rendering their UI inline. ~780 lines of now-dead employer-only code removed (state, `handleEmployerOnboardingSubmit`, both render functions, the employer branches of the shared edit-profile modal and its save/open handlers) along with imports that became unused as a result (`GuidedStep`, `ChoiceGroup`, `getEmployerInsights`, `useLocalDraft`, `Select`, plus a few pre-existing-but-now-exposed lint issues fixed in passing — an unused `axios` import, two `let x = []; try {...} catch { x = []; }` patterns simplified, one unused destructured `data`).
+- **`src/App.jsx`**: added `/employer/onboarding` and `/employer/dashboard` routes (both `skipProfilingCheck`, matching the `/profiling`/`/subscribe` precedent, since `profiling_completed` doesn't apply to `employer_profiles`).
+
+**One real bug caught mid-refactor, not by inspection**: an employer-draft-autosave `useEffect` referencing `employerFormData`/`employerStep`/`employerDraftPrompt` survived an earlier deletion pass (those three were removed as state but the effect reading them wasn't) — would have thrown `ReferenceError` on every candidate dashboard render. Caught by running `eslint` immediately after the edit (`no-undef`), not by re-reading the diff — worth remembering as a reason to always re-lint after a multi-step deletion, not just visually re-check the result.
+
+Verified all four touched files compile via the Vite dev server (200 on every module fetch). **Not verified in an actual browser** — same tooling gap as §34.1 (no `chromium-cli`/Playwright in this environment) — a manual click-through of both new employer routes is still owed before calling this fully done.
+
+`src/App.jsx` and `src/components/ExamContentPreview.jsx` both had the parallel session's in-progress Quiz Center changes sitting in the working tree the whole session (§32/§33 above — not this session's work, never touched). Staged only this session's own hunks in each via a manually-constructed patch (`git apply --cached`) rather than the whole file, so the other session's uncommitted work wasn't swept into this commit. Committed and pushed (`06863c65`).
+
+### 34.3 Still open: the 43 Group A resources from §31.5 have no exam linkage (deferred a second time)
+
+Restating §31.6 since it's now been deferred twice and is easy to lose track of: 43 `resources_v2` rows inserted this session with real content live on R2, but `exam_name: 'General Exam'` (a placeholder) means **zero of them can surface as a candidate for any exam** via `scripts/map_exam_resources_gemini.mjs`'s existing matching logic, even on a full re-run. Needs per-title classification to a real `exam_name`/region (some titles unambiguous — `Gujarat_SI`, `RRB COMPLETE GK` — others genuinely not, e.g. `BASE BOOK`), then a narrow re-run of the mapping script for just the newly-affected exams. Still not started; still the user's explicit call to hold off, not an oversight.
+
+### 34.4 🎯 Next session starts here
+
+No explicit new task from the user as of this writing. Real candidates to raise, in case the next session opens without direction: §34.3 above (deferred twice now), and a live browser verification pass for this session's and §31's work (only compile-checked via the Vite dev server, never actually clicked through, since this environment has neither `chromium-cli` nor Playwright installed).
+
+### 34.5 ⚠️ Flagged, not resolved — a real collision risk with the parallel session's next steps
+
+Discovered while writing this section, not investigated further (out of scope for this session to touch another session's uncommitted work): §32.3/§33.0 above (written by a different, parallel session working on Quiz Engine features) describe a `scripts/sync_books_to_r2.mjs` doing the **same Group A (new-resource ingestion) / Group B (duplicate-row consolidation) job** this session already did via the extended `scripts/migrate_resources_to_blocks.mjs` (§31.5) — down to the same "lowest-UUID canonical folder" consolidation rule. §33.0 lists `node scripts/sync_books_to_r2.mjs --execute` as a **still-pending** next step for that other session.
+
+By the time anyone runs that command, most of the same 43 Group A / 7 Group B titles this session processed already have real canonical `resources_v2` rows (format `'blocks'`, live on R2 — see §31.5, verified). If `sync_books_to_r2.mjs`'s own title-matching doesn't already account for that (i.e. doesn't skip titles that are already canonical the way `migrate_resources_to_blocks.mjs` does), running it could re-process the same titles a second time under a second, independently-generated UUID — creating duplicate `resources_v2` rows or orphaning the URLs this session already verified live. **Before running `sync_books_to_r2.mjs --execute`, whoever picks this up should read both this section and §31.5/§31.6, and check whether that script's canonical-detection logic actually accounts for rows `migrate_resources_to_blocks.mjs` already created this session** — not assumed safe just because the other session's own notes describe it as working.
+
