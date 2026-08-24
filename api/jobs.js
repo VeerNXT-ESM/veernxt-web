@@ -45,6 +45,7 @@ export default async function handler(req, res) {
       // conservative pass); the frontend must degrade gracefully when null.
       examId: job.lc_exam_id || null,
       examName: job.lc_exams?.name || null,
+      careerTrack: job.career_track || null,
       publishedOn: job.published_on,
       lastDate: job.last_date,
       vacancies: job.vacancies,

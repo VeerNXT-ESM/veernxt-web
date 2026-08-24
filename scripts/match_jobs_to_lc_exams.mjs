@@ -162,7 +162,20 @@ async function main() {
     // well-scraped single-exam bodies like a specific PSC or bank).
     if (bodyCandidates.length === 1) {
       const only = bodyCandidates[0];
-      results.push({ job_id: job.job_id, lc_exam_id: only.e.id, title: job.title, matchedName: only.e.name, bodySim: only.sim, nameSim: jaccardSim(nameTok, only.e.nameTok), method: 'unique-body' });
+      const nameSim = jaccardSim(nameTok, only.e.nameTok);
+      // A unique conducting-body match is usually enough on its own, but if
+      // the scraped post name shares literally zero tokens with the matched
+      // exam name -- despite having enough tokens to expect some overlap if
+      // it really were the same post -- this is more likely a body with
+      // only one *catalogued* exam absorbing every other post from that
+      // body (e.g. a bank's sole "Credit Officer" entry catching its
+      // "Junior Associate" and "Office Assistant" postings too). Leave
+      // those unmatched rather than accept a groundless link.
+      if (nameTok.length >= 1 && nameSim === 0) {
+        unmatched.push({ job, reason: 'unique-body-no-name-overlap' });
+        continue;
+      }
+      results.push({ job_id: job.job_id, lc_exam_id: only.e.id, title: job.title, matchedName: only.e.name, bodySim: only.sim, nameSim, method: 'unique-body' });
       continue;
     }
 

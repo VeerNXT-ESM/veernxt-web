@@ -124,12 +124,16 @@ async function main() {
 
   console.log(`Documents to ensure lc_resources rows for: ${docs.length}`);
 
+  // Titles used to carry a "[shared] " prefix purely so this lookup could
+  // recognize its own prior output -- stripped from the data on 2026-08-24
+  // since it had no meaning to admins browsing the Resource Library. Now
+  // matches on the plain title directly.
   const existingByTitle = new Map(existingLcResources.map((r) => [r.title, r]));
   const resourcesToCreate = [];
   const resourceIdByDoc = new Map();
   for (const doc of docs) {
     const key = `clean::${doc.title}::${doc.category}`;
-    const existing = existingByTitle.get(`[shared] ${doc.title}`);
+    const existing = existingByTitle.get(doc.title);
     if (existing) { resourceIdByDoc.set(key, existing.id); continue; }
     resourcesToCreate.push(doc);
   }
@@ -148,7 +152,7 @@ async function main() {
   for (const doc of resourcesToCreate) {
     const key = `clean::${doc.title}::${doc.category}`;
     const { data, error } = await supabase.from('lc_resources').insert({
-      title: `[shared] ${doc.title}`,
+      title: doc.title,
       resource_type: doc.category,
       subject_id: subjectNameToId.get(doc.subjectName),
       storage_base_url: doc.rep.storage_base_url,

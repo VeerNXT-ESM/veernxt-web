@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { PAGE_SIZE, RESOURCE_TYPES, useDebounced, StatusBadge } from './lcShared';
-import { Search, Plus, ChevronLeft, ChevronRight, X, ShieldAlert } from 'lucide-react';
+import { Search, Plus, ChevronLeft, ChevronRight, X, ShieldAlert, Pencil, Check } from 'lucide-react';
 
 const ResourcesTab = ({ subjects }) => {
   const [search, setSearch] = useState('');
@@ -123,7 +123,14 @@ const ResourcesTab = ({ subjects }) => {
         )}
       </div>
 
-      {detailResource && <ResourceDetailDrawer resource={detailResource} onClose={() => setDetailResource(null)} />}
+      {detailResource && (
+        <ResourceDetailDrawer
+          resource={detailResource}
+          subjects={subjects}
+          onClose={() => setDetailResource(null)}
+          onUpdated={(patch) => { setDetailResource((r) => ({ ...r, ...patch })); fetchResources(); }}
+        />
+      )}
       {showCreateModal && (
         <CreateResourceModal
           subjects={subjects}
@@ -136,9 +143,14 @@ const ResourcesTab = ({ subjects }) => {
   );
 };
 
-const ResourceDetailDrawer = ({ resource, onClose }) => {
+const ResourceDetailDrawer = ({ resource, subjects, onClose, onUpdated }) => {
   const [exams, setExams] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [editing, setEditing] = useState(false);
+  const [title, setTitle] = useState(resource.title);
+  const [resourceType, setResourceType] = useState(resource.resource_type);
+  const [subjectId, setSubjectId] = useState(resource.subject?.id || '');
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -156,16 +168,68 @@ const ResourceDetailDrawer = ({ resource, onClose }) => {
     })();
   }, [resource.id]);
 
+  const startEditing = () => {
+    setTitle(resource.title);
+    setResourceType(resource.resource_type);
+    setSubjectId(resource.subject?.id || '');
+    setEditing(true);
+  };
+
+  const handleSave = async () => {
+    if (!title.trim()) return;
+    setSaving(true);
+    try {
+      const patch = { title: title.trim(), resource_type: resourceType, subject_id: subjectId || null };
+      const { error } = await supabase.from('lc_resources').update(patch).eq('id', resource.id);
+      if (error) throw error;
+      onUpdated({ ...patch, subject: subjects.find((s) => s.id === subjectId) || null });
+      setEditing(false);
+    } catch (err) {
+      alert('Failed to save: ' + err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
   return (
     <div className="lc-drawer-backdrop" onClick={onClose}>
       <div className="lc-drawer-panel" onClick={(e) => e.stopPropagation()}>
-        <div className="lc-drawer-header">
-          <div>
-            <h3>{resource.title}</h3>
-            <p>{resource.resource_type} · {resource.subject?.name || 'No subject'}</p>
+        {editing ? (
+          <div className="lc-drawer-header">
+            <div style={{ width: '100%' }}>
+              <div className="lc-input-group" style={{ marginBottom: '0.6rem' }}>
+                <label>Title</label>
+                <input type="text" autoFocus value={title} onChange={(e) => setTitle(e.target.value)} />
+              </div>
+              <div style={{ display: 'flex', gap: '0.75rem' }}>
+                <div className="lc-input-group" style={{ flex: 1 }}>
+                  <label>Resource Type</label>
+                  <Select value={resourceType} onChange={(e) => setResourceType(e.target.value)} options={RESOURCE_TYPES.map((t) => ({ value: t, label: t }))} />
+                </div>
+                <div className="lc-input-group" style={{ flex: 1 }}>
+                  <label>Subject</label>
+                  <Select searchable value={subjectId} onChange={(e) => setSubjectId(e.target.value)} options={[{ value: '', label: 'No subject' }, ...subjects.map((s) => ({ value: s.id, label: s.name }))]} />
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.85rem' }}>
+                <button className="lc-btn primary" onClick={handleSave} disabled={saving || !title.trim()}><Check size={14} /> {saving ? 'Saving…' : 'Save'}</button>
+                <button className="lc-btn" onClick={() => setEditing(false)} disabled={saving}>Cancel</button>
+              </div>
+            </div>
+            <button className="lc-close-btn" onClick={onClose}><X size={20} /></button>
           </div>
-          <button className="lc-close-btn" onClick={onClose}><X size={20} /></button>
-        </div>
+        ) : (
+          <div className="lc-drawer-header">
+            <div>
+              <h3>{resource.title}</h3>
+              <p>{resource.resource_type} · {resource.subject?.name || 'No subject'}</p>
+            </div>
+            <div style={{ display: 'flex', gap: '0.4rem' }}>
+              <button className="lc-icon-btn" title="Edit" onClick={startEditing}><Pencil size={14} /></button>
+              <button className="lc-close-btn" onClick={onClose}><X size={20} /></button>
+            </div>
+          </div>
+        )}
         <div className="lc-drawer-body">
           <div className="lc-drawer-section">
             <h4>Metadata</h4>
