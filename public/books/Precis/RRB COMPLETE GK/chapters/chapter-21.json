@@ -1,0 +1,103 @@
+{
+  "id": "82vwfqw",
+  "title": "8. Time Calculation",
+  "order": 21,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5bp8ebo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "IDL Meridian",
+          "value": "180°",
+          "icon": "globe"
+        },
+        {
+          "label": "Global Time Zones",
+          "value": "24",
+          "icon": "clock"
+        },
+        {
+          "label": "Earth Rotation Rate",
+          "value": "15°/hr",
+          "icon": "check"
+        },
+        {
+          "label": "IST Standard",
+          "value": "82.5° E",
+          "icon": "award"
+        }
+      ],
+      "id": "992c1cv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "International Date Line",
+      "id": "eehhxmh"
+    },
+    {
+      "type": "paragraph",
+      "id": "jsh5rcv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Prime Meridian",
+        "International Date Line"
+      ],
+      "rows": [
+        [
+          "Longitude",
+          "0° Meridian",
+          "180° Meridian"
+        ],
+        [
+          "Function",
+          "Standard reference line for global time (GMT/UTC)",
+          "Boundary determining change of calendar date"
+        ],
+        [
+          "Path Geometry",
+          "Straight line from North Pole to South Pole",
+          "Zigzagged line in the ocean to avoid splitting land territories"
+        ]
+      ],
+      "id": "zbxnj1i"
+    },
+    {
+      "id": "1kd243h",
+      "type": "heading",
+      "level": 2,
+      "content": "International Date Line"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crossing the International Date Line from West to East gains a day, while crossing from East to West loses a day.",
+        "The 82.5° E IST meridian passes through five Indian states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
+        "The IDL is not a straight line; it zigzags to avoid landmasses and prevent different dates within the same island group or country."
+      ],
+      "id": "xm8pj8h"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth rotates 360° in 24 hours, meaning it moves 15° every hour or 1° every 4 minutes.",
+        "The International Date Line (IDL) is situated approximately along the 180° longitude in the Pacific Ocean.",
+        "Crossing the International Date Line changes the calendar date by exactly one day.",
+        "Indian Standard Time (IST) is derived from 82.5° E longitude passing near Mirzapur, maintaining UTC+05:30."
+      ],
+      "id": "3o4ak3i"
+    },
+    {
+      "type": "paragraph",
+      "id": "uvdxtgd"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,281 @@
+{
+  "id": "t2ij8ip",
+  "title": "Chapter 2: Force and Work",
+  "order": 51,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "r0myuj9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Laws of Motion",
+          "value": "3 Laws",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Force",
+          "value": "Newton (N)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Work",
+          "value": "Joule (J)",
+          "icon": "check"
+        },
+        {
+          "label": "1 Horsepower",
+          "value": "746 Watts",
+          "icon": "info"
+        }
+      ],
+      "id": "g2qe0yw"
+    },
+    {
+      "id": "3jffa8h",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Force"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Force is a vector quantity defined as the external agency that changes or tends to change the state of rest or uniform motion of a body.",
+        "Newton's First Law introduces the concept of inertia, while the Second Law provides the quantitative formula for force (F = ma).",
+        "Work is a scalar quantity calculated as the dot product of force and displacement (W = F × s × cos θ).",
+        "Power is defined as the rate of doing work or energy consumption per unit time (P = W / t).",
+        "Work done on an object is zero whenever the applied force is perpendicular to displacement or when total displacement is zero."
+      ],
+      "id": "v33atth"
+    },
+    {
+      "type": "paragraph",
+      "id": "jatqice"
+    },
+    {
+      "type": "paragraph",
+      "id": "d0s8smz"
+    },
+    {
+      "type": "paragraph",
+      "id": "qmsf66h"
+    },
+    {
+      "type": "paragraph",
+      "id": "zsdc9t5"
+    },
+    {
+      "id": "gok3am2",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Effects of Force"
+    },
+    {
+      "type": "paragraph",
+      "id": "eg8ou5k"
+    },
+    {
+      "type": "paragraph",
+      "id": "fb44h6j"
+    },
+    {
+      "type": "paragraph",
+      "id": "6i5vb7a"
+    },
+    {
+      "type": "paragraph",
+      "id": "iel0gu8"
+    },
+    {
+      "id": "2hzmadb",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Force"
+    },
+    {
+      "id": "zb3hoh7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t1d5vam",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Newton’s Laws of Motion"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Work is said to be done by a force when the point of application of the force moves through a distance in the direction of the force.",
+      "id": "ge50lfb"
+    },
+    {
+      "type": "paragraph",
+      "id": "csyz3ng"
+    },
+    {
+      "type": "paragraph",
+      "id": "5znfdf3"
+    },
+    {
+      "type": "paragraph",
+      "id": "bzyo8p0"
+    },
+    {
+      "type": "paragraph",
+      "id": "eyzhgu4"
+    },
+    {
+      "type": "paragraph",
+      "id": "edqx2r0"
+    },
+    {
+      "type": "paragraph",
+      "id": "2vwsb3w"
+    },
+    {
+      "id": "c6lfqhp",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Meaning of Work"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Work",
+        "Angle (θ) between F and S",
+        "Common Example"
+      ],
+      "rows": [
+        [
+          "Positive Work",
+          "θ < 90° (cos θ > 0)",
+          "A body falling freely towards Earth under gravity"
+        ],
+        [
+          "Negative Work",
+          "θ > 90° (cos θ < 0)",
+          "Work done by frictional force against the direction of motion"
+        ],
+        [
+          "Zero Work",
+          "θ = 90° or s = 0",
+          "Pushing a rigid wall or carrying a load horizontally"
+        ]
+      ],
+      "id": "fjt8g5i"
+    },
+    {
+      "type": "paragraph",
+      "id": "446626r"
+    },
+    {
+      "id": "ufaoji2",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Formula of Work"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "04v69mf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9gvuswm"
+    },
+    {
+      "id": "qgwfok1",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Work"
+    },
+    {
+      "type": "paragraph",
+      "id": "t66bpj6"
+    },
+    {
+      "type": "paragraph",
+      "id": "dn0gjjc"
+    },
+    {
+      "type": "paragraph",
+      "id": "0j898qh"
+    },
+    {
+      "id": "n0cekcn",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "clah6lw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Work done in moving a body along a complete circular path is ALWAYS zero because the displacement is zero.",
+        "Unit Conversions Frequently Asked: 1 Joule = 10^7 Ergs, and 1 Horsepower (HP) = 746 Watts.",
+        "When a coolie carries luggage on his head while walking on a flat horizontal platform, work done against gravity is ZERO (θ = 90°)."
+      ],
+      "id": "znnujon"
+    },
+    {
+      "type": "paragraph",
+      "id": "10vghwq"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ec1k3v"
+    },
+    {
+      "id": "yk2p2d4",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "6a11zr0"
+    },
+    {
+      "type": "paragraph",
+      "id": "1esd03q"
+    },
+    {
+      "type": "paragraph",
+      "id": "k1ggwmj"
+    },
+    {
+      "type": "paragraph",
+      "id": "8513og6"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,95 @@
+{
+  "id": "s1zfcs4",
+  "title": "2. Appointment and Oath",
+  "order": 461,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lq3aqcy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor is appointed by the President by warrant under his hand and seal.",
+      "id": "p54xbs7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Office",
+        "Appointing Authority",
+        "Oath Administered By"
+      ],
+      "rows": [
+        [
+          "President of India",
+          "Elected by Electoral College",
+          "Chief Justice of India"
+        ],
+        [
+          "Governor of a State",
+          "President of India",
+          "Chief Justice of High Court"
+        ],
+        [
+          "Prime Minister",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Chief Justice of India",
+          "President of India",
+          "President of India"
+        ]
+      ],
+      "id": "4dhhkcz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "President's Oath",
+          "value": "Article 60",
+          "icon": "book"
+        },
+        {
+          "label": "Governor's Appointment",
+          "value": "Article 155",
+          "icon": "award"
+        },
+        {
+          "label": "Governor's Oath",
+          "value": "Article 159",
+          "icon": "check"
+        },
+        {
+          "label": "PM's Appointment",
+          "value": "Article 75",
+          "icon": "info"
+        }
+      ],
+      "id": "m6tdn39"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently Tested: The Oath of the Governor is administered by the Chief Justice of the High Court, NOT the President of India.",
+        "In the absence of the Chief Justice of India, the senior-most available judge of the Supreme Court administers the oath to the President.",
+        "The Governor is neither directly elected by the people nor indirectly elected by an electoral college; he is a central nominee."
+      ],
+      "id": "e4y3as8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President of India takes an oath to preserve, protect, and defend the Constitution, administered by the Chief Justice of India.",
+        "The Governor of a State is appointed by the President by warrant under his hand and seal.",
+        "The Oath of office for the Governor is administered by the Chief Justice of the concerned High Court.",
+        "The Prime Minister is appointed by the President under Article 75, and other ministers are appointed on the advice of the Prime Minister.",
+        "Judges of the Supreme Court and High Courts are appointed by the President after consultation with the judiciary."
+      ],
+      "id": "hz07wb7"
+    }
+  ],
+  "enriched": true
+}

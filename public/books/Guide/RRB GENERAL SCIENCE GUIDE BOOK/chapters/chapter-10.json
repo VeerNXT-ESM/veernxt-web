@@ -1,0 +1,410 @@
+{
+  "id": "sfwgrt6",
+  "title": "Chapter 10: Acids, Bases and Salts",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "h532c3h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "pH Scale Range",
+          "value": "0 - 14",
+          "icon": "info"
+        },
+        {
+          "label": "Neutral pH",
+          "value": "7.0",
+          "icon": "check"
+        },
+        {
+          "label": "Blood pH Range",
+          "value": "7.35 - 7.45",
+          "icon": "award"
+        },
+        {
+          "label": "Key Reaction",
+          "value": "Acid + Base → Salt + Water",
+          "icon": "book"
+        }
+      ],
+      "id": "d32hqs9"
+    },
+    {
+      "id": "b14hvxn",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Acids"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Acids produce hydrogen ions (H+) in aqueous solution and turn blue litmus red.",
+        "Bases produce hydroxide ions (OH-) in aqueous solution, feel soapy to touch, and turn red litmus blue.",
+        "Alkalis are water-soluble bases such as Sodium Hydroxide (NaOH) and Potassium Hydroxide (KOH).",
+        "The pH scale measures the hydrogen ion concentration; values less than 7 represent acidic solutions, while values greater than 7 represent basic solutions.",
+        "Neutralization is the reaction between an acid and a base to form salt and water, accompanied by evolution of heat."
+      ],
+      "id": "lmg7t0y"
+    },
+    {
+      "type": "paragraph",
+      "id": "hv3nwab"
+    },
+    {
+      "type": "paragraph",
+      "id": "sew2zh9"
+    },
+    {
+      "type": "paragraph",
+      "id": "3wowsfu"
+    },
+    {
+      "type": "paragraph",
+      "id": "md5lkw1"
+    },
+    {
+      "type": "paragraph",
+      "id": "wtj9khm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0zu0gu9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xim3qpo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m0pump8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iuirekp"
+    },
+    {
+      "id": "3l8ai2n",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Bases"
+    },
+    {
+      "type": "paragraph",
+      "id": "8apmyq3"
+    },
+    {
+      "type": "paragraph",
+      "id": "910ehzd"
+    },
+    {
+      "type": "paragraph",
+      "id": "42s62mb"
+    },
+    {
+      "type": "paragraph",
+      "id": "e9pdqq2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9o0ir0l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jydtezr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4czg1b1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Neutralization reaction is the chemical reaction between an acid and a base to produce salt and water.",
+      "id": "ojupiyf"
+    },
+    {
+      "id": "onzz9fn",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Alkalis"
+    },
+    {
+      "type": "paragraph",
+      "id": "s1zwmvp"
+    },
+    {
+      "id": "gihseu0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Properties of Acids and Bases"
+    },
+    {
+      "id": "fp3nzxt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iaar68m",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Strength of Acids and Bases"
+    },
+    {
+      "type": "paragraph",
+      "id": "d0m3xav"
+    },
+    {
+      "type": "paragraph",
+      "id": "gxstoym"
+    },
+    {
+      "type": "paragraph",
+      "id": "mt3rc4q"
+    },
+    {
+      "type": "paragraph",
+      "id": "szrhbbk"
+    },
+    {
+      "id": "8wfbn1x",
+      "type": "heading",
+      "level": 2,
+      "content": "6. pH Scale"
+    },
+    {
+      "type": "paragraph",
+      "id": "rosjvrv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Acids",
+        "Bases"
+      ],
+      "rows": [
+        [
+          "Taste",
+          "Sour",
+          "Bitter"
+        ],
+        [
+          "Ions Produced in Water",
+          "Hydrogen ions (H+) / Hydronium (H3O+)",
+          "Hydroxide ions (OH-)"
+        ],
+        [
+          "Litmus Paper Test",
+          "Turns blue litmus red",
+          "Turns red litmus blue"
+        ],
+        [
+          "Phenolphthalein Test",
+          "Remains colorless",
+          "Turns bright pink"
+        ],
+        [
+          "Texture / Touch",
+          "Corrosive, burning sensation",
+          "Slippery / Soapy to touch"
+        ]
+      ],
+      "id": "8y9jvdc"
+    },
+    {
+      "type": "paragraph",
+      "id": "4nbvymx"
+    },
+    {
+      "type": "paragraph",
+      "id": "s4j5hdi"
+    },
+    {
+      "type": "paragraph",
+      "id": "0yqwdmb"
+    },
+    {
+      "id": "b27j69n",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Indicators"
+    },
+    {
+      "id": "y50y1qs",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8zkna21",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Neutralization Reaction"
+    },
+    {
+      "type": "paragraph",
+      "id": "gatuxmt"
+    },
+    {
+      "type": "paragraph",
+      "id": "hxnk7mf"
+    },
+    {
+      "type": "paragraph",
+      "id": "jdnow2u"
+    },
+    {
+      "id": "s6ki9uw",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Salts"
+    },
+    {
+      "type": "paragraph",
+      "id": "r3ot3cz"
+    },
+    {
+      "type": "paragraph",
+      "id": "vvn94o5"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pa6v8i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indicator Color Changes: Phenolphthalein turns pink in basic solutions and remains colorless in acidic solutions; Methyl orange turns red in acid and yellow in base.",
+        "Plaster of Paris (CaSO4·½H2O) hardens into Gypsum (CaSO4·2H2O) upon mixing with water.",
+        "Strength of acids and bases depends on the degree of ionization in water, not merely on concentration.",
+        "Antacids like Milk of Magnesia [Mg(OH)2] are weak bases used to neutralize excess stomach acidity."
+      ],
+      "id": "gzrlmau"
+    },
+    {
+      "id": "e6frfys",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Uses of Acids, Bases and Salts"
+    },
+    {
+      "type": "paragraph",
+      "id": "mzja076"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvhrtnr"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ozf5ca"
+    },
+    {
+      "id": "scpz49q",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "80uzew7"
+    },
+    {
+      "type": "paragraph",
+      "id": "17wxdv9"
+    },
+    {
+      "type": "paragraph",
+      "id": "wfnar1c"
+    },
+    {
+      "type": "paragraph",
+      "id": "cgcb3ha"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,142 @@
+{
+  "id": "oxkhbe4",
+  "title": "10. Earthquake Zones of India",
+  "order": 100,
+  "blocks": [
+    {
+      "id": "pa7jhyd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Nearly 59 percent of India's landmass is vulnerable to earthquakes of moderate to high intensity, making systematic seismic zonation vital for structural engineering and disaster mitigation.",
+      "id": "hwkvqe1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Seismic Zone",
+        "Risk Level",
+        "Zone Factor (PGA)",
+        "Representative Regions"
+      ],
+      "rows": [
+        [
+          "Zone V",
+          "Very High Risk",
+          "0.36",
+          "Entire North-East, Rann of Kutch, Parts of J&K, HP, Uttarakhand, Andaman & Nicobar"
+        ],
+        [
+          "Zone IV",
+          "High Risk",
+          "0.24",
+          "Delhi-NCR, Sikkim, Northern Bihar, Northern UP, Jammu & Kashmir parts"
+        ],
+        [
+          "Zone III",
+          "Moderate Risk",
+          "0.16",
+          "Kerala, Goa, Lakshadweep, Coastal Andhra Pradesh, Western Ghats, Kolkata"
+        ],
+        [
+          "Zone II",
+          "Low Risk",
+          "0.10",
+          "Parts of Rajasthan, Madhya Pradesh, Maharashtra, Karnataka, Tamil Nadu"
+        ]
+      ],
+      "id": "h0144ec"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Seismic Zones",
+          "value": "4 Active Zones",
+          "icon": "info"
+        },
+        {
+          "label": "Vulnerable Landmass",
+          "value": "~59%",
+          "icon": "check"
+        },
+        {
+          "label": "Highest Risk Category",
+          "value": "Zone V",
+          "icon": "award"
+        },
+        {
+          "label": "Standard Agency",
+          "value": "BIS (IS 1893)",
+          "icon": "book"
+        }
+      ],
+      "id": "ombme6a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Zone I does not exist in the current seismic zoning map of India; Zone II is the lowest hazard zone.",
+        "Delhi-NCR falls under Seismic Zone IV (High Risk), whereas the North-East region and Rann of Kutch fall under Zone V (Very High Risk).",
+        "Questions often test the seismic vulnerability of Peninsular India, highlighting major historic intraplate earthquakes like Latur (1993) and Koyna (1967)."
+      ],
+      "id": "t7av9vc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Bureau of Indian Standards (BIS) classifies India into four seismic hazard zones: Zone II, Zone III, Zone IV, and Zone V.",
+        "Zone I was merged into Zone II in recent revisions, making Zone II the lowest seismic risk region in the country.",
+        "Approximately 59 percent of India's landmass is vulnerable to moderate to severe intensity earthquakes.",
+        "Zone V represents the highest seismicity zone and encompasses the entire North-Eastern region, parts of Jammu & Kashmir, Himachal Pradesh, Uttarakhand, the Rann of Kutch, and Andaman & Nicobar Islands.",
+        "Major fault lines along the Himalayan convergent plate boundary are responsible for high-magnitude intra-plate and inter-plate seismic activity."
+      ],
+      "id": "h2czw61"
+    }
+  ],
+  "enriched": true
+}

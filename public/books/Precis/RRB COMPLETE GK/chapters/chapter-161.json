@@ -1,0 +1,123 @@
+{
+  "id": "ngtrdm4",
+  "title": "7. Coral Reefs",
+  "order": 161,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "0kjjhdk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ideal Temp",
+          "value": "20°C - 21°C",
+          "icon": "info"
+        },
+        {
+          "label": "Salinity",
+          "value": "27‰ - 35‰",
+          "icon": "check"
+        },
+        {
+          "label": "Max Depth",
+          "value": "< 50 meters",
+          "icon": "clock"
+        },
+        {
+          "label": "Light Zone",
+          "value": "Photic Zone",
+          "icon": "award"
+        }
+      ],
+      "id": "kkrmpf5"
+    },
+    {
+      "id": "8cfh9m7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Conditions for Coral Growth",
+      "id": "z8vksnv"
+    },
+    {
+      "id": "hbnuofm",
+      "type": "heading",
+      "level": 2,
+      "content": "Conditions for Coral Growth"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Corals require shallow water conditions (depth less than 50m) to allow sufficient sunlight penetration for photosynthesis.",
+        "Optimal ocean temperature for tropical coral reef growth ranges strictly between 20°C and 21°C.",
+        "Moderate salinity between 27‰ and 35‰ is mandatory; extreme freshwater or hypersaline conditions are harmful.",
+        "Clear and sediment-free water is essential to prevent clogging of polyp feeding structures and ensure light transmission."
+      ],
+      "id": "dblu2kf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6ejrop5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nrcuhxj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "River estuaries and deltas do not support coral reefs due to high sediment accumulation and low salinity.",
+        "Reef-building corals are primarily confined to tropical oceans between 30°N and 30°S latitudes.",
+        "Symbiotic zooxanthellae algae provide food to coral polyps through photosynthesis in photic waters."
+      ],
+      "id": "bqfw35x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "au2345k"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6om4o6c"
+    }
+  ],
+  "enriched": true
+}

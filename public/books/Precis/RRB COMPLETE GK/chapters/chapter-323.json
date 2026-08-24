@@ -1,0 +1,118 @@
+{
+  "id": "y4qdw1z",
+  "title": "11. Money Bill (Article 110)",
+  "order": 323,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "u25gnb6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 110",
+          "icon": "book"
+        },
+        {
+          "label": "Final Authority",
+          "value": "Lok Sabha Speaker",
+          "icon": "check"
+        },
+        {
+          "label": "RS Return Limit",
+          "value": "14 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Prior Assent",
+          "value": "President",
+          "icon": "award"
+        }
+      ],
+      "id": "h0h8fjq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Bill shall be deemed to be a Money Bill if it contains only provisions dealing with all or any of the matters specified in Article 110.",
+      "id": "6ktag5j"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A Money Bill can only be introduced in the Lok Sabha and requires the prior recommendation of the President.",
+        "The Speaker of the Lok Sabha decides whether a bill is a Money Bill or not, and their decision is final.",
+        "The Rajya Sabha cannot reject or amend a Money Bill; it can only make recommendations within 14 days.",
+        "If the Rajya Sabha fails to return the bill within 14 days, it is deemed to have been passed by both Houses in the form passed by the Lok Sabha.",
+        "There is no constitutional provision for a joint sitting of both Houses of Parliament in the case of a Money Bill."
+      ],
+      "id": "4xm4eyp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Money Bill (Article 110)",
+        "Ordinary Bill"
+      ],
+      "rows": [
+        [
+          "House of Origin",
+          "Lok Sabha only",
+          "Either Lok Sabha or Rajya Sabha"
+        ],
+        [
+          "President's Prior Consent",
+          "Mandatory before introduction",
+          "Not required"
+        ],
+        [
+          "Rajya Sabha's Role",
+          "Cannot amend/reject; max delay 14 days",
+          "Can amend/reject; max delay 6 months"
+        ],
+        [
+          "Joint Sitting Provision",
+          "Not applicable",
+          "Applicable under Article 108"
+        ],
+        [
+          "Return by President",
+          "Cannot be returned for reconsideration",
+          "Can be returned for reconsideration"
+        ]
+      ],
+      "id": "svbrypy"
+    },
+    {
+      "type": "paragraph",
+      "id": "z9vqsmv"
+    },
+    {
+      "type": "paragraph",
+      "id": "iz5xj85"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Money Bills cannot be introduced in the Rajya Sabha or without the prior recommendation of the President.",
+        "The endorsement of the Speaker on a Money Bill is final and cannot be questioned in any court of law or in either House of Parliament.",
+        "Rajya Sabha's delay capacity for a Money Bill is strictly restricted to 14 days, after which it automatically passes.",
+        "Joint sitting under Article 108 is NOT applicable to Money Bills."
+      ],
+      "id": "w9vtd2q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lb5mcw0"
+    },
+    {
+      "type": "paragraph",
+      "id": "43btri3"
+    }
+  ],
+  "enriched": true
+}

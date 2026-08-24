@@ -1,0 +1,142 @@
+{
+  "id": "s96np0k",
+  "title": "Important Differences: DPSP vs Fundamental Rights",
+  "order": 292,
+  "blocks": [
+    {
+      "id": "jnihzsk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Fundamental Rights aim at establishing political democracy, while Directive Principles aim at establishing social and economic democracy.",
+      "id": "3gbjq98"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fundamental Rights (FR)",
+        "Directive Principles (DPSP)"
+      ],
+      "rows": [
+        [
+          "Constitutional Part",
+          "Part III (Articles 12 to 35)",
+          "Part IV (Articles 36 to 51)"
+        ],
+        [
+          "Primary Goal",
+          "Establish Political Democracy",
+          "Establish Social and Economic Welfare State"
+        ],
+        [
+          "Enforceability",
+          "Justiciable (Enforceable by courts)",
+          "Non-justiciable (Not enforceable by courts)"
+        ],
+        [
+          "Nature",
+          "Negative prohibitions on the State",
+          "Positive imperatives for the State"
+        ],
+        [
+          "Borrowed From",
+          "Constitution of USA (Bill of Rights)",
+          "Constitution of Ireland (Irish Constitution, 1937)"
+        ],
+        [
+          "Sanction Behind",
+          "Legal Sanctions",
+          "Moral and Political Sanctions"
+        ]
+      ],
+      "id": "e82qpy2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Fundamental Rights",
+          "value": "Part III (Art 12–35)",
+          "icon": "book"
+        },
+        {
+          "label": "Directive Principles",
+          "value": "Part IV (Art 36–51)",
+          "icon": "book"
+        },
+        {
+          "label": "FR Enforcement",
+          "value": "Justiciable",
+          "icon": "check"
+        },
+        {
+          "label": "DPSP Enforcement",
+          "value": "Non-Justiciable",
+          "icon": "info"
+        }
+      ],
+      "id": "ej25sky"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Justiciability Difference: FRs are directly enforceable in courts under Article 32 (Supreme Court) and Article 226 (High Court), whereas DPSPs are non-justiciable.",
+        "Landmark Cases: Champakam Dorairajan (1951) held that FRs prevail over DPSPs; Minerva Mills (1980) restored balance between Part III and Part IV.",
+        "Article 31C Exception: Laws enacted to implement Article 39(b) and 39(c) cannot be declared void on the ground of violating Article 14 or Article 19."
+      ],
+      "id": "6obdqp6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Fundamental Rights (Part III) protect individual liberties and seek to establish political democracy in India.",
+        "Directive Principles of State Policy (Part IV) act as guidelines for the State to establish a social and economic welfare state.",
+        "Fundamental Rights act as negative obligations (limitations on State power), whereas DPSPs are positive obligations (actions the State should take).",
+        "Fundamental Rights carry legal sanctions and are directly enforceable, while DPSPs carry moral and political sanctions.",
+        "In the Minerva Mills case (1980), the Supreme Court emphasized that the Constitution is founded on the bedrock of the balance between Fundamental Rights and Directive Principles."
+      ],
+      "id": "gvmwrkr"
+    }
+  ],
+  "enriched": true
+}

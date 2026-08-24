@@ -1,0 +1,131 @@
+{
+  "id": "xykgf5y",
+  "title": "Composition of Lokpal",
+  "order": 531,
+  "blocks": [
+    {
+      "id": "0tw4qkt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Lokpal shall consist of a Chairperson and a maximum of eight members, of whom fifty per cent shall be Judicial Members.",
+      "id": "qrcaqnm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Chairperson",
+        "Judicial Members",
+        "Non-Judicial Members"
+      ],
+      "rows": [
+        [
+          "Qualification Requirement",
+          "Former CJI, former Supreme Court Judge, or an Eminent Person with 25+ years experience",
+          "Former Judge of Supreme Court or former Chief Justice of a High Court",
+          "Eminent person with 25+ years expertise in anti-corruption, public admin, finance, or law"
+        ],
+        [
+          "Equivalent Salary Status",
+          "Equivalent to Chief Justice of India",
+          "Equivalent to Judge of the Supreme Court",
+          "Equivalent to Judge of the Supreme Court"
+        ],
+        [
+          "Tenure & Upper Age Limit",
+          "5 Years / 70 Years of age",
+          "5 Years / 70 Years of age",
+          "5 Years / 70 Years of age"
+        ]
+      ],
+      "id": "z7uj6hv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Maximum Members",
+          "value": "1 + 8",
+          "icon": "user"
+        },
+        {
+          "label": "Judicial Quota",
+          "value": "Min 50%",
+          "icon": "check"
+        },
+        {
+          "label": "Tenure / Age Limit",
+          "value": "5 Yrs / 70 Yrs",
+          "icon": "clock"
+        },
+        {
+          "label": "Reserved Categories",
+          "value": "Min 50%",
+          "icon": "award"
+        }
+      ],
+      "id": "ng5oi9e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Selection Committee Composition: Prime Minister (Chairperson), Speaker of Lok Sabha, Leader of Opposition in Lok Sabha, CJI (or nominee Judge), and an Eminent Jurist.",
+        "The salary and allowances of the Lokpal Chairperson are equivalent to the Chief Justice of India, while members receive salaries equivalent to Supreme Court Judges.",
+        "Members are ineligible for further employment under the Central or State Government after ceasing to hold office."
+      ],
+      "id": "jd0l0bn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lokpal is a multi-member anti-corruption ombudsman body consisting of a Chairperson and a maximum of eight members.",
+        "At least 50 per cent of the total members of Lokpal must be Judicial Members.",
+        "Minimum 50 per cent of the members must belong to SCs, STs, OBCs, Minorities, and Women.",
+        "The Chairperson and members hold office for a term of 5 years or until attaining 70 years of age.",
+        "Appointments are made by the President on the recommendation of a Selection Committee headed by the Prime Minister."
+      ],
+      "id": "vyhhc2p"
+    }
+  ],
+  "enriched": true
+}

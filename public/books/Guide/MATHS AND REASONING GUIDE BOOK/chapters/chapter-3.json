@@ -1,0 +1,242 @@
+{
+  "id": "reumqgs",
+  "title": "PART 4",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u4bhijz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "Ratio & Proportion",
+          "icon": "book"
+        },
+        {
+          "label": "Problem Types",
+          "value": "5 Main Categories",
+          "icon": "check"
+        },
+        {
+          "label": "Key Formula",
+          "value": "Product Extremes = Means",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Weightage",
+          "value": "2-4 Questions",
+          "icon": "award"
+        }
+      ],
+      "id": "igria6x"
+    },
+    {
+      "id": "vkzcqzt",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A ratio is a comparison of two quantities of the same unit expressed as a fraction a:b.",
+        "Proportion indicates the equality of two ratios (a:b :: c:d), where the product of extremes equals the product of means (a × d = b × c).",
+        "Ratios in fraction form should be converted to integers by multiplying all terms by the LCM of their denominators.",
+        "Compound ratio of two ratios (a:b) and (c:d) is calculated by multiplying antecedents and consequents to get (ac:bd).",
+        "In distribution problems, a total sum is divided proportionally according to individual ratio shares relative to the sum of all ratio terms."
+      ],
+      "id": "k5nnk7r"
+    },
+    {
+      "type": "paragraph",
+      "id": "fb30el6"
+    },
+    {
+      "id": "nfi204o",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "zgna5im"
+    },
+    {
+      "id": "trew0th",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "3f31ykh",
+      "type": "heading",
+      "level": 2,
+      "content": "2. IMPORTANT PROPERTIES OF RATIO"
+    },
+    {
+      "type": "paragraph",
+      "id": "v0anxuk"
+    },
+    {
+      "id": "1apbtu4",
+      "type": "heading",
+      "level": 2,
+      "content": "3. TYPES OF RATIO QUESTIONS"
+    },
+    {
+      "id": "p9w5anq",
+      "type": "heading",
+      "level": 3,
+      "content": "(A) SIMPLE RATIO QUESTIONS"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A ratio is a comparison of two quantities of the same kind and expressed in the same unit.",
+      "id": "7xs9kxa"
+    },
+    {
+      "type": "paragraph",
+      "id": "yjcz47o"
+    },
+    {
+      "id": "jxkzvcn",
+      "type": "heading",
+      "level": 3,
+      "content": "(B) RATIO IN FRACTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "3yya19y"
+    },
+    {
+      "id": "ddauhr5",
+      "type": "heading",
+      "level": 2,
+      "content": "4. PROPORTION BASED QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "7x8ug4w"
+    },
+    {
+      "type": "paragraph",
+      "id": "dpqnipg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Ratio",
+        "Proportion"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Quantitative comparison between two similar quantities",
+          "An equation showing that two ratios are equal"
+        ],
+        [
+          "Symbol",
+          "Colon (:)",
+          "Double Colon (::) or Equals (=)"
+        ],
+        [
+          "Terms Involved",
+          "2 terms: Antecedent (a) and Consequent (b)",
+          "4 terms: Extremes (a, d) and Means (b, c)"
+        ],
+        [
+          "Key Property",
+          "Value unchanged if both terms multiplied by non-zero constant",
+          "Product of Extremes equals Product of Means (ad = bc)"
+        ]
+      ],
+      "id": "iq2qr6z"
+    },
+    {
+      "id": "3q6ezg8",
+      "type": "heading",
+      "level": 2,
+      "content": "5. COMPOUND RATIO"
+    },
+    {
+      "type": "paragraph",
+      "id": "rjusrn5"
+    },
+    {
+      "type": "paragraph",
+      "id": "ww6tlnb"
+    },
+    {
+      "id": "58siz3u",
+      "type": "heading",
+      "level": 2,
+      "content": "6. RATIO IN DISTRIBUTION PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "r8033vi"
+    },
+    {
+      "id": "4dpl4kr",
+      "type": "heading",
+      "level": 2,
+      "content": "7. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "nm1df3w"
+    },
+    {
+      "id": "sv2ax68",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Mean proportional between two numbers 'a' and 'b' is calculated as √(a × b).",
+        "Third proportional to 'a' and 'b' is given by b²/a, while Fourth proportional to 'a', 'b', 'c' is (b × c)/a.",
+        "When converting fractional ratios like (1/a : 1/b : 1/c), multiply each term by the LCM of (a, b, c) to simplify into integer form."
+      ],
+      "id": "xtifj5m"
+    },
+    {
+      "type": "paragraph",
+      "id": "jiwl8c7"
+    },
+    {
+      "id": "xjm1j7h",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ntmbxz"
+    },
+    {
+      "id": "38g87ij",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kd33vrt"
+    }
+  ],
+  "enriched": true
+}

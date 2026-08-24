@@ -1,0 +1,95 @@
+{
+  "id": "di8udp4",
+  "title": "10. Appeals",
+  "order": 629,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cg5w0f9"
+    },
+    {
+      "type": "pullQuote",
+      "content": "An appeal to the High Court lies only if the case involves a substantial question of law.",
+      "id": "iq1ltv9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Appellate Authority",
+        "Scope of Review",
+        "Time Limit for Filing"
+      ],
+      "rows": [
+        [
+          "CIT (Appeals)",
+          "Questions of Fact and Law",
+          "30 Days"
+        ],
+        [
+          "Appellate Tribunal (ITAT)",
+          "Final Fact-Finding Body and Law",
+          "60 Days"
+        ],
+        [
+          "High Court",
+          "Substantial Questions of Law Only",
+          "120 Days"
+        ],
+        [
+          "Supreme Court",
+          "Constitutional & Final Appeal",
+          "90 Days"
+        ]
+      ],
+      "id": "mqhp0c6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Appeal Time Limit",
+          "value": "30 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Second Appeal Forum",
+          "value": "Appellate Tribunal",
+          "icon": "award"
+        },
+        {
+          "label": "Tribunal Appeal Limit",
+          "value": "60 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "High Court Jurisdiction",
+          "value": "Substantial Question of Law",
+          "icon": "info"
+        }
+      ],
+      "id": "ki30q8o"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the monetary limits for filing departmental appeals before ITAT, High Court, and Supreme Court.",
+        "ITAT is the ultimate fact-finding body; High Court does not re-examine pure questions of fact.",
+        "The statutory time period for filing an appeal before CIT(A) is 30 days from the date of service of the demand notice."
+      ],
+      "id": "dsqi5ck"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first appeal against an order of the Assessing Officer lies with the Commissioner of Income Tax (Appeals) [CIT(A)].",
+        "An appeal against the order of CIT(A) can be preferred before the Income Tax Appellate Tribunal (ITAT) within 60 days of order communication.",
+        "ITAT is the final fact-finding authority; questions of fact cannot be appealed beyond the Tribunal.",
+        "An appeal to the High Court against an ITAT order lies only on a substantial question of law.",
+        "The Supreme Court serves as the highest court of appeal against High Court orders via special leave or certification."
+      ],
+      "id": "uhebiem"
+    }
+  ],
+  "enriched": true
+}

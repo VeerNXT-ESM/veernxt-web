@@ -1,0 +1,130 @@
+{
+  "id": "z53xvzu",
+  "title": "1. Sources of Information About Earth's Interior",
+  "order": 47,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "14chv4m"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Deepest Drilling",
+          "value": "12 km (Kola)",
+          "icon": "check"
+        },
+        {
+          "label": "Gold Mine Depth",
+          "value": "3-4 km",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Waves",
+          "value": "P-Waves",
+          "icon": "clock"
+        },
+        {
+          "label": "Secondary Waves",
+          "value": "S-Waves",
+          "icon": "award"
+        }
+      ],
+      "id": "1wu2awi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The study of the behavior of seismic waves is the most important source of information about the interior of the earth.",
+      "id": "x2wqvjj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Direct Sources",
+        "Indirect Sources"
+      ],
+      "rows": [
+        [
+          "Deep Ocean Drilling Projects & Kola Borehole (12 km)",
+          "Seismic wave analysis (P-waves and S-waves)"
+        ],
+        [
+          "Volcanic eruptions throwing magma to the surface",
+          "Meteors reaching Earth (similar material composition)"
+        ],
+        [
+          "Mining samples (e.g., 3-4 km deep South African gold mines)",
+          "Gravity anomalies, magnetic surveys, and pressure-temperature gradients"
+        ]
+      ],
+      "id": "g1f1mzq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Direct sources of information about Earth's interior include surface rocks, deep mining, ocean drilling projects, and volcanic material.",
+        "Indirect sources include the analysis of temperature and pressure increases with depth, density changes, meteors, gravitation, magnetic fields, and seismic activity.",
+        "Seismic waves are categorized into body waves (P-waves and S-waves) and surface waves; P-waves travel through all mediums while S-waves travel only through solids.",
+        "The existence of seismic shadow zones helps scientists map the boundaries and liquid nature of Earth's outer core."
+      ],
+      "id": "kujzm5a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "S-waves cannot pass through liquids; this property proved that Earth's outer core is liquid.",
+        "Gravity anomaly refers to the difference between the observed value of gravity and the expected theoretical value, indicating mass distribution in the crust.",
+        "The deepest ocean drilling project is at Kola in the Arctic Ocean, reaching a depth of 12 km."
+      ],
+      "id": "4wpfudp"
+    },
+    {
+      "id": "vdxwhs1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "5qzo5h1"
+    }
+  ],
+  "enriched": true
+}

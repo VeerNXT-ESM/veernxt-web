@@ -1,0 +1,668 @@
+{
+  "id": "uh6boqo",
+  "title": "CHAPTER 5: SOFTWARE ENGINEERING",
+  "order": 5,
+  "blocks": [
+    {
+      "id": "n1uzehq",
+      "type": "heading",
+      "level": 2,
+      "content": "5.1 Software Development Life Cycle (SDLC)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Software Development Life Cycle (SDLC) provides a systematic sequence of phases for building high-quality software.",
+        "SDLC models vary in methodology, ranging from traditional linear models to modern iterative and agile frameworks.",
+        "Software testing strategies are categorized based on structural knowledge: Black Box, White Box, and Grey Box testing.",
+        "Software metrics quantify software quality, complexity, maintainability, and process productivity.",
+        "Design patterns offer proven, reusable solutions to recurring object-oriented design and architectural problems."
+      ],
+      "id": "juejh65"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Framework",
+          "value": "SDLC Models",
+          "icon": "book"
+        },
+        {
+          "label": "Evaluation Approaches",
+          "value": "3 Testing Types",
+          "icon": "check"
+        },
+        {
+          "label": "Quality Assurance",
+          "value": "Software Metrics",
+          "icon": "award"
+        },
+        {
+          "label": "Architecture",
+          "value": "Design Patterns",
+          "icon": "info"
+        }
+      ],
+      "id": "8n47hrf"
+    },
+    {
+      "type": "paragraph",
+      "id": "qedycxn"
+    },
+    {
+      "id": "qwq8qyw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tv2i0tc",
+      "type": "heading",
+      "level": 2,
+      "content": "5.2 SDLC Models"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Black Box vs White Box vs Grey Box Testing",
+      "id": "i6lha43"
+    },
+    {
+      "id": "vd9n81v",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epbqlx5",
+      "type": "heading",
+      "level": 2,
+      "content": "5.3 Software Testing"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Testing Type",
+        "Knowledge of Code",
+        "Primary Focus"
+      ],
+      "rows": [
+        [
+          "Black Box Testing",
+          "None (Tested from user perspective)",
+          "Inputs, Outputs, and System Functionality"
+        ],
+        [
+          "White Box Testing",
+          "Full (Source code & internal logic visible)",
+          "Code Structure, Paths, Logic, and Coverage"
+        ],
+        [
+          "Grey Box Testing",
+          "Partial (Limited knowledge of internals)",
+          "System Architecture and High-Level Design"
+        ]
+      ],
+      "id": "63vv1jl"
+    },
+    {
+      "id": "i2ltnht",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5x4d9z7",
+      "type": "heading",
+      "level": 3,
+      "content": "Black Box vs White Box vs Grey Box Testing"
+    },
+    {
+      "id": "betcaoi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doimjpc",
+      "type": "heading",
+      "level": 2,
+      "content": "5.4 Software Metrics and Quality"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Compare Black Box (functional focus without source code) and White Box (structural focus with code visibility) testing methodologies.",
+        "Differentiate between various SDLC models (e.g., Waterfall vs. Agile vs. Spiral) based on risk analysis and project flexibility.",
+        "Identify key software quality standards and software complexity metrics commonly asked in competitive exams."
+      ],
+      "id": "fyo6l2x"
+    },
+    {
+      "id": "6lu09sf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6uhl75d",
+      "type": "heading",
+      "level": 2,
+      "content": "5.5 Design Patterns"
+    },
+    {
+      "id": "bqo2abn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

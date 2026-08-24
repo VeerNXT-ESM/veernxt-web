@@ -1,0 +1,899 @@
+{
+  "id": "p9kyl7b",
+  "title": "CHAPTER 3: DATABASE MANAGEMENT SYSTEMS (DBMS)",
+  "order": 3,
+  "blocks": [
+    {
+      "id": "x25hxh0",
+      "type": "heading",
+      "level": 2,
+      "content": "3.1 Introduction and Key Concepts"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The ANSI/SPARC 3-tier architecture separates physical storage from user views using Internal, Conceptual, and External schemas.",
+        "Entity-Relationship (ER) modeling utilizes entities, attributes, and cardinality constraints to conceptualize database designs.",
+        "Relational models enforce data integrity through Primary, Foreign, Candidate, and Super Keys.",
+        "SQL commands are categorized into DDL (structure), DML (data manipulation), DQL (querying), DCL (permissions), and TCL (transactions).",
+        "Normalisation eliminates redundant data and prevents Insertion, Update, and Deletion anomalies across relational tables.",
+        "Database transactions depend on ACID properties (Atomicity, Consistency, Isolation, Durability) and concurrency controls for reliability."
+      ],
+      "id": "1zu5ys0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "ANSI/SPARC Levels",
+          "value": "3 Levels",
+          "icon": "book"
+        },
+        {
+          "label": "ACID Properties",
+          "value": "4 Pillars",
+          "icon": "check"
+        },
+        {
+          "label": "Key Normal Forms",
+          "value": "1NF to BCNF",
+          "icon": "award"
+        },
+        {
+          "label": "SQL Sub-Languages",
+          "value": "5 Categories",
+          "icon": "info"
+        }
+      ],
+      "id": "gb7mmge"
+    },
+    {
+      "type": "paragraph",
+      "id": "yll4n9k"
+    },
+    {
+      "id": "y2hd65r",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uxlcjmp",
+      "type": "heading",
+      "level": 2,
+      "content": "3.2 Three-Level ANSI/SPARC Architecture"
+    },
+    {
+      "id": "1ubnz5e",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7ed1bqj",
+      "type": "heading",
+      "level": 2,
+      "content": "3.3 Entity-Relationship (ER) Model"
+    },
+    {
+      "id": "zw8hgax",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iuacbzd",
+      "type": "heading",
+      "level": 3,
+      "content": "Cardinality of Relationships"
+    },
+    {
+      "id": "3b9smmt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 3: DATABASE MANAGEMENT SYSTEMS (DBMS)",
+      "id": "qydedep"
+    },
+    {
+      "id": "o03wxpv",
+      "type": "heading",
+      "level": 2,
+      "content": "3.4 Relational Model and SQL"
+    },
+    {
+      "id": "2gfxm3a",
+      "type": "heading",
+      "level": 3,
+      "content": "Keys in Relational Database"
+    },
+    {
+      "id": "e38z8hn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qbh0ibj",
+      "type": "heading",
+      "level": 3,
+      "content": "SQL Commands Classification"
+    },
+    {
+      "id": "kuxuxh4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "DDL (Data Definition Language)",
+        "DML (Data Manipulation Language)"
+      ],
+      "rows": [
+        [
+          "Primary Purpose",
+          "Defines and modifies the database structure/schema",
+          "Manipulates data stored within the existing schema"
+        ],
+        [
+          "Common Commands",
+          "CREATE, ALTER, DROP, TRUNCATE, RENAME",
+          "INSERT, UPDATE, DELETE, MERGE"
+        ],
+        [
+          "Auto-Commit Behavior",
+          "Auto-committed; changes are permanent immediately",
+          "Requires explicit COMMIT or ROLLBACK by TCL"
+        ],
+        [
+          "WHERE Clause Usage",
+          "Cannot use a WHERE clause",
+          "Frequently uses a WHERE clause to filter rows"
+        ]
+      ],
+      "id": "hb5hu69"
+    },
+    {
+      "id": "0cncxa0",
+      "type": "heading",
+      "level": 3,
+      "content": "Important SQL Clauses and Functions"
+    },
+    {
+      "id": "pvjm3nn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0cuh4ey",
+      "type": "heading",
+      "level": 2,
+      "content": "3.5 Normalisation"
+    },
+    {
+      "type": "paragraph",
+      "id": "ksl1nqy"
+    },
+    {
+      "id": "9d2go1m",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "1t61tx5"
+    },
+    {
+      "id": "h67swm0",
+      "type": "heading",
+      "level": 2,
+      "content": "3.6 Transactions and ACID Properties"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Primary Keys cannot accept NULL values, whereas Unique Keys permit a single NULL value.",
+        "DDL commands (CREATE, ALTER, DROP, TRUNCATE) are auto-committed, while DML commands (INSERT, UPDATE, DELETE) require explicit COMMIT or ROLLBACK.",
+        "Boyce-Codd Normal Form (BCNF) is a stricter variant of 3NF where every determinant functional dependency must be a Super Key.",
+        "Concurrency control techniques like Two-Phase Locking (2PL) prevent conflict anomalies such as Dirty Reads and Lost Updates."
+      ],
+      "id": "dehcz9u"
+    },
+    {
+      "id": "q0r28ln",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oc59knp",
+      "type": "heading",
+      "level": 3,
+      "content": "Concurrency Control"
+    },
+    {
+      "id": "z2uyjkr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aodi2r8",
+      "type": "heading",
+      "level": 2,
+      "content": "3.7 Indexing"
+    },
+    {
+      "id": "yyvescu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

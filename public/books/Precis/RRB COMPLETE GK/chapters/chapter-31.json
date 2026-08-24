@@ -1,0 +1,95 @@
+{
+  "id": "upeve8x",
+  "title": "Prime Meridian",
+  "order": 31,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "8ir0cd6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Prime Meridian at 0° longitude passes through Greenwich, London, and serves as the primary reference line for global time zones and east-west positional measurement.",
+      "id": "v1j8xx5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Prime Meridian",
+        "Equator"
+      ],
+      "rows": [
+        [
+          "Coordinate Value",
+          "0° Longitude",
+          "0° Latitude"
+        ],
+        [
+          "Orientation",
+          "Vertical (North Pole to South Pole)",
+          "Horizontal (East to West around Earth)"
+        ],
+        [
+          "Hemispheric Boundary",
+          "Divides Eastern and Western Hemispheres",
+          "Divides Northern and Southern Hemispheres"
+        ],
+        [
+          "Length & Shape",
+          "Semi-circle of equal length to all meridians",
+          "Largest full circular parallel (Great Circle)"
+        ]
+      ],
+      "id": "stk8y2p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Longitude Degree",
+          "value": "0°",
+          "icon": "compass"
+        },
+        {
+          "label": "Reference Location",
+          "value": "Greenwich, London",
+          "icon": "map-pin"
+        },
+        {
+          "label": "Standard Time Base",
+          "value": "GMT / UTC+0",
+          "icon": "clock"
+        },
+        {
+          "label": "Countries Crossed",
+          "value": "8 Countries",
+          "icon": "globe"
+        }
+      ],
+      "id": "b6gfwts"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) is calculated from 82.5° E longitude (passing near Prayagraj) and is exactly 5 hours 30 minutes ahead of the Prime Meridian (GMT +5:30).",
+        "Exams frequently test the 8 countries traversed by the Prime Meridian: UK, France, Spain, Algeria, Mali, Burkina Faso, Togo, and Ghana.",
+        "Remember that lines of longitude (meridians) converge at the poles, unlike lines of latitude (parallels) which remain equal distance apart."
+      ],
+      "id": "8nqwixc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Prime Meridian is the 0° longitude line used as the international reference point for measuring geographic longitude.",
+        "It passes through the Royal Observatory at Greenwich, London, establishing Greenwich Mean Time (GMT).",
+        "Together with the 180th meridian, it divides the Earth into the Eastern and Western Hemispheres.",
+        "It intersects the Equator at 0° latitude, 0° longitude in the Gulf of Guinea in the Atlantic Ocean.",
+        "It crosses eight countries: United Kingdom, France, Spain, Algeria, Mali, Burkina Faso, Togo, and Ghana."
+      ],
+      "id": "mdnf0gi"
+    }
+  ],
+  "enriched": true
+}

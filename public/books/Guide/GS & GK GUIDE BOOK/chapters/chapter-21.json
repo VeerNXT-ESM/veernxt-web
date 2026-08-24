@@ -1,15 +1,20 @@
 {
-  "id": "qqyqggg",
+  "id": "0c49l43",
   "title": "Chapter 20: Vice President of India",
   "order": 21,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "m8uyf97"
+      "id": "mso4p3t"
     },
     {
       "type": "statStrip",
       "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 63",
+          "icon": "book"
+        },
         {
           "label": "Term of Office",
           "value": "5 Years",
@@ -18,12 +23,7 @@
         {
           "label": "Minimum Age",
           "value": "35 Years",
-          "icon": "check"
-        },
-        {
-          "label": "Constitutional Articles",
-          "value": "Articles 63–71",
-          "icon": "book"
+          "icon": "clock"
         },
         {
           "label": "Ex-Officio Role",
@@ -31,10 +31,10 @@
           "icon": "award"
         }
       ],
-      "id": "vkeqdrv"
+      "id": "qyjq28f"
     },
     {
-      "id": "cobbi44",
+      "id": "8ilah4v",
       "type": "heading",
       "level": 2,
       "content": "1. Constitutional Articles Related to Vice President"
@@ -43,16 +43,16 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Vice President occupies the second-highest constitutional office in India, ranking next to the President.",
-        "The electoral college consists of members of both Houses of Parliament (both elected and nominated), excluding State Legislative Assemblies.",
-        "Qualifications include being a citizen of India, completing 35 years of age, and being qualified for election as a member of the Rajya Sabha.",
-        "Serves as ex-officio Chairman of the Rajya Sabha and acts as President during vacancies for a maximum period of 6 months.",
-        "Can be removed by a resolution passed by a majority of all the then members of Rajya Sabha (effective majority) and agreed to by Lok Sabha."
+        "Article 63 provides for the Vice President of India, who occupies the second-highest constitutional office in the country.",
+        "The Vice President is elected by an electoral college comprising all members (both elected and nominated) of both Houses of Parliament.",
+        "Qualifications require being an Indian citizen, at least 35 years old, and qualified for election as a member of the Rajya Sabha.",
+        "Serves as the ex-officio Chairman of Rajya Sabha and acts as President during vacancies in the President's office for a maximum period of 6 months.",
+        "Removal requires a resolution passed by a majority of all the then members of Rajya Sabha (effective majority) and agreed to by Lok Sabha (simple majority)."
       ],
-      "id": "olrbyat"
+      "id": "texuoay"
     },
     {
-      "id": "eac1ccz",
+      "id": "ujxonvp",
       "type": "table",
       "rows": [
         {
@@ -128,80 +128,80 @@
       ]
     },
     {
-      "id": "hdq53f0",
+      "id": "9pl7bvd",
       "type": "heading",
       "level": 2,
       "content": "2. Election of the Vice President"
     },
     {
       "type": "paragraph",
-      "id": "49vpqda"
+      "id": "dhbhk2j"
     },
     {
       "type": "paragraph",
-      "id": "eetcdaw"
+      "id": "va62b0l"
     },
     {
       "type": "paragraph",
-      "id": "a7r671l"
+      "id": "kxwl0rd"
     },
     {
       "type": "paragraph",
-      "id": "p1cc1gn"
+      "id": "ds6fb5m"
     },
     {
-      "id": "n56fjyo",
+      "id": "wzv25ko",
       "type": "heading",
       "level": 2,
       "content": "3. Qualifications for Vice President"
     },
     {
       "type": "paragraph",
-      "id": "uz0x0to"
+      "id": "iqccx0w"
     },
     {
       "type": "paragraph",
-      "id": "bis3q8m"
+      "id": "7kwv714"
     },
     {
       "type": "paragraph",
-      "id": "v8txgof"
+      "id": "u9bbk9s"
     },
     {
       "type": "pullQuote",
-      "content": "The Vice-President shall be ex-officio Chairman of the Council of States and shall not hold any other office of profit.",
-      "id": "n7301qj"
+      "content": "Chapter 20: Vice President of India",
+      "id": "blv5upg"
     },
     {
       "type": "paragraph",
-      "id": "4q71wzl"
+      "id": "tzj889b"
     },
     {
-      "id": "olz2ilj",
+      "id": "pxh213x",
       "type": "heading",
       "level": 2,
       "content": "4. Term of Office"
     },
     {
       "type": "paragraph",
-      "id": "6mbh306"
+      "id": "r0zrl5o"
     },
     {
       "type": "paragraph",
-      "id": "pnqpavf"
+      "id": "gyyag3u"
     },
     {
       "type": "paragraph",
-      "id": "k5sf4h8"
+      "id": "a511czq"
     },
     {
-      "id": "w3mlsc5",
+      "id": "adol48p",
       "type": "heading",
       "level": 2,
       "content": "5. Powers and Functions"
     },
     {
-      "id": "qn0sean",
+      "id": "hjgzql8",
       "type": "heading",
       "level": 3,
       "content": "As Chairman of Rajya Sabha"
@@ -210,107 +210,102 @@
       "type": "comparisonTable",
       "headers": [
         "Feature",
-        "President Election",
-        "Vice President Election"
+        "President of India",
+        "Vice President of India"
       ],
       "rows": [
         [
           "Electoral College",
-          "Elected members of Parliament and State Legislative Assemblies (including UTs)",
-          "Elected AND Nominated members of Parliament only"
+          "Elected members of Parliament and State Legislative Assemblies",
+          "All members (Elected and Nominated) of Parliament only"
         ],
         [
-          "State Participation",
-          "Included",
-          "Excluded"
-        ],
-        [
-          "Qualification Requirement",
+          "House Qualification",
           "Must be qualified for election to Lok Sabha",
           "Must be qualified for election to Rajya Sabha"
         ],
         [
-          "Removal Origin",
-          "Resolution can originate in either House of Parliament",
-          "Resolution can originate ONLY in Rajya Sabha"
+          "Removal Motion Origin",
+          "Can be initiated in either House of Parliament",
+          "Can be initiated ONLY in the Rajya Sabha"
         ]
       ],
-      "id": "o2q4udo"
+      "id": "yfcwhy9"
     },
     {
       "type": "paragraph",
-      "id": "h9zq7mw"
+      "id": "1zealy0"
     },
     {
       "type": "paragraph",
-      "id": "953aci6"
+      "id": "ja058pp"
     },
     {
       "type": "paragraph",
-      "id": "c5c9k4k"
+      "id": "f10m7eu"
     },
     {
-      "id": "phfurx3",
+      "id": "6svvpz3",
       "type": "heading",
       "level": 3,
       "content": "As Acting President"
     },
     {
       "type": "paragraph",
-      "id": "583pwsp"
+      "id": "ldncywm"
     },
     {
       "type": "paragraph",
-      "id": "pltpacp"
+      "id": "nrc1gth"
     },
     {
-      "id": "qvwxv2r",
+      "id": "wewgnso",
       "type": "heading",
       "level": 2,
       "content": "6. Removal of Vice President"
     },
     {
       "type": "paragraph",
-      "id": "xj63xnp"
+      "id": "cd2w084"
     },
     {
       "type": "paragraph",
-      "id": "3zowwd5"
+      "id": "6o2emx8"
     },
     {
       "type": "examAlert",
       "items": [
-        "State Legislative Assemblies do NOT participate in the Vice President's election, unlike the President's election.",
-        "Nominated members of Parliament vote in the Vice President's election, whereas they cannot vote in the President's election.",
-        "A removal resolution against the Vice President can ONLY originate in the Rajya Sabha."
+        "Nominated members of Parliament participate in the Vice President's election, whereas they do NOT participate in the President's election.",
+        "State Legislative Assemblies (MLAs) have NO role in the election or removal of the Vice President.",
+        "A resolution for the removal of the Vice President can ONLY be introduced in the Rajya Sabha, not in the Lok Sabha."
       ],
-      "id": "v1pncuk"
+      "id": "i18ammo"
     },
     {
       "type": "paragraph",
-      "id": "ybek13c"
+      "id": "t61tfk9"
     },
     {
-      "id": "kgr5tvz",
+      "id": "9hpc7ex",
       "type": "heading",
       "level": 2,
       "content": "EXAM Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "yhm1m2n"
+      "id": "ihhi674"
     },
     {
       "type": "paragraph",
-      "id": "r32500j"
+      "id": "orqrz3g"
     },
     {
       "type": "paragraph",
-      "id": "c6gz04u"
+      "id": "tfgl7xw"
     },
     {
       "type": "paragraph",
-      "id": "un4pjfw"
+      "id": "acf0057"
     }
   ],
   "enriched": true

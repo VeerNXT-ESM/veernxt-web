@@ -1,0 +1,531 @@
+{
+  "id": "ylwejkx",
+  "title": "CHAPTER 2 : NUMBER SYSTEM – ULTRA CONCEPT + TRICKS + FORMULA EDITION",
+  "order": 2,
+  "blocks": [
+    {
+      "id": "n82l6gw",
+      "type": "heading",
+      "level": 3,
+      "content": "Introduction to the Number System"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "Number System",
+          "icon": "book"
+        },
+        {
+          "label": "Divisibility Rules",
+          "value": "Must Memorize",
+          "icon": "check"
+        },
+        {
+          "label": "Speed Technique",
+          "value": "Digital Root",
+          "icon": "clock"
+        },
+        {
+          "label": "Advanced Module",
+          "value": "Base System",
+          "icon": "award"
+        }
+      ],
+      "id": "j18r7ie"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Number classification forms the foundational base for all arithmetic and algebraic problem-solving.",
+        "Divisibility rules and remainder theorems significantly reduce calculation time during competitive exams.",
+        "HCF and LCM operations are key to solving periodic events, ratio problems, and fraction simplifications.",
+        "Unit digit cyclicity allows rapid determination of trailing digits in large exponential numbers.",
+        "Digital root (casting out nines) and base systems provide essential shortcuts for option elimination in exams."
+      ],
+      "id": "w827kvv"
+    },
+    {
+      "type": "paragraph",
+      "id": "swebawc"
+    },
+    {
+      "type": "paragraph",
+      "id": "u0imkkc"
+    },
+    {
+      "id": "xs2aqj3",
+      "type": "heading",
+      "level": 3,
+      "content": "Classification of Numbers"
+    },
+    {
+      "type": "paragraph",
+      "id": "agzl53n"
+    },
+    {
+      "id": "ztaiukd",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "rbngxab"
+    },
+    {
+      "type": "paragraph",
+      "id": "zk38akm"
+    },
+    {
+      "id": "ilub9tu",
+      "type": "heading",
+      "level": 3,
+      "content": "Prime and Composite Numbers"
+    },
+    {
+      "type": "paragraph",
+      "id": "dtcfek8"
+    },
+    {
+      "type": "paragraph",
+      "id": "opasz0v"
+    },
+    {
+      "id": "puompb3",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "hre13dr"
+    },
+    {
+      "id": "hw60jfu",
+      "type": "heading",
+      "level": 3,
+      "content": "Divisibility Rules (Must Memorize)"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ghc47z"
+    },
+    {
+      "type": "paragraph",
+      "id": "4rzn2vn"
+    },
+    {
+      "type": "paragraph",
+      "id": "bwtuae8"
+    },
+    {
+      "type": "paragraph",
+      "id": "h7sez48"
+    },
+    {
+      "type": "paragraph",
+      "id": "6td1odl"
+    },
+    {
+      "type": "paragraph",
+      "id": "ees4r2w"
+    },
+    {
+      "type": "paragraph",
+      "id": "v226t5d"
+    },
+    {
+      "id": "qr06ge3",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors and Multiples"
+    },
+    {
+      "type": "paragraph",
+      "id": "aducw2v"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ixkv5n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iruh9ll"
+    },
+    {
+      "type": "paragraph",
+      "id": "sid34hb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xlj7xpo"
+    },
+    {
+      "type": "paragraph",
+      "id": "vyqj0qd"
+    },
+    {
+      "id": "n9crilr",
+      "type": "heading",
+      "level": 3,
+      "content": "Highest Common Factor (HCF)"
+    },
+    {
+      "type": "paragraph",
+      "id": "byw19bl"
+    },
+    {
+      "type": "paragraph",
+      "id": "teb4l48"
+    },
+    {
+      "type": "paragraph",
+      "id": "a8in16o"
+    },
+    {
+      "id": "j3gd3fi",
+      "type": "heading",
+      "level": 3,
+      "content": "Least Common Multiple (LCM)"
+    },
+    {
+      "type": "paragraph",
+      "id": "1624fn4"
+    },
+    {
+      "type": "paragraph",
+      "id": "wupxp1s"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Divisibility Rules (Must Memorize)",
+      "id": "z7fxz51"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pvg16qx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g9dopaj"
+    },
+    {
+      "type": "paragraph",
+      "id": "6138wvt"
+    },
+    {
+      "id": "xau8iq5",
+      "type": "heading",
+      "level": 3,
+      "content": "Co-prime Numbers"
+    },
+    {
+      "type": "paragraph",
+      "id": "xne05jn"
+    },
+    {
+      "type": "paragraph",
+      "id": "zabjgi8"
+    },
+    {
+      "type": "paragraph",
+      "id": "9o39oef"
+    },
+    {
+      "id": "nanhpc2",
+      "type": "heading",
+      "level": 3,
+      "content": "Remainder Theorem"
+    },
+    {
+      "type": "paragraph",
+      "id": "hu0e64u"
+    },
+    {
+      "type": "paragraph",
+      "id": "32zildb"
+    },
+    {
+      "type": "paragraph",
+      "id": "hr2vs05"
+    },
+    {
+      "type": "paragraph",
+      "id": "9yezqqm"
+    },
+    {
+      "type": "paragraph",
+      "id": "fm89huc"
+    },
+    {
+      "type": "paragraph",
+      "id": "urwjuf2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fhmf2c0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "55f5y4z"
+    },
+    {
+      "type": "paragraph",
+      "id": "pzsbu72"
+    },
+    {
+      "id": "vsrkrvm",
+      "type": "heading",
+      "level": 3,
+      "content": "Unit Digit Trick (Cyclicity)"
+    },
+    {
+      "type": "paragraph",
+      "id": "lldno4l"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Highest Common Factor (HCF)",
+        "Least Common Multiple (LCM)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "The greatest factor common to two or more numbers",
+          "The smallest common multiple of two or more numbers"
+        ],
+        [
+          "Prime Factors",
+          "Includes only common prime factors with lowest powers",
+          "Includes all prime factors with highest powers"
+        ],
+        [
+          "Value Range",
+          "Always smaller than or equal to the smallest number",
+          "Always greater than or equal to the largest number"
+        ]
+      ],
+      "id": "inlat11"
+    },
+    {
+      "type": "paragraph",
+      "id": "815qxas"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "c85p6mz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "al6xmms"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fguvnum"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "461pz3z"
+    },
+    {
+      "type": "paragraph",
+      "id": "g7l3g2u"
+    },
+    {
+      "type": "paragraph",
+      "id": "86vqi3x"
+    },
+    {
+      "type": "paragraph",
+      "id": "ur7jr6v"
+    },
+    {
+      "id": "ow8xqgt",
+      "type": "heading",
+      "level": 3,
+      "content": "Perfect Squares"
+    },
+    {
+      "type": "paragraph",
+      "id": "y38z848"
+    },
+    {
+      "id": "7v22n74",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "cou8i0u"
+    },
+    {
+      "id": "7opp5gy",
+      "type": "heading",
+      "level": 3,
+      "content": "Perfect Cubes"
+    },
+    {
+      "type": "paragraph",
+      "id": "wiwzo5o"
+    },
+    {
+      "id": "dy4ai22",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "2969rqp"
+    },
+    {
+      "id": "im7mv04",
+      "type": "heading",
+      "level": 3,
+      "content": "Surds"
+    },
+    {
+      "type": "paragraph",
+      "id": "gb8qyy2"
+    },
+    {
+      "type": "paragraph",
+      "id": "mz9z4ck"
+    },
+    {
+      "type": "paragraph",
+      "id": "hras0o8"
+    },
+    {
+      "type": "paragraph",
+      "id": "xvzr4ua"
+    },
+    {
+      "id": "w1tnv22",
+      "type": "heading",
+      "level": 3,
+      "content": "Digital Root (Casting Out Nines)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c04wbja"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Standard Formula: HCF × LCM = Product of the two given numbers.",
+        "Cyclicity patterns of exponents (especially for numbers ending in 2, 3, 7, and 8) are frequently tested.",
+        "Base conversion questions (Decimal to Binary/Octal) are prominent in RRB and technical exams.",
+        "Remainder theorems (Fermat's, Wilson's, and Euler's) are critical for advanced quantitative aptitude questions."
+      ],
+      "id": "jc8nphd"
+    },
+    {
+      "type": "paragraph",
+      "id": "v9h3f4z"
+    },
+    {
+      "type": "paragraph",
+      "id": "qcccnoj"
+    },
+    {
+      "type": "paragraph",
+      "id": "1teion9"
+    },
+    {
+      "id": "spuqicx",
+      "type": "heading",
+      "level": 3,
+      "content": "Base System (Advanced RRB Concept)"
+    },
+    {
+      "type": "paragraph",
+      "id": "foueziv"
+    },
+    {
+      "type": "paragraph",
+      "id": "m1is5un"
+    },
+    {
+      "type": "paragraph",
+      "id": "o6x6q4a"
+    },
+    {
+      "type": "paragraph",
+      "id": "ght9nbt"
+    },
+    {
+      "id": "ou9knn0",
+      "type": "heading",
+      "level": 3,
+      "content": "Greatest Integer Function"
+    },
+    {
+      "type": "paragraph",
+      "id": "ot8ajvh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f41jxdx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "646efep"
+    },
+    {
+      "type": "paragraph",
+      "id": "geb6pqo"
+    },
+    {
+      "id": "fjw31po",
+      "type": "heading",
+      "level": 3,
+      "content": "Exam Tricks Summary"
+    },
+    {
+      "id": "gh2vlws",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

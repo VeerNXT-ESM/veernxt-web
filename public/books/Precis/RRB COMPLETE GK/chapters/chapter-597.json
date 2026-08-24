@@ -1,0 +1,124 @@
+{
+  "id": "xl7knj8",
+  "title": "Defined Benefit vs Defined Contribution (Exam Favorite)",
+  "order": 597,
+  "blocks": [
+    {
+      "id": "azh45ra",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "In a Defined Benefit scheme, investment risk lies entirely with the employer, whereas in a Defined Contribution scheme, the employee bears the market risk.",
+      "id": "wn7kr1d"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Defined Benefit (DB)",
+        "Defined Contribution (DC)"
+      ],
+      "rows": [
+        [
+          "Payout Structure",
+          "Guaranteed and predetermined by formula",
+          "Variable, depending on market performance"
+        ],
+        [
+          "Investment Risk",
+          "Borne entirely by Employer / Government",
+          "Borne entirely by Employee / Subscriber"
+        ],
+        [
+          "Contribution Amount",
+          "Variable (adjusted to ensure promised benefits)",
+          "Fixed percentage of salary"
+        ],
+        [
+          "Indian Pension Example",
+          "Old Pension Scheme (OPS)",
+          "National Pension System (NPS)"
+        ]
+      ],
+      "id": "n3fq3jc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "NPS Launch Year",
+          "value": "2004",
+          "icon": "calendar"
+        },
+        {
+          "label": "DB Risk Holder",
+          "value": "Employer",
+          "icon": "award"
+        },
+        {
+          "label": "DC Risk Holder",
+          "value": "Employee",
+          "icon": "info"
+        },
+        {
+          "label": "Pension Regulator",
+          "value": "PFRDA",
+          "icon": "check"
+        }
+      ],
+      "id": "w7piz2r"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NPS is a Defined Contribution scheme regulated by PFRDA, mandatory for central government employees joining on or after January 1, 2004.",
+        "Old Pension Scheme (OPS) is based on Defined Benefit, while the National Pension System (NPS) is based on Defined Contribution.",
+        "Exams frequently test risk allocation: DB places market risk on the Employer, while DC transfers market risk to the Employee."
+      ],
+      "id": "inez1a6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Defined Benefit (DB) schemes promise a specified monthly payout upon retirement, calculated using a formula based on tenure and salary history.",
+        "Defined Contribution (DC) schemes fix the contribution amount, leaving the final retirement corpus dependent on accumulated investments and market returns.",
+        "In DB schemes, the employer bears the investment risk, whereas in DC schemes, the employee bears the market risk.",
+        "The National Pension System (NPS) is India's flagship Defined Contribution retirement scheme, regulated by PFRDA."
+      ],
+      "id": "m3gr1mc"
+    }
+  ],
+  "enriched": true
+}

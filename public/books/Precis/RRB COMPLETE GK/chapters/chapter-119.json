@@ -1,0 +1,220 @@
+{
+  "id": "n3zh1gw",
+  "title": "2. Mass Wasting (Mass Movement)",
+  "order": 119,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2yy8v42"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Driver",
+          "value": "Gravity",
+          "icon": "award"
+        },
+        {
+          "label": "Key Trigger",
+          "value": "Water Saturation",
+          "icon": "info"
+        },
+        {
+          "label": "Slowest Type",
+          "value": "Soil Creep",
+          "icon": "clock"
+        },
+        {
+          "label": "Critical Threshold",
+          "value": "Angle of Repose",
+          "icon": "check"
+        }
+      ],
+      "id": "8thsbn7"
+    },
+    {
+      "id": "owlrsjq",
+      "type": "heading",
+      "level": 2,
+      "content": "A. Controlling Factors"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Mass movement refers to the downslope transfer of rock, regolith, and soil under the direct influence of gravity.",
+        "Water acts as both a lubricating agent and an added mass, drastically reducing shear strength along slope planes.",
+        "Mass wasting is classified into slow movements (soil creep, solifluction) and rapid movements (landslides, mudflows, rockfalls).",
+        "Vegetation removal, heavy rainfall, seismic activity, and anthropogenic slope undercutting are major controlling factors.",
+        "Effective mitigation involves hazard zonation mapping, drainage management, afforestation, and constructing retaining structures."
+      ],
+      "id": "cwuey7l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3u0mw6i"
+    },
+    {
+      "type": "paragraph",
+      "id": "bn0foc8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Mass movement refers to the downslope transfer of rock, regolith, and soil under the direct influence of gravity.",
+      "id": "b4ir33e"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cjywvbr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "myon4bm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Slow Mass Movement",
+        "Rapid Mass Movement"
+      ],
+      "rows": [
+        [
+          "Velocity",
+          "Imperceptible (millimeters/year)",
+          "Immediate to high-speed (meters/second)"
+        ],
+        [
+          "Primary Examples",
+          "Soil Creep, Solifluction",
+          "Rockfalls, Landslides, Debris Flows"
+        ],
+        [
+          "Field Indicators",
+          "Tilted posts, curved tree trunks",
+          "Fresh scarps, chaotic debris accumulation"
+        ],
+        [
+          "Major Triggers",
+          "Freeze-thaw cycles, wetting-drying",
+          "Torrential rainfall, earthquakes, slope undercutting"
+        ]
+      ],
+      "id": "968f6gl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mqlqnc4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l079ohn"
+    },
+    {
+      "id": "qlvl9iq",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Mass Movement"
+    },
+    {
+      "id": "zab27if",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Solifluction is specifically associated with periglacial environments where saturated surface soil slides over impermeable permafrost.",
+        "Soil creep is frequently tested via its field indicators, such as bent tree trunks, tilted utility poles, and broken retaining walls.",
+        "Distinguish between a Slide (movement along a distinct plane of rupture) and a Flow (viscous fluid-like motion of saturated material)."
+      ],
+      "id": "o9k0mmv"
+    },
+    {
+      "id": "ke7bz2m",
+      "type": "heading",
+      "level": 2,
+      "content": "C. Hazards and Mitigation"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ek0imc"
+    },
+    {
+      "type": "paragraph",
+      "id": "iqtefov"
+    }
+  ],
+  "enriched": true
+}

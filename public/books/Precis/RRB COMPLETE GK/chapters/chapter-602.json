@@ -1,0 +1,95 @@
+{
+  "id": "bck1tal",
+  "title": "RRB Quick Revision Box",
+  "order": 602,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "507b49u"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bori Bunder and Thane on April 16, 1853.",
+      "id": "ooohxuu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Railway Gauge",
+        "Width (mm)",
+        "Width (ft in)"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "5 ft 6 in"
+        ],
+        [
+          "Standard Gauge",
+          "1435 mm",
+          "4 ft 8.5 in"
+        ],
+        [
+          "Meter Gauge",
+          "1000 mm",
+          "3 ft 3.37 in"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "2 ft 6 in / 2 ft 0 in"
+        ]
+      ],
+      "id": "ukp9t6o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "award"
+        },
+        {
+          "label": "First Train",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Total Track",
+          "value": "68,000+ km",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Mode",
+          "value": "CBT",
+          "icon": "check"
+        }
+      ],
+      "id": "2uuv5en"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked: Match the Railway Zones with their correct Zonal Headquarters in RRB NTPC & Group D exams.",
+        "Crucial for CBT: Standard track width dimensions for Broad Gauge, Meter Gauge, and Narrow Gauge.",
+        "Remember the three UNESCO World Heritage Mountain Railways of India: Darjeeling, Nilgiri, and Kalka-Shimla."
+      ],
+      "id": "fwxc2gh"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian Railways was nationalised in 1951 and is currently divided into 19 administrative zones.",
+        "The first passenger train ran between Bori Bunder (Bombay) and Thane on April 16, 1853.",
+        "Lord Dalhousie is considered the Father of Indian Railways.",
+        "Bholu, the guard elephant, serves as the official mascot of Indian Railways.",
+        "The Darjeeling Himalayan Railway was the first mountain railway in India to receive UNESCO World Heritage status in 1999."
+      ],
+      "id": "3z34eli"
+    }
+  ],
+  "enriched": true
+}

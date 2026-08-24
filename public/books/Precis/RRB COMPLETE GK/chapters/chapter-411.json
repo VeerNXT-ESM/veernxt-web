@@ -1,0 +1,95 @@
+{
+  "id": "d0nwfgy",
+  "title": "17. Metropolitan Planning Committee (Article 243ZE)",
+  "order": 411,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "h1q9fie"
+    },
+    {
+      "type": "pullQuote",
+      "content": "There shall be constituted in every Metropolitan area a Metropolitan Planning Committee to prepare a draft development plan for the Metropolitan area as a whole.",
+      "id": "vrg2eeo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "District Planning Committee (DPC)",
+        "Metropolitan Planning Committee (MPC)"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 243ZD",
+          "Article 243ZE"
+        ],
+        [
+          "Minimum Elected Share",
+          "4/5th of total members",
+          "2/3rd of total members"
+        ],
+        [
+          "Jurisdiction",
+          "Entire District Level",
+          "Metropolitan Area (Population >= 10 Lakhs)"
+        ],
+        [
+          "Elected By",
+          "Elected members of District Panchayat & Municipalities",
+          "Elected members of Municipalities & Panchayats Chairpersons"
+        ]
+      ],
+      "id": "kpvypy4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 243ZE",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Amendment",
+          "value": "74th CAA, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Elected Members Share",
+          "value": "At least 2/3rd",
+          "icon": "check"
+        },
+        {
+          "label": "Min. Area Population",
+          "value": "10 Lakhs+",
+          "icon": "info"
+        }
+      ],
+      "id": "a65mfdr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between DPC (Article 243ZD) and MPC (Article 243ZE): DPC requires at least 4/5th elected members, whereas MPC requires at least 2/3rd elected members.",
+        "The representation of elected members in the MPC is proportional to the ratio between the population of the Municipalities and of the Panchayats in that metropolitan area.",
+        "Questions frequently test the minimum population criteria for defining a Metropolitan area (10 Lakhs or 1 Million)."
+      ],
+      "id": "bcgywfj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 243ZE of the Constitution mandates the constitution of a Metropolitan Planning Committee (MPC) in every metropolitan area.",
+        "A metropolitan area refers to an area having a population of 10 lakh (1 million) or more, comprised in one or more districts and consisting of two or more Municipalities or Panchayats.",
+        "Not less than two-thirds of the members of the committee must be elected by and from amongst the elected members of the Municipalities and Chairpersons of the Panchayats in the Metropolitan area.",
+        "The main function of the MPC is to prepare a draft development plan for the metropolitan area as a whole.",
+        "The Chairperson of every Metropolitan Planning Committee forwards the development plan recommended by such committee to the Government of the State."
+      ],
+      "id": "dg9hvq7"
+    }
+  ],
+  "enriched": true
+}

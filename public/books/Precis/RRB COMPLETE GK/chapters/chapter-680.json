@@ -1,0 +1,90 @@
+{
+  "id": "yrif339",
+  "title": "RRB Quick Revision Box",
+  "order": 680,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "0yn6kw5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways was nationalized in 1951 and is now one of the largest railway networks under a single management globally.",
+      "id": "5s4zqxv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm / ft)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge (BG)",
+          "1676 mm (5 ft 6 in)",
+          "Mainlines and high-density freight corridors"
+        ],
+        [
+          "Meter Gauge (MG)",
+          "1000 mm (3 ft 3 3/8 in)",
+          "Secondary lines (largely converted under Project Unigauge)"
+        ],
+        [
+          "Narrow Gauge (NG)",
+          "762 mm & 610 mm",
+          "Mountain railways and heritage routes"
+        ]
+      ],
+      "id": "zhv9txr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "info"
+        },
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Nationalized In",
+          "value": "1951",
+          "icon": "award"
+        },
+        {
+          "label": "Track Gauges",
+          "value": "3 Types",
+          "icon": "check"
+        }
+      ],
+      "id": "ud0qhy9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headquarters of major railway zones (e.g., Southern Railway at Chennai, Eastern Railway at Kolkata) are frequently tested.",
+        "First electric train in India ran on February 3, 1925, between Bombay VT and Kurla Harbour.",
+        "Manufacturing units like Chittaranjan Locomotive Works (CLW) and Integral Coach Factory (ICF) are high-yield match-the-following topics."
+      ],
+      "id": "18iy23w"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India operated on April 16, 1853, between Bori Bunder (Mumbai) and Thane.",
+        "Lord Dalhousie is widely recognized as the 'Father of Indian Railways'.",
+        "Indian Railways was nationalized in 1951 and is currently divided into 19 administrative zones.",
+        "The longest railway platform in the world is at Shree Siddharoodha Swamiji Hubballi Junction in Karnataka.",
+        "Project Unigauge was launched in 1992 to convert narrow and meter gauge tracks to broad gauge."
+      ],
+      "id": "h1i0jmq"
+    }
+  ],
+  "enriched": true
+}

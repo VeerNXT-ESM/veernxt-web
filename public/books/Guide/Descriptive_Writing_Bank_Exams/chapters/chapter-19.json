@@ -1,0 +1,113 @@
+{
+  "id": "wpnb82b",
+  "title": "ESSAY 2: The Rise of Non-Performing Assets in Indian Banks — Causes, Consequences and Cures",
+  "order": 19,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "urpvmed"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "NPA Threshold",
+          "value": "90 Days Overdue",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Reform",
+          "value": "IBC 2016",
+          "icon": "book"
+        },
+        {
+          "label": "IBC Resolution Timeline",
+          "value": "180 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Regulatory Framework",
+          "value": "PCA Framework",
+          "icon": "award"
+        }
+      ],
+      "id": "c70455u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A loan is classified as a Non-Performing Asset (NPA) when interest or principal installment remains overdue for more than 90 days in standard loans or two crop seasons for short-duration agricultural crops.",
+        "Primary causes of rising NPAs include aggressive lending practices, unviable project appraisals, governance failures, policy paralysis, and macroeconomic downturns.",
+        "High NPAs give rise to the 'Twin Balance Sheet' problem, constraining bank lending capacity, depressing corporate investment, and slowing overall economic growth.",
+        "Major legal and institutional cures include the Insolvency and Bankruptcy Code (IBC) 2016, Asset Reconstruction Companies (ARCs), National Asset Reconstruction Company Limited (NARCL), and the SARFAESI Act 2002."
+      ],
+      "id": "f4891mh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Non-Performing Assets reflect not just financial stress on bank balance sheets, but a deeper structural constraint on credit growth and overall macroeconomic stability.",
+      "id": "8r2xkde"
+    },
+    {
+      "type": "paragraph",
+      "id": "sw2qb2t"
+    },
+    {
+      "type": "paragraph",
+      "id": "7dsdqkd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Gross NPA (GNPA)",
+        "Net NPA (NNPA)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Total value of all loans defaulted by borrowers in the bank's portfolio",
+          "The actual bad asset value remaining after deducting provisions set aside by the bank"
+        ],
+        [
+          "Calculation",
+          "Gross NPA = Total Non-Performing Loans / Total Advances",
+          "Net NPA = Gross NPA - Provision Coverage Amount"
+        ],
+        [
+          "Significance",
+          "Measures the overall quality of loan origination and risk management",
+          "Reflects the actual financial risk and balance sheet burden faced by the bank"
+        ]
+      ],
+      "id": "519hg7u"
+    },
+    {
+      "type": "paragraph",
+      "id": "cpg4lbz"
+    },
+    {
+      "type": "paragraph",
+      "id": "jm9hjlv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Gross NPA and Net NPA: Net NPA = Gross NPA minus Provisioning.",
+        "Understand the Special Mention Account (SMA) classification: SMA-0 (1-30 days overdue), SMA-1 (31-60 days overdue), and SMA-2 (61-90 days overdue).",
+        "Focus on key judicial and regulatory mechanisms like the IBC 2016, DRTs (Debt Recovery Tribunals), SARFAESI Act, and RBI's Prompt Corrective Action (PCA) framework."
+      ],
+      "id": "rdjbk7o"
+    },
+    {
+      "type": "paragraph",
+      "id": "2enptlm"
+    },
+    {
+      "type": "paragraph",
+      "id": "go632gu"
+    }
+  ],
+  "enriched": true
+}

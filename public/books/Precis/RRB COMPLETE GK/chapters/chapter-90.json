@@ -1,0 +1,89 @@
+{
+  "id": "yr9sx93",
+  "title": "2. Elastic Rebound Theory",
+  "order": 90,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "deghhnh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "An earthquake is the sudden release of stored elastic strain energy accumulated along a fault zone.",
+      "id": "lxxvaax"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Strain Accumulation Stage",
+        "Elastic Rebound Stage"
+      ],
+      "rows": [
+        [
+          "Time Duration",
+          "Slow (Decades to Centuries)",
+          "Rapid (Seconds to Minutes)"
+        ],
+        [
+          "Rock Mechanics",
+          "Bending and continuous elastic deformation",
+          "Fracture, rupture, and snap-back to relaxed state"
+        ],
+        [
+          "Energy State",
+          "Potential strain energy is stored",
+          "Stored energy converted to kinetic seismic waves"
+        ]
+      ],
+      "id": "ta05f1w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Formulated Year",
+          "value": "1910",
+          "icon": "calendar"
+        },
+        {
+          "label": "Proposed By",
+          "value": "H.F. Reid",
+          "icon": "award"
+        },
+        {
+          "label": "Key Event",
+          "value": "1906 SF EQ",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Cause",
+          "value": "Fault Rupture",
+          "icon": "check"
+        }
+      ],
+      "id": "3ilef66"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "UPSC Prelims/Mains Focus: Harry Fielding Reid is directly associated with the Elastic Rebound Theory.",
+        "Distinction: Strain accumulation is a slow, long-term process, whereas strain release via elastic rebound is rapid and seismic.",
+        "Exam Trap: The theory applies specifically to shallow tectonic earthquakes driven by brittle rock failure."
+      ],
+      "id": "t4u2tcb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Formulated by Harry Fielding Reid after studying the 1906 San Francisco earthquake along the San Andreas Fault.",
+        "Explains that continuous tectonic forces apply slow elastic strain deformation to rocks along a fault line.",
+        "When stored stress exceeds the frictional strength of the rock, sudden rupture occurs along the weak zone.",
+        "Post-rupture, the snapped rocks spring back into an unstrained shape, releasing stored energy as seismic waves."
+      ],
+      "id": "jqmyuur"
+    }
+  ],
+  "enriched": true
+}

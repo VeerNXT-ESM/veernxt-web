@@ -1,0 +1,91 @@
+{
+  "id": "7bbr6bl",
+  "title": "10. Pardoning Power (Article 72)",
+  "order": 307,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "nnb1pcw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 72 empowers the President to grant pardons, reprieves, respites or remissions of punishment or to suspend, remit or commute the sentence of any person convicted of any offence.",
+      "id": "ef6andq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "President (Article 72)",
+        "Governor (Article 161)"
+      ],
+      "rows": [
+        [
+          "Pardon of Death Sentence",
+          "Can completely pardon, commute, remit, or suspend a death sentence.",
+          "Cannot pardon a death sentence (can only suspend, remit, or commute it)."
+        ],
+        [
+          "Court-Martial Sentences",
+          "Can grant clemency and pardon for sentences passed by Military Courts.",
+          "Has no power regarding sentences passed by a Court-Martial."
+        ],
+        [
+          "Jurisdiction of Laws",
+          "Applies to offences committed against Union Laws.",
+          "Applies to offences committed against State Laws."
+        ]
+      ],
+      "id": "ns83dlg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 72",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Modalities",
+          "value": "5 Forms",
+          "icon": "check"
+        },
+        {
+          "label": "Governor's Power",
+          "value": "Article 161",
+          "icon": "info"
+        },
+        {
+          "label": "Nature of Power",
+          "value": "Executive Power",
+          "icon": "award"
+        }
+      ],
+      "id": "ff73aec"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Only the President can grant a full pardon for a death sentence; the Governor under Article 161 cannot pardon a death sentence.",
+        "The power to grant pardon or clemency for sentences awarded by a Court-Martial (military court) lies exclusively with the President.",
+        "The President acts on the advice of the Union Cabinet when deciding mercy petitions, as it is an executive power rather than a personal discretion.",
+        "A petitioner seeking mercy under Article 72 has no constitutional right to an oral hearing before the President."
+      ],
+      "id": "tr3o2yg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 72 empowers the President to grant pardons, reprieves, respites, or remissions of punishment, or to suspend, remit, or commute sentences.",
+        "A Pardon completely absolves the convict from all sentences, punishments, and legal disqualifications.",
+        "Commutation replaces a harsher punishment with a lighter form, whereas Remission reduces the duration of a sentence without changing its character.",
+        "Respite involves awarding a lesser sentence due to special facts such as pregnancy or physical disability, while Reprieve means a temporary stay of execution.",
+        "The President exercises pardoning power on the binding advice of the Union Council of Ministers, and the decision is subject to limited judicial review."
+      ],
+      "id": "riaktja"
+    }
+  ],
+  "enriched": true
+}

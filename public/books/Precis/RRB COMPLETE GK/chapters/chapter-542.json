@@ -1,0 +1,137 @@
+{
+  "id": "o6ebs5p",
+  "title": "Lokpal vs CVC vs CBI",
+  "order": 542,
+  "blocks": [
+    {
+      "id": "b2vjw8v",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Santhanam Committee on Prevention of Corruption recommended the setting up of the Central Vigilance Commission in 1964 to tackle corruption in public administration.",
+      "id": "rgeejc7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lokpal",
+        "CVC",
+        "CBI"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Statutory Body (Lokpal Act, 2013)",
+          "Statutory Body (CVC Act, 2003)",
+          "Non-Statutory Body (DSPE Act, 1946)"
+        ],
+        [
+          "Primary Role",
+          "Ombudsman for high-level corruption allegations",
+          "Superintendence over vigilance administration",
+          "Premier criminal and anti-corruption investigative agency"
+        ],
+        [
+          "Head of Institution",
+          "Chairperson (Max 8 Members)",
+          "Central Vigilance Commissioner (Max 2 Vigilance Commissioners)",
+          "Director, CBI"
+        ],
+        [
+          "Nodal Ministry",
+          "Ministry of Personnel, Public Grievances & Pensions",
+          "Ministry of Personnel, Public Grievances & Pensions",
+          "Ministry of Personnel, Public Grievances & Pensions"
+        ]
+      ],
+      "id": "87m03yd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CBI Established",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "CVC Established",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "Lokpal Act Enacted",
+          "value": "2013",
+          "icon": "award"
+        },
+        {
+          "label": "Max Lokpal Strength",
+          "value": "8 Members",
+          "icon": "info"
+        }
+      ],
+      "id": "vmfe7qw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body created by an Act of Parliament; it receives its powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "The Director of CBI is appointed by a statutory committee consisting of the Prime Minister, the Leader of Opposition (or Leader of the single largest opposition party in Lok Sabha), and the Chief Justice of India (or a Supreme Court Judge nominated by CJI).",
+        "CVC submits its annual report directly to the President of India, who lays it before each House of Parliament."
+      ],
+      "id": "uogzgra"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lokpal is a statutory anti-corruption ombudsman established under the Lokpal and Lokayuktas Act, 2013, holding jurisdiction over public servants including the Prime Minister under specified conditions.",
+        "The Central Vigilance Commission (CVC) was established in 1964 following the recommendations of the Santhanam Committee and was granted statutory status in 2003.",
+        "The Central Bureau of Investigation (CBI) is a non-statutory body deriving its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "While Lokpal functions as an overarching inquiry authority and CVC supervises vigilance administration, CBI serves as the primary executive investigating agency."
+      ],
+      "id": "xx2hub0"
+    }
+  ],
+  "enriched": true
+}

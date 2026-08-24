@@ -1,0 +1,113 @@
+{
+  "id": "7g834iy",
+  "title": "Standard Time",
+  "order": 35,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "06bgv2j"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Standard Meridian",
+          "value": "82°30' E",
+          "icon": "info"
+        },
+        {
+          "label": "Offset from GMT",
+          "value": "+5 Hours 30 Min",
+          "icon": "clock"
+        },
+        {
+          "label": "States Covered",
+          "value": "5 States",
+          "icon": "check"
+        },
+        {
+          "label": "East-West Time Lag",
+          "value": "2 Hours",
+          "icon": "clock"
+        }
+      ],
+      "id": "lyubxsa"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Standard Meridian of India is 82°30' E, which passes through Mirzapur and is taken as the standard time for the entire country.",
+      "id": "w44reva"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Local Time",
+        "Standard Time"
+      ],
+      "rows": [
+        [
+          "Basis",
+          "Determined by the noon position of the Sun at a specific meridian.",
+          "Determined by a central meridian chosen for an entire country or zone."
+        ],
+        [
+          "Uniformity",
+          "Differs from place to place across different longitudes.",
+          "Uniform throughout the entire country or time zone."
+        ],
+        [
+          "Practical Use",
+          "Impractical for national transport, communication, and scheduling.",
+          "Essential for synchronized transport schedules, broadcasts, and administration."
+        ]
+      ],
+      "id": "karxnbu"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian Standard Time (IST) is based on the 82°30' E longitude, passing through Mirzapur, Uttar Pradesh.",
+        "India's longitudinal span of nearly 30° creates a natural time difference of about 2 hours between Kibithu in Arunachal Pradesh and Guhar Moti in Gujarat.",
+        "The Standard Meridian passes through five Indian states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
+        "1 degree of longitude corresponds to a time difference of 4 minutes."
+      ],
+      "id": "7oes227"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently ask to identify which states the Standard Meridian passes through (UP, MP, Chhattisgarh, Odisha, Andhra Pradesh).",
+        "Calculate time variations using the rule: 1° longitude = 4 minutes (15° = 1 hour).",
+        "Remember that IST is 5 hours and 30 minutes ahead of Greenwich Mean Time (UTC+5:30)."
+      ],
+      "id": "i2u2qhg"
+    },
+    {
+      "id": "e5mw7o0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9pivj9i"
+    }
+  ],
+  "enriched": true
+}

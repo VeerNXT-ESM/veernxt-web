@@ -1,0 +1,115 @@
+{
+  "id": "h7r5djz",
+  "title": "8. Soils of India (Detailed)",
+  "order": 174,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1fd3i27"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "ICAR Soil Groups",
+          "value": "8 Major Types",
+          "icon": "book"
+        },
+        {
+          "label": "Alluvial Soil Share",
+          "value": "~40%",
+          "icon": "award"
+        },
+        {
+          "label": "Black Soil Share",
+          "value": "~15%",
+          "icon": "info"
+        },
+        {
+          "label": "ICAR Classification",
+          "value": "1953",
+          "icon": "calendar"
+        }
+      ],
+      "id": "qn1mr5r"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alluvial soil is the most widespread and fertile soil type in India, predominantly covering the Northern Plains and river valleys.",
+        "Black soil, also known as Regur soil, is highly clayey, retains moisture well, and is ideal for growing cotton.",
+        "Red soil derives its distinctive reddish color from the high diffusion of iron in crystalline and metamorphic rocks.",
+        "Laterite soil forms in regions with high temperature and heavy rainfall through intense leaching, making it rich in iron oxide and aluminum.",
+        "Saline soils (Usar soils) contain high amounts of sodium, potassium, and magnesium, rendering them infertile without chemical treatment."
+      ],
+      "id": "cjvitco"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Alluvial soils are the most extensive soil type in India, covering over forty percent of the total land area and forming the backbone of Indian agriculture.",
+      "id": "9g5ucsl"
+    },
+    {
+      "type": "paragraph",
+      "id": "po8eqf2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Khadar Soil",
+        "Bhangar Soil"
+      ],
+      "rows": [
+        [
+          "Soil Age",
+          "New Alluvium",
+          "Old Alluvium"
+        ],
+        [
+          "Location",
+          "Low-lying flood plains near river beds",
+          "Higher terraces away from river banks"
+        ],
+        [
+          "Fertility Level",
+          "Higher fertility, frequently renewed by floods",
+          "Comparatively less fertile, older soil layer"
+        ],
+        [
+          "Composition",
+          "Fine silt and clay, lacking nodules",
+          "Contains calcareous deposits (Kankar nodules)"
+        ]
+      ],
+      "id": "rsr1lne"
+    },
+    {
+      "type": "paragraph",
+      "id": "69t5dv3"
+    },
+    {
+      "type": "paragraph",
+      "id": "axpzvsx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Khadar (new alluvium) is fine-textured and fertile, whereas Bhangar (old alluvium) contains calcareous deposits known as Kankar.",
+        "Black soil exhibits a self-ploughing characteristic because it develops deep cracks upon drying and swells when wet.",
+        "Laterite soils are prominently used for cashew nut cultivation and as building bricks due to hardening upon exposure to air."
+      ],
+      "id": "l59nzb8"
+    },
+    {
+      "type": "paragraph",
+      "id": "c9b2bay"
+    },
+    {
+      "type": "paragraph",
+      "id": "l63a2vk"
+    }
+  ],
+  "enriched": true
+}

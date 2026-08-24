@@ -1,0 +1,90 @@
+{
+  "id": "y3tkta9",
+  "title": "11. Inquiry Wing and Prosecution Wing",
+  "order": 538,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "o0n91i8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Lokpal shall constitute an Inquiry Wing headed by the Director of Inquiry for the purpose of conducting preliminary inquiry into any offence alleged to have been committed by a public servant.",
+      "id": "ebrxqu5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Inquiry Wing",
+        "Prosecution Wing"
+      ],
+      "rows": [
+        [
+          "Headed By",
+          "Director of Inquiry",
+          "Director of Prosecution"
+        ],
+        [
+          "Minimum Rank",
+          "Additional Secretary to GoI",
+          "Additional Secretary to GoI"
+        ],
+        [
+          "Primary Role",
+          "Preliminary inquiry into alleged corruption",
+          "Prosecution of offenses before Special Court"
+        ]
+      ],
+      "id": "agdfr7c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Head Rank",
+          "value": "Addl. Secretary",
+          "icon": "award"
+        },
+        {
+          "label": "Inquiry Limit",
+          "value": "60 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Governing Act",
+          "value": "Lokpal Act 2013",
+          "icon": "book"
+        },
+        {
+          "label": "Key Wings",
+          "value": "Inquiry & Prosecution",
+          "icon": "check"
+        }
+      ],
+      "id": "bbpsxc9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note that the minimum rank required for Directors of both wings is Additional Secretary to the Government of India.",
+        "The statutory time frame for completing a preliminary inquiry is 60 days, extendable by up to 60 days at a time.",
+        "Differentiate between the Inquiry Wing (preliminary inquiry) and Prosecution Wing (prosecuting before the Special Court)."
+      ],
+      "id": "qmlfpyd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Lokpal is mandated to constitute an Inquiry Wing headed by a Director of Inquiry for conducting preliminary inquiries.",
+        "The Director of Inquiry and Director of Prosecution must both hold ranks not below Additional Secretary to the Government of India.",
+        "The Prosecution Wing is responsible for filing prosecution cases against public servants in the Special Court.",
+        "A preliminary inquiry by the Inquiry Wing should ordinarily be completed within 60 days.",
+        "Lokpal may also entrust preliminary inquiry or investigation to any agency including the Central Bureau of Investigation (CBI)."
+      ],
+      "id": "6oqwj2m"
+    }
+  ],
+  "enriched": true
+}

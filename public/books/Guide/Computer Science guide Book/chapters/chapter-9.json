@@ -1,35 +1,40 @@
 {
-  "id": "78lppg2",
+  "id": "ovu599j",
   "title": "Chapter 9: Microsoft Office",
   "order": 9,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "84f5tbu"
+      "id": "ckgczvc"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Core Applications",
+          "label": "Chapter Number",
+          "value": "Chapter 9",
+          "icon": "info"
+        },
+        {
+          "label": "Core Productivity Tools",
           "value": "Word, Excel, PowerPoint",
           "icon": "book"
         },
         {
-          "label": "Shortcut Guide",
-          "value": "Section 9.5",
-          "icon": "clock"
+          "label": "Essential Skill",
+          "value": "Basic Keyboard Shortcuts",
+          "icon": "check"
         },
         {
           "label": "Exam Focus",
-          "value": "Section 9.6",
+          "value": "Important Exam Points",
           "icon": "award"
         }
       ],
-      "id": "q3lavsj"
+      "id": "yxt1mws"
     },
     {
-      "id": "zfsz2mi",
+      "id": "iprpr4j",
       "type": "heading",
       "level": 2,
       "content": "9.1 Components of Microsoft Office"
@@ -38,16 +43,16 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Microsoft Office consists of essential productivity tools including MS Word, MS Excel, and MS PowerPoint.",
-        "MS Word covers word processing features and specific components of the MS Word window.",
-        "MS Excel focuses on spreadsheet terminology, grid layouts, and common analytical functions.",
-        "MS PowerPoint highlights presentation design, slide components, and visual features.",
-        "Basic keyboard shortcuts and specific exam points are vital for answering computer awareness questions quickly."
+        "Microsoft Office consists of primary productivity applications including MS Word, MS Excel, and MS PowerPoint.",
+        "MS Word study focuses on core features and the structural components of the MS Word window.",
+        "MS Excel covers essential spreadsheet terminology and common Excel functions.",
+        "MS PowerPoint involves learning key presentation features and window components.",
+        "Basic keyboard shortcuts and important exam points are vital topics frequently targeted in competitive exams."
       ],
-      "id": "evo54fb"
+      "id": "ezmkg01"
     },
     {
-      "id": "yihhm4t",
+      "id": "19tdjc5",
       "type": "table",
       "rows": [
         {
@@ -95,23 +100,23 @@
       ]
     },
     {
-      "id": "5lfd9n5",
+      "id": "zlz6e2g",
       "type": "heading",
       "level": 2,
       "content": "9.2 MS Word"
     },
     {
       "type": "paragraph",
-      "id": "i1mz9cf"
+      "id": "skomwmm"
     },
     {
-      "id": "b16v61c",
+      "id": "hd3z02n",
       "type": "heading",
       "level": 3,
       "content": "9.2.1 Features of MS Word"
     },
     {
-      "id": "5ap8xr4",
+      "id": "ahawb5s",
       "type": "list",
       "items": [
         null,
@@ -122,7 +127,7 @@
       ]
     },
     {
-      "id": "ngsl7wt",
+      "id": "wd8mfka",
       "type": "heading",
       "level": 3,
       "content": "9.2.2 Components of MS Word Window"
@@ -130,10 +135,10 @@
     {
       "type": "pullQuote",
       "content": "Components of Microsoft Office",
-      "id": "6gmrfym"
+      "id": "1xznmqa"
     },
     {
-      "id": "5ydda97",
+      "id": "xsi79u9",
       "type": "table",
       "rows": [
         {
@@ -181,23 +186,23 @@
       ]
     },
     {
-      "id": "fdgue9f",
+      "id": "c9qiy7f",
       "type": "heading",
       "level": 2,
       "content": "9.3 MS Excel"
     },
     {
       "type": "paragraph",
-      "id": "kmkqm0g"
+      "id": "5jd1ppf"
     },
     {
-      "id": "p5ejwyb",
+      "id": "ot634cl",
       "type": "heading",
       "level": 3,
       "content": "9.3.1 Excel Terminology"
     },
     {
-      "id": "w8shbct",
+      "id": "w1961b1",
       "type": "table",
       "rows": [
         {
@@ -249,35 +254,35 @@
       "headers": [
         "Application",
         "Primary Purpose",
-        "Key Features & Components"
+        "Key Subtopics"
       ],
       "rows": [
         [
           "MS Word",
-          "Word Processing & Document Creation",
-          "Features & Components of MS Word Window"
+          "Word Processing",
+          "Features of MS Word, Components of MS Word Window"
         ],
         [
           "MS Excel",
-          "Spreadsheets & Data Calculations",
-          "Excel Terminology & Common Excel Functions"
+          "Spreadsheets & Data Analysis",
+          "Excel Terminology, Common Excel Functions"
         ],
         [
           "MS PowerPoint",
-          "Visual Presentations & Slideshows",
-          "PowerPoint Features & Components"
+          "Digital Presentations",
+          "Features of PowerPoint, PowerPoint Components"
         ]
       ],
-      "id": "6h6zqzh"
+      "id": "kmql2o0"
     },
     {
-      "id": "q3fzebn",
+      "id": "fiuxcjj",
       "type": "heading",
       "level": 3,
       "content": "9.3.2 Common Excel Functions"
     },
     {
-      "id": "gh1uwvi",
+      "id": "thlin0r",
       "type": "list",
       "items": [
         null,
@@ -288,23 +293,23 @@
       ]
     },
     {
-      "id": "jwwsdo5",
+      "id": "vy4suse",
       "type": "heading",
       "level": 2,
       "content": "9.4 MS PowerPoint"
     },
     {
       "type": "paragraph",
-      "id": "4zxu707"
+      "id": "kriwsz6"
     },
     {
-      "id": "i10h47q",
+      "id": "ht9rrxc",
       "type": "heading",
       "level": 3,
       "content": "9.4.1 Features of PowerPoint"
     },
     {
-      "id": "2xiu6ts",
+      "id": "tm0o2ur",
       "type": "list",
       "items": [
         null,
@@ -314,7 +319,7 @@
       ]
     },
     {
-      "id": "jkcmzt9",
+      "id": "u4bdgy5",
       "type": "heading",
       "level": 3,
       "content": "9.4.2 PowerPoint Components"
@@ -322,15 +327,14 @@
     {
       "type": "examAlert",
       "items": [
-        "Understand the key components of the MS Word window and core features.",
-        "Memorize common MS Excel functions and spreadsheet terminology, as these are frequently tested.",
-        "Learn essential PowerPoint components and slide navigation shortcuts.",
-        "Master basic keyboard shortcuts (Section 9.5) for rapid question solving in competitive exams."
+        "Common Excel functions and spreadsheet terminology are high-frequency topics in competitive computer awareness papers.",
+        "Basic keyboard shortcuts for MS Word, Excel, and PowerPoint are frequently asked in objective questions.",
+        "Questions often test identification and function of specific components within the MS Word and PowerPoint windows."
       ],
-      "id": "ozdfz8q"
+      "id": "3z2x8xu"
     },
     {
-      "id": "ucsq12x",
+      "id": "0yvu6xi",
       "type": "table",
       "rows": [
         {
@@ -371,13 +375,13 @@
       ]
     },
     {
-      "id": "xhb469a",
+      "id": "1a5s27f",
       "type": "heading",
       "level": 2,
       "content": "9.5 Basic Keyboard Shortcuts"
     },
     {
-      "id": "t3r34ew",
+      "id": "5kag798",
       "type": "table",
       "rows": [
         {
@@ -460,13 +464,13 @@
       ]
     },
     {
-      "id": "xpnp00t",
+      "id": "4vknums",
       "type": "heading",
       "level": 2,
       "content": "9.6 Important Exam Points"
     },
     {
-      "id": "1iz46yf",
+      "id": "cxaq0h2",
       "type": "list",
       "items": [
         null,

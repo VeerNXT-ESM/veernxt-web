@@ -1,0 +1,99 @@
+{
+  "id": "oqmetsk",
+  "title": "Intraplate Earthquakes",
+  "order": 93,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ubplbsa"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Intraplate earthquakes occur in the interior of a tectonic plate, far from plate boundaries, often reactivating ancient zones of weakness.",
+      "id": "txjl1qv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Latur Event",
+          "value": "1993",
+          "icon": "calendar"
+        },
+        {
+          "label": "Bhuj Magnitude",
+          "value": "7.7 Mw",
+          "icon": "award"
+        },
+        {
+          "label": "Occurrence Zone",
+          "value": "Plate Interior",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Mechanism",
+          "value": "Fault Reactivation",
+          "icon": "check"
+        }
+      ],
+      "id": "2ciwtys"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Interplate Earthquakes",
+        "Intraplate Earthquakes"
+      ],
+      "rows": [
+        [
+          "Location",
+          "Along active tectonic plate boundaries",
+          "Within the interior of tectonic plates"
+        ],
+        [
+          "Frequency",
+          "High frequency, frequent seismic events",
+          "Low frequency, long recurrence intervals"
+        ],
+        [
+          "Primary Cause",
+          "Plate boundary movements (subduction, sliding, spreading)",
+          "Reactivation of ancient crustal faults under localized stress"
+        ],
+        [
+          "Indian Examples",
+          "Himalayan seismic belt (e.g., 2015 Nepal earthquake)",
+          "Deccan Trap / Peninsular region (e.g., 1993 Latur, 2001 Bhuj)"
+        ]
+      ],
+      "id": "thxiviy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Intraplate earthquakes occur within the interior of a tectonic plate rather than along active plate margins.",
+        "Peninsular India, traditionally regarded as a Stable Continental Region (SCR), is susceptible to destructive intraplate seismic activity.",
+        "These quakes are primarily caused by the reactivation of pre-existing ancient zones of weakness under compressive intraplate stresses.",
+        "Notable Indian intraplate earthquakes include Koyna (1967), Latur (1993), and Bhuj (2001).",
+        "Due to long recurrence intervals, intraplate seismic hazard assessment remains a critical challenge for disaster mitigation."
+      ],
+      "id": "4g0swte"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Interplate (Himalayan boundary zone) and Intraplate (Peninsular Shield) seismic zones for UPSC Geography.",
+        "Koyna earthquake (1967) is a classic example of Reservoir-Induced Seismicity (RIS) in an intraplate setup.",
+        "Focus on the 'Stable Continental Region (SCR)' concept and strain accumulation driven by the northward drift of the Indian Plate."
+      ],
+      "id": "qm4rh1a"
+    },
+    {
+      "type": "paragraph",
+      "id": "jvtzjm9"
+    }
+  ],
+  "enriched": true
+}

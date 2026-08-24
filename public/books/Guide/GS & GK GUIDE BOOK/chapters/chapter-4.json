@@ -1,11 +1,11 @@
 {
-  "id": "po0z9yw",
+  "id": "d2vjohl",
   "title": "Chapter 4: Mauryan Empire",
   "order": 4,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "fzieblv"
+      "id": "fpjuwjz"
     },
     {
       "type": "statStrip",
@@ -18,18 +18,23 @@
         {
           "label": "Bindusara",
           "value": "298–273 BCE",
-          "icon": "clock"
+          "icon": "calendar"
         },
         {
           "label": "Ashoka the Great",
           "value": "273–232 BCE",
           "icon": "award"
+        },
+        {
+          "label": "Key Event",
+          "value": "Kalinga War",
+          "icon": "info"
         }
       ],
-      "id": "mhdolsw"
+      "id": "g6eou9a"
     },
     {
-      "id": "tlfqzw0",
+      "id": "la1uw05",
       "type": "heading",
       "level": 2,
       "content": "1. Background of the Mauryan Empire"
@@ -38,37 +43,38 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Chandragupta Maurya established the reign from 322–298 BCE.",
-        "Bindusara succeeded Chandragupta Maurya and ruled from 298–273 BCE.",
-        "Ashoka the Great ruled from 273–232 BCE, marking a significant era in Mauryan history.",
-        "Major milestones include the Kalinga War, Ashoka's Dhamma, and Mauryan Art and Architecture."
+        "The Mauryan Empire was established by Chandragupta Maurya after defeating the Nanda dynasty with Chanakya's guidance.",
+        "Bindusara expanded the empire further south and maintained diplomatic ties with Hellenistic rulers.",
+        "Ashoka embraced non-violence and propagated Dhamma across Asia following the devastating Kalinga War.",
+        "Mauryan administration was highly centralized and documented in detail in Kautilya's Arthashastra and Megasthenes' Indica.",
+        "Mauryan art features distinct polished monolithic pillars, rock edicts, and stupas like the Sanchi Stupa."
       ],
-      "id": "imc5fop"
+      "id": "340p6fw"
     },
     {
       "type": "paragraph",
-      "id": "3uxomp4"
+      "id": "aiun47a"
     },
     {
       "type": "paragraph",
-      "id": "pcvwaez"
+      "id": "rt7ybya"
     },
     {
       "type": "paragraph",
-      "id": "aawzk4d"
+      "id": "attjypb"
     },
     {
       "type": "paragraph",
-      "id": "ycf3ild"
+      "id": "rsr8p0p"
     },
     {
-      "id": "knpqy34",
+      "id": "l2nck7a",
       "type": "heading",
       "level": 2,
       "content": "Important Mauryan Rulers"
     },
     {
-      "id": "byq81qr",
+      "id": "qzgp049",
       "type": "table",
       "rows": [
         {
@@ -102,128 +108,158 @@
       ]
     },
     {
-      "id": "y0idxzz",
+      "id": "xye8kxo",
       "type": "heading",
       "level": 2,
       "content": "3. Chandragupta Maurya (322–298 BCE)"
     },
     {
       "type": "paragraph",
-      "id": "an1paqc"
+      "id": "ycgd3u4"
     },
     {
       "type": "paragraph",
-      "id": "5x0nac7"
+      "id": "g9r3ay3"
     },
     {
       "type": "paragraph",
-      "id": "oc4qmjt"
+      "id": "mqwoun0"
     },
     {
       "type": "paragraph",
-      "id": "bjub7q2"
+      "id": "uj4duhg"
     },
     {
       "type": "paragraph",
-      "id": "1pgxn58"
+      "id": "qweiw5x"
     },
     {
-      "id": "q7jlzfz",
+      "id": "ztjna9i",
       "type": "heading",
       "level": 2,
       "content": "4. Bindusara (298–273 BCE)"
     },
     {
       "type": "paragraph",
-      "id": "5q1kaxn"
+      "id": "672s5wv"
     },
     {
       "type": "paragraph",
-      "id": "4ogqzo1"
+      "id": "cdmbhew"
     },
     {
       "type": "paragraph",
-      "id": "tlbssho"
+      "id": "g8o113y"
     },
     {
       "type": "pullQuote",
       "content": "Ashoka the Great (273–232 BCE)",
-      "id": "jxaidtg"
+      "id": "7lxvoxi"
     },
     {
-      "id": "j97lds5",
+      "id": "ktukfb3",
       "type": "heading",
       "level": 2,
       "content": "5. Ashoka the Great (273–232 BCE)"
     },
     {
       "type": "paragraph",
-      "id": "t8seep0"
+      "id": "pvq1784"
     },
     {
       "type": "paragraph",
-      "id": "e4e45pw"
+      "id": "18wqo9r"
     },
     {
       "type": "paragraph",
-      "id": "g7ojjxg"
+      "id": "bc4l5a3"
     },
     {
       "type": "paragraph",
-      "id": "a7y13zi"
+      "id": "15g5g6k"
     },
     {
-      "id": "wump1rf",
+      "id": "85euyrn",
       "type": "heading",
       "level": 2,
       "content": "6. Kalinga War"
     },
     {
       "type": "paragraph",
-      "id": "mbee8zw"
+      "id": "dl1v4h6"
     },
     {
       "type": "paragraph",
-      "id": "hcqd2m8"
+      "id": "24cp9vy"
     },
     {
       "type": "paragraph",
-      "id": "9q3go5z"
+      "id": "vjs242y"
     },
     {
       "type": "paragraph",
-      "id": "z0jax07"
+      "id": "p32vqar"
     },
     {
-      "id": "kpjotnb",
+      "type": "comparisonTable",
+      "headers": [
+        "Ruler",
+        "Reign Period",
+        "Titles / Epithets",
+        "Key Legacy"
+      ],
+      "rows": [
+        [
+          "Chandragupta Maurya",
+          "322–298 BCE",
+          "Sandrokottos",
+          "Founded the empire, defeated Seleucus Nicator"
+        ],
+        [
+          "Bindusara",
+          "298–273 BCE",
+          "Amitraghata (Slayer of foes)",
+          "Extended Mauryan rule into Central/Southern India"
+        ],
+        [
+          "Ashoka the Great",
+          "273–232 BCE",
+          "Devanampriya Priyadarsi",
+          "Promoted Dhamma, built edicts, spread Buddhism"
+        ]
+      ],
+      "id": "2zfraaw"
+    },
+    {
+      "id": "fnoxevj",
       "type": "heading",
       "level": 2,
       "content": "7. Ashoka's Dhamma"
     },
     {
       "type": "paragraph",
-      "id": "48glqyg"
+      "id": "x91vlqc"
     },
     {
       "type": "paragraph",
-      "id": "5cligj4"
+      "id": "8cxtu3m"
     },
     {
       "type": "paragraph",
-      "id": "tx8qmdb"
+      "id": "4c6muub"
     },
     {
       "type": "paragraph",
-      "id": "m0y7rio"
+      "id": "cctupit"
     },
     {
-      "id": "tzpfk68",
+      "id": "75wvw9n",
       "type": "heading",
       "level": 2,
       "content": "8. Mauryan Administration"
     },
     {
-      "id": "m8h5g4f",
+      "id": "pz0yj0g",
       "type": "table",
       "rows": [
         {
@@ -264,78 +300,79 @@
       ]
     },
     {
-      "id": "savqmoc",
+      "id": "qtbdvdi",
       "type": "heading",
       "level": 2,
       "content": "9. Mauryan Economy"
     },
     {
       "type": "paragraph",
-      "id": "651tevq"
+      "id": "ulyjqnq"
     },
     {
       "type": "paragraph",
-      "id": "spuxghd"
+      "id": "890109x"
     },
     {
       "type": "paragraph",
-      "id": "f6j2dy9"
+      "id": "e5ls7kg"
     },
     {
       "type": "paragraph",
-      "id": "8mp2vhv"
+      "id": "mnz0bv0"
     },
     {
-      "id": "lc5vzwl",
+      "id": "s6r1wgw",
       "type": "heading",
       "level": 2,
       "content": "10. Mauryan Art and Architecture"
     },
     {
-      "type": "paragraph",
-      "id": "7f7l42k"
-    },
-    {
       "type": "examAlert",
       "items": [
-        "Chronology of Mauryan Rulers: Chandragupta Maurya (322–298 BCE), Bindusara (298–273 BCE), and Ashoka (273–232 BCE).",
-        "Focus areas for SSC exams include Ashoka's Dhamma, Kalinga War, and Mauryan Administration."
+        "Kautilya (Chanakya) authored 'Arthashastra' on statecraft, while Greek ambassador Megasthenes wrote 'Indica'.",
+        "The 13th Major Rock Edict describes Ashoka's victory and remorse over the Kalinga War.",
+        "India's National Emblem is adopted from Ashoka's Lion Capital at Sarnath."
       ],
-      "id": "n9via3n"
+      "id": "f4n6dm1"
     },
     {
       "type": "paragraph",
-      "id": "k5wn42c"
+      "id": "u63oqin"
     },
     {
       "type": "paragraph",
-      "id": "8g3gm16"
+      "id": "0fd22v1"
     },
     {
-      "id": "lodnc1n",
+      "type": "paragraph",
+      "id": "cij0gkk"
+    },
+    {
+      "id": "s06rtid",
       "type": "heading",
       "level": 2,
       "content": "SSC Exam Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "6yoxyok"
+      "id": "f5tt8r2"
     },
     {
       "type": "paragraph",
-      "id": "7jb73u7"
+      "id": "8ww4rtx"
     },
     {
       "type": "paragraph",
-      "id": "kmf6qiy"
+      "id": "6phuap0"
     },
     {
       "type": "paragraph",
-      "id": "xwwhp0y"
+      "id": "oyy85bj"
     },
     {
       "type": "paragraph",
-      "id": "ikltwgw"
+      "id": "a0pi0zl"
     }
   ],
   "enriched": true

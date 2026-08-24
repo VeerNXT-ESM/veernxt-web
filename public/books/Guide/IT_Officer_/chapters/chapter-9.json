@@ -1,0 +1,553 @@
+{
+  "id": "ls7rp35",
+  "title": "CHAPTER 9: CLOUD COMPUTING AND MODERN INFRASTRUCTURE",
+  "order": 9,
+  "blocks": [
+    {
+      "id": "8qzmjz9",
+      "type": "heading",
+      "level": 2,
+      "content": "9.1 Cloud Computing Fundamentals"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Cloud Service Models are divided into Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).",
+        "Cloud Deployment Models include Public, Private, Hybrid, and Community Cloud systems.",
+        "Virtualisation relies on hypervisors to create hardware-isolated Virtual Machines, each running a full guest OS.",
+        "Containers provide OS-level virtualisation, sharing the host operating system kernel for lightweight execution.",
+        "Kubernetes (K8s) is the leading container orchestration tool for automated deployment, scaling, and management."
+      ],
+      "id": "1z8onbo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Service Models",
+          "value": "3 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Deployment Models",
+          "value": "4 Types",
+          "icon": "info"
+        },
+        {
+          "label": "Major Providers",
+          "value": "AWS, Azure, GCP",
+          "icon": "award"
+        },
+        {
+          "label": "Key Container Tool",
+          "value": "Kubernetes (K8s)",
+          "icon": "check"
+        }
+      ],
+      "id": "i6vr6v9"
+    },
+    {
+      "type": "paragraph",
+      "id": "9gqgfxx"
+    },
+    {
+      "id": "9mvzpa5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hzcjca4",
+      "type": "heading",
+      "level": 2,
+      "content": "9.2 Cloud Service Models"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 9: CLOUD COMPUTING AND MODERN INFRASTRUCTURE",
+      "id": "ea5hc1c"
+    },
+    {
+      "id": "cte73ws",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a4p6ryz",
+      "type": "heading",
+      "level": 2,
+      "content": "9.3 Cloud Deployment Models"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Virtual Machines (VMs)",
+        "Containers"
+      ],
+      "rows": [
+        [
+          "Virtualisation Type",
+          "Hardware-level",
+          "OS-level"
+        ],
+        [
+          "Operating System",
+          "Requires individual Guest OS",
+          "Shares Host OS Kernel"
+        ],
+        [
+          "Resource Footprint",
+          "Heavyweight (Gigabytes)",
+          "Lightweight (Megabytes)"
+        ],
+        [
+          "Startup Time",
+          "Minutes",
+          "Milliseconds to Seconds"
+        ]
+      ],
+      "id": "iqshqxz"
+    },
+    {
+      "id": "295u1ez",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ssp9hqg",
+      "type": "heading",
+      "level": 2,
+      "content": "9.4 Major Cloud Providers Comparison"
+    },
+    {
+      "id": "dnsv88y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bnn909o",
+      "type": "heading",
+      "level": 2,
+      "content": "9.5 Virtualisation and Containers"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Classification of cloud service offerings (e.g., AWS EC2 as IaaS vs Google App Engine as PaaS vs Gmail as SaaS).",
+        "Crucial distinction: Virtual Machines require dedicated Guest OS, whereas Containers share the Host OS kernel.",
+        "Key definition: Hybrid Cloud integrates public and private cloud environments, while Community Cloud serves specific multi-organizational user groups."
+      ],
+      "id": "c32vid6"
+    },
+    {
+      "id": "n3i0y3a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vn6oecd",
+      "type": "heading",
+      "level": 3,
+      "content": "Kubernetes (K8s) Key Concepts"
+    },
+    {
+      "id": "ghux3jb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

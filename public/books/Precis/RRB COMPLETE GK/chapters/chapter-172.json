@@ -1,0 +1,141 @@
+{
+  "id": "n8mdqdd",
+  "title": "6. Soil Texture and Structure",
+  "order": 172,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "58xozdb"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil texture is a basic permanent physical property of soil, whereas soil structure can be modified through cultivation and management practices.",
+      "id": "qzwyuty"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Clay Particle Size",
+          "value": "< 0.002 mm",
+          "icon": "info"
+        },
+        {
+          "label": "Silt Particle Size",
+          "value": "0.002 - 0.02 mm",
+          "icon": "info"
+        },
+        {
+          "label": "Sand Particle Size",
+          "value": "0.02 - 2.0 mm",
+          "icon": "info"
+        },
+        {
+          "label": "Textural Classes",
+          "value": "12 Classes",
+          "icon": "book"
+        }
+      ],
+      "id": "k9ju82j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Soil Texture",
+        "Soil Structure"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Relative percentage of sand, silt, and clay particles",
+          "Arrangement of primary soil particles into peds or aggregates"
+        ],
+        [
+          "Permanence",
+          "Static / Permanent property (hard to alter)",
+          "Dynamic property (easily changed by tillage and management)"
+        ],
+        [
+          "Classification",
+          "12 classes defined by the Textural Triangle",
+          "Categorized by shape: Platy, Prismatic, Blocky, and Granular"
+        ],
+        [
+          "Agronomic Role",
+          "Determines inherent water holding capacity and nutrient retention",
+          "Determines soil aeration, water infiltration rate, and root penetration"
+        ]
+      ],
+      "id": "pyr0pmm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil texture denotes the relative proportion of sand, silt, and clay particles in a given soil mass.",
+        "Soil structure defines the spatial arrangement of primary soil particles into aggregated units called peds.",
+        "Stokes' Law forms the governing physical principle for mechanical analysis and soil particle size determination.",
+        "Soil texture remains virtually permanent, while soil structure is dynamic and easily altered by agricultural management.",
+        "Granular and crumb structures provide optimum aeration, drainage, and root penetration for field crops."
+      ],
+      "id": "sfopywd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "ISSS Particle Classification limits: Clay (<0.002 mm), Fine Sand (0.02–0.2 mm), and Coarse Sand (0.2–2.0 mm) are frequently tested in match-the-following questions.",
+        "Stokes' Law application: Sedimentation analysis assumes smooth, spherical particles falling in an infinite fluid without turbulence.",
+        "Granular and Crumb structural types are considered best for agricultural production, whereas Platy structure restricts water percolation and root development."
+      ],
+      "id": "6j2q1rf"
+    },
+    {
+      "id": "k7q8jy5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

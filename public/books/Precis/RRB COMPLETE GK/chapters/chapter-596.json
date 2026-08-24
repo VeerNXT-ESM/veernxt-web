@@ -1,0 +1,87 @@
+{
+  "id": "enoys4k",
+  "title": "7. Atal Pension Yojana (APY)",
+  "order": 596,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9tckqpz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Atal Pension Yojana guarantees a fixed monthly pension between ₹1,000 and ₹5,000 for unorganised sector workers starting at age 60.",
+      "id": "30p1121"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Benefit Category",
+        "Primary Subscriber (Age 60+)",
+        "Spouse (On Subscriber Death)",
+        "Nominee (On Spouse Death)"
+      ],
+      "rows": [
+        [
+          "Monthly Pension",
+          "₹1,000 to ₹5,000 guaranteed",
+          "Same pension amount as subscriber",
+          "No pension"
+        ],
+        [
+          "Accumulated Corpus",
+          "Retained for pension payment",
+          "Retained for pension payment",
+          "Full accumulated corpus returned"
+        ]
+      ],
+      "id": "2a1rx93"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Launch Year",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Entry Age",
+          "value": "18-40 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Monthly Pension",
+          "value": "₹1,000 - ₹5,000",
+          "icon": "award"
+        },
+        {
+          "label": "Regulator",
+          "value": "PFRDA",
+          "icon": "check"
+        }
+      ],
+      "id": "cesk3dt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Age Eligibility: Open to Indian citizens aged 18 to 40 years with a minimum 20-year contribution period.",
+        "Regulating Authority: Administered by the Pension Fund Regulatory and Development Authority (PFRDA) through the NPS architecture.",
+        "Tax Payer Exclusion: Effective from October 1, 2022, any citizen who is or has been an income tax payer is ineligible to join APY."
+      ],
+      "id": "1ovoear"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Atal Pension Yojana (APY) provides targeted social security and guaranteed pension to workers in the unorganised sector.",
+        "Subscribers receive a guaranteed minimum monthly pension ranging from ₹1,000 to ₹5,000 upon attaining the age of 60 years.",
+        "The scheme requires a minimum contribution period of 20 years or more by the subscriber.",
+        "Upon the subscriber's death, the pension amount continues to the spouse, and post the spouse's death, the total corpus is returned to the nominee."
+      ],
+      "id": "ymtj7ap"
+    }
+  ],
+  "enriched": true
+}

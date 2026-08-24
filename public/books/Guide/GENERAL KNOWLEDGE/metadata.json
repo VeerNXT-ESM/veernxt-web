@@ -1,0 +1,878 @@
+{
+  "book_id": "uskwws4",
+  "title": "GENERAL KNOWLEDGE",
+  "source_file": "Cluster_062_GENERAL KNOWLEDGE.docx",
+  "category": "Guide",
+  "chapter_count": 124,
+  "image_count": 0,
+  "chapters": [
+    {
+      "title": "CHAPTER 1: UNIVERSE & SOLAR SYSTEM",
+      "order": 1,
+      "enriched": true,
+      "blocks_count": 38,
+      "file_name": "chapters/chapter-1.json"
+    },
+    {
+      "title": "CHAPTER 2: SHAPE, SIZE & MOTIONS OF THE EARTH",
+      "order": 2,
+      "enriched": true,
+      "blocks_count": 27,
+      "file_name": "chapters/chapter-2.json"
+    },
+    {
+      "title": "Untitled Chapter",
+      "order": 3,
+      "enriched": true,
+      "blocks_count": 31,
+      "file_name": "chapters/chapter-3.json"
+    },
+    {
+      "title": "CHAPTER 3: LATITUDE, LONGITUDE & TIME",
+      "order": 4,
+      "enriched": true,
+      "blocks_count": 81,
+      "file_name": "chapters/chapter-4.json"
+    },
+    {
+      "title": "CHAPTER 4: INTERIOR OF THE EARTH",
+      "order": 5,
+      "enriched": true,
+      "blocks_count": 51,
+      "file_name": "chapters/chapter-5.json"
+    },
+    {
+      "title": "CHAPTER 5: ROCKS & ROCK CYCLE",
+      "order": 6,
+      "enriched": true,
+      "blocks_count": 40,
+      "file_name": "chapters/chapter-6.json"
+    },
+    {
+      "title": "CHAPTER 6: PLATE TECTONICS",
+      "order": 7,
+      "enriched": true,
+      "blocks_count": 33,
+      "file_name": "chapters/chapter-7.json"
+    },
+    {
+      "title": "CHAPTER 7: EARTHQUAKES & VOLCANOES",
+      "order": 8,
+      "enriched": true,
+      "blocks_count": 49,
+      "file_name": "chapters/chapter-8.json"
+    },
+    {
+      "title": "CHAPTER 8: MAJOR LANDFORMS OF THE EARTH",
+      "order": 9,
+      "enriched": true,
+      "blocks_count": 58,
+      "file_name": "chapters/chapter-9.json"
+    },
+    {
+      "title": "CHAPTER 9: WEATHERING, EROSION & DEPOSITION",
+      "order": 10,
+      "enriched": true,
+      "blocks_count": 54,
+      "file_name": "chapters/chapter-10.json"
+    },
+    {
+      "title": "CHAPTER 10: DRAINAGE SYSTEM & RIVERS",
+      "order": 11,
+      "enriched": true,
+      "blocks_count": 47,
+      "file_name": "chapters/chapter-11.json"
+    },
+    {
+      "title": "CHAPTER 11: GLACIERS & DESERTS",
+      "order": 12,
+      "enriched": true,
+      "blocks_count": 40,
+      "file_name": "chapters/chapter-12.json"
+    },
+    {
+      "title": "CHAPTER 12: ATMOSPHERE",
+      "order": 13,
+      "enriched": true,
+      "blocks_count": 47,
+      "file_name": "chapters/chapter-13.json"
+    },
+    {
+      "title": "CHAPTER 13: TEMPERATURE, PRESSURE & WINDS",
+      "order": 14,
+      "enriched": true,
+      "blocks_count": 44,
+      "file_name": "chapters/chapter-14.json"
+    },
+    {
+      "title": "LOCAL WINDS (COMPLETE TABLE)",
+      "order": 15,
+      "enriched": true,
+      "blocks_count": 7,
+      "file_name": "chapters/chapter-15.json"
+    },
+    {
+      "title": "CHAPTER 14: HUMIDITY, CLOUDS & RAINFALL",
+      "order": 16,
+      "enriched": true,
+      "blocks_count": 48,
+      "file_name": "chapters/chapter-16.json"
+    },
+    {
+      "title": "CHAPTER 15: CLIMATE & CLIMATIC REGIONS",
+      "order": 17,
+      "enriched": true,
+      "blocks_count": 55,
+      "file_name": "chapters/chapter-17.json"
+    },
+    {
+      "title": "CHAPTER 16: INDIAN CLIMATE & MONSOON SYSTEM",
+      "order": 18,
+      "enriched": true,
+      "blocks_count": 52,
+      "file_name": "chapters/chapter-18.json"
+    },
+    {
+      "title": "CHAPTER 17: SOILS OF INDIA",
+      "order": 19,
+      "enriched": true,
+      "blocks_count": 53,
+      "file_name": "chapters/chapter-19.json"
+    },
+    {
+      "title": "DETAILED TABLE OF SOILS OF INDIA",
+      "order": 20,
+      "enriched": true,
+      "blocks_count": 54,
+      "file_name": "chapters/chapter-20.json"
+    },
+    {
+      "title": "CHAPTER 19: AGRICULTURE OF INDIA",
+      "order": 21,
+      "enriched": true,
+      "blocks_count": 62,
+      "file_name": "chapters/chapter-21.json"
+    },
+    {
+      "title": "CHAPTER 20: MINERAL & ENERGY RESOURCES OF INDIA",
+      "order": 22,
+      "enriched": true,
+      "blocks_count": 73,
+      "file_name": "chapters/chapter-22.json"
+    },
+    {
+      "title": "CHAPTER 1: PREHISTORIC AGE",
+      "order": 23,
+      "enriched": true,
+      "blocks_count": 12,
+      "file_name": "chapters/chapter-23.json"
+    },
+    {
+      "title": "Paleolithic Age (Old Stone Age)",
+      "order": 24,
+      "enriched": true,
+      "blocks_count": 19,
+      "file_name": "chapters/chapter-24.json"
+    },
+    {
+      "title": "Mesolithic Age (Middle Stone Age)",
+      "order": 25,
+      "enriched": true,
+      "blocks_count": 17,
+      "file_name": "chapters/chapter-25.json"
+    },
+    {
+      "title": "Neolithic Age (New Stone Age)",
+      "order": 26,
+      "enriched": true,
+      "blocks_count": 20,
+      "file_name": "chapters/chapter-26.json"
+    },
+    {
+      "title": "Chalcolithic Age (Stone and Copper Age)",
+      "order": 27,
+      "enriched": true,
+      "blocks_count": 32,
+      "file_name": "chapters/chapter-27.json"
+    },
+    {
+      "title": "CHAPTER 2: INDUS VALLEY CIVILIZATION (HARAPPAN CIVILIZATION)",
+      "order": 28,
+      "enriched": true,
+      "blocks_count": 40,
+      "file_name": "chapters/chapter-28.json"
+    },
+    {
+      "title": "CHAPTER 3: VEDIC AGE",
+      "order": 29,
+      "enriched": true,
+      "blocks_count": 25,
+      "file_name": "chapters/chapter-29.json"
+    },
+    {
+      "title": "CHAPTER 4: MAHAJANAPADAS",
+      "order": 30,
+      "enriched": true,
+      "blocks_count": 49,
+      "file_name": "chapters/chapter-30.json"
+    },
+    {
+      "title": "CHAPTER 6: MAURYAN EMPIRE",
+      "order": 31,
+      "enriched": true,
+      "blocks_count": 33,
+      "file_name": "chapters/chapter-31.json"
+    },
+    {
+      "title": "CHAPTER 7: POST-MAURYAN PERIOD",
+      "order": 32,
+      "enriched": true,
+      "blocks_count": 28,
+      "file_name": "chapters/chapter-32.json"
+    },
+    {
+      "title": "CHAPTER 8: GUPTA EMPIRE",
+      "order": 33,
+      "enriched": true,
+      "blocks_count": 22,
+      "file_name": "chapters/chapter-33.json"
+    },
+    {
+      "title": "CHAPTER 9: POST-GUPTA PERIOD & HARSHAVARDHANA",
+      "order": 34,
+      "enriched": true,
+      "blocks_count": 28,
+      "file_name": "chapters/chapter-34.json"
+    },
+    {
+      "title": "CHAPTER 10: DELHI SULTANATE",
+      "order": 35,
+      "enriched": true,
+      "blocks_count": 46,
+      "file_name": "chapters/chapter-35.json"
+    },
+    {
+      "title": "CHAPTER 11: MUGHAL EMPIRE",
+      "order": 36,
+      "enriched": true,
+      "blocks_count": 29,
+      "file_name": "chapters/chapter-36.json"
+    },
+    {
+      "title": "CHAPTER 12: LATER MUGHALS & RISE OF REGIONAL POWERS",
+      "order": 37,
+      "enriched": true,
+      "blocks_count": 26,
+      "file_name": "chapters/chapter-37.json"
+    },
+    {
+      "title": "CHAPTER 13: BRITISH EXPANSION IN INDIA",
+      "order": 38,
+      "enriched": true,
+      "blocks_count": 30,
+      "file_name": "chapters/chapter-38.json"
+    },
+    {
+      "title": "CHAPTER 14: REVOLT OF 1857",
+      "order": 39,
+      "enriched": true,
+      "blocks_count": 22,
+      "file_name": "chapters/chapter-39.json"
+    },
+    {
+      "title": "CHAPTER 15: ADMINISTRATIVE & REVENUE REFORMS UNDER BRITISH RULE",
+      "order": 40,
+      "enriched": true,
+      "blocks_count": 32,
+      "file_name": "chapters/chapter-40.json"
+    },
+    {
+      "title": "CHAPTER 16: TRIBAL, PEASANT & CIVIL REBELLIONS UNDER BRITISH RULE",
+      "order": 41,
+      "enriched": true,
+      "blocks_count": 34,
+      "file_name": "chapters/chapter-41.json"
+    },
+    {
+      "title": "CHAPTER 17: SOCIO-RELIGIOUS REFORM MOVEMENTS IN INDIA",
+      "order": 42,
+      "enriched": true,
+      "blocks_count": 42,
+      "file_name": "chapters/chapter-42.json"
+    },
+    {
+      "title": "CHAPTER 18: INDIAN NATIONAL MOVEMENT (1885–1905)",
+      "order": 43,
+      "enriched": true,
+      "blocks_count": 41,
+      "file_name": "chapters/chapter-43.json"
+    },
+    {
+      "title": "CHAPTER 19: INDIAN NATIONAL MOVEMENT (1905–1919)",
+      "order": 44,
+      "enriched": true,
+      "blocks_count": 41,
+      "file_name": "chapters/chapter-44.json"
+    },
+    {
+      "title": "CHAPTER 20: INDIAN NATIONAL MOVEMENT (1919–1934)",
+      "order": 45,
+      "enriched": true,
+      "blocks_count": 43,
+      "file_name": "chapters/chapter-45.json"
+    },
+    {
+      "title": "CHAPTER 21: INDIAN NATIONAL MOVEMENT (1934–1947)",
+      "order": 46,
+      "enriched": true,
+      "blocks_count": 44,
+      "file_name": "chapters/chapter-46.json"
+    },
+    {
+      "title": "CHAPTER 22: POST-INDEPENDENCE INDIA (1947–1950)",
+      "order": 47,
+      "enriched": true,
+      "blocks_count": 37,
+      "file_name": "chapters/chapter-47.json"
+    },
+    {
+      "title": "CHAPTER – 1",
+      "order": 48,
+      "enriched": true,
+      "blocks_count": 74,
+      "file_name": "chapters/chapter-48.json"
+    },
+    {
+      "title": "CHAPTER – 2",
+      "order": 49,
+      "enriched": true,
+      "blocks_count": 45,
+      "file_name": "chapters/chapter-49.json"
+    },
+    {
+      "title": "CHAPTER – 3",
+      "order": 50,
+      "enriched": true,
+      "blocks_count": 73,
+      "file_name": "chapters/chapter-50.json"
+    },
+    {
+      "title": "CHAPTER – 4",
+      "order": 51,
+      "enriched": true,
+      "blocks_count": 72,
+      "file_name": "chapters/chapter-51.json"
+    },
+    {
+      "title": "CHAPTER – 5",
+      "order": 52,
+      "enriched": true,
+      "blocks_count": 72,
+      "file_name": "chapters/chapter-52.json"
+    },
+    {
+      "title": "CHAPTER – 6",
+      "order": 53,
+      "enriched": true,
+      "blocks_count": 83,
+      "file_name": "chapters/chapter-53.json"
+    },
+    {
+      "title": "CHAPTER – 7",
+      "order": 54,
+      "enriched": true,
+      "blocks_count": 59,
+      "file_name": "chapters/chapter-54.json"
+    },
+    {
+      "title": "CHAPTER – 8",
+      "order": 55,
+      "enriched": true,
+      "blocks_count": 46,
+      "file_name": "chapters/chapter-55.json"
+    },
+    {
+      "title": "CHAPTER – 9",
+      "order": 56,
+      "enriched": true,
+      "blocks_count": 52,
+      "file_name": "chapters/chapter-56.json"
+    },
+    {
+      "title": "CHAPTER – 10",
+      "order": 57,
+      "enriched": true,
+      "blocks_count": 90,
+      "file_name": "chapters/chapter-57.json"
+    },
+    {
+      "title": "CHAPTER – 11",
+      "order": 58,
+      "enriched": true,
+      "blocks_count": 88,
+      "file_name": "chapters/chapter-58.json"
+    },
+    {
+      "title": "CHAPTER – 12",
+      "order": 59,
+      "enriched": true,
+      "blocks_count": 67,
+      "file_name": "chapters/chapter-59.json"
+    },
+    {
+      "title": "CHAPTER – 13",
+      "order": 60,
+      "enriched": true,
+      "blocks_count": 67,
+      "file_name": "chapters/chapter-60.json"
+    },
+    {
+      "title": "CHAPTER – 14",
+      "order": 61,
+      "enriched": true,
+      "blocks_count": 81,
+      "file_name": "chapters/chapter-61.json"
+    },
+    {
+      "title": "CHAPTER – 15",
+      "order": 62,
+      "enriched": true,
+      "blocks_count": 111,
+      "file_name": "chapters/chapter-62.json"
+    },
+    {
+      "title": "CHAPTER – 16",
+      "order": 63,
+      "enriched": true,
+      "blocks_count": 79,
+      "file_name": "chapters/chapter-63.json"
+    },
+    {
+      "title": "CHAPTER – 17",
+      "order": 64,
+      "enriched": true,
+      "blocks_count": 79,
+      "file_name": "chapters/chapter-64.json"
+    },
+    {
+      "title": "CHAPTER – 18",
+      "order": 65,
+      "enriched": true,
+      "blocks_count": 71,
+      "file_name": "chapters/chapter-65.json"
+    },
+    {
+      "title": "CHAPTER – 19",
+      "order": 66,
+      "enriched": true,
+      "blocks_count": 77,
+      "file_name": "chapters/chapter-66.json"
+    },
+    {
+      "title": "CHAPTER – 20",
+      "order": 67,
+      "enriched": true,
+      "blocks_count": 72,
+      "file_name": "chapters/chapter-67.json"
+    },
+    {
+      "title": "CHAPTER – 21",
+      "order": 68,
+      "enriched": true,
+      "blocks_count": 71,
+      "file_name": "chapters/chapter-68.json"
+    },
+    {
+      "title": "CHAPTER – 22",
+      "order": 69,
+      "enriched": true,
+      "blocks_count": 65,
+      "file_name": "chapters/chapter-69.json"
+    },
+    {
+      "title": "CHAPTER – 23",
+      "order": 70,
+      "enriched": true,
+      "blocks_count": 80,
+      "file_name": "chapters/chapter-70.json"
+    },
+    {
+      "title": "CHAPTER – 24",
+      "order": 71,
+      "enriched": true,
+      "blocks_count": 65,
+      "file_name": "chapters/chapter-71.json"
+    },
+    {
+      "title": "CHAPTER 2: BASIC ECONOMIC CONCEPTS",
+      "order": 72,
+      "enriched": true,
+      "blocks_count": 55,
+      "file_name": "chapters/chapter-72.json"
+    },
+    {
+      "title": "CHAPTER 3: NATIONAL INCOME",
+      "order": 73,
+      "enriched": true,
+      "blocks_count": 57,
+      "file_name": "chapters/chapter-73.json"
+    },
+    {
+      "title": "CHAPTER 4: ECONOMIC GROWTH AND ECONOMIC DEVELOPMENT",
+      "order": 74,
+      "enriched": true,
+      "blocks_count": 51,
+      "file_name": "chapters/chapter-74.json"
+    },
+    {
+      "title": "CHAPTER 5: MONEY AND ITS FUNCTIONS",
+      "order": 75,
+      "enriched": true,
+      "blocks_count": 41,
+      "file_name": "chapters/chapter-75.json"
+    },
+    {
+      "title": "CHAPTER 6: BANKING SYSTEM IN INDIA",
+      "order": 76,
+      "enriched": true,
+      "blocks_count": 53,
+      "file_name": "chapters/chapter-76.json"
+    },
+    {
+      "title": "CHAPTER 7: RESERVE BANK OF INDIA (RBI)",
+      "order": 77,
+      "enriched": true,
+      "blocks_count": 50,
+      "file_name": "chapters/chapter-77.json"
+    },
+    {
+      "title": "CHAPTER 8: INFLATION",
+      "order": 78,
+      "enriched": true,
+      "blocks_count": 47,
+      "file_name": "chapters/chapter-78.json"
+    },
+    {
+      "title": "CHAPTER 9: DEFLATION, DISINFLATION & STAGFLATION",
+      "order": 79,
+      "enriched": true,
+      "blocks_count": 43,
+      "file_name": "chapters/chapter-79.json"
+    },
+    {
+      "title": "CHAPTER 10: POVERTY",
+      "order": 80,
+      "enriched": true,
+      "blocks_count": 49,
+      "file_name": "chapters/chapter-80.json"
+    },
+    {
+      "title": "CHAPTER 11: UNEMPLOYMENT",
+      "order": 81,
+      "enriched": true,
+      "blocks_count": 46,
+      "file_name": "chapters/chapter-81.json"
+    },
+    {
+      "title": "CHAPTER 12: INEQUALITY",
+      "order": 82,
+      "enriched": true,
+      "blocks_count": 60,
+      "file_name": "chapters/chapter-82.json"
+    },
+    {
+      "title": "CHAPTER 13: PUBLIC FINANCE",
+      "order": 83,
+      "enriched": true,
+      "blocks_count": 42,
+      "file_name": "chapters/chapter-83.json"
+    },
+    {
+      "title": "CHAPTER 14: ECONOMIC PLANNING & FIVE-YEAR PLANS IN INDIA",
+      "order": 84,
+      "enriched": true,
+      "blocks_count": 79,
+      "file_name": "chapters/chapter-84.json"
+    },
+    {
+      "title": "CHAPTER 15: LIBERALISATION, PRIVATISATION & GLOBALISATION (LPG REFORMS)",
+      "order": 85,
+      "enriched": true,
+      "blocks_count": 44,
+      "file_name": "chapters/chapter-85.json"
+    },
+    {
+      "title": "CHAPTER 16: SECTORS OF INDIAN ECONOMY",
+      "order": 86,
+      "enriched": true,
+      "blocks_count": 47,
+      "file_name": "chapters/chapter-86.json"
+    },
+    {
+      "title": "CHAPTER 17: AGRICULTURE IN INDIA",
+      "order": 87,
+      "enriched": true,
+      "blocks_count": 41,
+      "file_name": "chapters/chapter-87.json"
+    },
+    {
+      "title": "CHAPTER 18: INFRASTRUCTURE OF INDIAN ECONOMY",
+      "order": 88,
+      "enriched": true,
+      "blocks_count": 72,
+      "file_name": "chapters/chapter-88.json"
+    },
+    {
+      "title": "CHAPTER 19: INDUSTRIAL DEVELOPMENT IN INDIA",
+      "order": 89,
+      "enriched": true,
+      "blocks_count": 63,
+      "file_name": "chapters/chapter-89.json"
+    },
+    {
+      "title": "CHAPTER 20: ECONOMIC PLANNING IN INDIA",
+      "order": 90,
+      "enriched": true,
+      "blocks_count": 106,
+      "file_name": "chapters/chapter-90.json"
+    },
+    {
+      "title": "CHAPTER 21: PUBLIC FINANCE",
+      "order": 91,
+      "enriched": true,
+      "blocks_count": 95,
+      "file_name": "chapters/chapter-91.json"
+    },
+    {
+      "title": "CHAPTER 22: INDIAN BUDGET",
+      "order": 92,
+      "enriched": true,
+      "blocks_count": 103,
+      "file_name": "chapters/chapter-92.json"
+    },
+    {
+      "title": "CHAPTER 23: ECONOMIC REFORMS IN INDIA (1991 – LPG MODEL)",
+      "order": 93,
+      "enriched": true,
+      "blocks_count": 75,
+      "file_name": "chapters/chapter-93.json"
+    },
+    {
+      "title": "CHAPTER 1: UNITS AND MEASUREMENTS",
+      "order": 94,
+      "enriched": true,
+      "blocks_count": 64,
+      "file_name": "chapters/chapter-94.json"
+    },
+    {
+      "title": "CHAPTER 2: MOTION",
+      "order": 95,
+      "enriched": true,
+      "blocks_count": 55,
+      "file_name": "chapters/chapter-95.json"
+    },
+    {
+      "title": "CHAPTER 3: LAWS OF MOTION",
+      "order": 96,
+      "enriched": true,
+      "blocks_count": 51,
+      "file_name": "chapters/chapter-96.json"
+    },
+    {
+      "title": "CHAPTER 4 : WORK, ENERGY AND POWER",
+      "order": 97,
+      "enriched": true,
+      "blocks_count": 74,
+      "file_name": "chapters/chapter-97.json"
+    },
+    {
+      "title": "CHAPTER 5 : GRAVITATION",
+      "order": 98,
+      "enriched": true,
+      "blocks_count": 78,
+      "file_name": "chapters/chapter-98.json"
+    },
+    {
+      "title": "CHAPTER 6 : PRESSURE AND FLUIDS",
+      "order": 99,
+      "enriched": true,
+      "blocks_count": 54,
+      "file_name": "chapters/chapter-99.json"
+    },
+    {
+      "title": "CHAPTER 7 : SOUND",
+      "order": 100,
+      "enriched": true,
+      "blocks_count": 73,
+      "file_name": "chapters/chapter-100.json"
+    },
+    {
+      "title": "CHAPTER 8 : LIGHT (OPTICS)",
+      "order": 101,
+      "enriched": true,
+      "blocks_count": 81,
+      "file_name": "chapters/chapter-101.json"
+    },
+    {
+      "title": "CHAPTER 9 : ELECTRICITY",
+      "order": 102,
+      "enriched": true,
+      "blocks_count": 62,
+      "file_name": "chapters/chapter-102.json"
+    },
+    {
+      "title": "CHAPTER 10 : MAGNETISM & ELECTROMAGNETISM",
+      "order": 103,
+      "enriched": true,
+      "blocks_count": 61,
+      "file_name": "chapters/chapter-103.json"
+    },
+    {
+      "title": "CHAPTER 11 – ENERGY",
+      "order": 104,
+      "enriched": true,
+      "blocks_count": 81,
+      "file_name": "chapters/chapter-104.json"
+    },
+    {
+      "title": "CHAPTER 12 : ENVIRONMENT & NATURAL RESOURCES",
+      "order": 105,
+      "enriched": true,
+      "blocks_count": 66,
+      "file_name": "chapters/chapter-105.json"
+    },
+    {
+      "title": "CHAPTER 1 : MATTER IN OUR SURROUNDINGS",
+      "order": 106,
+      "enriched": true,
+      "blocks_count": 42,
+      "file_name": "chapters/chapter-106.json"
+    },
+    {
+      "title": "CHAPTER 2 : IS MATTER AROUND US PURE?",
+      "order": 107,
+      "enriched": true,
+      "blocks_count": 38,
+      "file_name": "chapters/chapter-107.json"
+    },
+    {
+      "title": "CHAPTER 4 : STRUCTURE OF THE ATOM",
+      "order": 108,
+      "enriched": true,
+      "blocks_count": 72,
+      "file_name": "chapters/chapter-108.json"
+    },
+    {
+      "title": "CHAPTER 6 : ACIDS, BASES AND SALTS",
+      "order": 109,
+      "enriched": true,
+      "blocks_count": 38,
+      "file_name": "chapters/chapter-109.json"
+    },
+    {
+      "title": "CHAPTER 7 : METALS AND NON‑METALS",
+      "order": 110,
+      "enriched": true,
+      "blocks_count": 33,
+      "file_name": "chapters/chapter-110.json"
+    },
+    {
+      "title": "CHAPTER 8 : COAL AND PETROLEUM",
+      "order": 111,
+      "enriched": true,
+      "blocks_count": 233,
+      "file_name": "chapters/chapter-111.json"
+    },
+    {
+      "title": "CHAPTER 2: CELL – STRUCTURE AND FUNCTIONS",
+      "order": 112,
+      "enriched": true,
+      "blocks_count": 26,
+      "file_name": "chapters/chapter-112.json"
+    },
+    {
+      "title": "CHAPTER 3: CELL DIVISION – MITOSIS AND MEIOSIS",
+      "order": 113,
+      "enriched": true,
+      "blocks_count": 25,
+      "file_name": "chapters/chapter-113.json"
+    },
+    {
+      "title": "CHAPTER 4: TISSUES – PLANT AND ANIMAL TISSUES",
+      "order": 114,
+      "enriched": true,
+      "blocks_count": 31,
+      "file_name": "chapters/chapter-114.json"
+    },
+    {
+      "title": "CHAPTER 5: MUSCULAR AND SKELETAL SYSTEM",
+      "order": 115,
+      "enriched": true,
+      "blocks_count": 30,
+      "file_name": "chapters/chapter-115.json"
+    },
+    {
+      "title": "CHAPTER 6: NERVOUS SYSTEM AND SENSE ORGANS",
+      "order": 116,
+      "enriched": true,
+      "blocks_count": 39,
+      "file_name": "chapters/chapter-116.json"
+    },
+    {
+      "title": "CHAPTER 7: ENDOCRINE SYSTEM (HORMONES AND GLANDS)",
+      "order": 117,
+      "enriched": true,
+      "blocks_count": 32,
+      "file_name": "chapters/chapter-117.json"
+    },
+    {
+      "title": "CHAPTER 8: BLOOD, CIRCULATORY AND LYMPHATIC SYSTEM",
+      "order": 118,
+      "enriched": true,
+      "blocks_count": 35,
+      "file_name": "chapters/chapter-118.json"
+    },
+    {
+      "title": "CHAPTER 9: DIGESTIVE SYSTEM",
+      "order": 119,
+      "enriched": true,
+      "blocks_count": 33,
+      "file_name": "chapters/chapter-119.json"
+    },
+    {
+      "title": "CHAPTER 10: EXCRETORY SYSTEM",
+      "order": 120,
+      "enriched": true,
+      "blocks_count": 39,
+      "file_name": "chapters/chapter-120.json"
+    },
+    {
+      "title": "CHAPTER 11: REPRODUCTIVE SYSTEM",
+      "order": 121,
+      "enriched": true,
+      "blocks_count": 38,
+      "file_name": "chapters/chapter-121.json"
+    },
+    {
+      "title": "CHAPTER 12: NUTRITION, VITAMINS AND DEFICIENCY DISEASES",
+      "order": 122,
+      "enriched": true,
+      "blocks_count": 37,
+      "file_name": "chapters/chapter-122.json"
+    },
+    {
+      "title": "CHAPTER 13: MICROORGANISMS AND DISEASES",
+      "order": 123,
+      "enriched": true,
+      "blocks_count": 39,
+      "file_name": "chapters/chapter-123.json"
+    },
+    {
+      "title": "CHAPTER 14: GENETICS AND HEREDITY",
+      "order": 124,
+      "enriched": true,
+      "blocks_count": 37,
+      "file_name": "chapters/chapter-124.json"
+    }
+  ]
+}

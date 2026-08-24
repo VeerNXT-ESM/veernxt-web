@@ -1,0 +1,150 @@
+{
+  "id": "z3jq1vw",
+  "title": "5. Mantle — Detailed Study",
+  "order": 51,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "4p701iw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Mantle Depth",
+          "value": "2,900 km",
+          "icon": "info"
+        },
+        {
+          "label": "Volume Share",
+          "value": "84%",
+          "icon": "award"
+        },
+        {
+          "label": "Mass Share",
+          "value": "67%",
+          "icon": "check"
+        },
+        {
+          "label": "Asthenosphere Zone",
+          "value": "100–400 km",
+          "icon": "calendar"
+        }
+      ],
+      "id": "sweo1fx"
+    },
+    {
+      "type": "paragraph",
+      "id": "k5p98w7"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The upper mantle contains the asthenosphere, a semi-fluid layer upon which the rigid lithosphere floats.",
+      "id": "xlio49i"
+    },
+    {
+      "type": "paragraph",
+      "id": "dovh0dc"
+    },
+    {
+      "type": "paragraph",
+      "id": "6qacics"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Lithosphere",
+        "Asthenosphere"
+      ],
+      "rows": [
+        [
+          "Physical State",
+          "Rigid, solid, and brittle",
+          "Semi-fluid, plastic, and ductile"
+        ],
+        [
+          "Depth Range",
+          "0 to ~100 km",
+          "100 km to ~400 km"
+        ],
+        [
+          "Components",
+          "Crust + Uppermost solid mantle",
+          "Upper ductile portion of the mantle"
+        ],
+        [
+          "Tectonic Role",
+          "Broken into tectonic plates",
+          "Flows under heat to transport plates"
+        ]
+      ],
+      "id": "ktzv38k"
+    },
+    {
+      "type": "paragraph",
+      "id": "88yzkzk"
+    },
+    {
+      "id": "lq0o0dj",
+      "type": "heading",
+      "level": 2,
+      "content": "Lithosphere vs Asthenosphere"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Asthenosphere is frequently tested as the primary source of magma for volcanic eruptions.",
+        "Distinguish clearly between Lithosphere (brittle and solid) and Asthenosphere (plastic and ductile).",
+        "The boundary separating the Crust from the Mantle is the Mohorovičić (Moho) Discontinuity."
+      ],
+      "id": "80v85pn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The mantle extends from the Mohorovičić discontinuity (Moho) to a depth of 2,900 km.",
+        "The Lithosphere consists of the entire crust and the rigid uppermost solid mantle.",
+        "The Asthenosphere lies directly below the lithosphere and is composed of ductile, semi-molten rock.",
+        "Convection currents originating within the mantle drive the movement of lithospheric tectonic plates."
+      ],
+      "id": "ilbnlub"
+    },
+    {
+      "id": "azz8llu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

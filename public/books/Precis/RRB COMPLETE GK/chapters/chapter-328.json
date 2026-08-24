@@ -1,0 +1,94 @@
+{
+  "id": "1y1var9",
+  "title": "3. Composition of the Supreme Court",
+  "order": 328,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "tsca5dd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "At present, the Supreme Court consists of thirty-four judges (one chief justice and thirty-three other judges).",
+      "id": "hf2czrv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Original Composition (1950)",
+        "Present Composition"
+      ],
+      "rows": [
+        [
+          "Total Sanctioned Strength",
+          "8 Judges",
+          "34 Judges"
+        ],
+        [
+          "Chief Justice of India",
+          "1 CJI",
+          "1 CJI"
+        ],
+        [
+          "Other Judges (Puisne)",
+          "7 Judges",
+          "33 Judges"
+        ],
+        [
+          "Authority to Regulate Strength",
+          "Parliament of India",
+          "Parliament of India"
+        ]
+      ],
+      "id": "sgh181n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Strength",
+          "value": "8 Judges (1950)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Present Strength",
+          "value": "34 Judges",
+          "icon": "check"
+        },
+        {
+          "label": "Constitutional Article",
+          "value": "Article 124",
+          "icon": "book"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "President of India",
+          "icon": "award"
+        }
+      ],
+      "id": "oktaw46"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Parliament, and NOT the President or the Supreme Court itself, has the power to increase the number of judges in the Supreme Court.",
+        "Remember the original sanctioned strength in 1950 was 8 (1 CJI + 7 puisne judges).",
+        "The latest strength revision occurred under the Supreme Court (Number of Judges) Amendment Act, 2019."
+      ],
+      "id": "y6l2mt4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "At present, the Supreme Court of India consists of 34 judges (one Chief Justice and thirty-three other judges).",
+        "Originally, in 1950, the strength of the Supreme Court was fixed at eight (one Chief Justice and seven other judges).",
+        "Parliament is authorized by the Constitution to prescribe and increase the number of judges in the Supreme Court by law.",
+        "The Supreme Court (Number of Judges) Amendment Act, 2019 increased the maximum sanctioned strength from 31 to 34 judges."
+      ],
+      "id": "6eyhwll"
+    }
+  ],
+  "enriched": true
+}

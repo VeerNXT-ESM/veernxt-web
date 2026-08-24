@@ -1,0 +1,1007 @@
+{
+  "id": "blxsnbx",
+  "title": "CHAPTER 1",
+  "order": 32,
+  "blocks": [
+    {
+      "id": "5opvvlz",
+      "type": "heading",
+      "level": 2,
+      "content": "UNITS AND MEASUREMENTS"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A physical quantity is defined by a numerical magnitude and a standard unit (Q = n × u).",
+        "The SI system consists of 7 fundamental base quantities: Mass (kg), Length (m), Time (s), Temperature (K), Electric Current (A), Luminous Intensity (cd), and Amount of Substance (mol).",
+        "Supplementary units include the Radian for plane angle and Steradian for solid angle.",
+        "Dimensional formulas express derived physical quantities in terms of base dimensions [M], [L], and [T].",
+        "Measurement errors are broadly categorized into systematic errors, random errors, and gross errors."
+      ],
+      "id": "z3j7uj2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Base Units",
+          "value": "7 Fundamental Units",
+          "icon": "book"
+        },
+        {
+          "label": "Supplementary Units",
+          "value": "2 Units (rad, sr)",
+          "icon": "check"
+        },
+        {
+          "label": "Focus Exam",
+          "value": "RRB & SSC Physics",
+          "icon": "award"
+        },
+        {
+          "label": "Core Method",
+          "value": "Dimensional Analysis",
+          "icon": "info"
+        }
+      ],
+      "id": "wjavest"
+    },
+    {
+      "type": "paragraph",
+      "id": "gbrnda1"
+    },
+    {
+      "id": "qzfi58m",
+      "type": "heading",
+      "level": 3,
+      "content": "1. PHYSICAL QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "9409yt4"
+    },
+    {
+      "type": "paragraph",
+      "id": "5qjdvdw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mnict73"
+    },
+    {
+      "type": "paragraph",
+      "id": "zf1n24z"
+    },
+    {
+      "id": "f2e59q5",
+      "type": "heading",
+      "level": 3,
+      "content": "2. SI BASE QUANTITIES"
+    },
+    {
+      "id": "bv3q9gy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5bxfkgm",
+      "type": "heading",
+      "level": 3,
+      "content": "3. IMPORTANT DERIVED UNITS"
+    },
+    {
+      "id": "9wzauny",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yklse4r",
+      "type": "heading",
+      "level": 3,
+      "content": "4. DIMENSIONAL FORMULA"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "efgww2h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lmfi9ga"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wysxln7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n4ocijr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wfc59fd"
+    },
+    {
+      "id": "mbqvmq5",
+      "type": "heading",
+      "level": 3,
+      "content": "5. SI PREFIXES"
+    },
+    {
+      "id": "6u1cp3a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4rc25nx",
+      "type": "heading",
+      "level": 3,
+      "content": "6. ERRORS IN MEASUREMENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "5dmp2tq"
+    },
+    {
+      "type": "paragraph",
+      "id": "tm6e117"
+    },
+    {
+      "type": "paragraph",
+      "id": "wwo8w7r"
+    },
+    {
+      "type": "paragraph",
+      "id": "xxlfsqx"
+    },
+    {
+      "type": "paragraph",
+      "id": "10l4i2v"
+    },
+    {
+      "id": "auakg6o",
+      "type": "heading",
+      "level": 3,
+      "content": "7. MEASURING INSTRUMENTS SUMMARY"
+    },
+    {
+      "type": "paragraph",
+      "id": "5g5x82g"
+    },
+    {
+      "type": "paragraph",
+      "id": "bbqu24t"
+    },
+    {
+      "type": "paragraph",
+      "id": "l5w0umn"
+    },
+    {
+      "id": "sqhyyqw",
+      "type": "heading",
+      "level": 3,
+      "content": "8. IMPORTANT CONVERSIONS"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ijfzsj4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kh2lkmg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bca9nk2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gu1rtlb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5qajyg2"
+    },
+    {
+      "id": "wku8bfd",
+      "type": "heading",
+      "level": 3,
+      "content": "9. IMPORTANT CONSTANTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "56pspof"
+    },
+    {
+      "type": "paragraph",
+      "id": "xw6of35"
+    },
+    {
+      "type": "paragraph",
+      "id": "9730vcp"
+    },
+    {
+      "type": "paragraph",
+      "id": "pcidg1o"
+    },
+    {
+      "type": "paragraph",
+      "id": "gc9ml6g"
+    },
+    {
+      "id": "qmx0koc",
+      "type": "heading",
+      "level": 3,
+      "content": "10. EXTRA RRB IMPORTANT FACTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "djkpfn8"
+    },
+    {
+      "type": "paragraph",
+      "id": "lyjht2x"
+    },
+    {
+      "type": "paragraph",
+      "id": "5q57w6z"
+    },
+    {
+      "type": "paragraph",
+      "id": "syr6pwr"
+    },
+    {
+      "type": "paragraph",
+      "id": "wyny6zm"
+    },
+    {
+      "type": "paragraph",
+      "id": "dj2xfpv"
+    },
+    {
+      "id": "o93gnqg",
+      "type": "heading",
+      "level": 3,
+      "content": "MCQs"
+    },
+    {
+      "id": "ucwhjqc",
+      "type": "heading",
+      "level": 3,
+      "content": "Q1."
+    },
+    {
+      "type": "paragraph",
+      "id": "3gc786d"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "byr9650"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m3qepje"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "15vys1t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1mht86z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o29juxm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "UNITS AND MEASUREMENTS",
+      "id": "97sp2kx"
+    },
+    {
+      "type": "paragraph",
+      "id": "m9ghkvm"
+    },
+    {
+      "type": "paragraph",
+      "id": "4mgixnk"
+    },
+    {
+      "type": "paragraph",
+      "id": "wgzbegp"
+    },
+    {
+      "type": "paragraph",
+      "id": "sbh0ejk"
+    },
+    {
+      "type": "paragraph",
+      "id": "k3c8nhy"
+    },
+    {
+      "type": "paragraph",
+      "id": "qniwk6c"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ctzfck"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "svwlcqp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q27w4ba"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zwxbtci"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6a16a4w"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ph7je3b"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1bul98j"
+    },
+    {
+      "id": "fuowk16",
+      "type": "heading",
+      "level": 3,
+      "content": "Q2."
+    },
+    {
+      "type": "paragraph",
+      "id": "gkptg4f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i2rijmp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qktn9ta"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s9ypdlx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ysm7hky"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2j5xhqp"
+    },
+    {
+      "type": "paragraph",
+      "id": "cnyug8c"
+    },
+    {
+      "type": "paragraph",
+      "id": "3af1dae"
+    },
+    {
+      "type": "paragraph",
+      "id": "qx3wrgh"
+    },
+    {
+      "type": "paragraph",
+      "id": "8dfkxev"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "91kbfuo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "af0ieok"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a1wuoeu"
+    },
+    {
+      "type": "paragraph",
+      "id": "zjzue7q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Base Quantities",
+        "Derived Quantities"
+      ],
+      "rows": [
+        [
+          "Independent of any other physical quantity.",
+          "Defined and derived from base quantities."
+        ],
+        [
+          "Limited to 7 fundamental quantities in the SI system.",
+          "Unlimited in number as new quantities are defined."
+        ],
+        [
+          "Examples: Mass (kg), Length (m), Time (s).",
+          "Examples: Force (N), Pressure (Pa), Velocity (m/s)."
+        ]
+      ],
+      "id": "6tj0loe"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eqhpsti"
+    },
+    {
+      "type": "paragraph",
+      "id": "0224q4v"
+    },
+    {
+      "type": "paragraph",
+      "id": "wrmuluh"
+    },
+    {
+      "id": "3vi7wr3",
+      "type": "heading",
+      "level": 3,
+      "content": "Q3."
+    },
+    {
+      "type": "paragraph",
+      "id": "sdayikl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9ldys3n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z3hbygs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2f9ihoz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m1t2me4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o5jtvkk"
+    },
+    {
+      "type": "paragraph",
+      "id": "b8u3gde"
+    },
+    {
+      "type": "paragraph",
+      "id": "3gk49o4"
+    },
+    {
+      "type": "paragraph",
+      "id": "jot21z8"
+    },
+    {
+      "type": "paragraph",
+      "id": "k07iyyh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nz8t5sv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eiuuizm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "umxazqk"
+    },
+    {
+      "type": "paragraph",
+      "id": "ckr9l82"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2yqujt5"
+    },
+    {
+      "type": "paragraph",
+      "id": "g8tghu5"
+    },
+    {
+      "type": "paragraph",
+      "id": "ym9d08r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gdgg0iy"
+    },
+    {
+      "id": "ght8l2b",
+      "type": "heading",
+      "level": 3,
+      "content": "Q4."
+    },
+    {
+      "type": "paragraph",
+      "id": "dp69k80"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1b7dmgh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "stdx3tr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q1j9iom"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6lr3787"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qnclcb2"
+    },
+    {
+      "type": "paragraph",
+      "id": "1i3m77o"
+    },
+    {
+      "type": "paragraph",
+      "id": "ohl9nyy"
+    },
+    {
+      "type": "paragraph",
+      "id": "jicw3cd"
+    },
+    {
+      "type": "paragraph",
+      "id": "o8gkt23"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q0xigoo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "06w3376"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nicbi6h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Light year and Parsec are units of distance, not time. (1 Parsec = 3.26 Light Years = 3.08 × 10¹⁶ m).",
+        "High-frequency dimensional formulas: Gravitational Constant G = [M⁻¹L³T⁻²], Planck's Constant h = [ML²T⁻¹], and Pressure P = [ML⁻¹T⁻²].",
+        "Least count of standard measuring instruments: Vernier Caliper (0.1 mm or 0.01 cm), Screw Gauge (0.01 mm)."
+      ],
+      "id": "3pj1gta"
+    },
+    {
+      "type": "paragraph",
+      "id": "mhoq8uf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hcvrnt2"
+    },
+    {
+      "type": "paragraph",
+      "id": "a5wa6cz"
+    },
+    {
+      "type": "paragraph",
+      "id": "dfevwjf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8o15jf1"
+    },
+    {
+      "id": "qiuswvk",
+      "type": "heading",
+      "level": 3,
+      "content": "Q5."
+    },
+    {
+      "type": "paragraph",
+      "id": "qev25da"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ntjs1gc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qjohoj0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b4xyc9m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zvlxzq5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "age36dz"
+    },
+    {
+      "type": "paragraph",
+      "id": "sgxmh2t"
+    },
+    {
+      "type": "paragraph",
+      "id": "k15fxs5"
+    },
+    {
+      "type": "paragraph",
+      "id": "lx5vptr"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0g8ox5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kmcz08z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l1qnhvb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lskijuo"
+    },
+    {
+      "type": "paragraph",
+      "id": "hzd2ygr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "db5pqve"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kudpztl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lgcbthf"
+    }
+  ],
+  "enriched": true
+}

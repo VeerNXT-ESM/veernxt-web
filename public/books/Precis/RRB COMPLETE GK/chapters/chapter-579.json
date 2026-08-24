@@ -1,0 +1,119 @@
+{
+  "id": "j3dasbm",
+  "title": "Composition of TRAI",
+  "order": 579,
+  "blocks": [
+    {
+      "id": "wkitao8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Authority shall consist of a Chairperson and not more than two whole-time members and not more than two part-time members to be appointed by the Central Government.",
+      "id": "h5z0e0j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Whole-Time Members",
+        "Part-Time Members"
+      ],
+      "rows": [
+        [
+          "Maximum Sanctioned Strength",
+          "Not more than 2 members",
+          "Not more than 2 members"
+        ],
+        [
+          "Appointing Authority",
+          "Central Government",
+          "Central Government"
+        ],
+        [
+          "Tenure / Age Limit",
+          "3 Years / 65 Years of Age",
+          "3 Years / 65 Years of Age"
+        ]
+      ],
+      "id": "5uwm86w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Act",
+          "value": "TRAI Act, 1997",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "3 Years or 65 Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "Max Strength",
+          "value": "Chairperson + 4 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Appointing Body",
+          "value": "Central Government",
+          "icon": "award"
+        }
+      ],
+      "id": "y555ml1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tenure of TRAI members is 3 years or 65 years of age (whichever is earlier), which is a common target for UPSC/State PSC factual questions.",
+        "Dispute resolution power lies with TDSAT, not TRAI; TRAI is primarily a regulatory and advisory body.",
+        "Members are eligible for re-appointment subject to the maximum age limit of 65 years."
+      ],
+      "id": "3h2426d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TRAI consists of a Chairperson, not more than two whole-time members, and not more than two part-time members.",
+        "The Chairperson and members are appointed directly by the Central Government of India.",
+        "The term of office for members is three years or until they attain the age of 65 years, whichever is earlier.",
+        "The 2000 amendment separated adjudicatory functions from TRAI and established the Telecom Disputes Settlement and Appellate Tribunal (TDSAT)."
+      ],
+      "id": "vm3yvv3"
+    }
+  ],
+  "enriched": true
+}

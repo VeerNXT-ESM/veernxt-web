@@ -1,0 +1,90 @@
+{
+  "id": "vkigimk",
+  "title": "RRB Quick Revision Box",
+  "order": 634,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hkkju6n"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on April 16, 1853.",
+      "id": "r47v2z9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Railway Gauge Type",
+        "Track Width",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m (1676 mm)",
+          "Standard major routes and heavy freight corridors"
+        ],
+        [
+          "Meter Gauge",
+          "1.000 m (1000 mm)",
+          "Secondary routes (mostly converted under Project Unigauge)"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "Mountain railways, hill stations, and heritage lines"
+        ]
+      ],
+      "id": "h1d98pw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "award"
+        },
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "info"
+        },
+        {
+          "label": "Broad Gauge Width",
+          "value": "1.676 m",
+          "icon": "check"
+        }
+      ],
+      "id": "qrx2ofz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headquarters of Central Railway is located at CSMT Mumbai, while Southern Railway is headquartered in Chennai.",
+        "Exam questions frequently test track gauge dimensions: Broad Gauge is 1.676 m (5 ft 6 in), Meter Gauge is 1.0 m, and Narrow Gauge is 0.762 m / 0.610 m.",
+        "Vande Bharat Express (Train 18) is India's first indigenous semi-high speed train, manufactured at Integral Coach Factory (ICF), Chennai."
+      ],
+      "id": "o694osd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian Railways was nationalized in 1951 and is currently structured into 19 operational administrative zones.",
+        "The first passenger train operated on April 16, 1853, covering a distance of 34 km between Bori Bunder (Mumbai) and Thane.",
+        "Project Unigauge aims to standardize all track networks across India into Broad Gauge (1.676 meters).",
+        "Bholu, an elephant dressed as a railway guard holding a lantern, serves as the official mascot of Indian Railways.",
+        "Research Design and Standards Organisation (RDSO), the main R&D wing of Indian Railways, is headquartered in Lucknow."
+      ],
+      "id": "x4f7r5g"
+    }
+  ],
+  "enriched": true
+}

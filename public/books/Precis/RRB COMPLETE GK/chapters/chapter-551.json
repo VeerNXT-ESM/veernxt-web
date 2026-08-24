@@ -1,0 +1,127 @@
+{
+  "id": "okst0ah",
+  "title": "Powers of SEBI (EXTREMELY IMPORTANT)",
+  "order": 551,
+  "blocks": [
+    {
+      "id": "2zg36gv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "SEBI has the same powers as are vested in a civil court under the Code of Civil Procedure, 1908, while trying a suit.",
+      "id": "skuzkbl"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Quasi-Judicial Powers",
+        "Quasi-Executive Powers"
+      ],
+      "rows": [
+        [
+          "Primary Scope",
+          "Adjudicating penalties, passing directions, and deciding on violations",
+          "Conducting investigations, inspections, and search and seizure operations"
+        ],
+        [
+          "Key Sections",
+          "Sections 11, 11B, 11D, and Chapter VI-A",
+          "Section 11C and Section 12 of the SEBI Act, 1992"
+        ],
+        [
+          "Remedy / Appeal",
+          "Appeal lies directly to the Securities Appellate Tribunal (SAT) within 45 days",
+          "Subject to procedural compliance and judicial review under constitutional writs"
+        ]
+      ],
+      "id": "dfx70nv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SEBI Act",
+          "value": "1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Section for Investigation",
+          "value": "Section 11C",
+          "icon": "book"
+        },
+        {
+          "label": "Civil Court Status",
+          "value": "CPC 1908",
+          "icon": "check"
+        },
+        {
+          "label": "Appeal Period (SAT)",
+          "value": "45 Days",
+          "icon": "clock"
+        }
+      ],
+      "id": "5kt80d8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SEBI can perform search and seizure under Section 11C(8) only after obtaining authorization from the Designated Court in Mumbai.",
+        "Appeals against orders of the Securities Appellate Tribunal (SAT) can be filed directly in the Supreme Court within 60 days on questions of law.",
+        "Cease and Desist proceedings under Section 11D cannot be passed by SEBI in respect of listed public companies unless there are reasonable grounds of market manipulation."
+      ],
+      "id": "652nar4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "SEBI was established as a statutory body under the SEBI Act, 1992 to protect investor interests and regulate the securities market.",
+        "Under Section 11C, SEBI has the power to direct any person to investigate the affairs of intermediaries or persons associated with the securities market.",
+        "SEBI is vested with powers of a Civil Court under the Code of Civil Procedure, 1908, including summoning witnesses and discovering documents.",
+        "SEBI can issue cease-and-desist orders under Section 11D and impose monetary penalties for market manipulation, insider trading, and non-disclosure.",
+        "Any person aggrieved by an order of SEBI or an Adjudicating Officer can prefer an appeal to the Securities Appellate Tribunal (SAT)."
+      ],
+      "id": "ts8iyc8"
+    }
+  ],
+  "enriched": true
+}

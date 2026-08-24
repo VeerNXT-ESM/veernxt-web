@@ -1,0 +1,496 @@
+{
+  "id": "w0wqkpz",
+  "title": "PHYSICS – CHAPTER 9",
+  "order": 44,
+  "blocks": [
+    {
+      "id": "eyy8lp3",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRICITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric current (I) is defined as the rate of flow of electric charge (Q = I × t).",
+        "Ohm's Law states that V = IR under constant physical conditions such as temperature.",
+        "Resistivity (ρ) depends strictly on the material composition and temperature, not on length or area.",
+        "In series connections, electric current remains uniform; in parallel connections, voltage remains uniform.",
+        "Joule's Law of Heating specifies heat produced as H = I²Rt."
+      ],
+      "id": "v7kzwq4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "info"
+        },
+        {
+          "label": "Commercial Unit (1 kWh)",
+          "value": "3.6 × 10⁶ J",
+          "icon": "award"
+        },
+        {
+          "label": "Fuse Wire Trait",
+          "value": "Low MP, High R",
+          "icon": "check"
+        },
+        {
+          "label": "Resistor Colour Bands",
+          "value": "BBROYGBVGW",
+          "icon": "book"
+        }
+      ],
+      "id": "upbf1x8"
+    },
+    {
+      "type": "paragraph",
+      "id": "13rs1o1"
+    },
+    {
+      "id": "s3jmjch",
+      "type": "heading",
+      "level": 3,
+      "content": "1. ELECTRIC CHARGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "y4or1ox"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tfr31qo"
+    },
+    {
+      "type": "paragraph",
+      "id": "4qqps3g"
+    },
+    {
+      "type": "paragraph",
+      "id": "dwz6083"
+    },
+    {
+      "type": "paragraph",
+      "id": "2mwyszc"
+    },
+    {
+      "id": "8sveucu",
+      "type": "heading",
+      "level": 3,
+      "content": "2. ELECTRIC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "a4zolgr"
+    },
+    {
+      "type": "paragraph",
+      "id": "hl4n9s9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9nm103t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yx0kd7r"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ntjtaf"
+    },
+    {
+      "id": "u0wthc7",
+      "type": "heading",
+      "level": 3,
+      "content": "3. ELECTRIC POTENTIAL DIFFERENCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "6pjqmkf"
+    },
+    {
+      "type": "paragraph",
+      "id": "k2cfoyj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i1nemm3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g0xumnj"
+    },
+    {
+      "id": "29ltnuk",
+      "type": "heading",
+      "level": 3,
+      "content": "4. OHM’S LAW"
+    },
+    {
+      "type": "paragraph",
+      "id": "elndrf5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z7uk5t8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8cj20tf"
+    },
+    {
+      "type": "paragraph",
+      "id": "inrl6zv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ohm’s law states that the current through a conductor between two points is directly proportional to the voltage across the two points.",
+      "id": "tbdzgk2"
+    },
+    {
+      "id": "xt915hh",
+      "type": "heading",
+      "level": 3,
+      "content": "5. RESISTANCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "4283f7e"
+    },
+    {
+      "type": "paragraph",
+      "id": "cyvcdjg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i2yhh27"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tkholwu"
+    },
+    {
+      "id": "0brw9vw",
+      "type": "heading",
+      "level": 3,
+      "content": "6. FACTORS AFFECTING RESISTANCE"
+    },
+    {
+      "id": "zp8230s",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "dq2dihv"
+    },
+    {
+      "id": "7vu2th6",
+      "type": "heading",
+      "level": 3,
+      "content": "7. RESISTIVITY (ρ)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9lcyn91"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h9fgd6n"
+    },
+    {
+      "type": "paragraph",
+      "id": "xjny1hj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Series Combination",
+        "Parallel Combination"
+      ],
+      "rows": [
+        [
+          "Electric Current (I)",
+          "Same through all resistors",
+          "Divides among individual branches"
+        ],
+        [
+          "Potential Difference (V)",
+          "Divides across each resistor",
+          "Same across all resistors"
+        ],
+        [
+          "Equivalent Resistance (Req)",
+          "Req = R1 + R2 + R3 (Increases)",
+          "1/Req = 1/R1 + 1/R2 + 1/R3 (Decreases)"
+        ],
+        [
+          "Circuit Fault Impact",
+          "One component fails, whole circuit breaks",
+          "One component fails, other branches function normally"
+        ]
+      ],
+      "id": "hljj5l3"
+    },
+    {
+      "id": "xxwf5yt",
+      "type": "heading",
+      "level": 3,
+      "content": "8. COMBINATION OF RESISTORS"
+    },
+    {
+      "id": "ee1dxct",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "id": "o7w344e",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qsq69dd",
+      "type": "heading",
+      "level": 3,
+      "content": "9. ELECTRIC POWER"
+    },
+    {
+      "type": "paragraph",
+      "id": "mkb0pkz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lqlx2ca"
+    },
+    {
+      "type": "paragraph",
+      "id": "dpv2yre"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ktyu4w8"
+    },
+    {
+      "id": "ikizw7j",
+      "type": "heading",
+      "level": 3,
+      "content": "10. HEATING EFFECT OF CURRENT (JOULE’S LAW)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vfwaada"
+    },
+    {
+      "type": "paragraph",
+      "id": "gkp7nee"
+    },
+    {
+      "id": "0pw5l37",
+      "type": "heading",
+      "level": 3,
+      "content": "11. COMMERCIAL UNIT OF ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "t7hm536"
+    },
+    {
+      "type": "paragraph",
+      "id": "m7o969l"
+    },
+    {
+      "id": "f0y25s1",
+      "type": "heading",
+      "level": 3,
+      "content": "12. FUSE AND MCB"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlkdfy3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "1 kWh is equal to 3.6 × 10⁶ Joules or 1 Commercial Unit of Electricity.",
+        "Ammeters are connected in series with ideal zero resistance, while Voltmeters are connected in parallel with ideal infinite resistance.",
+        "A fuse wire is always connected in series with the live wire and must have high resistance and a low melting point.",
+        "MCBs (Miniature Circuit Breakers) work on the magnetic effect of current, whereas electrical fuses work on the heating effect."
+      ],
+      "id": "2kg4oli"
+    },
+    {
+      "type": "paragraph",
+      "id": "qhs58rc"
+    },
+    {
+      "type": "paragraph",
+      "id": "lrecunz"
+    },
+    {
+      "id": "bigz4ym",
+      "type": "heading",
+      "level": 3,
+      "content": "13. RESISTOR COLOUR CODE"
+    },
+    {
+      "id": "ta4hgqw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "o92k885"
+    },
+    {
+      "id": "fx18fil",
+      "type": "heading",
+      "level": 3,
+      "content": "14. ADVANCED RRB EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "1tfmt6y"
+    },
+    {
+      "type": "paragraph",
+      "id": "6uwus25"
+    },
+    {
+      "type": "paragraph",
+      "id": "gt5n8f8"
+    },
+    {
+      "type": "paragraph",
+      "id": "d20bui2"
+    },
+    {
+      "type": "paragraph",
+      "id": "pyj6qyi"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,89 @@
+{
+  "id": "i8yjtbd",
+  "title": "ULTRA QUICK REVISION",
+  "order": 58,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "pxq433w"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 32 is the very soul of the Constitution and the very heart of it.",
+      "id": "cni4xsg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fundamental Rights (Part III)",
+        "Directive Principles (Part IV)"
+      ],
+      "rows": [
+        [
+          "Enforceability",
+          "Justiciable (Enforceable by courts)",
+          "Non-justiciable (Not enforceable by courts)"
+        ],
+        [
+          "Democracy Type",
+          "Establishes Political Democracy",
+          "Establishes Social and Economic Democracy"
+        ],
+        [
+          "Source Country",
+          "Constitution of USA",
+          "Constitution of Ireland"
+        ]
+      ],
+      "id": "k5o2ak4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Part",
+          "value": "Part III",
+          "icon": "book"
+        },
+        {
+          "label": "Article Range",
+          "value": "Articles 12-35",
+          "icon": "calendar"
+        },
+        {
+          "label": "Categories",
+          "value": "6 Fundamental Rights",
+          "icon": "check"
+        },
+        {
+          "label": "Borrowed From",
+          "value": "US Bill of Rights",
+          "icon": "award"
+        }
+      ],
+      "id": "sn9wusg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Articles 15, 16, 19, 29, and 30 are exclusive Fundamental Rights available ONLY to Indian citizens.",
+        "The Right to Education was added under Article 21A by the 86th Constitutional Amendment Act, 2002.",
+        "Writs under Article 32 can be issued only by the Supreme Court, while High Courts issue writs under Article 226 with broader scope."
+      ],
+      "id": "pprswia"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Part III of the Indian Constitution guarantees Fundamental Rights to all citizens from Articles 12 to 35.",
+        "The Right to Property was deleted from the list of Fundamental Rights by the 44th Amendment Act, 1978, and made a legal right under Article 300A.",
+        "Fundamental Rights are justiciable, meaning individuals can directly move the Supreme Court under Article 32 for their enforcement.",
+        "Articles 20 and 21 cannot be suspended even during a National Emergency declared under Article 352."
+      ],
+      "id": "0wvorlg"
+    }
+  ],
+  "enriched": true
+}

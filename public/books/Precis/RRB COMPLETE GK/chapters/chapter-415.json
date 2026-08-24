@@ -1,0 +1,89 @@
+{
+  "id": "kulmfm2",
+  "title": "RRB Quick Revision Box",
+  "order": 415,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "wrjrlrv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India operated on April 16, 1853, covering a distance of 34 kilometers between Bombay and Thane.",
+      "id": "47lvlyy"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Track Gauge",
+        "Width (Meters)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m",
+          "Mainline passenger routes and heavy freight corridors"
+        ],
+        [
+          "Meter Gauge",
+          "1.000 m",
+          "Secondary routes (mostly converted under Project Unigauge)"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "Mountain passenger railways and heritage routes"
+        ]
+      ],
+      "id": "x4vp57g"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "18 Zones",
+          "icon": "award"
+        },
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Run Distance",
+          "value": "34 km",
+          "icon": "info"
+        },
+        {
+          "label": "Nationalization Year",
+          "value": "1951",
+          "icon": "check"
+        }
+      ],
+      "id": "j4v12z0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headquarters of all 18 Railway Zones are frequently asked in RRB NTPC and Group D exams.",
+        "Note the date of India's first electric train: February 3, 1925 (between Bombay VT and Kurla Harbour).",
+        "Differentiate clearly between rail gauge dimensions: Broad Gauge (1.676 m), Meter Gauge (1.000 m), and Narrow Gauge (0.762 m / 0.610 m)."
+      ],
+      "id": "82lh4v4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian Railways is organized into 18 zones, with South Coast Railway (Visakhapatnam) being the newest zone.",
+        "The first passenger train ran on April 16, 1853, between Bombay (Bori Bunder) and Thane.",
+        "The Railway Board was constituted in 1905 on the recommendation of the Sir Thomas Robertson Committee.",
+        "Indian Railways was nationalized in 1951 and remains one of the world's largest rail networks."
+      ],
+      "id": "kwhzy3l"
+    }
+  ],
+  "enriched": true
+}

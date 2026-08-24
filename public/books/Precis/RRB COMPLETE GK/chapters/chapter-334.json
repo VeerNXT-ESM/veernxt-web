@@ -1,0 +1,135 @@
+{
+  "id": "se6d0ro",
+  "title": "Jurisdiction of the Supreme Court",
+  "order": 334,
+  "blocks": [
+    {
+      "id": "n66cigd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Supreme Court is the guarantor of the Fundamental Rights of the citizens and the guardian of the Constitution.",
+      "id": "zzofkqd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Supreme Court (Article 32)",
+        "High Court (Article 226)"
+      ],
+      "rows": [
+        [
+          "Scope of Writs",
+          "Enforcement of Fundamental Rights only",
+          "Enforcement of Fundamental Rights and ordinary legal rights"
+        ],
+        [
+          "Territorial Jurisdiction",
+          "Applicable throughout the entire territory of India",
+          "Limited to the state or specific territorial jurisdiction of the High Court"
+        ],
+        [
+          "Nature of Remedy",
+          "Guaranteed Fundamental Right; Supreme Court cannot refuse to exercise jurisdiction",
+          "Discretionary power; High Court may refuse to exercise writ jurisdiction"
+        ]
+      ],
+      "id": "6rpp2os"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Jurisdiction",
+          "value": "Article 131",
+          "icon": "book"
+        },
+        {
+          "label": "Writ Jurisdiction",
+          "value": "Article 32",
+          "icon": "check"
+        },
+        {
+          "label": "Special Leave Petition",
+          "value": "Article 136",
+          "icon": "award"
+        },
+        {
+          "label": "Advisory Jurisdiction",
+          "value": "Article 143",
+          "icon": "info"
+        }
+      ],
+      "id": "4u4hh6e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Original jurisdiction under Article 131 does NOT extend to pre-Constitution treaties, agreements, or covenants.",
+        "Advisory opinion given by the Supreme Court under Article 143 is purely advisory and NOT binding on the President.",
+        "Special Leave Petition (Article 136) is a discretionary power that applies to any court or tribunal in India, EXCEPT military tribunals.",
+        "While Article 32 writ jurisdiction is restricted only to Fundamental Rights, High Courts under Article 226 can issue writs for ordinary legal rights as well."
+      ],
+      "id": "jivhgrl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Original jurisdiction under Article 131 exclusively covers federal disputes between the Union and States or between States.",
+        "The Supreme Court is the defender and guarantor of Fundamental Rights through its original writ jurisdiction under Article 32.",
+        "Appellate jurisdiction encompasses Constitutional (Article 132), Civil (Article 133), Criminal (Article 134) matters, and discretionary Special Leave Petitions (Article 136).",
+        "Under Article 143, the President can seek the non-binding advisory opinion of the Supreme Court on questions of law or public importance.",
+        "As a Court of Record (Article 129), its judgments hold perpetual evidentiary value and it possesses the power to punish for contempt of court."
+      ],
+      "id": "wlmf87j"
+    }
+  ],
+  "enriched": true
+}

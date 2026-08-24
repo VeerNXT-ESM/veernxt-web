@@ -1,0 +1,133 @@
+{
+  "id": "qlp95cp",
+  "title": "2. Waves: The Primary Coastal Agent",
+  "order": 156,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "h6l6yd4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Agent",
+          "value": "Ocean Waves",
+          "icon": "info"
+        },
+        {
+          "label": "Process Types",
+          "value": "Erosion & Deposition",
+          "icon": "check"
+        },
+        {
+          "label": "Key Features",
+          "value": "Cliffs, Caves, Spits",
+          "icon": "book"
+        }
+      ],
+      "id": "g87g705"
+    },
+    {
+      "id": "gz14wtv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Waves: The Primary Coastal Agent",
+      "id": "uq6595l"
+    },
+    {
+      "id": "dviznco",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Terms"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Waves act as the dominant geomorphic agent along coastal regions through erosion, transportation, and deposition.",
+        "Wave erosion processes include hydraulic action, abrasion, attrition, and corrosion/solution.",
+        "Erosional coastal landforms comprise sea cliffs, wave-cut platforms, sea caves, sea arches, stacks, and stumps.",
+        "Depositional coastal landforms include beaches, sand bars, spits, tombolos, and coastal lagoons."
+      ],
+      "id": "0i1krzx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constructive Waves",
+        "Destructive Waves"
+      ],
+      "rows": [
+        [
+          "Dominant Action",
+          "Deposition (Strong Swash)",
+          "Erosion (Strong Backwash)"
+        ],
+        [
+          "Wave Energy",
+          "Low energy, lower frequency",
+          "High energy, higher frequency"
+        ],
+        [
+          "Resulting Landforms",
+          "Beaches, Spits, Bars, Tombolos",
+          "Cliffs, Caves, Arches, Stacks"
+        ]
+      ],
+      "id": "ee3wa6q"
+    },
+    {
+      "type": "paragraph",
+      "id": "j0sfwed"
+    },
+    {
+      "type": "paragraph",
+      "id": "rnn4l1w"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Sequential evolution of wave-erected landforms (Sea Cave → Sea Arch → Stack → Stump).",
+        "Differentiate between Constructive Waves (strong swash, builds beaches) and Destructive Waves (strong backwash, erodes coasts).",
+        "Identify depositional features like Tombolos (sandbars connecting an island to the mainland) versus Spits."
+      ],
+      "id": "5fsp4fc"
+    },
+    {
+      "type": "paragraph",
+      "id": "gzduivt"
+    },
+    {
+      "type": "paragraph",
+      "id": "r5j6dve"
+    }
+  ],
+  "enriched": true
+}

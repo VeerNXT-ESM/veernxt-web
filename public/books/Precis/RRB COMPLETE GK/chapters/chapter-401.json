@@ -1,0 +1,90 @@
+{
+  "id": "ugjxz0e",
+  "title": "7. Reservation in Panchayats",
+  "order": 401,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "u0hfilt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Not less than one-third of the total number of seats reserved for women shall be allotted by rotation to different constituencies in a Panchayat.",
+      "id": "ghh8dez"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Provision Type",
+        "Quantum / Basis of Reservation"
+      ],
+      "rows": [
+        [
+          "Scheduled Castes (SCs) & Scheduled Tribes (STs)",
+          "Mandatory",
+          "In proportion to their population in the Panchayat area"
+        ],
+        [
+          "Women",
+          "Mandatory",
+          "Not less than one-third (33%) of total seats and chairperson posts"
+        ],
+        [
+          "Backward Classes (OBCs)",
+          "Voluntary / Optional",
+          "As determined at the discretion of the State Legislature"
+        ]
+      ],
+      "id": "ntcxdk6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 243D",
+          "icon": "book"
+        },
+        {
+          "label": "Mandatory Women Reservation",
+          "value": "1/3rd (33%)",
+          "icon": "check"
+        },
+        {
+          "label": "Parent Amendment Act",
+          "value": "73rd Amendment (1992)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Exemption Amendment",
+          "value": "83rd Amendment (2000)",
+          "icon": "award"
+        }
+      ],
+      "id": "8undb2w"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 243D specifically governs reservation of seats and offices of Chairpersons in Panchayati Raj Institutions.",
+        "Women reservation in Panchayats is a mandatory provision (minimum 33%), whereas reservation for Backward Classes (OBCs) is an optional/voluntary provision for states.",
+        "The 83rd Constitutional Amendment Act, 2000 exempted Arunachal Pradesh from SC reservations in Panchayats due to the absence of SC population in the state."
+      ],
+      "id": "x0yuf2a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 243D provides for mandatory reservation of seats for Scheduled Castes (SCs) and Scheduled Tribes (STs) in every Panchayat in proportion to their population.",
+        "Not less than one-third of the total number of seats are mandatorily reserved for women, including seats reserved for SC and ST women.",
+        "Offices of Chairpersons at the village, intermediate, and district levels are also reserved for SCs, STs, and women in a manner determined by the State Legislature.",
+        "Reservation for Backward Classes (OBCs) in Panchayats is voluntary and left entirely to the discretion of the respective State Legislatures.",
+        "The 83rd Constitutional Amendment Act, 2000 exempted Arunachal Pradesh from reserving seats for SCs, as the state has no SC population."
+      ],
+      "id": "421es5d"
+    }
+  ],
+  "enriched": true
+}

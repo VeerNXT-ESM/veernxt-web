@@ -1,0 +1,474 @@
+{
+  "id": "akrgjoa",
+  "title": "Chapter 19: Temperature – Controls, Distribution, Inversion and Global Patterns",
+  "order": 203,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "n43dgqx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Normal Lapse Rate",
+          "value": "6.5°C / km",
+          "icon": "info"
+        },
+        {
+          "label": "Dry Adiabatic Rate",
+          "value": "10°C / km",
+          "icon": "check"
+        },
+        {
+          "label": "Wet Adiabatic Rate",
+          "value": "5°C / km",
+          "icon": "check"
+        },
+        {
+          "label": "Core Controls",
+          "value": "6 Factors",
+          "icon": "book"
+        }
+      ],
+      "id": "riy1a91"
+    },
+    {
+      "id": "5ud4g8s",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Measurement of Temperature"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Temperature decreases with altitude in the troposphere at the Normal Lapse Rate of 6.5°C per 1,000 meters.",
+        "Horizontal temperature distribution is governed by latitude, altitude, distance from the sea, ocean currents, air masses, and local topography.",
+        "Temperature inversion is an atmospheric phenomenon where warm air overlays cold air near the surface, reversing the normal vertical profile.",
+        "Isotherms bend more sharply in the Northern Hemisphere due to higher land-water contrast compared to the ocean-dominated Southern Hemisphere.",
+        "The Urban Heat Island (UHI) effect leads to elevated ambient temperatures in dense urban centers relative to surrounding rural zones."
+      ],
+      "id": "guq78px"
+    },
+    {
+      "type": "paragraph",
+      "id": "90218rg"
+    },
+    {
+      "type": "paragraph",
+      "id": "582nrtm"
+    },
+    {
+      "type": "paragraph",
+      "id": "4amipth"
+    },
+    {
+      "type": "paragraph",
+      "id": "zky5yde"
+    },
+    {
+      "type": "paragraph",
+      "id": "0thyark"
+    },
+    {
+      "type": "paragraph",
+      "id": "xmebow9"
+    },
+    {
+      "id": "ry1ee1w",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Factors Controlling Temperature"
+    },
+    {
+      "id": "arxsjfr",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "s3bc142",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0gjxclx",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Horizontal Distribution of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "f2s0j4w"
+    },
+    {
+      "type": "paragraph",
+      "id": "sgg3e1i"
+    },
+    {
+      "type": "paragraph",
+      "id": "3fl5so2"
+    },
+    {
+      "type": "paragraph",
+      "id": "1gibq12"
+    },
+    {
+      "type": "paragraph",
+      "id": "hddaehi"
+    },
+    {
+      "id": "z4ts51q",
+      "type": "heading",
+      "level": 3,
+      "content": "Major Temperature Zones of the Earth"
+    },
+    {
+      "id": "3unqsvt",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "id": "opvzmw7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q0b6n3g",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Vertical Distribution of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "47bh71c"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Temperature inversion occurs when the normal decrease of temperature with increasing altitude is reversed, causing a layer of warm air to lie over a layer of cold air.",
+      "id": "d4lz7ko"
+    },
+    {
+      "type": "paragraph",
+      "id": "t9h06jq"
+    },
+    {
+      "type": "paragraph",
+      "id": "fabyd15"
+    },
+    {
+      "type": "paragraph",
+      "id": "nv36yy6"
+    },
+    {
+      "id": "bj9kx9v",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Adiabatic Lapse Rate"
+    },
+    {
+      "id": "hcqw3zz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ghmd6nw",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Temperature Inversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "fx9a8vn"
+    },
+    {
+      "type": "paragraph",
+      "id": "igw06xu"
+    },
+    {
+      "type": "paragraph",
+      "id": "38gilz1"
+    },
+    {
+      "type": "paragraph",
+      "id": "mu5i7fs"
+    },
+    {
+      "type": "paragraph",
+      "id": "i24lcne"
+    },
+    {
+      "id": "4n165pe",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Temperature Inversion"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Dry Adiabatic Lapse Rate (DALR)",
+        "Wet Adiabatic Lapse Rate (WALR)"
+      ],
+      "rows": [
+        [
+          "Rate of Cooling",
+          "10°C per 1,000 meters",
+          "~5°C per 1,000 meters"
+        ],
+        [
+          "Moisture Status",
+          "Unsaturated air mass (RH < 100%)",
+          "Saturated air mass (RH = 100%)"
+        ],
+        [
+          "Latent Heat Impact",
+          "No latent heat released during ascent",
+          "Latent heat of condensation is released, counteracting cooling"
+        ]
+      ],
+      "id": "3x9zqxh"
+    },
+    {
+      "type": "paragraph",
+      "id": "xadvz2b"
+    },
+    {
+      "type": "paragraph",
+      "id": "mnrwxe4"
+    },
+    {
+      "type": "paragraph",
+      "id": "rd94ono"
+    },
+    {
+      "type": "paragraph",
+      "id": "yxbcrwy"
+    },
+    {
+      "id": "n9ag0k2",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Temperature Range"
+    },
+    {
+      "type": "paragraph",
+      "id": "htfetkl"
+    },
+    {
+      "type": "paragraph",
+      "id": "iez35pg"
+    },
+    {
+      "type": "paragraph",
+      "id": "zn2lpcl"
+    },
+    {
+      "type": "paragraph",
+      "id": "9yfndn4"
+    },
+    {
+      "id": "z7jv9nf",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Global Temperature Patterns"
+    },
+    {
+      "type": "paragraph",
+      "id": "scfhhee"
+    },
+    {
+      "type": "paragraph",
+      "id": "3jhgdqq"
+    },
+    {
+      "type": "paragraph",
+      "id": "wt0s6f2"
+    },
+    {
+      "type": "paragraph",
+      "id": "01otnnv"
+    },
+    {
+      "id": "jgu9469",
+      "type": "heading",
+      "level": 3,
+      "content": "Urban Heat Island Effect"
+    },
+    {
+      "type": "paragraph",
+      "id": "6z3js8v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ideal conditions for Surface Inversion: Long winter nights, clear skies, calm air, and snow-covered or dry ground.",
+        "Isotherms run almost parallel to latitudes in the Southern Hemisphere due to ocean dominance.",
+        "Wet Adiabatic Lapse Rate is always lower than Dry Adiabatic Lapse Rate because condensation releases latent heat of vaporization."
+      ],
+      "id": "eqml9pc"
+    },
+    {
+      "type": "paragraph",
+      "id": "kb5fdln"
+    },
+    {
+      "type": "paragraph",
+      "id": "3f78ty0"
+    },
+    {
+      "type": "paragraph",
+      "id": "sgjx2jc"
+    },
+    {
+      "id": "v7mxv4r",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "37xya0w"
+    },
+    {
+      "type": "paragraph",
+      "id": "iil710z"
+    },
+    {
+      "type": "paragraph",
+      "id": "vk6xans"
+    },
+    {
+      "type": "paragraph",
+      "id": "pqez4v6"
+    },
+    {
+      "id": "2xjdipw",
+      "type": "heading",
+      "level": 2,
+      "content": "MOST IMPORTANT EXAM CONCEPTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "hx86ipt"
+    }
+  ],
+  "enriched": true
+}

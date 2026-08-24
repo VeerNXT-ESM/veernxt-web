@@ -1,40 +1,40 @@
 {
-  "id": "7f9dpup",
+  "id": "btdhpjt",
   "title": "Chapter 32: Volcanoes and Earthquakes",
   "order": 33,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "p1z76ju"
+      "id": "syyh0pq"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Seismic Wave Types",
-          "value": "3 (P, S, Surface)",
+          "label": "Volcano Categories",
+          "value": "By Activity & Shape",
           "icon": "info"
         },
         {
-          "label": "Primary Volcanic Belt",
-          "value": "Pacific Ring of Fire",
-          "icon": "award"
+          "label": "Seismic Wave Types",
+          "value": "P, S & L Waves",
+          "icon": "check"
         },
         {
           "label": "Measurement Scales",
           "value": "Richter & Mercalli",
-          "icon": "check"
+          "icon": "award"
         },
         {
-          "label": "Volcano Categories",
-          "value": "Active, Dormant, Extinct",
-          "icon": "book"
+          "label": "Primary Activity Zone",
+          "value": "Ring of Fire",
+          "icon": "calendar"
         }
       ],
-      "id": "g983pcv"
+      "id": "u2ig0ls"
     },
     {
-      "id": "zo6g7tv",
+      "id": "foqv3i9",
       "type": "heading",
       "level": 2,
       "content": "1. Volcanoes"
@@ -43,52 +43,52 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Volcanoes are classified by activity (Active, Dormant, Extinct) and by physical shape (Shield, Composite/Stratovolcano, Cinder Cone).",
-        "Earthquake energy propagates via seismic body waves (P-waves and S-waves) and surface waves (L-waves).",
-        "Primary (P) waves are longitudinal, fastest, and travel through solids, liquids, and gases; Secondary (S) waves are transverse and pass only through solids.",
-        "The Circum-Pacific Belt (Ring of Fire) contains the highest concentration of active volcanoes and seismic activity worldwide.",
-        "Earthquake magnitude is measured quantitatively on the logarithmic Richter Scale, whereas earthquake intensity is measured qualitatively on the Mercalli Scale."
+        "Volcanoes are broadly classified based on eruptive activity (active, dormant, extinct) and structural shape.",
+        "Earthquakes release accumulated tectonic stress, radiating energy outward via body waves and surface waves.",
+        "Seismic waves are categorized into primary (P) waves, secondary (S) waves, and surface (L) waves.",
+        "Earthquake magnitude is measured logarithmically on the Richter scale, while damage intensity is assessed using the Mercalli scale.",
+        "The majority of global volcanic eruptions and seismic shocks occur along the Circum-Pacific Belt."
       ],
-      "id": "fpc2vjr"
+      "id": "8iaqdfx"
     },
     {
       "type": "paragraph",
-      "id": "krogocn"
+      "id": "t3xco5i"
     },
     {
-      "id": "5dnj4iq",
+      "id": "klan7nw",
       "type": "heading",
       "level": 3,
       "content": "Structure of a Volcano"
     },
     {
       "type": "paragraph",
-      "id": "fux22xn"
+      "id": "pud8q8p"
     },
     {
       "type": "paragraph",
-      "id": "nuw82jo"
+      "id": "1mtj0jt"
     },
     {
       "type": "paragraph",
-      "id": "4q2tlpe"
+      "id": "apisil6"
     },
     {
       "type": "paragraph",
-      "id": "7tas4sk"
+      "id": "6p8t45r"
     },
     {
       "type": "paragraph",
-      "id": "kvm1r6s"
+      "id": "rtghsfk"
     },
     {
-      "id": "cjr9545",
+      "id": "sqqmxs9",
       "type": "heading",
       "level": 3,
       "content": "Types of Volcanoes Based on Activity"
     },
     {
-      "id": "ntecd0x",
+      "id": "fakro8f",
       "type": "table",
       "rows": [
         {
@@ -126,13 +126,13 @@
       ]
     },
     {
-      "id": "kqf7cdz",
+      "id": "mhye6mt",
       "type": "heading",
       "level": 3,
       "content": "Types of Volcanoes Based on Shape"
     },
     {
-      "id": "qcgi389",
+      "id": "x604bt4",
       "type": "table",
       "rows": [
         {
@@ -170,72 +170,72 @@
       ]
     },
     {
-      "id": "4v1xotj",
+      "id": "nmwajvw",
       "type": "heading",
       "level": 3,
       "content": "Effects of Volcanoes"
     },
     {
       "type": "paragraph",
-      "id": "31iusxm"
+      "id": "qqtvslo"
     },
     {
       "type": "paragraph",
-      "id": "pjmtcue"
+      "id": "vrz3rvu"
     },
     {
       "type": "paragraph",
-      "id": "hgtvjti"
+      "id": "l2tly7m"
     },
     {
       "type": "paragraph",
-      "id": "2d9a6yw"
+      "id": "tzf9cm5"
     },
     {
       "type": "pullQuote",
       "content": "Major Earthquake Zones of the World",
-      "id": "y5ts9d7"
+      "id": "d5xub9h"
     },
     {
-      "id": "9l52j84",
+      "id": "8v8hjaf",
       "type": "heading",
       "level": 2,
       "content": "2. Earthquakes"
     },
     {
       "type": "paragraph",
-      "id": "a8rfnh0"
+      "id": "fylq8hv"
     },
     {
-      "id": "gnrmsjr",
+      "id": "e0qd7ta",
       "type": "heading",
       "level": 3,
       "content": "Important Terms"
     },
     {
       "type": "paragraph",
-      "id": "hrpd4i3"
+      "id": "5evu3x2"
     },
     {
       "type": "paragraph",
-      "id": "onda81c"
+      "id": "qim6s8v"
     },
     {
       "type": "paragraph",
-      "id": "mexxsiy"
+      "id": "7bhrw57"
     },
     {
       "type": "paragraph",
-      "id": "nie9x47"
+      "id": "2nkm7zq"
     },
     {
-      "id": "qv43rhu",
+      "id": "dr7db6c",
       "type": "heading",
       "level": 3,
       "content": "Types of Seismic Waves"
     },
     {
-      "id": "ln8njeu",
+      "id": "e74jqvf",
       "type": "table",
       "rows": [
         {
@@ -275,64 +275,69 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Property",
-        "Primary Waves (P-Waves)",
-        "Secondary Waves (S-Waves)"
+        "Feature",
+        "Primary (P) Waves",
+        "Secondary (S) Waves",
+        "Surface (L) Waves"
       ],
       "rows": [
         [
-          "Wave Type",
+          "Wave Motion",
           "Longitudinal (Compressional)",
-          "Transverse (Shear)"
+          "Transverse (Shear)",
+          "Complex (Surface movement)"
         ],
         [
-          "Relative Velocity",
-          "Fastest (Arrives First)",
-          "Slower than P-Waves"
-        ],
-        [
-          "Medium Propagation",
+          "Medium Permeability",
           "Solids, Liquids, and Gases",
-          "Solids Only"
+          "Solids only",
+          "Earth's surface/crust"
         ],
         [
-          "Particle Motion",
-          "Parallel to wave propagation direction",
-          "Perpendicular to wave propagation direction"
+          "Propagation Speed",
+          "Fastest",
+          "Moderate",
+          "Slowest"
+        ],
+        [
+          "Destructive Potential",
+          "Lowest",
+          "Moderate",
+          "Highest"
         ]
       ],
-      "id": "t33eu06"
+      "id": "ms76v0q"
     },
     {
-      "id": "nkjqnc9",
+      "id": "u0hz5qg",
       "type": "heading",
       "level": 3,
       "content": "Causes of Earthquakes"
     },
     {
       "type": "paragraph",
-      "id": "wu6b6rj"
+      "id": "bo01i6v"
     },
     {
       "type": "paragraph",
-      "id": "g8ch04x"
+      "id": "4xkh337"
     },
     {
       "type": "paragraph",
-      "id": "01rnwly"
+      "id": "mxt1vbz"
     },
     {
       "type": "paragraph",
-      "id": "agv8itq"
+      "id": "1bmsc0m"
     },
     {
-      "id": "c81f1gj",
+      "id": "jocnfyy",
       "type": "heading",
       "level": 3,
       "content": "Measurement of Earthquakes"
     },
     {
-      "id": "w4m6uq5",
+      "id": "9cokvzv",
       "type": "table",
       "rows": [
         {
@@ -359,29 +364,29 @@
       ]
     },
     {
-      "id": "c1rwubp",
+      "id": "vlcvc95",
       "type": "heading",
       "level": 3,
       "content": "Effects of Earthquakes"
     },
     {
       "type": "paragraph",
-      "id": "y9pq7h3"
+      "id": "vx3lx8c"
     },
     {
       "type": "paragraph",
-      "id": "texrdet"
+      "id": "ceeoeb7"
     },
     {
       "type": "paragraph",
-      "id": "tgvz4bx"
+      "id": "z3ym7yr"
     },
     {
       "type": "paragraph",
-      "id": "376z76n"
+      "id": "cou1yqt"
     },
     {
-      "id": "z526f9a",
+      "id": "ueg3oj0",
       "type": "heading",
       "level": 3,
       "content": "Major Earthquake Zones of the World"
@@ -389,46 +394,45 @@
     {
       "type": "examAlert",
       "items": [
-        "S-waves cannot pass through liquid media, providing key evidence that the Earth's outer core is liquid.",
-        "Richter Scale measures total energy released (magnitude), whereas Mercalli Scale measures visible destruction (intensity).",
-        "P-waves are the fastest seismic waves and always register first on a seismograph.",
-        "Hypocenter (Focus) is the underground point of origin, while Epicenter is the point on the Earth's surface directly above it."
+        "P-waves are compressional waves that travel through solids, liquids, and gases, whereas S-waves are shear waves that travel only through solids.",
+        "The Richter Scale measures energy released (magnitude), while the Mercalli Scale measures visible destruction and impact (intensity).",
+        "The Circum-Pacific Belt (Pacific Ring of Fire) accounts for nearly 68% of the world's earthquakes."
       ],
-      "id": "d3gctaz"
+      "id": "i5z71bj"
     },
     {
       "type": "paragraph",
-      "id": "4kpsbz8"
+      "id": "nx5p7la"
     },
     {
       "type": "paragraph",
-      "id": "2wrybcz"
+      "id": "urq5jpz"
     },
     {
       "type": "paragraph",
-      "id": "ujy47kk"
+      "id": "fmabcww"
     },
     {
-      "id": "39qm9uz",
+      "id": "pmo7aro",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "fdebn7x"
+      "id": "jd0aweq"
     },
     {
       "type": "paragraph",
-      "id": "qeq01rq"
+      "id": "az8o827"
     },
     {
       "type": "paragraph",
-      "id": "vvqeijt"
+      "id": "2swqgud"
     },
     {
       "type": "paragraph",
-      "id": "g47wk2s"
+      "id": "7n4o8yx"
     }
   ],
   "enriched": true

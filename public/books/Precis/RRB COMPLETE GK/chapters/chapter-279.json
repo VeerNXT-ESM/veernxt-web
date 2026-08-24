@@ -1,0 +1,134 @@
+{
+  "id": "ev63fxf",
+  "title": "Writs – Types and Meaning",
+  "order": 279,
+  "blocks": [
+    {
+      "id": "z2k9hp8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 32 is the very soul of the Constitution and the very heart of it.",
+      "id": "wrkjgu8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Supreme Court (Article 32)",
+        "High Court (Article 226)"
+      ],
+      "rows": [
+        [
+          "Scope of Jurisdiction",
+          "Limited to enforcement of Fundamental Rights only",
+          "Wider scope: covers Fundamental Rights and ordinary legal rights"
+        ],
+        [
+          "Territorial Reach",
+          "Applicable throughout the entire territory of India",
+          "Restricted to its specific state or territorial jurisdiction"
+        ],
+        [
+          "Nature of Power",
+          "Fundamental Right in itself; SC cannot refuse to grant relief",
+          "Discretionary power; High Court may refuse to issue a writ"
+        ]
+      ],
+      "id": "lzd52i0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Articles",
+          "value": "Art 32 & 226",
+          "icon": "book"
+        },
+        {
+          "label": "Total Types",
+          "value": "5 Writs",
+          "icon": "check"
+        },
+        {
+          "label": "Legal Origin",
+          "value": "English Law",
+          "icon": "info"
+        },
+        {
+          "label": "Guarantor of FRs",
+          "value": "Supreme Court",
+          "icon": "award"
+        }
+      ],
+      "id": "bdfcnu0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Courts (Article 226) have a wider writ jurisdiction than the Supreme Court (Article 32), as High Courts can issue writs for both Fundamental Rights and ordinary legal rights.",
+        "Mandamus cannot be issued against a private individual, the President of India, or State Governors.",
+        "Quo-Warranto is the only writ that can be filed by any interested citizen, not strictly limited to the aggrieved person."
+      ],
+      "id": "lqs67aw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Writs are written legal orders issued by the Supreme Court under Article 32 and High Courts under Article 226 to protect Fundamental Rights.",
+        "The five types of writs are Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo-Warranto.",
+        "Habeas Corpus literally means 'to have the body of' and protects citizens against unlawful detention by both public and private entities.",
+        "Mandamus is a command issued to a public authority to perform an official duty they failed or refused to execute.",
+        "Certiorari is both preventive and curative, allowing higher courts to quash orders of lower courts or tribunals."
+      ],
+      "id": "zscavk6"
+    }
+  ],
+  "enriched": true
+}

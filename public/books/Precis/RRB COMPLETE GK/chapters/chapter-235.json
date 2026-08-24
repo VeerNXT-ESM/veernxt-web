@@ -1,0 +1,386 @@
+{
+  "id": "69p7q56",
+  "title": "CHAPTER 14: IMPORTANT TERMS IN ECONOMICS",
+  "order": 235,
+  "blocks": [
+    {
+      "id": "w26sc5y",
+      "type": "heading",
+      "level": 2,
+      "content": "1. GDP (Gross Domestic Product)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Covers 30 foundational macroeconomics terminology essential for Indian competitive exams.",
+        "Includes key national income metrics such as Gross Domestic Product (GDP), Gross National Product (GNP), and Net Domestic Product (NDP).",
+        "Highlights monetary policy tools managed by the RBI including Repo Rate, Reverse Repo Rate, CRR, and SLR.",
+        "Outlines critical fiscal indicators such as Fiscal Deficit, Revenue Deficit, and Primary Deficit.",
+        "Detail key external sector metrics including Balance of Payments (BoP), Current Account Deficit (CAD), FDI, and FPI."
+      ],
+      "id": "ybh600g"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Terms Covered",
+          "value": "30 Key Terms",
+          "icon": "book"
+        },
+        {
+          "label": "Core Subject",
+          "value": "Macroeconomics",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "High Priority",
+          "icon": "award"
+        },
+        {
+          "label": "Target Area",
+          "value": "Indian Economy",
+          "icon": "check"
+        }
+      ],
+      "id": "vwuz2n1"
+    },
+    {
+      "type": "paragraph",
+      "id": "7ncvoxy"
+    },
+    {
+      "id": "pzmwxjo",
+      "type": "heading",
+      "level": 2,
+      "content": "2. GNP (Gross National Product)"
+    },
+    {
+      "type": "paragraph",
+      "id": "75rtqol"
+    },
+    {
+      "id": "gk36bh0",
+      "type": "heading",
+      "level": 2,
+      "content": "3. NDP (Net Domestic Product)"
+    },
+    {
+      "type": "paragraph",
+      "id": "78xii1w"
+    },
+    {
+      "id": "oqg4dio",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Inflation"
+    },
+    {
+      "type": "paragraph",
+      "id": "wart5hv"
+    },
+    {
+      "id": "qmru9c3",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Deflation"
+    },
+    {
+      "type": "paragraph",
+      "id": "05hwazy"
+    },
+    {
+      "id": "ds587bj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Stagflation"
+    },
+    {
+      "type": "paragraph",
+      "id": "7r5vba1"
+    },
+    {
+      "id": "6ui9pcq",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Fiscal Deficit"
+    },
+    {
+      "type": "paragraph",
+      "id": "tmfelej"
+    },
+    {
+      "id": "ekmrdh3",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Revenue Deficit"
+    },
+    {
+      "type": "paragraph",
+      "id": "p90aj0e"
+    },
+    {
+      "id": "zc0tzm9",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Primary Deficit"
+    },
+    {
+      "type": "paragraph",
+      "id": "6z9rduz"
+    },
+    {
+      "id": "yuhdre8",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Repo Rate"
+    },
+    {
+      "type": "paragraph",
+      "id": "xatm6pn"
+    },
+    {
+      "id": "cmrx0di",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Reverse Repo Rate"
+    },
+    {
+      "type": "paragraph",
+      "id": "0bopmit"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 14: IMPORTANT TERMS IN ECONOMICS",
+      "id": "bd0b443"
+    },
+    {
+      "id": "skvm94o",
+      "type": "heading",
+      "level": 2,
+      "content": "12. CRR (Cash Reserve Ratio)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ztjvdn"
+    },
+    {
+      "id": "pvakjmg",
+      "type": "heading",
+      "level": 2,
+      "content": "13. SLR (Statutory Liquidity Ratio)"
+    },
+    {
+      "type": "paragraph",
+      "id": "4c09852"
+    },
+    {
+      "id": "j33j6qp",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Balance of Payments (BoP)"
+    },
+    {
+      "type": "paragraph",
+      "id": "mc2ucn1"
+    },
+    {
+      "id": "9ekhkfm",
+      "type": "heading",
+      "level": 2,
+      "content": "15. Current Account Deficit (CAD)"
+    },
+    {
+      "type": "paragraph",
+      "id": "rx420tb"
+    },
+    {
+      "id": "ffb73h6",
+      "type": "heading",
+      "level": 2,
+      "content": "16. Exchange Rate"
+    },
+    {
+      "type": "paragraph",
+      "id": "yslyg44"
+    },
+    {
+      "id": "w2neomj",
+      "type": "heading",
+      "level": 2,
+      "content": "17. Depreciation (Currency)"
+    },
+    {
+      "type": "paragraph",
+      "id": "65sbu45"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "FDI (Foreign Direct Investment)",
+        "FPI (Foreign Portfolio Investment)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Investment in physical assets or enterprises in another country",
+          "Investment in financial assets like stocks and bonds"
+        ],
+        [
+          "Control & Management",
+          "Direct control and management rights in the company",
+          "No direct control over company operations"
+        ],
+        [
+          "Nature of Capital",
+          "Long-term, stable capital flow",
+          "Short-term, volatile 'hot money'"
+        ]
+      ],
+      "id": "xx1gao9"
+    },
+    {
+      "id": "gut3j6b",
+      "type": "heading",
+      "level": 2,
+      "content": "18. Appreciation (Currency)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vjx75ne"
+    },
+    {
+      "id": "pjxa3tr",
+      "type": "heading",
+      "level": 2,
+      "content": "19. FDI (Foreign Direct Investment)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ej2dmbi"
+    },
+    {
+      "id": "ltq3695",
+      "type": "heading",
+      "level": 2,
+      "content": "20. FPI (Foreign Portfolio Investment)"
+    },
+    {
+      "type": "paragraph",
+      "id": "xi745b6"
+    },
+    {
+      "id": "5ctgb9i",
+      "type": "heading",
+      "level": 2,
+      "content": "21. Human Development Index (HDI)"
+    },
+    {
+      "type": "paragraph",
+      "id": "36z28gb"
+    },
+    {
+      "id": "ejmjv98",
+      "type": "heading",
+      "level": 2,
+      "content": "22. Poverty Line"
+    },
+    {
+      "type": "paragraph",
+      "id": "6x8ed19"
+    },
+    {
+      "id": "r9eo2i5",
+      "type": "heading",
+      "level": 2,
+      "content": "23. Multiplier Effect"
+    },
+    {
+      "type": "paragraph",
+      "id": "271h4wc"
+    },
+    {
+      "id": "vn67sq6",
+      "type": "heading",
+      "level": 2,
+      "content": "24. Subsidy"
+    },
+    {
+      "type": "paragraph",
+      "id": "wulhua8"
+    },
+    {
+      "id": "g4rwtx9",
+      "type": "heading",
+      "level": 2,
+      "content": "25. Public Debt"
+    },
+    {
+      "type": "paragraph",
+      "id": "jr8a8rl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Repo Rate is the interest rate at which RBI lends short-term money to commercial banks, whereas Reverse Repo Rate is the rate at which RBI borrows from banks.",
+        "Direct Tax burden cannot be shifted (e.g., Income Tax), while Indirect Tax burden is passed to the final consumer (e.g., GST).",
+        "FDI involves direct ownership of physical assets and active management, whereas FPI involves passive investment in financial securities like shares and bonds."
+      ],
+      "id": "7pajn82"
+    },
+    {
+      "id": "6t6ncrx",
+      "type": "heading",
+      "level": 2,
+      "content": "26. Tax Buoyancy"
+    },
+    {
+      "type": "paragraph",
+      "id": "lxg6sio"
+    },
+    {
+      "id": "6n82du7",
+      "type": "heading",
+      "level": 2,
+      "content": "27. Capital Account"
+    },
+    {
+      "type": "paragraph",
+      "id": "0vnztsn"
+    },
+    {
+      "id": "pcbfvt8",
+      "type": "heading",
+      "level": 2,
+      "content": "28. Direct Tax"
+    },
+    {
+      "type": "paragraph",
+      "id": "5nz52td"
+    },
+    {
+      "id": "go8b5or",
+      "type": "heading",
+      "level": 2,
+      "content": "29. Indirect Tax"
+    },
+    {
+      "type": "paragraph",
+      "id": "xa15xqt"
+    },
+    {
+      "id": "gh5lmaf",
+      "type": "heading",
+      "level": 2,
+      "content": "30. Demographic Dividend"
+    },
+    {
+      "type": "paragraph",
+      "id": "wwa16jc"
+    }
+  ],
+  "enriched": true
+}

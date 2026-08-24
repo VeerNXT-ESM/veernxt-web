@@ -1,0 +1,95 @@
+{
+  "id": "mmtvb0a",
+  "title": "10. Single Citizenship",
+  "order": 245,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "h7jhr8b"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Though the Indian Constitution is federal and envisages a dual polity, it provides for only a single citizenship, that is, the Indian citizenship.",
+      "id": "npufunl"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Single Citizenship (India)",
+        "Dual Citizenship (USA)"
+      ],
+      "rows": [
+        [
+          "System Origin",
+          "Canadian Model",
+          "American Model"
+        ],
+        [
+          "Allegiance",
+          "Single allegiance to the Union of India",
+          "Dual allegiance to the National Government and State"
+        ],
+        [
+          "Civic Rights",
+          "Uniform rights throughout the national territory",
+          "Different rights and privileges varying by State"
+        ],
+        [
+          "State Citizenship",
+          "Non-existent (No separate state citizenship)",
+          "Exits alongside National citizenship"
+        ]
+      ],
+      "id": "3a88e7j"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Model",
+          "value": "Canadian Model",
+          "icon": "book"
+        },
+        {
+          "label": "Article 16(3) Power",
+          "value": "Parliament Only",
+          "icon": "check"
+        },
+        {
+          "label": "OCI Scheme Introduced",
+          "value": "2005",
+          "icon": "calendar"
+        },
+        {
+          "label": "Art 15 Non-Ground",
+          "value": "Residence",
+          "icon": "info"
+        }
+      ],
+      "id": "7zz7f41"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Only Parliament—and NOT state legislatures—has the power to prescribe residence qualifications for employment under Article 16(3).",
+        "Residence is not listed as a forbidden ground of discrimination under Article 15; state governments can offer concessions (like educational fees) to state residents.",
+        "Overseas Citizen of India (OCI) cardholders are not full citizens and do not enjoy voting rights or the right to hold constitutional offices."
+      ],
+      "id": "jg0too6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Indian Constitution envisages a dual polity (Centre and States) but provides for only a single citizenship for the whole of India.",
+        "Unlike the USA, where a person is a citizen of both the USA and a specific state, Indian citizens owe allegiance only to the Union.",
+        "Article 15 prohibits discrimination on grounds of religion, race, caste, sex, or place of birth, but does not explicitly prohibit discrimination based on residence.",
+        "Under Article 16(3), Parliament alone can prescribe residence within a state or union territory as a condition for certain public employments.",
+        "Rights of non-tribals to move freely or settle in tribal areas can be restricted under Article 19 to protect the distinct culture and property of Scheduled Tribes."
+      ],
+      "id": "d8szxr5"
+    }
+  ],
+  "enriched": true
+}

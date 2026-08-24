@@ -1,0 +1,955 @@
+{
+  "id": "3ikq6yu",
+  "title": "PHYSICS – CHAPTER 4",
+  "order": 36,
+  "blocks": [
+    {
+      "id": "h5kjorg",
+      "type": "heading",
+      "level": 2,
+      "content": "GRAVITATION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Universal Law of Gravitation states that gravitational force is inversely proportional to the square of the distance between two masses.",
+        "Mass is scalar and remains constant everywhere, whereas Weight is a vector quantity that varies with local acceleration due to gravity (g).",
+        "Archimedes' Principle states that the upward buoyant force equals the weight of the fluid displaced by a submerged body.",
+        "Kepler's Third Law specifies that the square of orbital period (T²) is proportional to the cube of the semi-major axis (r³).",
+        "Escape velocity is independent of the mass of the escaping body and equals √2 times the orbital velocity."
+      ],
+      "id": "eblfmbd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Avg Earth 'g'",
+          "value": "9.8 m/s²",
+          "icon": "check"
+        },
+        {
+          "label": "Earth Escape Velocity",
+          "value": "11.2 km/s",
+          "icon": "award"
+        },
+        {
+          "label": "Gravitational Constant (G)",
+          "value": "6.67 × 10⁻¹¹ N m²/kg²",
+          "icon": "info"
+        },
+        {
+          "label": "Geostationary Period",
+          "value": "24 Hours",
+          "icon": "clock"
+        }
+      ],
+      "id": "53c4ieg"
+    },
+    {
+      "type": "paragraph",
+      "id": "6pouchx"
+    },
+    {
+      "id": "ixkw1qs",
+      "type": "heading",
+      "level": 3,
+      "content": "1. UNIVERSAL LAW OF GRAVITATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "pj89aan"
+    },
+    {
+      "type": "paragraph",
+      "id": "ice7uu2"
+    },
+    {
+      "type": "paragraph",
+      "id": "vv2vvwr"
+    },
+    {
+      "type": "paragraph",
+      "id": "jrgmqyl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "52o4o74"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "35vflmk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k0g18q9"
+    },
+    {
+      "type": "paragraph",
+      "id": "6pjdemu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lhwn33i"
+    },
+    {
+      "id": "ke5zdqj",
+      "type": "heading",
+      "level": 3,
+      "content": "2. ACCELERATION DUE TO GRAVITY (g)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cow042m"
+    },
+    {
+      "type": "paragraph",
+      "id": "i0n3lh7"
+    },
+    {
+      "type": "paragraph",
+      "id": "fjtqgd4"
+    },
+    {
+      "type": "paragraph",
+      "id": "5602n4f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mwhr60j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4iz45lu"
+    },
+    {
+      "type": "paragraph",
+      "id": "4igv0fi"
+    },
+    {
+      "type": "paragraph",
+      "id": "vx8fg1j"
+    },
+    {
+      "id": "ent3uh5",
+      "type": "heading",
+      "level": 3,
+      "content": "3. MASS VS WEIGHT"
+    },
+    {
+      "id": "6nyn35w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bodzwre",
+      "type": "heading",
+      "level": 3,
+      "content": "4. FREE FALL"
+    },
+    {
+      "id": "ikc6bmm",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "x34zrns"
+    },
+    {
+      "type": "paragraph",
+      "id": "lu1rzbt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lopx6m0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0mu06ij"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gt3oh6k"
+    },
+    {
+      "id": "m28mr0c",
+      "type": "heading",
+      "level": 3,
+      "content": "5. THRUST AND PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "id": "tps5rwd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a28baff"
+    },
+    {
+      "type": "paragraph",
+      "id": "ih4zvck"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "05059n0"
+    },
+    {
+      "id": "yj2a42s",
+      "type": "heading",
+      "level": 3,
+      "content": "6. BUOYANT FORCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "breaf6g"
+    },
+    {
+      "id": "f02q7c8",
+      "type": "heading",
+      "level": 3,
+      "content": "7. ARCHIMEDES’ PRINCIPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "67wxpwa"
+    },
+    {
+      "type": "paragraph",
+      "id": "c6dgso1"
+    },
+    {
+      "id": "5xfpg5n",
+      "type": "heading",
+      "level": 3,
+      "content": "8. RELATIVE DENSITY"
+    },
+    {
+      "id": "gxptuf8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e5wzlob",
+      "type": "heading",
+      "level": 3,
+      "content": "9. FLOATATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "ukqjj78"
+    },
+    {
+      "type": "paragraph",
+      "id": "v230t6x"
+    },
+    {
+      "id": "t56sl4z",
+      "type": "heading",
+      "level": 3,
+      "content": "10. ESCAPE VELOCITY"
+    },
+    {
+      "id": "8edrfk9",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "3ievrls"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "26dvyll"
+    },
+    {
+      "id": "vftl3hb",
+      "type": "heading",
+      "level": 3,
+      "content": "11. SATELLITE MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "nfn82lw"
+    },
+    {
+      "type": "paragraph",
+      "id": "nwigzzg"
+    },
+    {
+      "type": "paragraph",
+      "id": "b6agaez"
+    },
+    {
+      "id": "a08lp4c",
+      "type": "heading",
+      "level": 3,
+      "content": "12. RELATION BETWEEN g AND G"
+    },
+    {
+      "type": "paragraph",
+      "id": "i4h894a"
+    },
+    {
+      "type": "paragraph",
+      "id": "lfrgs69"
+    },
+    {
+      "type": "paragraph",
+      "id": "y1y3s9y"
+    },
+    {
+      "type": "paragraph",
+      "id": "z50imf7"
+    },
+    {
+      "id": "szy3pzv",
+      "type": "heading",
+      "level": 3,
+      "content": "13. VARIATION OF g WITH HEIGHT AND DEPTH"
+    },
+    {
+      "type": "paragraph",
+      "id": "h45aatj"
+    },
+    {
+      "type": "paragraph",
+      "id": "ej3vek0"
+    },
+    {
+      "type": "paragraph",
+      "id": "sggduad"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Escape Velocity = √2 × Orbital Velocity.",
+      "id": "qxsk68l"
+    },
+    {
+      "type": "paragraph",
+      "id": "r16c05g"
+    },
+    {
+      "type": "paragraph",
+      "id": "k3f5y5s"
+    },
+    {
+      "type": "paragraph",
+      "id": "6nmdqkj"
+    },
+    {
+      "id": "4w01620",
+      "type": "heading",
+      "level": 3,
+      "content": "14. GRAVITATIONAL POTENTIAL ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "lnmwqgm"
+    },
+    {
+      "type": "paragraph",
+      "id": "hgiu30x"
+    },
+    {
+      "type": "paragraph",
+      "id": "21hwexi"
+    },
+    {
+      "id": "z8g7u43",
+      "type": "heading",
+      "level": 3,
+      "content": "15. ESCAPE VELOCITY – ADVANCED POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "zxbyic2"
+    },
+    {
+      "type": "paragraph",
+      "id": "aval0sz"
+    },
+    {
+      "type": "paragraph",
+      "id": "mnkudbf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "spily2j"
+    },
+    {
+      "id": "cp8b6v2",
+      "type": "heading",
+      "level": 3,
+      "content": "16. ORBITAL VELOCITY & TIME PERIOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "3a6315a"
+    },
+    {
+      "type": "paragraph",
+      "id": "cog7f9v"
+    },
+    {
+      "type": "paragraph",
+      "id": "hhf1vk9"
+    },
+    {
+      "id": "lw5wmol",
+      "type": "heading",
+      "level": 3,
+      "content": "17. KEPLER’S LAWS OF PLANETARY MOTION"
+    },
+    {
+      "id": "yfntv3q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sw4vbl4",
+      "type": "heading",
+      "level": 3,
+      "content": "18. GEOSTATIONARY SATELLITE"
+    },
+    {
+      "type": "paragraph",
+      "id": "l9dziye"
+    },
+    {
+      "type": "paragraph",
+      "id": "s93v1rr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j9vqu1k"
+    },
+    {
+      "type": "paragraph",
+      "id": "ymkqp6c"
+    },
+    {
+      "type": "paragraph",
+      "id": "qk8ai2k"
+    },
+    {
+      "id": "jdoiz0y",
+      "type": "heading",
+      "level": 3,
+      "content": "19. WEIGHTLESSNESS"
+    },
+    {
+      "type": "paragraph",
+      "id": "5094p6m"
+    },
+    {
+      "type": "paragraph",
+      "id": "p9fq648"
+    },
+    {
+      "type": "paragraph",
+      "id": "5seirur"
+    },
+    {
+      "id": "mlbnpcd",
+      "type": "heading",
+      "level": 3,
+      "content": "20. TERMINAL VELOCITY (BASIC CONCEPT)"
+    },
+    {
+      "type": "paragraph",
+      "id": "azv1zzl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5bwpvlb"
+    },
+    {
+      "id": "dlgenrs",
+      "type": "heading",
+      "level": 3,
+      "content": "Escape Velocity = √2 × Orbital Velocity."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Mass",
+        "Weight"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Amount of matter contained in a body",
+          "Gravitational force exerted on a body"
+        ],
+        [
+          "Nature & Unit",
+          "Scalar quantity, SI unit: Kilogram (kg)",
+          "Vector quantity, SI unit: Newton (N)"
+        ],
+        [
+          "Variability",
+          "Constant everywhere in the universe",
+          "Varies depending on local acceleration due to gravity (g)"
+        ],
+        [
+          "Value at Earth's Centre",
+          "Non-zero (remains constant)",
+          "Zero (since g = 0 at the centre)"
+        ]
+      ],
+      "id": "rg4267d"
+    },
+    {
+      "id": "ulnvush",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "hh01drx",
+      "type": "heading",
+      "level": 2,
+      "content": "MCQs"
+    },
+    {
+      "id": "1ywddau",
+      "type": "heading",
+      "level": 3,
+      "content": "Q1."
+    },
+    {
+      "type": "paragraph",
+      "id": "np0v9d2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4a3sejc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sai1o6c"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xv6d4wk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qvnlcrn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m0qpqlf"
+    },
+    {
+      "type": "paragraph",
+      "id": "t8dbgox"
+    },
+    {
+      "type": "paragraph",
+      "id": "jthl3n0"
+    },
+    {
+      "type": "paragraph",
+      "id": "gqofska"
+    },
+    {
+      "type": "paragraph",
+      "id": "71vuv9i"
+    },
+    {
+      "type": "paragraph",
+      "id": "f6krdsp"
+    },
+    {
+      "type": "paragraph",
+      "id": "s44ldnj"
+    },
+    {
+      "type": "paragraph",
+      "id": "jx8v1mw"
+    },
+    {
+      "type": "paragraph",
+      "id": "co5olat"
+    },
+    {
+      "id": "cw1x11y",
+      "type": "heading",
+      "level": 3,
+      "content": "Q2."
+    },
+    {
+      "type": "paragraph",
+      "id": "nafc2ct"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "anoic8b"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ygmnvum"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7lb77r2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fbfwe4f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "slu3usm"
+    },
+    {
+      "type": "paragraph",
+      "id": "ud53d3g"
+    },
+    {
+      "type": "paragraph",
+      "id": "auqqmg7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ne3ikcq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cywe829"
+    },
+    {
+      "type": "paragraph",
+      "id": "rfp4e2j"
+    },
+    {
+      "id": "qcgtfh3",
+      "type": "heading",
+      "level": 3,
+      "content": "Q3."
+    },
+    {
+      "type": "paragraph",
+      "id": "a2nkcoq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "00vka1q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xgot9f3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bfttq8d"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "luv9thw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wiv9q6r"
+    },
+    {
+      "type": "paragraph",
+      "id": "a9wexof"
+    },
+    {
+      "type": "paragraph",
+      "id": "iyc8fdn"
+    },
+    {
+      "type": "paragraph",
+      "id": "lvfgh1z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jcom2tx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "15k360c"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The value of acceleration due to gravity (g) decreases with both increasing height above the surface and depth below the surface of the Earth.",
+        "At the center of the Earth, acceleration due to gravity is zero, making the weight of any object zero.",
+        "A geostationary satellite orbits Earth in the equatorial plane from West to East at an altitude of approximately 36,000 km with a time period of 24 hours."
+      ],
+      "id": "b2gsosy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zky6p4d"
+    },
+    {
+      "id": "ib0l71z",
+      "type": "heading",
+      "level": 3,
+      "content": "Q4."
+    },
+    {
+      "type": "paragraph",
+      "id": "3nrt3ek"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s2jof3m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "urgz10l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7yqh5q4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ksnumoe"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ymmkawf"
+    },
+    {
+      "type": "paragraph",
+      "id": "ozpu3x0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jbk42v2"
+    },
+    {
+      "type": "paragraph",
+      "id": "31flspf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2zmb0nn"
+    },
+    {
+      "type": "paragraph",
+      "id": "6np70h4"
+    },
+    {
+      "id": "c4608pn",
+      "type": "heading",
+      "level": 3,
+      "content": "Q5."
+    },
+    {
+      "type": "paragraph",
+      "id": "gxy7dre"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cc86fnf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ul41pwq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nfyp9zy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5hf3fyv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0lol74d"
+    },
+    {
+      "type": "paragraph",
+      "id": "px3h96b"
+    },
+    {
+      "type": "paragraph",
+      "id": "lu0i640"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "98j3qvo"
+    },
+    {
+      "type": "paragraph",
+      "id": "phsvv51"
+    },
+    {
+      "type": "paragraph",
+      "id": "ibdfx1a"
+    }
+  ],
+  "enriched": true
+}

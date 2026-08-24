@@ -1,0 +1,96 @@
+{
+  "id": "9e8f4zc",
+  "title": "13. Overseas Citizen of India (OCI)",
+  "order": 267,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "gg2mo6h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Constitution of India does not allow dual citizenship, that is, citizenship of India and citizenship of a foreign country simultaneously.",
+      "id": "chrk2dd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Non-Resident Indian (NRI)",
+        "Overseas Citizen of India (OCI)"
+      ],
+      "rows": [
+        [
+          "Citizenship Status",
+          "Indian Citizen holding an Indian Passport",
+          "Foreign Citizen holding a Foreign Passport"
+        ],
+        [
+          "Voting Rights",
+          "Yes, entitled to vote in Indian elections",
+          "No, not entitled to vote"
+        ],
+        [
+          "Public Office",
+          "Can hold constitutional and public offices",
+          "Cannot hold constitutional or public offices"
+        ],
+        [
+          "Property Acquisition",
+          "Can acquire all property types, including agricultural land",
+          "Cannot acquire agricultural or plantation properties"
+        ]
+      ],
+      "id": "7e8u7rd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "OCI Scheme Introduced",
+          "value": "2005",
+          "icon": "calendar"
+        },
+        {
+          "label": "PIO & OCI Merger",
+          "value": "2015",
+          "icon": "check"
+        },
+        {
+          "label": "Dual Citizenship",
+          "value": "Not Allowed",
+          "icon": "info"
+        },
+        {
+          "label": "Voting Rights",
+          "value": "None",
+          "icon": "award"
+        }
+      ],
+      "id": "8ge904a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "OCI cardholders do NOT possess voting rights in elections to Parliament or State Legislatures.",
+        "OCI cardholders cannot hold constitutional posts such as President, Vice-President, Supreme Court/High Court Judge, or Member of Parliament.",
+        "OCI cardholders are prohibited from purchasing agricultural or plantation properties in India.",
+        "Foreign citizens who were citizens of Pakistan, Bangladesh, or other notified countries cannot register as OCI cardholders."
+      ],
+      "id": "1l1v9w8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Overseas Citizen of India (OCI) scheme was introduced by amending the Citizenship Act, 1955 in 2005.",
+        "The Citizenship (Amendment) Act, 2015 replaced the PIO and OCI cards with a single 'OCI Cardholder' category.",
+        "OCI cardholders enjoy a multi-purpose, multiple-entry lifelong visa for visiting India.",
+        "OCI status does not confer actual dual citizenship, as Article 9 of the Constitution prohibits dual citizenship.",
+        "Persons who have ever been citizens of Pakistan or Bangladesh are explicitly ineligible for OCI status."
+      ],
+      "id": "9hmcvgl"
+    }
+  ],
+  "enriched": true
+}

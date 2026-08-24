@@ -1,0 +1,95 @@
+{
+  "id": "u9aq2pk",
+  "title": "Chapter 16: Biodiversity",
+  "order": 188,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ogwu73h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Biodiversity is the term popularized by the sociobiologist Edward Wilson to describe the combined diversity at all the levels of biological organisation.",
+      "id": "xil7167"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "In-situ Conservation",
+        "Ex-situ Conservation"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "On-site conservation of organisms within their natural habitat",
+          "Off-site conservation of threatened species outside their natural habitat"
+        ],
+        [
+          "Scope",
+          "Protects the entire ecosystem along with all resident species",
+          "Focuses on protecting specific endangered species or gametes"
+        ],
+        [
+          "Examples",
+          "National Parks, Wildlife Sanctuaries, Biosphere Reserves, Sacred Groves",
+          "Zoological Parks, Botanical Gardens, Cryopreservation, Seed Banks"
+        ],
+        [
+          "Cost & Effort",
+          "Cost-effective and requires minimal human intervention",
+          "High cost requiring specialized facilities and active human maintenance"
+        ]
+      ],
+      "id": "2saz3vw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Global Species Estimate",
+          "value": "7 Million",
+          "icon": "info"
+        },
+        {
+          "label": "Biodiversity Hotspots",
+          "value": "34",
+          "icon": "award"
+        },
+        {
+          "label": "Earth Summit Year",
+          "value": "1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Levels of Diversity",
+          "value": "3 Levels",
+          "icon": "check"
+        }
+      ],
+      "id": "rc9p3kf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "In-situ conservation includes National Parks, Wildlife Sanctuaries, and Biosphere Reserves, whereas Ex-situ includes Botanical Gardens, Cryopreservation, and Seed Banks.",
+        "Paul Ehrlich proposed the 'Rivet Popper Hypothesis' to illustrate the ecosystem impact of species loss.",
+        "The Evil Quartet lists the four primary causes of biodiversity loss, with habitat loss and fragmentation being the most critical."
+      ],
+      "id": "8izcvik"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Biodiversity refers to the sum total of diversity existing at all levels of biological organization: genetic, species, and ecological.",
+        "Sociobiologist Edward Wilson popularized the term biodiversity to describe combined diversity across biological levels.",
+        "The 'Evil Quartet' driving species extinction includes Habitat Loss & Fragmentation, Over-exploitation, Alien Species Invasions, and Co-extinctions.",
+        "Biodiversity hotspots cover less than 2% of Earth's land area but harbour over 50% of endemic terrestrial species.",
+        "Conservation strategies are broadly categorized into In-situ (on-site) and Ex-situ (off-site) approaches."
+      ],
+      "id": "k403izb"
+    }
+  ],
+  "enriched": true
+}

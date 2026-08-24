@@ -1,0 +1,127 @@
+{
+  "id": "ussasyd",
+  "title": "Types of Grants Recommended",
+  "order": 450,
+  "blocks": [
+    {
+      "id": "fpigyg3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Grants-in-aid of the revenues of such States as Parliament may determine to be in need of assistance are provided under Article 275 of the Constitution.",
+      "id": "d14onvp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Statutory Grants (Article 275)",
+        "Discretionary Grants (Article 282)"
+      ],
+      "rows": [
+        [
+          "Recommending Authority",
+          "Finance Commission of India",
+          "Union Ministries / Central Government"
+        ],
+        [
+          "Obligation",
+          "Binding upon parliamentary approval based on FC recommendations",
+          "Discretionary and optional for specific public purposes"
+        ],
+        [
+          "Objective",
+          "To assist states facing financial distress and reduce regional disparities",
+          "To advance specific central schemes and developmental priorities"
+        ]
+      ],
+      "id": "z4eoixd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 275",
+          "icon": "book"
+        },
+        {
+          "label": "Recommending Body",
+          "value": "Finance Commission",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Categories",
+          "value": "5 Main Grants",
+          "icon": "check"
+        },
+        {
+          "label": "Award Period",
+          "value": "5 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "vynnlcm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 275 covers statutory grants recommended by the Finance Commission, while Article 282 deals with discretionary grants made by the Union.",
+        "Tied grants to local bodies must be exclusively spent on national priorities like sanitation, drinking water supply, and rainwater harvesting.",
+        "Post-Devolution Revenue Deficit Grants are assessed individually for each state after calculating vertical and horizontal tax transfers."
+      ],
+      "id": "dx01a76"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Grants-in-aid are recommended by the Finance Commission under Article 275 of the Constitution of India to meet state revenue deficits.",
+        "Revenue Deficit Grants are provided to bridge the post-devolution financial gap in the revenue accounts of needy states.",
+        "Local Body Grants are allocated to Rural Local Bodies (RLBs) and Urban Local Bodies (ULBs), divided into tied and untied components.",
+        "Sector-Specific Grants aim to boost critical social and economic infrastructure such as health, education, and agriculture.",
+        "Disaster Relief Grants are assigned to strengthen State Disaster Response Funds (SDRF) and State Disaster Mitigation Funds (SDMF)."
+      ],
+      "id": "4y55tk9"
+    }
+  ],
+  "enriched": true
+}

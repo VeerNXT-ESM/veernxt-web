@@ -1,11 +1,11 @@
 {
-  "id": "yzvlwqc",
+  "id": "ehmd3ly",
   "title": "Chapter 11: Computer Networking",
   "order": 11,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "u91pw6b"
+      "id": "9tb4d9z"
     },
     {
       "type": "statStrip",
@@ -17,19 +17,24 @@
         },
         {
           "label": "Core Topologies",
-          "value": "5 Types",
-          "icon": "check"
+          "value": "5 Layouts",
+          "icon": "info"
         },
         {
-          "label": "Key Hardware Devices",
-          "value": "4 Essential",
-          "icon": "info"
+          "label": "Key Hardware",
+          "value": "4 Devices",
+          "icon": "award"
+        },
+        {
+          "label": "Coverage Range",
+          "value": "Local to Global",
+          "icon": "check"
         }
       ],
-      "id": "yyoyisf"
+      "id": "9upuaf0"
     },
     {
-      "id": "6q0kd07",
+      "id": "0aqnq44",
       "type": "heading",
       "level": 2,
       "content": "11.1 Introduction to Computer Networks"
@@ -38,25 +43,26 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Computer networks enable efficient resource sharing, data communication, and centralized management across interconnected devices.",
-        "Networks are classified by geographical coverage into Local Area Network (LAN), Metropolitan Area Network (MAN), and Wide Area Network (WAN).",
-        "Network hardware includes Routers (route data across networks), Switches (smart local packet switching), Hubs (broadcasting devices), and Modems (signal conversion).",
-        "Network topologies represent physical or logical layouts including Bus, Star, Ring, Mesh, and Tree structures."
+        "Local Area Networks (LAN) cover limited geographical areas like offices or homes, offering high data transfer speeds.",
+        "Metropolitan Area Networks (MAN) connect users across larger regions such as an entire city.",
+        "Wide Area Networks (WAN) span vast geographical distances, combining multiple LANs across countries or continents.",
+        "Network devices perform distinct roles: Hubs broadcast data to all ports, Switches forward data selectively, and Routers connect disparate networks.",
+        "Network topology defines the structural layout of connections, including Bus, Star, Ring, Mesh, and Tree configurations."
       ],
-      "id": "yp7oaci"
+      "id": "66r69gg"
     },
     {
       "type": "paragraph",
-      "id": "metamg0"
+      "id": "tmnanxy"
     },
     {
-      "id": "szrz7u7",
+      "id": "7x51s2f",
       "type": "heading",
       "level": 3,
       "content": "11.1.1 Advantages of Computer Networks"
     },
     {
-      "id": "kcwjuw9",
+      "id": "34pexxz",
       "type": "list",
       "items": [
         null,
@@ -67,13 +73,13 @@
       ]
     },
     {
-      "id": "x5d8x6b",
+      "id": "k217qqi",
       "type": "heading",
       "level": 2,
       "content": "11.2 Types of Computer Networks"
     },
     {
-      "id": "pcsu88z",
+      "id": "xinjajb",
       "type": "table",
       "rows": [
         {
@@ -111,48 +117,48 @@
       ]
     },
     {
-      "id": "kroxa6e",
+      "id": "47gnaly",
       "type": "heading",
       "level": 3,
       "content": "11.2.1 Local Area Network (LAN)"
     },
     {
       "type": "paragraph",
-      "id": "vkp8axn"
+      "id": "lzbwebl"
     },
     {
-      "id": "psys1s3",
+      "id": "7o0m06d",
       "type": "heading",
       "level": 3,
       "content": "11.2.2 Metropolitan Area Network (MAN)"
     },
     {
       "type": "paragraph",
-      "id": "bjm2x2d"
+      "id": "59ysshx"
     },
     {
-      "id": "68y9rxe",
+      "id": "on9w3nx",
       "type": "heading",
       "level": 3,
       "content": "11.2.3 Wide Area Network (WAN)"
     },
     {
       "type": "paragraph",
-      "id": "4w8rw55"
+      "id": "ok9xll7"
     },
     {
       "type": "pullQuote",
-      "content": "A computer network enables seamless resource sharing, efficient communication, and centralized data management across interconnected hardware systems.",
-      "id": "vxbmdsq"
+      "content": "A Computer Network connects independent computers to enable resource sharing, data transfer, and communication across various geographical distances.",
+      "id": "zo2eh40"
     },
     {
-      "id": "ip3hlce",
+      "id": "cl9aeqa",
       "type": "heading",
       "level": 2,
       "content": "11.3 Network Devices"
     },
     {
-      "id": "14zinb1",
+      "id": "as4hh94",
       "type": "table",
       "rows": [
         {
@@ -193,89 +199,89 @@
       ]
     },
     {
-      "id": "y7bdckl",
+      "id": "z6wvo4l",
       "type": "heading",
       "level": 3,
       "content": "11.3.1 Router"
     },
     {
       "type": "paragraph",
-      "id": "fljkqp0"
+      "id": "0xsycm4"
     },
     {
-      "id": "5y3twpw",
+      "id": "8ofynpd",
       "type": "heading",
       "level": 3,
       "content": "11.3.2 Switch"
     },
     {
       "type": "paragraph",
-      "id": "r3yrasq"
+      "id": "tr7eld3"
     },
     {
-      "id": "e7z1h7r",
+      "id": "aom4bxj",
       "type": "heading",
       "level": 3,
       "content": "11.3.3 Hub"
     },
     {
       "type": "paragraph",
-      "id": "ng23zj8"
+      "id": "r0eo2bu"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Parameter",
-        "LAN (Local Area Network)",
-        "MAN (Metropolitan Area Network)",
-        "WAN (Wide Area Network)"
+        "LAN",
+        "MAN",
+        "WAN"
       ],
       "rows": [
         [
           "Geographical Scope",
-          "Small (Single room, office, or building)",
-          "Medium (Entire city or town)",
-          "Large (Country, continent, or global)"
+          "Small (Single room/building)",
+          "Medium (City/Town)",
+          "Large (Country/Global)"
         ],
         [
-          "Data Transfer Speed",
-          "Very High (e.g., 100 Mbps - 1 Gbps)",
-          "Moderate Speed",
-          "Relatively Low Speed"
+          "Speed",
+          "Very High (up to Gbps)",
+          "Moderate",
+          "Low to Moderate"
         ],
         [
-          "Ownership & Cost",
-          "Private ownership; Low cost",
-          "Private/Public; Moderate cost",
-          "Private/Public; High cost"
+          "Ownership",
+          "Private",
+          "Private or Public",
+          "Private or Public"
         ],
         [
-          "Error Rate",
-          "Lowest error rate",
-          "Moderate error rate",
-          "Highest error rate"
+          "Maintenance Cost",
+          "Low",
+          "Medium",
+          "High"
         ]
       ],
-      "id": "naw8z4h"
+      "id": "g4tkj3m"
     },
     {
-      "id": "3qtz23m",
+      "id": "kbc9fy0",
       "type": "heading",
       "level": 3,
       "content": "11.3.4 Modem"
     },
     {
       "type": "paragraph",
-      "id": "arrel81"
+      "id": "jxotfue"
     },
     {
-      "id": "i8t18oh",
+      "id": "a5zeu3b",
       "type": "heading",
       "level": 2,
       "content": "11.4 Network Topologies"
     },
     {
-      "id": "9kg4soo",
+      "id": "kxohc7j",
       "type": "table",
       "rows": [
         {
@@ -323,27 +329,27 @@
       ]
     },
     {
-      "id": "udmoevf",
+      "id": "rfm2nai",
       "type": "heading",
       "level": 3,
       "content": "11.4.1 Bus Topology"
     },
     {
       "type": "paragraph",
-      "id": "s4x7olp"
+      "id": "z0vbl3s"
     },
     {
-      "id": "9yb9tob",
+      "id": "ujwh4vy",
       "type": "heading",
       "level": 3,
       "content": "11.4.2 Star Topology"
     },
     {
       "type": "paragraph",
-      "id": "0uxcigi"
+      "id": "3ceamq2"
     },
     {
-      "id": "yhbyms2",
+      "id": "7kz7uif",
       "type": "heading",
       "level": 3,
       "content": "11.4.3 Ring Topology"
@@ -351,44 +357,44 @@
     {
       "type": "examAlert",
       "items": [
-        "Hub vs. Switch: A Hub broadcasts data packets to all connected ports (Layer 1), whereas a Switch intelligently forwards packets to specific destination ports using MAC addresses (Layer 2).",
-        "Mesh Topology: Provides maximum reliability and fault tolerance through redundant point-to-point links between all nodes, but incurs high installation costs.",
-        "Modem Functionality: Performs Modulation (Digital to Analog conversion) and Demodulation (Analog to Digital conversion) for network data transfer over standard communication lines."
+        "Hub vs. Switch: Hubs operate at the Physical Layer (Layer 1) and broadcast data, while Switches operate at the Data Link Layer (Layer 2) and send unicast frame traffic.",
+        "Mesh Topology Formula: The total number of cables required in a fully connected mesh network with 'n' devices is n(n-1)/2.",
+        "Modem Function: Modem stands for Modulator-Demodulator; it converts digital computer signals to analog signals for transmission over telephone lines and vice versa."
       ],
-      "id": "vene81b"
+      "id": "8y7uj74"
     },
     {
       "type": "paragraph",
-      "id": "0yyf36h"
+      "id": "itdu9di"
     },
     {
-      "id": "0gc7gz4",
+      "id": "57idelt",
       "type": "heading",
       "level": 3,
       "content": "11.4.4 Mesh Topology"
     },
     {
       "type": "paragraph",
-      "id": "3i10fwg"
+      "id": "8dmvfhp"
     },
     {
-      "id": "tzfc6tf",
+      "id": "itf5q65",
       "type": "heading",
       "level": 3,
       "content": "11.4.5 Tree Topology"
     },
     {
       "type": "paragraph",
-      "id": "mqzb0fb"
+      "id": "1a2rp0v"
     },
     {
-      "id": "i8pciiz",
+      "id": "p1cr6mu",
       "type": "heading",
       "level": 2,
       "content": "11.5 Important Exam Points"
     },
     {
-      "id": "zpg3cie",
+      "id": "ltdou5s",
       "type": "list",
       "items": [
         null,

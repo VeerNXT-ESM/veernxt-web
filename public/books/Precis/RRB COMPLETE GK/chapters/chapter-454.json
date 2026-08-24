@@ -1,0 +1,128 @@
+{
+  "id": "s3i2f05",
+  "title": "Finance Commission vs Planning Commission",
+  "order": 454,
+  "blocks": [
+    {
+      "id": "upi6bgw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While the Finance Commission is a constitutional body tasked with fiscal federalism under Article 280, the Planning Commission was an extra-constitutional body responsible for economic planning.",
+      "id": "3sd9k8p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Finance Commission",
+        "Planning Commission"
+      ],
+      "rows": [
+        [
+          "Constitutional Status",
+          "Constitutional Body (Article 280)",
+          "Non-Constitutional / Extra-Constitutional Body"
+        ],
+        [
+          "Creation",
+          "Constituted by President every 5 years",
+          "Created by Cabinet Resolution in 1950"
+        ],
+        [
+          "Primary Function",
+          "Tax revenue distribution & grants-in-aid recommendations",
+          "Five-Year Plan formulation & plan fund allocations"
+        ],
+        [
+          "Current Status",
+          "Active",
+          "Abolished in 2015 (Replaced by NITI Aayog)"
+        ]
+      ],
+      "id": "p8t8l8p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FC Constitutional Provision",
+          "value": "Article 280",
+          "icon": "book"
+        },
+        {
+          "label": "FC Tenure",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "PC Established",
+          "value": "1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "Replaced by NITI Aayog",
+          "value": "2015",
+          "icon": "check"
+        }
+      ],
+      "id": "bq3zri5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 280 governs the constitution, powers, and recommendations of the Finance Commission.",
+        "Grants-in-aid of revenues to states are recommended under Article 275 by the Finance Commission.",
+        "The Planning Commission was established in March 1950 by an executive resolution and replaced by NITI Aayog on January 1, 2015."
+      ],
+      "id": "vr9asft"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Finance Commission is a constitutional body established under Article 280 of the Indian Constitution, whereas the Planning Commission was a non-constitutional body created by an executive resolution.",
+        "The primary function of the Finance Commission is to determine the devolution of central tax revenues to the states and recommend grants-in-aid under Article 275.",
+        "The Planning Commission was tasked with formulating India's Five-Year Plans and allocating plan resources to states and central ministries.",
+        "On January 1, 2015, the Planning Commission was dissolved and replaced by NITI Aayog, which operates as a policy think tank without fund allocation powers."
+      ],
+      "id": "fcad2bt"
+    }
+  ],
+  "enriched": true
+}

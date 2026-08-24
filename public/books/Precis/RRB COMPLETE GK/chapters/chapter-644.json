@@ -1,0 +1,90 @@
+{
+  "id": "gin9tgz",
+  "title": "9. Jurisdiction",
+  "order": 644,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "wyk8j55"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Supreme Court of India has wider jurisdiction and more extensive powers than any other highest court in the world.",
+      "id": "lwezckk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Supreme Court (Article 32)",
+        "High Court (Article 226)"
+      ],
+      "rows": [
+        [
+          "Scope of Enforcement",
+          "Enforcement of Fundamental Rights only",
+          "Enforcement of Fundamental Rights and ordinary legal rights"
+        ],
+        [
+          "Territorial Jurisdiction",
+          "Applicable throughout the entire territory of India",
+          "Confined to the state or region under the High Court's jurisdiction"
+        ],
+        [
+          "Nature of Remedy",
+          "Mandatory constitutional duty (Article 32 is a Fundamental Right)",
+          "Discretionary remedy (High Court may refuse to exercise writ power)"
+        ]
+      ],
+      "id": "67hqpps"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Jurisdiction",
+          "value": "Article 131",
+          "icon": "book"
+        },
+        {
+          "label": "Writ Jurisdiction (SC)",
+          "value": "Article 32",
+          "icon": "check"
+        },
+        {
+          "label": "Writ Jurisdiction (HC)",
+          "value": "Article 226",
+          "icon": "info"
+        },
+        {
+          "label": "Advisory Jurisdiction",
+          "value": "Article 143",
+          "icon": "award"
+        }
+      ],
+      "id": "gmi6lms"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The writ jurisdiction of the High Court under Article 226 is wider than that of the Supreme Court under Article 32 because High Courts can issue writs for legal rights as well as fundamental rights.",
+        "Article 32 is itself a Fundamental Right, making it mandatory for the Supreme Court to entertain fundamental rights petitions, whereas Article 226 is a discretionary remedy for High Courts.",
+        "Advisory opinions rendered by the Supreme Court under Article 143 are purely advisory and not binding on the President or lower courts."
+      ],
+      "id": "icyll4u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Supreme Court of India exercises Original, Appellate, Advisory, Writ, and Revisory Jurisdictions under the Indian Constitution.",
+        "Original Jurisdiction under Article 131 exclusively covers federal disputes between the Union and States or between two or more States.",
+        "Under Advisory Jurisdiction (Article 143), the President can refer matters of law or public importance to the Supreme Court, though the opinion is not binding.",
+        "Special Leave Petition (SLP) under Article 136 provides discretionary power to the Supreme Court to hear appeals from any tribunal or court except military tribunals.",
+        "Under Article 129, the Supreme Court functions as a Court of Record, holding the power to punish for its contempt."
+      ],
+      "id": "koru34b"
+    }
+  ],
+  "enriched": true
+}

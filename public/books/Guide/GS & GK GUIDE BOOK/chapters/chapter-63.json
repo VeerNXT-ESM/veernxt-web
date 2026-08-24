@@ -1,35 +1,40 @@
 {
-  "id": "ogz9db3",
+  "id": "6romc1i",
   "title": "Chapter 14: Human Body Systems",
   "order": 63,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "rr68kix"
+      "id": "bokkmkr"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Body Systems Covered",
-          "value": "10 Major Systems",
+          "label": "Organ Systems",
+          "value": "10 Systems",
           "icon": "book"
         },
         {
-          "label": "Core Topic",
-          "value": "Human Body Systems",
-          "icon": "award"
+          "label": "Basic Unit",
+          "value": "Cell",
+          "icon": "check"
         },
         {
-          "label": "Structural Basis",
-          "value": "Levels of Organization",
+          "label": "Control Center",
+          "value": "Nervous System",
           "icon": "info"
+        },
+        {
+          "label": "Chemical Regulation",
+          "value": "Endocrine System",
+          "icon": "award"
         }
       ],
-      "id": "v5tf3vm"
+      "id": "0il0gvs"
     },
     {
-      "id": "9trvyit",
+      "id": "6uz22o8",
       "type": "heading",
       "level": 2,
       "content": "1. Levels of Organization in the Human Body"
@@ -38,234 +43,255 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The chapter outlines the foundational levels of organization in the human biological structure.",
-        "Key processing and transport networks include the Digestive, Respiratory, Circulatory, and Excretory systems.",
-        "Control and integration of bodily functions are managed by the Nervous and Endocrine systems.",
-        "Structural support, movement, and continuation of life are governed by the Skeletal, Muscular, and Reproductive systems."
+        "The human body is structured through distinct levels of organization, starting from cells to tissues, organs, and organ systems.",
+        "The Circulatory and Respiratory systems collaborate to deliver oxygen and essential nutrients while removing carbon dioxide.",
+        "Metabolic waste elimination and nutrient processing are primarily driven by the Excretory and Digestive systems.",
+        "Coordination across all body functions is jointly managed by the Nervous System (rapid electrical impulses) and the Endocrine System (hormonal regulation)."
       ],
-      "id": "bkrijfi"
+      "id": "f8tt63r"
     },
     {
       "type": "paragraph",
-      "id": "kvq18bs"
+      "id": "n15pydx"
     },
     {
       "type": "paragraph",
-      "id": "ing4c9t"
+      "id": "bwt7k83"
     },
     {
       "type": "paragraph",
-      "id": "x4p3711"
+      "id": "fe97w4a"
     },
     {
       "type": "paragraph",
-      "id": "2m8fucy"
+      "id": "8zxz4ey"
     },
     {
-      "id": "2woi77r",
+      "id": "4a80ahp",
       "type": "heading",
       "level": 2,
       "content": "2. Digestive System"
     },
     {
       "type": "paragraph",
-      "id": "6ohursy"
+      "id": "x43bh1p"
     },
     {
       "type": "paragraph",
-      "id": "khhujv2"
+      "id": "1vf2qpm"
     },
     {
       "type": "paragraph",
-      "id": "fdqkzae"
+      "id": "ava5vrj"
     },
     {
       "type": "paragraph",
-      "id": "80fi5s5"
+      "id": "1fywtnm"
     },
     {
       "type": "paragraph",
-      "id": "ntns9ix"
+      "id": "krprq1v"
     },
     {
       "type": "paragraph",
-      "id": "0l4tlxe"
+      "id": "gbflgc2"
     },
     {
       "type": "paragraph",
-      "id": "x8aji7s"
+      "id": "oei5sjl"
     },
     {
       "type": "paragraph",
-      "id": "pu86m4i"
+      "id": "0cooppl"
     },
     {
-      "id": "0fw3p5n",
+      "id": "ghav0lb",
       "type": "heading",
       "level": 2,
       "content": "3. Respiratory System"
     },
     {
       "type": "paragraph",
-      "id": "dr70lut"
+      "id": "m2h0hj7"
     },
     {
       "type": "paragraph",
-      "id": "4i46f6v"
+      "id": "phzsxik"
     },
     {
       "type": "pullQuote",
       "content": "Levels of Organization in the Human Body",
-      "id": "upj2uni"
+      "id": "nvz9esx"
     },
     {
       "type": "paragraph",
-      "id": "hfq5m02"
+      "id": "xh8sw9d"
     },
     {
-      "id": "674snjd",
+      "id": "7jik62k",
       "type": "heading",
       "level": 2,
       "content": "4. Circulatory System"
     },
     {
       "type": "paragraph",
-      "id": "08hqhbt"
+      "id": "wwj23l0"
     },
     {
       "type": "paragraph",
-      "id": "pkvt788"
+      "id": "nxu62d0"
     },
     {
       "type": "paragraph",
-      "id": "ptfse15"
+      "id": "vsh7ucb"
     },
     {
-      "id": "hw5vhme",
+      "id": "aismapu",
       "type": "heading",
       "level": 2,
       "content": "5. Nervous System"
     },
     {
       "type": "paragraph",
-      "id": "dn9z8v9"
+      "id": "pywreaz"
     },
     {
       "type": "paragraph",
-      "id": "4q5okoa"
+      "id": "olhx127"
     },
     {
       "type": "paragraph",
-      "id": "vr7n6wr"
+      "id": "o2htq88"
     },
     {
-      "id": "vh1am5n",
+      "id": "g9bwvxy",
       "type": "heading",
       "level": 2,
       "content": "6. Excretory System"
     },
     {
-      "type": "paragraph",
-      "id": "4mfki4a"
+      "type": "comparisonTable",
+      "headers": [
+        "System",
+        "Mode of Regulation",
+        "Primary Functions"
+      ],
+      "rows": [
+        [
+          "Nervous System",
+          "Electrical signals via impulses",
+          "Rapid control, sensory perception, and immediate response"
+        ],
+        [
+          "Endocrine System",
+          "Chemical signals via hormones",
+          "Long-term regulation, growth, metabolism, and homeostasis"
+        ]
+      ],
+      "id": "b9im2m7"
     },
     {
       "type": "paragraph",
-      "id": "euri73u"
+      "id": "sx36ls2"
     },
     {
       "type": "paragraph",
-      "id": "wakbadl"
+      "id": "segngf5"
     },
     {
-      "id": "kyatlod",
+      "type": "paragraph",
+      "id": "9t3re72"
+    },
+    {
+      "id": "56dzs4p",
       "type": "heading",
       "level": 2,
       "content": "7. Skeletal System"
     },
     {
       "type": "paragraph",
-      "id": "ptti3kb"
+      "id": "gy1fj6d"
     },
     {
       "type": "paragraph",
-      "id": "3abx7ih"
+      "id": "ptgutbb"
     },
     {
       "type": "paragraph",
-      "id": "3ktsuto"
+      "id": "qwh1xlj"
     },
     {
-      "id": "zosntad",
+      "id": "4etbrfv",
       "type": "heading",
       "level": 2,
       "content": "8. Muscular System"
     },
     {
       "type": "paragraph",
-      "id": "sw591k9"
+      "id": "rc5dmwb"
     },
     {
       "type": "paragraph",
-      "id": "pizlm6o"
+      "id": "dfxn2ze"
     },
     {
-      "id": "1y8ecq7",
+      "id": "o01tnf7",
       "type": "heading",
       "level": 2,
       "content": "9. Reproductive System"
     },
     {
       "type": "paragraph",
-      "id": "wmu05ek"
+      "id": "8458730"
     },
     {
       "type": "paragraph",
-      "id": "smu7fy1"
+      "id": "6h5dqyn"
     },
     {
       "type": "examAlert",
       "items": [
-        "Competitive exams regularly test the primary organs and physiological roles across all major human body systems.",
-        "Pay special attention to the systemic interactions between the Nervous and Endocrine systems.",
-        "Understand the structural sequence from cells to tissues, organs, and organ systems."
+        "Exams frequently ask about the functional units of major body systems (e.g., neurons in the nervous system, nephrons in the excretory system).",
+        "Compare the rapid, short-term electrical response of the Nervous System with the slower, long-lasting chemical action of the Endocrine System.",
+        "Be prepared to identify organs associated with specific human body systems and their primary physiological roles."
       ],
-      "id": "ae3b679"
+      "id": "60kfq7h"
     },
     {
-      "id": "p76fd0q",
+      "id": "nbvnm4s",
       "type": "heading",
       "level": 2,
       "content": "10. Endocrine System"
     },
     {
       "type": "paragraph",
-      "id": "oflmi4w"
+      "id": "h6qomc7"
     },
     {
       "type": "paragraph",
-      "id": "jgec3wa"
+      "id": "mgql7fa"
     },
     {
-      "id": "auads1w",
+      "id": "pdmiqhz",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "pnoonz7"
+      "id": "z5nnt72"
     },
     {
       "type": "paragraph",
-      "id": "qhpkpyl"
+      "id": "n3st8yx"
     },
     {
       "type": "paragraph",
-      "id": "bopcfaa"
+      "id": "boz45u8"
     },
     {
       "type": "paragraph",
-      "id": "6lvc1wu"
+      "id": "2i2mtcj"
     }
   ],
   "enriched": true

@@ -1,0 +1,90 @@
+{
+  "id": "9kffvqd",
+  "title": "5. FCI and Minimum Support Price (MSP)",
+  "order": 657,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "jfexpsz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Minimum Support Price acts as a safety net for agricultural producers, insuring them against sharp dips in market prices during surplus production years.",
+      "id": "8ai6z50"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Minimum Support Price (MSP)",
+        "Procurement Price"
+      ],
+      "rows": [
+        [
+          "Timing of Announcement",
+          "Announced prior to the sowing season",
+          "Announced at the start of the harvest season"
+        ],
+        [
+          "Primary Objective",
+          "Protect farmers from distress sales during bumper harvests",
+          "Procure foodgrains for the Public Distribution System and buffer stocks"
+        ],
+        [
+          "Price Level",
+          "Acts as a guaranteed floor price for farm produce",
+          "Historically set equal to or higher than MSP (currently merged with MSP)"
+        ]
+      ],
+      "id": "b4h9syj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FCI Established",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "Mandated MSP Crops",
+          "value": "22 + Sugarcane (FRP)",
+          "icon": "book"
+        },
+        {
+          "label": "Recommending Body",
+          "value": "CACP",
+          "icon": "award"
+        },
+        {
+          "label": "Nodal Ministry",
+          "value": "Consumer Affairs, Food & PD",
+          "icon": "info"
+        }
+      ],
+      "id": "gmgdmgs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CCEA (Cabinet Committee on Economic Affairs) approves the MSP, whereas CACP only recommends it.",
+        "MSP covers 22 mandated crops (7 cereals, 5 pulses, 7 oilseeds, 3 commercial crops) plus FRP for Sugarcane.",
+        "Swaminathan Commission (NCF) recommended setting MSP at least 50% above the weighted average cost of production (C2 + 50%)."
+      ],
+      "id": "3hxtz3k"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Food Corporation of India (FCI) was established under the Food Corporations Act 1964 to implement national food policy objectives.",
+        "Minimum Support Price (MSP) is a guaranteed price declared by the Government of India prior to the sowing season to protect farmers against steep price drops.",
+        "MSP recommendations are formulated by the Commission for Agricultural Costs and Prices (CACP) and approved by the Cabinet Committee on Economic Affairs (CCEA).",
+        "FCI carries out procurement, storage, transportation, and bulk distribution of foodgrains to support the Public Distribution System (PDS).",
+        "MSP calculation accounts for production costs including A2 (out-of-pocket costs), FL (family labor), and C2 (comprehensive cost including land rent and capital interest)."
+      ],
+      "id": "ha4cqfn"
+    }
+  ],
+  "enriched": true
+}

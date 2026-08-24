@@ -1,0 +1,292 @@
+{
+  "id": "88jbd8w",
+  "title": "Chapter 2: Force and Work",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5299xrl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Newton's Laws",
+          "value": "3 Laws",
+          "icon": "book"
+        },
+        {
+          "label": "Unit of Force",
+          "value": "Newton (N)",
+          "icon": "award"
+        },
+        {
+          "label": "Unit of Work",
+          "value": "Joule (J)",
+          "icon": "check"
+        },
+        {
+          "label": "Unit of Power",
+          "value": "Watt (W)",
+          "icon": "info"
+        },
+        {
+          "label": "1 Horsepower",
+          "value": "746 Watts",
+          "icon": "clock"
+        }
+      ],
+      "id": "74swof3"
+    },
+    {
+      "id": "w7krds1",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Force"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Force is a vector quantity that can alter an object's state of rest, direction, or speed.",
+        "Newton's First Law introduces inertia, Second Law gives the formula F = ma, and Third Law establishes action-reaction pairs.",
+        "Work is calculated as W = F × d × cos(θ), where θ is the angle between force and displacement vectors.",
+        "Work can be positive (θ < 90°), negative (θ > 90°), or zero (θ = 90° or no displacement).",
+        "Power represents the rate of doing work (P = W / t) and is measured in Watts."
+      ],
+      "id": "y8q053j"
+    },
+    {
+      "type": "paragraph",
+      "id": "mp4eaak"
+    },
+    {
+      "type": "paragraph",
+      "id": "1zyr1v5"
+    },
+    {
+      "type": "paragraph",
+      "id": "schacfd"
+    },
+    {
+      "type": "paragraph",
+      "id": "u53xcjz"
+    },
+    {
+      "id": "wp1fpeq",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Effects of Force"
+    },
+    {
+      "type": "paragraph",
+      "id": "qn979v5"
+    },
+    {
+      "type": "paragraph",
+      "id": "77kob2e"
+    },
+    {
+      "type": "paragraph",
+      "id": "cgcbq0d"
+    },
+    {
+      "type": "paragraph",
+      "id": "0nlol4z"
+    },
+    {
+      "id": "1vwdbah",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Force"
+    },
+    {
+      "id": "626o5kq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "765159l",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Newton’s Laws of Motion"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Work is done when a force causes displacement of an object in the direction of the force.",
+      "id": "9jwasbc"
+    },
+    {
+      "type": "paragraph",
+      "id": "wqu0iu3"
+    },
+    {
+      "type": "paragraph",
+      "id": "yf7jtou"
+    },
+    {
+      "type": "paragraph",
+      "id": "lhljw7v"
+    },
+    {
+      "type": "paragraph",
+      "id": "rmv05ci"
+    },
+    {
+      "type": "paragraph",
+      "id": "3x9njuz"
+    },
+    {
+      "type": "paragraph",
+      "id": "lp65ppb"
+    },
+    {
+      "id": "x93yqhh",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Meaning of Work"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Work",
+        "Power"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Energy transferred when force displaces an object",
+          "Rate at which work is performed"
+        ],
+        [
+          "Formula",
+          "W = F × d × cos(θ)",
+          "P = W / t"
+        ],
+        [
+          "SI Unit",
+          "Joule (J) or N·m",
+          "Watt (W) or J/s"
+        ],
+        [
+          "Scalar / Vector",
+          "Scalar Quantity",
+          "Scalar Quantity"
+        ]
+      ],
+      "id": "31mqs4p"
+    },
+    {
+      "type": "paragraph",
+      "id": "xbl2zm6"
+    },
+    {
+      "id": "2cf4m19",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Formula of Work"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ecrqaqn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "19gcc8n"
+    },
+    {
+      "id": "m410d81",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Work"
+    },
+    {
+      "type": "paragraph",
+      "id": "1cx7mta"
+    },
+    {
+      "type": "paragraph",
+      "id": "hlfs3i2"
+    },
+    {
+      "type": "paragraph",
+      "id": "cino6ab"
+    },
+    {
+      "id": "ms4cwcw",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "6x52xmx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Newton's First Law of Motion is frequently referred to as the Law of Inertia.",
+        "When a body moves in a circular path, work done by the centripetal force is always zero because force and displacement are perpendicular.",
+        "1 Horsepower (HP) is exactly equal to 746 Watts.",
+        "If a person holds a heavy load stationary on their head, the physical work done is zero since displacement is zero."
+      ],
+      "id": "wfsexfy"
+    },
+    {
+      "type": "paragraph",
+      "id": "9u1uoyw"
+    },
+    {
+      "type": "paragraph",
+      "id": "23nk2xr"
+    },
+    {
+      "id": "fl3alce",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "fm8lup2"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ktqt8x"
+    },
+    {
+      "type": "paragraph",
+      "id": "5myocyc"
+    },
+    {
+      "type": "paragraph",
+      "id": "ixlq7wn"
+    }
+  ],
+  "enriched": true
+}

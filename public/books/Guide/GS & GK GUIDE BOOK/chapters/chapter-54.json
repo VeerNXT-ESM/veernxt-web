@@ -1,40 +1,40 @@
 {
-  "id": "prvjvjq",
+  "id": "eajjy76",
   "title": "Chapter 5: Light",
   "order": 54,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ryye6rs"
+      "id": "gsfjxwd"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Speed of Light",
+          "label": "Speed in Vacuum",
           "value": "3 × 10⁸ m/s",
           "icon": "clock"
         },
         {
-          "label": "Primary Colors",
-          "value": "3 (RGB)",
-          "icon": "check"
+          "label": "Main Phenomena",
+          "value": "Reflection & Refraction",
+          "icon": "book"
         },
         {
-          "label": "Visible Wavelength",
-          "value": "400 - 700 nm",
+          "label": "Visible Spectrum",
+          "value": "VIBGYOR",
           "icon": "info"
         },
         {
-          "label": "Laws of Reflection",
-          "value": "2 Fundamental Laws",
-          "icon": "book"
+          "label": "Key Components",
+          "value": "Lenses & Instruments",
+          "icon": "check"
         }
       ],
-      "id": "eds5sdf"
+      "id": "xw1nwpj"
     },
     {
-      "id": "1vpqh7t",
+      "id": "dd7ag4s",
       "type": "heading",
       "level": 2,
       "content": "1. Nature of Light"
@@ -43,38 +43,38 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Light is a transverse electromagnetic wave that can travel through a vacuum without requiring a material medium.",
-        "Reflection is the bouncing back of light when it strikes a boundary surface, following the law where the angle of incidence equals the angle of reflection.",
-        "Refraction occurs when light transitions between media of different optical densities, causing a change in its speed and path.",
-        "Dispersion refers to the splitting of composite white light into its constituent spectrum (VIBGYOR) when passing through a prism.",
-        "Optical instruments, such as microscopes and telescopes, utilize specific combinations of convex and concave lenses for magnification."
+        "Light exhibits a dual nature, demonstrating both wave properties and particle properties.",
+        "Reflection of light occurs when light bounces off a surface, following the rule that the angle of incidence equals the angle of reflection.",
+        "Refraction is the bending of light rays as they pass obliquely from one medium to another due to a change in speed.",
+        "Lenses are transparent optical devices that converge or diverge light rays to form real or virtual images.",
+        "Dispersion occurs when white light splits into its constituent spectrum of seven colors (VIBGYOR) upon passing through a prism."
       ],
-      "id": "7z2qwzu"
+      "id": "nf02x2n"
     },
     {
       "type": "paragraph",
-      "id": "1yfbp4y"
+      "id": "6nut0c6"
     },
     {
       "type": "paragraph",
-      "id": "81isuj0"
+      "id": "mieaxyz"
     },
     {
       "type": "paragraph",
-      "id": "bcrhkvc"
+      "id": "m1ev63x"
     },
     {
       "type": "paragraph",
-      "id": "a39c80r"
+      "id": "7v5ki5a"
     },
     {
-      "id": "88f44d2",
+      "id": "vb9f8qj",
       "type": "heading",
       "level": 2,
       "content": "2. Sources of Light"
     },
     {
-      "id": "8gt4ed6",
+      "id": "qkt49f2",
       "type": "table",
       "rows": [
         {
@@ -101,40 +101,40 @@
       ]
     },
     {
-      "id": "vybf8b3",
+      "id": "nus4gpn",
       "type": "heading",
       "level": 2,
       "content": "3. Reflection of Light"
     },
     {
       "type": "paragraph",
-      "id": "eb93wm1"
+      "id": "yrazufw"
     },
     {
       "type": "paragraph",
-      "id": "mvtgmko"
+      "id": "wsb1mqe"
     },
     {
       "type": "paragraph",
-      "id": "prxn2qa"
+      "id": "52o5gky"
     },
     {
       "type": "pullQuote",
       "content": "Dispersion of Light",
-      "id": "f31mtrk"
+      "id": "8pdcy3z"
     },
     {
       "type": "paragraph",
-      "id": "clz5um1"
+      "id": "3il376z"
     },
     {
-      "id": "zwld18g",
+      "id": "o0gwxsm",
       "type": "heading",
       "level": 2,
       "content": "4. Types of Reflection"
     },
     {
-      "id": "04reotl",
+      "id": "gujsd3s",
       "type": "table",
       "rows": [
         {
@@ -161,66 +161,61 @@
       ]
     },
     {
-      "id": "wvqwxnu",
+      "id": "2gqj2hj",
       "type": "heading",
       "level": 2,
       "content": "5. Refraction of Light"
     },
     {
       "type": "paragraph",
-      "id": "d1tnaoa"
+      "id": "pjv6k5w"
     },
     {
       "type": "paragraph",
-      "id": "ggadps6"
+      "id": "8vlpw75"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Parameter",
-        "Reflection of Light",
-        "Refraction of Light"
+        "Phenomenon",
+        "Process",
+        "Key Application / Example"
       ],
       "rows": [
         [
-          "Medium Requirement",
-          "Occurs within the same medium",
-          "Occurs when traveling between two different media"
+          "Reflection",
+          "Bouncing back of light into the same medium",
+          "Plane and spherical mirrors"
         ],
         [
-          "Speed of Light",
-          "Remains constant after reflection",
-          "Changes based on the optical density of the medium"
+          "Refraction",
+          "Bending of light when entering a different medium",
+          "Lenses, atmospheric refraction"
         ],
         [
-          "Governing Law",
-          "Angle of incidence equals angle of reflection",
-          "Snell's Law (Ratio of sines of incidence and refraction angles is constant)"
-        ],
-        [
-          "Phenomenon",
-          "Bouncing back of light rays",
-          "Bending or change in direction of light rays"
+          "Dispersion",
+          "Splitting of light into constituent wavelengths",
+          "Prism spectrum, rainbow formation"
         ]
       ],
-      "id": "nzivfku"
+      "id": "plqpddo"
     },
     {
       "type": "paragraph",
-      "id": "t2zbdrh"
+      "id": "vqbguct"
     },
     {
       "type": "paragraph",
-      "id": "16z8rgp"
+      "id": "p1e6vm9"
     },
     {
-      "id": "dh0bgyl",
+      "id": "5xu69nq",
       "type": "heading",
       "level": 2,
       "content": "6. Lenses"
     },
     {
-      "id": "tq3bort",
+      "id": "ppmt27n",
       "type": "table",
       "rows": [
         {
@@ -247,25 +242,25 @@
       ]
     },
     {
-      "id": "latl3uo",
+      "id": "3y1ibsb",
       "type": "heading",
       "level": 2,
       "content": "7. Optical Instruments"
     },
     {
       "type": "paragraph",
-      "id": "ejtxq6d"
+      "id": "pcbzt2i"
     },
     {
       "type": "paragraph",
-      "id": "c7q0a9j"
+      "id": "33a5t99"
     },
     {
       "type": "paragraph",
-      "id": "fcws9zs"
+      "id": "0i20px3"
     },
     {
-      "id": "o43afd3",
+      "id": "g8k3ce4",
       "type": "heading",
       "level": 2,
       "content": "8. Dispersion of Light"
@@ -273,37 +268,37 @@
     {
       "type": "examAlert",
       "items": [
-        "Myopia (near-sightedness) is corrected using concave lenses, while Hypermetropia (far-sightedness) requires convex lenses.",
-        "Convex mirrors are used as rear-view mirrors in automobiles because they produce an erect and diminished image with a wider field of view.",
-        "Total Internal Reflection (TIR) is frequently tested and is the core principle behind optical fibers and mirages."
+        "Snell's Law of Refraction (sin i / sin r = μ) and mirror/lens formulas are frequently tested in numerical problems.",
+        "Pay attention to the image formation rules and focal lengths for both concave and convex lenses/mirrors.",
+        "Questions often focus on real-world phenomena of dispersion and refraction, such as rainbow formation and the twinkling of stars."
       ],
-      "id": "rb21rju"
+      "id": "hmbxev3"
     },
     {
       "type": "paragraph",
-      "id": "w30vrbn"
+      "id": "88o9ijg"
     },
     {
-      "id": "29aki4p",
+      "id": "hbz9bt4",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "2k55o1z"
+      "id": "iw5jr8e"
     },
     {
       "type": "paragraph",
-      "id": "9v40j2l"
+      "id": "gjquxbs"
     },
     {
       "type": "paragraph",
-      "id": "5lmalpl"
+      "id": "kgvr755"
     },
     {
       "type": "paragraph",
-      "id": "9idc2uw"
+      "id": "nd9aqql"
     }
   ],
   "enriched": true

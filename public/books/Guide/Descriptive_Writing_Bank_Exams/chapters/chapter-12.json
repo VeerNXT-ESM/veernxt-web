@@ -1,0 +1,173 @@
+{
+  "id": "bz0sz4j",
+  "title": "LETTER 11: Letter from Manager to Customer — Informing About Interest Rate Change",
+  "order": 12,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3epx9a8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Letter Category",
+          "value": "Formal Banking Correspondence",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Trigger",
+          "value": "RBI Repo Rate Revision",
+          "icon": "info"
+        },
+        {
+          "label": "Key Parameter",
+          "value": "MCLR / RLLR Alignment",
+          "icon": "award"
+        },
+        {
+          "label": "Target Recipient",
+          "value": "Existing Account Holder",
+          "icon": "check"
+        }
+      ],
+      "id": "lx5jx4o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Official bank communication regarding interest rate changes must maintain a professional, empathetic, and clear tone.",
+        "The letter must explicitly state the revised interest rate percentage and its exact effective date.",
+        "It is mandatory to explain the impact on the customer, specifically whether the revision affects the Monthly Installment (EMI) amount or the total loan tenure.",
+        "Regulatory backing or benchmark reasons (such as RBI Monetary Policy revisions or changes in base rates/MCLR) must be cited as the cause of revision.",
+        "Clear contact information and customer support channels should be provided for further clarifications."
+      ],
+      "id": "fyefr7x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ag7diji"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gxc74cl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pspvfsj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d6ppf1g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "94k3zvj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "We write to inform you that in line with the recent revision in policy rates by the Reserve Bank of India, the interest rate on your loan account stands revised.",
+      "id": "1g6h8y7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vcagenu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qw6y26y"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1d1s6ff"
+    },
+    {
+      "type": "paragraph",
+      "id": "s1nrc5o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fixed Interest Rate",
+        "Floating Interest Rate"
+      ],
+      "rows": [
+        [
+          "Impact of Policy Rate Revision",
+          "Interest rate remains unchanged regardless of market fluctuations.",
+          "Interest rate resets periodically in alignment with benchmark updates."
+        ],
+        [
+          "Customer Notification Requirement",
+          "No rate revision notice required during the fixed tenure.",
+          "Mandatory advance notice required informing about revised rates and EMIs."
+        ],
+        [
+          "Repayment Structure Impact",
+          "EMI and loan tenure remain constant.",
+          "Customer may choose between increased EMI amount or extended tenure."
+        ]
+      ],
+      "id": "vf903ww"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hf4ffat"
+    },
+    {
+      "type": "paragraph",
+      "id": "kta2ob7"
+    },
+    {
+      "type": "paragraph",
+      "id": "ntr6253"
+    },
+    {
+      "type": "paragraph",
+      "id": "hb3lnov"
+    },
+    {
+      "type": "paragraph",
+      "id": "47zk40o"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "In descriptive exams, always mention essential placeholders clearly: Loan Account Number, Revised Rate (%), Effective Date, and New EMI/Tenure details.",
+        "Ensure the subject line is concise and informative, e.g., 'Important Notice: Revision in Interest Rate on Loan Account No. XXXXXXXXX'.",
+        "Do not forget to use the proper designation in the signature block (e.g., 'Branch Manager, [Bank Name]')."
+      ],
+      "id": "lkn13ge"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p5ithod"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5z53l0o"
+    },
+    {
+      "type": "paragraph",
+      "id": "x4968qh"
+    },
+    {
+      "type": "paragraph",
+      "id": "fpbnhho"
+    }
+  ],
+  "enriched": true
+}

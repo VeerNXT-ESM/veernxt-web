@@ -1,0 +1,107 @@
+{
+  "id": "8uf1ztn",
+  "title": "7. Metamorphic Rocks",
+  "order": 69,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5qv187i"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Meaning of Metamorphism",
+          "value": "Change of Form",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Drivers",
+          "value": "Heat & Pressure (PVT)",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Structural Feature",
+          "value": "Foliation & Banding",
+          "icon": "check"
+        },
+        {
+          "label": "Limestone Transforms To",
+          "value": "Marble",
+          "icon": "book"
+        }
+      ],
+      "id": "ko0r8ee"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metamorphic rocks are formed under the action of pressure, volume and temperature (PVT) changes.",
+      "id": "c9kjqkd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metamorphic rocks are formed when existing sedimentary or igneous rocks undergo recrystallization and mineral reorganization due to changes in Pressure, Volume, and Temperature (PVT).",
+        "Dynamic metamorphism occurs without significant chemical change through crushing and mechanical breakdown caused by intense directed pressure.",
+        "Thermal metamorphism occurs when high temperatures alter rock composition, divided into Contact Metamorphism (magma contact) and Regional Metamorphism (tectonic pressure and heat).",
+        "Foliation or Lineation is the arrangement of mineral grains or crystals in parallel layers within metamorphic rocks.",
+        "Key rock transformations include Granite to Gneiss, Clay/Shale to Slate, Limestone to Marble, and Sandstone to Quartzite."
+      ],
+      "id": "oga3nob"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Contact Metamorphism",
+        "Regional Metamorphism"
+      ],
+      "rows": [
+        [
+          "Primary Cause",
+          "Direct contact with hot magma or lava intrusions",
+          "Tectonic deformation associated with mountain building"
+        ],
+        [
+          "Scale & Coverage",
+          "Localized area (narrow aureole around intrusion)",
+          "Widespread regional areas across hundreds of kilometers"
+        ],
+        [
+          "Dominant Factor",
+          "Extreme Heat / Temperature",
+          "Combined High Pressure and High Temperature"
+        ],
+        [
+          "Typical Texture",
+          "Non-foliated (e.g., Marble, Hornfels)",
+          "Foliated / Banded (e.g., Schist, Gneiss)"
+        ]
+      ],
+      "id": "zu9r116"
+    },
+    {
+      "type": "paragraph",
+      "id": "ghmrt29"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested parent-to-metamorphic conversions: Limestone -> Marble, Sandstone -> Quartzite, Clay/Shale -> Slate -> Schist, Granite -> Gneiss, Coal -> Anthracite/Graphite.",
+        "Differentiate between Foliation (parallel alignment of mineral grains) and Banding (alternating thick and thin layers of light and dark minerals).",
+        "Contact metamorphism produces non-foliated rocks (e.g., Marble, Hornfels) due to heat, while Regional metamorphism produces foliated rocks (e.g., Gneiss, Schist) due to combined regional tectonic forces."
+      ],
+      "id": "i03tsde"
+    },
+    {
+      "type": "paragraph",
+      "id": "z8l4nre"
+    },
+    {
+      "type": "paragraph",
+      "id": "wt4g5tz"
+    }
+  ],
+  "enriched": true
+}

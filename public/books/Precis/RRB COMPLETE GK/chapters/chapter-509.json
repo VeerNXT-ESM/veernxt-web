@@ -1,0 +1,129 @@
+{
+  "id": "ws8369v",
+  "title": "Difference Between CVC and CBI",
+  "order": 509,
+  "blocks": [
+    {
+      "id": "x3toy73",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While CVC acts as an apex supervisory and advisory body for administrative vigilance, CBI functions as the premier investigating agency of the Central Government.",
+      "id": "shk3ojd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Legal Status",
+          "Statutory Body (CVC Act, 2003)",
+          "Non-Statutory Body (DSPE Act, 1946)"
+        ],
+        [
+          "Core Role",
+          "Supervisory and Advisory Vigilance Body",
+          "Premier Criminal & Anti-Corruption Investigation Agency"
+        ],
+        [
+          "Superintendence",
+          "Supervises CBI in corruption cases",
+          "Functions under administrative control of DoPT"
+        ],
+        [
+          "Investigative Power",
+          "Does not investigate directly; relies on CBI/CVOs",
+          "Has direct investigative powers for economic & criminal offenses"
+        ]
+      ],
+      "id": "v02bxve"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CVC Established",
+          "value": "1964 (Statutory 2003)",
+          "icon": "calendar"
+        },
+        {
+          "label": "CBI Established",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "CBI Power Source",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Recommending Committee",
+          "value": "Santhanam Committee",
+          "icon": "award"
+        }
+      ],
+      "id": "xcfa5vw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body; it derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "CVC was granted statutory status by an Act of Parliament in 2003 following Santhanam Committee recommendations.",
+        "Superintendence over CBI's functioning in corruption cases rests with the CVC, whereas administrative control rests with the Ministry of Personnel (DoPT)."
+      ],
+      "id": "i1cnhr4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission (CVC) is the apex vigilance institution monitoring all vigilance activity under the Central Government.",
+        "The Central Bureau of Investigation (CBI) is the premier investigative agency of India handling corruption, economic offenses, and major crimes.",
+        "CVC is an independent statutory body created under the CVC Act, 2003, whereas CBI is a non-statutory body deriving powers from the DSPE Act, 1946.",
+        "CVC exercises superintendence over the CBI's investigations specifically related to offenses under the Prevention of Corruption Act.",
+        "Both institutions trace their origins back to the recommendations of the Santhanam Committee on Prevention of Corruption."
+      ],
+      "id": "vfi479z"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,132 @@
+{
+  "id": "z1qz0xd",
+  "title": "1. Stress, Strain and Elasticity",
+  "order": 89,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "327w4qu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Stress",
+          "value": "N/m² (Pascal)",
+          "icon": "award"
+        },
+        {
+          "label": "Dimension of Strain",
+          "value": "Dimensionless (M⁰L⁰T⁰)",
+          "icon": "info"
+        },
+        {
+          "label": "Hooke's Law Limit",
+          "value": "Proportional Limit",
+          "icon": "check"
+        },
+        {
+          "label": "Young's Modulus (Steel)",
+          "value": "2 × 10¹¹ Pa",
+          "icon": "book"
+        }
+      ],
+      "id": "33o58va"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Within the elastic limit, stress is directly proportional to strain.",
+      "id": "lapcakp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Modulus Type",
+        "Deformation Type",
+        "Applicable State of Matter"
+      ],
+      "rows": [
+        [
+          "Young's Modulus (Y)",
+          "Longitudinal (Change in Length)",
+          "Solids only"
+        ],
+        [
+          "Bulk Modulus (B)",
+          "Volumetric (Change in Volume)",
+          "Solids, Liquids, and Gases"
+        ],
+        [
+          "Shear Modulus (η)",
+          "Tangential (Change in Shape)",
+          "Solids only"
+        ]
+      ],
+      "id": "6o0nm5t"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Stress is the internal restoring force developed per unit area inside a deformed body.",
+        "Strain is defined as the ratio of change in dimension to the original dimension and is a dimensionless quantity.",
+        "Hooke's Law states that within the elastic limit, stress is directly proportional to strain.",
+        "Modulus of Elasticity depends on the material's nature and temperature, remaining independent of body geometry.",
+        "Steel is physically more elastic than rubber because steel requires a larger force to produce the same strain."
+      ],
+      "id": "ehcxe2i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Breaking stress depends solely on the nature of the material, independent of the wire's length or cross-sectional area.",
+        "Strain energy per unit volume in a stretched wire is calculated as 1/2 × stress × strain.",
+        "Poisson's ratio theoretically ranges from -1 to 0.5, but practical values for real materials lie between 0 and 0.5."
+      ],
+      "id": "wvmr0g1"
+    },
+    {
+      "id": "jymkpom",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "zsi8brc"
+    }
+  ],
+  "enriched": true
+}

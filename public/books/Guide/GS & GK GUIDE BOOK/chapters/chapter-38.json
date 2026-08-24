@@ -1,40 +1,40 @@
 {
-  "id": "d0vrae4",
+  "id": "drrmdhg",
   "title": "Chapter 38: Natural Vegetation of India",
   "order": 38,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3bed5mr"
+      "id": "g1ld9gs"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Evergreen Rainfall",
-          "value": ">200 cm",
+          "label": "Major Types",
+          "value": "5 Forest Categories",
           "icon": "book"
         },
         {
-          "label": "Dominant Type",
-          "value": "Deciduous",
-          "icon": "check"
-        },
-        {
-          "label": "Thorn Scrub Limit",
-          "value": "<70 cm",
-          "icon": "info"
-        },
-        {
-          "label": "Sundarbans Delta",
-          "value": "Mangrove Hub",
+          "label": "Forest Cover Target",
+          "value": "33% Target",
           "icon": "award"
+        },
+        {
+          "label": "Evergreen Rainfall",
+          "value": "> 200 cm",
+          "icon": "clock"
+        },
+        {
+          "label": "Thorn Scrub Rainfall",
+          "value": "< 50 cm",
+          "icon": "info"
         }
       ],
-      "id": "l74vcmn"
+      "id": "x40fzxw"
     },
     {
-      "id": "sg1v6pv",
+      "id": "xlqaw8b",
       "type": "heading",
       "level": 2,
       "content": "1. Factors Affecting Natural Vegetation"
@@ -43,38 +43,38 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Tropical Evergreen Forests thrive in regions with high humidity and over 200 cm of annual rainfall, keeping their leaves year-round.",
-        "Tropical Deciduous Forests are the most widespread forest type in India, often called Monsoon Forests, and shed leaves in dry summers.",
-        "Thorn Forests and scrubs develop in semi-arid regions with less than 70 cm of rainfall, featuring deep-rooted and succulent vegetation.",
-        "Mountain Forests show a distinct vertical zonation of vegetation types ranging from wet temperate to alpine grasslands as altitude increases.",
-        "Mangrove Forests grow along mudflats and coastal deltas affected by tides, with specialized stilt root systems adaptable to saline waters."
+        "Tropical Deciduous Forests are the most widespread vegetation type in India, often called Monsoon Forests.",
+        "Tropical Evergreen Forests thrive in regions with over 200 cm of annual rainfall, maintaining lush green canopy year-round.",
+        "Thorn Forests occur in arid and semi-arid regions with less than 50 cm of rainfall, featuring acacias, palms, and cacti.",
+        "Mountain Forests show altitudinal zonation of vegetation ranging from wet temperate to alpine grasslands.",
+        "Mangrove Forests flourish in coastal deltaic regions influenced by tides, dominated by species like Sundari trees."
       ],
-      "id": "e3hr044"
+      "id": "ia40zsx"
     },
     {
       "type": "paragraph",
-      "id": "ya2r4cd"
+      "id": "mqqbers"
     },
     {
       "type": "paragraph",
-      "id": "vwpfv9p"
+      "id": "4prqufe"
     },
     {
       "type": "paragraph",
-      "id": "uwhxxfz"
+      "id": "dr8kvp0"
     },
     {
       "type": "paragraph",
-      "id": "jvthh23"
+      "id": "vvnzi4r"
     },
     {
-      "id": "wm05m3o",
+      "id": "fg9wpjp",
       "type": "heading",
       "level": 2,
       "content": "2. Major Types of Natural Vegetation in India"
     },
     {
-      "id": "vjf5l2s",
+      "id": "n01yfbg",
       "type": "table",
       "rows": [
         {
@@ -134,66 +134,66 @@
       ]
     },
     {
-      "id": "sv7c6x7",
+      "id": "b2s67n7",
       "type": "heading",
       "level": 2,
       "content": "3. Tropical Evergreen Forests"
     },
     {
       "type": "paragraph",
-      "id": "r46s3w0"
+      "id": "rl7ofus"
     },
     {
       "type": "paragraph",
-      "id": "jdgtesi"
+      "id": "yb1hzn1"
     },
     {
       "type": "paragraph",
-      "id": "5w3owu1"
+      "id": "kbe10v8"
     },
     {
-      "id": "x0sfqvi",
+      "id": "mmv62ch",
       "type": "heading",
       "level": 2,
       "content": "4. Tropical Deciduous Forests"
     },
     {
       "type": "pullQuote",
-      "content": "Tropical Deciduous Forests are the most widespread forests of India and are popularly known as the Monsoon Forests.",
-      "id": "mdc89ui"
+      "content": "Tropical Deciduous Forests are the most widespread forests in India, popularly known as the Monsoon Forests.",
+      "id": "us3z3e6"
     },
     {
       "type": "paragraph",
-      "id": "ogzp205"
+      "id": "l2bedr7"
     },
     {
       "type": "paragraph",
-      "id": "t8qkq4y"
+      "id": "a3nzvdh"
     },
     {
       "type": "paragraph",
-      "id": "9ehq7m3"
+      "id": "p5fkddw"
     },
     {
-      "id": "4hrdrj8",
+      "id": "2zpgm3q",
       "type": "heading",
       "level": 2,
       "content": "5. Thorn Forests"
     },
     {
       "type": "paragraph",
-      "id": "d6kfw11"
+      "id": "cfr0aer"
     },
     {
       "type": "paragraph",
-      "id": "7dgsqd9"
+      "id": "wzn9jp8"
     },
     {
       "type": "paragraph",
-      "id": "c1yysmt"
+      "id": "jqxd13o"
     },
     {
-      "id": "z9ljq99",
+      "id": "1oxn5ip",
       "type": "heading",
       "level": 2,
       "content": "6. Mountain Forests"
@@ -201,112 +201,112 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
+        "Parameter",
         "Tropical Evergreen Forests",
         "Tropical Deciduous Forests"
       ],
       "rows": [
         [
           "Annual Rainfall",
-          "Above 200 cm",
-          "Between 70 cm and 200 cm"
+          "More than 200 cm",
+          "70 cm to 200 cm"
         ],
         [
           "Leaf Shedding",
-          "No fixed time to shed leaves; remain green year-round",
-          "Shed leaves for 6 to 8 weeks during dry summer"
+          "No definite shed time; remains green year-round",
+          "Shed leaves for 6 to 8 weeks in dry summer"
         ],
         [
-          "Key Species",
+          "Important Species",
           "Ebony, Mahogany, Rosewood, Rubber",
-          "Teak, Sal, Shisham, Sandalwood"
+          "Teak, Sal, Sheesham, Sandalwood, Bamboo"
         ],
         [
-          "Key Distribution",
-          "Western Ghats, Andaman & Nicobar, North-East states",
-          "Central India, Chota Nagpur Plateau, Eastern Ghats"
+          "Major Regions",
+          "Western Ghats, NE States, Andaman & Nicobar",
+          "Central India, Chota Nagpur Plateau, Eastern Slopes of Western Ghats"
         ]
       ],
-      "id": "urca9au"
+      "id": "dlzv367"
     },
     {
       "type": "paragraph",
-      "id": "qq2chp6"
+      "id": "2fa7aqg"
     },
     {
       "type": "paragraph",
-      "id": "o9l1xb3"
+      "id": "udf5ucs"
     },
     {
       "type": "paragraph",
-      "id": "pqz3bbw"
+      "id": "x2uqjgt"
     },
     {
-      "id": "7vb6cvh",
+      "id": "1lfu7ds",
       "type": "heading",
       "level": 2,
       "content": "7. Mangrove Forests"
     },
     {
       "type": "paragraph",
-      "id": "zeferi6"
+      "id": "s18lnwc"
     },
     {
       "type": "paragraph",
-      "id": "10n1pt8"
+      "id": "pj9gt2v"
     },
     {
       "type": "paragraph",
-      "id": "0fypqgt"
+      "id": "31916by"
     },
     {
-      "id": "4zgb54j",
+      "id": "8prkyps",
       "type": "heading",
       "level": 2,
       "content": "8. Importance of Natural Vegetation"
     },
     {
       "type": "paragraph",
-      "id": "vynyb98"
+      "id": "j4n7c49"
     },
     {
       "type": "examAlert",
       "items": [
-        "Tropical Deciduous forests account for the largest share of overall forest cover in India.",
-        "Teak, Sal, and Shisham are the most commercially valuable species found in Moist Deciduous forests.",
-        "Sundari trees in the Ganga-Brahmaputra delta produce hard, durable timber crucial for boat building."
+        "Questions often ask to categorize tree species: Rosewood, Ebony, Mahogany belong to Tropical Evergreen, while Teak, Sal, Sheesham belong to Deciduous.",
+        "Differentiate between Moist Deciduous (100-200 cm rainfall) and Dry Deciduous (70-100 cm rainfall) regions.",
+        "Sundarbans delta features 'Sundari' trees, providing hard, durable timber and adapting perfectly to tidal saline waters."
       ],
-      "id": "i5fkhsw"
+      "id": "rscj4xi"
     },
     {
       "type": "paragraph",
-      "id": "2nckxu1"
+      "id": "5hvtkf9"
     },
     {
       "type": "paragraph",
-      "id": "b0o3kmb"
+      "id": "enpwjdk"
     },
     {
       "type": "paragraph",
-      "id": "x29lznl"
+      "id": "29wjzuy"
     },
     {
-      "id": "8c6chzm",
+      "id": "8k9puzm",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "jd0sq6o"
+      "id": "l24dwuz"
     },
     {
       "type": "paragraph",
-      "id": "mjx1tgc"
+      "id": "rdri042"
     },
     {
       "type": "paragraph",
-      "id": "rq0ktab"
+      "id": "1q0jiqj"
     }
   ],
   "enriched": true

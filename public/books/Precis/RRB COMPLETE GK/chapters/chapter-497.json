@@ -1,0 +1,134 @@
+{
+  "id": "gzrgdt2",
+  "title": "NHRC vs SHRC",
+  "order": 497,
+  "blocks": [
+    {
+      "id": "vda70ds",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The recommendations of the Human Rights Commission are recommendatory in nature and not binding on the government.",
+      "id": "k86qckb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "NHRC",
+        "SHRC"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "All India / Central List & Concurrent List matters",
+          "Respective State / State List & Concurrent List matters"
+        ],
+        [
+          "Composition",
+          "Chairperson + 5 full-time members",
+          "Chairperson + 2 full-time members"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India (Not the Governor)"
+        ],
+        [
+          "Selection Committee",
+          "Headed by the Prime Minister (6 members)",
+          "Headed by the Chief Minister (4 or 6 members)"
+        ]
+      ],
+      "id": "a5dsiou"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Enacted",
+          "value": "1993",
+          "icon": "calendar"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "3 Yrs / 70 Yrs",
+          "icon": "clock"
+        },
+        {
+          "label": "NHRC Composition",
+          "value": "1 + 5 Members",
+          "icon": "award"
+        },
+        {
+          "label": "SHRC Composition",
+          "value": "1 + 2 Members",
+          "icon": "check"
+        }
+      ],
+      "id": "rk0wdg1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Removal Authority: Members of SHRC are appointed by the Governor but can only be removed by the President of India.",
+        "Jurisdiction Exclusion: SHRC cannot investigate any case currently being inquired into by the NHRC or any other statutory commission.",
+        "Time Bar: The Commission cannot inquire into any matter after the expiry of one year from the date on which the act was committed."
+      ],
+      "id": "j9j20h6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Both NHRC and SHRC were constituted under the Protection of Human Rights Act, 1993.",
+        "The NHRC has jurisdiction over the entire country, whereas SHRC covers subjects under the State List and Concurrent List.",
+        "The Chairperson and members of NHRC are appointed by the President, while those of SHRC are appointed by the Governor.",
+        "Although appointed by the Governor, SHRC members can be removed ONLY by the President of India.",
+        "Both commissions hold the powers of a civil court, but their recommendations are advisory in nature and not binding."
+      ],
+      "id": "w115dth"
+    }
+  ],
+  "enriched": true
+}

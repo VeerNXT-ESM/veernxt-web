@@ -1,0 +1,127 @@
+{
+  "id": "szog1va",
+  "title": "Tenure and Age Limit",
+  "order": 624,
+  "blocks": [
+    {
+      "id": "gdmm6tv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The minimum age requirement for constitutional office-holders varies across positions, while retirement ages specifically distinguish central and state judiciary and commissions.",
+      "id": "nbhxos3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Post",
+        "Minimum Age Limit",
+        "Tenure / Retirement Age"
+      ],
+      "rows": [
+        [
+          "President / Vice-President / Governor",
+          "35 Years",
+          "5 Years (No upper age limit)"
+        ],
+        [
+          "MP (Rajya Sabha) / MLC",
+          "30 Years",
+          "6 Years (1/3rd retire every 2nd year)"
+        ],
+        [
+          "MP (Lok Sabha) / MLA",
+          "25 Years",
+          "5 Years"
+        ],
+        [
+          "Supreme Court Judge",
+          "Not Specified",
+          "Until age of 65 years"
+        ],
+        [
+          "High Court Judge",
+          "Not Specified",
+          "Until age of 62 years"
+        ],
+        [
+          "CAG / UPSC Chairman",
+          "Not Specified",
+          "6 Years or 65 Years of age"
+        ]
+      ],
+      "id": "l85sw2b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Min Age: President / Governor",
+          "value": "35 Years",
+          "icon": "award"
+        },
+        {
+          "label": "SC Judge Retirement",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "HC Judge Retirement",
+          "value": "62 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "UPSC / CAG Tenure",
+          "value": "6 Yrs / 65 Yrs",
+          "icon": "check"
+        }
+      ],
+      "id": "6jf5s9d"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Court judges retire at 62 years, whereas Supreme Court judges retire at 65 years—frequently tested in match-the-following questions.",
+        "The tenure of the CAG and UPSC Chairman is 6 years or until 65 years of age, unlike political offices which typically have a 5-year tenure.",
+        "There is no upper age limit specified in the Indian Constitution for holding the office of President, Prime Minister, or Governor."
+      ],
+      "id": "hjjmt5s"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The minimum age requirement for the President, Vice-President, and State Governors is 35 years.",
+        "Members of the Lok Sabha and Legislative Assemblies must be at least 25 years old, whereas Rajya Sabha and Legislative Council members must be at least 30 years old.",
+        "Supreme Court judges hold office until reaching 65 years of age, while High Court judges retire at 62 years.",
+        "Constitutional bodies like the UPSC and CAG feature a maximum tenure of 6 years or up to 65 years of age, whichever is earlier."
+      ],
+      "id": "afi9ep4"
+    }
+  ],
+  "enriched": true
+}

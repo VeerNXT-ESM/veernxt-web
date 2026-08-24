@@ -1,0 +1,95 @@
+{
+  "id": "be0m9u6",
+  "title": "5. Legislative Council (Vidhan Parishad)",
+  "order": 383,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dh8hvqq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Under Article 169 of the Constitution, Parliament can create or abolish a Legislative Council if the Legislative Assembly of the state concerned passes a resolution to that effect by a special majority.",
+      "id": "n0p3uu2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Legislative Assembly (Vidhan Sabha)",
+        "Legislative Council (Vidhan Parishad)"
+      ],
+      "rows": [
+        [
+          "House Nature",
+          "Lower House / Directly elected / Subject to dissolution",
+          "Upper House / Indirectly elected / Permanent body"
+        ],
+        [
+          "Minimum Age Requirement",
+          "25 Years",
+          "30 Years"
+        ],
+        [
+          "Money Bill Power",
+          "Exclusive power to introduce and pass Money Bills",
+          "Cannot reject; can only delay for up to 14 days"
+        ],
+        [
+          "Abolition & Dissolution",
+          "Cannot be abolished; dissolved every 5 years",
+          "Can be abolished under Art. 169; cannot be dissolved"
+        ]
+      ],
+      "id": "s7j57mz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 169",
+          "icon": "book"
+        },
+        {
+          "label": "States with Vidhan Parishad",
+          "value": "6 States",
+          "icon": "award"
+        },
+        {
+          "label": "Minimum Strength",
+          "value": "40 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Member Tenure",
+          "value": "6 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "k2uafkn"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Cooperative Movement is an additional category for Governor nominations in the Legislative Council, which is not present in Presidential nominations for the Rajya Sabha.",
+        "Money Bills cannot be introduced in the Legislative Council and can be delayed by it for a maximum of only 14 days.",
+        "Unlike the Rajya Sabha, which cannot be abolished, the Legislative Council can be completely abolished by Parliament."
+      ],
+      "id": "rbkf8nt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Legislative Council (Vidhan Parishad) is the upper house of a state legislature and functions as a permanent body not subject to dissolution.",
+        "Under Article 169, Parliament can create or abolish a Legislative Council if the State Legislative Assembly passes a resolution by a special majority.",
+        "The total strength of the Council cannot exceed one-third of the total strength of the Assembly, nor can it be less than 40 members.",
+        "1/6th of total members are nominated by the Governor from fields of literature, science, art, cooperative movement, and social service.",
+        "The Legislative Council lacks equal powers with the Legislative Assembly and can delay an ordinary bill for a maximum period of 4 months."
+      ],
+      "id": "jpvrtwv"
+    }
+  ],
+  "enriched": true
+}

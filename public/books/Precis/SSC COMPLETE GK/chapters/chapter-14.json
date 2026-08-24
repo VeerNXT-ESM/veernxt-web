@@ -1,0 +1,356 @@
+{
+  "id": "67igy1p",
+  "title": "CHAPTER 13: TEMPERATURE, PRESSURE & WINDS",
+  "order": 14,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5tbkeee"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Global Pressure Belts",
+          "value": "7 Major Belts",
+          "icon": "book"
+        },
+        {
+          "label": "Deflection Force",
+          "value": "Coriolis Force",
+          "icon": "check"
+        },
+        {
+          "label": "Key SSC Topic",
+          "value": "Temperature Inversion",
+          "icon": "award"
+        },
+        {
+          "label": "Core Mechanism",
+          "value": "Cause–Effect",
+          "icon": "info"
+        }
+      ],
+      "id": "uvytzbm"
+    },
+    {
+      "type": "paragraph",
+      "id": "wpb5ajh"
+    },
+    {
+      "id": "ql4lrb3",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: TEMPERATURE (EXTREMELY DETAILED)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Temperature is primarily governed by latitude, altitude, distance from the sea (continentality), ocean currents, and atmospheric cloud cover.",
+        "Air pressure is influenced by atmospheric temperature and density; high temperature generally creates low pressure and vice versa.",
+        "The Earth features distinct global pressure belts that experience seasonal shifting following the apparent movement of the Sun.",
+        "Wind movements are driven by pressure gradient forces, modified by the Coriolis Effect and surface friction.",
+        "Temperature inversion reverses the normal atmospheric lapse rate, trapping cold air beneath a layer of warmer air."
+      ],
+      "id": "tta8ur4"
+    },
+    {
+      "id": "agj0t22",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "07guiaw"
+    },
+    {
+      "id": "2286jyp",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Temperature (Cause–Effect)"
+    },
+    {
+      "id": "p2wncp5",
+      "type": "heading",
+      "level": 3,
+      "content": "Latitude"
+    },
+    {
+      "type": "paragraph",
+      "id": "wp0gqm2"
+    },
+    {
+      "id": "4i3lub1",
+      "type": "heading",
+      "level": 3,
+      "content": "Altitude"
+    },
+    {
+      "type": "paragraph",
+      "id": "hvajnv2"
+    },
+    {
+      "id": "o8j4e66",
+      "type": "heading",
+      "level": 3,
+      "content": "Distance from the Sea (Continentality)"
+    },
+    {
+      "type": "paragraph",
+      "id": "wyypnwm"
+    },
+    {
+      "id": "zcyzhj6",
+      "type": "heading",
+      "level": 3,
+      "content": "Ocean Currents"
+    },
+    {
+      "type": "paragraph",
+      "id": "7zr08tw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Temperature Inversion (SSC Favourite)",
+      "id": "tp8h3qw"
+    },
+    {
+      "id": "uxishhg",
+      "type": "heading",
+      "level": 3,
+      "content": "Cloud Cover & Winds"
+    },
+    {
+      "type": "paragraph",
+      "id": "ib2hutl"
+    },
+    {
+      "id": "bxr9srp",
+      "type": "heading",
+      "level": 3,
+      "content": "Temperature Inversion (SSC Favourite)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zj6k1sr"
+    },
+    {
+      "id": "csld92z",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: AIR PRESSURE (EXTREMELY DETAILED)"
+    },
+    {
+      "id": "op52dm6",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Air Pressure"
+    },
+    {
+      "type": "paragraph",
+      "id": "vfr0try"
+    },
+    {
+      "id": "xkhilpj",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Air Pressure"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "High Pressure System",
+        "Low Pressure System"
+      ],
+      "rows": [
+        [
+          "Air Temperature",
+          "Cold, dense air",
+          "Warm, expanded air"
+        ],
+        [
+          "Air Movement",
+          "Subsiding (sinking) air",
+          "Ascending (rising) air"
+        ],
+        [
+          "Associated Weather",
+          "Clear, stable, and dry weather",
+          "Cloudy, rainy, and stormy conditions"
+        ],
+        [
+          "Wind Pattern (N. Hemisphere)",
+          "Clockwise (Anticyclonic)",
+          "Counter-clockwise (Cyclonic)"
+        ]
+      ],
+      "id": "13ik5tn"
+    },
+    {
+      "type": "paragraph",
+      "id": "raglhbj"
+    },
+    {
+      "id": "hjr2b8t",
+      "type": "heading",
+      "level": 3,
+      "content": "Pressure Belts of the World (Cause–Effect)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8yqjxf"
+    },
+    {
+      "id": "yak5cy8",
+      "type": "heading",
+      "level": 3,
+      "content": "Seasonal Shifting of Pressure Belts"
+    },
+    {
+      "type": "paragraph",
+      "id": "8qty4b8"
+    },
+    {
+      "id": "9qance4",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: WINDS (EXTREMELY DETAILED)"
+    },
+    {
+      "id": "qz1q5u4",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Wind"
+    },
+    {
+      "type": "paragraph",
+      "id": "31u5jfg"
+    },
+    {
+      "id": "iqdospt",
+      "type": "heading",
+      "level": 3,
+      "content": "Forces Affecting Winds"
+    },
+    {
+      "type": "paragraph",
+      "id": "999spt4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Coriolis force is zero at the Equator and maximum at the Poles; this prevents tropical cyclones from forming directly on the Equator.",
+        "Temperature inversion requires specific ideal conditions: long winter nights, clear skies, and calm, stationary air.",
+        "Understanding the cause-and-effect relationship between temperature gradients and global pressure belts is highly tested in SSC and state exams."
+      ],
+      "id": "y1vcpy1"
+    },
+    {
+      "id": "u2rcwww",
+      "type": "list",
+      "items": [
+        null
+      ]
+    },
+    {
+      "id": "4s7jv6n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2xkop5t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yz0yx01",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: INTERRELATIONSHIP (EXAM GOLD)"
+    },
+    {
+      "type": "paragraph",
+      "id": "tsk31de"
+    },
+    {
+      "id": "811qivo",
+      "type": "heading",
+      "level": 3,
+      "content": "Ultra-Revision Points (SSC)"
+    },
+    {
+      "id": "mlvzxx5",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

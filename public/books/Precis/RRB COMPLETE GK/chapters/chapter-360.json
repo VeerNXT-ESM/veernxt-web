@@ -1,0 +1,89 @@
+{
+  "id": "p9uv0rn",
+  "title": "RRB Quick Revision Box",
+  "order": 360,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "o8lyiu0"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bombay and Thane on 16 April 1853 covering a distance of 34 kilometers.",
+      "id": "pkbg11m"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (Meters)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m",
+          "Trunk routes and major freight/passenger corridors"
+        ],
+        [
+          "Metre Gauge",
+          "1.000 m",
+          "Secondary lines (largely converted under Unigauge project)"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "Mountain railways and hilly terrains"
+        ]
+      ],
+      "id": "07k3uax"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "19",
+          "icon": "book"
+        },
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Nationalisation",
+          "value": "1951",
+          "icon": "award"
+        },
+        {
+          "label": "First Distance",
+          "value": "34 km",
+          "icon": "info"
+        }
+      ],
+      "id": "5qpn2po"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Railway Budget was merged with the Union Budget in 2017 following the recommendations of the Bibek Debroy Committee.",
+        "Bholu the guard elephant is the official mascot of Indian Railways.",
+        "The mascot and logo were unveiled on the 150th anniversary of Indian Railways in 2002."
+      ],
+      "id": "ugi3vgr"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian Railways was nationalised in 1951 and is currently divided into 19 operational zones.",
+        "The first passenger train in India ran between Bombay (Bori Bunder) and Thane on 16 April 1853.",
+        "Lord Dalhousie is recognized as the Father of Indian Railways.",
+        "The Railway Board was constituted in 1905 under the tenure of Lord Curzon."
+      ],
+      "id": "9jukp2k"
+    }
+  ],
+  "enriched": true
+}

@@ -1,40 +1,40 @@
 {
-  "id": "zkq86x8",
+  "id": "0wmlj8n",
   "title": "Chapter 31: Interior of the Earth",
   "order": 32,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "g1x98xt"
+      "id": "50st3h1"
     },
     {
       "type": "statStrip",
       "stats": [
         {
           "label": "Earth Radius",
-          "value": "6,370 km",
+          "value": "6,371 km",
           "icon": "info"
         },
         {
-          "label": "Mean Density",
-          "value": "5.51 g/cm³",
-          "icon": "check"
-        },
-        {
-          "label": "Major Layers",
+          "label": "Main Layers",
           "value": "3 Layers",
           "icon": "book"
         },
         {
-          "label": "Mantle Depth",
-          "value": "2,900 km",
-          "icon": "calendar"
+          "label": "Mantle Volume",
+          "value": "84%",
+          "icon": "check"
+        },
+        {
+          "label": "Core Temp",
+          "value": "5000-6000°C",
+          "icon": "award"
         }
       ],
-      "id": "mbt9o22"
+      "id": "ixlzrfm"
     },
     {
-      "id": "355uj5d",
+      "id": "2tphwpr",
       "type": "heading",
       "level": 2,
       "content": "1. Sources of Information about Earth's Interior"
@@ -43,64 +43,64 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Direct sources of information about Earth's interior include surface rock and deep mining, while indirect sources include seismic waves, gravity, magnetic fields, and meteors.",
-        "P-waves (Primary) are longitudinal waves that travel through solids, liquids, and gases, whereas S-waves (Secondary) are transverse waves that travel only through solids.",
-        "The Crust is the outermost solid shell, consisting of thinner, denser basaltic Oceanic Crust and thicker, less dense granitic Continental Crust.",
-        "The Mantle extends to a depth of 2,900 km; its upper portion, the asthenosphere, is the primary source of magma.",
-        "The Core is composed mostly of heavy materials like nickel and iron (NIFE), featuring a liquid outer core and a solid inner core."
+        "Information about Earth's interior comes from direct sources (deep rock drilling, volcanic eruptions) and indirect sources (seismic waves, gravity, magnetic fields).",
+        "P-waves (Primary) travel through solids, liquids, and gases, whereas S-waves (Secondary) travel strictly through solid media.",
+        "The Crust is categorized into granitic Continental Crust (Sial) and denser basaltic Oceanic Crust (Sima).",
+        "The Asthenosphere, located in the upper mantle, is partially molten and serves as the primary source of magma.",
+        "The Core is composed primarily of Heavy Nickel and Iron (NIFE), featuring a liquid outer core and a solid inner core."
       ],
-      "id": "lfdbvlx"
+      "id": "l2iodkm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "v2mm2os"
+      "id": "v27mazy"
     },
     {
       "type": "paragraph",
-      "id": "66sdmwi"
+      "id": "iw2ty9f"
     },
     {
       "type": "paragraph",
-      "id": "v0i2ggm"
+      "id": "jzp0rj5"
     },
     {
       "type": "paragraph",
-      "id": "95iy7t1"
+      "id": "konr7mn"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i4sw8r5"
+      "id": "gb838zg"
     },
     {
       "type": "paragraph",
-      "id": "1xo802x"
+      "id": "pxq44eb"
     },
     {
       "type": "paragraph",
-      "id": "j8sg9xl"
+      "id": "u8vc1zh"
     },
     {
       "type": "paragraph",
-      "id": "9vq8j4v"
+      "id": "07pz68u"
     },
     {
-      "id": "ey4qqbm",
+      "id": "ysvulqc",
       "type": "heading",
       "level": 2,
       "content": "2. Seismic Waves"
     },
     {
       "type": "paragraph",
-      "id": "ycd1sme"
+      "id": "nkhmiwb"
     },
     {
       "type": "paragraph",
-      "id": "v4s4bvo"
+      "id": "5zt9yer"
     },
     {
-      "id": "n5vqf37",
+      "id": "tz6hqjm",
       "type": "table",
       "rows": [
         {
@@ -147,17 +147,17 @@
     },
     {
       "type": "pullQuote",
-      "content": "The study of seismic waves provides a complete picture of the earth's interior.",
-      "id": "jmtf323"
+      "content": "Secondary waves or S-waves can travel only through solid materials, which helped scientists understand that the outer core is in a liquid state.",
+      "id": "61tw1wf"
     },
     {
-      "id": "uqkdmk2",
+      "id": "j0kud28",
       "type": "heading",
       "level": 2,
       "content": "3. Layers of the Earth"
     },
     {
-      "id": "atvdiy1",
+      "id": "rs8mzwt",
       "type": "table",
       "rows": [
         {
@@ -199,31 +199,31 @@
       ]
     },
     {
-      "id": "qvssoxe",
+      "id": "7lbsf97",
       "type": "heading",
       "level": 2,
       "content": "4. Crust"
     },
     {
       "type": "paragraph",
-      "id": "w3c2lqh"
+      "id": "k1ri4e9"
     },
     {
       "type": "paragraph",
-      "id": "0m5r9l9"
+      "id": "vrgsvwu"
     },
     {
       "type": "paragraph",
-      "id": "ruwqlzz"
+      "id": "yrqt4yl"
     },
     {
-      "id": "coz137x",
+      "id": "lf8rgk2",
       "type": "heading",
       "level": 3,
       "content": "Types of Crust"
     },
     {
-      "id": "5mpynwt",
+      "id": "yegfepc",
       "type": "table",
       "rows": [
         {
@@ -255,9 +255,9 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Property",
-        "Primary Waves (P-Waves)",
-        "Secondary Waves (S-Waves)"
+        "Feature",
+        "P-Waves (Primary)",
+        "S-Waves (Secondary)"
       ],
       "rows": [
         [
@@ -266,71 +266,71 @@
           "Transverse / Shear"
         ],
         [
-          "Medium of Travel",
+          "Medium of Propagation",
           "Solids, Liquids, and Gases",
           "Solids only"
         ],
         [
-          "Velocity",
-          "Faster (First to reach surface)",
+          "Relative Speed",
+          "Faster (First to arrive)",
           "Slower (Arrives after P-waves)"
         ],
         [
           "Shadow Zone",
-          "Between 103° and 142°",
-          "Entire area beyond 103°"
+          "105° to 145° from epicenter",
+          "Beyond 105° from epicenter"
         ]
       ],
-      "id": "pnfh4si"
+      "id": "dp6r2x1"
     },
     {
-      "id": "wf63sub",
+      "id": "z8yb6k3",
       "type": "heading",
       "level": 2,
       "content": "5. Mantle"
     },
     {
       "type": "paragraph",
-      "id": "1c33n82"
+      "id": "e5a9x4m"
     },
     {
       "type": "paragraph",
-      "id": "9h07zra"
+      "id": "c2fd68m"
     },
     {
       "type": "paragraph",
-      "id": "12n457n"
+      "id": "7xax1jp"
     },
     {
       "type": "paragraph",
-      "id": "3y3sl79"
+      "id": "9bvqekp"
     },
     {
-      "id": "t3av1ch",
+      "id": "3755zrk",
       "type": "heading",
       "level": 2,
       "content": "6. Core"
     },
     {
       "type": "paragraph",
-      "id": "7fzf3ku"
+      "id": "e0gsmwk"
     },
     {
       "type": "paragraph",
-      "id": "se6tsy7"
+      "id": "q6paqje"
     },
     {
       "type": "paragraph",
-      "id": "yt3lsqr"
+      "id": "srss2nr"
     },
     {
-      "id": "zab4n89",
+      "id": "7q38xxl",
       "type": "heading",
       "level": 3,
       "content": "Types of Core"
     },
     {
-      "id": "sy1fj2h",
+      "id": "6art1ph",
       "type": "table",
       "rows": [
         {
@@ -365,20 +365,20 @@
     {
       "type": "examAlert",
       "items": [
-        "Order of Discontinuities (Surface to Center): Conrad (Crust), Mohorovičić (Crust-Mantle), Repetti (Upper-Lower Mantle), Gutenberg (Mantle-Core), Lehmann (Outer-Inner Core).",
-        "P-wave shadow zone occurs between 103° and 142° from the epicenter, whereas the S-wave shadow zone extends continuously beyond 103°.",
-        "The asthenosphere (upper mantle up to 400 km depth) is plastic/semi-fluid and serves as the main magma source during volcanic activity."
+        "Key Discontinuities: Conrad (Upper/Lower Crust), Mohorovičić (Crust/Mantle), Repetti (Upper/Lower Mantle), Gutenberg (Mantle/Core), and Lehmann (Outer/Inner Core).",
+        "Shadow zones: P-wave shadow zone lies between 105° and 145°, while the S-wave shadow zone encompasses the entire region beyond 105°.",
+        "Density gradient increases inward: Crust (~2.7–3.0 g/cm³), Mantle (~3.4–5.5 g/cm³), and Core (~13 g/cm³)."
       ],
-      "id": "lc933xp"
+      "id": "u9j2x47"
     },
     {
-      "id": "oo5250h",
+      "id": "rdmm38g",
       "type": "heading",
       "level": 2,
       "content": "7. Important Discontinuities"
     },
     {
-      "id": "ldpd3ex",
+      "id": "usvhbcb",
       "type": "table",
       "rows": [
         {
@@ -416,26 +416,26 @@
       ]
     },
     {
-      "id": "miawym4",
+      "id": "m2lyeoq",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "2r7n1zt"
+      "id": "jjn8aqt"
     },
     {
       "type": "paragraph",
-      "id": "4hpl40y"
+      "id": "d47oi8f"
     },
     {
       "type": "paragraph",
-      "id": "ce1y2qc"
+      "id": "2sst3gb"
     },
     {
       "type": "paragraph",
-      "id": "64dw11g"
+      "id": "w6wycox"
     }
   ],
   "enriched": true

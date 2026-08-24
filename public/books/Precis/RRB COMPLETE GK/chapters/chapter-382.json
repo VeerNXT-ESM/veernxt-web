@@ -1,0 +1,96 @@
+{
+  "id": "2pp78kb",
+  "title": "4. Qualifications and Disqualifications of Assembly Members",
+  "order": 382,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "xwusyu8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The decision of the Governor on questions as to disqualification of members shall be final, after obtaining the opinion of the Election Commission.",
+      "id": "z97lind"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Constitutional / RPA Disqualification",
+        "Anti-Defection Disqualification"
+      ],
+      "rows": [
+        [
+          "Deciding Authority",
+          "Governor of the State",
+          "Speaker of the Assembly / Chairman of Council"
+        ],
+        [
+          "Governing Provision",
+          "Article 191 & RPA 1951",
+          "Tenth Schedule (52nd Amendment Act, 1985)"
+        ],
+        [
+          "Advisory Role",
+          "Mandatory opinion from Election Commission",
+          "No advisory body required; Speaker decides directly"
+        ],
+        [
+          "Primary Grounds",
+          "Office of profit, unsound mind, insolvency, criminal conviction",
+          "Voluntarily giving up party membership, voting against party whip"
+        ]
+      ],
+      "id": "90w9g5e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Minimum Age (MLA)",
+          "value": "25 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Article",
+          "value": "Article 173",
+          "icon": "book"
+        },
+        {
+          "label": "Anti-Defection Provision",
+          "value": "10th Schedule",
+          "icon": "check"
+        },
+        {
+          "label": "Conviction Disqualification",
+          "value": "2+ Years Sentence",
+          "icon": "clock"
+        }
+      ],
+      "id": "kd9kdt2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Minimum age limit differs: 25 years for Legislative Assembly (MLA) vs 30 years for Legislative Council (MLC).",
+        "Disqualification under Constitutional/RPA grounds is decided by the Governor (on ECI opinion), whereas Anti-Defection disqualification is decided solely by the Speaker/Chairman.",
+        "A person convicted and sentenced to imprisonment for not less than 2 years is disqualified from the date of conviction and remains disqualified for 6 years after release."
+      ],
+      "id": "vuchx19"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 173 specifies that a person must be a citizen of India and at least 25 years old to be qualified for election to the Legislative Assembly.",
+        "A candidate must subscribe to an oath or affirmation before an authorized representative of the Election Commission of India.",
+        "Under Article 191, grounds for disqualification include holding an office of profit, being of unsound mind, undischarged insolvency, or acquiring foreign citizenship.",
+        "Disqualification under the Representation of the People Act (1951) includes conviction for offences resulting in imprisonment for two or more years.",
+        "The Governor decides on disqualification questions under constitutional grounds upon obtaining the mandatory opinion of the Election Commission.",
+        "Disqualification on the grounds of defection under the Tenth Schedule is determined by the Speaker of the Legislative Assembly."
+      ],
+      "id": "1oc9jqk"
+    }
+  ],
+  "enriched": true
+}

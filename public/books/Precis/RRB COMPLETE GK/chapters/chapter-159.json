@@ -1,0 +1,110 @@
+{
+  "id": "cj2moaz",
+  "title": "5. Transportation by Waves",
+  "order": 159,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qb285n1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Process",
+          "value": "Longshore Drift",
+          "icon": "info"
+        },
+        {
+          "label": "Wave Energy",
+          "value": "Swash & Backwash",
+          "icon": "check"
+        },
+        {
+          "label": "Major Landform",
+          "value": "Spits & Bars",
+          "icon": "book"
+        },
+        {
+          "label": "Transport Angle",
+          "value": "Oblique Angle",
+          "icon": "clock"
+        }
+      ],
+      "id": "4jegy5h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Longshore drift carries sediments parallel to the shoreline, continuously reshaping coastal landforms through wave action.",
+      "id": "zpr97gp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Swash carries sediment up the shore at an angle aligned with prevailing winds, while backwash pulls material straight down due to gravity.",
+        "Longshore drift (littoral drift) is the primary process by which sediments are transported parallel to the coastline.",
+        "Transportation by waves creates distinctive depositional coastal landforms including beaches, spits, bars, barrier islands, and tombolos.",
+        "Sediment size and wave energy determine whether material moves via traction, saltation, suspension, or solution."
+      ],
+      "id": "7ws6z9o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constructive Waves (Swash Driven)",
+        "Destructive Waves (Backwash Driven)"
+      ],
+      "rows": [
+        [
+          "Dominant Movement",
+          "Swash is stronger than backwash",
+          "Backwash is stronger than swash"
+        ],
+        [
+          "Primary Coastal Impact",
+          "Deposits material, building up beaches",
+          "Combes and erodes material, wearing beaches down"
+        ],
+        [
+          "Wave Frequency",
+          "Low frequency (6 to 8 waves per minute)",
+          "High frequency (10 to 14 waves per minute)"
+        ],
+        [
+          "Beach Gradient",
+          "Creates gentler beach slopes",
+          "Creates steeper beach profiles"
+        ]
+      ],
+      "id": "2syljmf"
+    },
+    {
+      "type": "paragraph",
+      "id": "mewlkot"
+    },
+    {
+      "type": "paragraph",
+      "id": "e1wgjom"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Understand the functional difference between constructive waves (strong swash, weak backwash) and destructive waves (weak swash, strong backwash).",
+        "Identify Tombolo as a depositional wave-transport feature connecting an offshore island to the mainland.",
+        "Remember that longshore drift direction is determined primarily by the direction of prevailing winds."
+      ],
+      "id": "h88njel"
+    },
+    {
+      "type": "paragraph",
+      "id": "rk4l9qm"
+    },
+    {
+      "type": "paragraph",
+      "id": "f487vff"
+    }
+  ],
+  "enriched": true
+}

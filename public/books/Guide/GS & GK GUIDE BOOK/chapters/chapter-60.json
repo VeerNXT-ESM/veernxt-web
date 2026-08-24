@@ -1,40 +1,40 @@
 {
-  "id": "bjttea5",
+  "id": "0orrtf7",
   "title": "Chapter 11: Metals and Non-metals",
   "order": 60,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "mywlhwg"
+      "id": "ra39qg7"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Most Abundant Metal",
-          "value": "Aluminium",
-          "icon": "award"
+          "label": "Main Classification",
+          "value": "Metals & Non-metals",
+          "icon": "book"
         },
         {
-          "label": "Liquid Metal",
-          "value": "Mercury (Hg)",
+          "label": "Core Sequence",
+          "value": "Reactivity Series",
           "icon": "info"
         },
         {
-          "label": "Liquid Non-Metal",
-          "value": "Bromine (Br)",
-          "icon": "info"
-        },
-        {
-          "label": "Top Reactive Metal",
-          "value": "Potassium (K)",
+          "label": "Key Application",
+          "value": "Extraction of Metals",
           "icon": "check"
+        },
+        {
+          "label": "Property Types",
+          "value": "Physical & Chemical",
+          "icon": "award"
         }
       ],
-      "id": "46guwea"
+      "id": "pxe9py9"
     },
     {
-      "id": "gxrl7wy",
+      "id": "0ab6trz",
       "type": "heading",
       "level": 2,
       "content": "1. Metals"
@@ -43,34 +43,33 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Metals are electropositive elements that readily lose electrons to form positive cations.",
-        "Non-metals are electronegative elements that gain or share electrons to form negative anions or covalent bonds.",
-        "Metals form basic or amphoteric oxides, whereas non-metals form acidic or neutral oxides.",
-        "The Reactivity Series ranks metals in decreasing order of their chemical reactivity.",
-        "Highly reactive metals are extracted via electrolysis, while moderately reactive metals are reduced using carbon."
+        "Metals and non-metals differ significantly in both physical and chemical properties.",
+        "The Reactivity Series ranks metals based on their relative chemical reactivity.",
+        "The method used for metal extraction depends strictly on the metal's position in the Reactivity Series.",
+        "Understanding physical and chemical properties helps explain exceptions and industrial applications of elements."
       ],
-      "id": "umrcy7r"
+      "id": "yppujfe"
     },
     {
       "type": "paragraph",
-      "id": "o2e0pos"
+      "id": "m9jxq6b"
     },
     {
       "type": "paragraph",
-      "id": "505yxwd"
+      "id": "8ww4zha"
     },
     {
       "type": "paragraph",
-      "id": "xrrp0o9"
+      "id": "fe74g2i"
     },
     {
-      "id": "aezrux9",
+      "id": "3uof614",
       "type": "heading",
       "level": 2,
       "content": "2. Physical Properties of Metals"
     },
     {
-      "id": "w19z8xt",
+      "id": "8hjqab1",
       "type": "table",
       "rows": [
         {
@@ -118,58 +117,58 @@
       ]
     },
     {
-      "id": "zlr48p0",
+      "id": "1hks5ft",
       "type": "heading",
       "level": 2,
       "content": "3. Chemical Properties of Metals"
     },
     {
       "type": "paragraph",
-      "id": "w11f87z"
+      "id": "qyg4fsg"
     },
     {
       "type": "paragraph",
-      "id": "li3c0n4"
+      "id": "9qzkfqa"
     },
     {
       "type": "paragraph",
-      "id": "gc2hlxd"
+      "id": "s0174al"
     },
     {
       "type": "paragraph",
-      "id": "aua8m6o"
+      "id": "sjjdfs9"
     },
     {
-      "id": "jbzga0u",
+      "id": "o66sibw",
       "type": "heading",
       "level": 2,
       "content": "4. Non-metals"
     },
     {
       "type": "paragraph",
-      "id": "pcyisa9"
+      "id": "zbwxpq2"
     },
     {
       "type": "paragraph",
-      "id": "91i8wf5"
+      "id": "s7kgsyd"
     },
     {
       "type": "paragraph",
-      "id": "nan04jm"
+      "id": "ccm4zga"
     },
     {
       "type": "pullQuote",
-      "content": "Metals are electropositive elements that lose electrons to form cations, whereas non-metals are electronegative elements that gain electrons to form anions.",
-      "id": "5ctt8m3"
+      "content": "Reactivity Series of Metals",
+      "id": "xb2zuzn"
     },
     {
-      "id": "4wzg9bw",
+      "id": "h6dd9q6",
       "type": "heading",
       "level": 2,
       "content": "5. Physical Properties of Non-metals"
     },
     {
-      "id": "jxn6t4l",
+      "id": "o5v8ext",
       "type": "table",
       "rows": [
         {
@@ -210,37 +209,37 @@
       ]
     },
     {
-      "id": "3njq8af",
+      "id": "lj5aiep",
       "type": "heading",
       "level": 2,
       "content": "6. Chemical Properties of Non-metals"
     },
     {
       "type": "paragraph",
-      "id": "h4tzfep"
+      "id": "38yyt5j"
     },
     {
       "type": "paragraph",
-      "id": "dwrbz53"
+      "id": "15nezij"
     },
     {
       "type": "paragraph",
-      "id": "oxyhi4u"
+      "id": "6v3d0r1"
     },
     {
-      "id": "7acmgl3",
+      "id": "v0x6ex3",
       "type": "heading",
       "level": 2,
       "content": "7. Reactivity Series of Metals"
     },
     {
       "type": "paragraph",
-      "id": "sgggxof"
+      "id": "xfzhwgw"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1tco49l"
+      "id": "siqm7l1"
     },
     {
       "type": "comparisonTable",
@@ -251,80 +250,75 @@
       ],
       "rows": [
         [
-          "Physical State",
-          "Generally solids at room temperature (except Mercury)",
-          "Exist as solids, liquids (Bromine), or gases"
+          "Lustre",
+          "Generally lustrous",
+          "Generally non-lustrous (except Iodine)"
         ],
         [
           "Electrical Conductivity",
-          "Good conductors (best: Silver and Copper)",
-          "Poor conductors (exception: Graphite)"
+          "Good conductors",
+          "Poor conductors (except Graphite)"
         ],
         [
           "Malleability & Ductility",
-          "Highly malleable and ductile",
-          "Non-malleable and brittle"
-        ],
-        [
-          "Nature of Oxides",
-          "Basic or Amphoteric in nature",
-          "Acidic or Neutral in nature"
+          "Malleable and ductile",
+          "Brittle (non-malleable, non-ductile)"
         ]
       ],
-      "id": "qs1176h"
+      "id": "8e42mt8"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9n9vx82"
+      "id": "olmg1r7"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dfui2l9"
+      "id": "xikzszd"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tcxqppx"
+      "id": "vgisrib"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "68jhjnd"
+      "id": "t0jzgek"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a7nud2j"
+      "id": "6hl9w9p"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "918puel"
+      "id": "ooxoufc"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e8v4crd"
+      "id": "ih9bfh7"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4zfnaf1"
+      "id": "kvuwygu"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cxcbml2"
+      "id": "lsqcz47"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1jf5wel"
+      "id": "3se9e2j"
     },
     {
-      "id": "eznpvpz",
+      "id": "o7jezmj",
       "type": "heading",
       "level": 2,
       "content": "8. Extraction of Metals"
@@ -332,46 +326,45 @@
     {
       "type": "examAlert",
       "items": [
-        "Mercury is the only liquid metal, while Bromine is the only liquid non-metal at room temperature.",
-        "Sodium and Potassium are soft metals that can be cut with a knife and are stored under kerosene oil.",
-        "Aqua Regia is a freshly prepared 3:1 mixture of concentrated HCl and concentrated HNO3 used to dissolve Gold and Platinum.",
-        "Amphoteric oxides like Aluminium oxide (Al2O3) and Zinc oxide (ZnO) react with both acids and bases to produce salt and water."
+        "Frequently tested: Exceptions in physical properties (e.g., Mercury as a liquid metal, Graphite as a conducting non-metal).",
+        "High priority: Predicting displacement reaction outcomes using the Reactivity Series.",
+        "Key distinction: Differences between Calcination and Roasting in metal extraction processes."
       ],
-      "id": "ez20jj2"
+      "id": "tjs4kaa"
     },
     {
       "type": "paragraph",
-      "id": "d7ipxg6"
+      "id": "pjhc8gr"
     },
     {
       "type": "paragraph",
-      "id": "aceonpb"
+      "id": "b8oolw1"
     },
     {
       "type": "paragraph",
-      "id": "5v9v9uq"
+      "id": "6yxby0a"
     },
     {
-      "id": "6kg5vvn",
+      "id": "5ksvse0",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "4u303b3"
+      "id": "6fjahlt"
     },
     {
       "type": "paragraph",
-      "id": "ty9dw5k"
+      "id": "k3pj64i"
     },
     {
       "type": "paragraph",
-      "id": "nrcsyz0"
+      "id": "vugt2o4"
     },
     {
       "type": "paragraph",
-      "id": "i1n6llv"
+      "id": "94natsp"
     }
   ],
   "enriched": true

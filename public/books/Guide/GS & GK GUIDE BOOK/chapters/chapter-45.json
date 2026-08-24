@@ -1,40 +1,40 @@
 {
-  "id": "77x483y",
+  "id": "rj7xf63",
   "title": "Chapter 45: Industries in India",
   "order": 45,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "atmcnl0"
+      "id": "1nskjt7"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Major Industrial Belts",
+          "label": "Major Industrial Regions",
           "value": "8 Regions",
-          "icon": "info"
+          "icon": "map"
         },
         {
-          "label": "Key Milestone",
-          "value": "1991 LPG Policy",
+          "label": "First Industrial Policy",
+          "value": "1948",
           "icon": "calendar"
         },
         {
-          "label": "Secondary Sector GDP",
-          "value": "~30%",
+          "label": "LPG Reforms Year",
+          "value": "1991",
           "icon": "award"
         },
         {
-          "label": "Primary Base",
-          "value": "Agro & Mineral",
-          "icon": "book"
+          "label": "Core Industries",
+          "value": "8 Sectors",
+          "icon": "check"
         }
       ],
-      "id": "5qxyl6y"
+      "id": "rqxqwdm"
     },
     {
-      "id": "aoebixq",
+      "id": "dlkxytp",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Industry"
@@ -43,34 +43,33 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Industries are systematically classified based on raw material source, size, ownership, and product nature.",
-        "The location of industries is determined by geographical factors like raw materials, power, and water, as well as non-geographical factors like market, labor, capital, and government policy.",
-        "India features eight major industrial clusters, including the Mumbai-Pune, Hugli, Bengaluru-Tamil Nadu, and Chota Nagpur regions.",
-        "The New Industrial Policy of 1991 transformed Indian manufacturing through Liberalization, Privatization, and Globalization (LPG).",
-        "Major manufacturing industries in India include iron and steel, cotton textiles, sugar, petrochemicals, and information technology."
+        "Industries are classified based on raw materials (agro-based, mineral-based), size (small scale, large scale), and ownership (public, private, joint, cooperative).",
+        "India features 8 major industrial clusters, including the Mumbai-Pune, Hugli, Bangalore-Tamil Nadu, and Chota Nagpur regions.",
+        "Industrial location depends heavily on geographical factors (raw materials, land, water, power) and non-geographical factors (capital, labor, market, government policies).",
+        "The 1991 Industrial Policy dismantled the License Raj, paving the way for Liberalization, Privatization, and Globalization (LPG)."
       ],
-      "id": "g590l46"
+      "id": "s5n8ud9"
     },
     {
       "type": "paragraph",
-      "id": "y1msqfr"
+      "id": "5o0th7y"
     },
     {
       "type": "paragraph",
-      "id": "7naoirg"
+      "id": "iib3iqq"
     },
     {
       "type": "paragraph",
-      "id": "dlbnsch"
+      "id": "mkbl03q"
     },
     {
-      "id": "82mtpqy",
+      "id": "a9dilyy",
       "type": "heading",
       "level": 2,
       "content": "2. Classification of Industries"
     },
     {
-      "id": "ssrplbi",
+      "id": "hu0rs0s",
       "type": "table",
       "rows": [
         {
@@ -108,13 +107,13 @@
       ]
     },
     {
-      "id": "1penyer",
+      "id": "tonza16",
       "type": "heading",
       "level": 2,
       "content": "3. Major Industries in India"
     },
     {
-      "id": "xzfkkbn",
+      "id": "2vc2zrs",
       "type": "table",
       "rows": [
         {
@@ -192,7 +191,7 @@
       ]
     },
     {
-      "id": "ydidifg",
+      "id": "lfs106a",
       "type": "heading",
       "level": 2,
       "content": "4. Industrial Regions of India"
@@ -200,150 +199,150 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "dk486a7"
+      "id": "951c4fe"
     },
     {
       "type": "paragraph",
-      "id": "u4q5867"
+      "id": "uurp8v8"
     },
     {
       "type": "pullQuote",
-      "content": "Industrial growth forms the backbone of economic transformation, driving employment generation and modern infrastructure development across India.",
-      "id": "eqsuq6o"
+      "content": "Factors Affecting Industrial Location",
+      "id": "2xizh09"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vob336p"
+      "id": "t2ad973"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hs72nf0"
+      "id": "0543ah4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "myn6z59"
+      "id": "udoyi1b"
     },
     {
-      "id": "ndl1gpc",
+      "id": "v6f7a36",
       "type": "heading",
       "level": 2,
       "content": "5. Factors Affecting Industrial Location"
     },
     {
       "type": "paragraph",
-      "id": "lb9lnev"
+      "id": "zsbrkwh"
     },
     {
       "type": "paragraph",
-      "id": "m6xdjro"
+      "id": "pnk1pf8"
     },
     {
       "type": "paragraph",
-      "id": "q7uksen"
+      "id": "275lykm"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
+        "Parameter",
         "Agro-Based Industries",
         "Mineral-Based Industries"
       ],
       "rows": [
         [
-          "Raw Material",
-          "Agricultural produce (cotton, jute, sugarcane)",
-          "Mineral ores (iron ore, bauxite, limestone)"
+          "Primary Raw Material",
+          "Agricultural crops and plant products",
+          "Metallic and non-metallic mineral ores"
         ],
         [
           "Key Examples",
-          "Textiles, Sugar, Food Processing",
-          "Iron & Steel, Cement, Aluminum"
+          "Cotton textiles, Sugar, Jute, Vegetable oil",
+          "Iron and Steel, Cement, Aluminum processing"
         ],
         [
-          "Locational Driver",
-          "Proximity to fertile agricultural hinterlands",
-          "Proximity to mining belts and heavy transport infrastructure"
+          "Location Factor",
+          "Located near fertile agricultural zones or labor-rich markets",
+          "Located near raw material sources (mines) due to heavy weight-loss during processing"
         ]
       ],
-      "id": "tot9o66"
+      "id": "6ageejy"
     },
     {
       "type": "paragraph",
-      "id": "ioj5l4p"
+      "id": "ht4xbnh"
     },
     {
       "type": "paragraph",
-      "id": "7dcxahf"
+      "id": "ddom4ke"
     },
     {
-      "id": "cvrpae9",
+      "id": "dghnai0",
       "type": "heading",
       "level": 2,
       "content": "6. Industrial Policies in India"
     },
     {
       "type": "paragraph",
-      "id": "m4ci8ea"
+      "id": "kz9iiak"
     },
     {
       "type": "paragraph",
-      "id": "rwzymvx"
+      "id": "w4chp9n"
     },
     {
       "type": "paragraph",
-      "id": "12hmqev"
+      "id": "wqahnu9"
     },
     {
-      "id": "hqqttkk",
+      "id": "rdb5tes",
       "type": "heading",
       "level": 2,
       "content": "7. Importance of Industries"
     },
     {
       "type": "paragraph",
-      "id": "921amd3"
+      "id": "82n5gfl"
     },
     {
       "type": "paragraph",
-      "id": "faeste0"
+      "id": "7cnft5z"
     },
     {
       "type": "examAlert",
       "items": [
-        "The first modern cotton textile mill was established at Fort Gloster near Kolkata in 1818, while the first successful commercial mill started in Mumbai in 1854.",
-        "Chota Nagpur region is known as the 'Ruhr of India' due to its immense concentration of iron and steel industries and mineral wealth.",
-        "Differentiate between the Industrial Policy Resolution 1956 (focus on public sector/heavy industries) and the 1991 Policy (delicensing and foreign investment)."
+        "Chota Nagpur Plateau region is often referred to as the 'Ruhr of India' due to its massive concentration of iron and steel industries.",
+        "Understand 'Footloose Industries'—industries like IT and electronics that can be located anywhere as they are not dependent on specific raw materials.",
+        "Frequently asked: The Industrial Policy Resolution of 1956 formed the basis of the Second Five-Year Plan focusing on heavy capital goods industries."
       ],
-      "id": "08jvg2k"
+      "id": "ww7x66l"
     },
     {
       "type": "paragraph",
-      "id": "xu21u9c"
+      "id": "ct6bzbq"
     },
     {
       "type": "paragraph",
-      "id": "ji8l3l3"
+      "id": "g9fzkzh"
     },
     {
-      "id": "o2ia5uh",
+      "id": "tam7cvo",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "dq872rk"
+      "id": "ms1a9rb"
     },
     {
       "type": "paragraph",
-      "id": "qeyi4qg"
+      "id": "q0cp1tk"
     },
     {
       "type": "paragraph",
-      "id": "o5rz9lw"
+      "id": "06zjfki"
     }
   ],
   "enriched": true

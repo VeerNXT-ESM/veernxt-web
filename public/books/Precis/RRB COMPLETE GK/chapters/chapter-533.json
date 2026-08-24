@@ -1,0 +1,90 @@
+{
+  "id": "9w2784s",
+  "title": "6. Search Committee",
+  "order": 533,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "an8ycw5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Search Committee shall prepare a panel of persons to be considered by the Selection Committee for appointment as the Chairperson and Members of the Lokpal.",
+      "id": "q9v1kxg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Search Committee",
+        "Selection Committee"
+      ],
+      "rows": [
+        [
+          "Primary Function",
+          "Shortlists candidates and prepares a recommended panel",
+          "Makes final selections for appointment by the President"
+        ],
+        [
+          "Composition",
+          "At least 8 members with domain expertise",
+          "5 members: PM (Chair), Speaker, LoP, CJI/Nominee, Eminent Jurist"
+        ],
+        [
+          "Demographic Reservation",
+          "Mandatory 50% quota for SC/ST/OBC/Minorities/Women",
+          "No explicit demographic quota prescribed in the Act"
+        ]
+      ],
+      "id": "i80inx2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Enacting Act",
+          "value": "2013 Act",
+          "icon": "calendar"
+        },
+        {
+          "label": "Search Committee Strength",
+          "value": "At least 8",
+          "icon": "info"
+        },
+        {
+          "label": "Reserved Quota",
+          "value": "50% Minimum",
+          "icon": "check"
+        },
+        {
+          "label": "Selection Chair",
+          "value": "Prime Minister",
+          "icon": "award"
+        }
+      ],
+      "id": "t3cxtv9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Minimum 50% membership of the Search Committee must be reserved for SCs, STs, OBCs, Minorities, and Women.",
+        "The Selection Committee is not strictly bound by the panel recommended by the Search Committee and can appoint persons outside it.",
+        "The Search Committee is constituted by the Selection Committee, which is headed by the Prime Minister."
+      ],
+      "id": "wusoaif"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Search Committee is constituted by the Selection Committee under the Lokpal and Lokayuktas Act, 2013.",
+        "It comprises at least eight members with expertise in anti-corruption policy, public administration, law, finance, and management.",
+        "At least 50% of the Search Committee members must belong to SCs, STs, OBCs, Minorities, and Women.",
+        "The primary mandate of the Search Committee is to prepare a panel of candidates for the Chairperson and Members of the Lokpal.",
+        "The Selection Committee retains the power to consider candidates outside the panel recommended by the Search Committee."
+      ],
+      "id": "ikypwec"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,394 @@
+{
+  "id": "7r2vshx",
+  "title": "CHAPTER 1: UNITS AND MEASUREMENTS",
+  "order": 94,
+  "blocks": [
+    {
+      "id": "956dj34",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Base SI Units",
+          "value": "7",
+          "icon": "book"
+        },
+        {
+          "label": "Supplementary Units",
+          "value": "2",
+          "icon": "check"
+        },
+        {
+          "label": "1 Parsec",
+          "value": "3.26 Light Years",
+          "icon": "award"
+        },
+        {
+          "label": "Water Density",
+          "value": "1000 kg/m³",
+          "icon": "info"
+        }
+      ],
+      "id": "xrp2v2a"
+    },
+    {
+      "type": "paragraph",
+      "id": "vzqb18m"
+    },
+    {
+      "type": "paragraph",
+      "id": "1eq7a5f"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ovmt0t"
+    },
+    {
+      "id": "n3kco54",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "uhn8ch7",
+      "type": "heading",
+      "level": 2,
+      "content": "PHYSICAL QUANTITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Physical quantities are classified into Fundamental (independent) and Derived (dependent) quantities.",
+        "The SI system consists of 7 fundamental units (metre, kilogram, second, ampere, kelvin, mole, candela) and 2 supplementary units (radian, steradian).",
+        "Density is calculated as Mass divided by Volume, with the standard SI unit being kg/m³.",
+        "Dimensional formulas express physical quantities using fundamental base dimensions [M], [L], and [T].",
+        "Dimensional analysis is used to check the correctness of equations and convert units between different systems."
+      ],
+      "id": "0imlb88"
+    },
+    {
+      "type": "paragraph",
+      "id": "hos2eeb"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlhs9yq"
+    },
+    {
+      "type": "paragraph",
+      "id": "jndaogt"
+    },
+    {
+      "type": "paragraph",
+      "id": "x4h0gdm"
+    },
+    {
+      "id": "f9vxe84",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF PHYSICAL QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "0t2bzj3"
+    },
+    {
+      "id": "wmecd2m",
+      "type": "numberedList",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "0ru69t5",
+      "type": "heading",
+      "level": 3,
+      "content": "FUNDAMENTAL QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "h917au5"
+    },
+    {
+      "type": "paragraph",
+      "id": "bjmndf0"
+    },
+    {
+      "id": "45uc2jq",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "t6q7s20"
+    },
+    {
+      "type": "paragraph",
+      "id": "nkqbi85"
+    },
+    {
+      "id": "idgggc9",
+      "type": "heading",
+      "level": 3,
+      "content": "DERIVED QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "htyqg74"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1wrtikx"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Fundamental quantities are independent physical quantities that cannot be defined in terms of other physical quantities.",
+      "id": "bpjxq0p"
+    },
+    {
+      "type": "paragraph",
+      "id": "ikd3k5c"
+    },
+    {
+      "type": "paragraph",
+      "id": "oyy1np3"
+    },
+    {
+      "id": "ky40154",
+      "type": "heading",
+      "level": 2,
+      "content": "SI SYSTEM OF UNITS"
+    },
+    {
+      "type": "paragraph",
+      "id": "1nmc6ob"
+    },
+    {
+      "type": "paragraph",
+      "id": "i4fxx35"
+    },
+    {
+      "type": "paragraph",
+      "id": "cp4o5vf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3urfs82"
+    },
+    {
+      "id": "nnxany2",
+      "type": "heading",
+      "level": 2,
+      "content": "CONVERSION OF UNITS"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w61mtdw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xe3zhh9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5vf7v8g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ycrb1k4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fundamental Quantities",
+        "Derived Quantities"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Independent quantities that do not rely on other physical quantities.",
+          "Quantities derived mathematically from base fundamental quantities."
+        ],
+        [
+          "Count in SI",
+          "7 Base Quantities",
+          "Unlimited (e.g., Velocity, Force, Pressure)"
+        ],
+        [
+          "Examples",
+          "Mass (kg), Length (m), Time (s)",
+          "Speed (m/s), Force (N), Density (kg/m³)"
+        ]
+      ],
+      "id": "kujb17v"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h230r3e"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7vxbkad"
+    },
+    {
+      "id": "th6x35v",
+      "type": "heading",
+      "level": 2,
+      "content": "DENSITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "hdvpdqs"
+    },
+    {
+      "type": "paragraph",
+      "id": "7kj2oto"
+    },
+    {
+      "type": "paragraph",
+      "id": "ndj7vij"
+    },
+    {
+      "type": "paragraph",
+      "id": "tuc9904"
+    },
+    {
+      "type": "paragraph",
+      "id": "6z2nurq"
+    },
+    {
+      "id": "r3g49o2",
+      "type": "heading",
+      "level": 2,
+      "content": "DIMENSIONAL FORMULA"
+    },
+    {
+      "type": "paragraph",
+      "id": "q0pq2tz"
+    },
+    {
+      "type": "paragraph",
+      "id": "ayw02ar"
+    },
+    {
+      "type": "paragraph",
+      "id": "qc8uc4y"
+    },
+    {
+      "type": "paragraph",
+      "id": "hosepwd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7rrbbix"
+    },
+    {
+      "id": "2ax62v2",
+      "type": "heading",
+      "level": 2,
+      "content": "USES OF DIMENSIONAL FORMULA"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Light year, Astronomical Unit (AU), and Parsec are units of DISTANCE, not time.",
+        "Quantities like Relative Density, Strain, and Refractive Index are DIMENSIONLESS.",
+        "Work, Energy, and Torque share the same dimensional formula: [M¹ L² T⁻²].",
+        "Impulse and Linear Momentum have identical dimensions: [M¹ L¹ T⁻¹]."
+      ],
+      "id": "3tbmwg0"
+    },
+    {
+      "id": "nh3azuy",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "xbg1qg0",
+      "type": "heading",
+      "level": 2,
+      "content": "SSC EXAM IMPORTANT QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "4io59ha"
+    },
+    {
+      "type": "paragraph",
+      "id": "mwairzk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xjngxzb"
+    },
+    {
+      "type": "paragraph",
+      "id": "qx0cjlb"
+    },
+    {
+      "type": "paragraph",
+      "id": "di4qy61"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ygyb16"
+    },
+    {
+      "id": "pt05qdg",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "0f8h6aj",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

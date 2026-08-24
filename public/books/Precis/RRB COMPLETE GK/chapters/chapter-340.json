@@ -1,0 +1,134 @@
+{
+  "id": "vl399am",
+  "title": "Writs Issued by Supreme Court",
+  "order": 340,
+  "blocks": [
+    {
+      "id": "51j2go6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 32 is an integral part of the basic structure of the Constitution and is the very heart and soul of it.",
+      "id": "he7oek1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Supreme Court (Article 32)",
+        "High Court (Article 226)"
+      ],
+      "rows": [
+        [
+          "Scope of Enforcement",
+          "Fundamental Rights only",
+          "Fundamental Rights and ordinary legal rights"
+        ],
+        [
+          "Territorial Extent",
+          "Entire territory of India",
+          "Respective State or UT jurisdiction"
+        ],
+        [
+          "Nature of Right",
+          "Mandatory (Itself a Fundamental Right)",
+          "Discretionary Remedy"
+        ]
+      ],
+      "id": "ljacflg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supreme Court Jurisdiction",
+          "value": "Article 32",
+          "icon": "book"
+        },
+        {
+          "label": "High Court Jurisdiction",
+          "value": "Article 226",
+          "icon": "book"
+        },
+        {
+          "label": "Types of Writs",
+          "value": "5 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Constitutional Status",
+          "value": "Basic Structure",
+          "icon": "award"
+        }
+      ],
+      "id": "12m44i0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Courts (Article 226) have a broader writ jurisdiction than the Supreme Court (Article 32) because High Courts can issue writs for ordinary legal rights in addition to Fundamental Rights.",
+        "Certiorari is both preventive and curative in nature, whereas Prohibition is purely preventive.",
+        "The Supreme Court cannot refuse to exercise its writ jurisdiction under Article 32 because seeking remedy under Article 32 is itself a Fundamental Right."
+      ],
+      "id": "1hjygob"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 32 guarantees the right to move the Supreme Court for the enforcement of Fundamental Rights and is itself a Fundamental Right.",
+        "The five types of writs are Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo-Warranto.",
+        "Habeas Corpus is the only writ that can be issued against both public authorities and private individuals.",
+        "Mandamus cannot be issued against private individuals, the President of India, or State Governors.",
+        "Quo-Warranto can be petitioned by any interested person, not necessarily only the aggrieved party."
+      ],
+      "id": "8k4r3y5"
+    }
+  ],
+  "enriched": true
+}

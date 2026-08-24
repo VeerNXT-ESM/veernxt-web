@@ -1,0 +1,358 @@
+{
+  "id": "c09dj1i",
+  "title": "Chapter 42: National Income",
+  "order": 42,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "0o0k4k2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Aggregates",
+          "value": "GDP, GNP, NNP",
+          "icon": "book"
+        },
+        {
+          "label": "Measurement Methods",
+          "value": "3 Methods",
+          "icon": "check"
+        },
+        {
+          "label": "First Estimate",
+          "value": "1867-68",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Pioneer",
+          "value": "Dadabhai Naoroji",
+          "icon": "award"
+        }
+      ],
+      "id": "c5alub7"
+    },
+    {
+      "id": "tjtsxhz",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of National Income"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Gross Domestic Product (GDP) measures the total monetary value of final goods and services produced strictly within the domestic boundary of a nation.",
+        "Gross National Product (GNP) adjusts GDP by adding Net Factor Income from Abroad (NFIA), reflecting income earned by residents globally.",
+        "Net National Product (NNP) at factor cost is officially considered the true National Income of an economy.",
+        "National income is measured using three distinct approaches: Product/Value Added Method, Income Method, and Expenditure Method.",
+        "In India, official estimation was initiated under the National Income Committee (1949) headed by Prof. P.C. Mahalanobis and is currently compiled by the NSO."
+      ],
+      "id": "3kbpb2b"
+    },
+    {
+      "type": "paragraph",
+      "id": "9wuyjn1"
+    },
+    {
+      "type": "paragraph",
+      "id": "605w4dr"
+    },
+    {
+      "type": "paragraph",
+      "id": "9jreblh"
+    },
+    {
+      "type": "paragraph",
+      "id": "g7mpj31"
+    },
+    {
+      "id": "6m0vcnh",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Important Concepts of National Income"
+    },
+    {
+      "id": "f4omto1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pbcdxbf",
+      "type": "heading",
+      "level": 2,
+      "content": "3. GDP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "diwta5n"
+    },
+    {
+      "type": "paragraph",
+      "id": "xzndo7l"
+    },
+    {
+      "type": "paragraph",
+      "id": "12g6bia"
+    },
+    {
+      "type": "paragraph",
+      "id": "1idwam8"
+    },
+    {
+      "id": "yrblhl0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. GNP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "2polz1o"
+    },
+    {
+      "type": "paragraph",
+      "id": "0oc1y2l"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Net National Product (NNP) at factor cost represents the true National Income of an economy.",
+      "id": "v9505sl"
+    },
+    {
+      "type": "paragraph",
+      "id": "kgoij5p"
+    },
+    {
+      "id": "5s4lz23",
+      "type": "heading",
+      "level": 2,
+      "content": "5. NNP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "klcg2v7"
+    },
+    {
+      "type": "paragraph",
+      "id": "hijwgb8"
+    },
+    {
+      "type": "paragraph",
+      "id": "va2wnu5"
+    },
+    {
+      "id": "oc3s3bb",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Methods of Calculating National Income"
+    },
+    {
+      "id": "hlutihr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4rp7d8r",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Components of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "tlk69rn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Gross Domestic Product (GDP)",
+        "Gross National Product (GNP)"
+      ],
+      "rows": [
+        [
+          "Concept Basis",
+          "Territorial / Geographic concept",
+          "National / Resident concept"
+        ],
+        [
+          "Scope",
+          "Focuses on production inside domestic territory",
+          "Focuses on production by citizens/residents anywhere in the world"
+        ],
+        [
+          "Net Factor Income from Abroad (NFIA)",
+          "Excluded from calculation",
+          "Included (GNP = GDP + NFIA)"
+        ]
+      ],
+      "id": "zrbxknf"
+    },
+    {
+      "type": "paragraph",
+      "id": "qu6kk1m"
+    },
+    {
+      "type": "paragraph",
+      "id": "wmrzibu"
+    },
+    {
+      "type": "paragraph",
+      "id": "pkma9sz"
+    },
+    {
+      "id": "s3ry9gg",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "anr76w8"
+    },
+    {
+      "type": "paragraph",
+      "id": "rr6yt1m"
+    },
+    {
+      "type": "paragraph",
+      "id": "osbwzt2"
+    },
+    {
+      "type": "paragraph",
+      "id": "0eqpfx8"
+    },
+    {
+      "id": "e73luuv",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Limitations of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "mew8uv2"
+    },
+    {
+      "type": "paragraph",
+      "id": "smy3lot"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Formula for Market Price: Market Price (MP) = Factor Cost (FC) + Indirect Taxes - Subsidies.",
+        "Dadabhai Naoroji made the first non-official estimate of National Income in India in 1867-68, while Dr. V.K.R.V. Rao provided the first scientific estimate in 1931-32.",
+        "Depreciation is the key distinction between Gross and Net concepts: Net Aggregate = Gross Aggregate - Depreciation."
+      ],
+      "id": "erj7tbv"
+    },
+    {
+      "type": "paragraph",
+      "id": "liiti1w"
+    },
+    {
+      "type": "paragraph",
+      "id": "4wzu0ac"
+    },
+    {
+      "id": "neivrie",
+      "type": "heading",
+      "level": 2,
+      "content": "10. National Income Estimation in India"
+    },
+    {
+      "type": "paragraph",
+      "id": "hpr3m6l"
+    },
+    {
+      "id": "pg8kz8g",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "q2oes36"
+    },
+    {
+      "type": "paragraph",
+      "id": "hpxvdx1"
+    },
+    {
+      "type": "paragraph",
+      "id": "dvv6749"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,110 @@
+{
+  "id": "psg7may",
+  "title": "3. Structure of a Glacier",
+  "order": 135,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "f0trh47"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Zones",
+          "value": "2 Main Zones",
+          "icon": "book"
+        },
+        {
+          "label": "Brittle Zone Depth",
+          "value": "Upper 50m",
+          "icon": "info"
+        },
+        {
+          "label": "Net Balance Boundary",
+          "value": "Equilibrium Line",
+          "icon": "check"
+        },
+        {
+          "label": "Terminal Point",
+          "value": "Glacier Snout",
+          "icon": "award"
+        }
+      ],
+      "id": "x7bsr2o"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The equilibrium line marks the crucial structural boundary on a glacier where annual snow accumulation precisely balances annual ice loss.",
+      "id": "bazmei3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A glacier is structurally divided into the Zone of Accumulation (upper region with net ice gain) and the Zone of Ablation (lower region with net ice loss).",
+        "The Equilibrium Line Altitude (ELA) represents the exact boundary where annual snow accumulation equals annual ablation.",
+        "The upper 50 meters of a glacier undergoes brittle deformation, creating deep fractures known as crevasses, while deeper ice flows via plastic deformation.",
+        "Glacial till and debris are organized into moraines: lateral moraines along the sides, medial moraines where glaciers merge, and terminal moraines at the snout."
+      ],
+      "id": "rqj5bgc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Zone of Accumulation",
+        "Zone of Ablation"
+      ],
+      "rows": [
+        [
+          "Mass Balance",
+          "Positive (Net gain of snow/ice)",
+          "Negative (Net loss of snow/ice)"
+        ],
+        [
+          "Position",
+          "Upper, higher elevation section",
+          "Lower, lower elevation section"
+        ],
+        [
+          "Dominant Process",
+          "Snowfall, compaction, firn formation",
+          "Melting, sublimation, calving"
+        ],
+        [
+          "Surface Character",
+          "Covered by perennial firn and snow",
+          "Exposed bare ice, crevasses, debris"
+        ]
+      ],
+      "id": "xi60duj"
+    },
+    {
+      "type": "paragraph",
+      "id": "b4793m8"
+    },
+    {
+      "type": "paragraph",
+      "id": "znw02dd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        " UPSC/State PSC Question: Medial moraines are formed when two lateral moraines unite at the confluence of two joining valley glaciers.",
+        "Plastic vs Brittle Flow: Remember that crevasses only extend to about 50 meters depth because hydrostatic pressure causes ice below this point to deform plastically.",
+        "Glacial Terminus: The snout of a glacier frequently feeds proglacial lakes or meltwater river origins (e.g., Gaumukh at the Gangotri Glacier)."
+      ],
+      "id": "5b45haq"
+    },
+    {
+      "type": "paragraph",
+      "id": "rz9p1mg"
+    },
+    {
+      "type": "paragraph",
+      "id": "bcgvcra"
+    }
+  ],
+  "enriched": true
+}

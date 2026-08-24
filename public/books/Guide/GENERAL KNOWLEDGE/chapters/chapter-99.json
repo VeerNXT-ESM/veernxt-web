@@ -1,0 +1,360 @@
+{
+  "id": "l03vz35",
+  "title": "CHAPTER 6 : PRESSURE AND FLUIDS",
+  "order": 99,
+  "blocks": [
+    {
+      "id": "2u04kpz",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pressure is defined as force per unit area (P = F/A) and decreases as contact surface area increases.",
+        "Pressure in liquids increases linearly with depth, liquid density, and acceleration due to gravity.",
+        "Atmospheric pressure is exerted by the weight of air above and decreases with increasing altitude.",
+        "Archimedes' Principle states that a body submerged in a fluid experiences an upward buoyant force equal to the weight of displaced fluid.",
+        "Law of Floatation: An object floats if its average density is less than or equal to the density of the fluid."
+      ],
+      "id": "74379tj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "book"
+        },
+        {
+          "label": "Standard Atmospheric Pressure",
+          "value": "101.3 kPa",
+          "icon": "info"
+        },
+        {
+          "label": "Density of Pure Water",
+          "value": "1000 kg/m³",
+          "icon": "check"
+        },
+        {
+          "label": "Liquid Pressure Formula",
+          "value": "P = hρg",
+          "icon": "clock"
+        }
+      ],
+      "id": "35mje3m"
+    },
+    {
+      "type": "paragraph",
+      "id": "hplfdz9"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ewy1kp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ehphf5s"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6bjswjn"
+    },
+    {
+      "type": "paragraph",
+      "id": "mwwvdpq"
+    },
+    {
+      "id": "c10lbnu",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Pressure"
+    },
+    {
+      "id": "mct5w9h",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "nirui77",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE IN SOLIDS"
+    },
+    {
+      "type": "paragraph",
+      "id": "pug0en4"
+    },
+    {
+      "id": "uhfgasr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "edpxdg4"
+    },
+    {
+      "id": "sa0qk9i",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE IN LIQUIDS"
+    },
+    {
+      "type": "paragraph",
+      "id": "wlsh7xn"
+    },
+    {
+      "id": "hrx7nm7",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "7i5df46",
+      "type": "heading",
+      "level": 3,
+      "content": "Formula for Pressure in Liquid"
+    },
+    {
+      "type": "paragraph",
+      "id": "g1c85pa"
+    },
+    {
+      "type": "paragraph",
+      "id": "y5qvap5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "ARCHIMEDES' PRINCIPLE",
+      "id": "dh53ub2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "arqgx8q"
+    },
+    {
+      "type": "paragraph",
+      "id": "g29t1bo"
+    },
+    {
+      "id": "txa82vd",
+      "type": "heading",
+      "level": 2,
+      "content": "ATMOSPHERIC PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "id": "n1xocdz"
+    },
+    {
+      "id": "g7hhi1h",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Atmospheric Pressure"
+    },
+    {
+      "id": "zsj1wz0",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "eyvyhl3",
+      "type": "heading",
+      "level": 2,
+      "content": "BUOYANT FORCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "1y6dhzc"
+    },
+    {
+      "id": "9m1qgfp",
+      "type": "heading",
+      "level": 2,
+      "content": "ARCHIMEDES' PRINCIPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "cwfehc5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Pressure in Solids",
+        "Pressure in Liquids"
+      ],
+      "rows": [
+        [
+          "Direction of Force",
+          "Exerted primarily downward in the direction of weight/applied force",
+          "Exerted equally in all directions at a specific depth (Pascal's Law)"
+        ],
+        [
+          "Governing Formula",
+          "P = Force / Area",
+          "P = h × ρ × g (Depth × Density × Gravity)"
+        ],
+        [
+          "Container Shape Effect",
+          "Depends on the contact surface area of the solid body",
+          "Independent of the shape or size of the container"
+        ]
+      ],
+      "id": "jfh7mlm"
+    },
+    {
+      "type": "paragraph",
+      "id": "861c8cx"
+    },
+    {
+      "type": "paragraph",
+      "id": "5gpxlvf"
+    },
+    {
+      "id": "3rcrnn8",
+      "type": "heading",
+      "level": 3,
+      "content": "Applications of Archimedes’ Principle"
+    },
+    {
+      "id": "fnblot4",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "wd0g1p5",
+      "type": "heading",
+      "level": 2,
+      "content": "FLOATATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "f59vf4d"
+    },
+    {
+      "type": "paragraph",
+      "id": "ytoofyd"
+    },
+    {
+      "id": "dss1r65",
+      "type": "heading",
+      "level": 2,
+      "content": "DENSITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "3svqlfa"
+    },
+    {
+      "type": "paragraph",
+      "id": "73abthb"
+    },
+    {
+      "type": "paragraph",
+      "id": "5lcnbys"
+    },
+    {
+      "id": "pkj9wbz",
+      "type": "heading",
+      "level": 2,
+      "content": "APPLICATIONS OF PRESSURE"
+    },
+    {
+      "id": "47yj8dh",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Lactometers (milk purity test) and Hydrometers (fluid density) directly operate on Archimedes' Principle.",
+        "A sudden drop in a mercury barometer reading indicates an impending storm or cyclone.",
+        "Dams are constructed with broader bases because fluid pressure increases with depth (P = hρg)."
+      ],
+      "id": "mxtm0re"
+    },
+    {
+      "id": "j9nxdjy",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT  EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "xp3xqaw"
+    },
+    {
+      "type": "paragraph",
+      "id": "k3a8fd4"
+    },
+    {
+      "type": "paragraph",
+      "id": "ersp5dy"
+    },
+    {
+      "type": "paragraph",
+      "id": "tc2lj7x"
+    },
+    {
+      "type": "paragraph",
+      "id": "vi0uay6"
+    },
+    {
+      "id": "ntnrsbl",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "mswuxo6",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

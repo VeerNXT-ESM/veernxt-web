@@ -1,0 +1,137 @@
+{
+  "id": "kfmclo5",
+  "title": "Status and Establishment",
+  "order": 488,
+  "blocks": [
+    {
+      "id": "ivl4gq0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional bodies derive their authority directly from the Constitution of India.",
+      "id": "1rpm5o3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies",
+        "Executive Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Power",
+          "Constitution of India",
+          "Act of Parliament / State Legislature",
+          "Executive Order / Cabinet Resolution"
+        ],
+        [
+          "Modification / Abolition",
+          "Requires Constitutional Amendment (Art 368)",
+          "Requires Amendment / Repeal Act",
+          "Requires New Cabinet Order / Resolution"
+        ],
+        [
+          "Key Examples",
+          "UPSC, CAG, Election Commission, Finance Commission",
+          "NHRC, SEBI, NGT, CVC",
+          "NITI Aayog, UIDAI (initially), Law Commission"
+        ]
+      ],
+      "id": "dbsskjw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Status",
+          "value": "Article 324-329",
+          "icon": "award"
+        },
+        {
+          "label": "Establishment Year",
+          "value": "1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "Body Classification",
+          "value": "Constitutional / Statutory",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure Standard",
+          "value": "6 Years / 65 Age",
+          "icon": "clock"
+        }
+      ],
+      "id": "besjfn2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently test the classification of bodies: NITI Aayog is an Executive Body, whereas NHRC is a Statutory Body.",
+        "Memorize exact Articles: CAG (Article 148), UPSC (Article 315), Election Commission (Article 324), Finance Commission (Article 280).",
+        "Pay attention to mandatory qualifications, removal processes, and appointing authorities across different bodies."
+      ],
+      "id": "x7cb7pc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their powers, status, and authority directly from the Constitution of India.",
+        "Statutory bodies are created by specific Acts passed by Parliament or State Legislatures.",
+        "Executive bodies are established through executive resolutions or cabinet decisions without legislative enactment.",
+        "Amending the status or structure of a constitutional body requires a Constitutional Amendment Act under Article 368."
+      ],
+      "id": "h1j9czl"
+    }
+  ],
+  "enriched": true
+}

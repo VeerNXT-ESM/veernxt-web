@@ -1,0 +1,545 @@
+{
+  "id": "ml63no6",
+  "title": "Chapter 13 – Midwifery & Obstetrics",
+  "order": 13,
+  "blocks": [
+    {
+      "id": "91mio1m",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Obstetrics and midwifery encompass comprehensive maternal care from pre-conception through antenatal, intrapartum, postnatal, and essential newborn care.",
+        "Pregnancy spans three distinct trimesters: First (1-12 weeks), Second (13-28 weeks), and Third (29-40 weeks).",
+        "Signs of pregnancy are categorized into Presumptive (subjective), Probable (objective), and Positive (diagnostic) indicators.",
+        "Labor progresses through four defined stages: Cervical dilation, Delivery of fetus, Placental expulsion, and the Postpartum recovery/observation phase.",
+        "Active management of third stage of labor (AMTSL) and vigilant antenatal care prevent common complications such as PPH and pre-eclampsia."
+      ],
+      "id": "xsffhzr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Normal Gestation",
+          "value": "280 Days (40 Weeks)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Trimesters",
+          "value": "3 Stages",
+          "icon": "clock"
+        },
+        {
+          "label": "Stages of Labor",
+          "value": "4 Stages",
+          "icon": "check"
+        },
+        {
+          "label": "Minimum ANC Visits",
+          "value": "4 Visits (WHO)",
+          "icon": "award"
+        }
+      ],
+      "id": "y8qj5hs"
+    },
+    {
+      "type": "paragraph",
+      "id": "9h8i4ep"
+    },
+    {
+      "id": "1kny19s",
+      "type": "heading",
+      "level": 2,
+      "content": "Basic Terminology in Obstetrics"
+    },
+    {
+      "id": "r5f88fj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6g38mtd",
+      "type": "heading",
+      "level": 2,
+      "content": "Stages of Pregnancy (Trimesters)"
+    },
+    {
+      "id": "s8lutxt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Stages of Pregnancy (Trimesters)",
+      "id": "0fhg197"
+    },
+    {
+      "id": "7dohps2",
+      "type": "heading",
+      "level": 2,
+      "content": "Signs of Pregnancy"
+    },
+    {
+      "id": "vko44hi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4atguzm",
+      "type": "heading",
+      "level": 2,
+      "content": "Antenatal Care"
+    },
+    {
+      "id": "j8r6ig6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "True Labor",
+        "False Labor"
+      ],
+      "rows": [
+        [
+          "Contractions",
+          "Regular, gradually increasing in frequency, duration, and intensity",
+          "Irregular, unpredictable with no change in intensity"
+        ],
+        [
+          "Cervical Changes",
+          "Progressive cervical dilation and effacement occur",
+          "No cervical dilation or effacement"
+        ],
+        [
+          "Pain Location",
+          "Starts in lower back and radiates to lower abdomen",
+          "Mainly localized in the lower abdomen or groin"
+        ],
+        [
+          "Effect of Activity",
+          "Contractions persist and intensify with walking or sedation",
+          "Contractions subside or vanish with rest or walking"
+        ]
+      ],
+      "id": "dns7d97"
+    },
+    {
+      "id": "bb4lnxz",
+      "type": "heading",
+      "level": 2,
+      "content": "Stages of Labor"
+    },
+    {
+      "id": "hkskate",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2586427",
+      "type": "heading",
+      "level": 2,
+      "content": "Common Complications of Pregnancy"
+    },
+    {
+      "id": "hcz45fy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9838v8d",
+      "type": "heading",
+      "level": 2,
+      "content": "Postnatal Care"
+    },
+    {
+      "id": "kj0l6aj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Naegele's Rule for EDD calculation: Add 7 days to the first day of Last Menstrual Period (LMP) and add 9 calendar months.",
+        "Positive signs of pregnancy (fetal heart beats, fetal movement felt by examiner, ultrasound confirmation) are definitive exam answers.",
+        "Apgar score parameters (Appearance, Pulse, Grimace, Activity, Respiration) assessed at 1 and 5 minutes post-birth are frequently tested.",
+        "Management of Postpartum Hemorrhage (PPH) and drugs like Oxytocin, Misoprostol, and Ergometrine are high-yield topic areas."
+      ],
+      "id": "qu1gv10"
+    },
+    {
+      "id": "gpu0uiw",
+      "type": "heading",
+      "level": 2,
+      "content": "Newborn Care"
+    },
+    {
+      "id": "x358c9d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cxu5h96",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "wqs74vt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

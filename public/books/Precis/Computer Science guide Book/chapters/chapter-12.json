@@ -1,0 +1,380 @@
+{
+  "id": "4xhcmrj",
+  "title": "Chapter 12: Internet & Email",
+  "order": 12,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "4b471wd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "WWW Founder",
+          "value": "Tim Berners-Lee",
+          "icon": "award"
+        },
+        {
+          "label": "First Email",
+          "value": "Ray Tomlinson (1971)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Secure Protocol",
+          "value": "HTTPS (Port 443)",
+          "icon": "check"
+        },
+        {
+          "label": "Standard Protocol",
+          "value": "HTTP (Port 80)",
+          "icon": "info"
+        }
+      ],
+      "id": "6muadpd"
+    },
+    {
+      "id": "euamuz8",
+      "type": "heading",
+      "level": 2,
+      "content": "12.1 Internet"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Internet is a global network of interconnected computer networks using TCP/IP protocols.",
+        "World Wide Web (WWW) is a system of interlinked hypertext documents accessed via the Internet.",
+        "Web Browsers are client application software used to locate, retrieve, and display web content.",
+        "Search Engines maintain searchable databases of web pages using automated web crawlers.",
+        "Email messaging relies on SMTP for sending emails and POP3/IMAP for receiving them.",
+        "HTTPS encrypts communication between the web browser and website using SSL/TLS protocols."
+      ],
+      "id": "y54e078"
+    },
+    {
+      "type": "paragraph",
+      "id": "o47q2dj"
+    },
+    {
+      "id": "37xxubx",
+      "type": "heading",
+      "level": 3,
+      "content": "12.1.1 Advantages of Internet"
+    },
+    {
+      "id": "g4he2jb",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "dotyl9r",
+      "type": "heading",
+      "level": 2,
+      "content": "12.2 World Wide Web (WWW)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vrcluu7"
+    },
+    {
+      "id": "98fzozh",
+      "type": "heading",
+      "level": 3,
+      "content": "12.2.1 Features of WWW"
+    },
+    {
+      "id": "nn7f1dy",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "ml86koo",
+      "type": "heading",
+      "level": 2,
+      "content": "12.3 Web Browser"
+    },
+    {
+      "type": "paragraph",
+      "id": "vh10cib"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Important Exam Points (RRB)",
+      "id": "t5z0sf9"
+    },
+    {
+      "id": "bv3xy9m",
+      "type": "heading",
+      "level": 3,
+      "content": "12.3.1 Examples of Web Browsers"
+    },
+    {
+      "id": "hvu7wqt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "5ogxa5p",
+      "type": "heading",
+      "level": 3,
+      "content": "12.3.2 Functions of Web Browser"
+    },
+    {
+      "id": "u6tt5cy",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "gtmbk4x",
+      "type": "heading",
+      "level": 2,
+      "content": "12.4 Search Engine"
+    },
+    {
+      "type": "paragraph",
+      "id": "f3r4z87"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Web Browser",
+        "Search Engine"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Application software used to view websites",
+          "Web service used to search for information"
+        ],
+        [
+          "Installation",
+          "Must be installed on local system",
+          "No installation required; accessed via browser"
+        ],
+        [
+          "Primary Task",
+          "Renders and displays HTML pages",
+          "Crawls, indexes, and ranks web content"
+        ],
+        [
+          "Examples",
+          "Google Chrome, Mozilla Firefox, Safari",
+          "Google, Bing, DuckDuckGo, Yahoo"
+        ]
+      ],
+      "id": "cwjpq0c"
+    },
+    {
+      "id": "ilewtkc",
+      "type": "heading",
+      "level": 3,
+      "content": "12.4.1 Examples of Search Engines"
+    },
+    {
+      "id": "a61f6if",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "eum8snc",
+      "type": "heading",
+      "level": 3,
+      "content": "12.4.2 Functions of Search Engines"
+    },
+    {
+      "id": "gg0rua3",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "qded3dm",
+      "type": "heading",
+      "level": 2,
+      "content": "12.5 Email (Electronic Mail)"
+    },
+    {
+      "type": "paragraph",
+      "id": "mt7wa9f"
+    },
+    {
+      "id": "k6g0kzf",
+      "type": "heading",
+      "level": 3,
+      "content": "12.5.1 Components of Email"
+    },
+    {
+      "id": "c5csshg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "BCC (Blind Carbon Copy) addresses remain hidden from all other email recipients, whereas CC addresses are visible to everyone.",
+        "HTTP operates by default on Port 80, while encrypted HTTPS operates on Port 443.",
+        "A Web Browser is an application software installed on a device, whereas a Search Engine is a website/service running on web servers.",
+        "SMTP is used strictly for sending emails, while POP3 or IMAP are used for downloading/retrieving emails from servers."
+      ],
+      "id": "fdalk7l"
+    },
+    {
+      "id": "kjkublj",
+      "type": "heading",
+      "level": 3,
+      "content": "12.5.2 Advantages of Email"
+    },
+    {
+      "id": "5v7pq1x",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "and2k64",
+      "type": "heading",
+      "level": 2,
+      "content": "12.6 URL / HTTP / HTTPS"
+    },
+    {
+      "id": "hn5x9ge",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ulrcafm",
+      "type": "heading",
+      "level": 2,
+      "content": "12.7 Important Exam Points (RRB)"
+    },
+    {
+      "id": "py6gd2n",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

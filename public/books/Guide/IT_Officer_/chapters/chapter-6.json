@@ -1,0 +1,717 @@
+{
+  "id": "26lfrpr",
+  "title": "CHAPTER 6: CYBER SECURITY",
+  "order": 6,
+  "blocks": [
+    {
+      "id": "91beqwo",
+      "type": "heading",
+      "level": 2,
+      "content": "6.1 Cryptography"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Cryptography safeguards data confidentiality, integrity, and authenticity using mathematical encryption methods.",
+        "Digital Signatures and Public Key Infrastructure (PKI) establish non-repudiation and verify user identity.",
+        "Cyber attacks range from malware, phishing, and ransomware to distributed denial-of-service (DDoS) vectors.",
+        "Robust security architecture integrates tools like firewalls, IDS/IPS, and SIEM for real-time monitoring.",
+        "Legal compliance in India relies heavily on the Information Technology Act, 2000 and directives from CERT-In."
+      ],
+      "id": "b3hkcr3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Mechanism",
+          "value": "Cryptography & PKI",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Threat",
+          "value": "Cyber Attacks",
+          "icon": "info"
+        },
+        {
+          "label": "Defense Focus",
+          "value": "Security Architecture",
+          "icon": "check"
+        },
+        {
+          "label": "Indian Legal Frame",
+          "value": "IT Act, 2000",
+          "icon": "award"
+        }
+      ],
+      "id": "70zthrp"
+    },
+    {
+      "id": "ksmvvgr",
+      "type": "heading",
+      "level": 3,
+      "content": "Symmetric vs Asymmetric Encryption"
+    },
+    {
+      "id": "v1zk7fr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oza7woc",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Cryptographic Algorithms"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Symmetric vs Asymmetric Encryption",
+      "id": "0pidl1v"
+    },
+    {
+      "id": "z7as5yt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43zk6or",
+      "type": "heading",
+      "level": 3,
+      "content": "Digital Signatures and PKI"
+    },
+    {
+      "id": "jyv22cl",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Symmetric Encryption",
+        "Asymmetric Encryption"
+      ],
+      "rows": [
+        [
+          "Key Usage",
+          "Single secret key for encryption & decryption",
+          "Pair of keys: Public key to encrypt, Private key to decrypt"
+        ],
+        [
+          "Speed",
+          "Fast and computationally efficient",
+          "Slower due to complex mathematical operations"
+        ],
+        [
+          "Key Distribution",
+          "Difficult; sharing secret key securely is challenging",
+          "Simple; Public key can be freely distributed"
+        ],
+        [
+          "Popular Algorithms",
+          "AES, DES, 3DES, Blowfish",
+          "RSA, ECC, Diffie-Hellman"
+        ]
+      ],
+      "id": "mlnwqmv"
+    },
+    {
+      "id": "2onmsdw",
+      "type": "heading",
+      "level": 2,
+      "content": "6.2 Types of Cyber Attacks"
+    },
+    {
+      "id": "2lkvwcl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mb0h41d",
+      "type": "heading",
+      "level": 2,
+      "content": "6.3 Security Architecture"
+    },
+    {
+      "id": "p6aoeql",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cw4ubww",
+      "type": "heading",
+      "level": 2,
+      "content": "6.4 Security Tools and Technologies"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently distinguish between Symmetric (AES, DES) and Asymmetric (RSA, ECC) algorithms.",
+        "Identify key provisions of the Information Technology (IT) Act, 2000 and the statutory role of CERT-In.",
+        "Differentiate common attack vectors like Phishing, Man-in-the-Middle (MitM), and Ransomware."
+      ],
+      "id": "051vppj"
+    },
+    {
+      "id": "v4lhg7l",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ef3orfr",
+      "type": "heading",
+      "level": 2,
+      "content": "6.5 Cyber Security Laws and Compliance in India"
+    },
+    {
+      "id": "44klwhv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

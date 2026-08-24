@@ -1,0 +1,108 @@
+{
+  "id": "hbd1r3d",
+  "title": "8. Jurisdiction",
+  "order": 535,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "255jpe0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Jurisdiction",
+          "value": "Article 131",
+          "icon": "book"
+        },
+        {
+          "label": "Writ Jurisdiction",
+          "value": "Article 32 & 226",
+          "icon": "check"
+        },
+        {
+          "label": "Special Leave Petition",
+          "value": "Article 136",
+          "icon": "award"
+        },
+        {
+          "label": "Advisory Jurisdiction",
+          "value": "Article 143",
+          "icon": "info"
+        }
+      ],
+      "id": "335uni1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Jurisdiction defines the legal authority of a court to hear and decide cases under the Constitution of India.",
+      "id": "egqwou1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Exclusive original jurisdiction of the Supreme Court extends to federal disputes between the Union and States or among States.",
+        "Writ jurisdiction under Article 32 is a Fundamental Right, whereas under Article 226 it is a constitutional remedy with wider scope.",
+        "Appellate jurisdiction covers constitutional, civil, and criminal matters coming from High Courts.",
+        "Advisory jurisdiction under Article 143 empowers the President to consult the Supreme Court on questions of law or public importance."
+      ],
+      "id": "1uvdf0k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Supreme Court (Art 32)",
+        "High Court (Art 226)"
+      ],
+      "rows": [
+        [
+          "Scope",
+          "Fundamental Rights only",
+          "Fundamental Rights and Legal Rights"
+        ],
+        [
+          "Territorial Reach",
+          "Entire territory of India",
+          "Respective State/UT jurisdiction"
+        ],
+        [
+          "Nature of Remedy",
+          "Mandatory constitutional duty",
+          "Discretionary remedy"
+        ]
+      ],
+      "id": "vmuklhm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2wvq6lt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "coht4es"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Courts have broader writ jurisdiction than the Supreme Court because Art 226 covers legal rights in addition to fundamental rights.",
+        "An advisory opinion given by the Supreme Court under Article 143 is not binding on the President.",
+        "Federal disputes between Centre and States fall strictly under the exclusive original jurisdiction of the Supreme Court."
+      ],
+      "id": "s70x5i6"
+    },
+    {
+      "type": "paragraph",
+      "id": "aso2j2m"
+    },
+    {
+      "type": "paragraph",
+      "id": "t1x20mn"
+    }
+  ],
+  "enriched": true
+}

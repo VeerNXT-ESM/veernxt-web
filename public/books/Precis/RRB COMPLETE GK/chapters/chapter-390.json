@@ -1,0 +1,86 @@
+{
+  "id": "sv1dgzj",
+  "title": "12. Anti-Defection Law in State Legislature",
+  "order": 390,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3msbtah"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The decision of the Chairman or the Speaker regarding disqualification under the Tenth Schedule is subject to judicial review.",
+      "id": "14g0wrb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category of Member",
+        "Rule for Joining a Political Party",
+        "Trigger for Disqualification"
+      ],
+      "rows": [
+        [
+          "Independent Member",
+          "Cannot join any political party after the election.",
+          "Joins any political party at any time after being elected."
+        ],
+        [
+          "Nominated Member",
+          "Allowed to join a political party within the first 6 months of taking their seat.",
+          "Joins any political party AFTER the expiry of 6 months."
+        ]
+      ],
+      "id": "0otp7wp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Amendment",
+          "value": "52nd CAA, 1985",
+          "icon": "book"
+        },
+        {
+          "label": "Added Schedule",
+          "value": "10th Schedule",
+          "icon": "award"
+        },
+        {
+          "label": "Merger Threshold",
+          "value": "2/3rd Members",
+          "icon": "check"
+        },
+        {
+          "label": "Condonation Period",
+          "value": "15 Days",
+          "icon": "clock"
+        }
+      ],
+      "id": "dbz9ss6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An independent elected member becomes disqualified if he or she joins any political party after the election.",
+        "A nominated member becomes disqualified if he or she joins any political party AFTER the expiry of six months from taking their seat.",
+        "Following the landmark Kihoto Hollohan case (1992), the Presiding Officer functions as a tribunal while deciding defection cases, making the decision subject to judicial review on grounds of mala fides or perversity.",
+        "The 91st Amendment Act of 2003 recognized only mergers (requiring 2/3rd majority) and abolished the exemption previously allowed for splits (1/3rd majority)."
+      ],
+      "id": "1zbs9rs"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Anti-Defection Law was added to the Constitution by the 52nd Constitutional Amendment Act of 1985 via the Tenth Schedule.",
+        "Disqualification occurs if a member voluntarily gives up party membership or votes/abstains contrary to party direction without prior permission.",
+        "The 91st Constitutional Amendment Act of 2003 eliminated the provision that protected defection in case of a one-third split in a political party.",
+        "A disqualification exception exists if at least two-thirds of the members of a legislature party agree to merge with another party.",
+        "The Speaker or Chairman of the House serves as the deciding authority, and their decision is subject to judicial review following the Kihoto Hollohan case (1992)."
+      ],
+      "id": "ny7vlie"
+    }
+  ],
+  "enriched": true
+}

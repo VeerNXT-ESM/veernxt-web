@@ -1,0 +1,129 @@
+{
+  "id": "m2w2pka",
+  "title": "2. Minerals and Rocks",
+  "order": 61,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dixiuqv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because all other rocks are formed directly or indirectly from them.",
+      "id": "celpscj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Crustal Elements",
+          "value": "8",
+          "icon": "info"
+        },
+        {
+          "label": "Oxygen in Crust",
+          "value": "46.6%",
+          "icon": "check"
+        },
+        {
+          "label": "Major Rock Types",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "Mohs Scale Max",
+          "value": "10 (Diamond)",
+          "icon": "award"
+        }
+      ],
+      "id": "5us8yc7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Formation Process",
+        "Key Features",
+        "Examples"
+      ],
+      "rows": [
+        [
+          "Igneous Rocks",
+          "Cooling and solidification of magma or lava",
+          "Crystalline, non-stratified, contains no fossils",
+          "Granite, Basalt, Gabbro, Pegmatite"
+        ],
+        [
+          "Sedimentary Rocks",
+          "Weathering, deposition, and lithification of sediments",
+          "Stratified (layered), contains fossils, non-crystalline",
+          "Sandstone, Limestone, Shale, Conglomerate"
+        ],
+        [
+          "Metamorphic Rocks",
+          "Recrystallization under high pressure and temperature",
+          "Foliated/banded texture, highly dense and hard",
+          "Gneiss, Slate, Marble, Quartzite"
+        ]
+      ],
+      "id": "5cnjrr1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "About 98% of the total crust of the earth is composed of eight major elements: oxygen, silicon, aluminium, iron, calcium, sodium, potassium, and magnesium.",
+        "Feldspar and quartz are the most abundant mineral groups constituting the Earth's crust.",
+        "Igneous rocks are formed by the cooling and solidification of molten magma or lava and are known as primary rocks.",
+        "Sedimentary rocks are formed through the process of lithification, involving compaction and cementation of organic and inorganic debris.",
+        "Metamorphic rocks are created under high Temperature, Pressure, and Volume (PVT) conditions through recrystallization."
+      ],
+      "id": "oih1fak"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Extrusive vs Intrusive Igneous Rocks: Basalt is extrusive (fine-grained), whereas Granite is intrusive (coarse-grained).",
+        "Foliation and Banding: Frequently tested terms defined as the arrangement of mineral grains in parallel layers in metamorphic rocks.",
+        "Mohs Scale of Hardness: Talc (1) is the softest mineral, while Diamond (10) is the hardest.",
+        "Organically formed sedimentary rocks include chalk, limestone, and coal."
+      ],
+      "id": "yql34gl"
+    },
+    {
+      "id": "j4u5s9t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

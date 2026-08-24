@@ -1,0 +1,57 @@
+{
+  "id": "4p2hyuo",
+  "title": "11. Exam Traps",
+  "order": 679,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9cgf8zy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Exam traps are designed to test alertness and precision rather than mere memory.",
+      "id": "cl4ec3z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Trap Categories",
+          "value": "4 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Common Error Rate",
+          "value": "65%",
+          "icon": "info"
+        },
+        {
+          "label": "Focus Area",
+          "value": "Negatives & Units",
+          "icon": "award"
+        }
+      ],
+      "id": "pinvj7h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Negative wording in question stems is the single most common cause of avoidable mark loss.",
+        "Always verify all four options completely before marking your response."
+      ],
+      "id": "g0huj15"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Always read question stems carefully for keywords like 'NOT', 'INCORRECT', or 'EXCEPT'.",
+        "Pay strict attention to unit conversions before performing mathematical calculations.",
+        "Distinguish between absolute statements and conditional statements in logical reasoning.",
+        "Beware of option traps where Option A seems correct but Option D is 'All of the above'."
+      ],
+      "id": "31cosmc"
+    }
+  ],
+  "enriched": true
+}

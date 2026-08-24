@@ -1,0 +1,91 @@
+{
+  "id": "wcsx3zp",
+  "title": "14. Anti-Defection Law",
+  "order": 324,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2nso0e4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Tenth Schedule was inserted in the Constitution by the 52nd Constitutional Amendment Act of 1985.",
+      "id": "v1mq97q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Member Type",
+        "Joining Party Permission",
+        "Disqualification Trigger"
+      ],
+      "rows": [
+        [
+          "Independent Member",
+          "Not allowed to join any political party",
+          "Joins any political party after election"
+        ],
+        [
+          "Nominated Member",
+          "Allowed within 6 months of taking seat",
+          "Joins a political party after 6 months"
+        ]
+      ],
+      "id": "ihqiqn7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Amendment",
+          "value": "52nd Act (1985)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Schedule",
+          "value": "10th Schedule",
+          "icon": "book"
+        },
+        {
+          "label": "Major Revision",
+          "value": "91st Act (2003)",
+          "icon": "award"
+        },
+        {
+          "label": "Required for Merger",
+          "value": "2/3rd Members",
+          "icon": "check"
+        },
+        {
+          "label": "Condonation Period",
+          "value": "15 Days",
+          "icon": "clock"
+        }
+      ],
+      "id": "q0m3dzv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The decision on disqualification under the Tenth Schedule is made by the Speaker/Chairman, NOT the President or Governor.",
+        "In the Kihoto Hollohan case (1992), the Supreme Court ruled that the decision of the Speaker/Chairman is subject to Judicial Review.",
+        "The 91st Amendment Act of 2003 abolished the 'split' provision (1/3rd members) as a defense against disqualification."
+      ],
+      "id": "m1tqogo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Tenth Schedule was added by the 52nd Constitutional Amendment Act of 1985 to prevent political defections.",
+        "The 91st Constitutional Amendment Act of 2003 removed the exception for splits and strengthened the anti-defection provisions.",
+        "Members face disqualification for voluntarily giving up party membership or voting against party whip without condonation within 15 days.",
+        "Independent members are disqualified if they join any political party after election.",
+        "Nominated members can join a political party within six months, but face disqualification if they join after six months.",
+        "Disqualification decisions are made by the Speaker or Chairman of the House and are subject to judicial review."
+      ],
+      "id": "jq8hxo7"
+    }
+  ],
+  "enriched": true
+}

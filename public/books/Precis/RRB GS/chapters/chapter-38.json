@@ -1,0 +1,604 @@
+{
+  "id": "a0r3qrc",
+  "title": "RRB PHYSICS – CHAPTER 6 (DETAILED THEORY)",
+  "order": 38,
+  "blocks": [
+    {
+      "id": "3yltkiw",
+      "type": "heading",
+      "level": 2,
+      "content": "SOUND"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sound is a longitudinal mechanical wave that requires a material medium to propagate and cannot travel through a vacuum.",
+        "The speed of sound is highest in solids, moderate in liquids, and lowest in gases.",
+        "Human hearing is sensitive to frequencies between 20 Hz and 20,000 Hz (20 kHz).",
+        "An echo requires a minimum distance of 17.2 metres from the reflecting surface at room temperature.",
+        "Ultrasonic sound waves (above 20 kHz) are used in SONAR, medical imaging, and industrial cleaning."
+      ],
+      "id": "eimq1zq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Audible Range",
+          "value": "20 Hz - 20 kHz",
+          "icon": "info"
+        },
+        {
+          "label": "Speed in Air (0°C)",
+          "value": "331 m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Min. Echo Distance",
+          "value": "17.2 meters",
+          "icon": "check"
+        },
+        {
+          "label": "Pain Threshold",
+          "value": "120 dB",
+          "icon": "award"
+        }
+      ],
+      "id": "njb57jr"
+    },
+    {
+      "type": "paragraph",
+      "id": "blz9s3r"
+    },
+    {
+      "id": "zp6x547",
+      "type": "heading",
+      "level": 3,
+      "content": "1. NATURE OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "0qjsji4"
+    },
+    {
+      "type": "paragraph",
+      "id": "sskkfco"
+    },
+    {
+      "type": "paragraph",
+      "id": "6vy88bp"
+    },
+    {
+      "type": "paragraph",
+      "id": "su0ebty"
+    },
+    {
+      "id": "e2t3jb2",
+      "type": "heading",
+      "level": 3,
+      "content": "2. IMPORTANT TERMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "ai1pzbk"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7xxb7t"
+    },
+    {
+      "type": "paragraph",
+      "id": "isbj3ov"
+    },
+    {
+      "type": "paragraph",
+      "id": "yzivxax"
+    },
+    {
+      "type": "paragraph",
+      "id": "n7xkh3v"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wwfy9w7"
+    },
+    {
+      "id": "12rwxrj",
+      "type": "heading",
+      "level": 3,
+      "content": "3. SPEED OF SOUND IN DIFFERENT MEDIA"
+    },
+    {
+      "id": "32ke0it",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g2no45d",
+      "type": "heading",
+      "level": 3,
+      "content": "4. CHARACTERISTICS OF SOUND"
+    },
+    {
+      "id": "zw1ty2x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s72mm5x",
+      "type": "heading",
+      "level": 3,
+      "content": "5. REFLECTION OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "gbxig4q"
+    },
+    {
+      "type": "paragraph",
+      "id": "uqw4uti"
+    },
+    {
+      "type": "paragraph",
+      "id": "2d63ud9"
+    },
+    {
+      "id": "l8hocn7",
+      "type": "heading",
+      "level": 3,
+      "content": "6. ECHO"
+    },
+    {
+      "type": "paragraph",
+      "id": "i4wlry6"
+    },
+    {
+      "type": "paragraph",
+      "id": "mq72x9a"
+    },
+    {
+      "type": "paragraph",
+      "id": "76kwl7k"
+    },
+    {
+      "id": "3zzqe14",
+      "type": "heading",
+      "level": 3,
+      "content": "7. REVERBERATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "kc126ez"
+    },
+    {
+      "type": "paragraph",
+      "id": "ozga03e"
+    },
+    {
+      "id": "n9oqdh1",
+      "type": "heading",
+      "level": 3,
+      "content": "8. MULTIPLE REFLECTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "lwfqlcm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "SONAR (Sound Navigation and Ranging)",
+      "id": "ijodey3"
+    },
+    {
+      "id": "97soanf",
+      "type": "heading",
+      "level": 3,
+      "content": "9. SONAR (Sound Navigation and Ranging)"
+    },
+    {
+      "id": "4eso2kh",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "rvh5xh8"
+    },
+    {
+      "type": "paragraph",
+      "id": "dkrmzo7"
+    },
+    {
+      "id": "rlouze0",
+      "type": "heading",
+      "level": 3,
+      "content": "10. ULTRASOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "ayc470v"
+    },
+    {
+      "type": "paragraph",
+      "id": "lixfqy3"
+    },
+    {
+      "id": "azla61h",
+      "type": "heading",
+      "level": 3,
+      "content": "11. SOUND FREQUENCY RANGE"
+    },
+    {
+      "id": "una0wkz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "62nnrjl",
+      "type": "heading",
+      "level": 3,
+      "content": "12. DOPPLER EFFECT"
+    },
+    {
+      "id": "rs58s8r",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "a15wgfe"
+    },
+    {
+      "type": "paragraph",
+      "id": "rrtbww0"
+    },
+    {
+      "type": "paragraph",
+      "id": "n53rswx"
+    },
+    {
+      "id": "3wy4itx",
+      "type": "heading",
+      "level": 3,
+      "content": "13. SOUND LEVEL (DECIBEL SCALE)"
+    },
+    {
+      "type": "paragraph",
+      "id": "llaqfg5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rualxsf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Infrasonic Waves",
+        "Audible Waves",
+        "Ultrasonic Waves"
+      ],
+      "rows": [
+        [
+          "Frequency Range",
+          "Below 20 Hz",
+          "20 Hz to 20,000 Hz",
+          "Above 20,000 Hz"
+        ],
+        [
+          "Human Hearing",
+          "Inaudible",
+          "Audible",
+          "Inaudible"
+        ],
+        [
+          "Sources / Applications",
+          "Earthquakes, Elephants, Whales",
+          "Human speech, Musical instruments",
+          "SONAR, Medical Echocardiography, Bats"
+        ]
+      ],
+      "id": "gq8f7st"
+    },
+    {
+      "type": "paragraph",
+      "id": "f3jn5qc"
+    },
+    {
+      "type": "paragraph",
+      "id": "st1yror"
+    },
+    {
+      "id": "b9the28",
+      "type": "heading",
+      "level": 3,
+      "content": "14. EFFECT OF TEMPERATURE ON SPEED OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "ouwjjh8"
+    },
+    {
+      "type": "paragraph",
+      "id": "r722qqe"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fpd087n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qiamqgd"
+    },
+    {
+      "id": "q9rlqj3",
+      "type": "heading",
+      "level": 3,
+      "content": "15. RESONANCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "zwabyti"
+    },
+    {
+      "type": "paragraph",
+      "id": "dbdsqz6"
+    },
+    {
+      "type": "paragraph",
+      "id": "0j2qvv1"
+    },
+    {
+      "id": "w3cq86a",
+      "type": "heading",
+      "level": 3,
+      "content": "16. NATURAL FREQUENCY"
+    },
+    {
+      "type": "paragraph",
+      "id": "0q0wthn"
+    },
+    {
+      "type": "paragraph",
+      "id": "vet7sdb"
+    },
+    {
+      "id": "5p8xluh",
+      "type": "heading",
+      "level": 3,
+      "content": "17. BEATS"
+    },
+    {
+      "type": "paragraph",
+      "id": "py74elj"
+    },
+    {
+      "type": "paragraph",
+      "id": "nsv1jlx"
+    },
+    {
+      "type": "paragraph",
+      "id": "39hs5dz"
+    },
+    {
+      "id": "9oza3ya",
+      "type": "heading",
+      "level": 3,
+      "content": "18. INTERFERENCE OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "he1hqfi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x3zw53l"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Speed of sound increases with an increase in temperature and humidity, but remains independent of pressure changes.",
+        "Pitch depends on sound frequency, whereas loudness depends on the amplitude of the wave.",
+        "The Doppler Effect accounts for the apparent change in pitch when there is relative motion between a sound source and the observer.",
+        "Reverberation is reduced in auditoriums by using sound-absorbing materials like coarse plaster or compressed fiberboard."
+      ],
+      "id": "fra5462"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pd36wzc"
+    },
+    {
+      "id": "y4gcegj",
+      "type": "heading",
+      "level": 3,
+      "content": "19. CLASSIFICATION OF MUSICAL INSTRUMENTS"
+    },
+    {
+      "id": "ytsl1m5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hvdyr4w",
+      "type": "heading",
+      "level": 3,
+      "content": "20. NOISE POLLUTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "gn58scf"
+    },
+    {
+      "type": "paragraph",
+      "id": "3gy3937"
+    },
+    {
+      "type": "paragraph",
+      "id": "hbtyout"
+    },
+    {
+      "id": "wn42lsd",
+      "type": "heading",
+      "level": 3,
+      "content": "21. ADVANCED RRB EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "bk0n97u"
+    },
+    {
+      "type": "paragraph",
+      "id": "yogo69b"
+    },
+    {
+      "type": "paragraph",
+      "id": "bfs3i4b"
+    },
+    {
+      "type": "paragraph",
+      "id": "mi4hl6h"
+    },
+    {
+      "type": "paragraph",
+      "id": "61tlrmx"
+    }
+  ],
+  "enriched": true
+}

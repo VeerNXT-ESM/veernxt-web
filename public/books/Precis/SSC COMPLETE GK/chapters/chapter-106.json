@@ -1,0 +1,269 @@
+{
+  "id": "j364a18",
+  "title": "CHAPTER 1 : MATTER IN OUR SURROUNDINGS",
+  "order": 106,
+  "blocks": [
+    {
+      "id": "063b6py",
+      "type": "heading",
+      "level": 2,
+      "content": "1. WHAT IS MATTER?"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Matter is defined as anything that possesses mass and occupies space.",
+        "The physical states of matter (solid, liquid, gas) can be interchanged by altering temperature and pressure.",
+        "Evaporation is a surface phenomenon occurring at any temperature below a liquid's boiling point.",
+        "Evaporation results in cooling because particles absorb heat energy from the surroundings to compensate for energy lost during vaporization.",
+        "Sublimation is the direct conversion of a solid to a gaseous state without entering the intermediate liquid state.",
+        "Latent heat of fusion is the heat required to convert a solid into a liquid at its melting point without raising its temperature."
+      ],
+      "id": "z0bm587"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary States",
+          "value": "3 States",
+          "icon": "book"
+        },
+        {
+          "label": "Key Phenomenon",
+          "value": "Evaporation",
+          "icon": "award"
+        },
+        {
+          "label": "State Control",
+          "value": "Temp & Pressure",
+          "icon": "info"
+        },
+        {
+          "label": "Direct Phase Shift",
+          "value": "Sublimation",
+          "icon": "check"
+        }
+      ],
+      "id": "jxuwrce"
+    },
+    {
+      "type": "paragraph",
+      "id": "hx87qrs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gtqofpw"
+    },
+    {
+      "type": "paragraph",
+      "id": "zj3k33k"
+    },
+    {
+      "id": "2dgaqnz",
+      "type": "heading",
+      "level": 2,
+      "content": "3. STATES OF MATTER"
+    },
+    {
+      "type": "paragraph",
+      "id": "4u4fzms"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o3x36k9"
+    },
+    {
+      "type": "paragraph",
+      "id": "mfp0ujp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vyjwkbg"
+    },
+    {
+      "type": "paragraph",
+      "id": "e1m2hr6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ue6wvpm"
+    },
+    {
+      "type": "paragraph",
+      "id": "9tvl2k6"
+    },
+    {
+      "id": "8eetkno",
+      "type": "heading",
+      "level": 2,
+      "content": "4. CHANGE OF STATE OF MATTER"
+    },
+    {
+      "type": "pullQuote",
+      "content": "EVAPORATION (VERY IMPORTANT)",
+      "id": "tdbz9gr"
+    },
+    {
+      "type": "paragraph",
+      "id": "saaht4f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1f23mle"
+    },
+    {
+      "type": "paragraph",
+      "id": "b7hrphc"
+    },
+    {
+      "id": "5iuscl0",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2 FREEZING"
+    },
+    {
+      "type": "paragraph",
+      "id": "682mdxx"
+    },
+    {
+      "type": "paragraph",
+      "id": "wecmh1h"
+    },
+    {
+      "id": "a1qovm1",
+      "type": "heading",
+      "level": 3,
+      "content": "4.4 EVAPORATION (VERY IMPORTANT)"
+    },
+    {
+      "type": "paragraph",
+      "id": "edr2kgr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Evaporation",
+        "Boiling"
+      ],
+      "rows": [
+        [
+          "Type of Phenomenon",
+          "Surface phenomenon",
+          "Bulk phenomenon"
+        ],
+        [
+          "Temperature Required",
+          "Occurs at any temperature below boiling point",
+          "Occurs only at a specific fixed boiling point"
+        ],
+        [
+          "Thermal Effect",
+          "Always produces cooling",
+          "Does not produce cooling"
+        ],
+        [
+          "Rate of Process",
+          "Slow and continuous process",
+          "Fast and rapid process"
+        ]
+      ],
+      "id": "gwt0664"
+    },
+    {
+      "id": "seid7pf",
+      "type": "heading",
+      "level": 3,
+      "content": "Why Evaporation Causes Cooling?"
+    },
+    {
+      "type": "paragraph",
+      "id": "7mf1fzp"
+    },
+    {
+      "id": "e5xuprm",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Evaporation"
+    },
+    {
+      "type": "paragraph",
+      "id": "1c15a4n"
+    },
+    {
+      "id": "tn09822",
+      "type": "heading",
+      "level": 3,
+      "content": "4.5 SUBLIMATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "vj5j4s4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "la6loj5"
+    },
+    {
+      "type": "paragraph",
+      "id": "26ve6mh"
+    },
+    {
+      "id": "gzeu3d4",
+      "type": "heading",
+      "level": 3,
+      "content": "5.1 LATENT HEAT OF FUSION"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Evaporation is a surface phenomenon, whereas boiling is a bulk phenomenon.",
+        "Latent heat does not raise the temperature of the substance during a change of state.",
+        "Solid Carbon Dioxide (Dry Ice) directly converts to gas when pressure is reduced to 1 atmosphere.",
+        "Rate of evaporation increases with an increase in surface area, temperature, and wind speed, but decreases with higher humidity."
+      ],
+      "id": "0b08tlq"
+    },
+    {
+      "type": "paragraph",
+      "id": "sioq32n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fmmh6d4"
+    },
+    {
+      "type": "paragraph",
+      "id": "96gkf6i"
+    },
+    {
+      "id": "lkice08",
+      "type": "heading",
+      "level": 2,
+      "content": "6. EFFECT OF PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "id": "96nrnlb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7jm0t3f"
+    },
+    {
+      "type": "paragraph",
+      "id": "iw60t50"
+    }
+  ],
+  "enriched": true
+}

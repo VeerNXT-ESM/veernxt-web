@@ -1,0 +1,96 @@
+{
+  "id": "hdyo9nu",
+  "title": "13. Term and Removal of Vice President",
+  "order": 310,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "21gkpf6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Vice-President holds office for a term of five years from the date on which he enters upon his office.",
+      "id": "8lpzox9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Removal of President",
+        "Removal of Vice-President"
+      ],
+      "rows": [
+        [
+          "Initiating House",
+          "Either House of Parliament",
+          "Rajya Sabha only"
+        ],
+        [
+          "Grounds for Removal",
+          "Violation of the Constitution",
+          "No grounds mentioned in Constitution"
+        ],
+        [
+          "Notice Required",
+          "14 days' advance notice",
+          "14 days' advance notice"
+        ],
+        [
+          "Majority Required",
+          "Special Majority (2/3rd total membership) in both Houses",
+          "Effective Majority in Rajya Sabha + Simple Majority in Lok Sabha"
+        ]
+      ],
+      "id": "trirjle"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Notice Period",
+          "value": "14 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Initiating House",
+          "value": "Rajya Sabha",
+          "icon": "book"
+        },
+        {
+          "label": "Re-election",
+          "value": "Eligible",
+          "icon": "check"
+        }
+      ],
+      "id": "cdy3lv4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "A resolution for the removal of the Vice-President can be passed ONLY if 14 days' advance notice has been given.",
+        "Unlike the President, no formal impeachment process or constitutional ground is prescribed for removing the Vice-President.",
+        "The removal resolution must originate strictly in the Rajya Sabha, not in the Lok Sabha.",
+        "The Vice-President continues to hold office beyond his 5-year term until his successor enters upon his office."
+      ],
+      "id": "glrihkp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Vice-President holds office for a term of five years from the date on which he enters upon his office.",
+        "He can resign from his office at any time by addressing the resignation letter to the President.",
+        "A resolution for the removal of the Vice-President can be introduced ONLY in the Rajya Sabha.",
+        "Removal requires a resolution passed by an effective majority in Rajya Sabha and agreed to by a simple majority in Lok Sabha.",
+        "The Constitution does not mention any specific ground for the removal of the Vice-President."
+      ],
+      "id": "pjtp735"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,310 @@
+{
+  "id": "wkdzji5",
+  "title": "Chapter 5: Light",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yfajmys"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed in Vacuum",
+          "value": "3 × 10⁸ m/s",
+          "icon": "zap"
+        },
+        {
+          "label": "Wave Type",
+          "value": "Transverse EM",
+          "icon": "info"
+        },
+        {
+          "label": "Visible Range",
+          "value": "400 - 700 nm",
+          "icon": "eye"
+        },
+        {
+          "label": "Primary Colors",
+          "value": "Red, Green, Blue",
+          "icon": "award"
+        }
+      ],
+      "id": "pj59v61"
+    },
+    {
+      "id": "jl5mnz0",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nature of Light"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light travels in a straight line in a homogeneous transparent medium, known as rectilinear propagation.",
+        "Reflection of light obeys two main laws: the incident ray, reflected ray, and normal lie on the same plane, and the angle of incidence equals the angle of reflection.",
+        "Refraction occurs when light passes from one transparent medium to another, changing speed and bending towards or away from the normal.",
+        "Convex lenses converge light rays to form real or virtual images, while concave lenses diverge light rays to form virtual, erect, and diminished images.",
+        "Dispersion is the splitting of white light into its component seven spectrum colors (VIBGYOR) when passing through a glass prism."
+      ],
+      "id": "yndhsk4"
+    },
+    {
+      "type": "paragraph",
+      "id": "c4t1ix0"
+    },
+    {
+      "type": "paragraph",
+      "id": "lbqp361"
+    },
+    {
+      "type": "paragraph",
+      "id": "90hg0cr"
+    },
+    {
+      "type": "paragraph",
+      "id": "z6mriaf"
+    },
+    {
+      "id": "doq7071",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Sources of Light"
+    },
+    {
+      "id": "qqcsbx8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7d2182n",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Reflection of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "kz9hm4s"
+    },
+    {
+      "type": "paragraph",
+      "id": "1c44gn8"
+    },
+    {
+      "type": "paragraph",
+      "id": "8vc9x19"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Light is a form of electromagnetic radiation that enables the human eye to perceive objects.",
+      "id": "0b8x3bz"
+    },
+    {
+      "type": "paragraph",
+      "id": "q9wtz4z"
+    },
+    {
+      "id": "mn5v6bj",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Types of Reflection"
+    },
+    {
+      "id": "nydqwn5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dv7kzqx",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Refraction of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "5y30b4i"
+    },
+    {
+      "type": "paragraph",
+      "id": "1b3laqm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Reflection of Light",
+        "Refraction of Light"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Bouncing back of light rays into the same medium upon striking a surface",
+          "Bending of light rays when passing obliquely from one medium to another"
+        ],
+        [
+          "Medium",
+          "Occurs within a single optical medium",
+          "Requires two media of different optical densities"
+        ],
+        [
+          "Speed of Light",
+          "Remains constant as the medium does not change",
+          "Changes depending on the refractive index of the new medium"
+        ],
+        [
+          "Governing Law",
+          "Angle of incidence (i) = Angle of reflection (r)",
+          "Snell's Law: sin(i) / sin(r) = constant (Refractive Index)"
+        ]
+      ],
+      "id": "8f0hvw9"
+    },
+    {
+      "type": "paragraph",
+      "id": "qj3umqp"
+    },
+    {
+      "type": "paragraph",
+      "id": "at3xxr2"
+    },
+    {
+      "id": "gb9az5a",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Lenses"
+    },
+    {
+      "id": "hb1tdt0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "km1qso2",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Optical Instruments"
+    },
+    {
+      "type": "paragraph",
+      "id": "p1tpp16"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8g4pit"
+    },
+    {
+      "type": "paragraph",
+      "id": "zhj9117"
+    },
+    {
+      "id": "1h0lmdy",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Dispersion of Light"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Snell's Law (n1 sin θ1 = n2 sin θ2) is frequently tested in numerical problems regarding refraction across media.",
+        "Myopia (nearsightedness) is corrected using concave lenses, whereas Hypermetropia (farsightedness) requires convex lenses.",
+        "Total Internal Reflection occurs only when light moves from a denser to a rarer medium at an incident angle greater than the critical angle."
+      ],
+      "id": "cqu4z0t"
+    },
+    {
+      "type": "paragraph",
+      "id": "smctcjz"
+    },
+    {
+      "id": "odnc623",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "schlm4g"
+    },
+    {
+      "type": "paragraph",
+      "id": "pba40ap"
+    },
+    {
+      "type": "paragraph",
+      "id": "jo2mlp9"
+    },
+    {
+      "type": "paragraph",
+      "id": "7xfgfcd"
+    }
+  ],
+  "enriched": true
+}

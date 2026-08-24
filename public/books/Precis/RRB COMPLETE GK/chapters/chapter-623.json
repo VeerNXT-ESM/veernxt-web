@@ -1,0 +1,127 @@
+{
+  "id": "j0yif6m",
+  "title": "Composition of NGT (VERY FREQUENTLY ASKED)",
+  "order": 623,
+  "blocks": [
+    {
+      "id": "63wxhm1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chairperson of the National Green Tribunal is appointed by the Central Government in consultation with the Chief Justice of India.",
+      "id": "k06x2kh"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Criteria",
+        "Judicial Members",
+        "Expert Members"
+      ],
+      "rows": [
+        [
+          "Strength",
+          "Minimum 10, Maximum 20",
+          "Minimum 10, Maximum 20"
+        ],
+        [
+          "Qualifications",
+          "Judge of the Supreme Court or Chief Justice/Judge of a High Court",
+          "Master of Science/Doctorate with 15 years experience in environment/forests field"
+        ],
+        [
+          "Tenure & Re-appointment",
+          "5 Years (Not eligible for re-appointment)",
+          "5 Years (Not eligible for re-appointment)"
+        ]
+      ],
+      "id": "va6k239"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Enacted",
+          "value": "2010",
+          "icon": "calendar"
+        },
+        {
+          "label": "Judicial Members",
+          "value": "10-20",
+          "icon": "award"
+        },
+        {
+          "label": "Expert Members",
+          "value": "10-20",
+          "icon": "info"
+        },
+        {
+          "label": "Tenure",
+          "value": "5 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "1aigheh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Re-appointment Prohibition: Members of NGT are strictly NOT eligible for re-appointment after their 5-year tenure.",
+        "Strength Range: Remember that Judicial and Expert Members each range between a minimum of 10 and a maximum of 20.",
+        "Appointment Authority: The Chairperson is appointed by the Central Govt in consultation with the Chief Justice of India."
+      ],
+      "id": "mi2p3hx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The National Green Tribunal (NGT) consists of a full-time Chairperson, Judicial Members, and Expert Members.",
+        "The Tribunal shall have a minimum of 10 and a maximum of 20 full-time Judicial and Expert Members.",
+        "The Chairperson is appointed by the Central Government in consultation with the Chief Justice of India (CJI).",
+        "Judicial and Expert Members are appointed on the recommendations of a Selection Committee formed by the Central Government.",
+        "Members hold office for a term of five years and are explicitly not eligible for re-appointment."
+      ],
+      "id": "8nq57rm"
+    }
+  ],
+  "enriched": true
+}

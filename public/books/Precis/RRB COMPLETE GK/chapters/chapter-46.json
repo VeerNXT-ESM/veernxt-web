@@ -1,0 +1,95 @@
+{
+  "id": "95bgbcw",
+  "title": "Chapter 4: Interior of the Earth",
+  "order": 46,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "k2yruj8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The velocity of seismic waves changes as they travel through materials with different densities.",
+      "id": "ig8srka"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Primary Waves (P-Waves)",
+        "Secondary Waves (S-Waves)"
+      ],
+      "rows": [
+        [
+          "Wave Type",
+          "Longitudinal / Compressional",
+          "Transverse / Shear"
+        ],
+        [
+          "Medium",
+          "Solids, Liquids, and Gases",
+          "Solids only"
+        ],
+        [
+          "Relative Velocity",
+          "Faster (First to reach surface)",
+          "Slower (Arrives after P-waves)"
+        ],
+        [
+          "Shadow Zone",
+          "Band between 105° and 145°",
+          "Entire region beyond 105°"
+        ]
+      ],
+      "id": "fxt6klt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Radius",
+          "value": "6,371 km",
+          "icon": "info"
+        },
+        {
+          "label": "Mantle Depth",
+          "value": "2,900 km",
+          "icon": "calendar"
+        },
+        {
+          "label": "Core Composition",
+          "value": "Ni-Fe (NIFE)",
+          "icon": "award"
+        },
+        {
+          "label": "Key Boundary",
+          "value": "Moho Discontinuity",
+          "icon": "check"
+        }
+      ],
+      "id": "hqygxou"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "S-waves cannot pass through liquids, providing direct proof that the Earth's outer core is in a molten state.",
+        "Memorize the order of discontinuities from surface to core: Conrad (Crust), Mohorovičić (Crust-Mantle), Repetti (Upper-Lower Mantle), Gutenberg (Mantle-Core), and Lehmann (Outer-Inner Core).",
+        "The P-wave shadow zone forms a distinct band between 105° and 145° from the earthquake epicenter."
+      ],
+      "id": "2bv9644"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Direct sources of information about the interior include surface rocks, deep mining, ocean drilling projects, and volcanic eruptions.",
+        "Indirect sources include meteoric evidence, gravitational anomalies, magnetic field surveys, and seismic wave behavior.",
+        "Primary (P) waves are longitudinal and travel through solids, liquids, and gases, whereas Secondary (S) waves are transverse and travel only through solids.",
+        "The Earth's structure is divided into three main layers: the Crust (Sial/Sima), the Mantle (Asthenosphere and Mesosphere), and the Core (Outer liquid and Inner solid NIFE).",
+        "Seismic wave shadow zones reveal the internal structure, with the S-wave shadow zone extending beyond 105° from the epicenter."
+      ],
+      "id": "wk57qm3"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,110 @@
+{
+  "id": "q96290z",
+  "title": "11. Information Exempt from RTI (EXAM FAVORITE)",
+  "order": 646,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "iuttil3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Exemptions",
+          "value": "Section 8",
+          "icon": "book"
+        },
+        {
+          "label": "Copyright Rejection",
+          "value": "Section 9",
+          "icon": "check"
+        },
+        {
+          "label": "Exempt Organizations",
+          "value": "Section 24",
+          "icon": "award"
+        },
+        {
+          "label": "Time Limit Exemption",
+          "value": "20 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "bck0okk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Section 8(1) of the RTI Act, 2005 outlines specific categories of information exempted from public disclosure.",
+        "Cabinet papers, including records of deliberations of the Council of Ministers, are exempt until the decision is finalized and the matter is complete.",
+        "Section 9 empowers the Public Information Officer to reject a request if it involves copyright infringement of a non-State entity.",
+        "Section 24 exempts second-schedule intelligence and security agencies, except for matters pertaining to corruption and human rights violations.",
+        "A public authority may allow access to exempted information if the larger public interest in disclosure outweighs the harm to protected interests."
+      ],
+      "id": "10hpw52"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Notwithstanding anything in the Official Secrets Act, 1923, a public authority may allow access to information if public interest in disclosure outweighs the harm to the protected interests.",
+      "id": "0jo17q5"
+    },
+    {
+      "type": "paragraph",
+      "id": "sr5swuu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Exemption Category",
+        "Scope of Exemption",
+        "Public Interest Override / Exception"
+      ],
+      "rows": [
+        [
+          "Section 8(1) Exemptions",
+          "Covers national security, fiduciary duty, trade secrets, and personal privacy.",
+          "Disclosable if public interest outweighs protected harm (Section 8(2))."
+        ],
+        [
+          "Cabinet Papers (Sec 8(1)(i))",
+          "Records of deliberations of Council of Ministers and Secretaries.",
+          "Becomes public after the decision is taken and the matter is complete."
+        ],
+        [
+          "Exempted Agencies (Sec 24)",
+          "Intelligence and security bodies listed in the Second Schedule.",
+          "Non-exempt for allegations of corruption and human rights violations."
+        ]
+      ],
+      "id": "kv3d7h4"
+    },
+    {
+      "type": "paragraph",
+      "id": "bwp6nzn"
+    },
+    {
+      "type": "paragraph",
+      "id": "x36726b"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Allegations of corruption and human rights violations in exempted security agencies (Section 24) are NOT exempt from disclosure under RTI.",
+        "Information regarding human rights violations requires approval from the Information Commission and must be provided within 45 days.",
+        "Exemption under Section 8(1) generally ceases after 20 years, except for items affecting national security, parliamentary privilege, and Cabinet deliberations."
+      ],
+      "id": "g5rn5yv"
+    },
+    {
+      "type": "paragraph",
+      "id": "sp4qncg"
+    },
+    {
+      "type": "paragraph",
+      "id": "i1wawjd"
+    }
+  ],
+  "enriched": true
+}

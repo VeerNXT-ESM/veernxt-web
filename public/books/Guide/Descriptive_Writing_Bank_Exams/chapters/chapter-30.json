@@ -1,0 +1,109 @@
+{
+  "id": "o010j90",
+  "title": "ESSAY 13: Artificial Intelligence in Banking — Promise, Peril and Policy",
+  "order": 30,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "vj7pghd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Focus",
+          "value": "Efficiency & Inclusion",
+          "icon": "check"
+        },
+        {
+          "label": "Key Vulnerability",
+          "value": "Algorithmic Bias",
+          "icon": "info"
+        },
+        {
+          "label": "Regulator",
+          "value": "Reserve Bank of India",
+          "icon": "award"
+        },
+        {
+          "label": "Core Driver",
+          "value": "Machine Learning & NLP",
+          "icon": "book"
+        }
+      ],
+      "id": "1hlq0ny"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "AI in banking enhances customer experience through personalized services, 24/7 chatbots, and automated credit scoring.",
+        "Fraud detection and risk management leverage predictive analytics to identify anomalous transaction patterns in real-time.",
+        "Key risks include data privacy breaches, algorithmic bias in credit underwriting, and systemic cybersecurity threats.",
+        "Regulatory policy must balance rapid technological innovation with robust data governance and consumer protection."
+      ],
+      "id": "drv4934"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Artificial Intelligence in banking presents a dual landscape of unprecedented operational efficiency and profound systemic risk.",
+      "id": "jlaapmh"
+    },
+    {
+      "type": "paragraph",
+      "id": "5g5mete"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Traditional Banking",
+        "AI-Enabled Banking"
+      ],
+      "rows": [
+        [
+          "Credit Assessment",
+          "Manual review of historical financial statements",
+          "Real-time analysis using alternative data streams"
+        ],
+        [
+          "Customer Service",
+          "Branch-centric during standard operational hours",
+          "24/7 hyper-personalized digital interaction"
+        ],
+        [
+          "Fraud Prevention",
+          "Rule-based systems evaluating past transactions",
+          "Predictive ML models identifying live anomalies"
+        ]
+      ],
+      "id": "n2dv24b"
+    },
+    {
+      "type": "paragraph",
+      "id": "wn1hmlk"
+    },
+    {
+      "type": "paragraph",
+      "id": "4q6bl1q"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Focus on RBI guidelines regarding digital lending, data localization, and AI regulatory sandboxes.",
+        "Be ready to analyze ethical issues related to algorithmic bias and financial exclusion in essay prompts.",
+        "Understand the distinction between deterministic rule-based automation and adaptive machine learning systems."
+      ],
+      "id": "m3ueujd"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ku8tci"
+    },
+    {
+      "type": "paragraph",
+      "id": "cdtydt1"
+    }
+  ],
+  "enriched": true
+}

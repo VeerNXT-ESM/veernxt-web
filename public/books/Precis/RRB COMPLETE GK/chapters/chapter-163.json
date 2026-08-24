@@ -1,0 +1,97 @@
+{
+  "id": "4mwnj4j",
+  "title": "9. Sea-Level Changes",
+  "order": 163,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3cm42lg"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Eustatic changes represent global variations in sea level caused by alterations in the total volume of ocean water or changes in the capacity of ocean basins.",
+      "id": "v2pddri"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Eustatic Changes",
+        "Isostatic Changes"
+      ],
+      "rows": [
+        [
+          "Spatial Scale",
+          "Global / Worldwide",
+          "Local / Regional"
+        ],
+        [
+          "Primary Drivers",
+          "Glacial melt/freezing, thermal expansion, ocean basin volume changes",
+          "Tectonic forces, crustal loading/unloading (glacio-isostasy), sediment deposition"
+        ],
+        [
+          "Uniformity",
+          "Affects sea level uniformly across connected global oceans",
+          "Varies locally based on crustal uplift or subsidence rates"
+        ],
+        [
+          "Reversibility",
+          "Reversible with climate cycles (glacial-interglacial periods)",
+          "Reversible via post-glacial rebound or tectonic relaxation"
+        ]
+      ],
+      "id": "qoxpiej"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Last Glacial Maximum",
+          "value": "120m Lower",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Mechanisms",
+          "value": "2 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Current Global Rise",
+          "value": "~3.3 mm/yr",
+          "icon": "clock"
+        },
+        {
+          "label": "Major Key Period",
+          "value": "Quaternary",
+          "icon": "info"
+        }
+      ],
+      "id": "easkrws"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Eustatic (global/volume/basin capacity) and Isostatic (local/tectonic/crustal uplift or subsidence) changes.",
+        "Identify geomorphic evidence of emergent coasts (raised beaches, wave-cut cliffs) vs. submergent coasts (rias, fjords, dalmatian coasts).",
+        "Note the impact of the Last Glacial Maximum (LGM) when global sea level was approximately 120 to 130 meters lower than present levels.",
+        "Indian geography contexts often test submerged coastal features such as the ancient port city of Dwarka and Gulf of Khambhat structures."
+      ],
+      "id": "fv7frgt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Eustatic changes are global variations in sea level caused by alterations in the total volume of ocean water or changes in the capacity of ocean basins.",
+        "Isostatic changes refer to localized sea-level variations caused by the vertical movement (uplift or subsidence) of the Earth's crust.",
+        "Glacial-interglacial cycles during the Quaternary period caused dramatic worldwide fluctuations in sea level.",
+        "Evidence of sea-level fall includes raised beaches, marine terraces, and elevated wave-cut platforms.",
+        "Evidence of sea-level rise includes submerged forests, drowned river valleys (rias), fjords, and submerged historical structures like ancient Dwarka.",
+        "Modern sea-level rise is primarily driven by thermal expansion of warming ocean water and the melting of ice sheets and glaciers."
+      ],
+      "id": "1nfme6a"
+    }
+  ],
+  "enriched": true
+}

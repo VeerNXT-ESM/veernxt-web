@@ -1,0 +1,89 @@
+{
+  "id": "q31co0y",
+  "title": "RRB Quick Revision Box",
+  "order": 473,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "t13vk37"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways is the fourth-largest national railway system in the world by size.",
+      "id": "8ec8fvg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Track Width",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m (5 ft 6 in)",
+          "Main trunk routes & high-speed corridors"
+        ],
+        [
+          "Metre Gauge",
+          "1.000 m (3 ft 3 3/8 in)",
+          "Secondary lines (largely converted under Project Unigauge)"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m or 0.610 m",
+          "Hill railways & heritage mountain trains"
+        ]
+      ],
+      "id": "huencjg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Exam Target",
+          "value": "RRB NTPC & Group D",
+          "icon": "book"
+        },
+        {
+          "label": "Nationalization Year",
+          "value": "1951",
+          "icon": "calendar"
+        },
+        {
+          "label": "Total Railway Zones",
+          "value": "19 Zones",
+          "icon": "check"
+        },
+        {
+          "label": "Global Rank by Size",
+          "value": "4th Largest",
+          "icon": "award"
+        }
+      ],
+      "id": "dv209sl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "frequently tested: Match the Railway Zone with its correct Headquarters (e.g., South Central - Secunderabad, East Coast - Bhubaneswar).",
+        "Direct questions often ask for the length/width of Broad Gauge (1.676 m) vs Metre Gauge (1.000 m).",
+        "World's longest railway platform location (Hubballi, Karnataka) is a high-yield static GK question."
+      ],
+      "id": "qdrhhtx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran on April 16, 1853, between Mumbai (Bori Bunder) and Thane covering 34 km.",
+        "Indian Railways was nationalized in the year 1951 and is now divided into 19 administrative zones.",
+        "Computerized passenger reservation system was first introduced in New Delhi in 1986.",
+        "The National Rail Museum is situated at Chanakyapuri, New Delhi."
+      ],
+      "id": "uxpg0bm"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,133 @@
+{
+  "id": "mffip1o",
+  "title": "2. Parts of a Volcano",
+  "order": 105,
+  "blocks": [
+    {
+      "id": "lhdw819",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A caldera is a large basin-shaped depression formed when a volcano collapses into its emptied magma chamber.",
+      "id": "ej35rii"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Crater",
+        "Caldera"
+      ],
+      "rows": [
+        [
+          "Origin",
+          "Built up around vent by ejected pyroclastic material and lava flows",
+          "Formed by collapse of the volcanic summit into an emptied magma chamber"
+        ],
+        [
+          "Size",
+          "Smaller diameter, typically less than 1 km",
+          "Extremely large basin, ranging from a few to tens of kilometers wide"
+        ],
+        [
+          "Structure",
+          "Funnel-shaped or bowl-shaped opening",
+          "Broad, steep-sided, flat-floored depression often holding a lake"
+        ]
+      ],
+      "id": "nzayp6r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Channel",
+          "value": "Main Vent",
+          "icon": "info"
+        },
+        {
+          "label": "Subsurface Reservoir",
+          "value": "Magma Chamber",
+          "icon": "book"
+        },
+        {
+          "label": "Summit Depression",
+          "value": "Crater / Caldera",
+          "icon": "check"
+        },
+        {
+          "label": "Side Eruptions",
+          "value": "Parasitic Cone",
+          "icon": "award"
+        }
+      ],
+      "id": "iacno59"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Magma (molten rock beneath the Earth's surface) and Lava (molten rock erupted onto the surface).",
+        "Calderas are formed by structural collapse after explosive emptying of the magma chamber, not by outward blast alone.",
+        "Composite volcanoes frequently display parasitic cones along their slopes due to multiple fractured branch vents."
+      ],
+      "id": "b5cd5np"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The magma chamber is a vast pool of liquid rock located beneath the Earth's crust that supplies volcanic eruptions.",
+        "The main vent acts as the primary vertical conduit through which magma travels upward to reach the surface.",
+        "A crater is a bowl-shaped depression surrounding the summit vent, whereas a caldera is a massive basin formed by structural collapse.",
+        "Parasitic or secondary cones form on the flanks of a volcano when branch vents direct magma away from the central pipe."
+      ],
+      "id": "5ligfhg"
+    }
+  ],
+  "enriched": true
+}

@@ -1,24 +1,24 @@
 {
-  "id": "lbwyh2t",
+  "id": "4p01g95",
   "title": "Chapter 6: Sound",
   "order": 55,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3twc4qm"
+      "id": "5r0rjnq"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Speed in Air (20°C)",
-          "value": "343 m/s",
-          "icon": "clock"
-        },
-        {
           "label": "Audible Range",
           "value": "20 Hz - 20 kHz",
           "icon": "award"
+        },
+        {
+          "label": "Speed in Air",
+          "value": "343 m/s",
+          "icon": "clock"
         },
         {
           "label": "Min Echo Distance",
@@ -28,13 +28,13 @@
         {
           "label": "Persistence of Hearing",
           "value": "0.1 s",
-          "icon": "calendar"
+          "icon": "info"
         }
       ],
-      "id": "5u926jm"
+      "id": "ag1odmy"
     },
     {
-      "id": "hx63nie",
+      "id": "bcvcbsh",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Sound"
@@ -43,79 +43,79 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Sound is a longitudinal mechanical wave that requires a material medium to propagate and cannot travel through a vacuum.",
-        "The pitch of a sound is determined by its frequency, while its loudness is proportional to the square of the amplitude.",
-        "An echo requires a minimum distance of 17.2 meters between the sound source and the reflecting surface, along with a time interval of at least 0.1 seconds.",
-        "Ultrasound waves have frequencies above 20,000 Hz and are extensively used in medical imaging (SONAR, echocardiography) and industrial flaw detection.",
-        "The speed of sound depends on the medium's density and elasticity, traveling fastest in solids, slower in liquids, and slowest in gases."
+        "Sound is a form of energy produced by vibrating objects and travels as longitudinal mechanical waves.",
+        "Sound requires a material medium (solid, liquid, or gas) for propagation and cannot travel through a vacuum.",
+        "The loudness of sound depends on its amplitude, while the pitch or shrillness depends on its frequency.",
+        "An echo is formed by the reflection of sound waves from a distant obstacle, requiring a minimum distance of 17.2 metres.",
+        "Ultrasound refers to sound frequencies greater than 20,000 Hz and is widely used in medical imaging, cleaning, and SONAR."
       ],
-      "id": "uuarzsq"
+      "id": "f2ypql0"
     },
     {
       "type": "paragraph",
-      "id": "fpvnyyt"
+      "id": "r9se1x9"
     },
     {
       "type": "paragraph",
-      "id": "l5has6w"
+      "id": "r68mdsd"
     },
     {
       "type": "paragraph",
-      "id": "uvdfyas"
+      "id": "19ameyf"
     },
     {
       "type": "paragraph",
-      "id": "3yywuhl"
+      "id": "qtgqjgx"
     },
     {
-      "id": "azfmxb0",
+      "id": "8rpy9dc",
       "type": "heading",
       "level": 2,
       "content": "2. Production of Sound"
     },
     {
       "type": "paragraph",
-      "id": "eshslw6"
+      "id": "uityn8o"
     },
     {
       "type": "paragraph",
-      "id": "2gv8cci"
+      "id": "xwkvz2j"
     },
     {
       "type": "paragraph",
-      "id": "6zq1ep2"
+      "id": "u1jw4u2"
     },
     {
-      "id": "qxr68qu",
+      "id": "ol3ka62",
       "type": "heading",
       "level": 2,
       "content": "3. Sound Waves"
     },
     {
       "type": "paragraph",
-      "id": "2mhctv3"
+      "id": "c79hpwy"
     },
     {
       "type": "paragraph",
-      "id": "t5jqfiy"
+      "id": "iuv1lzn"
     },
     {
       "type": "paragraph",
-      "id": "vdjn3a3"
+      "id": "po4s3zz"
     },
     {
-      "id": "xl74in4",
+      "id": "1po4sjf",
       "type": "heading",
       "level": 2,
       "content": "4. Characteristics of Sound Waves"
     },
     {
       "type": "pullQuote",
-      "content": "Sound waves are longitudinal mechanical waves that require a material medium for propagation.",
-      "id": "tb1bsyl"
+      "content": "Sound waves are longitudinal mechanical waves that require a material medium for propagation and cannot travel through a vacuum.",
+      "id": "mow6dks"
     },
     {
-      "id": "459t8b7",
+      "id": "ex77ejb",
       "type": "table",
       "rows": [
         {
@@ -156,13 +156,13 @@
       ]
     },
     {
-      "id": "jt5zjzc",
+      "id": "22bxxn6",
       "type": "heading",
       "level": 2,
       "content": "5. Types of Sound"
     },
     {
-      "id": "t302i93",
+      "id": "clhqqbk",
       "type": "table",
       "rows": [
         {
@@ -196,17 +196,17 @@
       ]
     },
     {
-      "id": "jeqprm2",
+      "id": "ifvxsdt",
       "type": "heading",
       "level": 2,
       "content": "6. Speed of Sound"
     },
     {
       "type": "paragraph",
-      "id": "l2j32y9"
+      "id": "cxssz86"
     },
     {
-      "id": "die52nv",
+      "id": "3wz50tc",
       "type": "table",
       "rows": [
         {
@@ -240,65 +240,65 @@
       ]
     },
     {
-      "id": "m46hoil",
+      "id": "9u2nrey",
       "type": "heading",
       "level": 2,
       "content": "7. Reflection of Sound"
     },
     {
       "type": "paragraph",
-      "id": "cqakfjl"
+      "id": "iae7rld"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Category",
-        "Infrasonic Sound",
-        "Audible Sound",
-        "Ultrasonic Sound"
+        "Sound Category",
+        "Frequency Range",
+        "Human Audibility",
+        "Key Sources / Uses"
       ],
       "rows": [
         [
-          "Frequency Range",
+          "Infrasonic Sound",
           "Below 20 Hz",
-          "20 Hz to 20,000 Hz",
-          "Above 20,000 Hz"
-        ],
-        [
-          "Human Audibility",
           "Inaudible",
-          "Audible",
-          "Inaudible"
+          "Earthquakes, volcanic eruptions, elephants, whales"
         ],
         [
-          "Key Sources / Uses",
-          "Earthquakes, Elephants, Whales",
-          "Human voice, Musical instruments",
-          "Bats, SONAR, Medical Imaging"
+          "Audible Sound",
+          "20 Hz to 20,000 Hz",
+          "Audible",
+          "Human voice, musical instruments, everyday noises"
+        ],
+        [
+          "Ultrasonic Sound",
+          "Above 20,000 Hz (20 kHz)",
+          "Inaudible",
+          "SONAR, Echocardiography (ECG), bats, industrial cleaning"
         ]
       ],
-      "id": "tqjl0hh"
+      "id": "1tppm0s"
     },
     {
-      "id": "tzutgy4",
+      "id": "rfjf49b",
       "type": "heading",
       "level": 2,
       "content": "8. Echo"
     },
     {
       "type": "paragraph",
-      "id": "l4ct1xu"
+      "id": "9tjq70k"
     },
     {
       "type": "paragraph",
-      "id": "y8zmfmi"
+      "id": "7evifsi"
     },
     {
       "type": "paragraph",
-      "id": "ivy12n4"
+      "id": "7xjd8hw"
     },
     {
-      "id": "o1z673m",
+      "id": "m1sp10p",
       "type": "heading",
       "level": 2,
       "content": "9. Uses of Ultrasound"
@@ -306,71 +306,71 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "p1iri4q"
+      "id": "tcdbezt"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sycst21"
+      "id": "0td66ki"
     },
     {
       "type": "paragraph",
-      "id": "twfk6oa"
+      "id": "5v253xi"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9irip6m"
+      "id": "8fo6axj"
     },
     {
-      "id": "z8u96os",
+      "id": "15ky7a1",
       "type": "heading",
       "level": 2,
       "content": "10. Noise Pollution"
     },
     {
       "type": "paragraph",
-      "id": "01pv21b"
+      "id": "wd99nnh"
     },
     {
       "type": "examAlert",
       "items": [
-        "Speed of Sound order: Solids > Liquids > Gases. Sound speed is ZERO in a vacuum.",
-        "Loudness is proportional to the square of the amplitude (if amplitude doubles, loudness increases by 4x).",
-        "SONAR utilizes ultrasonic waves to measure underwater depth and locate submerged objects based on sound reflection.",
-        "The persistence of hearing for the human ear is 0.1 seconds, which dictates the minimum distance required for hearing a clear echo."
+        "Speed of sound varies by state of matter: Maximum in solids, intermediate in liquids, and minimum in gases (V_solid > V_liquid > V_gas).",
+        "The minimum distance required between the source and obstacle to hear a distinct echo is 17.2 m at 20°C.",
+        "SONAR (Sound Navigation and Ranging) utilizes ultrasound waves to measure sea depth and locate underwater objects.",
+        "Frequency determines the pitch of sound; higher frequency results in a higher pitch."
       ],
-      "id": "h3v44ed"
+      "id": "ub8lzo0"
     },
     {
       "type": "paragraph",
-      "id": "8thqn3f"
+      "id": "hghv7dv"
     },
     {
       "type": "paragraph",
-      "id": "5o9jsqc"
+      "id": "xp9td7m"
     },
     {
-      "id": "9vm9a3h",
+      "id": "trx1aw8",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "f0f5cog"
+      "id": "91147cg"
     },
     {
       "type": "paragraph",
-      "id": "v9af99j"
+      "id": "x9l3ufa"
     },
     {
       "type": "paragraph",
-      "id": "pmu24wi"
+      "id": "ov5mwbq"
     },
     {
       "type": "paragraph",
-      "id": "v8n0uye"
+      "id": "75i1he1"
     }
   ],
   "enriched": true

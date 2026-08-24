@@ -1,0 +1,100 @@
+{
+  "id": "enauyd5",
+  "title": "10. Joint State Public Service Commission",
+  "order": 440,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "kcttmgy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Joint State Public Service Commission is a statutory body created by an Act of Parliament, not a constitutional body.",
+      "id": "lzekwfv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "SPSC",
+        "JSPSC"
+      ],
+      "rows": [
+        [
+          "Nature of Body",
+          "Constitutional Body (Article 315)",
+          "Statutory Body (Created by Parliament)"
+        ],
+        [
+          "Appointment",
+          "Governor of the State",
+          "President of India"
+        ],
+        [
+          "Tenure",
+          "6 years or 62 years of age",
+          "6 years or 62 years of age"
+        ],
+        [
+          "Removal",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Annual Report",
+          "Governor of the State",
+          "Governors of participating States"
+        ]
+      ],
+      "id": "pu284iq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Nature of Body",
+          "value": "Statutory Body",
+          "icon": "info"
+        },
+        {
+          "label": "Tenure",
+          "value": "6 Yrs / Age 62",
+          "icon": "clock"
+        },
+        {
+          "label": "Appointed By",
+          "value": "President of India",
+          "icon": "award"
+        },
+        {
+          "label": "Report Submitted To",
+          "value": "State Governors",
+          "icon": "book"
+        }
+      ],
+      "id": "mwj6ljs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "JSPSC is a statutory body, unlike UPSC and SPSC which are constitutional bodies.",
+        "Despite serving state needs, JSPSC members are appointed and removed by the President, not the Governor.",
+        "JSPSC submits its annual report to the respective State Governors, who then present it to the State Legislatures."
+      ],
+      "id": "88j537p"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Constitution provides for the establishment of a Joint State Public Service Commission (JSPSC) for two or more states upon agreement.",
+        "Unlike UPSC and SPSC, a JSPSC is a statutory body created by an Act of Parliament rather than directly by the Constitution.",
+        "The Chairman and members of a JSPSC are appointed by the President of India.",
+        "Members hold office for a term of six years or until they attain the age of 62 years, whichever is earlier.",
+        "A JSPSC presents its annual performance report to the Governors of the participating states, who lay it before their respective state legislatures."
+      ],
+      "id": "c5heym2"
+    }
+  ],
+  "enriched": true
+}

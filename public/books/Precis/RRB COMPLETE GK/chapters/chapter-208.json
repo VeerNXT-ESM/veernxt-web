@@ -1,0 +1,518 @@
+{
+  "id": "29o2fck",
+  "title": "Chapter 24: Humidity, Saturation, Clouds and Precipitation",
+  "order": 208,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "tz6a55x"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Saturation Relative Humidity",
+          "value": "100%",
+          "icon": "check"
+        },
+        {
+          "label": "Humidity Measurement Instrument",
+          "value": "Hygrometer",
+          "icon": "info"
+        },
+        {
+          "label": "Major Rainfall Mechanisms",
+          "value": "3 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Condensation Threshold",
+          "value": "Dew Point",
+          "icon": "clock"
+        }
+      ],
+      "id": "k0l99xs"
+    },
+    {
+      "id": "z7mhkm0",
+      "type": "heading",
+      "level": 2,
+      "content": "1. What is Humidity?"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Humidity represents the quantity of water vapour present in the atmosphere and varies directly with air temperature.",
+        "Saturation occurs when air holds the maximum possible amount of water vapour at a given temperature, resulting in 100% Relative Humidity.",
+        "Dew Point is the critical temperature at which air becomes completely saturated and condensation begins.",
+        "Clouds form when ascending air cools to its dew point, condensing around microscopic condensation nuclei.",
+        "Precipitation is the final stage of the atmospheric moisture cycle, occurring as rain, snow, hail, or sleet."
+      ],
+      "id": "4qu0xpu"
+    },
+    {
+      "type": "paragraph",
+      "id": "mqx2cip"
+    },
+    {
+      "type": "paragraph",
+      "id": "wqrwsf9"
+    },
+    {
+      "type": "paragraph",
+      "id": "9pgrmt0"
+    },
+    {
+      "type": "paragraph",
+      "id": "y9ageqg"
+    },
+    {
+      "type": "paragraph",
+      "id": "mgves8d"
+    },
+    {
+      "id": "452rzyc",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Humidity (Conceptual Understanding)"
+    },
+    {
+      "type": "paragraph",
+      "id": "b8ncnab"
+    },
+    {
+      "id": "f6epjne",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c46xhfg",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Everyday Examples to Understand Humidity"
+    },
+    {
+      "type": "paragraph",
+      "id": "uvnuj0x"
+    },
+    {
+      "type": "paragraph",
+      "id": "z3gfx62"
+    },
+    {
+      "type": "paragraph",
+      "id": "tsy1567"
+    },
+    {
+      "type": "paragraph",
+      "id": "zrwwy2q"
+    },
+    {
+      "type": "paragraph",
+      "id": "bdifajr"
+    },
+    {
+      "type": "paragraph",
+      "id": "vfg7yne"
+    },
+    {
+      "id": "27bm1qg",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Humidity Capacity and Saturation"
+    },
+    {
+      "type": "paragraph",
+      "id": "jw5ehn3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Precipitation – Final Stage of Atmospheric Moisture",
+      "id": "gmdju0u"
+    },
+    {
+      "type": "paragraph",
+      "id": "i8jmoyv"
+    },
+    {
+      "type": "paragraph",
+      "id": "oq6lj7i"
+    },
+    {
+      "type": "paragraph",
+      "id": "lef0vss"
+    },
+    {
+      "type": "paragraph",
+      "id": "n4studk"
+    },
+    {
+      "id": "is08oky",
+      "type": "heading",
+      "level": 3,
+      "content": "Dew Point – The Key Concept"
+    },
+    {
+      "type": "paragraph",
+      "id": "fruchua"
+    },
+    {
+      "id": "c372nwz",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Measurement of Humidity"
+    },
+    {
+      "type": "paragraph",
+      "id": "1rdo9y8"
+    },
+    {
+      "type": "paragraph",
+      "id": "rxzr0hf"
+    },
+    {
+      "type": "paragraph",
+      "id": "vnqh7tq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Absolute Humidity",
+        "Relative Humidity"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Actual mass of water vapour present in a unit volume of air",
+          "Ratio of actual water vapour present to the maximum water vapour capacity at that temperature"
+        ],
+        [
+          "Unit of Measurement",
+          "Grams per cubic meter (g/m³)",
+          "Percentage (%)"
+        ],
+        [
+          "Temperature Dependence",
+          "Independent of temperature changes unless moisture is added or removed",
+          "Inversely proportional to temperature changes"
+        ]
+      ],
+      "id": "yezmldm"
+    },
+    {
+      "id": "vhv5li7",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Condensation – From Invisible Vapour to Visible Droplets"
+    },
+    {
+      "type": "paragraph",
+      "id": "fx21bcv"
+    },
+    {
+      "type": "paragraph",
+      "id": "p50fwjn"
+    },
+    {
+      "type": "paragraph",
+      "id": "h6z7itl"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8mum2d"
+    },
+    {
+      "id": "8b2ssd6",
+      "type": "heading",
+      "level": 3,
+      "content": "Forms of Condensation"
+    },
+    {
+      "id": "ba81fnz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dkghlny",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Clouds – Formation and Atmospheric Role"
+    },
+    {
+      "type": "paragraph",
+      "id": "h8kp3ub"
+    },
+    {
+      "id": "6ra1xyg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "217cnpg",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Precipitation – Final Stage of Atmospheric Moisture"
+    },
+    {
+      "type": "paragraph",
+      "id": "wfb92a5"
+    },
+    {
+      "id": "tlols9v",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Relative Humidity shares an inverse relationship with temperature: as air temperature rises without added moisture, Relative Humidity decreases.",
+        "Orographic rainfall creates a moist windward side and a dry leeward side known as a rain-shadow region.",
+        "When dry bulb and wet bulb thermometer readings on a psychrometer are identical, Relative Humidity is 100%."
+      ],
+      "id": "goevfje"
+    },
+    {
+      "id": "jkwv526",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Rainfall"
+    },
+    {
+      "id": "u0enddg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bhv4rq1",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Advanced Concepts"
+    },
+    {
+      "type": "paragraph",
+      "id": "9efquwq"
+    },
+    {
+      "type": "paragraph",
+      "id": "2bxf2zs"
+    },
+    {
+      "type": "paragraph",
+      "id": "8skzudd"
+    },
+    {
+      "type": "paragraph",
+      "id": "82btlkv"
+    },
+    {
+      "id": "qi9k0uh",
+      "type": "heading",
+      "level": 2,
+      "content": "MASTER EXAM REVISION POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "70dunqj"
+    }
+  ],
+  "enriched": true
+}

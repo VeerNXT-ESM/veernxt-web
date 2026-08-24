@@ -1,40 +1,40 @@
 {
-  "id": "tz6uf58",
+  "id": "h4wiad3",
   "title": "Chapter 39: National Parks and Wildlife Sanctuaries of India",
   "order": 39,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "yad8hkt"
+      "id": "tlwdsb5"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Primary Focus",
-          "value": "National Parks",
+          "label": "National Parks",
+          "value": "106",
           "icon": "book"
         },
         {
-          "label": "Conservation Units",
-          "value": "Wildlife Sanctuaries",
+          "label": "Wildlife Sanctuaries",
+          "value": "565+",
           "icon": "check"
         },
         {
-          "label": "Apex Protection",
-          "value": "Tiger Reserves",
+          "label": "Tiger Reserves",
+          "value": "55+",
           "icon": "award"
         },
         {
-          "label": "Action Plan",
-          "value": "Conservation Programs",
-          "icon": "info"
+          "label": "Protection Act",
+          "value": "1972",
+          "icon": "calendar"
         }
       ],
-      "id": "an2x68c"
+      "id": "mgh27r1"
     },
     {
-      "id": "x59cky9",
+      "id": "c20fen1",
       "type": "heading",
       "level": 2,
       "content": "1. Types of Protected Areas in India"
@@ -43,15 +43,15 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Protected areas in India are structured into National Parks, Wildlife Sanctuaries, and Biosphere Reserves.",
-        "Major Tiger Reserves represent targeted species protection and habitat conservation initiatives across Indian states.",
-        "Government Wildlife Conservation Programs establish the regulatory framework and active schemes for protecting endangered species.",
-        "Understanding the importance of wildlife conservation is essential for ecological balance and biodiversity management."
+        "India's network of protected areas includes National Parks, Wildlife Sanctuaries, Conservation Reserves, and Biosphere Reserves.",
+        "Jim Corbett National Park (established in 1936 as Hailey National Park) is the oldest national park in India.",
+        "Hemis National Park in Ladakh is the largest national park in India by area.",
+        "Project Tiger was initiated in 1973 to save the Bengal tiger from extinction, leading to the creation of designated Tiger Reserves."
       ],
-      "id": "ex5wpor"
+      "id": "mhrh7ia"
     },
     {
-      "id": "33swmxc",
+      "id": "ni4t8qi",
       "type": "table",
       "rows": [
         {
@@ -99,13 +99,13 @@
       ]
     },
     {
-      "id": "ekn9lzh",
+      "id": "a3x1w31",
       "type": "heading",
       "level": 2,
       "content": "2. Important National Parks of India"
     },
     {
-      "id": "zkq7sc8",
+      "id": "eb439d4",
       "type": "table",
       "rows": [
         {
@@ -221,13 +221,13 @@
       ]
     },
     {
-      "id": "fvimzka",
+      "id": "1tbnbl3",
       "type": "heading",
       "level": 2,
       "content": "3. Important Wildlife Sanctuaries"
     },
     {
-      "id": "bc4pqyl",
+      "id": "qwporhq",
       "type": "table",
       "rows": [
         {
@@ -287,109 +287,141 @@
       ]
     },
     {
-      "id": "c4g2ux3",
+      "id": "vh8tdpo",
       "type": "heading",
       "level": 2,
       "content": "4. Major Tiger Reserves in India"
     },
     {
       "type": "paragraph",
-      "id": "dm8bv5a"
+      "id": "t80bad7"
     },
     {
       "type": "paragraph",
-      "id": "2bu9kyr"
+      "id": "jry902l"
     },
     {
       "type": "pullQuote",
       "content": "National Parks and Wildlife Sanctuaries of India",
-      "id": "f6w3gu2"
+      "id": "yaxfpy7"
     },
     {
       "type": "paragraph",
-      "id": "j8ae4ro"
+      "id": "qsjmwgs"
     },
     {
       "type": "paragraph",
-      "id": "ses4w5f"
+      "id": "unfaahj"
     },
     {
       "type": "paragraph",
-      "id": "nwecgar"
+      "id": "2thl1e9"
     },
     {
-      "id": "su0u8td",
+      "id": "8n0o0sn",
       "type": "heading",
       "level": 2,
       "content": "5. Government Wildlife Conservation Programs"
     },
     {
       "type": "paragraph",
-      "id": "hpxchux"
+      "id": "rqejw5b"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "National Park",
+        "Wildlife Sanctuary"
+      ],
+      "rows": [
+        [
+          "Level of Protection",
+          "Higher protection; strict prohibition on human activities",
+          "Lesser protection; limited human activities permitted"
+        ],
+        [
+          "Boundaries",
+          "Clearly defined by legislation",
+          "Boundaries are not strictly defined"
+        ],
+        [
+          "Focus Area",
+          "Protection of the overall ecosystem (flora, fauna, landscape)",
+          "Protection of specific wild animal or plant species"
+        ],
+        [
+          "Human Rights / Grazing",
+          "Private ownership rights and grazing are not allowed",
+          "Certain rights and limited grazing may be permitted"
+        ]
+      ],
+      "id": "ylgb8fz"
     },
     {
       "type": "paragraph",
-      "id": "q225e9x"
+      "id": "mi1n4vw"
     },
     {
       "type": "paragraph",
-      "id": "16j64s5"
+      "id": "tiitnsu"
     },
     {
       "type": "paragraph",
-      "id": "w30ol99"
+      "id": "nb6303p"
     },
     {
-      "id": "8nk7zdb",
+      "id": "lncrzod",
       "type": "heading",
       "level": 2,
       "content": "6. Importance of Wildlife Conservation"
     },
     {
       "type": "paragraph",
-      "id": "y1o3120"
+      "id": "1m45six"
     },
     {
       "type": "paragraph",
-      "id": "fpgc2c4"
+      "id": "m3llka2"
     },
     {
       "type": "paragraph",
-      "id": "vbi95tc"
+      "id": "eru6lp8"
     },
     {
       "type": "paragraph",
-      "id": "yo82f4z"
+      "id": "uvqpwhi"
     },
     {
       "type": "examAlert",
       "items": [
-        "Competitive exams frequently test the legal and ecological differences between National Parks, Wildlife Sanctuaries, and Tiger Reserves.",
-        "Major Tiger Reserves, their locations, and associated Government Wildlife Conservation Programs are high-yield questions."
+        "Crucial distinction: Grazing and human settlements are completely prohibited in National Parks, whereas limited human activities are allowed in Wildlife Sanctuaries.",
+        "Wildlife Protection Act of 1972 provides the legal framework for establishing protected areas in India.",
+        "Major species-specific conservation programs: Project Tiger (1973), Project Elephant (1992), and Project Snow Leopard (2009)."
       ],
-      "id": "9numprd"
+      "id": "mgmlbbi"
     },
     {
-      "id": "okwn75m",
+      "id": "cuof3c9",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "gcj0aw4"
+      "id": "75rjpzj"
     },
     {
       "type": "paragraph",
-      "id": "u959ydo"
+      "id": "anufay8"
     },
     {
       "type": "paragraph",
-      "id": "eczo2l5"
+      "id": "tbdy0sd"
     },
     {
       "type": "paragraph",
-      "id": "pa4fyef"
+      "id": "zxed9z0"
     }
   ],
   "enriched": true

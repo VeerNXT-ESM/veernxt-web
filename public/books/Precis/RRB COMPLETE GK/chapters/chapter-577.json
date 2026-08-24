@@ -1,0 +1,95 @@
+{
+  "id": "s0zbzq0",
+  "title": "2. TRAI Amendment Act, 2000 (VERY IMPORTANT)",
+  "order": 577,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "87v88oh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The TRAI Amendment Act, 2000 bifurcated the regulatory and dispute settlement functions of TRAI by establishing the Telecom Disputes Settlement and Appellate Tribunal (TDSAT).",
+      "id": "n1wztr5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "TRAI",
+        "TDSAT"
+      ],
+      "rows": [
+        [
+          "Primary Mandate",
+          "Regulation of telecom services and tariff setting",
+          "Adjudication of disputes and appellate jurisdiction"
+        ],
+        [
+          "Statutory Origin",
+          "TRAI Act, 1997",
+          "TRAI (Amendment) Act, 2000"
+        ],
+        [
+          "Nature of Body",
+          "Regulatory & Advisory Body",
+          "Judicial / Appellate Tribunal"
+        ],
+        [
+          "Appellate Hierarchy",
+          "Decisions appealable to TDSAT",
+          "Decisions appealable directly to the Supreme Court"
+        ]
+      ],
+      "id": "pagiy65"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Parent Act",
+          "value": "1997",
+          "icon": "calendar"
+        },
+        {
+          "label": "Amendment Year",
+          "value": "2000",
+          "icon": "clock"
+        },
+        {
+          "label": "New Tribunal",
+          "value": "TDSAT",
+          "icon": "award"
+        },
+        {
+          "label": "TRAI Structure",
+          "value": "Chair + 4 Members",
+          "icon": "info"
+        }
+      ],
+      "id": "n6nolkx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "TDSAT was created under the 2000 Amendment Act, NOT the original TRAI Act of 1997.",
+        "Appeals against TDSAT orders lie directly to the Supreme Court, bypassing High Courts.",
+        "TRAI recommendations on telecom licensing terms are advisory and not legally binding on the Government."
+      ],
+      "id": "narv79h"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The 2000 Amendment strictly separated the regulatory functions from adjudicatory functions in the Indian telecom sector.",
+        "Established the Telecom Disputes Settlement and Appellate Tribunal (TDSAT) to resolve sector disputes.",
+        "Reconstituted TRAI to comprise a Chairperson, up to two full-time members, and up to two part-time members.",
+        "Divested quasi-judicial powers from TRAI to ensure independent regulatory governance.",
+        "Appeals against any decision or order of TDSAT lie exclusively with the Supreme Court of India."
+      ],
+      "id": "l7x8xgq"
+    }
+  ],
+  "enriched": true
+}

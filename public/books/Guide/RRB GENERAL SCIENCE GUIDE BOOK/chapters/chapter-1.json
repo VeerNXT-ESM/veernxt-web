@@ -1,0 +1,336 @@
+{
+  "id": "gse78w9",
+  "title": "Chapter 1: Motion",
+  "order": 1,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "kpvezfu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equations of Motion",
+          "value": "3 Standard Equations",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit: Velocity",
+          "value": "m/s",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit: Acceleration",
+          "value": "m/s²",
+          "icon": "award"
+        },
+        {
+          "label": "Key Motion Metrics",
+          "value": "Distance & Displacement",
+          "icon": "check"
+        }
+      ],
+      "id": "gfyrjv5"
+    },
+    {
+      "id": "y4rtjsf",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Motion"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Distance is the total scalar path length covered, while displacement is the shortest vector distance between initial and final points.",
+        "Speed measures the rate of distance covered, whereas velocity measures displacement over time with direction.",
+        "Acceleration measures the rate of change of velocity over time.",
+        "The three standard equations of motion describe relationships between initial velocity, final velocity, acceleration, time, and displacement.",
+        "Graphs of motion provide visual representations where slope and area under curves yield speed, velocity, and displacement."
+      ],
+      "id": "z188sx2"
+    },
+    {
+      "type": "paragraph",
+      "id": "oruilpg"
+    },
+    {
+      "type": "paragraph",
+      "id": "toz89q7"
+    },
+    {
+      "type": "paragraph",
+      "id": "m98tlma"
+    },
+    {
+      "id": "k1e2tvy",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Motion"
+    },
+    {
+      "id": "a4m217m",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cp0vyui",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Distance and Displacement"
+    },
+    {
+      "id": "750hb4m",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invmhkx",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Speed and Velocity"
+    },
+    {
+      "id": "g8dkydh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5hgvt4p",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Speed"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Distance and Displacement",
+      "id": "98ycnbu"
+    },
+    {
+      "type": "paragraph",
+      "id": "3lgni02"
+    },
+    {
+      "type": "paragraph",
+      "id": "lxzb2bd"
+    },
+    {
+      "type": "paragraph",
+      "id": "umi5fm9"
+    },
+    {
+      "id": "2thztui",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Acceleration"
+    },
+    {
+      "type": "paragraph",
+      "id": "w9qvsfu"
+    },
+    {
+      "type": "paragraph",
+      "id": "u2egt0u"
+    },
+    {
+      "type": "paragraph",
+      "id": "365da98"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Distance",
+        "Displacement"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Total length of path traveled",
+          "Shortest straight-line distance from initial to final position"
+        ],
+        [
+          "Quantity Type",
+          "Scalar (magnitude only)",
+          "Vector (magnitude and direction)"
+        ],
+        [
+          "Possible Values",
+          "Always positive or zero",
+          "Can be positive, negative, or zero"
+        ]
+      ],
+      "id": "dg6uc27"
+    },
+    {
+      "id": "o96y22x",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Equations of Motion"
+    },
+    {
+      "type": "paragraph",
+      "id": "6iyr66j"
+    },
+    {
+      "type": "paragraph",
+      "id": "v2tr3ep"
+    },
+    {
+      "type": "paragraph",
+      "id": "hrjichn"
+    },
+    {
+      "type": "paragraph",
+      "id": "jkhal9g"
+    },
+    {
+      "id": "yqzr7pk",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Graphs of Motion"
+    },
+    {
+      "type": "paragraph",
+      "id": "bb99j8d"
+    },
+    {
+      "type": "paragraph",
+      "id": "6d9kfk5"
+    },
+    {
+      "type": "paragraph",
+      "id": "e7shbgr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Displacement can be zero even if distance traveled is non-zero (e.g., completing a circular path).",
+        "The area under a Velocity-Time graph equals the displacement of the object.",
+        "Equations of motion can only be applied when acceleration is uniform (constant)."
+      ],
+      "id": "xpdm0nh"
+    },
+    {
+      "type": "paragraph",
+      "id": "qq6nug1"
+    },
+    {
+      "id": "mjn4p3l",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "ah51qq1"
+    },
+    {
+      "type": "paragraph",
+      "id": "48eg5rl"
+    },
+    {
+      "type": "paragraph",
+      "id": "mbe1wag"
+    },
+    {
+      "type": "paragraph",
+      "id": "f50bu7a"
+    }
+  ],
+  "enriched": true
+}

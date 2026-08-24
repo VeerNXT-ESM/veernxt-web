@@ -1,0 +1,95 @@
+{
+  "id": "ehaelsq",
+  "title": "Local Time",
+  "order": 34,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3a8g7ps"
+    },
+    {
+      "type": "pullQuote",
+      "content": "As the Earth rotates from west to east, places located east of Greenwich see the sun earlier than places to the west.",
+      "id": "v2g8jlc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Local Time",
+        "Standard Time"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Time determined according to the position of the sun at a specific local meridian.",
+          "Uniform time established for an entire country or region based on a chosen standard meridian."
+        ],
+        [
+          "Variation",
+          "Varies continuously with every change in longitude.",
+          "Remains uniform across the designated time zone."
+        ],
+        [
+          "Practical Utility",
+          "Unsuitable for national scheduling, transportation, and communication.",
+          "Essential for national coordination, railway timetables, and administrative convenience."
+        ],
+        [
+          "Reference Point",
+          "Based on local noon when the sun is at the highest point in the sky.",
+          "Based on a centrally located standard meridian (e.g., 82°30' E for IST)."
+        ]
+      ],
+      "id": "lowe6tu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Rotation",
+          "value": "360° / 24 hrs",
+          "icon": "info"
+        },
+        {
+          "label": "1° Longitude",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "15° Longitude",
+          "value": "1 Hour",
+          "icon": "clock"
+        },
+        {
+          "label": "IST Meridian",
+          "value": "82°30' E",
+          "icon": "check"
+        }
+      ],
+      "id": "eimj3as"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) is calculated from 82°30' E longitude and is exactly 5 hours 30 minutes ahead of GMT (+5:30).",
+        "The longitudinal spread of India is nearly 30°, resulting in a 2-hour local time difference between Arunachal Pradesh in the east and Gujarat in the west.",
+        "The Standard Meridian of India (82°30' E) passes through Mirzapur (UP) and covers 5 states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh."
+      ],
+      "id": "p8bt4cn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Local time is determined by the position of the overhead sun at a specific meridian of longitude.",
+        "The Earth completes one rotation of 360° in 24 hours, which equals 15° per hour or 1° every 4 minutes.",
+        "Because Earth rotates from west to east, local time moves ahead towards the east and lags towards the west.",
+        "All places located on the same meridian of longitude share the exact same local time.",
+        "To prevent confusion caused by differing local times across longitudes, countries adopt a single Standard Time based on a central meridian."
+      ],
+      "id": "winzaxo"
+    }
+  ],
+  "enriched": true
+}

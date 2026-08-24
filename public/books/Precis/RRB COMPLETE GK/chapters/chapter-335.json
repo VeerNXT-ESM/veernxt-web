@@ -1,0 +1,90 @@
+{
+  "id": "o7w6tmz",
+  "title": "10. Judicial Review",
+  "order": 335,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "i0t538u"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Judicial review is a basic feature of the Constitution and cannot be abrogated even by a constitutional amendment.",
+      "id": "sr1e8xm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Indian Judicial Review",
+        "American Judicial Review"
+      ],
+      "rows": [
+        [
+          "Legal Principle Basis",
+          "Procedure Established by Law (Article 21)",
+          "Due Process of Law"
+        ],
+        [
+          "Scope of Power",
+          "Narrower scope compared to US Judiciary",
+          "Wider scope giving judiciary broader discretion"
+        ],
+        [
+          "Constitutional Origin",
+          "Explicitly grounded in various constitutional provisions",
+          "Evolved judicially starting with Marbury v. Madison (1803)"
+        ]
+      ],
+      "id": "9shs12h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Origin Nation",
+          "value": "USA",
+          "icon": "book"
+        },
+        {
+          "label": "Key Article",
+          "value": "Article 13",
+          "icon": "info"
+        },
+        {
+          "label": "SC Jurisdiction",
+          "value": "Article 32",
+          "icon": "check"
+        },
+        {
+          "label": "HC Jurisdiction",
+          "value": "Article 226",
+          "icon": "award"
+        }
+      ],
+      "id": "4yzbxx7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that the exact phrase 'Judicial Review' is not defined or explicitly mentioned anywhere in the Indian Constitution.",
+        "The 9th Schedule was originally immune to judicial review, but after the I.R. Coelho case (2007), laws inserted after April 24, 1973 are open to challenge.",
+        "Under Article 32, the Supreme Court can issue writs for fundamental rights, whereas High Courts under Article 226 can issue writs for both fundamental and other legal rights."
+      ],
+      "id": "f8ihr9k"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Judicial review is the power of the judiciary to examine the constitutionality of legislative enactments and executive orders.",
+        "The term 'Judicial Review' is nowhere explicitly mentioned in the Constitution of India.",
+        "The Supreme Court declared Judicial Review as a basic feature of the Constitution in the Minerva Mills case (1980).",
+        "Articles 13, 32, 131-136, 143, 226, and 227 explicitly confer the power of judicial review on higher courts.",
+        "The scope of judicial review in India is based on 'Procedure Established by Law', unlike the US 'Due Process of Law'."
+      ],
+      "id": "f99ru94"
+    }
+  ],
+  "enriched": true
+}

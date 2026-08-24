@@ -1,0 +1,414 @@
+{
+  "id": "r7pkfo6",
+  "title": "Chapter 17 – Ohm’s Law and Electrical Measurements",
+  "order": 15,
+  "blocks": [
+    {
+      "id": "ap2btzm",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ohm's Law establishes that potential difference (V) is directly proportional to electric current (I) at constant temperature.",
+        "Resistance (R) measures opposition to current flow and depends on conductor length, area, material resistivity, and temperature.",
+        "Ammeters are low-resistance instruments connected in series to measure circuit current.",
+        "Voltmeters are high-resistance instruments connected in parallel to measure potential difference across components.",
+        "Electrical power consumed in a circuit is given by P = VI = I²R = V²/R and is measured in Watts."
+      ],
+      "id": "navdn2x"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Formula",
+          "value": "V = IR",
+          "icon": "book"
+        },
+        {
+          "label": "Unit of Resistance",
+          "value": "Ohm (Ω)",
+          "icon": "award"
+        },
+        {
+          "label": "Ammeter Placement",
+          "value": "Series",
+          "icon": "check"
+        },
+        {
+          "label": "Voltmeter Placement",
+          "value": "Parallel",
+          "icon": "info"
+        }
+      ],
+      "id": "q2h943k"
+    },
+    {
+      "type": "paragraph",
+      "id": "7rrxi2w"
+    },
+    {
+      "id": "1gebh9l",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Ohm’s Law"
+    },
+    {
+      "type": "paragraph",
+      "id": "wi84blv"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ftjdsv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2ofsr2o"
+    },
+    {
+      "id": "sbzuiat",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ha3fnrc",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Ohm’s Law Triangle"
+    },
+    {
+      "type": "paragraph",
+      "id": "5dsil6q"
+    },
+    {
+      "type": "paragraph",
+      "id": "z9z0hgn"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chapter 17 – Ohm’s Law and Electrical Measurements",
+      "id": "1i5tsci"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3zq7fwu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q3fu2w2"
+    },
+    {
+      "id": "do43hnl",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Electrical Resistance"
+    },
+    {
+      "type": "paragraph",
+      "id": "w2l8cdx"
+    },
+    {
+      "id": "0tfyjed",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l8xeeqq",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Electrical Measuring Instruments"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property / Parameter",
+        "Ammeter",
+        "Voltmeter"
+      ],
+      "rows": [
+        [
+          "Quantity Measured",
+          "Electric Current (I)",
+          "Potential Difference / Voltage (V)"
+        ],
+        [
+          "Circuit Connection",
+          "Connected in Series",
+          "Connected in Parallel"
+        ],
+        [
+          "Internal Resistance",
+          "Very Low (Ideal = 0)",
+          "Very High (Ideal = ∞)"
+        ],
+        [
+          "Conversion from Galvanometer",
+          "Low resistance (Shunt) in Parallel",
+          "High resistance in Series"
+        ]
+      ],
+      "id": "nu97qpx"
+    },
+    {
+      "id": "a56qz4t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk77hci",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Connection of Measuring Instruments"
+    },
+    {
+      "id": "gyo13uw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p22bw59",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Numerical Examples"
+    },
+    {
+      "type": "paragraph",
+      "id": "dfexjdk"
+    },
+    {
+      "type": "paragraph",
+      "id": "eoxag50"
+    },
+    {
+      "type": "paragraph",
+      "id": "8y9lvfy"
+    },
+    {
+      "type": "paragraph",
+      "id": "cltnktj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ideal Ammeter has ZERO resistance (connected in series); Ideal Voltmeter has INFINITE resistance (connected in parallel).",
+        "If a wire is stretched to double its length, its new resistance becomes 4 times the original resistance.",
+        "Galvanometer is converted into an Ammeter by connecting a low shunt resistance in parallel, and into a Voltmeter by connecting a high resistance in series."
+      ],
+      "id": "m5lcpoq"
+    },
+    {
+      "id": "d8qnb3w",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Electrical Power Formula"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k4c5hp0"
+    },
+    {
+      "id": "r0z7fxx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vbqdybh",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "izisfz2",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,76 @@
+{
+  "id": "gkinu7g",
+  "title": "MOST IMPORTANT EXAM TRAPS",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ik7b22g"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Avoiding negative marks through trap detection is as crucial as scoring correct answers.",
+      "id": "oad2x2v"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Direct Question",
+        "Trap Question"
+      ],
+      "rows": [
+        [
+          "Tests direct formula or factual recall",
+          "Tests nuance, edge cases, and careful reading"
+        ],
+        [
+          "Incorrect options are obviously wrong",
+          "Incorrect options match common calculation mistakes"
+        ]
+      ],
+      "id": "qo6lw9t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Focus",
+          "value": "Question Traps",
+          "icon": "info"
+        },
+        {
+          "label": "Key Skill",
+          "value": "Option Elimination",
+          "icon": "check"
+        },
+        {
+          "label": "Target Goal",
+          "value": "Zero Negative Marks",
+          "icon": "award"
+        }
+      ],
+      "id": "aeo58sa"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Watch out for multi-statement questions where one minor detail renders an entire statement false.",
+        "Beware of options that give correct calculations based on wrong formula assumptions.",
+        "Always re-read the final line of the question to confirm what is explicitly being asked."
+      ],
+      "id": "m4q6b3n"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Identify and avoid common distractors designed around frequent student misconceptions.",
+        "Carefully read qualifiers in question stems such as 'NOT', 'ONLY', 'EXCEPT', and 'INCORRECT'.",
+        "Verify units, dimensions, and limits in numerical and statement-based questions.",
+        "Use the method of elimination to systematically rule out incorrect options."
+      ],
+      "id": "sakv5el"
+    }
+  ],
+  "enriched": true
+}

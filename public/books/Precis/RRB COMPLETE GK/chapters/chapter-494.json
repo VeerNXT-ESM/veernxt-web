@@ -1,0 +1,90 @@
+{
+  "id": "nyooi4o",
+  "title": "7. Powers of NHRC",
+  "order": 494,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3j63vwn"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Commission shall have all the powers of a civil court trying a suit under the Code of Civil Procedure, 1908, while inquiring into complaints under the Act.",
+      "id": "1dy6fgm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "General Public Complaints",
+        "Armed Forces Violations"
+      ],
+      "rows": [
+        [
+          "Investigation Authority",
+          "Can conduct direct inquiries via its own investigative staff or external agencies.",
+          "Cannot investigate directly; must seek a report from the Central Government."
+        ],
+        [
+          "Scope of Power",
+          "Exercises full civil court powers to summon witnesses and require document production.",
+          "Limited role restricted to making recommendations based on government reports."
+        ],
+        [
+          "Response Timeline",
+          "Government usually responds to recommendations within 1 month.",
+          "Central Government must convey action taken on recommendations within 3 months."
+        ]
+      ],
+      "id": "5lrvs8c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Established",
+          "value": "1993",
+          "icon": "calendar"
+        },
+        {
+          "label": "Civil Court Status",
+          "value": "CPC 1908",
+          "icon": "award"
+        },
+        {
+          "label": "Limitation Period",
+          "value": "1 Year",
+          "icon": "clock"
+        },
+        {
+          "label": "Recommendation Nature",
+          "value": "Advisory",
+          "icon": "info"
+        }
+      ],
+      "id": "1ktikbc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NHRC recommendations are strictly advisory in nature; it has no power to penalize violators or enforce relief directly.",
+        "NHRC cannot inquire into any incident that occurred more than 1 year prior to the date of the complaint.",
+        "Regarding armed forces violations, NHRC cannot directly investigate and can only request a report from the Central Government."
+      ],
+      "id": "wkpqqy0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The NHRC is vested with the powers of a civil court trying a suit under the Code of Civil Procedure, 1908.",
+        "It can inquire into human rights violations either suo motu or upon receiving a petition.",
+        "The Commission cannot inquire into any matter after the expiry of one year from the date of the alleged violation.",
+        "Recommendations made by the NHRC are purely advisory and not legally binding on the government.",
+        "Its jurisdiction over human rights violations by armed forces is restricted to seeking reports from the Central Government."
+      ],
+      "id": "39de457"
+    }
+  ],
+  "enriched": true
+}

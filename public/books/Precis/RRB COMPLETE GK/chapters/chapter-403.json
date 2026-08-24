@@ -1,0 +1,95 @@
+{
+  "id": "l3mvdy2",
+  "title": "9. State Election Commission (Article 243K)",
+  "order": 403,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zaaz0pr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The superintendence, direction and control of the preparation of electoral rolls for, and the conduct of, all elections to the Panchayats shall be vested in a State Election Commission.",
+      "id": "gor1725"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Election Commission of India (ECI)",
+        "State Election Commission (SEC)"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 324",
+          "Article 243K & Article 243ZA"
+        ],
+        [
+          "Elections Conducted",
+          "Parliament, State Assemblies, President, Vice-President",
+          "Panchayats and Municipalities (Local Bodies)"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Process",
+          "Same as a Supreme Court Judge",
+          "Same as a High Court Judge"
+        ]
+      ],
+      "id": "hv5ndui"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "243K & 243ZA",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Amendment",
+          "value": "73rd & 74th (1992)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "Governor",
+          "icon": "award"
+        },
+        {
+          "label": "Removal Ground",
+          "value": "Same as HC Judge",
+          "icon": "info"
+        }
+      ],
+      "id": "djuy2nh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Elections to State Legislative Assemblies are conducted by the Election Commission of India (ECI), NOT the State Election Commission (SEC).",
+        "Although appointed by the Governor, the State Election Commissioner can be removed only in the manner prescribed for a High Court Judge.",
+        "SEC is an independent constitutional authority and is NOT subordinate to or controlled by the Election Commission of India."
+      ],
+      "id": "vxvfzhp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The State Election Commission is an autonomous constitutional body created under Article 243K (Panchayats) and Article 243ZA (Municipalities).",
+        "The State Election Commissioner is appointed by the Governor of the state.",
+        "The conditions of service and tenure of office of the State Election Commissioner are determined by the Governor.",
+        "The State Election Commissioner can be removed from office only in the same manner and on the same grounds as a Judge of a High Court.",
+        "State Election Commissions operate independently and are not subordinate to the Election Commission of India."
+      ],
+      "id": "cfmmblb"
+    }
+  ],
+  "enriched": true
+}

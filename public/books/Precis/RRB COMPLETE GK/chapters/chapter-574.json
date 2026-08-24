@@ -1,0 +1,93 @@
+{
+  "id": "lozs2ww",
+  "title": "RRB Quick Revision Box",
+  "order": 574,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "nr4d1ol"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways was nationalized in 1951 and has grown into one of the largest railway networks in the world.",
+      "id": "6ttu2up"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm)",
+        "Width (ft/in)",
+        "Common Use"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "5 ft 6 in",
+          "Mainlines & standard trunk routes"
+        ],
+        [
+          "Meter Gauge",
+          "1000 mm",
+          "3 ft 3 3/8 in",
+          "Legacy lines under gauge conversion"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "2 ft 6 in / 2 ft",
+          "Hill railways & heritage routes"
+        ]
+      ],
+      "id": "ffgf4mh"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19",
+          "icon": "info"
+        },
+        {
+          "label": "Broad Gauge",
+          "value": "1.676 m",
+          "icon": "check"
+        },
+        {
+          "label": "Nationalization",
+          "value": "1951",
+          "icon": "award"
+        }
+      ],
+      "id": "u5982lv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Zone headquarters matching questions (e.g., South Eastern Railway - Kolkata, North Central Railway - Prayagraj).",
+        "Crucial for exams: Standard track gauge dimensions — Broad Gauge (1676 mm), Meter Gauge (1000 mm), Narrow Gauge (762 mm / 610 mm).",
+        "Important date: The first electric train operated in India on February 3, 1925 between Bombay CST and Kurla."
+      ],
+      "id": "duva9e0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Mumbai (Bori Bunder) and Thane on April 16, 1853, covering a distance of 34 km.",
+        "Indian Railways was nationalized in 1951 and is organized into 19 administrative zones.",
+        "Broad Gauge (1.676 m) accounts for the majority of the total route kilometerage of Indian Railways.",
+        "Bholu, an elephant dressed as a railway guard holding a lamp, serves as the official mascot of Indian Railways."
+      ],
+      "id": "d8g4v8b"
+    }
+  ],
+  "enriched": true
+}

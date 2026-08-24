@@ -1,0 +1,278 @@
+{
+  "id": "2rg6wz9",
+  "title": "PART 10",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "x4uxunm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Sections",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "Core Modules",
+          "value": "9 Topics",
+          "icon": "info"
+        },
+        {
+          "label": "Focus Area",
+          "value": "Quant Aptitude",
+          "icon": "award"
+        },
+        {
+          "label": "Practice Set",
+          "value": "Included",
+          "icon": "check"
+        }
+      ],
+      "id": "vmcq1hl"
+    },
+    {
+      "id": "jx0r6jn",
+      "type": "heading",
+      "level": 2,
+      "content": "SECTION A: TIME, SPEED & DISTANCE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Time, Speed & Distance covers foundational calculations including unit conversions, relative speeds, and train collision/overtaking scenarios.",
+        "Basic Mensuration focuses on geometric properties, distinguishing between 2D plane figures and 3D solid structures.",
+        "Data Interpretation tests the ability to analyze, calculate, and infer results from structured tables, charts, or graphs.",
+        "Systematic practice through chapter questions and self-verification via the Answer Key is critical for speed and accuracy in competitive exams."
+      ],
+      "id": "gmzr445"
+    },
+    {
+      "id": "w6wd3is",
+      "type": "heading",
+      "level": 3,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "paragraph",
+      "id": "gp2nty0"
+    },
+    {
+      "id": "g8e7loo",
+      "type": "heading",
+      "level": 3,
+      "content": "2. SPEED CONVERSION"
+    },
+    {
+      "type": "paragraph",
+      "id": "hov07ms"
+    },
+    {
+      "id": "fyeh4b6",
+      "type": "heading",
+      "level": 3,
+      "content": "3. AVERAGE SPEED"
+    },
+    {
+      "type": "paragraph",
+      "id": "op9adpx"
+    },
+    {
+      "id": "mpx49y1",
+      "type": "heading",
+      "level": 3,
+      "content": "4. RELATIVE SPEED"
+    },
+    {
+      "type": "paragraph",
+      "id": "93n1zdj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "SECTION A: TIME, SPEED & DISTANCE",
+      "id": "umrh02s"
+    },
+    {
+      "id": "0u0qns7",
+      "type": "heading",
+      "level": 3,
+      "content": "5. TRAIN PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "rt6bchp"
+    },
+    {
+      "id": "s402a00",
+      "type": "heading",
+      "level": 2,
+      "content": "SECTION B: BASIC MENSURATION"
+    },
+    {
+      "id": "ahduw2t",
+      "type": "heading",
+      "level": 3,
+      "content": "6. 2D FIGURES"
+    },
+    {
+      "type": "paragraph",
+      "id": "x54tina"
+    },
+    {
+      "type": "paragraph",
+      "id": "1p7u0oe"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "2D Figures",
+        "3D Figures"
+      ],
+      "rows": [
+        [
+          "Dimensions",
+          "Two dimensions (Length, Breadth)",
+          "Three dimensions (Length, Breadth, Height)"
+        ],
+        [
+          "Primary Metrics",
+          "Perimeter and Area",
+          "Surface Area and Volume"
+        ],
+        [
+          "Common Examples",
+          "Triangle, Square, Circle, Rectangle",
+          "Cube, Cuboid, Cylinder, Sphere, Cone"
+        ]
+      ],
+      "id": "jros4eq"
+    },
+    {
+      "id": "8vc75m4",
+      "type": "heading",
+      "level": 3,
+      "content": "7. 3D FIGURES"
+    },
+    {
+      "type": "paragraph",
+      "id": "oxlicft"
+    },
+    {
+      "type": "paragraph",
+      "id": "rhfjqob"
+    },
+    {
+      "id": "f38d2t2",
+      "type": "heading",
+      "level": 2,
+      "content": "SECTION C: BASIC DATA INTERPRETATION"
+    },
+    {
+      "id": "ge78aaa",
+      "type": "heading",
+      "level": 3,
+      "content": "8. DATA INTERPRETATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "y1ynlyz"
+    },
+    {
+      "id": "tw3etly",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "k6f7d4v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Speed conversion between km/h and m/s (using 5/18 and 18/5 conversion factors) is frequently tested as a preliminary step in train problems.",
+        "Relative speed calculation rules differ based on direction: add speeds when moving in opposite directions, subtract when moving in the same direction.",
+        "Direct formula-based questions on 2D area/perimeter and 3D volume/surface area form a consistent portion of competitive quantitative sections."
+      ],
+      "id": "fskl4k1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x4gjsfz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "izsoi3z"
+    },
+    {
+      "id": "tzlgtl1",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "8k5mxe5"
+    },
+    {
+      "id": "mu3gqo2",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7915ajq"
+    }
+  ],
+  "enriched": true
+}

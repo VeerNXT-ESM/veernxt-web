@@ -1,0 +1,90 @@
+{
+  "id": "4cliwkn",
+  "title": "7. Removal of Commissioners",
+  "order": 642,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "seumyqe"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chief Election Commissioner can be removed from office in the same manner and on the same grounds as a judge of the Supreme Court.",
+      "id": "qm3pa8z"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Chief Election Commissioner (CEC)",
+        "Other Election Commissioners (ECs)"
+      ],
+      "rows": [
+        [
+          "Removal Authority",
+          "Parliament (via Presidential order after address by Parliament)",
+          "President (on CEC recommendation)"
+        ],
+        [
+          "Removal Procedure",
+          "Same as a Supreme Court Judge (Special Majority)",
+          "Recommendation of the CEC required"
+        ],
+        [
+          "Constitutional Tenure Protection",
+          "Guaranteed directly by Constitution",
+          "Protected via mandatory CEC recommendation"
+        ]
+      ],
+      "id": "olm7ys9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CEC Removal Standard",
+          "value": "Same as SC Judge",
+          "icon": "award"
+        },
+        {
+          "label": "Parliamentary Majority",
+          "value": "Special Majority",
+          "icon": "check"
+        },
+        {
+          "label": "Grounds for Removal",
+          "value": "2 Grounds",
+          "icon": "info"
+        },
+        {
+          "label": "Other ECs Removal",
+          "value": "CEC Recommendation",
+          "icon": "book"
+        }
+      ],
+      "id": "hbec4e0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam Trap: The CEC does NOT hold office during the pleasure of the President, even though appointed by the President.",
+        "Crucial Point: Other Election Commissioners are removed by the President ONLY on the recommendation of the CEC.",
+        "Removal Procedure: Requires a resolution passed by both Houses of Parliament supported by a special majority."
+      ],
+      "id": "zwolqjf"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Chief Election Commissioner (CEC) is provided with security of tenure and does not hold office at the pleasure of the President.",
+        "The CEC can be removed from office only in the same manner and on the same grounds as a Judge of the Supreme Court.",
+        "The grounds for removal are limited to proved misbehaviour or incapacity.",
+        "Other Election Commissioners or Regional Commissioners cannot be removed from office except on the recommendation of the Chief Election Commissioner.",
+        "Service conditions of the CEC cannot be varied to his disadvantage after appointment."
+      ],
+      "id": "7x58a9h"
+    }
+  ],
+  "enriched": true
+}

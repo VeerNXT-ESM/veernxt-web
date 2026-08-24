@@ -1,0 +1,89 @@
+{
+  "id": "mmrvli2",
+  "title": "7. River Capture (Stream Piracy)",
+  "order": 129,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hxyjicm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "River capture, or stream piracy, occurs when a powerful stream with greater headward erosion breaches a drainage divide and diverts the waters of an adjacent river into its own channel.",
+      "id": "lxng4w5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Role / Characteristics"
+      ],
+      "rows": [
+        [
+          "Pirate Stream",
+          "The energetic stream that breaches the divide through active headward erosion."
+        ],
+        [
+          "Elbow of Capture",
+          "The sharp, right-angled bend where the stream water is diverted."
+        ],
+        [
+          "Wind Gap",
+          "The abandoned, dry valley downstream of the capture point."
+        ],
+        [
+          "Misfit Stream",
+          "The remaining stream below the wind gap, too small for the valley it occupies."
+        ]
+      ],
+      "id": "04mzk3o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Process",
+          "value": "Headward Erosion",
+          "icon": "book"
+        },
+        {
+          "label": "Diversion Point",
+          "value": "Elbow of Capture",
+          "icon": "check"
+        },
+        {
+          "label": "Abandoned Valley",
+          "value": "Wind Gap",
+          "icon": "info"
+        },
+        {
+          "label": "Deprived Stream",
+          "value": "Misfit River",
+          "icon": "clock"
+        }
+      ],
+      "id": "is7fikz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Identify the signature landforms of river capture: Elbow of Capture, Wind Gap, and Misfit Stream.",
+        "Distinguish clearly between the Pirate Stream (captor) and the Misfit Stream (deprived lower course).",
+        "Himalayan river evolution examples, such as the historic capture of the ancient Saraswati River headwaters by the Yamuna, are frequently tested."
+      ],
+      "id": "erhih9d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "River capture occurs when a stream with strong headward erosion breaches a drainage divide and diverts an adjacent stream.",
+        "The energetic capturing river is called the pirate stream, whereas the diverted stream is known as the captured stream.",
+        "Morphological evidence includes the elbow of capture, wind gap (dry valley), and misfit (underfit) stream.",
+        "Steep gradient, structural faults, and soft rocks accelerate headward erosion leading to stream piracy."
+      ],
+      "id": "h021qdt"
+    }
+  ],
+  "enriched": true
+}

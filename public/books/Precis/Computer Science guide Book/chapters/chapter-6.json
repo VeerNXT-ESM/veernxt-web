@@ -1,0 +1,405 @@
+{
+  "id": "wd8du73",
+  "title": "Chapter 6: Computer Memory",
+  "order": 6,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "tpu9w4m"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Memory",
+          "value": "RAM & ROM",
+          "icon": "book"
+        },
+        {
+          "label": "Fastest Memory",
+          "value": "Cache Memory",
+          "icon": "award"
+        },
+        {
+          "label": "Storage Type",
+          "value": "Secondary Devices",
+          "icon": "info"
+        },
+        {
+          "label": "Key Concept",
+          "value": "Memory Units",
+          "icon": "check"
+        }
+      ],
+      "id": "xubipt8"
+    },
+    {
+      "id": "tzrfhs1",
+      "type": "heading",
+      "level": 2,
+      "content": "6.1 Primary Memory (Main Memory)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Primary Memory comprises RAM (Random Access Memory), ROM (Read Only Memory), and Cache Memory.",
+        "RAM is volatile main memory used for active processing, whereas ROM is non-volatile memory storing startup instructions.",
+        "Cache Memory acts as a high-speed buffer between the CPU and main memory to accelerate data retrieval.",
+        "Secondary Memory consists of external storage devices used for persistent data retention.",
+        "Understanding memory hierarchy and memory units is critical for comparing computer performance."
+      ],
+      "id": "20bsik8"
+    },
+    {
+      "type": "paragraph",
+      "id": "ch1afxb"
+    },
+    {
+      "id": "7znpf4h",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.1 Types of Primary Memory"
+    },
+    {
+      "id": "2rh63jw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk3y6cv",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.2 RAM (Random Access Memory)"
+    },
+    {
+      "type": "paragraph",
+      "id": "fogiu27"
+    },
+    {
+      "type": "paragraph",
+      "id": "z4g5y46"
+    },
+    {
+      "id": "mjacxb6",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Primary Memory (Main Memory)",
+      "id": "4it1yc2"
+    },
+    {
+      "id": "d7h8f9s",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.3 ROM (Read Only Memory)"
+    },
+    {
+      "type": "paragraph",
+      "id": "bkxv6w9"
+    },
+    {
+      "type": "paragraph",
+      "id": "t0d1q4m"
+    },
+    {
+      "id": "478ndg6",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "tqep8w4",
+      "type": "heading",
+      "level": 3,
+      "content": "6.1.4 Cache Memory"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Primary Memory",
+        "Secondary Memory"
+      ],
+      "rows": [
+        [
+          "Data Access",
+          "Directly accessed by CPU",
+          "Accessed via I/O channels"
+        ],
+        [
+          "Nature",
+          "Usually Volatile (RAM)",
+          "Non-volatile"
+        ],
+        [
+          "Speed",
+          "Faster access speed",
+          "Slower access speed"
+        ],
+        [
+          "Capacity & Cost",
+          "Lower capacity, higher cost per unit",
+          "Higher capacity, lower cost per unit"
+        ]
+      ],
+      "id": "jeazv3h"
+    },
+    {
+      "type": "paragraph",
+      "id": "0euvywm"
+    },
+    {
+      "id": "erzpfm8",
+      "type": "heading",
+      "level": 2,
+      "content": "6.2 Secondary Memory"
+    },
+    {
+      "type": "paragraph",
+      "id": "5d1f15f"
+    },
+    {
+      "id": "qgwsoqc",
+      "type": "heading",
+      "level": 3,
+      "content": "6.2.1 Types of Secondary Storage Devices"
+    },
+    {
+      "id": "i83xh3g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "szxrcdj",
+      "type": "heading",
+      "level": 2,
+      "content": "6.3 Memory Units"
+    },
+    {
+      "type": "paragraph",
+      "id": "bdsu1io"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between RAM (volatile) and ROM (non-volatile) characteristics for standard multiple-choice questions.",
+        "Cache memory placement and speed relative to CPU and main memory is a highly repeated topic.",
+        "Conversion problems involving Memory Units (Bytes, KB, MB, GB, TB) frequently appear in exams.",
+        "Be prepared to compare Primary and Secondary Memory on parameters like speed, cost, access type, and volatility."
+      ],
+      "id": "ht8zp8v"
+    },
+    {
+      "id": "1hjjkx1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uz6dl9u",
+      "type": "heading",
+      "level": 2,
+      "content": "6.4 Primary vs Secondary Memory"
+    },
+    {
+      "id": "b6wmuy5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p1jifoz",
+      "type": "heading",
+      "level": 2,
+      "content": "6.5 Important Exam Points"
+    },
+    {
+      "id": "7e71v2o",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,103 @@
+{
+  "id": "tpdvij0",
+  "title": "10. Limitations of CVC",
+  "order": 510,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "8u6806w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Role Type",
+          "value": "Advisory Body",
+          "icon": "info"
+        },
+        {
+          "label": "Established",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "2003 Act",
+          "icon": "book"
+        },
+        {
+          "label": "Max Members",
+          "value": "1 CVC + 2 VCs",
+          "icon": "check"
+        }
+      ],
+      "id": "msbf2v3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission is mainly an advisory body and has no power to register criminal cases or directly sanction prosecution.",
+      "id": "xdk8w5a"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Primary Function",
+          "Supervisory and advisory body on vigilance administration",
+          "Primary investigative agency for corruption and complex crimes"
+        ],
+        [
+          "Statutory Status",
+          "Statutory body created under CVC Act, 2003",
+          "Non-statutory body deriving investigative powers from DSPE Act, 1946"
+        ],
+        [
+          "Power to Register Cases",
+          "Cannot register criminal FIRs or conduct direct arrests",
+          "Empowered to register FIRs, conduct searches, and arrest accused"
+        ],
+        [
+          "Nature of Output",
+          "Advisory recommendations to disciplinary authorities",
+          "Charge-sheets submitted directly to special courts"
+        ]
+      ],
+      "id": "1n36rx3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission is primarily an advisory body, meaning its recommendations are not legally binding on central government ministries or departments.",
+        "CVC lacks its own dedicated investigative machinery and relies largely on the Central Bureau of Investigation (CBI) or departmental chief vigilance officers.",
+        "It cannot directly register criminal cases or prosecute offenders independently without sanction from the competent authority.",
+        "The powers of CVC are restricted to central government employees and specified public sector undertakings, excluding state personnel and private entities.",
+        "If the executive authority disagrees with the advice of CVC, it must record reasons in writing and communicate them to the Commission."
+      ],
+      "id": "w0tpvan"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CVC advice is strictly advisory; non-acceptance of CVC advice by ministries must be reported to the CVC and incorporated into its annual report presented to Parliament.",
+        "CVC derives statutory status from the CVC Act of 2003, based on the initial recommendations of the Santhanam Committee (1962–64).",
+        "CVC exercises superintendence over the functioning of CBI only in matters relating to the investigation of offenses under the Prevention of Corruption Act."
+      ],
+      "id": "34w305n"
+    },
+    {
+      "type": "paragraph",
+      "id": "kmrmi0u"
+    },
+    {
+      "type": "paragraph",
+      "id": "8guzc3o"
+    }
+  ],
+  "enriched": true
+}

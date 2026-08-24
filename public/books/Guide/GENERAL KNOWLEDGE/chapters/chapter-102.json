@@ -1,0 +1,398 @@
+{
+  "id": "a5iq9to",
+  "title": "CHAPTER 9 : ELECTRICITY",
+  "order": 102,
+  "blocks": [
+    {
+      "id": "2je3w0r",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO ELECTRICITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric charge is the fundamental property responsible for electric current and potential difference.",
+        "Ohm's Law governs the linear relationship between voltage and electric current across a conductor.",
+        "Resistance determines the opposition to current flow and depends on material resistivity and geometry.",
+        "Electric power and electrical energy represent the rate and total consumption of electrical work.",
+        "The heating effect of electric current powers thermal appliances and enables safety devices like electric fuses."
+      ],
+      "id": "gq04g6s"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Number",
+          "value": "Chapter 9",
+          "icon": "book"
+        },
+        {
+          "label": "Core Law",
+          "value": "Ohm's Law",
+          "icon": "award"
+        },
+        {
+          "label": "Key Phenomenon",
+          "value": "Heating Effect",
+          "icon": "info"
+        },
+        {
+          "label": "Safety Device",
+          "value": "Electric Fuse",
+          "icon": "check"
+        }
+      ],
+      "id": "pxdoc0z"
+    },
+    {
+      "type": "paragraph",
+      "id": "8otk52c"
+    },
+    {
+      "id": "c22vlp1",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ldwxugm"
+    },
+    {
+      "id": "uqk054h",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC CHARGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "dw2i6vp"
+    },
+    {
+      "id": "u93o9ay",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "u1jb6r9"
+    },
+    {
+      "type": "paragraph",
+      "id": "rjhh179"
+    },
+    {
+      "id": "ocuv9ut",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "2k68moc"
+    },
+    {
+      "type": "paragraph",
+      "id": "su8s4b6"
+    },
+    {
+      "type": "paragraph",
+      "id": "094dwoj"
+    },
+    {
+      "id": "ro3sfwf",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC CIRCUIT"
+    },
+    {
+      "type": "paragraph",
+      "id": "zftzrkv"
+    },
+    {
+      "id": "k4ugvec",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "71ukwr3",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC POTENTIAL DIFFERENCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "4z0xlzu"
+    },
+    {
+      "type": "paragraph",
+      "id": "l4vj3kw"
+    },
+    {
+      "id": "3ppue9o",
+      "type": "heading",
+      "level": 2,
+      "content": "OHM’S LAW"
+    },
+    {
+      "type": "paragraph",
+      "id": "zqnyg03"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 9 : ELECTRICITY",
+      "id": "b7oxsfr"
+    },
+    {
+      "type": "paragraph",
+      "id": "98scdh4"
+    },
+    {
+      "type": "paragraph",
+      "id": "cgntloa"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x7rd2g1"
+    },
+    {
+      "type": "paragraph",
+      "id": "nzxu2ha"
+    },
+    {
+      "type": "paragraph",
+      "id": "1g27rct"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "quv3pry"
+    },
+    {
+      "id": "70j28ev",
+      "type": "heading",
+      "level": 2,
+      "content": "RESISTANCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "ztzwiix"
+    },
+    {
+      "type": "paragraph",
+      "id": "omow6dn"
+    },
+    {
+      "id": "4md6vcp",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "0z6fbto",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC POWER"
+    },
+    {
+      "type": "paragraph",
+      "id": "knbvhk4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Electric Current",
+        "Electric Potential Difference"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Rate of flow of electric charges",
+          "Work done in moving a unit charge between two points"
+        ],
+        [
+          "SI Unit",
+          "Ampere (A)",
+          "Volt (V)"
+        ],
+        [
+          "Measuring Instrument",
+          "Ammeter (connected in series)",
+          "Voltmeter (connected in parallel)"
+        ]
+      ],
+      "id": "1o3kvzk"
+    },
+    {
+      "type": "paragraph",
+      "id": "jl61se5"
+    },
+    {
+      "type": "paragraph",
+      "id": "i5p2g1s"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yxp0li9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q984m6y"
+    },
+    {
+      "id": "poft2ic",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "6eu71sp"
+    },
+    {
+      "type": "paragraph",
+      "id": "aiziqmg"
+    },
+    {
+      "id": "eprjzha",
+      "type": "heading",
+      "level": 2,
+      "content": "HEATING EFFECT OF ELECTRIC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "uj79j3z"
+    },
+    {
+      "id": "54kdpao",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "a0row3z"
+    },
+    {
+      "id": "rnohqtr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "dqz3w99",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC FUSE"
+    },
+    {
+      "type": "paragraph",
+      "id": "ppq3knq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ohm's law verification and interpretation of V-I graphs are frequently tested.",
+        "Distinction between resistance and resistivity, including combination of resistors (series vs. parallel), is critical for numericals.",
+        "Working mechanism and rating calculations for an electric fuse based on the heating effect of current."
+      ],
+      "id": "yvy7lso"
+    },
+    {
+      "type": "paragraph",
+      "id": "d4rg5pf"
+    },
+    {
+      "id": "iu7814k",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4x36un1",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT  EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "ygtp7oe"
+    },
+    {
+      "type": "paragraph",
+      "id": "lhjvs9n"
+    },
+    {
+      "type": "paragraph",
+      "id": "e4zw80r"
+    },
+    {
+      "type": "paragraph",
+      "id": "nzw5ufm"
+    },
+    {
+      "type": "paragraph",
+      "id": "d2hm1il"
+    },
+    {
+      "id": "r6m0i9c",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "cb2yto0",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

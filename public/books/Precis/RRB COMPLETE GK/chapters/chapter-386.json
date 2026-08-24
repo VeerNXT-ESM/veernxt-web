@@ -1,0 +1,95 @@
+{
+  "id": "f4dn2il",
+  "title": "8. Presiding Officers of State Legislature",
+  "order": 386,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yrksjyt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The decision of the Speaker of the Legislative Assembly on whether a bill is a Money Bill or not shall be final.",
+      "id": "36l8fls"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Speaker (Legislative Assembly)",
+        "Chairman (Legislative Council)"
+      ],
+      "rows": [
+        [
+          "Election",
+          "Elected by members of the Assembly",
+          "Elected by members of the Council"
+        ],
+        [
+          "Money Bill Endorsement",
+          "Final authority to decide if a bill is a Money Bill",
+          "Has no authority or power over Money Bills"
+        ],
+        [
+          "Ex-officio Status",
+          "Elected from Legislative Assembly members",
+          "Elected from Council members (Not an ex-officio officer)"
+        ],
+        [
+          "Disqualification Power",
+          "Decides anti-defection cases for Assembly members",
+          "Decides anti-defection cases for Council members"
+        ]
+      ],
+      "id": "dryxk9a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Assembly Presiding Article",
+          "value": "Article 178",
+          "icon": "book"
+        },
+        {
+          "label": "Council Presiding Article",
+          "value": "Article 182",
+          "icon": "book"
+        },
+        {
+          "label": "Voting Power",
+          "value": "Casting Vote Only",
+          "icon": "check"
+        },
+        {
+          "label": "Quorum Requirement",
+          "value": "10 or 1/10th",
+          "icon": "clock"
+        }
+      ],
+      "id": "8dfjvjo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Unlike Parliament, there is no constitutional provision for a joint sitting of both Houses of the State Legislature.",
+        "Questions regarding disqualification of members under the Tenth Schedule (Anti-Defection Law) are determined by the Presiding Officer of the respective House.",
+        "The Chairman of the Legislative Council cannot preside while a resolution for his removal is under consideration, though he has the right to speak and take part in proceedings."
+      ],
+      "id": "wun382y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Speaker and Deputy Speaker are elected by the Legislative Assembly from amongst its members.",
+        "The Speaker decides whether a bill is a Money Bill or not, and this decision is final.",
+        "Unlike the Vice-President in Rajya Sabha, the Chairman of the Legislative Council is elected from amongst the members of the Council itself.",
+        "The salaries and allowances of the Presiding Officers are fixed by the State Legislature and charged on the Consolidated Fund of the State.",
+        "Presiding officers do not vote in the first instance, but exercise a casting vote in the case of an equality of votes."
+      ],
+      "id": "izeowzt"
+    }
+  ],
+  "enriched": true
+}

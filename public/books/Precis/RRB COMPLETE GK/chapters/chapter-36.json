@@ -1,0 +1,90 @@
+{
+  "id": "e2yoaon",
+  "title": "Greenwich Mean Time (GMT)",
+  "order": 36,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "wtqyyat"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Greenwich Mean Time is the mean solar time measured at the Royal Observatory in Greenwich, London.",
+      "id": "i8sy5ae"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Greenwich Mean Time (GMT)",
+        "Indian Standard Time (IST)"
+      ],
+      "rows": [
+        [
+          "Reference Longitude",
+          "0° (Prime Meridian)",
+          "82.5° E Meridian"
+        ],
+        [
+          "Geographical Location",
+          "Royal Observatory, Greenwich, UK",
+          "Mirzapur, Uttar Pradesh, India"
+        ],
+        [
+          "Time Difference",
+          "Standard Base (0:00)",
+          "+5 Hours 30 Minutes"
+        ]
+      ],
+      "id": "9cyyypi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Prime Meridian",
+          "value": "0° Longitude",
+          "icon": "clock"
+        },
+        {
+          "label": "Established",
+          "value": "1884",
+          "icon": "calendar"
+        },
+        {
+          "label": "IST Offset",
+          "value": "+5 Hours 30 Mins",
+          "icon": "info"
+        },
+        {
+          "label": "Location Reference",
+          "value": "Greenwich, London",
+          "icon": "book"
+        }
+      ],
+      "id": "59uor5n"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Time difference formula: 1 degree of longitude equals a 4-minute time difference (+4 minutes towards East, -4 minutes towards West).",
+        "Standard Meridian of India (82°30' E) passes through Mirzapur, Uttar Pradesh, and is calculated as GMT + 5:30.",
+        "The Prime Meridian passing through Greenwich was officially chosen at the International Meridian Conference held in 1884."
+      ],
+      "id": "o2u3ykz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Greenwich Mean Time (GMT) is the mean solar time measured at the Royal Observatory in Greenwich, London.",
+        "The Prime Meridian, defined as 0° longitude, serves as the universal baseline for calculating global time zones.",
+        "Earth rotates 360° in 24 hours, which equates to a 15° change in longitude per hour or 4 minutes per degree.",
+        "Indian Standard Time (IST) is based on the 82.5° E longitude meridian and is 5 hours and 30 minutes ahead of GMT.",
+        "Places located east of the Prime Meridian gain time relative to GMT, while places west of it lose time."
+      ],
+      "id": "s11c0jd"
+    }
+  ],
+  "enriched": true
+}

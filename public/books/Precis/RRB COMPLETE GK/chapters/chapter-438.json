@@ -1,0 +1,94 @@
+{
+  "id": "l5qe2aj",
+  "title": "8. Reports of UPSC",
+  "order": 438,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9jy83gd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "It shall be the duty of the Union Commission to present annually to the President a report as to the work done by the Commission.",
+      "id": "h8a40u1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "UPSC Annual Report",
+        "SPSC Annual Report"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 323(1)",
+          "Article 323(2)"
+        ],
+        [
+          "Submitted To",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Laid Before",
+          "Both Houses of Parliament",
+          "State Legislature"
+        ],
+        [
+          "Explanatory Memorandum Required",
+          "Yes, for cases of non-acceptance",
+          "Yes, for cases of non-acceptance"
+        ]
+      ],
+      "id": "3vgrh92"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 323",
+          "icon": "book"
+        },
+        {
+          "label": "Report Frequency",
+          "value": "Annual",
+          "icon": "calendar"
+        },
+        {
+          "label": "Report Submitted To",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Laid Before",
+          "value": "Parliament",
+          "icon": "info"
+        }
+      ],
+      "id": "py4ctba"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "UPSC submits its report to the President, NOT directly to the Parliament or the Prime Minister.",
+        "Non-acceptance of UPSC advice must be explicitly justified in a memorandum presented to Parliament.",
+        "Questions often confuse Article 320 (Functions of UPSC) with Article 323 (Reports of Public Service Commissions)."
+      ],
+      "id": "igznm1f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Under Article 323 of the Constitution, the UPSC submits an annual report on its performance to the President.",
+        "The President causes the report to be laid before both Houses of Parliament.",
+        "An explanatory memorandum must accompany the report, explaining cases where the advice of the Commission was not accepted and the reasons for such non-acceptance.",
+        "Individual ministries or departments cannot reject UPSC advice; rejection requires approval from the Appointments Committee of the Cabinet."
+      ],
+      "id": "gnrn86f"
+    }
+  ],
+  "enriched": true
+}

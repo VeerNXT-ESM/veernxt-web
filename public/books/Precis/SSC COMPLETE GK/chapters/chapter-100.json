@@ -1,0 +1,467 @@
+{
+  "id": "nnjvjd5",
+  "title": "CHAPTER 7 : SOUND",
+  "order": 100,
+  "blocks": [
+    {
+      "id": "tjd6ptf",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO SOUND"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sound is a mechanical wave that requires a material medium to propagate and cannot travel through a vacuum.",
+        "Sound waves are longitudinal waves in gases and liquids, propagating as a series of compressions and rarefactions.",
+        "The speed of sound depends on the elasticity and density of the medium, being fastest in solids and slowest in gases.",
+        "The human audible range is 20 Hz to 20,000 Hz; sounds below 20 Hz are infrasonic and above 20 kHz are ultrasonic.",
+        "SONAR (Sound Navigation and Ranging) uses ultrasonic waves to detect underwater objects and measure distance.",
+        "Loudness is determined by the amplitude of vibration, while pitch is determined by the frequency of the sound wave."
+      ],
+      "id": "gjw4mkj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Audible Range",
+          "value": "20 Hz - 20 kHz",
+          "icon": "info"
+        },
+        {
+          "label": "Speed in Air (0°C)",
+          "value": "332 m/s",
+          "icon": "check"
+        },
+        {
+          "label": "Min Echo Distance",
+          "value": "17.2 m",
+          "icon": "award"
+        },
+        {
+          "label": "Hearing Persistence",
+          "value": "0.1 s",
+          "icon": "clock"
+        }
+      ],
+      "id": "tb9m6b3"
+    },
+    {
+      "type": "paragraph",
+      "id": "1vx9zac"
+    },
+    {
+      "type": "paragraph",
+      "id": "kxe03xj"
+    },
+    {
+      "id": "7fo1skb",
+      "type": "heading",
+      "level": 2,
+      "content": "PRODUCTION OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "yxv4bpl"
+    },
+    {
+      "type": "paragraph",
+      "id": "d1locd9"
+    },
+    {
+      "type": "paragraph",
+      "id": "mrkmli2"
+    },
+    {
+      "id": "rq87s5v",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "c4m2g6g",
+      "type": "heading",
+      "level": 2,
+      "content": "SOUND WAVES"
+    },
+    {
+      "type": "paragraph",
+      "id": "4yozqnc"
+    },
+    {
+      "id": "fzaebif",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "rlo9ed7"
+    },
+    {
+      "id": "34rq60r",
+      "type": "heading",
+      "level": 2,
+      "content": "LONGITUDINAL WAVES"
+    },
+    {
+      "type": "paragraph",
+      "id": "epb08w1"
+    },
+    {
+      "type": "paragraph",
+      "id": "5qzmmoh"
+    },
+    {
+      "id": "a3buw7r",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "8drsrwn",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT TERMS OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "6dzmn93"
+    },
+    {
+      "type": "paragraph",
+      "id": "mrkoql5"
+    },
+    {
+      "type": "paragraph",
+      "id": "tlkg1mf"
+    },
+    {
+      "type": "paragraph",
+      "id": "h6y351b"
+    },
+    {
+      "type": "paragraph",
+      "id": "eat42k3"
+    },
+    {
+      "type": "paragraph",
+      "id": "rb3t2kl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "horkxf6"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvu1s1b"
+    },
+    {
+      "type": "paragraph",
+      "id": "mh5vis9"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sound waves are longitudinal mechanical waves that require a material medium for their propagation.",
+      "id": "1dsgbbh"
+    },
+    {
+      "id": "mka90na",
+      "type": "heading",
+      "level": 2,
+      "content": "SPEED OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "ujm74cr"
+    },
+    {
+      "id": "mdsa0pd",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "3gx4o8u"
+    },
+    {
+      "type": "paragraph",
+      "id": "wbemv01"
+    },
+    {
+      "type": "paragraph",
+      "id": "7au7reb"
+    },
+    {
+      "id": "5n993s3",
+      "type": "heading",
+      "level": 2,
+      "content": "CHARACTERISTICS OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "hp86bz6"
+    },
+    {
+      "type": "paragraph",
+      "id": "g2y9au3"
+    },
+    {
+      "type": "paragraph",
+      "id": "w0noggd"
+    },
+    {
+      "type": "paragraph",
+      "id": "rjsgsji"
+    },
+    {
+      "type": "paragraph",
+      "id": "oqmjrku"
+    },
+    {
+      "type": "paragraph",
+      "id": "lfjgruz"
+    },
+    {
+      "type": "paragraph",
+      "id": "7bxqenm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Longitudinal Waves",
+        "Transverse Waves"
+      ],
+      "rows": [
+        [
+          "Particle Motion",
+          "Parallel to wave direction",
+          "Perpendicular to wave direction"
+        ],
+        [
+          "Medium",
+          "Solids, liquids, and gases",
+          "Solids and liquid surfaces only"
+        ],
+        [
+          "Structure",
+          "Compressions and Rarefactions",
+          "Crests and Troughs"
+        ],
+        [
+          "Example",
+          "Sound waves in air",
+          "Light waves, surface water waves"
+        ]
+      ],
+      "id": "sb51g3v"
+    },
+    {
+      "id": "36k2743",
+      "type": "heading",
+      "level": 2,
+      "content": "AUDIBLE RANGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "mgqjwhp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oz7916g"
+    },
+    {
+      "id": "btcdtzk",
+      "type": "heading",
+      "level": 2,
+      "content": "ECHO"
+    },
+    {
+      "type": "paragraph",
+      "id": "eio8pic"
+    },
+    {
+      "id": "j2x8u48",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "w16yuwe",
+      "type": "heading",
+      "level": 2,
+      "content": "SONAR"
+    },
+    {
+      "type": "paragraph",
+      "id": "cs5envy"
+    },
+    {
+      "id": "azu2soy",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "o5btvdx",
+      "type": "heading",
+      "level": 2,
+      "content": "HUMAN EAR"
+    },
+    {
+      "type": "paragraph",
+      "id": "5160kla"
+    },
+    {
+      "id": "r8p5kme",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "7cl3x5b",
+      "type": "heading",
+      "level": 2,
+      "content": "NOISE POLLUTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "r8v904i"
+    },
+    {
+      "type": "paragraph",
+      "id": "tld0wfg"
+    },
+    {
+      "id": "64n7d6q",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "lo0x2ab"
+    },
+    {
+      "id": "gbvt2wa",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Speed of sound is highest in solids, moderate in liquids, lowest in gases, and strictly zero in a vacuum.",
+        "To hear a clear echo, the minimum distance between the listener and reflecting surface must be 17.2 meters (with persistent hearing time of 0.1 s).",
+        "Loudness depends on amplitude (Loudness ∝ Amplitude²), whereas Pitch depends directly on Frequency.",
+        "Bats and dolphins use ultrasonic sound waves (frequency > 20 kHz) for navigation and prey detection via echolocation."
+      ],
+      "id": "k188pae"
+    },
+    {
+      "type": "paragraph",
+      "id": "s8lg0mc"
+    },
+    {
+      "id": "79xmdz6",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4vcmood",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "a83dbmj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "84baqyg"
+    },
+    {
+      "type": "paragraph",
+      "id": "saqp2fb"
+    },
+    {
+      "type": "paragraph",
+      "id": "pnd8d8w"
+    },
+    {
+      "type": "paragraph",
+      "id": "zenximc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q0yfd7f"
+    },
+    {
+      "id": "lvkte87",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "kelzcak",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

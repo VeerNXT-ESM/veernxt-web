@@ -1,0 +1,366 @@
+{
+  "id": "xo20ay6",
+  "title": "Chapter 5: Output Devices",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "f7exmf6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Output Categories",
+          "value": "Soft Copy & Hard Copy",
+          "icon": "book"
+        },
+        {
+          "label": "Printer Resolution Metric",
+          "value": "DPI (Dots Per Inch)",
+          "icon": "award"
+        },
+        {
+          "label": "Printer Speed Metric",
+          "value": "PPM / CPS",
+          "icon": "clock"
+        },
+        {
+          "label": "Major Monitor Types",
+          "value": "CRT, LCD, LED, OLED",
+          "icon": "info"
+        }
+      ],
+      "id": "fyonrke"
+    },
+    {
+      "id": "n1eqsow",
+      "type": "heading",
+      "level": 2,
+      "content": "5.1 Monitor"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Monitors display visual information as soft copy output, categorized into CRT, LCD, LED, and OLED technologies.",
+        "Printers generate permanent physical output (hard copy) and are divided into Impact and Non-Impact printers.",
+        "Plotters are specialized output devices designed for vector graphics, blueprint printing, and high-precision CAD drawings.",
+        "Speakers convert electronic digital audio signals into audible acoustic sound waves.",
+        "Non-impact printers like Laser and Inkjet provide higher speed, superior resolution, and quieter operation compared to impact printers."
+      ],
+      "id": "knpaybn"
+    },
+    {
+      "type": "paragraph",
+      "id": "ehvt6mj"
+    },
+    {
+      "id": "0jcnn4d",
+      "type": "heading",
+      "level": 3,
+      "content": "5.1.1 Types of Monitors"
+    },
+    {
+      "id": "tfazyj1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vbfw80x",
+      "type": "heading",
+      "level": 3,
+      "content": "5.1.2 Monitor Characteristics"
+    },
+    {
+      "id": "xnpkd7d",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "hsd8i7h",
+      "type": "heading",
+      "level": 2,
+      "content": "5.2 Printer"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Plotters are specialized output devices used for printing high-quality vector graphics and large-scale engineering drawings.",
+      "id": "192za6h"
+    },
+    {
+      "type": "paragraph",
+      "id": "jcfq7ya"
+    },
+    {
+      "id": "nynung7",
+      "type": "heading",
+      "level": 3,
+      "content": "5.2.1 Types of Printers"
+    },
+    {
+      "id": "f9sxq4q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mjrl28b",
+      "type": "heading",
+      "level": 3,
+      "content": "5.2.2 Impact vs Non-Impact Printers"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Impact Printers",
+        "Non-Impact Printers"
+      ],
+      "rows": [
+        [
+          "Printing Mechanism",
+          "Physical striking against inked ribbon on paper",
+          "Chemical, heat, laser, or ink spray mechanism"
+        ],
+        [
+          "Noise Level",
+          "High noise level due to mechanical striking",
+          "Very quiet operation"
+        ],
+        [
+          "Speed",
+          "Slower (measured in CPS or LPM)",
+          "Faster (measured in PPM)"
+        ],
+        [
+          "Print Quality",
+          "Lower resolution and basic graphics",
+          "High resolution, sharp text, and photographic output"
+        ],
+        [
+          "Examples",
+          "Dot Matrix, Daisy Wheel, Line Printer",
+          "Laser Printer, Inkjet Printer, Thermal Printer"
+        ]
+      ],
+      "id": "nyvx56e"
+    },
+    {
+      "id": "o8ve6dv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l28k22z",
+      "type": "heading",
+      "level": 2,
+      "content": "5.3 Plotter"
+    },
+    {
+      "type": "paragraph",
+      "id": "o028qm2"
+    },
+    {
+      "id": "6iz9w1g",
+      "type": "heading",
+      "level": 3,
+      "content": "5.3.1 Types of Plotters"
+    },
+    {
+      "id": "h65kruq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n8pcf7j",
+      "type": "heading",
+      "level": 2,
+      "content": "5.4 Speaker"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Impact printers (e.g., Dot Matrix) use physical striking mechanisms, while Non-Impact printers (Laser, Inkjet) use non-contact technology.",
+        "DPI (Dots Per Inch) determines printer output quality, while PPM (Pages Per Minute) measures printer speed.",
+        "Laser printers use electrostatic toner powder and a drum mechanism, making them the fastest non-impact printers for text."
+      ],
+      "id": "18qujet"
+    },
+    {
+      "type": "paragraph",
+      "id": "l9f4hqt"
+    },
+    {
+      "type": "paragraph",
+      "id": "2w1zqbi"
+    },
+    {
+      "id": "krel46a",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "dfdnql0",
+      "type": "heading",
+      "level": 2,
+      "content": "5.5 Important Exam Points"
+    },
+    {
+      "id": "c2k3xcc",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

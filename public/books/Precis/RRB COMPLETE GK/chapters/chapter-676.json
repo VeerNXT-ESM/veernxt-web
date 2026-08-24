@@ -1,0 +1,131 @@
+{
+  "id": "c71zdgz",
+  "title": "Court vs Tribunal (EXAM FAVORITE)",
+  "order": 676,
+  "blocks": [
+    {
+      "id": "ghi6b25",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Tribunals are quasi-judicial bodies bound by the principles of natural justice, designed to ensure speedy and specialized adjudication without being tied down by rigid procedural technicalities.",
+      "id": "2wxz1ky"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Court of Law",
+        "Tribunal"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Broad and general jurisdiction over civil and criminal matters",
+          "Specialized jurisdiction restricted to specific administrative or statutory subjects"
+        ],
+        [
+          "Procedural Rules",
+          "Strictly governed by CPC, CrPC, and Indian Evidence Act",
+          "Guided by Principles of Natural Justice, free from strict evidence rules"
+        ],
+        [
+          "Composition",
+          "Presided over purely by trained judicial officers and judges",
+          "Comprises both judicial members and technical/administrative experts"
+        ],
+        [
+          "Inherent Powers",
+          "Possesses inherent powers vested by the State's judicial system",
+          "Possesses only statutory powers conferred by the specific establishing Act"
+        ]
+      ],
+      "id": "mhye7ho"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Part",
+          "value": "Part XIV-A",
+          "icon": "book"
+        },
+        {
+          "label": "Key Articles",
+          "value": "323A & 323B",
+          "icon": "info"
+        },
+        {
+          "label": "Added By",
+          "value": "42nd Amendment, 1976",
+          "icon": "calendar"
+        },
+        {
+          "label": "Recommended By",
+          "value": "Swaran Singh Committee",
+          "icon": "award"
+        }
+      ],
+      "id": "zd5t9q5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 323A allows ONLY Parliament to establish administrative tribunals, whereas Article 323B allows both Parliament and State Legislatures to establish tribunals for specific subjects.",
+        "In the landmark L. Chandra Kumar v. Union of India (1997) case, the Supreme Court held that judicial review under Articles 226/227 by High Courts is part of the basic structure of the Constitution.",
+        "Tribunals do not possess inherent judicial powers like traditional courts; their jurisdiction is strictly limited to what is conferred by the establishing statute."
+      ],
+      "id": "lwp3o9o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Courts are traditional judicial bodies possessing inherent judicial powers of the State, whereas tribunals are quasi-judicial bodies created by statute for specialized matters.",
+        "Courts are strictly bound by procedural codes such as the Code of Civil Procedure (CPC) and the Indian Evidence Act, whereas tribunals function primarily on the Principles of Natural Justice.",
+        "Part XIV-A was inserted into the Indian Constitution by the 42nd Constitutional Amendment Act, 1976, creating provisions for Administrative Tribunals (Article 323A) and Tribunals for other matters (Article 323B).",
+        "Members of a court are strictly judicial officers, whereas tribunals consist of both judicial members and technical or administrative experts."
+      ],
+      "id": "u5yfzdm"
+    }
+  ],
+  "enriched": true
+}

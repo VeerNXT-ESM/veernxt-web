@@ -1,0 +1,91 @@
+{
+  "id": "b8lverx",
+  "title": "Chapter 19: Central Vigilance Commission (CVC)",
+  "order": 500,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2aedlks"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission is the main agency for preventing corruption in the Central government.",
+      "id": "w5iot82"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Statutory Body (CVC Act, 2003)",
+          "Non-Statutory Body (Derives powers from DSPE Act, 1946)"
+        ],
+        [
+          "Primary Function",
+          "Advisory and supervisory vigilance body",
+          "Executive investigating agency"
+        ],
+        [
+          "Superintendence",
+          "Supervises CBI for corruption cases",
+          "Functions under Ministry of Personnel for administration"
+        ]
+      ],
+      "id": "fjqwopj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "2003",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure",
+          "value": "4 Yrs / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Selection Panel",
+          "value": "3 Members",
+          "icon": "check"
+        }
+      ],
+      "id": "7fhfdpl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CVC is a statutory body, NOT a constitutional body.",
+        "The tenure is 4 years or 65 years of age, unlike the typical 5 or 6-year terms seen in other bodies.",
+        "The selection committee includes the Leader of Opposition in the Lok Sabha, not the Rajya Sabha.",
+        "CVC exercises superintendence over the functioning of the CBI in relation to offences under the Prevention of Corruption Act."
+      ],
+      "id": "e78bo1f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Set up in 1964 by an executive resolution based on the recommendations of the Santhanam Committee on Prevention of Corruption.",
+        "Granted statutory status in September 2003 through the enactment of the Central Vigilance Commission Act.",
+        "Functions as a multi-member body comprising a Central Vigilance Commissioner (Chairperson) and not more than two Vigilance Commissioners.",
+        "Members are appointed by the President on the recommendation of a committee consisting of the Prime Minister, the Minister of Home Affairs, and the Leader of the Opposition in the Lok Sabha.",
+        "Commissioners hold office for a term of four years or until attaining 65 years of age, whichever is earlier, and are ineligible for further government employment."
+      ],
+      "id": "z5plq10"
+    }
+  ],
+  "enriched": true
+}

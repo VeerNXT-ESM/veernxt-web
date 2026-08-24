@@ -1,0 +1,484 @@
+{
+  "id": "bgsy9h8",
+  "title": "CHAPTER 12: BANKING TECHNOLOGY AND IT IN BANKING",
+  "order": 12,
+  "blocks": [
+    {
+      "id": "4rhxnd8",
+      "type": "heading",
+      "level": 2,
+      "content": "12.1 Core Banking System (CBS)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Core Banking System (CBS) centralizes database processing, enabling seamless 'Anywhere Banking' across all branch networks.",
+        "Payment infrastructure in India is managed by RBI (RTGS, NEFT) and NPCI (UPI, IMPS, NETC FASTag, AePS).",
+        "Open Banking utilizes secure Application Programming Interfaces (APIs) to permit controlled data sharing with fintech partners.",
+        "Bank IT infrastructure requires high availability through Primary Data Centers (DC) backed by geographically isolated Disaster Recovery (DR) sites.",
+        "RBI IT guidelines enforce strict Cyber Security Frameworks, regular Vulnerability Assessment & Penetration Testing (VAPT), and Security Operations Center (SOC) monitoring."
+      ],
+      "id": "lg4ic11"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CBS Availability",
+          "value": "24x7 Real-Time",
+          "icon": "clock"
+        },
+        {
+          "label": "Retail Payments Body",
+          "value": "NPCI",
+          "icon": "award"
+        },
+        {
+          "label": "RTGS Minimum Limit",
+          "value": "₹2 Lakhs",
+          "icon": "info"
+        },
+        {
+          "label": "VAPT Audit Mandate",
+          "value": "Bi-Annual",
+          "icon": "check"
+        }
+      ],
+      "id": "wtnj6k9"
+    },
+    {
+      "type": "paragraph",
+      "id": "dic8wrk"
+    },
+    {
+      "id": "ddkpk10",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 12: BANKING TECHNOLOGY AND IT IN BANKING",
+      "id": "rhu2lyb"
+    },
+    {
+      "id": "j3hogwu",
+      "type": "heading",
+      "level": 2,
+      "content": "12.2 Payment Systems in India (Technology Focus)"
+    },
+    {
+      "id": "9xun064",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "RTGS",
+        "NEFT"
+      ],
+      "rows": [
+        [
+          "Full Form",
+          "Real Time Gross Settlement",
+          "National Electronic Funds Transfer"
+        ],
+        [
+          "Settlement Basis",
+          "Gross (Real-Time per order)",
+          "Deferred Net Settlement (DNS)"
+        ],
+        [
+          "Batch Frequency",
+          "Continuous",
+          "Half-Hourly Batches (48 batches/day)"
+        ],
+        [
+          "Minimum Amount",
+          "₹2,000,000 (₹2 Lakhs)",
+          "No Minimum Limit"
+        ]
+      ],
+      "id": "fl55e3y"
+    },
+    {
+      "id": "1b3ot2e",
+      "type": "heading",
+      "level": 2,
+      "content": "12.3 Open Banking and APIs"
+    },
+    {
+      "id": "9yuxd0j",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zf9lfmo",
+      "type": "heading",
+      "level": 2,
+      "content": "12.4 IT Infrastructure for Banks"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "RTGS settles transactions continuously on an individual basis with a minimum threshold of ₹2 Lakhs, whereas NEFT settles in half-hourly net batches with no minimum limit.",
+        "NPCI (National Payments Corporation of India) was established in 2008 under the Payment and Settlement Systems Act, 2007.",
+        "RBI guidelines require regulated entities to report any major cyber security incident to the RBI within 2 to 6 hours of detection."
+      ],
+      "id": "a3lj6p2"
+    },
+    {
+      "id": "e3uwx61",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5rekwva",
+      "type": "heading",
+      "level": 2,
+      "content": "12.5 RBI IT Guidelines and Circulars"
+    },
+    {
+      "id": "sqkjd0x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

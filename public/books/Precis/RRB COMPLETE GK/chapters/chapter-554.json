@@ -1,0 +1,95 @@
+{
+  "id": "k8r3fzp",
+  "title": "7. SEBI and Mutual Funds",
+  "order": 554,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "n5k17ri"
+    },
+    {
+      "type": "pullQuote",
+      "content": "SEBI regulates the Indian securities market to protect the interests of investors and promote the development and regulation of the capital market.",
+      "id": "hbbk5sm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Open-Ended Mutual Funds",
+        "Close-Ended Mutual Funds"
+      ],
+      "rows": [
+        [
+          "Subscription",
+          "Available for continuous sale and repurchase at NAV",
+          "Open for subscription only during the New Fund Offer (NFO)"
+        ],
+        [
+          "Maturity Period",
+          "No fixed maturity period",
+          "Fixed maturity period (e.g., 3 to 5 years)"
+        ],
+        [
+          "Liquidity",
+          "Directly transacted through the Mutual Fund AMC",
+          "Traded on stock exchanges like shares after NFO closure"
+        ],
+        [
+          "Corpus Size",
+          "Flexible, changes continuously with entry and exit",
+          "Fixed corpus that remains constant throughout the scheme"
+        ]
+      ],
+      "id": "8rt5r9v"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SEBI Established",
+          "value": "1988",
+          "icon": "calendar"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "1992",
+          "icon": "award"
+        },
+        {
+          "label": "First MF (UTI)",
+          "value": "1963",
+          "icon": "book"
+        },
+        {
+          "label": "MF Regulations",
+          "value": "1996",
+          "icon": "check"
+        }
+      ],
+      "id": "ptr1s5h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "UTI was set up in 1963 under RBI initiative, but full regulatory control over all mutual funds was given to SEBI under the 1996 Regulations.",
+        "AMCs manage the fund portfolios, Trustees hold legal ownership of assets on behalf of investors, and Custodians hold securities in safe custody.",
+        "Frequently asked distinction: Open-ended funds permit continuous entry/exit at NAV, whereas Close-ended funds trade on stock exchanges with a fixed maturity."
+      ],
+      "id": "pib03mx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "SEBI was established as a statutory body on January 30, 1992, under the SEBI Act, 1992, to protect investor interests and regulate securities markets.",
+        "Unit Trust of India (UTI), established in 1963 by an Act of Parliament, was the first mutual fund in India.",
+        "Mutual funds in India are structured as a three-tier system comprising the Sponsor, Public Trust (Trustees), and Asset Management Company (AMC).",
+        "SEBI (Mutual Funds) Regulations, 1996 provide the comprehensive regulatory framework for all mutual funds operating in India.",
+        "Net Asset Value (NAV) represents the market value per unit of a mutual fund scheme and is calculated on a daily basis."
+      ],
+      "id": "vig3j6h"
+    }
+  ],
+  "enriched": true
+}

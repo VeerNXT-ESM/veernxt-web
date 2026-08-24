@@ -1,0 +1,95 @@
+{
+  "id": "9iorwdl",
+  "title": "7. Soil pH and Fertility",
+  "order": 173,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "f4opwxp"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil pH directly controls the chemical availability of essential plant nutrients and the biological activity of soil microorganisms.",
+      "id": "wm1dj6o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Acid Soils (pH < 6.5)",
+        "Alkaline/Sodic Soils (pH > 7.5)"
+      ],
+      "rows": [
+        [
+          "Dominant Cations",
+          "Hydrogen (H+) and Aluminum (Al3+)",
+          "Sodium (Na+), Calcium (Ca2+), and Magnesium (Mg2+)"
+        ],
+        [
+          "Nutrient Deficiencies",
+          "Nitrogen, Phosphorus, Calcium, Magnesium",
+          "Iron, Zinc, Manganese, Boron"
+        ],
+        [
+          "Primary Reclamation Material",
+          "Lime / Calcium Carbonate (CaCO3)",
+          "Gypsum / Calcium Sulfate (CaSO4·2H2O)"
+        ],
+        [
+          "Dominant Microorganisms",
+          "Fungi tolerate and dominate in acidic pH",
+          "Bacteria and Actinomycetes thrive in neutral to alkaline pH"
+        ]
+      ],
+      "id": "cb27awl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Optimum pH Range",
+          "value": "6.5 - 7.5",
+          "icon": "check"
+        },
+        {
+          "label": "Acid Soil Amender",
+          "value": "Lime (CaCO3)",
+          "icon": "award"
+        },
+        {
+          "label": "Sodic Soil Amender",
+          "value": "Gypsum (CaSO4)",
+          "icon": "info"
+        },
+        {
+          "label": "pH Measurement Scale",
+          "value": "0 to 14",
+          "icon": "book"
+        }
+      ],
+      "id": "1lpg2p3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Gypsum (CaSO4·2H2O) is used for sodic soil reclamation, whereas Agricultural Lime (CaCO3) is used for acid soil correction.",
+        "Phosphorus availability is severely reduced at low pH due to insoluble iron and aluminum phosphate formation, and at high pH due to calcium phosphate precipitation.",
+        "Soil buffering capacity refers to the inherent ability of a soil to resist rapid changes in its pH level."
+      ],
+      "id": "mcoyh9c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil pH measures the negative logarithm of hydrogen ion concentration [H+] in the soil solution.",
+        "Most essential plant macronutrients (N, P, K, Ca, Mg, S) reach maximum availability at a neutral pH range of 6.5 to 7.5.",
+        "Acidic soils (pH < 6.5) are commonly neutralized using agricultural liming materials such as calcium carbonate.",
+        "Sodic and saline-alkaline soils (pH > 8.5) are reclaimed by applying gypsum followed by leaching with clean water.",
+        "Micronutrients like Iron, Manganese, Zinc, and Copper become toxic at extremely low pH and deficient at high pH."
+      ],
+      "id": "wfo3kgo"
+    }
+  ],
+  "enriched": true
+}

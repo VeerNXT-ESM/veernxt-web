@@ -1,0 +1,89 @@
+{
+  "id": "9pqn7l8",
+  "title": "Length of a Degree of Latitude",
+  "order": 29,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "uwkr1cc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Because the Earth is an oblate spheroid, a degree of latitude is slightly longer at the poles than at the equator.",
+      "id": "ut5db8j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Latitude Region",
+        "Length of 1° Latitude",
+        "Curvature & Cause"
+      ],
+      "rows": [
+        [
+          "Equator (0°)",
+          "110.56 km (68.7 mi)",
+          "Greater curvature due to equatorial bulge"
+        ],
+        [
+          "Mid-Latitudes (45°)",
+          "111.13 km (69.0 mi)",
+          "Intermediate curvature"
+        ],
+        [
+          "Poles (90°)",
+          "111.69 km (69.4 mi)",
+          "Flatter curvature due to polar flattening"
+        ]
+      ],
+      "id": "g5ix8s6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Average Length",
+          "value": "111 km",
+          "icon": "book"
+        },
+        {
+          "label": "At Equator",
+          "value": "110.56 km",
+          "icon": "info"
+        },
+        {
+          "label": "At Poles",
+          "value": "111.69 km",
+          "icon": "check"
+        },
+        {
+          "label": "Total Variation",
+          "value": "1.13 km",
+          "icon": "clock"
+        }
+      ],
+      "id": "bqx33pg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam Trap: Students often incorrectly assume latitude degrees are longer at the equator; in fact, 1° of latitude is longest near the poles due to flattening.",
+        "Standard Conversion: For numerical problems, 1 degree of latitude is standardly approximated as 111 km (or 60 nautical miles).",
+        "Key Definition: 1 nautical mile equals 1 minute (1/60th of a degree) of latitude along a meridian."
+      ],
+      "id": "ispxtdx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The average linear distance for one degree of latitude is approximately 111 kilometers (69 miles).",
+        "Earth's shape is an oblate spheroid—flattened at the poles and bulging at the equator.",
+        "Due to this polar flattening, the curvature of the Earth is flatter near the poles, making a degree of latitude slightly longer at the poles (111.69 km) than at the equator (110.56 km).",
+        "Parallels of latitude are concentric circles that remain equidistant from one another everywhere on the globe."
+      ],
+      "id": "nj3vkq1"
+    }
+  ],
+  "enriched": true
+}

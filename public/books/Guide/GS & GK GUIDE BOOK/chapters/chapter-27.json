@@ -1,40 +1,40 @@
 {
-  "id": "o1cwobh",
+  "id": "bp617u2",
   "title": "Chapter 26: Panchayati Raj System",
   "order": 27,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "07v9lzl"
+      "id": "pdimpz9"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Constitutional Part",
-          "value": "Part IX",
+          "label": "Constitutional Act",
+          "value": "73rd Amendment, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Provisions",
+          "value": "Part IX (Art 243-243O)",
           "icon": "book"
         },
         {
-          "label": "Key Amendment",
-          "value": "73rd Amendment",
-          "icon": "award"
-        },
-        {
-          "label": "Governance Tiers",
-          "value": "3-Tier Structure",
+          "label": "System Structure",
+          "value": "3 Tiers",
           "icon": "check"
         },
         {
-          "label": "Constitutional Schedule",
-          "value": "11th Schedule",
-          "icon": "calendar"
+          "label": "11th Schedule Subjects",
+          "value": "29 Functional Items",
+          "icon": "award"
         }
       ],
-      "id": "44szc5p"
+      "id": "d7zcgjt"
     },
     {
-      "id": "wqwow9o",
+      "id": "8bf6n8l",
       "type": "heading",
       "level": 2,
       "content": "1. Background of Panchayati Raj"
@@ -43,37 +43,38 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Panchayati Raj System was granted constitutional status under Part IX through the 73rd Constitutional Amendment Act.",
-        "The structure consists of a three-tier setup: Gram Panchayat at the village level, Panchayat Samiti at the block level, and Zila Parishad at the district level.",
-        "Gram Sabha serves as the primary body composed of all registered voters in the village.",
-        "The 11th Schedule enumerates 29 functional matters entrusted to the Panchayats."
+        "The 73rd Constitutional Amendment Act, 1992 granted constitutional status to Panchayati Raj Institutions in India.",
+        "It added Part IX and the 11th Schedule to the Constitution, transferring 29 functional matters to local rural bodies.",
+        "Establishes a uniform 3-tier Panchayati Raj structure: Gram Panchayat (village), Panchayat Samiti (block), and Zila Parishad (district).",
+        "Gram Sabha forms the foundation of the Panchayati Raj system, comprising all registered voters residing in the village area.",
+        "Mandates 33% (one-third) reservation for women across all levels and a fixed 5-year term for every Panchayat."
       ],
-      "id": "z5u82uv"
+      "id": "li2pdxb"
     },
     {
       "type": "paragraph",
-      "id": "aa5bzbq"
+      "id": "doinbad"
     },
     {
       "type": "paragraph",
-      "id": "kdsg1g9"
+      "id": "5vrlfoh"
     },
     {
       "type": "paragraph",
-      "id": "5s78pzb"
+      "id": "brtvjmu"
     },
     {
       "type": "paragraph",
-      "id": "033c2cq"
+      "id": "i8x8fu3"
     },
     {
-      "id": "m8i1uxg",
+      "id": "4ehhf8m",
       "type": "heading",
       "level": 2,
       "content": "2. Constitutional Provisions (Part IX)"
     },
     {
-      "id": "47zqo7p",
+      "id": "kjnmvu7",
       "type": "table",
       "rows": [
         {
@@ -163,13 +164,13 @@
       ]
     },
     {
-      "id": "u7hh2qn",
+      "id": "6g569gv",
       "type": "heading",
       "level": 2,
       "content": "3. Three-Tier Structure"
     },
     {
-      "id": "9jia825",
+      "id": "9at9lqq",
       "type": "table",
       "rows": [
         {
@@ -203,48 +204,48 @@
       ]
     },
     {
-      "id": "pc7sfsa",
+      "id": "cnuv6jn",
       "type": "heading",
       "level": 2,
       "content": "4. Gram Sabha"
     },
     {
       "type": "paragraph",
-      "id": "29vlgpc"
+      "id": "686nql2"
     },
     {
       "type": "pullQuote",
-      "content": "Constitutional Provisions (Part IX)",
-      "id": "pup4agc"
+      "content": "The 73rd Constitutional Amendment Act, 1992 gave constitutional status to the Panchayati Raj institutions in India.",
+      "id": "ut0ep30"
     },
     {
       "type": "paragraph",
-      "id": "lz39ej3"
+      "id": "qyey8ot"
     },
     {
       "type": "paragraph",
-      "id": "czw63g8"
+      "id": "39x79v3"
     },
     {
-      "id": "iykbdnc",
+      "id": "wju5yye",
       "type": "heading",
       "level": 2,
       "content": "5. Gram Panchayat"
     },
     {
       "type": "paragraph",
-      "id": "nhbqxn8"
+      "id": "heu5z51"
     },
     {
       "type": "paragraph",
-      "id": "yaha8nc"
+      "id": "a7iyznl"
     },
     {
       "type": "paragraph",
-      "id": "bjlsphj"
+      "id": "yn57c9d"
     },
     {
-      "id": "gfbtq7m",
+      "id": "7fu0lw8",
       "type": "heading",
       "level": 2,
       "content": "6. Panchayat Samiti"
@@ -252,107 +253,111 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Tier Level",
-        "Panchayat Body",
-        "Primary Role"
+        "Level",
+        "Administrative Body",
+        "Executive Head",
+        "Primary Function"
       ],
       "rows": [
         [
           "Village Level",
           "Gram Panchayat",
-          "Direct execution of local development plans and basic village administration"
+          "Sarpanch",
+          "Direct implementation of village-level development schemes and welfare programs"
         ],
         [
-          "Block / Intermediate Level",
+          "Block Level",
           "Panchayat Samiti",
-          "Coordination and implementation of schemes across multiple Gram Panchayats"
+          "Block Pramukh / Chairperson",
+          "Coordinates and consolidates plans of all Gram Panchayats in the block"
         ],
         [
           "District Level",
           "Zila Parishad",
-          "Apex district body responsible for planning, supervision, and resource allocation"
+          "District Collector / Chairperson",
+          "District-level macro planning, supervision, and allocation of funds to blocks"
         ]
       ],
-      "id": "wx5ii41"
+      "id": "hw98kq0"
     },
     {
       "type": "paragraph",
-      "id": "hyj5x68"
+      "id": "eepu5ih"
     },
     {
       "type": "paragraph",
-      "id": "335q5hi"
+      "id": "9wk60do"
     },
     {
-      "id": "1614bbt",
+      "id": "zjo1arn",
       "type": "heading",
       "level": 2,
       "content": "7. Zila Parishad"
     },
     {
       "type": "paragraph",
-      "id": "ld036ic"
+      "id": "xhzf34n"
     },
     {
       "type": "paragraph",
-      "id": "s5sgjzf"
+      "id": "utmx582"
     },
     {
-      "id": "lu8c0dw",
+      "id": "78kwawk",
       "type": "heading",
       "level": 2,
       "content": "8. Key Features of the System"
     },
     {
       "type": "paragraph",
-      "id": "f27t0mr"
+      "id": "6hbwtkc"
     },
     {
       "type": "paragraph",
-      "id": "xb03u7a"
+      "id": "4e1p829"
     },
     {
       "type": "paragraph",
-      "id": "ccxrjh6"
+      "id": "uce6yph"
     },
     {
       "type": "paragraph",
-      "id": "ozmmf53"
+      "id": "7dbyuab"
     },
     {
       "type": "examAlert",
       "items": [
-        "73rd Constitutional Amendment Act added Part IX and the 11th Schedule (29 functional items) to the Constitution.",
-        "Gram Sabha is a permanent body comprising all persons registered in the electoral rolls of a village within the Panchayat area.",
-        "The three tiers are mandatory for states with a population exceeding 20 lakhs: Gram Panchayat (Village), Panchayat Samiti (Block), and Zila Parishad (District)."
+        "Balwant Rai Mehta Committee (1957) originally recommended the 3-tier Panchayati Raj system; Rajasthan was the first state to adopt it in Nagaur district on October 2, 1959.",
+        "Article 243I provides for the constitution of a State Finance Commission every 5 years, while Article 243K establishes the State Election Commission for local body elections.",
+        "Reservation for SCs and STs is proportional to their population, while not less than one-third of total seats are reserved for women under Article 243D."
       ],
-      "id": "vw0s8tw"
+      "id": "onlg8dj"
     },
     {
       "type": "paragraph",
-      "id": "uifiuur"
+      "id": "p57vuiy"
     },
     {
-      "id": "o2g0nq6",
+      "id": "xjh8or4",
       "type": "heading",
       "level": 2,
       "content": "EXAM Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "ypt4dvd"
+      "id": "lbe9vuc"
     },
     {
       "type": "paragraph",
-      "id": "5je05ca"
+      "id": "71kc3no"
     },
     {
       "type": "paragraph",
-      "id": "m867p3j"
+      "id": "g7psswq"
     },
     {
       "type": "paragraph",
-      "id": "xhk62ii"
+      "id": "fan4iwp"
     }
   ],
   "enriched": true

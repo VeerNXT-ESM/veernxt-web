@@ -1,0 +1,100 @@
+{
+  "id": "sd5fu3d",
+  "title": "Chapter 11: State Legislature – Legislative Assembly and Legislative Council",
+  "order": 378,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "869pxrj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Parliament can abolish a Legislative Council where it exists or create it where it does not exist, if the Legislative Assembly of the concerned state passes a resolution to that effect by a special majority.",
+      "id": "mki1n4i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Legislative Assembly (Vidhan Sabha)",
+        "Legislative Council (Vidhan Parishad)"
+      ],
+      "rows": [
+        [
+          "Nature of House",
+          "Directly elected popular house (Lower House)",
+          "Indirectly elected permanent house (Upper House)"
+        ],
+        [
+          "Tenure",
+          "5 years (subject to early dissolution)",
+          "Permanent body (1/3rd members retire every 2 years)"
+        ],
+        [
+          "Minimum Age",
+          "25 years",
+          "30 years"
+        ],
+        [
+          "Strength Limits",
+          "Max: 500 | Min: 60 (with exceptions)",
+          "Max: 1/3rd of Assembly | Min: 40"
+        ],
+        [
+          "Money Bill Power",
+          "Exclusive power to introduce and pass",
+          "Can only delay up to 14 days without amendments"
+        ]
+      ],
+      "id": "a4mnean"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Bicameral States",
+          "value": "6 States",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Articles",
+          "value": "Art. 168-212",
+          "icon": "info"
+        },
+        {
+          "label": "Assembly Tenure",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Max Assembly Strength",
+          "value": "500 Members",
+          "icon": "check"
+        }
+      ],
+      "id": "obien4v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Currently, only six states possess a bicameral legislature: Uttar Pradesh, Bihar, Maharashtra, Karnataka, Andhra Pradesh, and Telangana.",
+        "Unlike the Rajya Sabha at the Union level, the Legislative Council can be completely abolished by Parliament under Article 169.",
+        "In the case of Money Bills, the Legislative Council has virtually no powers and can withhold the bill for a maximum period of 14 days only."
+      ],
+      "id": "5416d5e"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The State Legislature consists of the Governor and the Legislative Assembly (Vidhan Sabha), plus the Legislative Council (Vidhan Parishad) in bicameral states.",
+        "Under Article 169, Parliament can create or abolish a Legislative Council if the State Assembly passes a resolution by a special majority.",
+        "The Legislative Assembly is directly elected by the people, having a maximum strength of 500 and a minimum strength of 60, subject to constitutional exceptions.",
+        "The Legislative Council is a permanent body not subject to dissolution, with one-third of its members retiring every two years.",
+        "The maximum strength of the Legislative Council is fixed at one-third of the total strength of the Legislative Assembly, with a constitutional minimum of 40."
+      ],
+      "id": "vweorzh"
+    }
+  ],
+  "enriched": true
+}

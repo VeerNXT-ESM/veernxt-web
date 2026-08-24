@@ -1,0 +1,247 @@
+{
+  "id": "dp32vup",
+  "title": "CHAPTER 14: GENETICS AND HEREDITY",
+  "order": 124,
+  "blocks": [
+    {
+      "id": "yec17m0",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Genetics – Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Gregor Mendel discovered the fundamental principles of inheritance through his experiments on garden pea plants (Pisum sativum).",
+        "Mendel formulated three laws of inheritance: Law of Dominance, Law of Segregation, and Law of Independent Assortment.",
+        "Genes are the basic functional units of heredity located on chromosomes and are composed of DNA.",
+        "Humans possess 23 pairs of chromosomes, including 22 pairs of autosomes and 1 pair of sex chromosomes (XX in females, XY in males).",
+        "Sex determination in humans is paternal, as the male sperm carries either an X or a Y chromosome to determine offspring sex."
+      ],
+      "id": "uj8gnjd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Father of Genetics",
+          "value": "Gregor Mendel",
+          "icon": "award"
+        },
+        {
+          "label": "Human Chromosomes",
+          "value": "46 (23 Pairs)",
+          "icon": "info"
+        },
+        {
+          "label": "Monohybrid Ratio",
+          "value": "3:1 (Phenotypic)",
+          "icon": "check"
+        },
+        {
+          "label": "Dihybrid Ratio",
+          "value": "9:3:3:1",
+          "icon": "book"
+        }
+      ],
+      "id": "2i2445l"
+    },
+    {
+      "type": "paragraph",
+      "id": "djfha5r"
+    },
+    {
+      "id": "pdo0k40",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Heredity – Meaning"
+    },
+    {
+      "type": "paragraph",
+      "id": "mm565c1"
+    },
+    {
+      "id": "jjbhzhe",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Variation"
+    },
+    {
+      "type": "paragraph",
+      "id": "2stfta4"
+    },
+    {
+      "id": "j4y6o4z",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Gregor Mendel – Father of Genetics"
+    },
+    {
+      "type": "paragraph",
+      "id": "ltsh0hh"
+    },
+    {
+      "id": "kkrspim",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Mendel’s Experiment"
+    },
+    {
+      "type": "paragraph",
+      "id": "aiyoslz"
+    },
+    {
+      "id": "uo2qglr",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mendel’s Law of Dominance"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Gregor Mendel is universally recognized as the Father of Genetics.",
+      "id": "awyl3tj"
+    },
+    {
+      "type": "paragraph",
+      "id": "8lrpc1z"
+    },
+    {
+      "id": "mmayy5e",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Mendel’s Law of Segregation"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ujyeb3"
+    },
+    {
+      "id": "ecpqgf3",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Mendel’s Law of Independent Assortment"
+    },
+    {
+      "type": "paragraph",
+      "id": "t4au9cn"
+    },
+    {
+      "id": "ap3qanf",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Monohybrid Cross"
+    },
+    {
+      "type": "paragraph",
+      "id": "x33mqwo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Monohybrid Cross",
+        "Dihybrid Cross"
+      ],
+      "rows": [
+        [
+          "Contrasting Traits Studied",
+          "1 Pair (e.g., Height)",
+          "2 Pairs (e.g., Seed shape & color)"
+        ],
+        [
+          "Phenotypic Ratio",
+          "3 : 1",
+          "9 : 3 : 3 : 1"
+        ],
+        [
+          "Genotypic Ratio",
+          "1 : 2 : 1",
+          "1:2:1:2:4:2:1:2:1"
+        ]
+      ],
+      "id": "1mt5hks"
+    },
+    {
+      "id": "8vv1o5p",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Dihybrid Cross"
+    },
+    {
+      "type": "paragraph",
+      "id": "8g9wjrq"
+    },
+    {
+      "id": "3o7q2xk",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Gene – Definition"
+    },
+    {
+      "type": "paragraph",
+      "id": "0b5wy3x"
+    },
+    {
+      "id": "zpqp6n9",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Chromosomes"
+    },
+    {
+      "type": "paragraph",
+      "id": "11a7w5f"
+    },
+    {
+      "id": "q9efdah",
+      "type": "heading",
+      "level": 2,
+      "content": "13. DNA – Genetic Material"
+    },
+    {
+      "type": "paragraph",
+      "id": "ez21q19"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Monohybrid Cross ratios: Phenotypic ratio is 3:1, Genotypic ratio is 1:2:1.",
+        "Dihybrid Cross Phenotypic ratio is strictly 9:3:3:1.",
+        "Down Syndrome is caused by the trisomy of chromosome 21, resulting in 47 total chromosomes.",
+        "Haemophilia and Color Blindness are frequently asked X-linked recessive genetic disorders."
+      ],
+      "id": "szh3zf0"
+    },
+    {
+      "id": "vo500g3",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Sex Determination in Humans"
+    },
+    {
+      "type": "paragraph",
+      "id": "i3u5f2a"
+    },
+    {
+      "id": "p6e79mk",
+      "type": "heading",
+      "level": 2,
+      "content": "15. Genetic Disorders"
+    },
+    {
+      "type": "paragraph",
+      "id": "kgv70x2"
+    },
+    {
+      "id": "l9l0tfv",
+      "type": "heading",
+      "level": 2,
+      "content": "16. IMPORTANT FACTS – SSC FOCUS"
+    },
+    {
+      "type": "paragraph",
+      "id": "u1kzy1w"
+    }
+  ],
+  "enriched": true
+}

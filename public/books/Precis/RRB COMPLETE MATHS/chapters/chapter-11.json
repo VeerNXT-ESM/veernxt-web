@@ -1,0 +1,502 @@
+{
+  "id": "irhgpt5",
+  "title": "CHAPTER 8 : SIMPLE INTEREST",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "n15wizv",
+      "type": "heading",
+      "level": 2,
+      "content": "FUNDAMENTAL CONCEPTS"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Simple Interest is calculated uniformly only on the initial principal amount throughout the entire period.",
+        "The Principal (P) remains constant for the entire duration of the loan or investment.",
+        "When time is given in months, it must be converted to years by dividing by 12 before applying the formula.",
+        "The total Amount (A) at the end of the tenure is the sum of the Principal and Simple Interest."
+      ],
+      "id": "23vg228"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Formula",
+          "value": "SI = (P×R×T)/100",
+          "icon": "book"
+        },
+        {
+          "label": "Total Amount",
+          "value": "A = P + SI",
+          "icon": "check"
+        },
+        {
+          "label": "Time Standard",
+          "value": "Years (T)",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Exams",
+          "value": "RRB & SSC",
+          "icon": "award"
+        }
+      ],
+      "id": "ckez7tw"
+    },
+    {
+      "type": "paragraph",
+      "id": "lk1lpsa"
+    },
+    {
+      "type": "paragraph",
+      "id": "wxxqvqe"
+    },
+    {
+      "type": "paragraph",
+      "id": "dxqpf80"
+    },
+    {
+      "type": "paragraph",
+      "id": "p6rbhay"
+    },
+    {
+      "id": "on7srou",
+      "type": "heading",
+      "level": 2,
+      "content": "MOST IMPORTANT FORMULAS"
+    },
+    {
+      "type": "paragraph",
+      "id": "npdcqk6"
+    },
+    {
+      "type": "paragraph",
+      "id": "ybg32tc"
+    },
+    {
+      "type": "paragraph",
+      "id": "v4n7za5"
+    },
+    {
+      "id": "qfc03t0",
+      "type": "heading",
+      "level": 2,
+      "content": "VERY IMPORTANT EXAM INSIGHTS"
+    },
+    {
+      "id": "1mkj3kh",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "cqn6sog"
+    },
+    {
+      "id": "d59lsp9",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4dglzgz",
+      "type": "heading",
+      "level": 2,
+      "content": "POWER SHORTCUT (FREQUENT RRB MODEL)"
+    },
+    {
+      "type": "paragraph",
+      "id": "dhce9j7"
+    },
+    {
+      "type": "paragraph",
+      "id": "iliz0q5"
+    },
+    {
+      "id": "5xgclmp",
+      "type": "heading",
+      "level": 2,
+      "content": "ADVANCED MODEL – DIFFERENCE BETWEEN AMOUNTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "g0eyjcw"
+    },
+    {
+      "type": "paragraph",
+      "id": "iovzjyr"
+    },
+    {
+      "type": "paragraph",
+      "id": "a3zzlwh"
+    },
+    {
+      "type": "paragraph",
+      "id": "7saji3p"
+    },
+    {
+      "id": "2m1c4sx",
+      "type": "heading",
+      "level": 2,
+      "content": "SOLVED EXAMPLES"
+    },
+    {
+      "id": "bj5yr40",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 1: Basic Simple Interest"
+    },
+    {
+      "type": "paragraph",
+      "id": "yoz6eod"
+    },
+    {
+      "type": "paragraph",
+      "id": "phb7h1w"
+    },
+    {
+      "type": "paragraph",
+      "id": "c583pyx"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ib3eif"
+    },
+    {
+      "type": "paragraph",
+      "id": "puoore9"
+    },
+    {
+      "type": "paragraph",
+      "id": "al3gtxu"
+    },
+    {
+      "id": "o6cvw89",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 2: Finding Amount"
+    },
+    {
+      "type": "paragraph",
+      "id": "u4lyg4a"
+    },
+    {
+      "type": "paragraph",
+      "id": "d1zwfmm"
+    },
+    {
+      "type": "paragraph",
+      "id": "v4p0tiq"
+    },
+    {
+      "type": "paragraph",
+      "id": "a6oao2i"
+    },
+    {
+      "type": "paragraph",
+      "id": "xolnznk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Simple Interest is calculated uniformly on the principal amount for the entire period of time.",
+      "id": "lzpq13w"
+    },
+    {
+      "type": "paragraph",
+      "id": "0dm0fbc"
+    },
+    {
+      "id": "hm4cfaw",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 3: Finding Rate"
+    },
+    {
+      "type": "paragraph",
+      "id": "11yjs44"
+    },
+    {
+      "type": "paragraph",
+      "id": "tj6ktdb"
+    },
+    {
+      "type": "paragraph",
+      "id": "wmwxgcl"
+    },
+    {
+      "type": "paragraph",
+      "id": "msp1ybj"
+    },
+    {
+      "type": "paragraph",
+      "id": "hvopxpw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mn6ggue"
+    },
+    {
+      "type": "paragraph",
+      "id": "cdpet08"
+    },
+    {
+      "id": "mvczeg1",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 4: Finding Time"
+    },
+    {
+      "type": "paragraph",
+      "id": "52a6f6n"
+    },
+    {
+      "type": "paragraph",
+      "id": "rx3z8yc"
+    },
+    {
+      "type": "paragraph",
+      "id": "gncl03c"
+    },
+    {
+      "type": "paragraph",
+      "id": "0qg4lny"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ff7ozj"
+    },
+    {
+      "id": "6jbqmf4",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 5: Months-Based Question"
+    },
+    {
+      "type": "paragraph",
+      "id": "7qnnx75"
+    },
+    {
+      "type": "paragraph",
+      "id": "sdrybm8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Simple Interest (SI)",
+        "Compound Interest (CI)"
+      ],
+      "rows": [
+        [
+          "Principal Base",
+          "Calculated only on the initial principal amount",
+          "Calculated on principal plus accumulated interest"
+        ],
+        [
+          "Yearly Growth",
+          "Interest amount remains constant every year",
+          "Interest amount increases progressively each year"
+        ],
+        [
+          "Formula",
+          "SI = (P × R × T) / 100",
+          "CI = P × (1 + R/100)^T - P"
+        ]
+      ],
+      "id": "btmc3h7"
+    },
+    {
+      "type": "paragraph",
+      "id": "d3ozezw"
+    },
+    {
+      "type": "paragraph",
+      "id": "4wkzgi8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u4g0p32"
+    },
+    {
+      "type": "paragraph",
+      "id": "y68avae"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "301gri4"
+    },
+    {
+      "type": "paragraph",
+      "id": "xk9ik7f"
+    },
+    {
+      "id": "kdzbkbu",
+      "type": "heading",
+      "level": 2,
+      "content": "PRACTICE QUESTIONS WITH ULTRA-DETAILED SOLUTIONS"
+    },
+    {
+      "id": "v3wwqke",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 1"
+    },
+    {
+      "type": "paragraph",
+      "id": "gvo2adi"
+    },
+    {
+      "type": "paragraph",
+      "id": "gzji2xd"
+    },
+    {
+      "type": "paragraph",
+      "id": "u4lyrud"
+    },
+    {
+      "type": "paragraph",
+      "id": "0swhkxf"
+    },
+    {
+      "id": "53u3b82",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "6nja5b5"
+    },
+    {
+      "type": "paragraph",
+      "id": "dcc7e4f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ylix4jf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "467nb7l"
+    },
+    {
+      "type": "paragraph",
+      "id": "k7jv5t4"
+    },
+    {
+      "id": "lj4wg3g",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 3"
+    },
+    {
+      "type": "paragraph",
+      "id": "mo61k4p"
+    },
+    {
+      "type": "paragraph",
+      "id": "dk4fklt"
+    },
+    {
+      "type": "paragraph",
+      "id": "3y196tc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zv60u6u"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always ensure time (T) is in years: convert months by dividing by 12, and days by dividing by 365.",
+        "In 'Sum becomes N times' questions, the Simple Interest earned is equal to (N - 1) × Principal.",
+        "For questions involving the difference between amounts over two different time periods, calculate interest per year by subtracting the two amounts."
+      ],
+      "id": "kigyppw"
+    },
+    {
+      "type": "paragraph",
+      "id": "sa3wtxa"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ll88wv"
+    },
+    {
+      "id": "8s977wp",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 4"
+    },
+    {
+      "type": "paragraph",
+      "id": "ryvkq7z"
+    },
+    {
+      "type": "paragraph",
+      "id": "fga0ues"
+    },
+    {
+      "type": "paragraph",
+      "id": "emscrtk"
+    },
+    {
+      "id": "7lhoerm",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 5"
+    },
+    {
+      "type": "paragraph",
+      "id": "rw1djt3"
+    },
+    {
+      "type": "paragraph",
+      "id": "vgbpe0j"
+    },
+    {
+      "type": "paragraph",
+      "id": "nytwriy"
+    },
+    {
+      "type": "paragraph",
+      "id": "u02ub2k"
+    },
+    {
+      "type": "paragraph",
+      "id": "osctce0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ps4jtzl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qpwh6mt"
+    },
+    {
+      "type": "paragraph",
+      "id": "5o2y4z2"
+    }
+  ],
+  "enriched": true
+}

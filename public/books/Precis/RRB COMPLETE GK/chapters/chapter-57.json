@@ -1,0 +1,84 @@
+{
+  "id": "0la0q01",
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 57,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2q48t0o"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Success in competitive examinations depends on consistent revision, accurate conceptual clarity, and rigorous practice.",
+      "id": "sbltyri"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Exam Stage",
+        "Core Objective",
+        "Recommended Strategy"
+      ],
+      "rows": [
+        [
+          "Preliminary Exam",
+          "Screening & Conceptual Recall",
+          "Objective practice, elimination techniques, and speed"
+        ],
+        [
+          "Mains Exam",
+          "Analytical Ability & Expression",
+          "Structured answer writing, diagrams, and concise presentation"
+        ]
+      ],
+      "id": "k09lf6s"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "1/3rd Mark",
+          "icon": "alert"
+        },
+        {
+          "label": "Core Focus",
+          "value": "GS & CSAT",
+          "icon": "book"
+        },
+        {
+          "label": "Revision Target",
+          "value": "3+ Rounds",
+          "icon": "check"
+        },
+        {
+          "label": "Current Affairs",
+          "value": "12 Months",
+          "icon": "calendar"
+        }
+      ],
+      "id": "m7lyo7q"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always read question stems carefully for qualifiers like 'NOT correct' or 'ONLY' to avoid trap answers.",
+        "Prioritize high-weightage topics such as Constitutional Amendments, Modern History timelines, and Key Economic Indicators.",
+        "Maintain a strict time budget per section during mock tests to simulate real exam conditions."
+      ],
+      "id": "a5ardnv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Thorough mastery of NCERT fundamentals is crucial for building a strong base in General Studies.",
+        "Solving Previous Years' Questions (PYQs) reveals recurring high-yield themes and question patterns.",
+        "Time management and eliminating options systematically minimize the impact of negative marking.",
+        "Interlinking static syllabus topics with recent current affairs enhances answer quality and retention."
+      ],
+      "id": "ps97wij"
+    }
+  ],
+  "enriched": true
+}

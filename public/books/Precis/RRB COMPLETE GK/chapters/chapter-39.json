@@ -1,0 +1,95 @@
+{
+  "id": "xdlcmro",
+  "title": "6. Geographic Grid",
+  "order": 39,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "49e5i6y"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The geographic grid forms an essential network of intersecting latitudes and longitudes that enables exact location pin-pointing and global time determination.",
+      "id": "qg1zp3u"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes (Parallels)",
+        "Longitudes (Meridians)"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "Run East-West parallel to the Equator",
+          "Run North-South from Pole to Pole"
+        ],
+        [
+          "Length of Lines",
+          "Decreases from Equator towards the Poles",
+          "All meridians are equal in length"
+        ],
+        [
+          "Total Number",
+          "181 parallels (179 full circle lines)",
+          "360 meridians"
+        ],
+        [
+          "Primary Application",
+          "Determining heat zones and distance",
+          "Determining local time and time zones"
+        ]
+      ],
+      "id": "s9haweo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Meridians",
+          "value": "360°",
+          "icon": "globe"
+        },
+        {
+          "label": "1° Longitude Time",
+          "value": "4 Mins",
+          "icon": "clock"
+        },
+        {
+          "label": "1° Latitude Distance",
+          "value": "~111 km",
+          "icon": "info"
+        },
+        {
+          "label": "IST Standard Meridian",
+          "value": "82°30' E",
+          "icon": "award"
+        }
+      ],
+      "id": "kdg408q"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tropic of Cancer (23°30' N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "Indian Standard Time (82°30' E) passes through 5 states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
+        "Crossing the International Date Line (180° Meridian) from West to East gains a day, while crossing East to West loses a day."
+      ],
+      "id": "hgb3tn1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The geographic grid is a network of intersecting parallels of latitude and meridians of longitude used to pinpoint exact locations on Earth.",
+        "Latitudes are parallel horizontal lines ranging from 0° at the Equator to 90° North and South at the Poles.",
+        "Longitudes are vertical semi-circles running from Pole to Pole, with 0° anchored at the Prime Meridian in Greenwich, London.",
+        "Because Earth rotates 360° in 24 hours, every 15° of longitude equals 1 hour of time difference, or 4 minutes per 1°.",
+        "Indian Standard Time (IST) is calculated from 82°30' E longitude, putting India 5 hours and 30 minutes ahead of GMT."
+      ],
+      "id": "fedgm4k"
+    }
+  ],
+  "enriched": true
+}

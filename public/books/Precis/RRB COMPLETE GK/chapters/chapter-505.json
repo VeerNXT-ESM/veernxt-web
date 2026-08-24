@@ -1,0 +1,129 @@
+{
+  "id": "y05tnto",
+  "title": "Tenure and Removal",
+  "order": 505,
+  "blocks": [
+    {
+      "id": "5vjf8oh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A judge of the Supreme Court shall not be removed from his office except by an order of the President passed after an address by each House of Parliament.",
+      "id": "u0nx4i1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years / 65 Age Limit",
+          "icon": "clock"
+        },
+        {
+          "label": "Removal Authority",
+          "value": "President of India",
+          "icon": "award"
+        },
+        {
+          "label": "Key Removal Ground",
+          "value": "Proved Misbehaviour",
+          "icon": "info"
+        },
+        {
+          "label": "SC Judge Age Limit",
+          "value": "65 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "tmxj9n3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Post",
+        "Tenure / Age Limit",
+        "Removal Authority & Process"
+      ],
+      "rows": [
+        [
+          "Supreme Court Judge",
+          "Until age of 65",
+          "President, on address by Parliament with special majority"
+        ],
+        [
+          "Comptroller & Auditor General (CAG)",
+          "6 years or 65 years of age",
+          "Same grounds and process as a SC Judge"
+        ],
+        [
+          "UPSC Chairman & Members",
+          "6 years or 65 years of age",
+          "President, following an inquiry report by the Supreme Court"
+        ],
+        [
+          "State Governor",
+          "5 years (Subject to Pleasure of President)",
+          "President at any time, without parliamentary process"
+        ]
+      ],
+      "id": "ko5ylse"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional body heads like CAG, CEC, and UPSC members hold office for 6 years or until 65 years of age, whichever is earlier.",
+        "Supreme Court judges hold office until 65 years of age, whereas High Court judges hold office until 62 years.",
+        "The Governor holds office during the pleasure of the President and lacks fixed security of tenure.",
+        "Removal of Supreme Court and High Court judges requires a special majority in both Houses of Parliament.",
+        "UPSC members can be removed by the President only after a Supreme Court inquiry confirms misbehaviour."
+      ],
+      "id": "englw5n"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate between offices holding tenure under 'Pleasure of the President' (e.g., Governor, Attorney General) vs 'Security of Tenure' (e.g., CAG, CEC).",
+        "Grounds for removal of SC/HC judges and CAG are strictly limited to 'proved misbehaviour' or 'incapacity'.",
+        "Note the retirement age difference: Supreme Court Judges (65 years) vs High Court Judges (62 years)."
+      ],
+      "id": "z4xk4w9"
+    },
+    {
+      "type": "paragraph",
+      "id": "gbnzcc7"
+    }
+  ],
+  "enriched": true
+}

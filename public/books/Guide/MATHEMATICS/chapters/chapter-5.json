@@ -1,0 +1,229 @@
+{
+  "id": "c7dujm0",
+  "title": "PART 8",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "khfhnjg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic",
+          "value": "Averages",
+          "icon": "book"
+        },
+        {
+          "label": "Core Modules",
+          "value": "6 Sections",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Formula",
+          "value": "Sum / Count",
+          "icon": "award"
+        },
+        {
+          "label": "Exam Importance",
+          "value": "High Weightage",
+          "icon": "info"
+        }
+      ],
+      "id": "buoh15c"
+    },
+    {
+      "id": "32ntp0n",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The basic average is calculated by dividing the sum of all observations by the total count of observations.",
+        "The total sum of a series can be easily found by multiplying the average by the number of observations.",
+        "Adding or removing a value from a group shifts the total sum and modifies the group average.",
+        "In age-related problems, time changes (past/future) must be applied equally to every individual in the group.",
+        "Weighted averages are used when combining multiple groups that have different sizes or weights."
+      ],
+      "id": "d1akl7h"
+    },
+    {
+      "id": "3ffsyfa",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "fke1ey9"
+    },
+    {
+      "id": "vim6th5",
+      "type": "heading",
+      "level": 2,
+      "content": "2. AVERAGE OF NUMBERS"
+    },
+    {
+      "id": "26v8s8k",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "t33wewm",
+      "type": "heading",
+      "level": 2,
+      "content": "3. FINDING SUM WHEN AVERAGE IS GIVEN"
+    },
+    {
+      "id": "b93w2kn",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "AVERAGE WHEN A VALUE IS ADDED OR REMOVED",
+      "id": "zkrw4vn"
+    },
+    {
+      "id": "zf0v0mu",
+      "type": "heading",
+      "level": 2,
+      "content": "4. AVERAGE WHEN A VALUE IS ADDED OR REMOVED"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ja4pra"
+    },
+    {
+      "id": "mob9ap4",
+      "type": "heading",
+      "level": 2,
+      "content": "5. AVERAGE OF AGES"
+    },
+    {
+      "type": "paragraph",
+      "id": "2vshggg"
+    },
+    {
+      "id": "try96jg",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Simple Average",
+        "Weighted Average"
+      ],
+      "rows": [
+        [
+          "Weight Distribution",
+          "Equal weight for every item",
+          "Varying weights assigned to different items"
+        ],
+        [
+          "Formula",
+          "Sum of Values / Total Count",
+          "Sum of (Value × Weight) / Total Weight"
+        ],
+        [
+          "Use Case",
+          "Single homogenous group of values",
+          "Combining groups with unequal sizes or importance"
+        ]
+      ],
+      "id": "fdvls21"
+    },
+    {
+      "id": "t8sswxe",
+      "type": "heading",
+      "level": 2,
+      "content": "6. WEIGHTED AVERAGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "nhgiz7b"
+    },
+    {
+      "id": "rb9hlin",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "0egnmdo",
+      "type": "heading",
+      "level": 2,
+      "content": "7. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "vaw8u7o"
+    },
+    {
+      "id": "slgc776",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions involving finding the weight or age of a newly added or replaced member are heavily tested.",
+        "In age questions, remember that if n years pass, the average age of a group of people also increases by n years.",
+        "Be careful to divide by the sum of weights, not the count of items, when calculating weighted averages."
+      ],
+      "id": "ulbh32f"
+    },
+    {
+      "type": "paragraph",
+      "id": "rb4hmoi"
+    },
+    {
+      "id": "31y1qei",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "9wjuam8"
+    },
+    {
+      "id": "bnruzvb",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yeqfo23"
+    }
+  ],
+  "enriched": true
+}

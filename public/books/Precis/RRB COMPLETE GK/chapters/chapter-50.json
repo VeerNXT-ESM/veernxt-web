@@ -1,0 +1,116 @@
+{
+  "id": "j5m742f",
+  "title": "4. Crust — Detailed Study",
+  "order": 50,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2ltlzlr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth's Volume",
+          "value": "< 1%",
+          "icon": "info"
+        },
+        {
+          "label": "Abundant Element",
+          "value": "46.6% O₂",
+          "icon": "award"
+        },
+        {
+          "label": "Continental Depth",
+          "value": "35–70 km",
+          "icon": "book"
+        },
+        {
+          "label": "Oceanic Depth",
+          "value": "5–10 km",
+          "icon": "clock"
+        }
+      ],
+      "id": "5xo0n65"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The crust is the outermost, ultra-thin solid skin of the Earth, divided into light continental sial and dense oceanic sima.",
+      "id": "m37sayu"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The crust is the outermost solid shell of Earth, comprising less than 1% of the planet's total volume.",
+        "Continental crust is predominantly composed of granitic rocks rich in silica and aluminium, collectively termed SIAL.",
+        "Oceanic crust is thinner, denser, and made up primarily of basaltic rocks rich in silica and magnesium, known as SIMA.",
+        "Oxygen is the most abundant element in the Earth's crust by weight (46.6%), followed by silicon (27.7%) and aluminium (8.1%).",
+        "The boundary marking the transition between the Earth's crust and the upper mantle is called the Mohorovičić discontinuity."
+      ],
+      "id": "596ppcm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Crust (SIAL)",
+        "Oceanic Crust (SIMA)"
+      ],
+      "rows": [
+        [
+          "Dominant Rock Type",
+          "Granitic (Felsic)",
+          "Basaltic (Mafic)"
+        ],
+        [
+          "Major Elements",
+          "Silica & Aluminium",
+          "Silica & Magnesium"
+        ],
+        [
+          "Average Thickness",
+          "30 km to 70 km",
+          "5 km to 10 km"
+        ],
+        [
+          "Average Density",
+          "2.7 g/cm³",
+          "3.0 g/cm³"
+        ],
+        [
+          "Relative Age",
+          "Older (up to 4 billion years)",
+          "Younger (rarely older than 200 million years)"
+        ]
+      ],
+      "id": "lb4h5xk"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ezghwl"
+    },
+    {
+      "type": "paragraph",
+      "id": "yq6l82l"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Oxygen is the most abundant element in the Earth's crust, whereas Iron is the most abundant element in the Earth as a whole.",
+        "The Mohorovičić discontinuity (Moho boundary) separates the crust from the mantle and is frequently asked in UPSC/SSC exams.",
+        "Continental crust (SIAL) is less dense (2.7 g/cm³) than oceanic crust (SIMA, 3.0 g/cm³), which causes continents to float higher on the mantle."
+      ],
+      "id": "ed0smpi"
+    },
+    {
+      "type": "paragraph",
+      "id": "xyejfwq"
+    },
+    {
+      "type": "paragraph",
+      "id": "h4boeb4"
+    }
+  ],
+  "enriched": true
+}

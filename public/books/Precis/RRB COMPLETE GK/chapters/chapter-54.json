@@ -1,0 +1,104 @@
+{
+  "id": "trr9q15",
+  "title": "8. Temperature and Pressure",
+  "order": 54,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yzh0e72"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Standard Sea Pressure",
+          "value": "1013.25 mb",
+          "icon": "info"
+        },
+        {
+          "label": "Normal Lapse Rate",
+          "value": "6.5°C / km",
+          "icon": "check"
+        },
+        {
+          "label": "Global Pressure Belts",
+          "value": "7 Belts",
+          "icon": "award"
+        },
+        {
+          "label": "Barometer Invented",
+          "value": "1643 AD",
+          "icon": "calendar"
+        }
+      ],
+      "id": "ze8vnx4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Atmospheric pressure is defined as the total weight of a column of air extending from sea level to the top of the atmosphere per unit area.",
+      "id": "kepis8q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Low Pressure System (Cyclone)",
+        "High Pressure System (Anticyclone)"
+      ],
+      "rows": [
+        [
+          "Air Motion",
+          "Converging and rising air",
+          "Diverging and sinking air"
+        ],
+        [
+          "Associated Weather",
+          "Cloudy, unstable, and precipitation-prone",
+          "Clear, calm, and stable weather"
+        ],
+        [
+          "Northern Hemisphere Wind",
+          "Counter-clockwise direction",
+          "Clockwise direction"
+        ],
+        [
+          "Southern Hemisphere Wind",
+          "Clockwise direction",
+          "Counter-clockwise direction"
+        ]
+      ],
+      "id": "inopheu"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Atmospheric pressure decreases exponentially with increasing altitude due to diminishing air density.",
+        "The normal lapse rate in the troposphere is the decrease of temperature at an average rate of 6.5°C per 1,000 meters of elevation.",
+        "Temperature inversion is an atmospheric condition where warm air overlies cooler air near the surface, reversing the normal lapse rate.",
+        "Isobars are lines on a meteorological map connecting places of equal atmospheric pressure reduced to sea level.",
+        "The Earth features seven primary pressure belts influenced by atmospheric heating and rotation: Equatorial Low, two Subtropical Highs, two Subpolar Lows, and two Polar Highs."
+      ],
+      "id": "ceqcbe4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Doldrums refer to the Equatorial Low Pressure Belt (5°N to 5°S) marked by calm winds and thermal convection.",
+        "Horse Latitudes refer to the Subtropical High Pressure Belts (30°N and 30°S) characterized by high pressure and descending air currents.",
+        "Ideal conditions for temperature inversion: long winter nights, clear skies, calm wind, and dry air near the ground.",
+        "Closely spaced isobars on a weather map indicate a steep pressure gradient force, resulting in high-speed winds."
+      ],
+      "id": "us63ekb"
+    },
+    {
+      "type": "paragraph",
+      "id": "v2s4jpv"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ll8ug5"
+    }
+  ],
+  "enriched": true
+}

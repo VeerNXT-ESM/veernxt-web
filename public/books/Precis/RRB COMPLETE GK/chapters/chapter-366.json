@@ -1,0 +1,134 @@
+{
+  "id": "2c3i9py",
+  "title": "Powers of the Governor",
+  "order": 366,
+  "blocks": [
+    {
+      "id": "ckdj3e1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor acts as a vital bridge between the Centre and the State, exercising constitutional functions with specified discretionary powers.",
+      "id": "7j469as"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "President",
+        "Governor"
+      ],
+      "rows": [
+        [
+          "Pardoning Power",
+          "Can pardon, reprieve, or commute death sentences and military court-martial sentences (Article 72).",
+          "Cannot pardon death sentences or court-martial sentences, but can suspend, remit, or commute them (Article 161)."
+        ],
+        [
+          "Ordinance Making Power",
+          "Promulgates ordinances under Article 123 when Parliament is not in session.",
+          "Promulgates ordinances under Article 213 when the State Legislature is not in session."
+        ],
+        [
+          "Constitutional Discretion",
+          "Has situational discretion but no express constitutional discretionary powers.",
+          "Has explicit constitutional discretionary powers granted under Article 163."
+        ]
+      ],
+      "id": "afv3zrc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Office of Governor",
+          "value": "Article 153",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Article 161",
+          "icon": "award"
+        },
+        {
+          "label": "Ordinance Power",
+          "value": "Article 213",
+          "icon": "check"
+        },
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "fpgtmzd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An ordinance promulgated by the Governor under Article 213 must be approved by the state legislature within six weeks from its reassembly.",
+        "The Governor cannot pardon a death sentence under Article 161; only the President holds the authority to pardon death sentences under Article 72.",
+        "The validity of any action taken by the Governor in their discretion cannot be called into question in any court of law under Article 163."
+      ],
+      "id": "74cskyg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor is the constitutional head of the state executive, functioning as a vital link between the Central Government and the State.",
+        "Under Article 213, the Governor has the legislative power to promulgate ordinances when the State Legislature is not in session.",
+        "Unlike the President, the Governor possesses explicit constitutional discretionary powers under Article 163.",
+        "The Governor can grant pardons, reprieves, respites, or remissions of punishment under Article 161, but lacks the power to pardon a death sentence.",
+        "All executive actions of the state government are formally taken in the name of the Governor."
+      ],
+      "id": "la81kf5"
+    }
+  ],
+  "enriched": true
+}

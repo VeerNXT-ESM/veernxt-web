@@ -1,0 +1,100 @@
+{
+  "id": "40suf50",
+  "title": "12. Municipalities – Urban Local Government",
+  "order": 406,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1bjoatr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Constitution (Seventy-Fourth Amendment) Act, 1992 came into force on June 1, 1993, constitutionalising urban local government.",
+      "id": "1nd2dop"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Municipal Corporation",
+        "Municipal Council"
+      ],
+      "rows": [
+        [
+          "Urban Area Type",
+          "Larger urban areas (major cities)",
+          "Smaller urban areas"
+        ],
+        [
+          "Political Head",
+          "Mayor (assisted by Deputy Mayor)",
+          "President / Chairperson"
+        ],
+        [
+          "Chief Executive Officer",
+          "Municipal Commissioner (usually an IAS officer)",
+          "Chief Municipal Officer (CMO)"
+        ],
+        [
+          "Creation Authority",
+          "State Legislature Act (or Parliament Act for UTs)",
+          "State Legislature Act"
+        ]
+      ],
+      "id": "qiyyp9z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Amendment Act",
+          "value": "74th CAA, 1992",
+          "icon": "award"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part IX-A",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Articles",
+          "value": "243-P to 243-ZG",
+          "icon": "info"
+        },
+        {
+          "label": "12th Schedule Matters",
+          "value": "18 Functions",
+          "icon": "check"
+        },
+        {
+          "label": "Enforcement Date",
+          "value": "June 1, 1993",
+          "icon": "calendar"
+        }
+      ],
+      "id": "9dbv49x"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between functional items: The 12th Schedule (Municipalities) contains 18 functions, whereas the 11th Schedule (Panchayats) contains 29 functions.",
+        "Cantonment Boards are created and administered directly by the Central Government under the Ministry of Defence, not by state enactments.",
+        "In Metropolitan Planning Committees (MPC), at least two-thirds of members must be elected by elected members of the municipalities and chairpersons of the Panchayats in the metropolitan area."
+      ],
+      "id": "vr4tti0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The 74th Constitutional Amendment Act, 1992 accorded constitutional status to urban local bodies in India.",
+        "The Act provides for three types of municipalities: Nagar Panchayat for transitional areas, Municipal Council for smaller urban areas, and Municipal Corporation for larger urban areas.",
+        "Mandates direct elections for all members of a municipality, with seats reserved for SCs, STs, and not less than one-third for women.",
+        "Fixed tenure of 5 years for every municipality, with elections required within 6 months of dissolution.",
+        "Constitutes District Planning Committees (Article 243-ZD) and Metropolitan Planning Committees (Article 243-ZE) to consolidate draft development plans."
+      ],
+      "id": "940s2zm"
+    }
+  ],
+  "enriched": true
+}

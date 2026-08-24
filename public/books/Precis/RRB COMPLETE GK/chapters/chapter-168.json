@@ -1,0 +1,110 @@
+{
+  "id": "6r0cam7",
+  "title": "2. Soil Formation (Pedogenesis)",
+  "order": 168,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "kg8dbv5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Soil Factors",
+          "value": "5 Key Variables",
+          "icon": "info"
+        },
+        {
+          "label": "Time Required",
+          "value": "200-400 Years/cm",
+          "icon": "clock"
+        },
+        {
+          "label": "Active Factors",
+          "value": "Climate & Biota",
+          "icon": "check"
+        },
+        {
+          "label": "Passive Factors",
+          "value": "Parent, Relief & Time",
+          "icon": "book"
+        }
+      ],
+      "id": "zv7lkcb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pedogenesis is the complex process of soil profile development influenced by weathering, organic matter accumulation, and leaching.",
+        "Hans Jenny defined soil formation as a function of five factors: Climate, Organisms, Relief, Parent Material, and Time: S = f(Cl, O, R, P, T).",
+        "Climate and living organisms are active factors of soil formation, while parent rock, topography, and time are passive factors.",
+        "Eluviation refers to the washing out of minerals from the A horizon, whereas illuviation is the accumulation of these minerals in the B horizon.",
+        "Laterization occurs in humid tropical zones resulting in silica leaching and concentration of iron and aluminum oxides."
+      ],
+      "id": "472ute3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil formation is a dynamic process where rock materials are transformed under the influence of climate, organisms, topography, and time.",
+      "id": "2xxj8h5"
+    },
+    {
+      "type": "paragraph",
+      "id": "vdss5pm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Process",
+        "Eluviation (Leaching)",
+        "Illuviation (Accumulation)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Movement and washing out of soil dissolved or suspended materials",
+          "Deposition and accumulation of washed-out minerals from above"
+        ],
+        [
+          "Soil Horizon",
+          "Horizon A and Horizon E (Exit horizon)",
+          "Horizon B (Zone of accumulation)"
+        ],
+        [
+          "Key Materials Involved",
+          "Clay, silicate minerals, iron, aluminum, and soluble organic compounds",
+          "Accumulated iron oxides, aluminum, silicate clays, and carbonates"
+        ]
+      ],
+      "id": "okvq6qt"
+    },
+    {
+      "type": "paragraph",
+      "id": "ssjhn70"
+    },
+    {
+      "type": "paragraph",
+      "id": "ogkqwu5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently ask to differentiate between Active Factors (Climate, Biosphere) and Passive Factors (Parent material, Relief, Time).",
+        "Remember the distinct soil horizons: 'E' is the horizon of maximum Eluviation, and 'B' is the horizon of Illuviation.",
+        "Podzolization occurs in cold, humid climates, whereas Laterization is characteristic of hot, wet tropical regions."
+      ],
+      "id": "xhqyqr9"
+    },
+    {
+      "type": "paragraph",
+      "id": "y75mj3k"
+    },
+    {
+      "type": "paragraph",
+      "id": "rkuvlxo"
+    }
+  ],
+  "enriched": true
+}

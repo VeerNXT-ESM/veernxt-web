@@ -1,0 +1,763 @@
+{
+  "id": "6pi3lt7",
+  "title": "CHAPTER 1 : CALCULATION TECHNIQUES AND MATHEMATICAL BASICS",
+  "order": 1,
+  "blocks": [
+    {
+      "id": "d4e1ygx",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Recommended Squares",
+          "value": "1–30",
+          "icon": "book"
+        },
+        {
+          "label": "Core Rule",
+          "value": "BODMAS",
+          "icon": "check"
+        },
+        {
+          "label": "Key Skill",
+          "value": "Fraction-Percent",
+          "icon": "award"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "Speed & Accuracy",
+          "icon": "clock"
+        }
+      ],
+      "id": "zi694ou"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Always follow the BODMAS order of operations: Brackets → Orders → Division → Multiplication → Addition → Subtraction.",
+        "Memorizing percentage-to-fraction equivalents and square values from 1 to 30 drastically cuts down calculation time.",
+        "Approximation strategies should be deployed when options are widely spaced and speed is prioritized over exact precision.",
+        "Developing shortcut techniques for fractions, decimals, ratios, and averages prevents common arithmetic mistakes under exam pressure."
+      ],
+      "id": "f2y9w7h"
+    },
+    {
+      "type": "paragraph",
+      "id": "43jotc9"
+    },
+    {
+      "type": "paragraph",
+      "id": "52por7w"
+    },
+    {
+      "id": "tyz85oq",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ua4jhxu"
+    },
+    {
+      "id": "xdg2rwy",
+      "type": "heading",
+      "level": 3,
+      "content": "The BODMAS Rule – Order of Operations"
+    },
+    {
+      "type": "paragraph",
+      "id": "flyoi5g"
+    },
+    {
+      "id": "50794r4",
+      "type": "heading",
+      "level": 3,
+      "content": "Brackets → Orders (powers/roots) → Division → Multiplication → Addition → Subtraction. Example:"
+    },
+    {
+      "type": "paragraph",
+      "id": "772el29"
+    },
+    {
+      "type": "paragraph",
+      "id": "wdrqtzn"
+    },
+    {
+      "type": "paragraph",
+      "id": "9pllj6q"
+    },
+    {
+      "type": "paragraph",
+      "id": "ugsjws0"
+    },
+    {
+      "type": "paragraph",
+      "id": "bpq60f8"
+    },
+    {
+      "id": "axm03va",
+      "type": "heading",
+      "level": 3,
+      "content": "Fraction Mastery – The Backbone of Fast Arithmetic"
+    },
+    {
+      "type": "paragraph",
+      "id": "ko3e68s"
+    },
+    {
+      "type": "paragraph",
+      "id": "rv9yc56"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ota2u6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9h3c4br"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nt2mcxw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "79e3gbm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3fgtksk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "610dm07"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k3fg051"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7ntfvux"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jrywy3t"
+    },
+    {
+      "type": "paragraph",
+      "id": "zftvklj"
+    },
+    {
+      "id": "u7yb7zh",
+      "type": "heading",
+      "level": 3,
+      "content": "Decimal Operations – Accuracy Matters"
+    },
+    {
+      "type": "paragraph",
+      "id": "fuh8r7l"
+    },
+    {
+      "type": "paragraph",
+      "id": "y4myefl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x5i2230"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9empnop"
+    },
+    {
+      "type": "paragraph",
+      "id": "3h2fr4v"
+    },
+    {
+      "type": "paragraph",
+      "id": "etzzehc"
+    },
+    {
+      "id": "tw2r9e0",
+      "type": "heading",
+      "level": 3,
+      "content": "Percentage–Fraction Equivalents (Extremely Important)"
+    },
+    {
+      "type": "paragraph",
+      "id": "seevdpm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hiptm3l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "whh2x29"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zuajc48"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dt26gps"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fobyovc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q628zdi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "it7x6ai"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e68bhnm"
+    },
+    {
+      "type": "paragraph",
+      "id": "oqpctv3"
+    },
+    {
+      "id": "3usefn1",
+      "type": "heading",
+      "level": 3,
+      "content": "Squares You Must Memorize (1–30 Recommended)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vmf5j0c"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "su52itb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "286dmgk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g8d3ipw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "txx6cyn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "08cwqx5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8pbb5tx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pkln6co"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7jgb4zu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Approximation Strategy – When Speed Matters More Than Precision",
+      "id": "cfwd2gu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iuyeuqw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ws3t2c2"
+    },
+    {
+      "id": "aj6y3uc",
+      "type": "heading",
+      "level": 3,
+      "content": "Cube Values for Fast Recognition"
+    },
+    {
+      "type": "paragraph",
+      "id": "6jrhqdx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "db50f0v"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4onrlk9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ktv3ojj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k9fq9n5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9naboth"
+    },
+    {
+      "type": "paragraph",
+      "id": "h76csyl"
+    },
+    {
+      "id": "h0j8ec0",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7q5p2pd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w93f50o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ljlmrxw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w7r6ytk"
+    },
+    {
+      "type": "paragraph",
+      "id": "3jn5gi8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aqilpxm"
+    },
+    {
+      "type": "paragraph",
+      "id": "isvodll"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cel6pdq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8572r2u"
+    },
+    {
+      "id": "3mdlo5d",
+      "type": "heading",
+      "level": 3,
+      "content": "Division Shortcuts"
+    },
+    {
+      "type": "paragraph",
+      "id": "k9tnqpc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xxgjjb3"
+    },
+    {
+      "type": "paragraph",
+      "id": "1tgacxk"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlq3gyc"
+    },
+    {
+      "type": "paragraph",
+      "id": "sdytas3"
+    },
+    {
+      "id": "8fk6tgf",
+      "type": "heading",
+      "level": 3,
+      "content": "Approximation Strategy – When Speed Matters More Than Precision"
+    },
+    {
+      "type": "paragraph",
+      "id": "e4v4xu9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Exact Calculation",
+        "Approximation Strategy"
+      ],
+      "rows": [
+        [
+          "Primary Goal",
+          "Absolute mathematical precision",
+          "Rapid option elimination"
+        ],
+        [
+          "Best Application",
+          "Close option choices or simple values",
+          "Data Interpretation and complex division"
+        ],
+        [
+          "Time Required",
+          "Higher time consumption",
+          "Significantly reduced calculation time"
+        ]
+      ],
+      "id": "bd0rk0a"
+    },
+    {
+      "type": "paragraph",
+      "id": "y8n84ke"
+    },
+    {
+      "type": "paragraph",
+      "id": "7t6v5e4"
+    },
+    {
+      "type": "paragraph",
+      "id": "cyq4584"
+    },
+    {
+      "id": "812h7d9",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "po80q7m"
+    },
+    {
+      "type": "paragraph",
+      "id": "btdir6l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x3bp78r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "r2f7fuk"
+    },
+    {
+      "type": "paragraph",
+      "id": "lhqtjn7"
+    },
+    {
+      "id": "ggkmtee",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mkppfe7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "577ju6o"
+    },
+    {
+      "type": "paragraph",
+      "id": "ncmrei9"
+    },
+    {
+      "id": "7p62ope",
+      "type": "heading",
+      "level": 3,
+      "content": "Ratio-Based Calculation Trick"
+    },
+    {
+      "type": "paragraph",
+      "id": "0igswp5"
+    },
+    {
+      "type": "paragraph",
+      "id": "xbcphy7"
+    },
+    {
+      "type": "paragraph",
+      "id": "t493aa9"
+    },
+    {
+      "id": "nbupcal",
+      "type": "heading",
+      "level": 3,
+      "content": "Average Shortcut"
+    },
+    {
+      "type": "paragraph",
+      "id": "tmwjo1p"
+    },
+    {
+      "type": "paragraph",
+      "id": "l7uu4ku"
+    },
+    {
+      "type": "paragraph",
+      "id": "bencvg8"
+    },
+    {
+      "id": "ql4nyjk",
+      "type": "heading",
+      "level": 3,
+      "content": "Common Calculation Mistakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "ybg9ihs"
+    },
+    {
+      "id": "kr37t8y",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "qp992f9",
+      "type": "heading",
+      "level": 3,
+      "content": "Speed Development Framework"
+    },
+    {
+      "type": "paragraph",
+      "id": "mjcvhua"
+    },
+    {
+      "id": "zirhdpg",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4st2hvv",
+      "type": "heading",
+      "level": 3,
+      "content": "Exam-Level Practice Questions with Solutions"
+    },
+    {
+      "type": "paragraph",
+      "id": "hgul4u5"
+    },
+    {
+      "type": "paragraph",
+      "id": "qfr1z8l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8l8j0nh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wicrf4n"
+    },
+    {
+      "type": "paragraph",
+      "id": "wplcylp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "67l8ge9"
+    },
+    {
+      "type": "paragraph",
+      "id": "jufokgm"
+    },
+    {
+      "type": "paragraph",
+      "id": "ypnlxc6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "BODMAS priority missteps are a major source of negative marking in simplification problems.",
+        "Converting complex percentage values into simplified fractions is frequently tested in Data Interpretation sets.",
+        "Decimal placement errors during division shortcuts are common traps designed by examiners."
+      ],
+      "id": "24idfym"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ah2het1"
+    },
+    {
+      "type": "paragraph",
+      "id": "r0fkxhe"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "70ezidu"
+    },
+    {
+      "type": "paragraph",
+      "id": "b5qmzeq"
+    },
+    {
+      "type": "paragraph",
+      "id": "qmwr7vo"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ix1cw0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wpoqr79"
+    },
+    {
+      "type": "paragraph",
+      "id": "96ovvx7"
+    },
+    {
+      "type": "paragraph",
+      "id": "wtk0yqg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yissb3n"
+    },
+    {
+      "type": "paragraph",
+      "id": "hz1uvcj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g9auhah"
+    },
+    {
+      "type": "paragraph",
+      "id": "gki90xw"
+    },
+    {
+      "type": "paragraph",
+      "id": "941tkqg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t2ln8rf"
+    },
+    {
+      "type": "paragraph",
+      "id": "u4kitdc"
+    },
+    {
+      "type": "paragraph",
+      "id": "sn537ot"
+    },
+    {
+      "type": "paragraph",
+      "id": "2krzmlm"
+    },
+    {
+      "type": "paragraph",
+      "id": "pmqgob9"
+    },
+    {
+      "type": "paragraph",
+      "id": "bim4g20"
+    },
+    {
+      "id": "46flacu",
+      "type": "heading",
+      "level": 3,
+      "content": "Final Insight"
+    },
+    {
+      "type": "paragraph",
+      "id": "1f09m3l"
+    }
+  ],
+  "enriched": true
+}

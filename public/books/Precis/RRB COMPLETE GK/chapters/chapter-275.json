@@ -1,0 +1,96 @@
+{
+  "id": "2mea0ec",
+  "title": "7. Right to Freedom (Articles 19–22)",
+  "order": 275,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "w3kfus1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "No person shall be deprived of his life or personal liberty except according to procedure established by law.",
+      "id": "k4q3r8i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Punitive Detention",
+        "Preventive Detention"
+      ],
+      "rows": [
+        [
+          "Objective",
+          "Punishes a person for an offense already committed after a trial",
+          "Detains a person to prevent them from committing an offense in the near future"
+        ],
+        [
+          "Judicial Trial",
+          "Requires a formal judicial trial and conviction by a court",
+          "Executed without any judicial trial or conviction by a court"
+        ],
+        [
+          "Maximum Duration",
+          "Determined by court sentencing based on statutory laws",
+          "Cannot exceed 3 months unless approved by an Advisory Board"
+        ],
+        [
+          "Legal Rights",
+          "Guarantees full right to consult and be defended by a legal practitioner",
+          "Right to representation is subject to statutory limitations and provisions"
+        ]
+      ],
+      "id": "2m03hai"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Articles Covered",
+          "value": "19–22",
+          "icon": "book"
+        },
+        {
+          "label": "Article 19 Freedoms",
+          "value": "6 Rights",
+          "icon": "check"
+        },
+        {
+          "label": "Right to Education",
+          "value": "86th Amendment",
+          "icon": "award"
+        },
+        {
+          "label": "Preventive Detention Limit",
+          "value": "3 Months",
+          "icon": "clock"
+        }
+      ],
+      "id": "ajf4ahs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Articles 20 and 21 cannot be suspended even during a National Emergency under Article 359.",
+        "Article 19 rights are automatically suspended only when a National Emergency is declared on grounds of war or external aggression, not armed rebellion.",
+        "Article 21A was inserted by the 86th Constitutional Amendment Act, 2002, and implemented via the RTE Act, 2009.",
+        "Preventive detention without Advisory Board approval cannot exceed 3 months."
+      ],
+      "id": "a2o3alc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 19 guarantees six basic fundamental freedoms exclusively to Indian citizens, subject to reasonable restrictions.",
+        "Article 20 provides protection against ex-post-facto criminal laws, double jeopardy, and self-incrimination.",
+        "Article 21 guarantees protection of life and personal liberty, which can only be deprived according to procedure established by law.",
+        "Article 21A mandates the State to provide free and compulsory education to all children aged 6 to 14 years.",
+        "Article 22 grants protection against arbitrary arrest and regulates both punitive and preventive detention."
+      ],
+      "id": "rfm7jfk"
+    }
+  ],
+  "enriched": true
+}

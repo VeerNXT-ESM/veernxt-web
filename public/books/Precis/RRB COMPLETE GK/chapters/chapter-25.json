@@ -1,0 +1,153 @@
+{
+  "id": "54jqkkr",
+  "title": "1. Latitudes : Meaning and Characteristics",
+  "order": 25,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ytgdxo4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Equator represents the zero degree latitude and is the longest parallel, dividing the Earth into two equal hemispheres.",
+      "id": "gsxv5tf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator",
+          "value": "0°",
+          "icon": "globe"
+        },
+        {
+          "label": "Total Latitudes",
+          "value": "181",
+          "icon": "book"
+        },
+        {
+          "label": "Distance Between",
+          "value": "~111 km",
+          "icon": "map"
+        },
+        {
+          "label": "Tropic of Cancer",
+          "value": "23.5° N",
+          "icon": "award"
+        },
+        {
+          "label": "Arctic Circle",
+          "value": "66.5° N",
+          "icon": "calendar"
+        }
+      ],
+      "id": "93y5p1z"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Latitude Name",
+        "Degree Value",
+        "Key Characteristics & Geographic Significance"
+      ],
+      "rows": [
+        [
+          "Equator",
+          "0°",
+          "Divides Earth into Northern and Southern Hemispheres; experiences equal day and night year-round."
+        ],
+        [
+          "Tropic of Cancer",
+          "23.5° N",
+          "Northernmost boundary of the Torrid Zone; receives vertical overhead rays of the sun during June Solstice."
+        ],
+        [
+          "Tropic of Capricorn",
+          "23.5° S",
+          "Southernmost boundary of the Torrid Zone; receives vertical overhead rays of the sun during December Solstice."
+        ],
+        [
+          "Arctic Circle",
+          "66.5° N",
+          "Boundary of the North Frigid Zone; marks the latitude above which 24-hour daylight/darkness occurs."
+        ],
+        [
+          "Antarctic Circle",
+          "66.5° S",
+          "Boundary of the South Frigid Zone; marks the latitude below which 24-hour daylight/darkness occurs."
+        ]
+      ],
+      "id": "32xcfif"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are imaginary angular distances measured north or south of the Equator from the center of the Earth.",
+        "The Equator (0°) is the largest latitude line, also called the Great Circle, which divides the Earth into the Northern and Southern Hemispheres.",
+        "All parallels of latitude are parallel to each other and decrease in circumference as they move from the Equator towards the poles.",
+        "The average distance between two consecutive degrees of latitude is approximately 111 km (69 miles).",
+        "Important parallels include the Tropic of Cancer (23.5° N), Tropic of Capricorn (23.5° S), Arctic Circle (66.5° N), and Antarctic Circle (66.5° S)."
+      ],
+      "id": "pg42w7u"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer (23.5° N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "Total number of parallels of latitude is 181 (including the Equator and both poles counted as points/lines); excluding poles, there are 179 circle parallels.",
+        "Unlike longitudes, latitude lines run parallel to each other from east to west and never intersect."
+      ],
+      "id": "twjgod3"
+    },
+    {
+      "id": "t1frdac",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

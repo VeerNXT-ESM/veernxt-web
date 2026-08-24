@@ -1,0 +1,95 @@
+{
+  "id": "0fv9xa4",
+  "title": "16. District Planning Committee (Article 243ZD)",
+  "order": 410,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "isrx9hh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Every State shall constitute at the district level a District Planning Committee to consolidate the plans prepared by the Panchayats and the Municipalities in the district and to prepare a draft development plan for the district as a whole.",
+      "id": "wj94bnf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "District Planning Committee (DPC)",
+        "Metropolitan Planning Committee (MPC)"
+      ],
+      "rows": [
+        [
+          "Constitutional Article",
+          "Article 243ZD",
+          "Article 243ZE"
+        ],
+        [
+          "Elected Member Ratio",
+          "At least 4/5th of total members",
+          "At least 2/3rd of total members"
+        ],
+        [
+          "Jurisdiction",
+          "Entire District (Rural & Urban)",
+          "Metropolitan Area (Population > 10 Lakhs)"
+        ],
+        [
+          "Main Function",
+          "Consolidates Panchayat & Municipality plans for District",
+          "Prepares draft development plan for Metropolitan area"
+        ]
+      ],
+      "id": "b4e69ij"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Article",
+          "value": "243ZD",
+          "icon": "book"
+        },
+        {
+          "label": "Elected Proportion",
+          "value": "4/5th",
+          "icon": "check"
+        },
+        {
+          "label": "Amendment",
+          "value": "74th CAA, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Scope",
+          "value": "District Level",
+          "icon": "award"
+        }
+      ],
+      "id": "x3vy9yz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Elected proportion trap: DPC requires at least 4/5th elected members, whereas Metropolitan Planning Committee (MPC) requires 2/3rd.",
+        "Constitutional Amendment: Introduced by the 74th Constitutional Amendment Act, 1992 under Part IX-A, even though it covers rural Panchayats.",
+        "Submission Authority: The DPC Chairperson forwards the draft development plan directly to the State Government."
+      ],
+      "id": "2610zja"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 243ZD mandates the constitution of a District Planning Committee (DPC) at the district level in every state.",
+        "Four-fifths (4/5th) of the total members of the DPC are elected by elected members of the district panchayat and municipalities from among themselves.",
+        "The representation of rural and urban population in the committee is proportional to the ratio between the rural and urban population of the district.",
+        "The DPC consolidates plans prepared by Panchayats and Municipalities to prepare a draft development plan for the district as a whole.",
+        "The Chairperson of the District Planning Committee forwards the consolidated draft development plan to the State Government."
+      ],
+      "id": "by5uieh"
+    }
+  ],
+  "enriched": true
+}

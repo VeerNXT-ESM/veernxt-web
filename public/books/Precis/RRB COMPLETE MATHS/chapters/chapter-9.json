@@ -1,0 +1,655 @@
+{
+  "id": "j7o4irk",
+  "title": "CHAPTER 7 : DISCOUNT",
+  "order": 9,
+  "blocks": [
+    {
+      "id": "5zcv27f",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT TERMS"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Discount is always calculated on the Marked Price (MP) to arrive at the final Selling Price (SP).",
+        "Successive discounts apply consecutive percentage reductions sequentially on the reduced price.",
+        "A Single Equivalent Discount combines multiple successive discount percentages into one effective overall discount rate.",
+        "Profit after discount depends directly on the relationship between Cost Price (CP), Marked Price (MP), and Selling Price (SP)."
+      ],
+      "id": "1vi94fv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "Discount & Markup",
+          "icon": "book"
+        },
+        {
+          "label": "High-Yield Topic",
+          "value": "Successive Discount",
+          "icon": "award"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "RRB Questions",
+          "icon": "check"
+        },
+        {
+          "label": "Key Concepts",
+          "value": "CP, MP & SP Models",
+          "icon": "info"
+        }
+      ],
+      "id": "mr2y6ui"
+    },
+    {
+      "type": "paragraph",
+      "id": "mq8813i"
+    },
+    {
+      "type": "paragraph",
+      "id": "ptaomki"
+    },
+    {
+      "id": "okktyhh",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT FORMULAS"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8bthoid"
+    },
+    {
+      "type": "paragraph",
+      "id": "gf6oq8r"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7u6jkv"
+    },
+    {
+      "id": "wh3mv0x",
+      "type": "heading",
+      "level": 2,
+      "content": "SMART EXAM TRICKS"
+    },
+    {
+      "id": "xcd3a0q",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "yelaa7g"
+    },
+    {
+      "id": "jhagt7u",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "7129ddd"
+    },
+    {
+      "id": "zq2wcrn",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "mvkfbf5"
+    },
+    {
+      "id": "z63qfhb",
+      "type": "heading",
+      "level": 2,
+      "content": "SUCCESSIVE DISCOUNT (VERY IMPORTANT)"
+    },
+    {
+      "type": "paragraph",
+      "id": "jg2w3be"
+    },
+    {
+      "type": "paragraph",
+      "id": "pxqpu0k"
+    },
+    {
+      "type": "paragraph",
+      "id": "r4hcqoo"
+    },
+    {
+      "type": "paragraph",
+      "id": "fju0jik"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f7hd809"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7fdh2k3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gcqhemx"
+    },
+    {
+      "id": "h73mlpn",
+      "type": "heading",
+      "level": 2,
+      "content": "MARKUP AND DISCOUNT MODEL (TOP RRB QUESTION)"
+    },
+    {
+      "type": "paragraph",
+      "id": "60mtosq"
+    },
+    {
+      "type": "paragraph",
+      "id": "nt0p4hm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bwpgtl7"
+    },
+    {
+      "type": "paragraph",
+      "id": "o4smt6b"
+    },
+    {
+      "type": "paragraph",
+      "id": "wmo5o1x"
+    },
+    {
+      "type": "paragraph",
+      "id": "l6guvyt"
+    },
+    {
+      "type": "paragraph",
+      "id": "w8l3dsl"
+    },
+    {
+      "id": "cmsrfb9",
+      "type": "heading",
+      "level": 2,
+      "content": "SINGLE EQUIVALENT DISCOUNT"
+    },
+    {
+      "type": "paragraph",
+      "id": "8tws78b"
+    },
+    {
+      "type": "paragraph",
+      "id": "xq80rqz"
+    },
+    {
+      "type": "paragraph",
+      "id": "urq97if"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "et5fas1"
+    },
+    {
+      "type": "paragraph",
+      "id": "i1jy0hl"
+    },
+    {
+      "type": "paragraph",
+      "id": "kwxsafh"
+    },
+    {
+      "id": "53vytyn",
+      "type": "heading",
+      "level": 2,
+      "content": "PROFIT AFTER DISCOUNT"
+    },
+    {
+      "type": "paragraph",
+      "id": "stp74rl"
+    },
+    {
+      "type": "paragraph",
+      "id": "e6t56a2"
+    },
+    {
+      "type": "paragraph",
+      "id": "9veloxj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9vqva6y"
+    },
+    {
+      "type": "paragraph",
+      "id": "7c93b0y"
+    },
+    {
+      "type": "paragraph",
+      "id": "ecmml48"
+    },
+    {
+      "id": "hj6nuvd",
+      "type": "heading",
+      "level": 2,
+      "content": "TWO ARTICLES WITH DIFFERENT DISCOUNTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "ulffjih"
+    },
+    {
+      "type": "paragraph",
+      "id": "9jtaqqn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s17b94p"
+    },
+    {
+      "type": "pullQuote",
+      "content": "MARKUP AND DISCOUNT MODEL (TOP RRB QUESTION)",
+      "id": "t8d95jt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z3nzu28"
+    },
+    {
+      "type": "paragraph",
+      "id": "c44brrh"
+    },
+    {
+      "type": "paragraph",
+      "id": "yizjdoo"
+    },
+    {
+      "id": "2hmpyec",
+      "type": "heading",
+      "level": 2,
+      "content": "SOLVED EXAMPLES"
+    },
+    {
+      "id": "8a43qhj",
+      "type": "heading",
+      "level": 3,
+      "content": "Solved Example 1"
+    },
+    {
+      "type": "paragraph",
+      "id": "onazwi1"
+    },
+    {
+      "type": "paragraph",
+      "id": "to0menc"
+    },
+    {
+      "type": "paragraph",
+      "id": "qd03509"
+    },
+    {
+      "type": "paragraph",
+      "id": "ximi9iq"
+    },
+    {
+      "type": "paragraph",
+      "id": "qx9461r"
+    },
+    {
+      "id": "6w4odga",
+      "type": "heading",
+      "level": 3,
+      "content": "Solved Example 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "sc4ezy2"
+    },
+    {
+      "type": "paragraph",
+      "id": "2zllo1h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hc9emq8"
+    },
+    {
+      "type": "paragraph",
+      "id": "kjbzwg3"
+    },
+    {
+      "type": "paragraph",
+      "id": "omej4wo"
+    },
+    {
+      "id": "n6lthju",
+      "type": "heading",
+      "level": 3,
+      "content": "Solved Example 3"
+    },
+    {
+      "type": "paragraph",
+      "id": "2iv8fzs"
+    },
+    {
+      "type": "paragraph",
+      "id": "fycn3k1"
+    },
+    {
+      "type": "paragraph",
+      "id": "003s11c"
+    },
+    {
+      "type": "paragraph",
+      "id": "micmh55"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6szem1d"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m5qzaxu"
+    },
+    {
+      "type": "paragraph",
+      "id": "ywzuniz"
+    },
+    {
+      "id": "sfjyhus",
+      "type": "heading",
+      "level": 3,
+      "content": "Solved Example 4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Cost Price (CP)",
+        "Marked Price (MP)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Initial price at which an article is purchased by the seller",
+          "Price printed or tagged on the article before offering discount"
+        ],
+        [
+          "Calculation Base",
+          "Base value used to calculate Profit Percentage or Loss Percentage",
+          "Base value used to calculate Discount Percentage"
+        ],
+        [
+          "Formula for SP",
+          "Selling Price = CP + Profit (or CP - Loss)",
+          "Selling Price = MP - Discount"
+        ]
+      ],
+      "id": "x1xakv1"
+    },
+    {
+      "type": "paragraph",
+      "id": "2nvory3"
+    },
+    {
+      "type": "paragraph",
+      "id": "dx84lp4"
+    },
+    {
+      "type": "paragraph",
+      "id": "wg8qrse"
+    },
+    {
+      "type": "paragraph",
+      "id": "w3oukxl"
+    },
+    {
+      "type": "paragraph",
+      "id": "dyiwmqp"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdd3xhu"
+    },
+    {
+      "type": "paragraph",
+      "id": "kdqi6g8"
+    },
+    {
+      "id": "ng4tlgt",
+      "type": "heading",
+      "level": 3,
+      "content": "Solved Example 5"
+    },
+    {
+      "type": "paragraph",
+      "id": "hm3mqpi"
+    },
+    {
+      "type": "paragraph",
+      "id": "2zwnhpx"
+    },
+    {
+      "type": "paragraph",
+      "id": "u0uc1o2"
+    },
+    {
+      "type": "paragraph",
+      "id": "tuu4xp1"
+    },
+    {
+      "type": "paragraph",
+      "id": "k3jucij"
+    },
+    {
+      "type": "paragraph",
+      "id": "c5xaqj0"
+    },
+    {
+      "type": "paragraph",
+      "id": "oskn6iy"
+    },
+    {
+      "type": "paragraph",
+      "id": "jynjcz6"
+    },
+    {
+      "id": "00f4v23",
+      "type": "heading",
+      "level": 2,
+      "content": "PRACTICE QUESTIONS WITH SOLUTIONS"
+    },
+    {
+      "id": "u8xcdvj",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 1"
+    },
+    {
+      "type": "paragraph",
+      "id": "iiin4tx"
+    },
+    {
+      "type": "paragraph",
+      "id": "ysxf62y"
+    },
+    {
+      "type": "paragraph",
+      "id": "qh3y56u"
+    },
+    {
+      "type": "paragraph",
+      "id": "r63lmh9"
+    },
+    {
+      "id": "i22l85b",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "vwyweq8"
+    },
+    {
+      "type": "paragraph",
+      "id": "01xsb6y"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lx4ltq2"
+    },
+    {
+      "type": "paragraph",
+      "id": "m63ctac"
+    },
+    {
+      "type": "paragraph",
+      "id": "5tl775p"
+    },
+    {
+      "id": "cjjct7g",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 3"
+    },
+    {
+      "type": "paragraph",
+      "id": "o0cr804"
+    },
+    {
+      "type": "paragraph",
+      "id": "rxx40tx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "blb0fpu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions on calculating single equivalent discount for two or more successive discounts are extremely high-frequency in RRB and competitive exams.",
+        "Markup percentage vs Discount percentage relationships frequently form the core of moderate-to-hard level profit and loss problems.",
+        "Always remember: Discount % = (Discount / Marked Price) × 100, whereas Profit % = (Profit / Cost Price) × 100."
+      ],
+      "id": "au5m6nn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jler54b"
+    },
+    {
+      "type": "paragraph",
+      "id": "gfnszf5"
+    },
+    {
+      "id": "yeqiaz3",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 4"
+    },
+    {
+      "type": "paragraph",
+      "id": "j2w11vp"
+    },
+    {
+      "type": "paragraph",
+      "id": "kwoadxi"
+    },
+    {
+      "type": "paragraph",
+      "id": "wi95s99"
+    },
+    {
+      "type": "paragraph",
+      "id": "0k27m1f"
+    },
+    {
+      "type": "paragraph",
+      "id": "lyn8lq5"
+    },
+    {
+      "type": "paragraph",
+      "id": "vadk3vy"
+    },
+    {
+      "type": "paragraph",
+      "id": "0jnbyz4"
+    },
+    {
+      "id": "0nsrk2e",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 5"
+    },
+    {
+      "type": "paragraph",
+      "id": "c2470wd"
+    },
+    {
+      "type": "paragraph",
+      "id": "lcf9kyy"
+    },
+    {
+      "type": "paragraph",
+      "id": "l2oqgo5"
+    },
+    {
+      "type": "paragraph",
+      "id": "lkogm69"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dpfdqq5"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ir02cm"
+    },
+    {
+      "type": "paragraph",
+      "id": "mhxnvna"
+    },
+    {
+      "type": "paragraph",
+      "id": "y7603aj"
+    },
+    {
+      "type": "paragraph",
+      "id": "u5o3hzi"
+    }
+  ],
+  "enriched": true
+}

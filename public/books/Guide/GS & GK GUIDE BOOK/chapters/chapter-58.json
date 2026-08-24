@@ -1,40 +1,40 @@
 {
-  "id": "arztgdn",
+  "id": "zowppi0",
   "title": "Chapter 9: Chemical Reactions",
   "order": 58,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "hc8nsxw"
+      "id": "ch3llua"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Main Sections",
-          "value": "10",
+          "label": "Main Reaction Types",
+          "value": "5 Primary Types",
           "icon": "book"
         },
         {
-          "label": "Core Concepts",
-          "value": "Balanced Equations",
+          "label": "Governing Principle",
+          "value": "Conservation of Mass",
           "icon": "check"
         },
         {
-          "label": "Key Processes",
-          "value": "Oxidation & Reduction",
-          "icon": "award"
+          "label": "Water Electrolysis Ratio",
+          "value": "2:1 (H2 : O2)",
+          "icon": "info"
         },
         {
-          "label": "Real-World Effects",
-          "value": "Corrosion & Rancidity",
-          "icon": "info"
+          "label": "Key Cause of Rancidity",
+          "value": "Lipid Oxidation",
+          "icon": "clock"
         }
       ],
-      "id": "bcu7hal"
+      "id": "mirujof"
     },
     {
-      "id": "vsdljbc",
+      "id": "c245qw7",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Chemical Reaction"
@@ -43,110 +43,110 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Chemical reactions represent processes where reactants transform into chemically distinct products.",
-        "A balanced chemical equation strictly adheres to the Law of Conservation of Mass.",
-        "Indicators such as color change, gas evolution, and temperature variation confirm a chemical reaction.",
-        "Oxidation involves the gain of oxygen or loss of electrons, whereas reduction involves the loss of oxygen or gain of electrons.",
-        "Corrosion and rancidity are natural degradation processes driven by oxidation reactions."
+        "Chemical reactions involve the breaking and forming of chemical bonds between atoms to produce new substances with entirely different properties.",
+        "A balanced chemical equation must have an equal number of atoms of each element on both sides to satisfy the Law of Conservation of Mass.",
+        "Key indicators of a chemical reaction include temperature change, evolution of a gas, color change, and formation of a precipitate.",
+        "Oxidation is defined as the gain of oxygen or loss of hydrogen/electrons, whereas reduction is the loss of oxygen or gain of hydrogen/electrons.",
+        "Exothermic reactions release thermal energy to the surroundings, whereas endothermic reactions absorb heat energy."
       ],
-      "id": "74h88h0"
+      "id": "3yzbrr5"
     },
     {
       "type": "paragraph",
-      "id": "9sqekmr"
+      "id": "3tmwejo"
     },
     {
       "type": "paragraph",
-      "id": "36l087t"
+      "id": "io0b1ve"
     },
     {
       "type": "paragraph",
-      "id": "mfgr1yw"
+      "id": "xntrg6s"
     },
     {
       "type": "paragraph",
-      "id": "x8fncb1"
+      "id": "ov6raj5"
     },
     {
-      "id": "oahnfwt",
+      "id": "cmh64ka",
       "type": "heading",
       "level": 2,
       "content": "2. Chemical Equation"
     },
     {
       "type": "paragraph",
-      "id": "bmmuqt7"
+      "id": "g1joqk4"
     },
     {
       "type": "paragraph",
-      "id": "h7yrbot"
+      "id": "iykjv9g"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dfv6ko4"
+      "id": "blaaae0"
     },
     {
-      "id": "5l58me3",
+      "id": "d1kohw1",
       "type": "heading",
       "level": 2,
       "content": "3. Balanced Chemical Equation"
     },
     {
       "type": "paragraph",
-      "id": "z8ntxw0"
+      "id": "c8x4rxj"
     },
     {
       "type": "paragraph",
-      "id": "j5dbqky"
+      "id": "ng7ycun"
     },
     {
       "type": "paragraph",
-      "id": "m0o2ga1"
+      "id": "1eqt12n"
     },
     {
-      "id": "4ajk3wd",
+      "id": "01ubhxo",
       "type": "heading",
       "level": 2,
       "content": "4. Indicators of Chemical Reaction"
     },
     {
       "type": "pullQuote",
-      "content": "Exothermic and Endothermic Reactions",
-      "id": "rwtsww1"
+      "content": "A balanced chemical equation must have an equal number of atoms of each element on both sides of the equation to satisfy the Law of Conservation of Mass.",
+      "id": "d41z6wu"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nrugnc8"
+      "id": "bc3bzow"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ogwanhc"
+      "id": "aih31pd"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "neehhmi"
+      "id": "40ghypj"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2egy7sx"
+      "id": "adctdbk"
     },
     {
       "type": "paragraph",
-      "id": "y2dzp8u"
+      "id": "gdnpqw2"
     },
     {
-      "id": "mnrnhdz",
+      "id": "3w79rmd",
       "type": "heading",
       "level": 2,
       "content": "5. Types of Chemical Reactions"
     },
     {
-      "id": "lek9ig1",
+      "id": "ki58d6x",
       "type": "table",
       "rows": [
         {
@@ -192,57 +192,62 @@
       ]
     },
     {
-      "id": "4xr3g2l",
+      "id": "ipqu1m3",
       "type": "heading",
       "level": 2,
       "content": "6. Oxidation and Reduction"
     },
     {
       "type": "paragraph",
-      "id": "z9zyg0i"
+      "id": "3q8j11q"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
-        "Exothermic Reactions",
-        "Endothermic Reactions"
+        "Parameter",
+        "Oxidation",
+        "Reduction"
       ],
       "rows": [
         [
-          "Heat Transfer",
-          "Releases heat energy to surroundings",
-          "Absorbs heat energy from surroundings"
+          "Oxygen Transfer",
+          "Gain of Oxygen",
+          "Loss of Oxygen"
         ],
         [
-          "Temperature Impact",
-          "Surrounding temperature rises",
-          "Surrounding temperature drops"
+          "Hydrogen Transfer",
+          "Loss of Hydrogen",
+          "Gain of Hydrogen"
         ],
         [
-          "Classic Examples",
-          "Combustion, Respiration",
-          "Photosynthesis, Thermal Decomposition"
+          "Electron Transfer",
+          "Loss of Electrons (LEO)",
+          "Gain of Electrons (GER)"
+        ],
+        [
+          "Oxidation State",
+          "Increase in Oxidation Number",
+          "Decrease in Oxidation Number"
         ]
       ],
-      "id": "t57y4ek"
+      "id": "r50mfoe"
     },
     {
       "type": "paragraph",
-      "id": "jgzbwr5"
+      "id": "81wlw6f"
     },
     {
       "type": "paragraph",
-      "id": "8eyljem"
+      "id": "nhq6izd"
     },
     {
-      "id": "w6zla9s",
+      "id": "qyvol7l",
       "type": "heading",
       "level": 2,
       "content": "7. Exothermic and Endothermic Reactions"
     },
     {
-      "id": "nhqz5e2",
+      "id": "2p9r6ya",
       "type": "table",
       "rows": [
         {
@@ -269,35 +274,35 @@
       ]
     },
     {
-      "id": "mw51ufe",
+      "id": "1zohaxw",
       "type": "heading",
       "level": 2,
       "content": "8. Corrosion"
     },
     {
       "type": "paragraph",
-      "id": "xy08fku"
+      "id": "9mjh0o1"
     },
     {
       "type": "paragraph",
-      "id": "n3r7smd"
+      "id": "v89ah4n"
     },
     {
       "type": "paragraph",
-      "id": "hz2ggz9"
+      "id": "txenqko"
     },
     {
-      "id": "ujzp3a4",
+      "id": "1tgy3sh",
       "type": "heading",
       "level": 2,
       "content": "9. Rancidity"
     },
     {
       "type": "paragraph",
-      "id": "hopauvx"
+      "id": "wdr429z"
     },
     {
-      "id": "yil1duw",
+      "id": "zlpo4un",
       "type": "heading",
       "level": 2,
       "content": "10. Catalysts"
@@ -305,41 +310,42 @@
     {
       "type": "examAlert",
       "items": [
-        "Questions frequently test balancing chemical equations using the atom-count conservation method.",
-        "Redox reactions require identifying which substance is oxidized, reduced, oxidizing agent, or reducing agent.",
-        "Catalysts increase reaction rates without being consumed or altered permanently in the overall process."
+        "Respiration is an exothermic process, whereas photosynthesis and thermal decomposition are endothermic processes.",
+        "Electrolysis of water produces hydrogen gas at the cathode and oxygen gas at the anode in a 2:1 volume ratio.",
+        "Galvanization protects iron from rusting by coating it with a thin layer of protective zinc metal.",
+        "Nitrogen gas is used to flush food items packaged with oils and fats to prevent spoilage via rancidity."
       ],
-      "id": "20loxim"
+      "id": "8pfivjw"
     },
     {
       "type": "paragraph",
-      "id": "kq79rl7"
+      "id": "mqkc2cv"
     },
     {
       "type": "paragraph",
-      "id": "8udvnut"
+      "id": "631waer"
     },
     {
-      "id": "w1lxbob",
+      "id": "ke4sxbh",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "2udplyn"
+      "id": "d8tgcut"
     },
     {
       "type": "paragraph",
-      "id": "k6ug588"
+      "id": "culvq0s"
     },
     {
       "type": "paragraph",
-      "id": "tizmgk9"
+      "id": "11prqcr"
     },
     {
       "type": "paragraph",
-      "id": "5csq41l"
+      "id": "nmocg53"
     }
   ],
   "enriched": true

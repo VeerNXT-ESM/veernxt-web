@@ -1,0 +1,142 @@
+{
+  "id": "6r8f96p",
+  "title": "Comparison: PFRDA vs RBI vs SEBI vs IRDAI",
+  "order": 598,
+  "blocks": [
+    {
+      "id": "02elexm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Each regulatory body in India operates under a distinct statutory mandate to ensure financial stability, market integrity, and consumer protection across their respective sectors.",
+      "id": "lsv8kks"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Regulator",
+        "Statutory Act",
+        "Primary Sector",
+        "Headquarters"
+      ],
+      "rows": [
+        [
+          "RBI",
+          "RBI Act, 1934",
+          "Banking & Monetary Policy",
+          "Mumbai"
+        ],
+        [
+          "SEBI",
+          "SEBI Act, 1992",
+          "Capital & Securities Markets",
+          "Mumbai"
+        ],
+        [
+          "IRDAI",
+          "IRDA Act, 1999",
+          "Insurance Industry",
+          "Hyderabad"
+        ],
+        [
+          "PFRDA",
+          "PFRDA Act, 2013",
+          "Pension Sector & NPS",
+          "New Delhi"
+        ]
+      ],
+      "id": "je8mvqo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Banking Regulator",
+          "value": "RBI",
+          "icon": "book"
+        },
+        {
+          "label": "Capital Market",
+          "value": "SEBI",
+          "icon": "award"
+        },
+        {
+          "label": "Insurance Sector",
+          "value": "IRDAI",
+          "icon": "check"
+        },
+        {
+          "label": "Pension Sector",
+          "value": "PFRDA",
+          "icon": "info"
+        }
+      ],
+      "id": "89f425p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "RBI was established on April 1, 1935, under the Reserve Bank of India Act, 1934, and was nationalized in 1949.",
+        "SEBI was given statutory status in 1992 through the SEBI Act following the Harshad Mehta scam.",
+        "IRDAI headquarters are located in Hyderabad, Telangana (relocated from New Delhi in 2001).",
+        "PFRDA achieved statutory status with the passage of the PFRDA Act in 2013."
+      ],
+      "id": "hrdf2o5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RBI oversees monetary policy, currency issuance, and banking regulation in India.",
+        "SEBI regulates capital markets, stock exchanges, and protects investor interests.",
+        "IRDAI regulates insurance company licensing, policyholder interests, and industry solvency norms.",
+        "PFRDA regulates the pension market, including the National Pension System (NPS) and Atal Pension Yojana (APY)."
+      ],
+      "id": "65jccee"
+    }
+  ],
+  "enriched": true
+}

@@ -1,35 +1,40 @@
 {
-  "id": "wekyxmy",
+  "id": "xd2v3n7",
   "title": "Chapter 8: Operating System",
   "order": 8,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "9cqkh98"
+      "id": "jvya2pm"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Primary Topic",
+          "label": "Core Subject",
           "value": "Operating System",
           "icon": "book"
         },
         {
-          "label": "Key Types Covered",
-          "value": "Batch, Time Sharing, Multiprocessing",
+          "label": "Key Types",
+          "value": "Batch, Time-Sharing, Multi-Proc",
+          "icon": "check"
+        },
+        {
+          "label": "Featured Platform",
+          "value": "Windows OS",
           "icon": "info"
         },
         {
-          "label": "Featured OS",
-          "value": "Windows OS Basics",
-          "icon": "check"
+          "label": "Exam Focus",
+          "value": "OS Functions & Desktop Basics",
+          "icon": "award"
         }
       ],
-      "id": "dsgayo1"
+      "id": "ktykrjl"
     },
     {
-      "id": "g7xwj6h",
+      "id": "hdmepmg",
       "type": "heading",
       "level": 2,
       "content": "8.1 Meaning of Operating System"
@@ -38,25 +43,26 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Operating System serves as the primary interface between computer hardware and the user.",
-        "Core OS types include Batch Operating Systems, Time Sharing Operating Systems, and Multiprocessing Operating Systems.",
-        "Key functions of an OS encompass resource management, task scheduling, memory control, and system security.",
-        "Windows OS basics include understanding its graphical user interface, key features, and essential desktop components."
+        "An Operating System acts as a crucial interface between computer hardware and the user.",
+        "Core functions include process management, memory allocation, device control, and file management.",
+        "Batch OS executes offline jobs sequentially, while Time Sharing OS allocates time slices to multiple interactive users.",
+        "Multiprocessing OS utilizes multiple CPUs to increase processing efficiency and throughput.",
+        "Windows OS provides a Graphical User Interface (GUI) featuring desktop components like the Start Menu, Taskbar, and Icons."
       ],
-      "id": "svi78gv"
+      "id": "errmfog"
     },
     {
       "type": "paragraph",
-      "id": "dri05dg"
+      "id": "ark3g7v"
     },
     {
-      "id": "ohc9877",
+      "id": "tf1xmmt",
       "type": "heading",
       "level": 3,
       "content": "8.1.1 Examples of Operating Systems"
     },
     {
-      "id": "cv63jkw",
+      "id": "7u1j02y",
       "type": "list",
       "items": [
         null,
@@ -67,13 +73,13 @@
       ]
     },
     {
-      "id": "vvivdxx",
+      "id": "9o7c3tj",
       "type": "heading",
       "level": 2,
       "content": "8.2 Functions of Operating System"
     },
     {
-      "id": "ana3fvv",
+      "id": "qkbj8qr",
       "type": "table",
       "rows": [
         {
@@ -128,38 +134,38 @@
       ]
     },
     {
-      "id": "d93mzgw",
+      "id": "kqrqgjn",
       "type": "heading",
       "level": 2,
       "content": "8.3 Types of Operating Systems"
     },
     {
       "type": "pullQuote",
-      "content": "Windows Operating System Basics",
-      "id": "6qduefk"
+      "content": "8.4 Windows Operating System Basics",
+      "id": "g36vqcr"
     },
     {
-      "id": "wi3cjpw",
+      "id": "b6l258o",
       "type": "heading",
       "level": 3,
       "content": "8.3.1 Batch Operating System"
     },
     {
       "type": "paragraph",
-      "id": "wp90a7t"
+      "id": "3iabcm8"
     },
     {
-      "id": "s5id15x",
+      "id": "w04p8rc",
       "type": "heading",
       "level": 3,
       "content": "8.3.2 Time Sharing Operating System"
     },
     {
       "type": "paragraph",
-      "id": "oqzzd9u"
+      "id": "0ej7n0m"
     },
     {
-      "id": "ki2sxo6",
+      "id": "ejd6iv2",
       "type": "heading",
       "level": 3,
       "content": "8.3.3 Multiprocessing Operating System"
@@ -167,37 +173,37 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "OS Type",
-        "Key Characteristics"
+        "Operating System Type",
+        "Key Characteristics & Processing Style"
       ],
       "rows": [
         [
           "Batch Operating System",
-          "Executes jobs grouped into batches sequentially without direct user interaction."
+          "Jobs with similar needs are batched together and executed sequentially without user interaction."
         ],
         [
           "Time Sharing Operating System",
-          "Allocates dedicated CPU time slices to multiple users or tasks concurrently."
+          "CPU time is divided into time slots (quanta) shared among multiple users for interactive execution."
         ],
         [
           "Multiprocessing Operating System",
-          "Utilizes two or more central processing units (CPUs) within a single system."
+          " Employs two or more central processing units (CPUs) working simultaneously within a single system."
         ]
       ],
-      "id": "pxglqk3"
+      "id": "fsk8rmk"
     },
     {
       "type": "paragraph",
-      "id": "i5j18b5"
+      "id": "ymz9nsv"
     },
     {
-      "id": "7l9gnxz",
+      "id": "dgyvgcp",
       "type": "heading",
       "level": 3,
       "content": "8.3.4 Other Types of Operating Systems"
     },
     {
-      "id": "w7grhk9",
+      "id": "38gnsai",
       "type": "table",
       "rows": [
         {
@@ -238,17 +244,17 @@
       ]
     },
     {
-      "id": "ozp26qu",
+      "id": "g9p2dig",
       "type": "heading",
       "level": 2,
       "content": "8.4 Windows Operating System Basics"
     },
     {
       "type": "paragraph",
-      "id": "u0igx1t"
+      "id": "7l6tlbo"
     },
     {
-      "id": "ejvdcza",
+      "id": "i6f5c9u",
       "type": "heading",
       "level": 3,
       "content": "8.4.1 Key Features of Windows OS"
@@ -256,14 +262,14 @@
     {
       "type": "examAlert",
       "items": [
-        "Distinguish between Batch, Time Sharing, and Multiprocessing systems as these are frequently queried in objective questions.",
-        "Memorize the essential functions of an Operating System, including process and memory management.",
-        "Review key features of the Windows OS and main components of the Windows Desktop for practical theory questions."
+        "Questions frequently test the core differences between Batch, Time Sharing, and Multiprocessing Operating Systems.",
+        "Be prepared to identify primary OS functions, particularly Memory Management and Process Scheduling.",
+        "Identify essential components of the Windows Desktop GUI like Taskbar, Icons, and System Tray for objective questions."
       ],
-      "id": "a16cayr"
+      "id": "ureswj2"
     },
     {
-      "id": "ck4egp4",
+      "id": "ld216gd",
       "type": "list",
       "items": [
         null,
@@ -274,13 +280,13 @@
       ]
     },
     {
-      "id": "664w4aq",
+      "id": "nh4o35v",
       "type": "heading",
       "level": 3,
       "content": "8.4.2 Main Components of Windows Desktop"
     },
     {
-      "id": "iwfrlub",
+      "id": "1ixmqua",
       "type": "table",
       "rows": [
         {
@@ -328,13 +334,13 @@
       ]
     },
     {
-      "id": "14eoec5",
+      "id": "kcqpim0",
       "type": "heading",
       "level": 2,
       "content": "8.5 Important Exam Points"
     },
     {
-      "id": "u0vv0xr",
+      "id": "t32o7cr",
       "type": "list",
       "items": [
         null,

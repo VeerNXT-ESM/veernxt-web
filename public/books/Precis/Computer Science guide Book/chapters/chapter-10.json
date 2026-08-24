@@ -1,0 +1,390 @@
+{
+  "id": "xujucyd",
+  "title": "Chapter 10: Data Representation",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "e9x3xi7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Binary Base",
+          "value": "Base 2",
+          "icon": "info"
+        },
+        {
+          "label": "Octal Base",
+          "value": "Base 8",
+          "icon": "check"
+        },
+        {
+          "label": "Decimal Base",
+          "value": "Base 10",
+          "icon": "book"
+        },
+        {
+          "label": "Hex Base",
+          "value": "Base 16",
+          "icon": "award"
+        },
+        {
+          "label": "ASCII Encoding",
+          "value": "7/8 Bits",
+          "icon": "clock"
+        }
+      ],
+      "id": "omzuv1w"
+    },
+    {
+      "id": "kug05af",
+      "type": "heading",
+      "level": 2,
+      "content": "10.1 Number System"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Digital computers use the binary number system (base 2) consisting of digits 0 and 1 for internal processing and storage.",
+        "Octal (base 8) and Hexadecimal (base 16) systems serve as shorthand representations of binary data.",
+        "Hexadecimal uses digits 0-9 and letters A-F to represent decimal values from 0 to 15.",
+        "Binary conversions require grouping bits in sets of 3 for Octal and sets of 4 for Hexadecimal.",
+        "ASCII stands for American Standard Code for Information Interchange and provides standardized encoding for text and characters."
+      ],
+      "id": "p25e452"
+    },
+    {
+      "type": "paragraph",
+      "id": "5qgbqyi"
+    },
+    {
+      "id": "8rdi3eu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s0cwwrt",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.1 Binary Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "bbuvict"
+    },
+    {
+      "id": "zpwnbuo",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.2 Octal Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "mp0inym"
+    },
+    {
+      "id": "ly6adg0",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.3 Decimal Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "iz2r0oa"
+    },
+    {
+      "type": "pullQuote",
+      "content": "ASCII (American Standard Code for Information Interchange)",
+      "id": "zxftfmg"
+    },
+    {
+      "id": "snl0gie",
+      "type": "heading",
+      "level": 3,
+      "content": "10.1.4 Hexadecimal Number System"
+    },
+    {
+      "type": "paragraph",
+      "id": "fjjyqt5"
+    },
+    {
+      "id": "xijeagq",
+      "type": "heading",
+      "level": 2,
+      "content": "10.2 Binary Conversions"
+    },
+    {
+      "id": "gdrwa5b",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.1 Decimal to Binary Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "vgx8vpv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Number System",
+        "Base (Radix)",
+        "Digits / Symbols Used",
+        "Bit Grouping"
+      ],
+      "rows": [
+        [
+          "Binary",
+          "2",
+          "0, 1",
+          "1 bit"
+        ],
+        [
+          "Octal",
+          "8",
+          "0 to 7",
+          "3 bits"
+        ],
+        [
+          "Decimal",
+          "10",
+          "0 to 9",
+          "N/A"
+        ],
+        [
+          "Hexadecimal",
+          "16",
+          "0 to 9, A to F",
+          "4 bits"
+        ]
+      ],
+      "id": "74ldyy6"
+    },
+    {
+      "id": "w48ak21",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.2 Binary to Decimal Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "jt71fw2"
+    },
+    {
+      "id": "81d3u2s",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.3 Binary to Octal Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "k7vxf24"
+    },
+    {
+      "id": "94gxq5z",
+      "type": "heading",
+      "level": 3,
+      "content": "10.2.4 Binary to Hexadecimal Conversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "yybvkvr"
+    },
+    {
+      "id": "on3uxep",
+      "type": "heading",
+      "level": 2,
+      "content": "10.3 ASCII (American Standard Code for Information Interchange)"
+    },
+    {
+      "type": "paragraph",
+      "id": "0dspfn4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "In Hexadecimal system, letter A represents decimal 10, B represents 11, up to F representing 15.",
+        "To convert Binary to Octal, group binary digits into groups of 3 bits from right to left.",
+        "To convert Binary to Hexadecimal, group binary digits into groups of 4 bits from right to left.",
+        "Standard 7-bit ASCII can represent up to 128 unique characters (2^7)."
+      ],
+      "id": "xzyd4we"
+    },
+    {
+      "id": "7houxm1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vfa1lr7",
+      "type": "heading",
+      "level": 2,
+      "content": "10.4 Comparison of Number Systems"
+    },
+    {
+      "id": "rtfd91z",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28lyuhk",
+      "type": "heading",
+      "level": 2,
+      "content": "10.5 Important Exam Points"
+    },
+    {
+      "id": "dkblq70",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

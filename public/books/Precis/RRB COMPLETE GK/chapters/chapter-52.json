@@ -1,0 +1,133 @@
+{
+  "id": "00gefjn",
+  "title": "6. Core — Detailed Study",
+  "order": 52,
+  "blocks": [
+    {
+      "id": "cw1miw5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Depth Range",
+          "value": "2,900 - 6,371 km",
+          "icon": "layers"
+        },
+        {
+          "label": "Composition",
+          "value": "Nickel & Iron (NIFE)",
+          "icon": "award"
+        },
+        {
+          "label": "Core Temperature",
+          "value": "4,400°C - 6,000°C",
+          "icon": "info"
+        },
+        {
+          "label": "Earth Volume Share",
+          "value": "16%",
+          "icon": "check"
+        }
+      ],
+      "id": "64sp2qk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The core constitutes about 16 percent of the Earth's volume but accounts for nearly 33 percent of its total mass due to its extraordinarily high density.",
+      "id": "kz0k0ne"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The core is the innermost layer of the Earth, extending from a depth of 2,900 km to the center at 6,371 km.",
+        "It is primarily composed of heavy metallic elements, predominantly Nickel (Ni) and Iron (Fe), earning it the acronym NIFE.",
+        "The outer core exists in a molten liquid state, while the inner core is solid despite extreme heat due to immense overburden pressure.",
+        "The Gutenberg Discontinuity marks the transition between the lower mantle and the outer core at a depth of 2,900 km.",
+        "The Lehman Discontinuity separates the liquid outer core from the solid inner core at approximately 5,150 km depth."
+      ],
+      "id": "avmdx3t"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Outer Core",
+        "Inner Core"
+      ],
+      "rows": [
+        [
+          "State of Matter",
+          "Liquid (Molten)",
+          "Solid"
+        ],
+        [
+          "Depth Range",
+          "2,900 km to 5,150 km",
+          "5,150 km to 6,371 km"
+        ],
+        [
+          "Average Density",
+          "9.9 – 12.2 g/cm³",
+          "12.6 – 13.0 g/cm³"
+        ],
+        [
+          "Seismic Behavior",
+          "S-waves blocked; P-waves refracted",
+          "P-waves pass at high velocity"
+        ]
+      ],
+      "id": "layyysf"
+    },
+    {
+      "type": "paragraph",
+      "id": "kppll0y"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "S-waves cannot pass through the liquid outer core, resulting in a large S-wave shadow zone between 105° and 105° from the epicenter.",
+        "Convective motion of molten iron in the liquid outer core combined with Earth's rotation drives the geodynamo effect, producing Earth's magnetic field.",
+        "P-wave velocity drops sharply at the mantle-core boundary (Gutenberg Discontinuity) before increasing again as it passes into the dense inner core."
+      ],
+      "id": "xvrir4r"
+    },
+    {
+      "type": "paragraph",
+      "id": "9igpaqb"
+    },
+    {
+      "type": "paragraph",
+      "id": "qoj1in4"
+    }
+  ],
+  "enriched": true
+}

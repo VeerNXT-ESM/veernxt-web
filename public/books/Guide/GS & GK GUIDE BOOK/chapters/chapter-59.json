@@ -1,18 +1,18 @@
 {
-  "id": "nm7xgbz",
+  "id": "710kyqc",
   "title": "Chapter 10: Acids, Bases and Salts",
   "order": 59,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "biyzc6q"
+      "id": "qemrzrn"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "pH Scale Range",
-          "value": "0 - 14",
+          "label": "pH Range",
+          "value": "0 to 14",
           "icon": "info"
         },
         {
@@ -22,19 +22,19 @@
         },
         {
           "label": "Acidic pH",
-          "value": "< 7",
-          "icon": "book"
+          "value": "< 7.0",
+          "icon": "clock"
         },
         {
           "label": "Basic pH",
-          "value": "> 7",
+          "value": "> 7.0",
           "icon": "award"
         }
       ],
-      "id": "mczicf1"
+      "id": "xb5bn4j"
     },
     {
-      "id": "3q0thmi",
+      "id": "2oclcul",
       "type": "heading",
       "level": 2,
       "content": "1. Acids"
@@ -43,114 +43,114 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Acids taste sour, turn blue litmus red, and release H+ ions in aqueous solutions.",
-        "Bases taste bitter, feel soapy, turn red litmus blue, and release OH- ions in aqueous solutions.",
-        "Alkalis are water-soluble bases such as Sodium Hydroxide (NaOH) and Potassium Hydroxide (KOH).",
-        "A neutralization reaction between an acid and a base produces salt and water.",
-        "The pH scale measures the concentration of hydrogen ions, where a lower pH indicates higher acidity."
+        "Acids release hydrogen ions (H+) in aqueous solutions, taste sour, and turn blue litmus paper red.",
+        "Bases release hydroxide ions (OH-) in water, taste bitter, feel soapy, and turn red litmus paper blue.",
+        "Alkalis are bases that dissolve completely in water, such as Sodium Hydroxide (NaOH) and Potassium Hydroxide (KOH).",
+        "The pH scale measures the hydrogen ion concentration, ranging from 0 (strongly acidic) to 14 (strongly alkaline).",
+        "A neutralization reaction occurs between an acid and a base to produce a salt and water."
       ],
-      "id": "42emx0x"
+      "id": "t3mc5tb"
     },
     {
       "type": "paragraph",
-      "id": "rcj7ff6"
+      "id": "cgrz6eu"
     },
     {
       "type": "paragraph",
-      "id": "v8yp72o"
+      "id": "77ow3c8"
     },
     {
       "type": "paragraph",
-      "id": "cjukqgi"
+      "id": "hbqi59d"
     },
     {
       "type": "paragraph",
-      "id": "vyd7sw9"
+      "id": "ds6uxfy"
     },
     {
       "type": "paragraph",
-      "id": "mr94cic"
+      "id": "jszobdv"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "eqa1ygr"
+      "id": "t7sxh69"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uuqelrs"
+      "id": "w9j2yz1"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rtjioan"
+      "id": "2fa2fbo"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6r4smq0"
+      "id": "bqb8fp7"
     },
     {
-      "id": "ux9lq9q",
+      "id": "b7olvx0",
       "type": "heading",
       "level": 2,
       "content": "2. Bases"
     },
     {
       "type": "paragraph",
-      "id": "47avr6i"
+      "id": "vku5qtr"
     },
     {
       "type": "paragraph",
-      "id": "qsuin0s"
+      "id": "ckf3i8r"
     },
     {
       "type": "paragraph",
-      "id": "zyzrln7"
+      "id": "9lfex51"
     },
     {
       "type": "paragraph",
-      "id": "zv95m0v"
+      "id": "i3lm6pa"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rfs4mcs"
+      "id": "4b17dxt"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e1v6wwv"
+      "id": "zzeazu6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o7mqp5q"
+      "id": "qnjn2fn"
     },
     {
       "type": "pullQuote",
-      "content": "All alkalis are bases, but not all bases are alkalis.",
-      "id": "2z321oq"
+      "content": "A neutralization reaction occurs when an acid reacts with a base to form salt and water.",
+      "id": "d69eqod"
     },
     {
-      "id": "5urr9px",
+      "id": "o28xegl",
       "type": "heading",
       "level": 2,
       "content": "3. Alkalis"
     },
     {
       "type": "paragraph",
-      "id": "1a9g4sf"
+      "id": "sz7anby"
     },
     {
-      "id": "invvuc3",
+      "id": "blgmuxx",
       "type": "heading",
       "level": 2,
       "content": "4. Properties of Acids and Bases"
     },
     {
-      "id": "wly12lp",
+      "id": "0nlfeqb",
       "type": "table",
       "rows": [
         {
@@ -196,36 +196,36 @@
       ]
     },
     {
-      "id": "hyhvtpk",
+      "id": "veki3ck",
       "type": "heading",
       "level": 2,
       "content": "5. Strength of Acids and Bases"
     },
     {
       "type": "paragraph",
-      "id": "a0atmwm"
+      "id": "qkvgkiy"
     },
     {
       "type": "paragraph",
-      "id": "hmd5ivo"
+      "id": "k1eha13"
     },
     {
       "type": "paragraph",
-      "id": "c8c853q"
+      "id": "tkat3dn"
     },
     {
       "type": "paragraph",
-      "id": "d0x74ob"
+      "id": "4lmk75q"
     },
     {
-      "id": "f018uy5",
+      "id": "ytazzv7",
       "type": "heading",
       "level": 2,
       "content": "6. pH Scale"
     },
     {
       "type": "paragraph",
-      "id": "6s519r9"
+      "id": "3t9blex"
     },
     {
       "type": "comparisonTable",
@@ -241,43 +241,48 @@
           "Bitter"
         ],
         [
-          "Litmus Test",
-          "Turns blue litmus red",
-          "Turns red litmus blue"
+          "Ions Produced in Water",
+          "H+ (Hydronium / H3O+)",
+          "OH- (Hydroxide)"
         ],
         [
-          "Ions in Solution",
-          "H+ / H3O+ ions",
-          "OH- ions"
+          "Litmus Paper Test",
+          "Turns Blue litmus Red",
+          "Turns Red litmus Blue"
         ],
         [
-          "pH Range",
-          "Less than 7",
-          "Greater than 7"
+          "Phenolphthalein Test",
+          "Remains Colorless",
+          "Turns Pink"
+        ],
+        [
+          "Texture / Feeling",
+          "Corrosive to skin",
+          "Slippery or Soapy"
         ]
       ],
-      "id": "1u37eop"
+      "id": "qj0j0ca"
     },
     {
       "type": "paragraph",
-      "id": "s9lokn8"
+      "id": "acfex1i"
     },
     {
       "type": "paragraph",
-      "id": "d68cbr8"
+      "id": "x9lpx3f"
     },
     {
       "type": "paragraph",
-      "id": "01rgoyf"
+      "id": "xknbdgf"
     },
     {
-      "id": "vz0htgo",
+      "id": "ju68n0l",
       "type": "heading",
       "level": 2,
       "content": "7. Indicators"
     },
     {
-      "id": "6i8mr6u",
+      "id": "mcnvbe0",
       "type": "table",
       "rows": [
         {
@@ -315,90 +320,90 @@
       ]
     },
     {
-      "id": "37hr6w2",
+      "id": "g68p1v8",
       "type": "heading",
       "level": 2,
       "content": "8. Neutralization Reaction"
     },
     {
       "type": "paragraph",
-      "id": "eaiwd9p"
+      "id": "v1m9hqz"
     },
     {
       "type": "paragraph",
-      "id": "8h4noew"
+      "id": "a8aj4hd"
     },
     {
       "type": "paragraph",
-      "id": "bkvh5zh"
+      "id": "ud3d9ba"
     },
     {
-      "id": "ta1cny2",
+      "id": "gizop61",
       "type": "heading",
       "level": 2,
       "content": "9. Salts"
     },
     {
       "type": "paragraph",
-      "id": "xxoauhv"
+      "id": "z33edf5"
     },
     {
       "type": "paragraph",
-      "id": "n2xnwlm"
+      "id": "qq5mumd"
     },
     {
       "type": "paragraph",
-      "id": "hjewzln"
+      "id": "k3xexz4"
     },
     {
       "type": "examAlert",
       "items": [
-        "Litmus is a natural indicator obtained from lichens belonging to the division Thallophyta.",
-        "Plaster of Paris has the chemical formula CaSO4·1/2H2O and hardens into Gypsum (CaSO4·2H2O) upon mixing with water.",
-        "Ant stings contain Methanoic acid (Formic acid), which can be neutralized using mild bases like baking soda (NaHCO3).",
-        "Bleaching powder is chemically represented as Calcium Oxychloride (CaOCl2)."
+        "Litmus is a natural indicator derived from lichens; phenolphthalein turns pink in basic solutions and colorless in acidic solutions.",
+        "Strong acids (e.g., HCl, H2SO4, HNO3) dissociate completely in water, while weak acids (e.g., CH3COOH) dissociate partially.",
+        "Important commercial formulas often asked: Baking Soda (NaHCO3), Washing Soda (Na2CO3·10H2O), and Plaster of Paris (CaSO4·1/2H2O).",
+        "Rainwater is considered acid rain when its pH drops below 5.6 due to dissolved oxides of nitrogen and sulfur."
       ],
-      "id": "uammrj7"
+      "id": "q7qiyi0"
     },
     {
-      "id": "hs6qws3",
+      "id": "wbz7sbb",
       "type": "heading",
       "level": 2,
       "content": "10. Uses of Acids, Bases and Salts"
     },
     {
       "type": "paragraph",
-      "id": "khrkj0w"
+      "id": "g68ywpz"
     },
     {
       "type": "paragraph",
-      "id": "zi69cwk"
+      "id": "ic02k5i"
     },
     {
       "type": "paragraph",
-      "id": "ppluxo1"
+      "id": "af60c6n"
     },
     {
-      "id": "fqbng3o",
+      "id": "el6els1",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "ck4pzr5"
+      "id": "l52bm6x"
     },
     {
       "type": "paragraph",
-      "id": "7gwb22v"
+      "id": "ltvpfe7"
     },
     {
       "type": "paragraph",
-      "id": "l0m4rcw"
+      "id": "5lhmctm"
     },
     {
       "type": "paragraph",
-      "id": "4ejti9d"
+      "id": "5swmhbj"
     }
   ],
   "enriched": true

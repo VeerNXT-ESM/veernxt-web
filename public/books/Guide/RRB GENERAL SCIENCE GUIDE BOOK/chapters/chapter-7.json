@@ -1,0 +1,335 @@
+{
+  "id": "xobb67z",
+  "title": "Chapter 7: Electricity and Magnetism",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "35hi4da"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "check"
+        },
+        {
+          "label": "SI Unit of Voltage",
+          "value": "Volt (V)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Resistance",
+          "value": "Ohm (Ω)",
+          "icon": "award"
+        },
+        {
+          "label": "Core Equation",
+          "value": "V = I × R",
+          "icon": "book"
+        }
+      ],
+      "id": "9yy6n1e"
+    },
+    {
+      "id": "vrxijaf",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Electricity"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric current is defined as the rate of flow of electric charges (electrons) through a conductor.",
+        "Voltage or potential difference drives electric current and is measured in Volts.",
+        "Ohm’s Law dictates that current flowing through a conductor is directly proportional to the potential difference across its ends.",
+        "Electric power is the rate at which electrical energy is transferred in an electric circuit (P = V × I).",
+        "Magnets always exist as dipoles (North and South poles); isolated magnetic monopoles do not exist.",
+        "An electromagnet's strength can be controlled by altering the current or increasing the number of coil turns."
+      ],
+      "id": "ijy9gjm"
+    },
+    {
+      "type": "paragraph",
+      "id": "50ujpth"
+    },
+    {
+      "type": "paragraph",
+      "id": "aze59lp"
+    },
+    {
+      "type": "paragraph",
+      "id": "u5v2zfg"
+    },
+    {
+      "type": "paragraph",
+      "id": "isqr1d2"
+    },
+    {
+      "id": "q18kkk4",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Electric Current"
+    },
+    {
+      "type": "paragraph",
+      "id": "29solr3"
+    },
+    {
+      "type": "paragraph",
+      "id": "spgl7wi"
+    },
+    {
+      "type": "paragraph",
+      "id": "70rqgty"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wqftkp2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pg2y5cs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d5597mn"
+    },
+    {
+      "id": "mj3anig",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Voltage"
+    },
+    {
+      "type": "paragraph",
+      "id": "uztw2eh"
+    },
+    {
+      "type": "paragraph",
+      "id": "gylfbt3"
+    },
+    {
+      "id": "d8px8bq",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Resistance"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ohm’s Law states that electric current is directly proportional to voltage and inversely proportional to resistance.",
+      "id": "aw8d8s2"
+    },
+    {
+      "type": "paragraph",
+      "id": "cfba5e7"
+    },
+    {
+      "type": "paragraph",
+      "id": "6qv5u3g"
+    },
+    {
+      "id": "3lohfyg",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Ohm’s Law"
+    },
+    {
+      "type": "paragraph",
+      "id": "06egeex"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ijm7715"
+    },
+    {
+      "id": "rbdzp44",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Electric Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "ryryc7x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g5tgcoo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ggihfe"
+    },
+    {
+      "id": "f3w82r0",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Electric Circuits"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Series Circuit",
+        "Parallel Circuit"
+      ],
+      "rows": [
+        [
+          "Current Flow",
+          "Same current through all components",
+          "Current divides among parallel paths"
+        ],
+        [
+          "Voltage Distribution",
+          "Voltage drops across each resistor",
+          "Same voltage across all components"
+        ],
+        [
+          "Total Resistance",
+          "Req = R1 + R2 + ... (Increases overall resistance)",
+          "1/Req = 1/R1 + 1/R2 + ... (Decreases overall resistance)"
+        ],
+        [
+          "Fault Impact",
+          "If one component fails, the entire circuit stops working",
+          "If one branch fails, other branches continue operating"
+        ]
+      ],
+      "id": "5vnxrzg"
+    },
+    {
+      "id": "77r1s9i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rdtbwws",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Magnetism"
+    },
+    {
+      "type": "paragraph",
+      "id": "3c5x0zr"
+    },
+    {
+      "type": "paragraph",
+      "id": "wa4eqtz"
+    },
+    {
+      "id": "wkzu0mm",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Properties of Magnets"
+    },
+    {
+      "type": "paragraph",
+      "id": "wzaevjl"
+    },
+    {
+      "type": "paragraph",
+      "id": "hy1fmh5"
+    },
+    {
+      "type": "paragraph",
+      "id": "2djt5m3"
+    },
+    {
+      "type": "paragraph",
+      "id": "mzxmz40"
+    },
+    {
+      "id": "en0rj79",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Electromagnet"
+    },
+    {
+      "type": "paragraph",
+      "id": "lglxeqs"
+    },
+    {
+      "type": "paragraph",
+      "id": "lu7wx9m"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "In a series circuit, current remains the same throughout, but total voltage is divided among components.",
+        "In a parallel circuit, voltage across all branches is identical, but total current splits among branches.",
+        "Soft iron is used to make electromagnets due to high retentivity and low coercivity, whereas steel is used for permanent magnets.",
+        "Safety fuses are always connected in series with the live wire and have low melting points."
+      ],
+      "id": "3a4250j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iaporf6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kk681gm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "00xe629"
+    },
+    {
+      "id": "c3qxp5i",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "c6jq1dp"
+    },
+    {
+      "type": "paragraph",
+      "id": "xr18u6u"
+    },
+    {
+      "type": "paragraph",
+      "id": "t7yydm5"
+    },
+    {
+      "type": "paragraph",
+      "id": "osf76vl"
+    }
+  ],
+  "enriched": true
+}

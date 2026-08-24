@@ -1,0 +1,128 @@
+{
+  "id": "f36okdk",
+  "title": "Powers of IRDAI (VERY IMPORTANT)",
+  "order": 566,
+  "blocks": [
+    {
+      "id": "1fiitop",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Section 14 of the IRDA Act, 1999 lays down the duties, powers and functions of the Authority.",
+      "id": "z42lpuk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Entity Type",
+        "Minimum Capital Requirement",
+        "Regulatory Authority"
+      ],
+      "rows": [
+        [
+          "Life Insurance Company",
+          "₹100 Crore",
+          "IRDAI"
+        ],
+        [
+          "General Insurance Company",
+          "₹100 Crore",
+          "IRDAI"
+        ],
+        [
+          "Reinsurance Company",
+          "₹200 Crore",
+          "IRDAI"
+        ]
+      ],
+      "id": "7pxalmq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "IRDA Act, 1999",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Section",
+          "value": "Section 14",
+          "icon": "check"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Hyderabad",
+          "icon": "info"
+        },
+        {
+          "label": "Min Capital (Insurer)",
+          "value": "₹100 Crore",
+          "icon": "award"
+        }
+      ],
+      "id": "0xenxxq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "IRDAI was constituted following the recommendations of the Malhotra Committee report (1994).",
+        "Section 14 explicitly details the statutory powers and functions of IRDAI.",
+        "Minimum capital requirement for Life and General Insurers is ₹100 Crore, while for Reinsurers it is ₹200 Crore.",
+        "IRDAI headquarters were relocated from New Delhi to Hyderabad in 2001."
+      ],
+      "id": "c1hcr5b"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "IRDAI is a statutory body established under the Insurance Regulatory and Development Authority Act, 1999 to protect policyholders and regulate the insurance sector.",
+        "Section 14 of the IRDA Act, 1999 grants powers to issue, renew, modify, suspend, or cancel registrations of insurance companies.",
+        "IRDAI sets qualifications, training standards, and codes of conduct for insurance agents, surveyors, and loss assessors.",
+        "The authority mandates the investment of funds by insurance companies and regulates the maintenance of margin of solvency.",
+        "IRDAI protects policyholders' interests regarding claim settlements, surrender values, and terms of policy contracts."
+      ],
+      "id": "242sldr"
+    }
+  ],
+  "enriched": true
+}

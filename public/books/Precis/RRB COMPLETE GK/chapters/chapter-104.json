@@ -1,0 +1,139 @@
+{
+  "id": "fks0s1r",
+  "title": "1. Causes of Volcanism",
+  "order": 104,
+  "blocks": [
+    {
+      "id": "oxf2qsd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Volcanism is the process through which molten rock, gases, and pyroclastic debris are transferred from the Earth's interior to its surface.",
+      "id": "adgese9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Divergent Boundary Volcanism",
+        "Convergent Boundary Volcanism"
+      ],
+      "rows": [
+        [
+          "Melting Mechanism",
+          "Decompression Melting",
+          "Flux Melting (Addition of Volatiles)"
+        ],
+        [
+          "Magma Composition",
+          "Basaltic (Low Silica, Low Viscosity)",
+          "Andesitic to Rhyolitic (High Silica, High Viscosity)"
+        ],
+        [
+          "Eruption Style",
+          "Effusive and Non-explosive",
+          "Explosive and Violent"
+        ],
+        [
+          "Geographic Example",
+          "Mid-Atlantic Ridge",
+          "Pacific Ring of Fire (Andes, Aleutian Islands)"
+        ]
+      ],
+      "id": "s7n6udg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Magma Temperature",
+          "value": "700°C - 1300°C",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Tectonic Zones",
+          "value": "Convergent & Divergent",
+          "icon": "book"
+        },
+        {
+          "label": "Ring of Fire Share",
+          "value": "~75% Active Volcanoes",
+          "icon": "award"
+        },
+        {
+          "label": "Main Driving Force",
+          "value": "Internal Heat & Pressure",
+          "icon": "check"
+        }
+      ],
+      "id": "j7dstha"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Divergent boundaries produce quiet, effusive basaltic volcanism, whereas subduction (convergent) zones lead to highly explosive andesitic/rhyolitic eruptions.",
+        "The Pacific 'Ring of Fire' contains the vast majority of terrestrial volcanoes due to extensive subduction zones.",
+        "Deccan Traps in India were formed by flood basalt volcanism associated with the movement of the Indian plate over the Reunion hotspot."
+      ],
+      "id": "yw1thzb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Volcanism is driven by the movement of magma towards the Earth's surface due to high internal temperatures and pressure differentials.",
+        "Decompression melting occurs along divergent plate boundaries where reduced pressure lowers the melting point of mantle rocks.",
+        "Flux melting occurs at convergent subduction zones where water and gases lower the melting temperature of mantle materials.",
+        "Hotspot volcanism results from stationary mantle plumes originating deep near the core-mantle boundary, independent of plate margins.",
+        "Dissolved volcanic gases (primarily water vapor, CO2, and SO2) expand near the surface, powering explosive eruptions."
+      ],
+      "id": "qi2fa8t"
+    }
+  ],
+  "enriched": true
+}

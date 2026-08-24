@@ -1,0 +1,115 @@
+{
+  "id": "tuyeebj",
+  "title": "ESSAY 9: Basel III Norms and Their Impact on Indian Banks",
+  "order": 26,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "q9h0xq8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Minimum CAR (RBI)",
+          "value": "9%",
+          "icon": "check"
+        },
+        {
+          "label": "Capital Conservation Buffer",
+          "value": "2.5%",
+          "icon": "info"
+        },
+        {
+          "label": "BCBS Established",
+          "value": "1974",
+          "icon": "calendar"
+        },
+        {
+          "label": "Target LCR Standard",
+          "value": "100%",
+          "icon": "award"
+        }
+      ],
+      "id": "bgu3ybz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Basel III norms were introduced by the Basel Committee on Banking Supervision (BCBS) to strengthen banking regulation, risk management, and governance globally.",
+        "The framework rests on three pillars: Minimum Capital Requirements, Supervisory Review Process, and Market Discipline.",
+        "RBI prescribed a higher minimum Capital Adequacy Ratio (CAR) of 9% for Indian banks compared to the global standard of 8%.",
+        "It introduced key liquidity buffers including the Liquidity Coverage Ratio (LCR) and the Net Stable Funding Ratio (NSFR).",
+        "Full implementation enhances the resilience of Indian Public and Private Sector Banks against systemic financial shocks."
+      ],
+      "id": "glodpwh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The primary objective of Basel III is to improve the banking sector's ability to absorb shocks arising from financial and economic stress, whatever the source.",
+      "id": "47h49f5"
+    },
+    {
+      "type": "paragraph",
+      "id": "b08lti3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Basel II Norms",
+        "Basel III Norms"
+      ],
+      "rows": [
+        [
+          "Minimum Tier 1 Capital",
+          "4%",
+          "6%"
+        ],
+        [
+          "Capital Conservation Buffer",
+          "None",
+          "2.5%"
+        ],
+        [
+          "Liquidity Requirements",
+          "No explicit quantitative standard",
+          "Mandated LCR and NSFR"
+        ],
+        [
+          "Focus",
+          "Individual bank risk",
+          "Bank-level and systemic/macroprudential risk"
+        ]
+      ],
+      "id": "0d8mu2q"
+    },
+    {
+      "type": "paragraph",
+      "id": "u6vmcil"
+    },
+    {
+      "type": "paragraph",
+      "id": "bkkshc5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "RBI mandates a minimum CAR of 9% for Indian banks, which is stricter than the 8% required under international Basel III guidelines.",
+        "Tier 1 Capital represents core capital (equity and disclosed reserves), while Tier 2 Capital acts as supplementary capital.",
+        "LCR measures short-term 30-day liquidity resilience, whereas NSFR ensures medium-to-long term structural funding stability over a 1-year horizon."
+      ],
+      "id": "1kd70aw"
+    },
+    {
+      "type": "paragraph",
+      "id": "3qslyg8"
+    },
+    {
+      "type": "paragraph",
+      "id": "eec8ib0"
+    }
+  ],
+  "enriched": true
+}

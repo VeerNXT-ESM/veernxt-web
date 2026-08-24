@@ -1,0 +1,112 @@
+{
+  "id": "us698fm",
+  "title": "5. Igneous Rocks",
+  "order": 64,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5fph78b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Rock Category",
+          "value": "Primary Rocks",
+          "icon": "book"
+        },
+        {
+          "label": "Formation Source",
+          "value": "Magma & Lava",
+          "icon": "clock"
+        },
+        {
+          "label": "Fossil Content",
+          "value": "Nil (No Fossils)",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Types",
+          "value": "Intrusive & Extrusive",
+          "icon": "info"
+        }
+      ],
+      "id": "lgx03s1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because they were the first to be formed on the Earth's surface and serve as the parent material for all other rock types.",
+      "id": "7ma4cdy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are formed through the cooling, solidification, and crystallization of molten magma or lava.",
+        "They are classified as primary rocks because all other rock types are directly or indirectly derived from them.",
+        "Igneous rocks are crystalline, non-stratified, and completely devoid of organic fossils.",
+        "Based on origin, they are divided into intrusive (plutonic) rocks like granite and extrusive (volcanic) rocks like basalt.",
+        "Based on chemical composition, high silica content forms acidic rocks (e.g., granite), while low silica and high iron/magnesium form basic rocks (e.g., basalt)."
+      ],
+      "id": "ptchx2z"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Intrusive (Plutonic) Rocks",
+        "Extrusive (Volcanic) Rocks"
+      ],
+      "rows": [
+        [
+          "Cooling Location",
+          "Deep inside the Earth's crust",
+          "On or near the Earth's surface"
+        ],
+        [
+          "Rate of Cooling",
+          "Very slow",
+          "Rapid / Fast"
+        ],
+        [
+          "Texture / Grain Size",
+          "Large, coarse-grained crystals",
+          "Fine-grained or glassy texture"
+        ],
+        [
+          "Key Examples",
+          "Granite, Gabbro, Diorite",
+          "Basalt, Obsidian, Pumice"
+        ]
+      ],
+      "id": "mkxctsf"
+    },
+    {
+      "type": "paragraph",
+      "id": "zjjoy82"
+    },
+    {
+      "type": "paragraph",
+      "id": "eeizoyj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Igneous rocks do not contain fossils; this is a common trap in competitive exam questions comparing rock types.",
+        "The Deccan Plateau of India is predominantly composed of basaltic extrusive igneous rock formed by volcanic fissure eruptions.",
+        "Slow cooling deep within the Earth's crust results in large crystalline grains (e.g., Granite), while rapid cooling at the surface produces fine grains (e.g., Basalt).",
+        "Key intrusive igneous landforms frequently tested include Batholiths, Laccoliths, Sills, and Dikes."
+      ],
+      "id": "sldh707"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ut2df1"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ge8wm8"
+    }
+  ],
+  "enriched": true
+}

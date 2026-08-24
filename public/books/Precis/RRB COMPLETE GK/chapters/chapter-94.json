@@ -1,0 +1,147 @@
+{
+  "id": "syap2n3",
+  "title": "5. Seismic Waves",
+  "order": 94,
+  "blocks": [
+    {
+      "id": "2t0txlu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Secondary waves can travel only through solid materials, providing crucial evidence that the Earth's outer core is in a liquid state.",
+      "id": "w2iym6o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "P-Waves (Primary)",
+        "S-Waves (Secondary)"
+      ],
+      "rows": [
+        [
+          "Wave Type",
+          "Longitudinal / Compressional",
+          "Transverse / Shear"
+        ],
+        [
+          "Medium of Propagation",
+          "Solids, Liquids, and Gases",
+          "Solids Only"
+        ],
+        [
+          "Relative Velocity",
+          "Fastest (First to arrive)",
+          "Slower than P-waves"
+        ],
+        [
+          "Particle Motion",
+          "Parallel to direction of wave propagation",
+          "Perpendicular to direction of wave propagation"
+        ]
+      ],
+      "id": "e0w7g0f"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Wave Speed",
+          "value": "~6–13 km/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Wave Categories",
+          "value": "2 Types (Body & Surface)",
+          "icon": "book"
+        },
+        {
+          "label": "P-Wave Shadow Zone",
+          "value": "103° to 142°",
+          "icon": "info"
+        },
+        {
+          "label": "S-Wave Shadow Zone",
+          "value": "> 103°",
+          "icon": "award"
+        }
+      ],
+      "id": "awsyzzo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "P-waves travel through solid, liquid, and gas, whereas S-waves propagate ONLY through solids.",
+        "The shadow zone for S-waves is significantly larger than that of P-waves, spanning the entire zone beyond 103° from the epicenter.",
+        "Surface waves (L-waves) are the last to record on a seismograph and cause the most destructive ground displacement."
+      ],
+      "id": "pzewyyq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Body waves originate at the focus and travel through the Earth's interior, categorized into Primary (P) and Secondary (S) waves.",
+        "Primary waves (P-waves) are longitudinal compressional waves that travel through solids, liquids, and gases.",
+        "Secondary waves (S-waves) are transverse shear waves that travel exclusively through solid medium.",
+        "Surface waves (L-waves) travel along the Earth's surface, move with the slowest velocity, and cause maximum physical damage.",
+        "The existence and geometry of shadow zones provide direct evidence regarding the physical state of the Earth's core."
+      ],
+      "id": "nf5zy4o"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,267 @@
+{
+  "id": "nec30rn",
+  "title": "CHAPTER 1 : MATTER IN OUR SURROUNDINGS",
+  "order": 106,
+  "blocks": [
+    {
+      "id": "moiad8v",
+      "type": "heading",
+      "level": 2,
+      "content": "1. WHAT IS MATTER?"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Matter is made up of tiny particles that have space between them, attract each other, and are continuously moving.",
+        "The three basic states of matter are solid, liquid, and gas, distinguished by particle arrangement and kinetic energy.",
+        "Evaporation is a surface phenomenon occurring at any temperature below the boiling point and always causes a cooling effect.",
+        "Sublimation is the direct change of state from solid to gas without changing into the liquid state.",
+        "Latent heat of fusion is the heat energy required to convert 1 kg of solid into liquid at atmospheric pressure at its melting point."
+      ],
+      "id": "l50gdsh"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "States of Matter",
+          "value": "3 Main (5 Total)",
+          "icon": "book"
+        },
+        {
+          "label": "Freezing Point of Water",
+          "value": "273.15 K (0°C)",
+          "icon": "clock"
+        },
+        {
+          "label": "Boiling Point of Water",
+          "value": "373.15 K (100°C)",
+          "icon": "check"
+        },
+        {
+          "label": "Key Processes",
+          "value": "Evaporation & Sublimation",
+          "icon": "info"
+        }
+      ],
+      "id": "5n00fpz"
+    },
+    {
+      "type": "paragraph",
+      "id": "55u0gs7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t47u9no"
+    },
+    {
+      "type": "paragraph",
+      "id": "03nmj0e"
+    },
+    {
+      "id": "izm6eof",
+      "type": "heading",
+      "level": 2,
+      "content": "3. STATES OF MATTER"
+    },
+    {
+      "type": "paragraph",
+      "id": "yb23hbz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bosbwo0"
+    },
+    {
+      "type": "paragraph",
+      "id": "dryupz5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rnaog1x"
+    },
+    {
+      "type": "paragraph",
+      "id": "am0qzvq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8sr5jpf"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4c23da"
+    },
+    {
+      "id": "1jznbdj",
+      "type": "heading",
+      "level": 2,
+      "content": "4. CHANGE OF STATE OF MATTER"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Evaporation is a surface phenomenon where particles from the surface gain enough energy to overcome the forces of attraction and change into the vapour state.",
+      "id": "tlijz8c"
+    },
+    {
+      "type": "paragraph",
+      "id": "i73bqrs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pfbum0m"
+    },
+    {
+      "type": "paragraph",
+      "id": "ij3huv2"
+    },
+    {
+      "id": "uasj7ue",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2 FREEZING"
+    },
+    {
+      "type": "paragraph",
+      "id": "xt69i8k"
+    },
+    {
+      "type": "paragraph",
+      "id": "7brbyj4"
+    },
+    {
+      "id": "7511hyz",
+      "type": "heading",
+      "level": 3,
+      "content": "4.4 EVAPORATION (VERY IMPORTANT)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5s8q8bw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Evaporation",
+        "Boiling"
+      ],
+      "rows": [
+        [
+          "Phenomenon Type",
+          "Surface phenomenon",
+          "Bulk phenomenon"
+        ],
+        [
+          "Temperature Condition",
+          "Occurs at all temperatures below boiling point",
+          "Occurs only at a specific boiling point"
+        ],
+        [
+          "Temperature Change",
+          "Causes cooling of the surroundings",
+          "Does not cause cooling"
+        ],
+        [
+          "Speed of Process",
+          "Slow and silent process",
+          "Rapid and violent process"
+        ]
+      ],
+      "id": "wrsbgnv"
+    },
+    {
+      "id": "be0m6xa",
+      "type": "heading",
+      "level": 3,
+      "content": "Why Evaporation Causes Cooling?"
+    },
+    {
+      "type": "paragraph",
+      "id": "hhpya9v"
+    },
+    {
+      "id": "74bn3k1",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Evaporation"
+    },
+    {
+      "type": "paragraph",
+      "id": "2lztv8i"
+    },
+    {
+      "id": "nrwh04e",
+      "type": "heading",
+      "level": 3,
+      "content": "4.5 SUBLIMATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "285fp71"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1egkp2e"
+    },
+    {
+      "type": "paragraph",
+      "id": "agqor40"
+    },
+    {
+      "id": "qrr6jo3",
+      "type": "heading",
+      "level": 3,
+      "content": "5.1 LATENT HEAT OF FUSION"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Evaporation rate increases with higher surface area, elevated temperature, and increased wind speed, but decreases with higher humidity.",
+        "Latent heat does not cause a rise in temperature during a phase change because the heat energy is consumed in breaking intermolecular bonds.",
+        "Common substances that undergo sublimation tested in exams include Ammonium Chloride, Camphor, Naphthalene, and Dry Ice (Solid CO2)."
+      ],
+      "id": "vyjsyl2"
+    },
+    {
+      "type": "paragraph",
+      "id": "pwop6yd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "heq67av"
+    },
+    {
+      "type": "paragraph",
+      "id": "4j0vvit"
+    },
+    {
+      "id": "r25n9vg",
+      "type": "heading",
+      "level": 2,
+      "content": "6. EFFECT OF PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "id": "ncoehwx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l8irb6q"
+    },
+    {
+      "type": "paragraph",
+      "id": "3vypf7x"
+    }
+  ],
+  "enriched": true
+}

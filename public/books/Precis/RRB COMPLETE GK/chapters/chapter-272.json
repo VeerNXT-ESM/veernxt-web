@@ -1,0 +1,90 @@
+{
+  "id": "utx0u5f",
+  "title": "4. Article 13 – Laws Inconsistent with Fundamental Rights",
+  "order": 272,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1kytt0h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "All laws in force in the territory of India immediately before the commencement of this Constitution, in so far as they are inconsistent with the provisions of this Part, shall, to the extent of such inconsistency, be void.",
+      "id": "ws2pv4k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Pre-Constitutional Laws (Art 13(1))",
+        "Post-Constitutional Laws (Art 13(2))"
+      ],
+      "rows": [
+        [
+          "Enactment Period",
+          "Enacted before January 26, 1950",
+          "Enacted on or after January 26, 1950"
+        ],
+        [
+          "Initial Validity",
+          "Valid when enacted, became inconsistent upon Constitution's commencement",
+          "Inconsistent and void right from its inception (void ab initio)"
+        ],
+        [
+          "Associated Doctrine",
+          "Doctrine of Eclipse (remains dormant, can be revived if FR is amended)",
+          "Doctrine of Severability / Direct Invalidation"
+        ]
+      ],
+      "id": "6r4hq2b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 13",
+          "icon": "book"
+        },
+        {
+          "label": "Enforcement Avenues",
+          "value": "Articles 32 & 226",
+          "icon": "check"
+        },
+        {
+          "label": "Landmark Ruling",
+          "value": "1973 Case",
+          "icon": "calendar"
+        },
+        {
+          "label": "Core Mechanism",
+          "value": "Judicial Review",
+          "icon": "award"
+        }
+      ],
+      "id": "3bgd0du"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Customs and usages having the force of law fall within the definition of 'Law' under Article 13 and can be challenged for violating Fundamental Rights.",
+        "The Doctrine of Severability implies that only the unconstitutional provision of a law is declared void, not the entire statute, provided the valid part can stand independently.",
+        "Constitutional Amendments under Article 368 are not considered 'law' under Article 13(3), but are subject to judicial review under the Basic Structure Doctrine established in the Kesavananda Bharati case (1973)."
+      ],
+      "id": "u3w15wt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 13 expressly establishes the doctrine of Judicial Review in India, empowering courts to strike down unconstitutional laws.",
+        "All pre-constitutional laws inconsistent with Fundamental Rights become dormant under the Doctrine of Eclipse.",
+        "Post-constitutional laws violating Fundamental Rights are void ab initio (void from inception).",
+        "The term 'Law' includes ordinances, bye-laws, rules, regulations, notifications, and custom or usage having the force of law.",
+        "A Constitutional Amendment is not ordinary 'law' under Article 13, but can be invalidated if it violates the Basic Structure of the Constitution."
+      ],
+      "id": "f8na7on"
+    }
+  ],
+  "enriched": true
+}

@@ -1,40 +1,40 @@
 {
-  "id": "3ltv85a",
+  "id": "73j90cf",
   "title": "Chapter 30: Latitudes and Longitudes",
   "order": 31,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3cql78s"
+      "id": "rs3j8fy"
     },
     {
       "type": "statStrip",
       "stats": [
+        {
+          "label": "IST Meridian",
+          "value": "82.5° E",
+          "icon": "compass"
+        },
         {
           "label": "Tropic of Cancer States",
           "value": "8 States",
           "icon": "map-pin"
         },
         {
-          "label": "IST Standard Meridian",
-          "value": "82.5° E",
+          "label": "Time per 1° Longitude",
+          "value": "4 Mins",
           "icon": "clock"
         },
         {
-          "label": "IST Passing States",
-          "value": "5 States",
-          "icon": "check"
-        },
-        {
-          "label": "Equator Latitude",
-          "value": "0°",
+          "label": "Total Meridians",
+          "value": "360°",
           "icon": "globe"
         }
       ],
-      "id": "h50xf5d"
+      "id": "2h4qq50"
     },
     {
-      "id": "bs2gy2i",
+      "id": "j5acg88",
       "type": "heading",
       "level": 2,
       "content": "1. Latitudes"
@@ -43,38 +43,38 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Latitudes are parallel horizontal lines measuring distance north or south of the Equator (0°).",
-        "Longitudes are vertical lines running from the North Pole to the South Pole, measuring distance east or west of the Prime Meridian (0°).",
-        "Indian Standard Time (IST) is based on the 82.5° E longitude meridian, which is 5 hours 30 minutes ahead of GMT.",
-        "The Tropic of Cancer (23.5° N) divides India into almost two equal halves and passes through 8 states.",
-        "The Prime Meridian passes through Greenwich, London, and serves as the international reference for 0° longitude."
+        "Latitudes are parallel horizontal circles measuring angular distance North or South of the Equator (0°).",
+        "Longitudes are vertical meridians converging at the poles, measuring distance East or West of the Prime Meridian (0°).",
+        "Indian Standard Time (IST) is calculated from the 82.5° E meridian passing through Mirzapur, Uttar Pradesh, and is GMT+5:30.",
+        "The Tropic of Cancer (23.5° N) passes through 8 Indian states: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "Earth rotates 360° in 24 hours, making 1° of longitude equivalent to a 4-minute time difference."
       ],
-      "id": "nvvamus"
+      "id": "ncmcpbx"
     },
     {
       "type": "paragraph",
-      "id": "r1r52ex"
+      "id": "1sgsvt9"
     },
     {
       "type": "paragraph",
-      "id": "a2ij9i1"
+      "id": "3985o2u"
     },
     {
       "type": "paragraph",
-      "id": "cvfpl8z"
+      "id": "s63wp36"
     },
     {
       "type": "paragraph",
-      "id": "947m88d"
+      "id": "5zqm0bp"
     },
     {
-      "id": "89d8aox",
+      "id": "2k1fxbs",
       "type": "heading",
       "level": 3,
       "content": "Important Latitudes"
     },
     {
-      "id": "qvbn49d",
+      "id": "qbiwq6o",
       "type": "table",
       "rows": [
         {
@@ -122,56 +122,56 @@
       ]
     },
     {
-      "id": "a7kx9if",
+      "id": "qpwj25h",
       "type": "heading",
       "level": 2,
       "content": "2. Longitudes"
     },
     {
       "type": "paragraph",
-      "id": "acb05p2"
+      "id": "oad17n7"
     },
     {
       "type": "paragraph",
-      "id": "u3sg6ar"
+      "id": "juld9l7"
     },
     {
       "type": "paragraph",
-      "id": "btvuabg"
+      "id": "m8k6yaa"
     },
     {
       "type": "paragraph",
-      "id": "79ib6yk"
+      "id": "u8xooj6"
     },
     {
-      "id": "y3kjw4k",
+      "id": "czyqurk",
       "type": "heading",
       "level": 2,
       "content": "3. Indian Standard Time (IST)"
     },
     {
       "type": "paragraph",
-      "id": "3agepuh"
+      "id": "w4jv920"
     },
     {
       "type": "paragraph",
-      "id": "8mgrl2v"
+      "id": "2mdda12"
     },
     {
       "type": "paragraph",
-      "id": "gfdqev8"
+      "id": "amuoknz"
     },
     {
       "type": "paragraph",
-      "id": "4mf9or2"
+      "id": "hbm8dwj"
     },
     {
       "type": "pullQuote",
-      "content": "Indian Standard Time is calculated on the basis of 82.5° E longitude.",
-      "id": "hoxsd7o"
+      "content": "Indian Standard Time is calculated on the basis of 82.5° E longitude which passes through Mirzapur in Uttar Pradesh.",
+      "id": "ot8pa6q"
     },
     {
-      "id": "6dwcy05",
+      "id": "aetoscq",
       "type": "heading",
       "level": 2,
       "content": "4. Tropic of Cancer Passing Indian States"
@@ -179,45 +179,45 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "59j52q4"
+      "id": "830cs7y"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mg75vw7"
+      "id": "96zo9ab"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zoxd9pf"
+      "id": "qtvh78x"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t44a789"
+      "id": "8l5t9fu"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gqcwxrt"
+      "id": "cf7q2sr"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "502hqdv"
+      "id": "0pvfp0l"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2rw3vbo"
+      "id": "e4uqng4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "32jl0je"
+      "id": "usvv8g9"
     },
     {
-      "id": "vkshgkp",
+      "id": "rr2va1q",
       "type": "heading",
       "level": 2,
       "content": "5. Equator Crossing Continents"
@@ -231,14 +231,9 @@
       ],
       "rows": [
         [
-          "Definition",
-          "Angular distance north or south of the Equator",
-          "Angular distance east or west of the Prime Meridian"
-        ],
-        [
           "Direction",
-          "Horizontal parallel circles running East to West",
-          "Vertical semi-circles running North to South"
+          "Runs East to West (Parallels)",
+          "Runs North to South (Meridians)"
         ],
         [
           "Reference Line",
@@ -246,35 +241,35 @@
           "Prime Meridian (0°)"
         ],
         [
-          "Total Count",
-          "181 parallels (including poles)",
-          "360 meridians"
+          "Total Number",
+          "180 lines (90°N to 90°S)",
+          "360 lines (180°E to 180°W)"
         ],
         [
-          "Distance Between Lines",
-          "Constant everywhere (approx. 111 km)",
-          "Maximum at Equator (111.3 km), decreases towards Poles"
+          "Primary Function",
+          "Determines heat/climate zones",
+          "Determines time zones and local time"
         ]
       ],
-      "id": "ook6xiv"
+      "id": "lltu34g"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ioskj3e"
+      "id": "55cyzq5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "azr7iql"
+      "id": "926rivn"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "v3nh1ne"
+      "id": "z6z8wio"
     },
     {
-      "id": "m5wiq99",
+      "id": "lt29dhd",
       "type": "heading",
       "level": 2,
       "content": "Important Countries on the Equator"
@@ -282,71 +277,71 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "f4clbpk"
+      "id": "u62cvju"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5khg7ue"
+      "id": "2v34yee"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "w7hweh5"
+      "id": "drosw1n"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "elb1zh4"
+      "id": "fvxbejd"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bzzhm48"
+      "id": "o9zww8c"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "daddj8j"
+      "id": "ozqzh43"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "spzmd81"
+      "id": "af3j5qs"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yu4698h"
+      "id": "v5xoe7n"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zplr5qi"
+      "id": "yir88zf"
     },
     {
       "type": "examAlert",
       "items": [
-        "The Tropic of Cancer passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
-        "The Indian Standard Meridian (82.5° E) passes through 5 states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
-        "IST is ahead of Greenwich Mean Time (GMT) by 5 hours and 30 minutes (+5:30 UTC).",
-        "Mahi River is the only river in India that crosses the Tropic of Cancer twice."
+        "Memorize the 8 Indian states crossed by the Tropic of Cancer: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, Mizoram.",
+        "IST is ahead of Greenwich Mean Time (GMT) by exactly 5 hours and 30 minutes (+5:30).",
+        "15 degrees of longitude equals 1 hour of time, while 1 degree equals 4 minutes.",
+        "The Equator (0° latitude) passes through South America, Africa, and Asia (Indonesia)."
       ],
-      "id": "qq5aokf"
+      "id": "7v7o7cn"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j614xuo"
+      "id": "xhlntfi"
     },
     {
-      "id": "wgsr6j6",
+      "id": "ayhaho3",
       "type": "heading",
       "level": 2,
       "content": "6. Latitude vs Longitude (Comparison)"
     },
     {
-      "id": "ovlf396",
+      "id": "0a6y0xa",
       "type": "table",
       "rows": [
         {
@@ -387,26 +382,26 @@
       ]
     },
     {
-      "id": "cf5ff9t",
+      "id": "hy2mmcy",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "dxr3j9r"
+      "id": "uvjlazw"
     },
     {
       "type": "paragraph",
-      "id": "07nu1nd"
+      "id": "pf96gtm"
     },
     {
       "type": "paragraph",
-      "id": "iw3xpp6"
+      "id": "0cw3xhn"
     },
     {
       "type": "paragraph",
-      "id": "wujf8k4"
+      "id": "6zvn31f"
     }
   ],
   "enriched": true

@@ -1,0 +1,96 @@
+{
+  "id": "gxcy0ux",
+  "title": "7. Removal of the President – Impeachment (Article 61)",
+  "order": 304,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sgbh2i4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The President may be removed from office for violation of the Constitution by impeachment under Article 61.",
+      "id": "xuthcu7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Presidential Election",
+        "Presidential Impeachment"
+      ],
+      "rows": [
+        [
+          "Nominated MPs",
+          "Cannot vote",
+          "Can vote"
+        ],
+        [
+          "Elected MLAs (States/UTs)",
+          "Can vote",
+          "Cannot vote"
+        ],
+        [
+          "Forum",
+          "Electoral College",
+          "Either House of Parliament"
+        ],
+        [
+          "Majority / Voting Scheme",
+          "Proportional Representation by single transferable vote",
+          "2/3rd majority of the total membership of each House"
+        ]
+      ],
+      "id": "jrscp05"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 61",
+          "icon": "book"
+        },
+        {
+          "label": "Advance Notice",
+          "value": "14 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Initiation Support",
+          "value": "1/4th Members",
+          "icon": "check"
+        },
+        {
+          "label": "Passing Majority",
+          "value": "2/3rd Total Membership",
+          "icon": "award"
+        }
+      ],
+      "id": "33xmlgw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The phrase 'violation of the Constitution' is NOT defined anywhere in the Constitution of India.",
+        "Impeachment requires a majority of 2/3rd of the TOTAL membership of the House (not present and voting), which is unique in Indian Constitutional law.",
+        "Nominated members of either House of Parliament CAN participate in the impeachment process, despite not being eligible to vote in the Presidential election.",
+        "Elected members of State Legislative Assemblies and UTs DO NOT participate in the impeachment process, despite being part of the Electoral College during elections."
+      ],
+      "id": "1c2lk5r"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President of India can be removed from office before the expiry of term through the process of impeachment under Article 61.",
+        "The sole ground for impeachment specified in the Constitution is 'violation of the Constitution'.",
+        "An impeachment motion can be initiated in either House of Parliament (Lok Sabha or Rajya Sabha).",
+        "The resolution requires a special majority of two-thirds of the total membership of both Houses to pass.",
+        "The impeachment process is a quasi-judicial procedure in Parliament where the President has the right to appear and be represented."
+      ],
+      "id": "859wmot"
+    }
+  ],
+  "enriched": true
+}

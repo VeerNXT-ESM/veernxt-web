@@ -1,0 +1,89 @@
+{
+  "id": "fd81tow",
+  "title": "RRB Quick Revision Box",
+  "order": 393,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "q4tqe2d"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bombay and Thane on 16th April 1853 covering a distance of 34 kilometers.",
+      "id": "9khf7bb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Track Gauge Type",
+        "Width (mm)",
+        "Primary Usage"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "Mainline network and trunk routes"
+        ],
+        [
+          "Meter Gauge",
+          "1000 mm",
+          "Regional routes (mostly converted to BG)"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "Hilly terrains and heritage lines"
+        ]
+      ],
+      "id": "g5gjjam"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "18",
+          "icon": "book"
+        },
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Route Distance",
+          "value": "34 km",
+          "icon": "info"
+        },
+        {
+          "label": "Broad Gauge Width",
+          "value": "1676 mm",
+          "icon": "check"
+        }
+      ],
+      "id": "8itnklt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "South Coast Railway (SCoR), headquartered at Visakhapatnam, is designated as the 18th Railway Zone of India.",
+        "The first electric train ran in India on 3rd February 1925 between Bombay VT and Kurla.",
+        "UNESCO World Heritage mountain railways include Darjeeling Himalayan Railway, Nilgiri Mountain Railway, and Kalka-Shimla Railway."
+      ],
+      "id": "ikj5cny"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "India's first passenger train operated between Bombay (Bori Bunder) and Thane on 16th April 1853.",
+        "Lord Dalhousie is known as the 'Father of Indian Railways'.",
+        "The official mascot of Indian Railways is 'Bholu', an elephant dressed as a train guard holding a green signal lamp.",
+        "Indian Railways network is divided into 18 administrative zones for efficient operational management."
+      ],
+      "id": "7pd3e1v"
+    }
+  ],
+  "enriched": true
+}

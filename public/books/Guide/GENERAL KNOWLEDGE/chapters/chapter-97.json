@@ -1,0 +1,448 @@
+{
+  "id": "va1hbr0",
+  "title": "CHAPTER 4 : WORK, ENERGY AND POWER",
+  "order": 97,
+  "blocks": [
+    {
+      "id": "59xecly",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Number",
+          "value": "Chapter 4",
+          "icon": "book"
+        },
+        {
+          "label": "1 Horse Power",
+          "value": "746 W",
+          "icon": "award"
+        },
+        {
+          "label": "Commercial Unit",
+          "value": "1 kWh = 3.6x10^6 J",
+          "icon": "clock"
+        },
+        {
+          "label": "SI Unit of Work",
+          "value": "Joule (J)",
+          "icon": "check"
+        }
+      ],
+      "id": "0u635aa"
+    },
+    {
+      "type": "paragraph",
+      "id": "zd1ygkf"
+    },
+    {
+      "type": "paragraph",
+      "id": "2l6ere1"
+    },
+    {
+      "type": "paragraph",
+      "id": "pqvoiqb"
+    },
+    {
+      "id": "f8b318n",
+      "type": "numberedList",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "1jrpa6b"
+    },
+    {
+      "id": "ucnqb4e",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Work"
+    },
+    {
+      "id": "ddxijzl",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "q02q4j8",
+      "type": "heading",
+      "level": 3,
+      "content": "Formula of Work"
+    },
+    {
+      "type": "paragraph",
+      "id": "07qdhdv"
+    },
+    {
+      "type": "paragraph",
+      "id": "gnam61t"
+    },
+    {
+      "type": "paragraph",
+      "id": "ijtsdff"
+    },
+    {
+      "id": "nscstxt",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Work"
+    },
+    {
+      "id": "zbsrl75",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ce1rlz5"
+    },
+    {
+      "id": "8gbi5nf",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "drygk4z"
+    },
+    {
+      "type": "paragraph",
+      "id": "x15bcqn"
+    },
+    {
+      "id": "rp138zu",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "taaaofc"
+    },
+    {
+      "id": "pupw6pn",
+      "type": "heading",
+      "level": 2,
+      "content": "ENERGY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Work is mathematically defined as the product of force and displacement in the direction of the force (W = F * d * cos θ).",
+        "Work can be positive, negative, or zero depending on the angle θ between force and displacement.",
+        "Mechanical energy exists in two main forms: Kinetic Energy (KE = 1/2 m v²) and Potential Energy (PE = m g h).",
+        "The Law of Conservation of Energy states that total energy in an isolated system remains constant.",
+        "Power represents the rate of doing work or energy consumption, measured in Watts (1 W = 1 J/s)."
+      ],
+      "id": "39s5xoh"
+    },
+    {
+      "type": "paragraph",
+      "id": "akawc0y"
+    },
+    {
+      "type": "paragraph",
+      "id": "ypqh6ji"
+    },
+    {
+      "id": "wbcgyqz",
+      "type": "heading",
+      "level": 3,
+      "content": "Forms of Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "dsb5ehj"
+    },
+    {
+      "id": "0w2na11",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "LAW OF CONSERVATION OF ENERGY",
+      "id": "3cy97ae"
+    },
+    {
+      "id": "sqsxqen",
+      "type": "heading",
+      "level": 3,
+      "content": "Kinetic Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "qzl4os1"
+    },
+    {
+      "type": "paragraph",
+      "id": "icku6bx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kb96fjv"
+    },
+    {
+      "type": "paragraph",
+      "id": "ae9vrc8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x79seki"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "en6oyom"
+    },
+    {
+      "type": "paragraph",
+      "id": "7k4zbxj"
+    },
+    {
+      "id": "897iiou",
+      "type": "heading",
+      "level": 3,
+      "content": "Potential Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "loayb56"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5molrwa"
+    },
+    {
+      "type": "paragraph",
+      "id": "0dhvv72"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xbz3zs6"
+    },
+    {
+      "type": "paragraph",
+      "id": "6lt1rd6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Kinetic Energy (KE)",
+        "Potential Energy (PE)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Energy possessed by a body due to its motion",
+          "Energy possessed by a body due to its position or configuration"
+        ],
+        [
+          "Formula",
+          "KE = 1/2 m v²",
+          "PE = m g h"
+        ],
+        [
+          "Dependence",
+          "Depends on mass and velocity of the object",
+          "Depends on mass, acceleration due to gravity, and height"
+        ],
+        [
+          "Examples",
+          "Flowing water, moving bullet, rolling stone",
+          "Water stored in a dam, stretched bowstring, compressed spring"
+        ]
+      ],
+      "id": "a2vdh3q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nr3ae7w"
+    },
+    {
+      "type": "paragraph",
+      "id": "dj7wd1i"
+    },
+    {
+      "id": "qdc55vr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "9gw0luu",
+      "type": "heading",
+      "level": 2,
+      "content": "LAW OF CONSERVATION OF ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "4wuooi3"
+    },
+    {
+      "type": "paragraph",
+      "id": "ctjboqm"
+    },
+    {
+      "type": "paragraph",
+      "id": "gk5rfls"
+    },
+    {
+      "type": "paragraph",
+      "id": "nbioggq"
+    },
+    {
+      "type": "paragraph",
+      "id": "1q13ue4"
+    },
+    {
+      "id": "3ds9r7i",
+      "type": "heading",
+      "level": 2,
+      "content": "POWER"
+    },
+    {
+      "type": "paragraph",
+      "id": "6hj202p"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x4d12yw"
+    },
+    {
+      "type": "paragraph",
+      "id": "utk9wjf"
+    },
+    {
+      "id": "p6vuisa",
+      "type": "heading",
+      "level": 3,
+      "content": "Horse Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "5d9cjy9"
+    },
+    {
+      "type": "paragraph",
+      "id": "r5vzvg4"
+    },
+    {
+      "id": "fjj5zpe",
+      "type": "heading",
+      "level": 2,
+      "content": "COMMERCIAL UNIT OF ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "y9zl880"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Work done by a coolie standing with luggage or walking horizontally is ZERO because force (gravity) is perpendicular to displacement (cos 90° = 0).",
+        "1 Horse Power (HP) is exactly equal to 746 Watts; this conversion is frequently tested in state PSC and Railway exams.",
+        "1 kilowatt-hour (kWh) equals 3.6 × 10⁶ Joules, which is the standard commercial unit of electrical energy."
+      ],
+      "id": "xkxf8p0"
+    },
+    {
+      "type": "paragraph",
+      "id": "rrd3o12"
+    },
+    {
+      "id": "oam8695",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT  EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "mfha3wz"
+    },
+    {
+      "type": "paragraph",
+      "id": "7zxch8x"
+    },
+    {
+      "type": "paragraph",
+      "id": "hu3uk0e"
+    },
+    {
+      "type": "paragraph",
+      "id": "drggnl0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9d04hax"
+    },
+    {
+      "type": "paragraph",
+      "id": "08rp8up"
+    },
+    {
+      "type": "paragraph",
+      "id": "5jbjmq2"
+    },
+    {
+      "id": "zkbeugh",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "mdbbsz8",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,377 @@
+{
+  "id": "37118s9",
+  "title": "CHAPTER 2: MOTION",
+  "order": 95,
+  "blocks": [
+    {
+      "id": "lg1zgn6",
+      "type": "heading",
+      "level": 2,
+      "content": "MOTION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Rest and motion are relative terms depending on the chosen frame of reference.",
+        "Distance is the total path length traversed (scalar), whereas displacement is the shortest distance between initial and final positions (vector).",
+        "Speed is the rate of change of distance, while velocity is the rate of change of displacement in a specified direction.",
+        "Acceleration represents the rate of change of velocity over time.",
+        "Equations of motion describe the mathematical relationship between initial velocity, final velocity, acceleration, time, and displacement under uniform acceleration."
+      ],
+      "id": "ggncviq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equations of Motion",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Speed",
+          "value": "m/s",
+          "icon": "check"
+        },
+        {
+          "label": "SI Unit of Acceleration",
+          "value": "m/s²",
+          "icon": "award"
+        },
+        {
+          "label": "Conversion Factor (km/h to m/s)",
+          "value": "5/18",
+          "icon": "info"
+        }
+      ],
+      "id": "3fdem73"
+    },
+    {
+      "type": "paragraph",
+      "id": "naz46ry"
+    },
+    {
+      "id": "y48ubnj",
+      "type": "heading",
+      "level": 2,
+      "content": "REST AND MOTION"
+    },
+    {
+      "id": "vqfe9f0",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "o7fmck9"
+    },
+    {
+      "type": "paragraph",
+      "id": "gvwe85d"
+    },
+    {
+      "id": "j606vev",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF MOTION"
+    },
+    {
+      "id": "bxjjeiq",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "xmbg72o",
+      "type": "heading",
+      "level": 2,
+      "content": "DISTANCE AND DISPLACEMENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "300n11n"
+    },
+    {
+      "id": "s7h9smr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "hjtbo0k"
+    },
+    {
+      "id": "e5irqtr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "hhlfz52",
+      "type": "heading",
+      "level": 2,
+      "content": "SPEED AND VELOCITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "uuub3o4"
+    },
+    {
+      "type": "paragraph",
+      "id": "ncs0zo1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bxcv8ik"
+    },
+    {
+      "type": "paragraph",
+      "id": "sonbhtr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "UNIFORM AND NON-UNIFORM MOTION",
+      "id": "vu3ut4n"
+    },
+    {
+      "type": "paragraph",
+      "id": "7wcrdnw"
+    },
+    {
+      "id": "bosx0xb",
+      "type": "heading",
+      "level": 2,
+      "content": "ACCELERATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ejm1ga"
+    },
+    {
+      "type": "paragraph",
+      "id": "o27ojs2"
+    },
+    {
+      "type": "paragraph",
+      "id": "wipl4jb"
+    },
+    {
+      "id": "qkrtj2t",
+      "type": "heading",
+      "level": 2,
+      "content": "EQUATIONS OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "i0kkt21"
+    },
+    {
+      "id": "cw7kfh8",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9kd8aoa"
+    },
+    {
+      "type": "paragraph",
+      "id": "u1pr4r1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Distance",
+        "Displacement"
+      ],
+      "rows": [
+        [
+          "Nature",
+          "Scalar quantity (Magnitude only)",
+          "Vector quantity (Magnitude and Direction)"
+        ],
+        [
+          "Path Dependency",
+          "Depends on the actual path covered",
+          "Independent of path; depends only on initial and final points"
+        ],
+        [
+          "Value",
+          "Always positive or zero",
+          "Can be positive, negative, or zero"
+        ],
+        [
+          "Magnitude Relation",
+          "Distance ≥ |Displacement|",
+          "|Displacement| ≤ Distance"
+        ]
+      ],
+      "id": "b910zwt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rcg9v7o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y3cdmf4"
+    },
+    {
+      "id": "3az3xur",
+      "type": "heading",
+      "level": 2,
+      "content": "UNIFORM AND NON-UNIFORM MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "7qo6b1r"
+    },
+    {
+      "id": "317roo6",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "5muriyd"
+    },
+    {
+      "id": "qnwc7l2",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "uxi3p7a",
+      "type": "heading",
+      "level": 2,
+      "content": "GRAPHICAL REPRESENTATION OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "yso4z6q"
+    },
+    {
+      "id": "9l3wxqd",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "zuo22ez"
+    },
+    {
+      "id": "vbkf2pq",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "rqt2rir",
+      "type": "heading",
+      "level": 2,
+      "content": "UNITS AND CONVERSIONS"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Displacement can be zero even if distance is positive (e.g., completing a circular track).",
+        "The slope of a Distance-Time graph gives Speed, while the slope of a Velocity-Time graph gives Acceleration.",
+        "The area under a Velocity-Time graph represents total Displacement.",
+        "To convert speed from km/h to m/s multiply by 5/18; to convert m/s to km/h multiply by 18/5."
+      ],
+      "id": "jch7wq1"
+    },
+    {
+      "type": "paragraph",
+      "id": "k5ebnfi"
+    },
+    {
+      "id": "8ss6jht",
+      "type": "heading",
+      "level": 2,
+      "content": "EXAM IMPORTANT QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "qm1cstz"
+    },
+    {
+      "type": "paragraph",
+      "id": "ba0w29x"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ihv2tp"
+    },
+    {
+      "type": "paragraph",
+      "id": "glbnd5t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jwkvfe3"
+    },
+    {
+      "id": "zk5yuwd",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "1lu7u9v",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,369 @@
+{
+  "id": "wishudq",
+  "title": "Chapter 3: Computer Hardware",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "x0lem59"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Processing Unit",
+          "value": "CPU",
+          "icon": "info"
+        },
+        {
+          "label": "Main Circuit Board",
+          "value": "Motherboard",
+          "icon": "book"
+        },
+        {
+          "label": "Hardware Sections",
+          "value": "4 Modules",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "High Priority",
+          "icon": "award"
+        }
+      ],
+      "id": "w70c85c"
+    },
+    {
+      "id": "t7oe0o1",
+      "type": "heading",
+      "level": 2,
+      "content": "4.1 Central Processing Unit (CPU)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Processing Unit (CPU) acts as the brain of the computer, executing instructions and managing computations.",
+        "The Motherboard serves as the main printed circuit board connecting the CPU, memory, expansion cards, and external peripherals.",
+        "Computer ports enable external peripheral devices to communicate directly with the internal hardware.",
+        "Expansion cards provide modular upgrades such as enhanced graphics, audio processing, and network interfaces."
+      ],
+      "id": "gev2uve"
+    },
+    {
+      "type": "paragraph",
+      "id": "ggwmbwd"
+    },
+    {
+      "id": "yprvafz",
+      "type": "heading",
+      "level": 3,
+      "content": "4.1.1 Components of CPU"
+    },
+    {
+      "id": "7nh57oj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q03umm3",
+      "type": "heading",
+      "level": 3,
+      "content": "4.1.2 Functions of CPU"
+    },
+    {
+      "id": "vxp9fqp",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cr8ka5i",
+      "type": "heading",
+      "level": 3,
+      "content": "4.1.3 Important Exam Points"
+    },
+    {
+      "id": "cs04dlh",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Central Processing Unit (CPU)",
+      "id": "0h7ua6d"
+    },
+    {
+      "id": "g51q829",
+      "type": "heading",
+      "level": 2,
+      "content": "4.2 Motherboard"
+    },
+    {
+      "type": "paragraph",
+      "id": "i9yehgr"
+    },
+    {
+      "id": "gw2vctl",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2.1 Main Components on Motherboard"
+    },
+    {
+      "id": "ubrybel",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "7o5xeb2",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2.2 Functions of Motherboard"
+    },
+    {
+      "id": "jbh9omb",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Component",
+        "Primary Function",
+        "Key Elements"
+      ],
+      "rows": [
+        [
+          "Central Processing Unit (CPU)",
+          "Executes instructions and performs calculations",
+          "Control Unit (CU), Arithmetic Logic Unit (ALU), Registers"
+        ],
+        [
+          "Motherboard",
+          "Provides interconnections between hardware components",
+          "CPU Socket, RAM Slots, Bus Lines, Chipset"
+        ],
+        [
+          "Expansion Cards",
+          "Adds modular features and enhanced capabilities",
+          "Graphics Card, Sound Card, Network Interface Card (NIC)"
+        ]
+      ],
+      "id": "u80lpld"
+    },
+    {
+      "id": "43ng5iq",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2.3 Important Exam Points"
+    },
+    {
+      "id": "7mh54x0",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "lz2nh7m",
+      "type": "heading",
+      "level": 2,
+      "content": "4.3 Ports"
+    },
+    {
+      "type": "paragraph",
+      "id": "76qvqjh"
+    },
+    {
+      "id": "ofw05sc",
+      "type": "heading",
+      "level": 3,
+      "content": "4.3.1 Types of Ports"
+    },
+    {
+      "id": "ntj94jy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1l2lxm",
+      "type": "heading",
+      "level": 2,
+      "content": "4.4 Expansion Cards"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between the roles of the Control Unit (CU) and the Arithmetic Logic Unit (ALU) within the CPU.",
+        "Identify various motherboard form factors and key port types (USB, HDMI, Serial, Parallel) commonly asked in questions.",
+        "Understand the function of expansion slots like PCIe in connecting expansion cards."
+      ],
+      "id": "xkckbo9"
+    },
+    {
+      "type": "paragraph",
+      "id": "0qboqp5"
+    },
+    {
+      "id": "3knpnw4",
+      "type": "heading",
+      "level": 3,
+      "content": "4.4.1 Types of Expansion Cards"
+    },
+    {
+      "id": "vwi4ecx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uxb06bv",
+      "type": "heading",
+      "level": 2,
+      "content": "4.5 Important Exam Points"
+    },
+    {
+      "id": "lex4svt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

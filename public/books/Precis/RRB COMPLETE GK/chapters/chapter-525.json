@@ -1,0 +1,96 @@
+{
+  "id": "u06oubr",
+  "title": "11. Exam Traps",
+  "order": 525,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "gu16n0f"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Avoiding exam traps is as crucial as mastering the syllabus, as negative marking can turn potential ranks into disqualifications.",
+      "id": "3jjvaht"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Exam Trap Type",
+        "Examiner's Strategy",
+        "Effective Countermeasure"
+      ],
+      "rows": [
+        [
+          "Negative Qualifier Trap",
+          "Hides 'NOT' or 'EXCEPT' within lengthy question stems",
+          "Underline/circle negative terms in your first reading pass"
+        ],
+        [
+          "Absolute Statement Trap",
+          "Uses 'Only', 'Always', or 'Never' to make false options sound authoritative",
+          "Apply extreme skepticism to rigid, unyielding generalizations"
+        ],
+        [
+          "Option A Distractor",
+          "Positions a partially correct answer at Option A to exploit rush",
+          "Mandatorily read all options (A to D) before filling OMR/clicking"
+        ],
+        [
+          "Unit Mismatch Trap",
+          "Gives input in one metric system and requests answer in another",
+          "Write down given and required units explicitly before calculating"
+        ]
+      ],
+      "id": "gvfwwv8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "1/3rd Penalty",
+          "icon": "info"
+        },
+        {
+          "label": "Common Trap Types",
+          "value": "4 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "Silly Error Rate",
+          "value": "15-20%",
+          "icon": "clock"
+        },
+        {
+          "label": "Core Defense",
+          "value": "Elimination",
+          "icon": "check"
+        }
+      ],
+      "id": "p6ppwtw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always circle or underline words like 'NOT', 'INCORRECT', and 'FALSE' before analyzing options.",
+        "Never select 'All of the above' without confirming that at least two statements are 100% correct.",
+        "Check unit dimensions (e.g., m/s vs km/h, months vs years) in numerical problems before finalizing your answer.",
+        "Enforce a strict 60-second skip rule to prevent time-sink questions from sabotaging easier sections."
+      ],
+      "id": "ongfrs5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Question setters frequently embed negative words like 'NOT', 'EXCEPT', and 'INCORRECT' to trigger impulse errors.",
+        "Extreme qualifiers such as 'Always', 'Never', and 'Only' usually indicate incorrect statements in general studies papers.",
+        "Plausible partial truths are deliberately placed as Option A to trick hasty candidates into marking before reading all choices.",
+        "Unit mismatches and dimensional conversion tricks are primary traps used in Quantitative Aptitude and Physics sections.",
+        "Adopting a systematic elimination technique significantly reduces exposure to examiner traps under time pressure."
+      ],
+      "id": "ks41lh5"
+    }
+  ],
+  "enriched": true
+}

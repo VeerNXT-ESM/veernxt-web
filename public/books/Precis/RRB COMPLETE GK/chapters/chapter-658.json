@@ -1,0 +1,90 @@
+{
+  "id": "rc6bluq",
+  "title": "6. Buffer Stock Policy (VERY FREQUENTLY ASKED)",
+  "order": 658,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "k97svvz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Buffer stock is maintained by the government to ensure food security during lean seasons and stabilize market prices.",
+      "id": "w6gqq0x"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Operational Stock",
+        "Strategic Reserve"
+      ],
+      "rows": [
+        [
+          "Purpose",
+          "Meets monthly distribution requirements of PDS and welfare schemes",
+          "Maintained for unforeseen emergencies, natural disasters, and crop failures"
+        ],
+        [
+          "Utilization",
+          "Continuous and routine monthly release",
+          "Drawn only during critical supply disruptions or severe price spikes"
+        ],
+        [
+          "Quantity Basis",
+          "Calculated based on quarterly scheme demand and off-take projections",
+          "Fixed minimum quantity prescribed by CCEA over operational needs"
+        ]
+      ],
+      "id": "52aphzh"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Agency",
+          "value": "FCI (1965)",
+          "icon": "info"
+        },
+        {
+          "label": "Approving Body",
+          "value": "CCEA",
+          "icon": "award"
+        },
+        {
+          "label": "Review Cycle",
+          "value": "4 Quarters",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Crops",
+          "value": "Wheat & Rice",
+          "icon": "check"
+        }
+      ],
+      "id": "sqjbqej"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CCEA (Cabinet Committee on Economic Affairs) approves the minimum buffer stock norms, not the Ministry of Finance or RBI.",
+        "Food Corporation of India (FCI) was established under the Food Corporation Act, 1964 to execute procurement and buffer management.",
+        "Exams frequently ask to distinguish between Operational Stock (for monthly PDS off-take) and Strategic Reserve (for national calamities)."
+      ],
+      "id": "nkv1341"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Buffer stock is the reserve of foodgrains maintained by the Food Corporation of India (FCI) on behalf of the Government.",
+        "Buffer stocking norms are fixed and periodically revised by the Cabinet Committee on Economic Affairs (CCEA).",
+        "The total stock comprises two components: Operational Stock for regular PDS supply and Strategic Reserve for unforeseen emergencies.",
+        "Minimum buffer norms are defined for four specific dates across the year: April 1, July 1, October 1, and January 1.",
+        "The policy helps stabilize market prices through the Open Market Sale Scheme (OMSS) and ensures national food security."
+      ],
+      "id": "wedajz0"
+    }
+  ],
+  "enriched": true
+}

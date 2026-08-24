@@ -1,0 +1,94 @@
+{
+  "id": "8vvi66b",
+  "title": "RRB Quick Revision Box",
+  "order": 499,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lufpng3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways operates the fourth-largest national railway network in the world by size.",
+      "id": "gzoptn7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Railway Zone",
+        "Headquarters",
+        "Year Established"
+      ],
+      "rows": [
+        [
+          "Northern Railway",
+          "New Delhi",
+          "1952"
+        ],
+        [
+          "Southern Railway",
+          "Chennai",
+          "1951"
+        ],
+        [
+          "Western Railway",
+          "Mumbai (Churchgate)",
+          "1951"
+        ],
+        [
+          "Eastern Railway",
+          "Kolkata",
+          "1952"
+        ]
+      ],
+      "id": "y7v55un"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Board",
+          "value": "1905",
+          "icon": "award"
+        },
+        {
+          "label": "Nationalization",
+          "value": "1950",
+          "icon": "check"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "18 Zones",
+          "icon": "info"
+        }
+      ],
+      "id": "z9lrc06"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked: Match the Railway Zones with their correct headquarters (e.g., South Eastern Railway is headquartered in Kolkata).",
+        "Important distinction: The first electric train in India (Deccan Queen) ran on February 3, 1925, between Bombay VT and Kurla.",
+        "High frequency concept: UNESCO World Heritage Mountain Railways of India include Darjeeling Himalayan, Nilgiri Mountain, and Kalka-Shimla railways."
+      ],
+      "id": "762rzer"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on April 16, 1853.",
+        "Indian Railways was nationalized in 1950 and is currently divided into 18 administrative zones.",
+        "The Railway Board was constituted in 1905 based on the recommendations of the Robertson Committee.",
+        "The mascot of Indian Railways is 'Bholu', an elephant guard holding a green signal lamp."
+      ],
+      "id": "0yboas3"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,105 @@
+{
+  "id": "uky2bu9",
+  "title": "1. Shape of the Earth",
+  "order": 12,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "x92rw80"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "01",
+          "icon": "book"
+        },
+        {
+          "label": "Topic",
+          "value": "Shape of the Earth",
+          "icon": "info"
+        },
+        {
+          "label": "Key Classification",
+          "value": "Not a Perfect Sphere",
+          "icon": "check"
+        }
+      ],
+      "id": "ozs5imu"
+    },
+    {
+      "type": "paragraph",
+      "id": "3akt5lv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Why Earth is NOT a Perfect Sphere",
+      "id": "0aojfqy"
+    },
+    {
+      "id": "vv0814s",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0n9csdi",
+      "type": "heading",
+      "level": 2,
+      "content": "Why Earth is NOT a Perfect Sphere"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth does not form a perfect geometric sphere.",
+        "Understanding Earth's true shape is fundamental to physical geography and geodesy.",
+        "Rotational dynamics cause structural variations between equatorial and polar dimensions."
+      ],
+      "id": "529yzh0"
+    },
+    {
+      "type": "paragraph",
+      "id": "2s2poau"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams commonly test the exact technical term for Earth's shape (Geoid or Oblate Spheroid).",
+        "Pay attention to the difference between the Equatorial diameter and Polar diameter caused by Earth's rotation."
+      ],
+      "id": "iuhypfe"
+    },
+    {
+      "type": "paragraph",
+      "id": "2aziic5"
+    },
+    {
+      "type": "paragraph",
+      "id": "4s83rtd"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,97 @@
+{
+  "id": "a086oee",
+  "title": "17. Limitations",
+  "order": 544,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1n78y3e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Enactment Year",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "Total Sections",
+          "value": "32",
+          "icon": "book"
+        },
+        {
+          "label": "Schedule Articles",
+          "value": "137",
+          "icon": "check"
+        },
+        {
+          "label": "Core Maxim",
+          "value": "Vigilantibus",
+          "icon": "award"
+        }
+      ],
+      "id": "2el1xjj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The law assists only those who are vigilant, not those who sleep upon their rights.",
+      "id": "6hkt6dr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Suits",
+        "Appeals / Applications"
+      ],
+      "rows": [
+        [
+          "Section 5 Applicability",
+          "Not Applicable",
+          "Applicable (Condonation of Delay)"
+        ],
+        [
+          "Court's Discretion",
+          "No power to extend prescribed period",
+          "Power to extend if 'sufficient cause' is proven"
+        ],
+        [
+          "Effect of Expiry",
+          "Remedy barred; Right survives (except Sec 27)",
+          "Right to appeal barred unless delay condoned"
+        ]
+      ],
+      "id": "wi8d7w3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Limitation Act, 1963 bars the judicial remedy after the prescribed period expires, without extinguishing the underlying right (except under Section 27).",
+        "Section 3 imposes a mandatory duty on courts to dismiss time-barred suits, even if limitation is not pleaded as a defense by the opposing party.",
+        "Section 5 allows condonation of delay for sufficient cause, but it is strictly applicable to appeals and applications, not to suits.",
+        "Under Section 12, the day from which the period of limitation is to be reckoned is excluded from the calculation."
+      ],
+      "id": "i1bzztg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Section 5 (Condonation of Delay) applies exclusively to appeals and applications; it NEVER applies to suits.",
+        "Under Section 3, the court is bound to dismiss a time-barred suit suo motu even if the defendant fails to raise limitation as a defense.",
+        "Section 27 is an exception to the general rule: it extinguishes the right to property itself after the expiry of the limitation period."
+      ],
+      "id": "0t8yihz"
+    },
+    {
+      "type": "paragraph",
+      "id": "4kb79hb"
+    },
+    {
+      "type": "paragraph",
+      "id": "wxr67b2"
+    }
+  ],
+  "enriched": true
+}

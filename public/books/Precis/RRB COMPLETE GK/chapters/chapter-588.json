@@ -1,0 +1,89 @@
+{
+  "id": "1gddrg6",
+  "title": "RRB Quick Revision Box",
+  "order": 588,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zxr8fj2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bombay and Thane on April 16, 1853.",
+      "id": "zjqxjul"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "Mainline heavy passenger and freight routes"
+        ],
+        [
+          "Meter Gauge",
+          "1000 mm",
+          "Secondary tracks undergoing Project Unigauge conversion"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "Mountain railways and heritage routes"
+        ]
+      ],
+      "id": "m11f2r0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Run",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Route Distance",
+          "value": "34 km",
+          "icon": "info"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "award"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "check"
+        }
+      ],
+      "id": "9dcv9c4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headquarters of major Railway Zones (e.g., Eastern - Kolkata, Southern - Chennai) are high-frequency exam questions.",
+        "Broad Gauge width is exactly 1676 mm (5 ft 6 in); Project Unigauge aims to convert all lines to Broad Gauge.",
+        "Remember the year of nationalization of Indian Railways: 1951."
+      ],
+      "id": "0nm3716"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran on April 16, 1853, between Bombay (Bori Bunder) and Thane.",
+        "Indian Railways was nationalized in 1951 and is currently divided into 19 administrative zones.",
+        "Bholu, an elephant holding a signal lamp, serves as the official mascot of Indian Railways.",
+        "Indian Railways uses three main gauge types: Broad Gauge (1676 mm), Meter Gauge (1000 mm), and Narrow Gauge (762 mm / 610 mm)."
+      ],
+      "id": "7rbzrce"
+    }
+  ],
+  "enriched": true
+}

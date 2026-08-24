@@ -1,0 +1,137 @@
+{
+  "id": "st8uw22",
+  "title": "6. National Pension System (NPS) – VERY HIGH PROBABILITY",
+  "order": 595,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dhoi1ty"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The National Pension System (NPS) is a voluntary, defined contribution retirement savings scheme designed to enable subscribers to make optimum decisions regarding their future through systematic savings.",
+      "id": "newpxdz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Launch Year",
+          "value": "2004",
+          "icon": "calendar"
+        },
+        {
+          "label": "Regulator",
+          "value": "PFRDA",
+          "icon": "award"
+        },
+        {
+          "label": "Entry Age Limit",
+          "value": "18–70 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Account ID",
+          "value": "12-Digit PRAN",
+          "icon": "info"
+        }
+      ],
+      "id": "fr4ixlr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Tier-I Account",
+        "Tier-II Account"
+      ],
+      "rows": [
+        [
+          "Account Type",
+          "Mandatory Pension Account",
+          "Voluntary Savings Account"
+        ],
+        [
+          "Withdrawal Rules",
+          "Restricted until age 60 (Lock-in applies)",
+          "Unrestricted (Withdraw anytime)"
+        ],
+        [
+          "Tax Deductions",
+          "Eligible under Sec 80C & Sec 80CCD(1B)",
+          "No tax benefits (Except Central Govt Employees with 3-year lock-in)"
+        ],
+        [
+          "Min. Contribution to Open",
+          "₹500",
+          "₹250"
+        ]
+      ],
+      "id": "i9vktp9"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "National Pension System (NPS) was launched in January 2004 for government employees and opened to all Indian citizens in May 2009.",
+        "Regulated by the Pension Fund Regulatory and Development Authority (PFRDA) under the statutory PFRDA Act, 2013.",
+        "Operates on a defined contribution framework where individual contributions are invested in equity, corporate bonds, government securities, and alternative assets.",
+        "Provides two distinct account tiers: Tier-I (non-withdrawable pension account) and Tier-II (voluntary withdrawable savings account).",
+        "Offers unique tax advantages under Section 80CCD(1B) of the Income Tax Act up to an additional limit of ₹50,000."
+      ],
+      "id": "s81msmy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "PFRDA regulates NPS, not RBI or SEBI — frequently targeted as a distractor option in prelims exams.",
+        "Exclusive additional tax deduction of ₹50,000 is available under Section 80CCD(1B), over and above the ₹1.5 lakh limit under Section 80C.",
+        "Maximum joining age for non-government citizens was extended from 65 to 70 years.",
+        "Tier-I is mandatory for receiving pension benefits, whereas Tier-II account requires an active Tier-I account to open."
+      ],
+      "id": "v3hrshg"
+    },
+    {
+      "id": "3hmq5bx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

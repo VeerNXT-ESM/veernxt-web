@@ -1,0 +1,88 @@
+{
+  "id": "tcdco19",
+  "title": "Chapter 12: Landforms Created by Wind (Aeolian Geomorphology )",
+  "order": 144,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "b6rb8fi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Wind erosion is most effective in arid and semi-arid regions where vegetation cover is minimal and soils are dry and loose.",
+      "id": "9h4uyzl"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Rock Strata Alignment",
+        "Key Formation Process",
+        "Resulting Morphology"
+      ],
+      "rows": [
+        [
+          "Zeugen",
+          "Horizontal layers of alternating hard and soft rock",
+          "Abrasion carves furrows through jointed top hard layer into softer rock beneath",
+          "Flat-topped ridge and furrow landscape"
+        ],
+        [
+          "Yardangs",
+          "Vertical bands of alternating hard and soft rock parallel to wind",
+          "Wind abrasion excavates soft rock bands between resistant hard rocks",
+          "Steep-sided overhanging ridges separated by wind-blown troughs"
+        ]
+      ],
+      "id": "mn2i2kq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Erosion Processes",
+          "value": "Deflation, Abrasion, Attrition",
+          "icon": "check"
+        },
+        {
+          "label": "Dominant Environment",
+          "value": "Arid & Semi-Arid Regions",
+          "icon": "info"
+        },
+        {
+          "label": "Major Dune Types",
+          "value": "5 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Max Abrasion Height",
+          "value": "< 3 Feet",
+          "icon": "clock"
+        }
+      ],
+      "id": "b59p11e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Barchans have horns pointing downwind (leeward), whereas Parabolic dunes have horns pointing upwind (windward).",
+        "Zeugen develop on horizontal rock strata, while Yardangs form on vertically standing rock strata.",
+        "Pediments are gently sloping bedrock surfaces formed at the foot of mountain fronts in arid regions through combined weathering, sheet wash, and wind action."
+      ],
+      "id": "ne3kdfw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Wind action is most prominent in arid and semi-arid regions due to sparse vegetation cover and dry, loose surface material.",
+        "Deflation creates shallow ground depressions termed blowouts or deflation hollows.",
+        "Mushroom rocks (Gours) develop because wind abrasion is most intense close to the ground level.",
+        "Barchans are crescent-shaped sand dunes with horns pointing in the downwind (leeward) direction.",
+        "Loess deposits consist of fine, unstratified, wind-blown silt transported vast distances from desert source areas."
+      ],
+      "id": "o7b2qry"
+    }
+  ],
+  "enriched": true
+}

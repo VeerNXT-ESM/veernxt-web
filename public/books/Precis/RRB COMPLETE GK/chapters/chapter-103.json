@@ -1,0 +1,100 @@
+{
+  "id": "4pzo1gs",
+  "title": "Chapter 8: Volcanoes",
+  "order": 103,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2frwfpm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Barren Island in the Andaman Sea is the only confirmed active volcano in India and the South Asia region.",
+      "id": "koh98i5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Shield Volcano",
+        "Composite Volcano",
+        "Caldera"
+      ],
+      "rows": [
+        [
+          "Lava Type",
+          "Low viscosity (Basaltic)",
+          "High viscosity (Andesitic/Rhyolitic)",
+          "Extremely viscous"
+        ],
+        [
+          "Explosivity",
+          "Gentle / Non-explosive",
+          "Highly explosive",
+          "Most explosive on Earth"
+        ],
+        [
+          "Formed Structure",
+          "Broad dome with gentle slopes",
+          "Layered cone of ash and lava",
+          "Deep sunken depression"
+        ],
+        [
+          "Example",
+          "Mauna Loa (Hawaii)",
+          "Mount Fuji (Japan)",
+          "Lake Toba (Indonesia)"
+        ]
+      ],
+      "id": "7ord89a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ring of Fire",
+          "value": "75% Volcanoes",
+          "icon": "globe"
+        },
+        {
+          "label": "India's Active Volcano",
+          "value": "Barren Island",
+          "icon": "check"
+        },
+        {
+          "label": "Lava Temperature",
+          "value": "700–1200°C",
+          "icon": "clock"
+        },
+        {
+          "label": "Primary Types",
+          "value": "4 Categories",
+          "icon": "book"
+        }
+      ],
+      "id": "d3j9ev7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note the difference between India's Barren Island (Active) and Narcondam Island (Dormant/Extinct).",
+        "Deccan Traps in Peninsular India are classic examples of Flood Basalt Provinces created by ancient volcanic activity.",
+        "Calderas represent the most explosive volcanic landforms, which collapse inward during eruptions forming large depressions."
+      ],
+      "id": "a7eag7m"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Magma refers to molten rock stored beneath Earth's crust, while lava is molten rock that breaks through to the surface.",
+        "The Circum-Pacific Belt, known as the 'Ring of Fire', contains over 75% of the world's active volcanoes.",
+        "Barren Island in the Andaman and Nicobar Islands is the only active volcano located in India and South Asia.",
+        "Shield volcanoes are primarily composed of basaltic lava, making them less steep and largely non-explosive.",
+        "Composite volcanoes (Stratovolcanoes) erupt cooler, more viscous lava accompanied by large quantities of pyroclastic material and ash."
+      ],
+      "id": "rcmidpa"
+    }
+  ],
+  "enriched": true
+}

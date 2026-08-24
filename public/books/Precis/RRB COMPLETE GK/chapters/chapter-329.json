@@ -1,0 +1,90 @@
+{
+  "id": "t5z3zq0",
+  "title": "4. Appointment of Judges",
+  "order": 329,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "s46aw9r"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The consultation with the Chief Justice of India in the appointment of judges means concurrence, establishing the primacy of the judiciary.",
+      "id": "yo3r1wa"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Judges Case",
+        "Key Ruling on Consultation & Collegium"
+      ],
+      "rows": [
+        [
+          "First Judges Case (1981)",
+          "Consultation does not mean concurrence; Executive retains final primacy."
+        ],
+        [
+          "Second Judges Case (1993)",
+          "Consultation means concurrence; CJI + 2 senior judges form Collegium."
+        ],
+        [
+          "Third Judges Case (1998)",
+          "Expanded Collegium to CJI + 4 senior-most judges for Supreme Court appointments."
+        ],
+        [
+          "Fourth Judges Case (2015)",
+          "Struck down 99th Amendment & NJAC to restore the Collegium system."
+        ]
+      ],
+      "id": "pehxksy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supreme Court Appointment",
+          "value": "Article 124(2)",
+          "icon": "book"
+        },
+        {
+          "label": "High Court Appointment",
+          "value": "Article 217",
+          "icon": "book"
+        },
+        {
+          "label": "SC Collegium Composition",
+          "value": "CJI + 4 Judges",
+          "icon": "check"
+        },
+        {
+          "label": "NJAC Struck Down",
+          "value": "2015 (99th CAA)",
+          "icon": "calendar"
+        }
+      ],
+      "id": "rjh8va1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The term 'Consultation' was officially interpreted as 'Concurrence' in the Second Judges Case (1993).",
+        "The qualification category of 'Distinguished Jurist' exists only for Supreme Court judge appointments, not for High Courts.",
+        "The 99th Constitutional Amendment Act and NJAC Act were declared unconstitutional for violating the basic structure (judicial independence)."
+      ],
+      "id": "o0b45zm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Judges of the Supreme Court and High Courts are appointed by the President of India.",
+        "The Collegium System evolved through three major judicial precedents: First (1981), Second (1993), and Third (1998) Judges Cases.",
+        "For Supreme Court appointments, the Collegium comprises the Chief Justice of India and four senior-most judges of the Supreme Court.",
+        "The 99th Constitutional Amendment Act establishing the National Judicial Appointments Commission (NJAC) was struck down in the Fourth Judges Case (2015).",
+        "Qualifications for SC judges require Indian citizenship and 5 years as an HC judge, 10 years as an HC advocate, or being a distinguished jurist."
+      ],
+      "id": "e3il47o"
+    }
+  ],
+  "enriched": true
+}

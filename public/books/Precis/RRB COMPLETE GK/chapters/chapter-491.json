@@ -1,0 +1,95 @@
+{
+  "id": "hwdol44",
+  "title": "4. Appointment of Members",
+  "order": 491,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "rtb51t5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The President appoints the Chairman and other members of the Commission by warrant under his hand and seal.",
+      "id": "kat41bf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Body Members (e.g., UPSC)",
+        "Statutory Body Members (e.g., NHRC)"
+      ],
+      "rows": [
+        [
+          "Appointing Authority",
+          "President of India directly",
+          "President on recommendation of Selection Committee"
+        ],
+        [
+          "Source of Power",
+          "Directly from the Constitution of India",
+          "Enacted through an Act of Parliament"
+        ],
+        [
+          "Removal Procedure",
+          "Strict Constitutional process (SC inquiry required)",
+          "As laid down in the specific Parliamentary Act"
+        ],
+        [
+          "Re-appointment",
+          "Ineligible for further government employment",
+          "Subject to conditions prescribed in the parent Act"
+        ]
+      ],
+      "id": "8tcv8k7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Appointing Authority",
+          "value": "President of India",
+          "icon": "award"
+        },
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years / 65 Years Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Removal Authority",
+          "value": "President of India",
+          "icon": "check"
+        },
+        {
+          "label": "Selection Process",
+          "value": "High-Level Committee",
+          "icon": "book"
+        }
+      ],
+      "id": "gfj1qzw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Although the Governor appoints members of the State Public Service Commission (SPSC), only the President of India has the power to remove them.",
+        "Selection committees for statutory appointments typically comprise the Prime Minister, the Speaker of Lok Sabha, and the Leader of Opposition.",
+        "UPSC members cannot be re-appointed for a second term in the same position to safeguard administrative integrity and independence."
+      ],
+      "id": "wk5hmj6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Members of Constitutional Bodies such as the UPSC and Election Commission are appointed directly by the President of India.",
+        "Qualifications for appointment are generally specified in the Constitution or prescribed by Parliament through relevant enabling legislation.",
+        "The tenure of members is protected to ensure autonomy, usually fixed at 6 years or until reaching 65 years of age, whichever is earlier.",
+        "Members of statutory bodies like the NHRC and CIC are appointed on the recommendations of a designated high-powered selection committee.",
+        "Members of major constitutional bodies are rendered ineligible for further employment under the Central or State Governments upon demitting office."
+      ],
+      "id": "2krmtzp"
+    }
+  ],
+  "enriched": true
+}

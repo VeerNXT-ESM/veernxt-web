@@ -1,11 +1,11 @@
 {
-  "id": "cssk2l4",
+  "id": "djetg2u",
   "title": "Chapter 3: Energy and Power",
   "order": 52,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "sv683ug"
+      "id": "ylxucc0"
     },
     {
       "type": "statStrip",
@@ -13,28 +13,28 @@
         {
           "label": "SI Unit of Energy",
           "value": "Joule (J)",
-          "icon": "info"
+          "icon": "book"
         },
         {
           "label": "SI Unit of Power",
           "value": "Watt (W)",
-          "icon": "check"
+          "icon": "award"
         },
         {
           "label": "1 Horsepower",
           "value": "746 W",
-          "icon": "award"
+          "icon": "check"
         },
         {
-          "label": "1 Commercial Unit (kWh)",
+          "label": "1 kWh Value",
           "value": "3.6 × 10⁶ J",
           "icon": "clock"
         }
       ],
-      "id": "8gjyzty"
+      "id": "nifraqv"
     },
     {
-      "id": "ar8h7bw",
+      "id": "r7r4svy",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Energy"
@@ -43,34 +43,34 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Energy is defined as the capacity to do work and is a scalar quantity.",
-        "Kinetic Energy (KE = ½mv²) depends on mass and the square of velocity.",
-        "Potential Energy (PE = mgh) is the energy stored due to position, shape, or configuration.",
-        "Mechanical Energy is the sum of Kinetic Energy and Potential Energy in a system.",
-        "Power represents the rate of doing work or rate of energy transfer (P = Work / Time)."
+        "Energy is the scalar quantity defined as the capacity or ability of a body to do work.",
+        "Kinetic energy is the energy possessed by an object owing to its state of motion.",
+        "Potential energy is the energy stored within an object due to its position, shape, or state.",
+        "The total mechanical energy of an isolated system is conserved if forces acting are conservative.",
+        "Power measures the rate at which work is performed or energy is converted over time."
       ],
-      "id": "mshpht3"
+      "id": "74wk7kd"
     },
     {
       "type": "paragraph",
-      "id": "ryd4hka"
+      "id": "a3h5law"
     },
     {
       "type": "paragraph",
-      "id": "c0y0f6y"
+      "id": "n129w7b"
     },
     {
       "type": "paragraph",
-      "id": "i5yg4dq"
+      "id": "52vo9qt"
     },
     {
-      "id": "zhtm27j",
+      "id": "koa2cmr",
       "type": "heading",
       "level": 2,
       "content": "2. Forms of Energy"
     },
     {
-      "id": "grgr3zd",
+      "id": "ofm6kww",
       "type": "table",
       "rows": [
         {
@@ -118,145 +118,145 @@
       ]
     },
     {
-      "id": "tkap6li",
+      "id": "oo2htvm",
       "type": "heading",
       "level": 2,
       "content": "3. Kinetic Energy"
     },
     {
       "type": "paragraph",
-      "id": "rb37w1w"
+      "id": "uq01fxn"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j79e5kp"
+      "id": "ht813pn"
     },
     {
       "type": "paragraph",
-      "id": "2vbmi5c"
+      "id": "dj5bmqo"
     },
     {
       "type": "paragraph",
-      "id": "xibwm87"
+      "id": "2izxmk5"
     },
     {
       "type": "paragraph",
-      "id": "dvki5ju"
+      "id": "pxoryf6"
     },
     {
       "type": "pullQuote",
       "content": "Energy can neither be created nor destroyed; it can only be transformed from one form to another.",
-      "id": "nhtdzxz"
+      "id": "637qs5f"
     },
     {
-      "id": "xbme72w",
+      "id": "gxqy916",
       "type": "heading",
       "level": 2,
       "content": "4. Potential Energy"
     },
     {
       "type": "paragraph",
-      "id": "asqrsfe"
+      "id": "q5ab006"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1jxahas"
+      "id": "r3xhqv1"
     },
     {
       "type": "paragraph",
-      "id": "j1tsfzk"
+      "id": "avvugwq"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x020amm"
+      "id": "bmj7k1g"
     },
     {
       "type": "paragraph",
-      "id": "mzqqani"
+      "id": "b2hoy74"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hs8yih1"
+      "id": "41nspty"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Parameter",
-        "Energy",
-        "Power"
+        "Property",
+        "Kinetic Energy",
+        "Potential Energy"
       ],
       "rows": [
         [
           "Definition",
-          "Capacity to perform work",
-          "Rate at which work is performed"
-        ],
-        [
-          "SI Unit",
-          "Joule (J)",
-          "Watt (W) or J/s"
-        ],
-        [
-          "Time Dependence",
-          "Independent of time taken",
-          "Inversely proportional to time taken"
+          "Energy possessed due to motion",
+          "Energy possessed due to position or state"
         ],
         [
           "Formula",
-          "E = Work Done",
-          "P = Work / Time"
+          "KE = 1/2 m v²",
+          "PE = m g h"
+        ],
+        [
+          "Key Variable",
+          "Velocity (v)",
+          "Height (h) / Position"
+        ],
+        [
+          "Example",
+          "A rolling stone or flying arrow",
+          "Water stored behind a dam"
         ]
       ],
-      "id": "0g2ew22"
+      "id": "ezr5gpn"
     },
     {
-      "id": "322dud1",
+      "id": "i85ea0y",
       "type": "heading",
       "level": 2,
       "content": "5. Law of Conservation of Energy"
     },
     {
       "type": "paragraph",
-      "id": "sb3qzao"
+      "id": "7qjh31a"
     },
     {
-      "id": "tugtl3p",
+      "id": "qehgk7i",
       "type": "heading",
       "level": 2,
       "content": "6. Mechanical Energy"
     },
     {
       "type": "paragraph",
-      "id": "szh5ues"
+      "id": "6m31jji"
     },
     {
       "type": "paragraph",
-      "id": "bwt1gki"
+      "id": "mkrkvtv"
     },
     {
-      "id": "6xzzd5t",
+      "id": "b2zzkvy",
       "type": "heading",
       "level": 2,
       "content": "7. Meaning of Power"
     },
     {
       "type": "paragraph",
-      "id": "nssfyd0"
+      "id": "6z4e1or"
     },
     {
       "type": "paragraph",
-      "id": "gacoveb"
+      "id": "ftzodua"
     },
     {
       "type": "paragraph",
-      "id": "s5e1bct"
+      "id": "y83vqvb"
     },
     {
-      "id": "9y7ymbd",
+      "id": "3cbgse8",
       "type": "heading",
       "level": 2,
       "content": "8. Units of Power"
@@ -264,14 +264,14 @@
     {
       "type": "examAlert",
       "items": [
-        "Commercial unit of energy is 1 kilowatt-hour (kWh), which equals 3.6 × 10⁶ Joules.",
-        "1 Horsepower (HP) is equal to 746 Watts, a frequent question in RRB and SSC exams.",
-        "If the velocity of a moving body is doubled, its Kinetic Energy becomes four times (KE ∝ v²)."
+        "Remember that 1 Horsepower (hp) = 746 Watts; this conversion is frequently asked in numerical problems.",
+        "1 Kilowatt-hour (kWh) is the commercial unit of electric energy and equals 3.6 × 10⁶ Joules.",
+        "Mechanical Energy is the sum total of Potential Energy and Kinetic Energy."
       ],
-      "id": "spfshke"
+      "id": "gsvptbk"
     },
     {
-      "id": "c0fm9sy",
+      "id": "eaxulqc",
       "type": "table",
       "rows": [
         {
@@ -305,26 +305,26 @@
       ]
     },
     {
-      "id": "hmkrnyt",
+      "id": "twa7kbv",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "ocpx13f"
+      "id": "mtgbk1p"
     },
     {
       "type": "paragraph",
-      "id": "99tggr1"
+      "id": "6wiobmn"
     },
     {
       "type": "paragraph",
-      "id": "mz13yfp"
+      "id": "xlnb2o4"
     },
     {
       "type": "paragraph",
-      "id": "pdsako4"
+      "id": "f5pr10o"
     }
   ],
   "enriched": true

@@ -1,0 +1,95 @@
+{
+  "id": "kx094x2",
+  "title": "3. Election of the President (Article 54)",
+  "order": 302,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "96tmj00"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The President shall be elected by the members of an electoral college consisting of the elected members of both Houses of Parliament and the elected members of the Legislative Assemblies of the States.",
+      "id": "ddrak0f"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Legislative Body",
+        "Included in Electoral College",
+        "Excluded from Electoral College"
+      ],
+      "rows": [
+        [
+          "Parliament (Lok Sabha & Rajya Sabha)",
+          "Elected Members",
+          "Nominated Members"
+        ],
+        [
+          "State Legislative Assemblies (Vidhan Sabha)",
+          "Elected Members",
+          "Nominated Members"
+        ],
+        [
+          "State Legislative Councils (Vidhan Parishad)",
+          "None",
+          "All Members (Elected & Nominated)"
+        ],
+        [
+          "UT Assemblies (Delhi, Puducherry, J&K)",
+          "Elected Members",
+          "Nominated Members"
+        ]
+      ],
+      "id": "kwqaf4u"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 54",
+          "icon": "book"
+        },
+        {
+          "label": "Election Type",
+          "value": "Indirect Election",
+          "icon": "check"
+        },
+        {
+          "label": "UT Inclusion Amendment",
+          "value": "70th CAA, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Voting Method",
+          "value": "Secret Ballot",
+          "icon": "info"
+        }
+      ],
+      "id": "ypbe6wp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Nominated members of both Lok Sabha and Rajya Sabha CANNOT vote in the Presidential election.",
+        "Members of Legislative Councils (Vidhan Parishad) in bicameral state legislatures have NO voting rights in the Presidential election.",
+        "The 70th Constitutional Amendment Act of 1992 extended the voting rights to elected members of the Legislative Assemblies of Delhi and Puducherry."
+      ],
+      "id": "6ohchwi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President of India is elected indirectly by an Electoral College, not directly by the people.",
+        "The Electoral College comprises elected members of both Houses of Parliament and elected members of the Legislative Assemblies of all States.",
+        "Elected members of the Legislative Assemblies of Union Territories of Delhi, Puducherry, and Jammu & Kashmir are included in the Electoral College.",
+        "Nominated members of Parliament and State Legislative Assemblies are strictly excluded from participating in the election.",
+        "Members of State Legislative Councils (Vidhan Parishad), both elected and nominated, do not form part of the Electoral College."
+      ],
+      "id": "drz0a06"
+    }
+  ],
+  "enriched": true
+}

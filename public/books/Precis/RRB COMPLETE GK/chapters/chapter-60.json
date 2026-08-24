@@ -1,0 +1,105 @@
+{
+  "id": "pf7c5f3",
+  "title": "1. Meaning of Rocks",
+  "order": 60,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sh9it0l"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Main Rock Types",
+          "value": "3 Major Groups",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Crust Elements",
+          "value": "8 Elements",
+          "icon": "info"
+        },
+        {
+          "label": "Study of Rocks",
+          "value": "Petrology",
+          "icon": "award"
+        },
+        {
+          "label": "Crust Composition Share",
+          "value": "98%",
+          "icon": "check"
+        }
+      ],
+      "id": "a7dafjn"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Petrology is the science of rocks.",
+      "id": "izs9cso"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth's crust is composed of various types of rocks, which are naturally occurring solid aggregates of one or more minerals.",
+        "Petrology is the branch of geology dedicated to the scientific study of rocks, including their composition, texture, and origin.",
+        "Feldspar and quartz are among the most abundant silicate minerals constituting the Earth's crustal rocks.",
+        "Based on their mode of formation, rocks are classified into three fundamental categories: Igneous, Sedimentary, and Metamorphic."
+      ],
+      "id": "y7r9tb8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Formation Mechanism",
+        "Key Examples"
+      ],
+      "rows": [
+        [
+          "Igneous Rocks",
+          "Cooling and solidification of molten magma or lava",
+          "Granite, Basalt, Gabbro"
+        ],
+        [
+          "Sedimentary Rocks",
+          "Deposition, compaction, and lithification of rock fragments and organic matter",
+          "Sandstone, Limestone, Shale"
+        ],
+        [
+          "Metamorphic Rocks",
+          "Recrystallization and reorganization of pre-existing rocks under high heat and pressure",
+          "Marble, Slate, Gneiss"
+        ]
+      ],
+      "id": "wic7fl8"
+    },
+    {
+      "type": "paragraph",
+      "id": "t3lgfsr"
+    },
+    {
+      "type": "paragraph",
+      "id": "0rxu1ie"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Oxygen (46.6%) and Silicon (27.7%) are the two most abundant chemical elements in the Earth's crust.",
+        "Igneous rocks are termed Primary Rocks because all other rock types are ultimately derived from them.",
+        "Competitive exams frequently test the distinction between Petrology (study of rocks) and Mineralogy (study of minerals)."
+      ],
+      "id": "yp3c5gu"
+    },
+    {
+      "type": "paragraph",
+      "id": "xb4ff8g"
+    },
+    {
+      "type": "paragraph",
+      "id": "jnonpxe"
+    }
+  ],
+  "enriched": true
+}

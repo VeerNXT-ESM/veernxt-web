@@ -1,0 +1,537 @@
+{
+  "id": "aq3k8w2",
+  "title": "Chapter 4 – Microbiology",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "ghnpq4d",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Microorganisms are broadly classified into Bacteria, Viruses, Fungi, and Parasites.",
+        "Sterilization and Disinfection are fundamental techniques required to eliminate or reduce pathogens.",
+        "Immunity serves as the primary defense mechanism against infectious microbial agents.",
+        "Hospital Acquired Infections (Nosocomial Infections) represent critical safety concerns in healthcare environments."
+      ],
+      "id": "4489ou8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Microbe Categories",
+          "value": "4 Core Types",
+          "icon": "book"
+        },
+        {
+          "label": "Infection Focus",
+          "value": "Nosocomial",
+          "icon": "info"
+        },
+        {
+          "label": "Control Method",
+          "value": "Sterilization",
+          "icon": "check"
+        },
+        {
+          "label": "Host Defense",
+          "value": "Immunity",
+          "icon": "award"
+        }
+      ],
+      "id": "jqg9c8u"
+    },
+    {
+      "type": "paragraph",
+      "id": "94d09q9"
+    },
+    {
+      "id": "l08yctd",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Microorganisms"
+    },
+    {
+      "id": "7ulyoc7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motkdgl",
+      "type": "heading",
+      "level": 2,
+      "content": "Bacteria"
+    },
+    {
+      "type": "paragraph",
+      "id": "n0hf25m"
+    },
+    {
+      "id": "chiexmr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jk176ym",
+      "type": "heading",
+      "level": 2,
+      "content": "Viruses"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Hospital Acquired Infections (Nosocomial Infections)",
+      "id": "h4dkyhn"
+    },
+    {
+      "type": "paragraph",
+      "id": "oj12nbs"
+    },
+    {
+      "id": "o0kuw4q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n88199j",
+      "type": "heading",
+      "level": 2,
+      "content": "Fungi"
+    },
+    {
+      "type": "paragraph",
+      "id": "ix1yf9a"
+    },
+    {
+      "id": "m6kzgjy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Sterilization",
+        "Disinfection"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Destruction of all microbial life including bacterial spores",
+          "Elimination of most pathogenic microorganisms on inanimate objects"
+        ],
+        [
+          "Spore Elimination",
+          "Effective against bacterial spores",
+          "Not necessarily effective against spores"
+        ],
+        [
+          "Common Applications",
+          "Surgical instruments, culture media, injectables",
+          "Surface cleaning, hospital floor sanitation"
+        ]
+      ],
+      "id": "z9hxzha"
+    },
+    {
+      "id": "xegyog2",
+      "type": "heading",
+      "level": 2,
+      "content": "Parasites"
+    },
+    {
+      "id": "jwwxxli",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ukz5ryb",
+      "type": "heading",
+      "level": 2,
+      "content": "Sterilization and Disinfection"
+    },
+    {
+      "id": "abe5j7k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kgccxnq",
+      "type": "heading",
+      "level": 2,
+      "content": "Immunity"
+    },
+    {
+      "type": "paragraph",
+      "id": "quf7q73"
+    },
+    {
+      "id": "xj8esrp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High frequency topic: Distinguish between Sterilization (absolute destruction of all forms of microbial life) and Disinfection.",
+        "Frequently tested: Classification of Bacteria, Viruses, Fungi, and Parasites along with their primary modes of transmission.",
+        "Key clinical concept: Modes of prevention and causative agents of Hospital Acquired (Nosocomial) Infections."
+      ],
+      "id": "5vpr04s"
+    },
+    {
+      "id": "e9zejn6",
+      "type": "heading",
+      "level": 2,
+      "content": "Hospital Acquired Infections (Nosocomial Infections)"
+    },
+    {
+      "type": "paragraph",
+      "id": "eej4jcm"
+    },
+    {
+      "id": "9eefwgd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jr8eync",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "0r5n96t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

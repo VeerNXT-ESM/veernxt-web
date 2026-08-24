@@ -1,0 +1,133 @@
+{
+  "id": "z6e5rz6",
+  "title": "Wind vs River vs Glacier",
+  "order": 152,
+  "blocks": [
+    {
+      "id": "us3i2kh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While rivers carve V-shaped valleys and glaciers sculpt U-shaped troughs, wind reshapes arid landscapes through deflation and abrasion.",
+      "id": "n5a2cq6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "River (Fluvial)",
+        "Glacier (Glacial)",
+        "Wind (Aeolian)"
+      ],
+      "rows": [
+        [
+          "Valley Profile",
+          "V-Shaped Valley",
+          "U-Shaped Valley",
+          "No deep valleys; Deflation hollows"
+        ],
+        [
+          "Erosional Landforms",
+          "Waterfalls, Gorges, Meanders, Canyons",
+          "Cirques, Hanging Valleys, Arêtes, Horns",
+          "Mushroom Rocks, Yardangs, Zeugens, Inselbergs"
+        ],
+        [
+          "Depositional Landforms",
+          "Alluvial Fans, Deltas, Ox-bow Lakes",
+          "Moraines, Drumlins, Eskers, Kames",
+          "Barchans, Seif Dunes, Loess"
+        ],
+        [
+          "Dominant Region",
+          "Humid & Sub-humid Climates",
+          "High Latitude & High Altitude",
+          "Arid & Semi-arid Deserts"
+        ]
+      ],
+      "id": "j3asr0y"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Erosional Agents",
+          "value": "3 Major Types",
+          "icon": "info"
+        },
+        {
+          "label": "River Valleys",
+          "value": "V-Shaped Profile",
+          "icon": "book"
+        },
+        {
+          "label": "Glacial Valleys",
+          "value": "U-Shaped Profile",
+          "icon": "check"
+        },
+        {
+          "label": "Aeolian Domain",
+          "value": "Arid & Semi-Arid",
+          "icon": "calendar"
+        }
+      ],
+      "id": "mrmmejk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Cirques, Arêtes, and Horns are classic erosional landforms produced exclusively by glacial action.",
+        "Barchans are crescent-shaped sand dunes formed by wind deposition, with horns pointing in the direction of the wind.",
+        "Ox-bow lakes, alluvial fans, and deltas are key river (fluvial) depositional features frequently asked in geography MCQs."
+      ],
+      "id": "qgi4fby"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Rivers carve steep V-shaped valleys, gorges, and waterfalls through vertical and lateral fluvial erosion.",
+        "Glaciers reshape landscapes into U-shaped valleys, cirques, hanging valleys, and moraines via plucking and abrasion.",
+        "Wind acts as the primary geomorphic agent in arid regions, shaping landforms like yardangs, mushroom rocks, and barchans.",
+        "Understanding the distinction between erosional and depositional features of each agent is crucial for physical geography."
+      ],
+      "id": "n97znyr"
+    }
+  ],
+  "enriched": true
+}

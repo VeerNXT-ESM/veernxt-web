@@ -1,0 +1,530 @@
+{
+  "id": "rwtsanf",
+  "title": "Chapter 16: Nutrition and Health",
+  "order": 16,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "x54o5ah"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Nutrients",
+          "value": "7 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Nutrition Steps",
+          "value": "5 Stages",
+          "icon": "info"
+        },
+        {
+          "label": "Energy from Fat",
+          "value": "9 kcal/g",
+          "icon": "check"
+        },
+        {
+          "label": "Energy from Carbs/Proteins",
+          "value": "4 kcal/g",
+          "icon": "award"
+        }
+      ],
+      "id": "fw5mln6"
+    },
+    {
+      "id": "rcckjiz",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Nutrition"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Nutrition involves five sequential processes: Ingestion, Digestion, Absorption, Assimilation, and Egestion.",
+        "Carbohydrates and Fats serve as energy sources, while Proteins are vital for growth and tissue repair.",
+        "Vitamins are classified into Fat-Soluble (A, D, E, K) and Water-Soluble (B-complex and C).",
+        "Essential minerals like Calcium, Iron, Iodine, and Sodium perform structural and metabolic regulatory roles.",
+        "Malnutrition encompasses both undernutrition (leading to PEM diseases like Kwashiorkor and Marasmus) and overnutrition."
+      ],
+      "id": "hj6d34z"
+    },
+    {
+      "type": "paragraph",
+      "id": "x69ruok"
+    },
+    {
+      "type": "paragraph",
+      "id": "fp3bgrx"
+    },
+    {
+      "type": "paragraph",
+      "id": "acj53mz"
+    },
+    {
+      "id": "ih7warv",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Steps in Nutrition"
+    },
+    {
+      "type": "paragraph",
+      "id": "70vjfk8"
+    },
+    {
+      "type": "paragraph",
+      "id": "0wwn1hi"
+    },
+    {
+      "type": "paragraph",
+      "id": "9erd2ey"
+    },
+    {
+      "type": "paragraph",
+      "id": "rups00l"
+    },
+    {
+      "type": "paragraph",
+      "id": "f1qvvgy"
+    },
+    {
+      "id": "3o62xrq",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Major Nutrients in Food"
+    },
+    {
+      "id": "opw6cut",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50t90l3",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Carbohydrates"
+    },
+    {
+      "type": "paragraph",
+      "id": "otyudw1"
+    },
+    {
+      "type": "paragraph",
+      "id": "el9s71y"
+    },
+    {
+      "type": "paragraph",
+      "id": "bmritoq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A balanced diet provides all essential nutrients in appropriate proportions to maintain health, growth, and proper physiological function.",
+      "id": "h2742xk"
+    },
+    {
+      "id": "zlfvh3u",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Proteins"
+    },
+    {
+      "type": "paragraph",
+      "id": "wmgasck"
+    },
+    {
+      "type": "paragraph",
+      "id": "zkhipbn"
+    },
+    {
+      "type": "paragraph",
+      "id": "bbyzsx5"
+    },
+    {
+      "id": "8vmbb90",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Fats"
+    },
+    {
+      "type": "paragraph",
+      "id": "ur7hz93"
+    },
+    {
+      "type": "paragraph",
+      "id": "3l2qve7"
+    },
+    {
+      "type": "paragraph",
+      "id": "kkvf7vb"
+    },
+    {
+      "id": "5bwrgg8",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Vitamins"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Kwashiorkor",
+        "Marasmus"
+      ],
+      "rows": [
+        [
+          "Primary Deficiency",
+          "Severe Protein deficiency",
+          "Protein and Calorie deficiency"
+        ],
+        [
+          "Target Age",
+          "Children aged 1–5 years",
+          "Infants under 1 year"
+        ],
+        [
+          "Edema (Swelling)",
+          "Present (swollen belly and feet)",
+          "Absent"
+        ],
+        [
+          "Physical Appearance",
+          "Subcutaneous fat retained, potbelly",
+          "Severe emaciation, skin over bones"
+        ]
+      ],
+      "id": "eyudbvw"
+    },
+    {
+      "id": "pwjbbs3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f5v1p0i",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Minerals"
+    },
+    {
+      "id": "dv0hk6y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c18gy0j",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Balanced Diet"
+    },
+    {
+      "type": "paragraph",
+      "id": "z0t9bri"
+    },
+    {
+      "type": "paragraph",
+      "id": "d7dy9xv"
+    },
+    {
+      "type": "paragraph",
+      "id": "21byxbf"
+    },
+    {
+      "id": "hsowcoo",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Malnutrition"
+    },
+    {
+      "type": "paragraph",
+      "id": "4nrhw06"
+    },
+    {
+      "type": "paragraph",
+      "id": "83rpkfw"
+    },
+    {
+      "id": "uvopjal",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Common Nutrition Disorders"
+    },
+    {
+      "id": "exfia89",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Vitamin C (Ascorbic Acid) is water-soluble and heat-sensitive; it gets destroyed easily during cooking.",
+        "Kwashiorkor is caused by severe protein deficiency and causes edema, whereas Marasmus is caused by deficiency of both proteins and total calories.",
+        "Iodine deficiency causes Goitre due to thyroid enlargement, while Vitamin D deficiency leads to Rickets in children and Osteomalacia in adults."
+      ],
+      "id": "b4oeyd6"
+    },
+    {
+      "id": "ecnm6gb",
+      "type": "heading",
+      "level": 2,
+      "content": "12.Important Exam Points"
+    },
+    {
+      "type": "paragraph",
+      "id": "z8gpxyf"
+    },
+    {
+      "type": "paragraph",
+      "id": "0di1ux9"
+    },
+    {
+      "type": "paragraph",
+      "id": "0xdozpp"
+    },
+    {
+      "type": "paragraph",
+      "id": "6e57n3a"
+    },
+    {
+      "type": "paragraph",
+      "id": "euj5sjk"
+    },
+    {
+      "type": "paragraph",
+      "id": "945jvit"
+    },
+    {
+      "type": "paragraph",
+      "id": "xzn3efq"
+    }
+  ],
+  "enriched": true
+}

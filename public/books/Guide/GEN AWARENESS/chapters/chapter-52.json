@@ -1,0 +1,333 @@
+{
+  "id": "42l4ejn",
+  "title": "Chapter 3: Energy and Power",
+  "order": 52,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qe05rt4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Energy",
+          "value": "Joule (J)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "check"
+        },
+        {
+          "label": "1 Horsepower (HP)",
+          "value": "746 Watts",
+          "icon": "clock"
+        },
+        {
+          "label": "1 kWh in Joules",
+          "value": "3.6 × 10⁶ J",
+          "icon": "info"
+        }
+      ],
+      "id": "68o7k5d"
+    },
+    {
+      "id": "xhfo2qr",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Energy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Energy is defined as the capacity or ability to do work, and its SI unit is the Joule (J).",
+        "Kinetic Energy (KE = 1/2 * m * v²) is the energy possessed by an object due to its state of motion.",
+        "Potential Energy (PE = m * g * h) is the stored energy an object possesses due to its position or configuration.",
+        "The Law of Conservation of Energy states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Mechanical Energy is the sum total of kinetic energy and potential energy in a closed system.",
+        "Power is defined as the rate of doing work or the rate of energy consumption per unit time (P = Work / Time)."
+      ],
+      "id": "z8qizdh"
+    },
+    {
+      "type": "paragraph",
+      "id": "za126az"
+    },
+    {
+      "type": "paragraph",
+      "id": "k1sv75p"
+    },
+    {
+      "type": "paragraph",
+      "id": "lize006"
+    },
+    {
+      "id": "7yoga82",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Forms of Energy"
+    },
+    {
+      "id": "8fa5mx5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i1lrnbt",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Kinetic Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "422285y"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qgnlck6"
+    },
+    {
+      "type": "paragraph",
+      "id": "q4hvyy0"
+    },
+    {
+      "type": "paragraph",
+      "id": "lvf6pxx"
+    },
+    {
+      "type": "paragraph",
+      "id": "sg22vir"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Energy can neither be created nor destroyed; it can only be transformed from one form to another.",
+      "id": "h7o7izw"
+    },
+    {
+      "id": "qj5s65h",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Potential Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "96j6zr7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "09781nh"
+    },
+    {
+      "type": "paragraph",
+      "id": "4to3c1h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pfmiwwv"
+    },
+    {
+      "type": "paragraph",
+      "id": "2w9jpiv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q1c75kf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Kinetic Energy (KE)",
+        "Potential Energy (PE)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Energy possessed by a body due to its motion",
+          "Energy stored in a body due to its position or shape"
+        ],
+        [
+          "Mathematical Formula",
+          "KE = 1/2 * m * v²",
+          "PE = m * g * h"
+        ],
+        [
+          "Key Factors",
+          "Depends on Mass (m) and Velocity (v)",
+          "Depends on Mass (m), Height (h), and Gravity (g)"
+        ],
+        [
+          "Real-world Examples",
+          "Flowing river, bullet fired from a gun, moving car",
+          "Water stored in a dam, compressed spring, raised hammer"
+        ]
+      ],
+      "id": "pnstl69"
+    },
+    {
+      "id": "bm151qd",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Law of Conservation of Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "1y8b1dl"
+    },
+    {
+      "id": "vug3f7z",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mechanical Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "5bzx0lh"
+    },
+    {
+      "type": "paragraph",
+      "id": "ykde68k"
+    },
+    {
+      "id": "v1q9tse",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Meaning of Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "let999g"
+    },
+    {
+      "type": "paragraph",
+      "id": "xdqu5p3"
+    },
+    {
+      "type": "paragraph",
+      "id": "9hmztpv"
+    },
+    {
+      "id": "xwdu57k",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Units of Power"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "If the velocity of an object is doubled, its Kinetic Energy becomes four times (4x) its original value.",
+        "1 Horsepower (HP) is equal to 746 Watts, a frequently repeated numerical fact in SSC and Railway exams.",
+        "Commercial unit of electricity is 1 kilowatt-hour (1 unit = 1 kWh = 3.6 × 10⁶ Joules).",
+        "When a body falls freely under gravity, its potential energy gradually converts into kinetic energy while total mechanical energy remains constant."
+      ],
+      "id": "7xddiyd"
+    },
+    {
+      "id": "dz0iflz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cujua4g",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "vuixohn"
+    },
+    {
+      "type": "paragraph",
+      "id": "sqvp7ew"
+    },
+    {
+      "type": "paragraph",
+      "id": "nx9bmog"
+    },
+    {
+      "type": "paragraph",
+      "id": "ton4t1r"
+    }
+  ],
+  "enriched": true
+}

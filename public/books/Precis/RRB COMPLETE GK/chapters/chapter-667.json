@@ -1,0 +1,89 @@
+{
+  "id": "j3j2tww",
+  "title": "RRB Quick Revision Box",
+  "order": 667,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "08axlr2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways serves as the backbone of national transport, connecting diverse regions across the country.",
+      "id": "8zzfnvz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "Main routes and heavy freight corridors"
+        ],
+        [
+          "Metre Gauge",
+          "1000 mm",
+          "Secondary lines (mostly unigauged)"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "Hill and heritage railways"
+        ]
+      ],
+      "id": "zngl0p1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "18",
+          "icon": "map"
+        },
+        {
+          "label": "Global Network Rank",
+          "value": "4th",
+          "icon": "award"
+        },
+        {
+          "label": "First Electric Train",
+          "value": "1925",
+          "icon": "clock"
+        }
+      ],
+      "id": "6kx83vp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Memorize the headquarters of all 18 Railway Zones, especially newly added ones like South Coast Railway (Visakhapatnam).",
+        "Standard track gauge measurements (Broad Gauge = 1676 mm) are frequently asked in RRB NTPC and JE exams.",
+        "Key historical dates: First train (1853), First electric train (1925), and Nationalisation of Railways (1951)."
+      ],
+      "id": "mf6j5hx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train ran on April 16, 1853, covering a distance of 34 km between Bombay (Bori Bunder) and Thane.",
+        "Indian Railways is divided into 18 administrative zones, with the South Coast Railway zone headquartered at Visakhapatnam being the newest.",
+        "The official mascot of Indian Railways is 'Bholu'—an elephant dressed as a railway guard holding a green lamp.",
+        "The Acworth Committee recommended the separation of the Railway Budget from the General Budget in 1924, which was merged back in 2017."
+      ],
+      "id": "hxka3u3"
+    }
+  ],
+  "enriched": true
+}

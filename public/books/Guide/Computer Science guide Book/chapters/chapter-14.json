@@ -1,40 +1,40 @@
 {
-  "id": "7fymhtb",
+  "id": "q67jl18",
   "title": "Chapter 14: Latest Computer Developments",
   "order": 14,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "912h9i3"
+      "id": "5ij88t1"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Focus Area 1",
+          "label": "Core Domain",
           "value": "Cloud Computing",
-          "icon": "info"
+          "icon": "book"
         },
         {
-          "label": "Focus Area 2",
+          "label": "AI Applications",
           "value": "Artificial Intelligence",
           "icon": "award"
         },
         {
-          "label": "Focus Area 3",
+          "label": "Connected Tech",
           "value": "Internet of Things",
-          "icon": "clock"
+          "icon": "info"
         },
         {
-          "label": "Focus Area 4",
-          "value": "Big Data (5Vs)",
+          "label": "Data Framework",
+          "value": "5Vs of Big Data",
           "icon": "check"
         }
       ],
-      "id": "iz8k05d"
+      "id": "ytrvw57"
     },
     {
-      "id": "ooby9s4",
+      "id": "euabkmu",
       "type": "heading",
       "level": 2,
       "content": "14.1 Cloud Computing"
@@ -43,25 +43,25 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Cloud Computing encompasses distinct characteristics, deployment types, service models, and real-world examples.",
-        "Artificial Intelligence (AI) is categorized by specific types and diverse practical applications.",
-        "Internet of Things (IoT) consists of foundational components that power connected applications.",
-        "Big Data analysis revolves around its core 5Vs characteristics and modern applications."
+        "Cloud Computing encompasses distinct characteristics, deployment types, and service models (IaaS, PaaS, SaaS).",
+        "Artificial Intelligence (AI) focuses on machine learning models, various AI types, and practical real-world applications.",
+        "Internet of Things (IoT) integrates physical hardware components and software to enable smart device connectivity.",
+        "Big Data is characterized by the 5Vs: Volume, Velocity, Variety, Veracity, and Value."
       ],
-      "id": "xj89pxt"
+      "id": "ede4twv"
     },
     {
       "type": "paragraph",
-      "id": "n5n0taq"
+      "id": "35kqoq6"
     },
     {
-      "id": "qenpcb9",
+      "id": "2ynyll6",
       "type": "heading",
       "level": 3,
       "content": "14.1.1 Characteristics of Cloud Computing"
     },
     {
-      "id": "xyhp4x7",
+      "id": "k4t7dxb",
       "type": "list",
       "items": [
         null,
@@ -72,13 +72,13 @@
       ]
     },
     {
-      "id": "s9sifs5",
+      "id": "9xb9o0e",
       "type": "heading",
       "level": 3,
       "content": "14.1.2 Types of Cloud Computing"
     },
     {
-      "id": "dmyipu6",
+      "id": "n2wbfkd",
       "type": "table",
       "rows": [
         {
@@ -119,13 +119,13 @@
       ]
     },
     {
-      "id": "od5zkz3",
+      "id": "7v7d4uo",
       "type": "heading",
       "level": 3,
       "content": "14.1.3 Cloud Service Models"
     },
     {
-      "id": "lyr8c1y",
+      "id": "7kwqul2",
       "type": "table",
       "rows": [
         {
@@ -159,13 +159,13 @@
       ]
     },
     {
-      "id": "hwd2jm8",
+      "id": "bozt1k1",
       "type": "heading",
       "level": 3,
       "content": "14.1.4 Examples of Cloud Services"
     },
     {
-      "id": "udz4can",
+      "id": "8mribod",
       "type": "list",
       "items": [
         null,
@@ -177,27 +177,27 @@
     },
     {
       "type": "pullQuote",
-      "content": "Characteristics of Big Data (5Vs)",
-      "id": "ww709sk"
+      "content": "Latest Computer Developments",
+      "id": "a9ljmdu"
     },
     {
-      "id": "wuknnvl",
+      "id": "n3xp80g",
       "type": "heading",
       "level": 2,
       "content": "14.2 Artificial Intelligence (AI)"
     },
     {
       "type": "paragraph",
-      "id": "g3w2p1c"
+      "id": "47hg4so"
     },
     {
-      "id": "tnveeac",
+      "id": "gw9j9p0",
       "type": "heading",
       "level": 3,
       "content": "14.2.1 Types of Artificial Intelligence"
     },
     {
-      "id": "3b3wnbv",
+      "id": "34wx524",
       "type": "table",
       "rows": [
         {
@@ -231,13 +231,13 @@
       ]
     },
     {
-      "id": "1cw814o",
+      "id": "w0mijaq",
       "type": "heading",
       "level": 3,
       "content": "14.2.2 Applications of AI"
     },
     {
-      "id": "48j8ria",
+      "id": "lg0tkn0",
       "type": "list",
       "items": [
         null,
@@ -248,23 +248,23 @@
       ]
     },
     {
-      "id": "dcsa19n",
+      "id": "y6nzemy",
       "type": "heading",
       "level": 2,
       "content": "14.3 Internet of Things (IoT)"
     },
     {
       "type": "paragraph",
-      "id": "kkp09bj"
+      "id": "tw95xwm"
     },
     {
-      "id": "ayjb7f6",
+      "id": "lqtf7pf",
       "type": "heading",
       "level": 3,
       "content": "14.3.1 Components of IoT"
     },
     {
-      "id": "hwa3hle",
+      "id": "vxcj64h",
       "type": "list",
       "items": [
         null,
@@ -274,13 +274,13 @@
       ]
     },
     {
-      "id": "sz90l53",
+      "id": "4mpvrms",
       "type": "heading",
       "level": 3,
       "content": "14.3.2 Applications of IoT"
     },
     {
-      "id": "vy6h9sd",
+      "id": "qdxr8tb",
       "type": "list",
       "items": [
         null,
@@ -291,32 +291,32 @@
       ]
     },
     {
-      "id": "lrha6fm",
+      "id": "ntr71lv",
       "type": "heading",
       "level": 2,
       "content": "14.4 Big Data"
     },
     {
       "type": "paragraph",
-      "id": "ttmq3co"
+      "id": "el77zq5"
     },
     {
       "type": "examAlert",
       "items": [
-        "Competitive exams regularly test the 5Vs defining Big Data characteristics.",
-        "Cloud service models (IaaS, PaaS, SaaS) and deployment types are critical exam topics.",
-        "Questions frequently cover the core components and applications of IoT and AI."
+        "Identify and differentiate the 5Vs of Big Data: Volume, Velocity, Variety, Veracity, and Value.",
+        "Understand the primary differences between Cloud Service Models (IaaS, PaaS, and SaaS) for direct objective questions.",
+        "Focus on the core components and real-world applications of IoT and AI systems commonly asked in competitive exams."
       ],
-      "id": "jzphiwl"
+      "id": "635njuv"
     },
     {
-      "id": "2gvhduv",
+      "id": "7f6py6v",
       "type": "heading",
       "level": 3,
       "content": "14.4.1 Characteristics of Big Data (5Vs)"
     },
     {
-      "id": "2175r80",
+      "id": "fnnrrjt",
       "type": "table",
       "rows": [
         {
@@ -364,13 +364,13 @@
       ]
     },
     {
-      "id": "4d0zj5q",
+      "id": "1kr40qq",
       "type": "heading",
       "level": 3,
       "content": "14.4.2 Applications of Big Data"
     },
     {
-      "id": "ddv70ow",
+      "id": "gxtkm5f",
       "type": "list",
       "items": [
         null,
@@ -381,13 +381,13 @@
       ]
     },
     {
-      "id": "w0afnuv",
+      "id": "bhc7f01",
       "type": "heading",
       "level": 2,
       "content": "14.5 Important Exam Points"
     },
     {
-      "id": "08ial1c",
+      "id": "j8hlctp",
       "type": "list",
       "items": [
         null,

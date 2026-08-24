@@ -1,0 +1,236 @@
+{
+  "id": "6pqtlw6",
+  "title": "PART 2",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t9xpa9c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Methods",
+          "value": "2 Methods",
+          "icon": "book"
+        },
+        {
+          "label": "Fundamental Relation",
+          "value": "HCF × LCM = A × B",
+          "icon": "award"
+        },
+        {
+          "label": "Fraction Formula",
+          "value": "HCF / LCM Rule",
+          "icon": "check"
+        },
+        {
+          "label": "Key Applications",
+          "value": "Word Problems",
+          "icon": "info"
+        }
+      ],
+      "id": "oh6yasb"
+    },
+    {
+      "id": "hrhov3v",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "HCF (Highest Common Factor) is the greatest divisor shared by given numbers.",
+        "LCM (Least Common Multiple) is the smallest positive integer divisible by all given numbers.",
+        "For any two given numbers, Product of Numbers = HCF × LCM.",
+        "HCF of Fractions = HCF of Numerators / LCM of Denominators.",
+        "LCM of Fractions = LCM of Numerators / HCF of Denominators."
+      ],
+      "id": "zvamhzb"
+    },
+    {
+      "id": "bkgd525",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "i42pw4i",
+      "type": "heading",
+      "level": 2,
+      "content": "METHODS TO FIND HCF & LCM"
+    },
+    {
+      "id": "1d53032",
+      "type": "heading",
+      "level": 2,
+      "content": "(A) PRIME FACTORISATION METHOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "51uhcdi"
+    },
+    {
+      "type": "paragraph",
+      "id": "9sg8oaz"
+    },
+    {
+      "id": "hlofvyo",
+      "type": "heading",
+      "level": 3,
+      "content": "(B) DIVISION METHOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "74w2416"
+    },
+    {
+      "type": "pullQuote",
+      "content": "IMPORTANT RELATION BETWEEN HCF & LCM",
+      "id": "aqi8e1z"
+    },
+    {
+      "id": "klmpmwn",
+      "type": "heading",
+      "level": 2,
+      "content": "3. IMPORTANT RELATION BETWEEN HCF & LCM"
+    },
+    {
+      "id": "8qxhgsm",
+      "type": "list",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "i4nunep"
+    },
+    {
+      "id": "mojw7av",
+      "type": "heading",
+      "level": 2,
+      "content": "4. HCF & LCM OF FRACTIONS"
+    },
+    {
+      "id": "g3levix",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "zk32rw1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "HCF (Highest Common Factor)",
+        "LCM (Lowest Common Multiple)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Greatest common divisor of given numbers",
+          "Smallest common multiple of given numbers"
+        ],
+        [
+          "Value Magnitude",
+          "Always less than or equal to the smallest number",
+          "Always greater than or equal to the largest number"
+        ],
+        [
+          "Prime Factorization Rule",
+          "Product of the lowest powers of common prime factors",
+          "Product of the highest powers of all prime factors"
+        ],
+        [
+          "Fraction Formula",
+          "HCF(Numerators) / LCM(Denominators)",
+          "LCM(Numerators) / HCF(Denominators)"
+        ]
+      ],
+      "id": "gp224xk"
+    },
+    {
+      "id": "olipex1",
+      "type": "heading",
+      "level": 2,
+      "content": "5. WORD PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "wuv3kln"
+    },
+    {
+      "type": "paragraph",
+      "id": "q1d9rz5"
+    },
+    {
+      "id": "afkuc5c",
+      "type": "heading",
+      "level": 2,
+      "content": "6. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "kinycqd"
+    },
+    {
+      "id": "pxb7ix0",
+      "type": "heading",
+      "level": 2,
+      "content": "7. SOLVED EXAMPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "8g9okpu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The formula HCF × LCM = Product of Numbers holds TRUE ONLY for TWO numbers, not three or more.",
+        "Always simplify fractions to their lowest form before calculating their HCF or LCM.",
+        "In word problems, terms like 'maximum', 'greatest', or 'largest tile' indicate HCF, while 'minimum', 'least', or 'bells ringing together' indicate LCM."
+      ],
+      "id": "p0s4079"
+    },
+    {
+      "type": "paragraph",
+      "id": "b0r8wpo"
+    },
+    {
+      "id": "wj517de",
+      "type": "heading",
+      "level": 2,
+      "content": "8. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "xa9369m"
+    },
+    {
+      "id": "d88nlnb",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "da7t0aj"
+    }
+  ],
+  "enriched": true
+}

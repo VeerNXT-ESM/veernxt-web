@@ -1,0 +1,101 @@
+{
+  "id": "h85618v",
+  "title": "Chapter 7: Earthquakes",
+  "order": 88,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yugspj3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The point on the surface, nearest to the focus, is called epicenter. It is the first one to experience the waves.",
+      "id": "nsrv05c"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Primary Waves (P-Waves)",
+        "Secondary Waves (S-Waves)"
+      ],
+      "rows": [
+        [
+          "Wave Type",
+          "Longitudinal / Compressional",
+          "Transverse / Shear"
+        ],
+        [
+          "Medium of Travel",
+          "Solids, Liquids, and Gases",
+          "Solids only"
+        ],
+        [
+          "Velocity",
+          "Fastest (First to reach seismograph)",
+          "Slower than P-waves (Second to arrive)"
+        ],
+        [
+          "Particle Displacement",
+          "Parallel to direction of wave propagation",
+          "Perpendicular to direction of wave propagation"
+        ],
+        [
+          "Physical Effect",
+          "Creates density differences (stretching/squeezing)",
+          "Creates troughs and crests in materials"
+        ]
+      ],
+      "id": "y156ppb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Seismic Zones in India",
+          "value": "4 Zones (II to V)",
+          "icon": "info"
+        },
+        {
+          "label": "P-Wave Shadow Zone",
+          "value": "105° - 145°",
+          "icon": "clock"
+        },
+        {
+          "label": "Richter Scale Range",
+          "value": "0 - 10 (Magnitude)",
+          "icon": "award"
+        },
+        {
+          "label": "Mercalli Scale Range",
+          "value": "I - XII (Intensity)",
+          "icon": "check"
+        }
+      ],
+      "id": "po1cfe8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "S-waves cannot pass through liquid media—this key characteristic allowed geophysicists to infer that Earth's outer core is liquid.",
+        "Richter Scale is logarithmic; an increase of 1 unit in magnitude represents roughly a 32-fold increase in total energy released.",
+        "Bureau of Indian Standards (BIS) classifies India into 4 seismic zones (Zone II to V); Zone V is the most vulnerable and includes the entire Himalayan belt and North-East India.",
+        "P-wave shadow zone exists as a distinct band between 105° and 145° from the epicenter due to refraction at the core-mantle boundary."
+      ],
+      "id": "ylemkx4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The point where energy is released beneath the Earth's surface is called the Focus or Hypocenter, while the point directly above it on the surface is the Epicenter.",
+        "Body waves consist of P-waves and S-waves; P-waves pass through solids, liquids, and gases, whereas S-waves travel only through solids.",
+        "Surface waves are the last to arrive on the seismograph, travel along the Earth's surface, and cause the maximum structural damage.",
+        "The shadow zone for S-waves spans continuously beyond 105° from the epicenter, proving that the Earth's outer core is in a liquid state.",
+        "Earthquake magnitude measures total energy released on the logarithmic Richter Scale, whereas intensity measures visible destruction on the Mercalli Scale."
+      ],
+      "id": "7ghnkwc"
+    }
+  ],
+  "enriched": true
+}

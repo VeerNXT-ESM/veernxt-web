@@ -1,0 +1,96 @@
+{
+  "id": "fg5xiul",
+  "title": "9. Parliamentary Procedures and Devices",
+  "order": 321,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "vuiz6lt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Zero hour is an Indian innovation in the field of parliamentary procedures and has been in existence since 1962.",
+      "id": "ys6q4ij"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Censure Motion",
+        "No-Confidence Motion"
+      ],
+      "rows": [
+        [
+          "Reasons for Adoption",
+          "Must state the specific grounds/reasons for its adoption in Lok Sabha.",
+          "Need not state the reasons for its adoption in Lok Sabha."
+        ],
+        [
+          "Target",
+          "Can be moved against an individual minister, group of ministers, or the entire council.",
+          "Can only be moved against the entire Council of Ministers."
+        ],
+        [
+          "Purpose",
+          "Moved for censuring the government for specific policies and actions.",
+          "Moved for testing the confidence of the House in the Council of Ministers."
+        ],
+        [
+          "Consequence if Passed",
+          "Council of Ministers does not need to resign, though it must seek confidence.",
+          "Council of Ministers must resign from office immediately."
+        ]
+      ],
+      "id": "wvzzcwd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Question Hour",
+          "value": "1st Hour of Sitting",
+          "icon": "clock"
+        },
+        {
+          "label": "Zero Hour",
+          "value": "Indian Innovation (1962)",
+          "icon": "calendar"
+        },
+        {
+          "label": "House Quorum",
+          "value": "1/10th Total Members",
+          "icon": "check"
+        },
+        {
+          "label": "No-Confidence Support",
+          "value": "50 Members Required",
+          "icon": "info"
+        }
+      ],
+      "id": "dv2gym9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Zero Hour is not mentioned in the Rules of Procedure, unlike the Question Hour.",
+        "A Censure Motion must state the specific grounds for its adoption, whereas a No-Confidence Motion does not require stating reasons.",
+        "Starred questions require oral answers and permit supplementary questions, whereas unstarred questions require written answers with no supplementaries allowed.",
+        "Adjournment Motion involves an element of censure against the government and is not available to the Rajya Sabha."
+      ],
+      "id": "omx5ryc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Question Hour is the first hour of every parliamentary sitting where members ask questions and ministers give answers.",
+        "Zero Hour is an informal device not mentioned in the Rules of Procedure, enabling members to raise matters without prior notice.",
+        "A No-Confidence Motion can only be introduced in the Lok Sabha with the support of at least 50 members.",
+        "Adjournment Motion is an extraordinary device used to draw the attention of the House to a definite matter of urgent public importance.",
+        "Quorum is the minimum presence required (1/10th of total membership) for the House to conduct its proceedings."
+      ],
+      "id": "9bl19cr"
+    }
+  ],
+  "enriched": true
+}

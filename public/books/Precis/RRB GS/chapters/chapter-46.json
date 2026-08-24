@@ -1,0 +1,819 @@
+{
+  "id": "3bl1w4q",
+  "title": "CHAPTER 10 (EXTREMELY DETAILED THEORY)",
+  "order": 46,
+  "blocks": [
+    {
+      "id": "f714bb2",
+      "type": "heading",
+      "level": 2,
+      "content": "MAGNETISM"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Magnetic field lines emerge from the North Pole and terminate at the South Pole outside a magnet, forming continuous closed loops.",
+        "Magnetic field strength (B) around a straight conductor is directly proportional to current (I) and inversely proportional to distance (r).",
+        "Fleming's Left Hand Rule determines the direction of mechanical force in an Electric Motor.",
+        "Fleming's Right Hand Rule determines the direction of induced current in an Electric Generator.",
+        "Electromagnets are temporary magnets made with a soft iron core, whereas permanent magnets are made of steel or alloys like Alnico."
+      ],
+      "id": "ahtg3ig"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Field Formula",
+          "value": "B ∝ I / r",
+          "icon": "info"
+        },
+        {
+          "label": "Indian AC Frequency",
+          "value": "50 Hz",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Hand Rules",
+          "value": "Fleming's Rules",
+          "icon": "check"
+        },
+        {
+          "label": "Electromagnet Core",
+          "value": "Soft Iron",
+          "icon": "book"
+        }
+      ],
+      "id": "gxq1f35"
+    },
+    {
+      "id": "848b7p5",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "bbyo4v8"
+    },
+    {
+      "id": "hhe980r",
+      "type": "heading",
+      "level": 3,
+      "content": "1. MAGNET AND MAGNETIC FIELD"
+    },
+    {
+      "type": "paragraph",
+      "id": "vld9vti"
+    },
+    {
+      "type": "paragraph",
+      "id": "uzcle07"
+    },
+    {
+      "type": "paragraph",
+      "id": "v3ha5ha"
+    },
+    {
+      "type": "paragraph",
+      "id": "oq5ki13"
+    },
+    {
+      "type": "paragraph",
+      "id": "ez2p77q"
+    },
+    {
+      "id": "ttv03uy",
+      "type": "heading",
+      "level": 3,
+      "content": "2. PROPERTIES OF MAGNETIC FIELD LINES"
+    },
+    {
+      "type": "paragraph",
+      "id": "75khelr"
+    },
+    {
+      "type": "paragraph",
+      "id": "ob0owca"
+    },
+    {
+      "type": "paragraph",
+      "id": "8p4xg65"
+    },
+    {
+      "id": "7c0818k",
+      "type": "heading",
+      "level": 3,
+      "content": "3. MAGNETIC EFFECT OF ELECTRIC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "k3jgq49"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pzjdmf"
+    },
+    {
+      "type": "paragraph",
+      "id": "0cdejam"
+    },
+    {
+      "id": "trn7awx",
+      "type": "heading",
+      "level": 3,
+      "content": "4. RIGHT HAND THUMB RULE"
+    },
+    {
+      "type": "paragraph",
+      "id": "b53xu50"
+    },
+    {
+      "type": "paragraph",
+      "id": "j0qzxui"
+    },
+    {
+      "type": "paragraph",
+      "id": "coxltrp"
+    },
+    {
+      "id": "jhk65q4",
+      "type": "heading",
+      "level": 3,
+      "content": "5. MAGNETIC FIELD DUE TO CIRCULAR COIL"
+    },
+    {
+      "type": "paragraph",
+      "id": "1grpwmj"
+    },
+    {
+      "type": "paragraph",
+      "id": "h7hox9l"
+    },
+    {
+      "type": "paragraph",
+      "id": "s7v92fg"
+    },
+    {
+      "id": "3ycf7fl",
+      "type": "heading",
+      "level": 3,
+      "content": "6. SOLENOID AND ELECTROMAGNET"
+    },
+    {
+      "type": "paragraph",
+      "id": "gey9qi8"
+    },
+    {
+      "type": "paragraph",
+      "id": "wnmeqon"
+    },
+    {
+      "type": "paragraph",
+      "id": "v8kc9dt"
+    },
+    {
+      "type": "paragraph",
+      "id": "1i95jvy"
+    },
+    {
+      "id": "bomwyn2",
+      "type": "heading",
+      "level": 3,
+      "content": "7. FORCE ON CURRENT CARRYING CONDUCTOR"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ayk1mz"
+    },
+    {
+      "type": "paragraph",
+      "id": "urle4pm"
+    },
+    {
+      "type": "paragraph",
+      "id": "sm1a2vx"
+    },
+    {
+      "id": "a88uy14",
+      "type": "heading",
+      "level": 3,
+      "content": "8. FLEMING’S LEFT HAND RULE"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u8zq2s7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5utmphx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bp841w7"
+    },
+    {
+      "id": "ndvo671",
+      "type": "heading",
+      "level": 3,
+      "content": "9. ELECTRIC MOTOR"
+    },
+    {
+      "type": "paragraph",
+      "id": "ve33b7w"
+    },
+    {
+      "type": "paragraph",
+      "id": "nw4l8hi"
+    },
+    {
+      "type": "paragraph",
+      "id": "2hvx9qq"
+    },
+    {
+      "id": "e6ol1vn",
+      "type": "heading",
+      "level": 3,
+      "content": "10. ELECTROMAGNETIC INDUCTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "j6owsvc"
+    },
+    {
+      "type": "paragraph",
+      "id": "62nmklj"
+    },
+    {
+      "type": "paragraph",
+      "id": "a04hzei"
+    },
+    {
+      "id": "b3qhbyg",
+      "type": "heading",
+      "level": 3,
+      "content": "11. FLEMING’S RIGHT HAND RULE"
+    },
+    {
+      "type": "paragraph",
+      "id": "ptiv262"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3qkzi2d"
+    },
+    {
+      "type": "paragraph",
+      "id": "mcecupo"
+    },
+    {
+      "id": "ih8g74m",
+      "type": "heading",
+      "level": 3,
+      "content": "12. ELECTRIC GENERATOR"
+    },
+    {
+      "type": "paragraph",
+      "id": "vggpwnn"
+    },
+    {
+      "type": "paragraph",
+      "id": "lrbtyvk"
+    },
+    {
+      "type": "paragraph",
+      "id": "g20scqv"
+    },
+    {
+      "type": "paragraph",
+      "id": "hud29zr"
+    },
+    {
+      "id": "ybv9aqe",
+      "type": "heading",
+      "level": 3,
+      "content": "13. DOMESTIC ELECTRIC CIRCUIT"
+    },
+    {
+      "type": "paragraph",
+      "id": "irmq01t"
+    },
+    {
+      "type": "paragraph",
+      "id": "7o5xqfm"
+    },
+    {
+      "type": "paragraph",
+      "id": "dbam6my"
+    },
+    {
+      "type": "pullQuote",
+      "content": "MAGNETIC FIELD STRENGTH (B ∝ I / r)",
+      "id": "vk19qmm"
+    },
+    {
+      "id": "val8plx",
+      "type": "heading",
+      "level": 3,
+      "content": "14. MAGNETIC FIELD STRENGTH (B ∝ I / r)"
+    },
+    {
+      "type": "paragraph",
+      "id": "er55ywc"
+    },
+    {
+      "type": "paragraph",
+      "id": "v5rpt28"
+    },
+    {
+      "type": "paragraph",
+      "id": "ffqvx4o"
+    },
+    {
+      "type": "paragraph",
+      "id": "2fto3mq"
+    },
+    {
+      "type": "paragraph",
+      "id": "hdylsh4"
+    },
+    {
+      "type": "paragraph",
+      "id": "guxhl8j"
+    },
+    {
+      "type": "paragraph",
+      "id": "11x5n05"
+    },
+    {
+      "id": "hspo5qp",
+      "type": "heading",
+      "level": 3,
+      "content": "15. ELECTROMAGNET VS PERMANENT MAGNET"
+    },
+    {
+      "id": "vzdgx0k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "mig93we"
+    },
+    {
+      "id": "2ti28i7",
+      "type": "heading",
+      "level": 3,
+      "content": "16. DIRECTION OF MAGNETIC FIELD (RIGHT HAND THUMB RULE)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5634irx"
+    },
+    {
+      "type": "paragraph",
+      "id": "fxmgbzv"
+    },
+    {
+      "type": "paragraph",
+      "id": "md4un9x"
+    },
+    {
+      "type": "paragraph",
+      "id": "yr37rtc"
+    },
+    {
+      "id": "gzf8y55",
+      "type": "heading",
+      "level": 3,
+      "content": "17. TORQUE ON CURRENT LOOP"
+    },
+    {
+      "type": "paragraph",
+      "id": "zjh5qjr"
+    },
+    {
+      "type": "paragraph",
+      "id": "8s2sd4p"
+    },
+    {
+      "type": "paragraph",
+      "id": "k59yf1n"
+    },
+    {
+      "type": "paragraph",
+      "id": "silji67"
+    },
+    {
+      "id": "dhzbwwk",
+      "type": "heading",
+      "level": 3,
+      "content": "18. AC VS DC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "23hi3l8"
+    },
+    {
+      "type": "paragraph",
+      "id": "ivoy3es"
+    },
+    {
+      "type": "paragraph",
+      "id": "40tteya"
+    },
+    {
+      "id": "1e5yn5z",
+      "type": "heading",
+      "level": 3,
+      "content": "29. FLEMING’S RULE COMPARISON"
+    },
+    {
+      "type": "paragraph",
+      "id": "gd91ln1"
+    },
+    {
+      "type": "paragraph",
+      "id": "ee7ubct"
+    },
+    {
+      "type": "paragraph",
+      "id": "bzsmtn4"
+    },
+    {
+      "id": "oblmtd3",
+      "type": "heading",
+      "level": 3,
+      "content": "20. ADVANCED RRB EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "inxo31i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Electromagnet",
+        "Permanent Magnet"
+      ],
+      "rows": [
+        [
+          "Nature of Magnetism",
+          "Temporary (active only when current flows)",
+          "Permanent"
+        ],
+        [
+          "Core Material Used",
+          "Soft Iron",
+          "Steel / Alnico / Nipermag"
+        ],
+        [
+          "Magnetic Field Strength",
+          "Variable (controlled by varying current or turns)",
+          "Fixed and constant"
+        ],
+        [
+          "Polarity",
+          "Reversible (by reversing current direction)",
+          "Fixed poles"
+        ]
+      ],
+      "id": "amvnub5"
+    },
+    {
+      "type": "paragraph",
+      "id": "uljjquc"
+    },
+    {
+      "type": "paragraph",
+      "id": "13tv39z"
+    },
+    {
+      "type": "paragraph",
+      "id": "idad3g5"
+    },
+    {
+      "type": "paragraph",
+      "id": "obineh7"
+    },
+    {
+      "id": "slb85iv",
+      "type": "heading",
+      "level": 2,
+      "content": "MCQs"
+    },
+    {
+      "id": "dbks98c",
+      "type": "heading",
+      "level": 3,
+      "content": "Q1."
+    },
+    {
+      "type": "paragraph",
+      "id": "st3u1cw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ccxu4vr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mwxtvsc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ky8zl1q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5wxa9co"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2aiu5vf"
+    },
+    {
+      "type": "paragraph",
+      "id": "v8lzur4"
+    },
+    {
+      "type": "paragraph",
+      "id": "30lmbd4"
+    },
+    {
+      "type": "paragraph",
+      "id": "u6php1e"
+    },
+    {
+      "type": "paragraph",
+      "id": "gpbei47"
+    },
+    {
+      "id": "7rdti1y",
+      "type": "heading",
+      "level": 3,
+      "content": "Q2."
+    },
+    {
+      "type": "paragraph",
+      "id": "qg43j37"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "htigwqx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "944v59p"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kyximyz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i91t3em"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "airpj5b"
+    },
+    {
+      "type": "paragraph",
+      "id": "ok5yw14"
+    },
+    {
+      "type": "paragraph",
+      "id": "m272ldg"
+    },
+    {
+      "type": "paragraph",
+      "id": "210mdmf"
+    },
+    {
+      "type": "paragraph",
+      "id": "aknikxx"
+    },
+    {
+      "id": "t667z43",
+      "type": "heading",
+      "level": 3,
+      "content": "Q3."
+    },
+    {
+      "type": "paragraph",
+      "id": "rzxu6qg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i4zjea0"
+    },
+    {
+      "type": "paragraph",
+      "id": "jvbr665"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k3j1i70"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vl1ru1s"
+    },
+    {
+      "type": "paragraph",
+      "id": "gdr5a3p"
+    },
+    {
+      "type": "paragraph",
+      "id": "bp3zpeq"
+    },
+    {
+      "type": "paragraph",
+      "id": "5j4auws"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "73d8xln"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3odtx67"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Motor vs Generator Rule: Use Fleming's LEFT-Hand Rule for Electric Motors (Force/Motion) and Fleming's RIGHT-Hand Rule for Electric Generators (Induced Current).",
+        "Direction of Field Lines: Outside a magnet, field lines move from North to South; inside a magnet/solenoid, they move from South to North.",
+        "Domestic Circuit Specs: In India, domestic electric supply is standard AC at 220 V and 50 Hz."
+      ],
+      "id": "07n7woo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "abnyr0d"
+    },
+    {
+      "type": "paragraph",
+      "id": "gndfqzx"
+    },
+    {
+      "id": "mflgm0o",
+      "type": "heading",
+      "level": 3,
+      "content": "Q4."
+    },
+    {
+      "type": "paragraph",
+      "id": "26djqtm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uyo6t2o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "anmd2ho"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0wnr94r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ycnq067"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4pu9fce"
+    },
+    {
+      "type": "paragraph",
+      "id": "wxlanv1"
+    },
+    {
+      "type": "paragraph",
+      "id": "3cwvpq6"
+    },
+    {
+      "type": "paragraph",
+      "id": "nohus8r"
+    },
+    {
+      "type": "paragraph",
+      "id": "hlfvo5g"
+    },
+    {
+      "id": "dxeb8zh",
+      "type": "heading",
+      "level": 3,
+      "content": "Q5."
+    },
+    {
+      "type": "paragraph",
+      "id": "ocbywec"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xhsk615"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b0x4vo7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uyo36at"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kudcfye"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s94k9hx"
+    },
+    {
+      "type": "paragraph",
+      "id": "3lxqzjx"
+    },
+    {
+      "type": "paragraph",
+      "id": "5mahhjz"
+    },
+    {
+      "type": "paragraph",
+      "id": "qtmhzcv"
+    },
+    {
+      "type": "paragraph",
+      "id": "kpbq9sm"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,100 @@
+{
+  "id": "kz8naff",
+  "title": "7. Removal of High Court Judges",
+  "order": 351,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "opmsp97"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A judge of a High Court can be removed from his office by an order of the President.",
+      "id": "sowbk7t"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Stage / Parameter",
+        "Lok Sabha Initiation",
+        "Rajya Sabha Initiation"
+      ],
+      "rows": [
+        [
+          "Minimum Signatures Required",
+          "100 Members",
+          "50 Members"
+        ],
+        [
+          "Presiding Officer Action",
+          "Speaker may admit or refuse the motion",
+          "Chairman may admit or refuse the motion"
+        ],
+        [
+          "Investigation Process",
+          "3-member committee setup if admitted",
+          "3-member committee setup if admitted"
+        ],
+        [
+          "Voting Majority",
+          "Special Majority in Lok Sabha",
+          "Special Majority in Rajya Sabha"
+        ]
+      ],
+      "id": "wvz35wg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 217",
+          "icon": "book"
+        },
+        {
+          "label": "Governing Act",
+          "value": "Judges Enquiry Act, 1968",
+          "icon": "calendar"
+        },
+        {
+          "label": "LS Motion Signatures",
+          "value": "100 Members",
+          "icon": "info"
+        },
+        {
+          "label": "RS Motion Signatures",
+          "value": "50 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Inquiry Committee",
+          "value": "3 Members",
+          "icon": "check"
+        }
+      ],
+      "id": "r583cjw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Court judges are appointed by the President and can ONLY be removed by the President, not the Governor.",
+        "The process and grounds for removal of a High Court judge are exactly the same as those for a Supreme Court judge.",
+        "The Speaker or Chairman has the discretion to admit or refuse to admit the removal motion even if signed by the requisite number of members."
+      ],
+      "id": "3gsfgfv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A judge of a High Court can be removed from office only by an order of the President passed after an address by Parliament.",
+        "The grounds for removal are limited to two: proved misbehaviour or incapacity.",
+        "The motion must be supported by a special majority in each House of Parliament (majority of total membership and 2/3rd of members present and voting).",
+        "The procedure for investigation and proof of misbehaviour or incapacity is governed by the Judges Enquiry Act, 1968.",
+        "No judge of a High Court has been impeached/removed so far in the constitutional history of India."
+      ],
+      "id": "pruxddl"
+    }
+  ],
+  "enriched": true
+}

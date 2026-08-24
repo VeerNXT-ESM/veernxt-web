@@ -1,11 +1,11 @@
 {
-  "id": "h6qiyg0",
+  "id": "ex978gc",
   "title": "Chapter 47: Reserve Bank of India (RBI)",
   "order": 47,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "m0unkaa"
+      "id": "aaam4zj"
     },
     {
       "type": "statStrip",
@@ -16,25 +16,25 @@
           "icon": "calendar"
         },
         {
-          "label": "Act Passed",
+          "label": "Nationalised",
+          "value": "January 1, 1949",
+          "icon": "award"
+        },
+        {
+          "label": "Governing Act",
           "value": "RBI Act, 1934",
           "icon": "book"
         },
         {
-          "label": "Nationalized",
-          "value": "1949",
-          "icon": "check"
-        },
-        {
-          "label": "Headquarters",
-          "value": "Mumbai",
+          "label": "Deputy Governors",
+          "value": "Maximum 4",
           "icon": "info"
         }
       ],
-      "id": "naag05a"
+      "id": "tm0xvtr"
     },
     {
-      "id": "9bl4nyv",
+      "id": "zcnp1sd",
       "type": "heading",
       "level": 2,
       "content": "1. Establishment of RBI"
@@ -43,65 +43,65 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Reserve Bank of India was established on April 1, 1935, based on the recommendations of the Hilton Young Commission.",
-        "RBI was nationalized on January 1, 1949, transitioning from a private shareholders' bank to a government-owned central bank.",
-        "It serves as the sole authority for issuing currency notes in India (except for one-rupee notes and coins issued by the Ministry of Finance).",
-        "RBI regulates monetary policy using key quantitative instruments such as CRR, SLR, Repo Rate, and Reverse Repo Rate.",
-        "It acts as the banker to the government, lender of last resort for commercial banks, and custodian of foreign exchange reserves."
+        "The Reserve Bank of India (RBI) was established on April 1, 1935, based on the recommendations of the Hilton Young Commission (Royal Commission on Indian Currency and Finance).",
+        "RBI was nationalised on January 1, 1949, transforming it into a fully government-owned central banking institution.",
+        "Acts as the issuer of currency notes (excluding ₹1 notes and coins, which are issued by the Ministry of Finance) and sole banker to the Central and State Governments.",
+        "Manages country's monetary policy through quantitative instruments (Repo, Reverse Repo, CRR, SLR, OMO) and qualitative instruments (Moral Suasion, Margin Requirements).",
+        "Serves as the 'Lender of Last Resort' for commercial banks and regulates the country's foreign exchange under the Foreign Exchange Management Act (FEMA), 1999."
       ],
-      "id": "hxkpdqq"
+      "id": "jmjqpov"
     },
     {
       "type": "paragraph",
-      "id": "fel36zb"
+      "id": "zkkzxcn"
     },
     {
       "type": "paragraph",
-      "id": "tpz4m0a"
+      "id": "btve6a6"
     },
     {
       "type": "paragraph",
-      "id": "2j0pzej"
+      "id": "w83fls8"
     },
     {
       "type": "paragraph",
-      "id": "4bojxqe"
+      "id": "yxlnxgo"
     },
     {
-      "id": "ecyucjz",
+      "id": "i24efao",
       "type": "heading",
       "level": 2,
       "content": "2. Objectives of RBI"
     },
     {
       "type": "paragraph",
-      "id": "40o7y84"
+      "id": "gafd07j"
     },
     {
       "type": "paragraph",
-      "id": "gyp8vpy"
+      "id": "jhkx7ro"
     },
     {
       "type": "paragraph",
-      "id": "3hopm7m"
+      "id": "3qk42dv"
     },
     {
       "type": "paragraph",
-      "id": "so9tu4j"
+      "id": "7nihutt"
     },
     {
-      "id": "u917vhy",
+      "id": "kefv3n3",
       "type": "heading",
       "level": 2,
       "content": "3. Functions of RBI"
     },
     {
       "type": "pullQuote",
-      "content": "The Reserve Bank of India was established on April 1, 1935 in accordance with the provisions of the Reserve Bank of India Act, 1934.",
-      "id": "tflq27h"
+      "content": "The Reserve Bank of India is the supreme monetary authority of the nation, acting as the banker to the government and custodian of foreign exchange reserves.",
+      "id": "a2q6fkl"
     },
     {
-      "id": "2huzrgb",
+      "id": "wcmntms",
       "type": "table",
       "rows": [
         {
@@ -156,127 +156,128 @@
       ]
     },
     {
-      "id": "l398hpe",
+      "id": "0z3ylz0",
       "type": "heading",
       "level": 2,
       "content": "4. Monetary Policy Tools"
     },
     {
       "type": "paragraph",
-      "id": "154206i"
+      "id": "1w97cui"
     },
     {
       "type": "paragraph",
-      "id": "dphb4rf"
+      "id": "9ixfbos"
     },
     {
       "type": "paragraph",
-      "id": "65iw9en"
+      "id": "ccipdwu"
     },
     {
       "type": "paragraph",
-      "id": "zlbb9yu"
+      "id": "ejpp0m5"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Parameter",
-        "Repo Rate",
-        "Reverse Repo Rate"
+        "Quantitative Monetary Tools",
+        "Qualitative Monetary Tools"
       ],
       "rows": [
         [
-          "Definition",
-          "Rate at which commercial banks borrow short-term funds from RBI",
-          "Rate at which RBI park excess liquidity from commercial banks"
+          "Primary Objective",
+          "Control total volume and quantity of credit in the entire economy",
+          "Regulate the channel, direction, and specific allocation of credit"
         ],
         [
-          "Impact on Liquidity",
-          "Injects liquidity into the banking system",
-          "Absorbs excess liquidity from the banking system"
+          "Nature of Impact",
+          "General, indirect, and affects all sectors uniformly",
+          "Selective, direct, and targeted at specific sectors or uses"
         ],
         [
-          "Control Function",
-          "Used to curb inflation and stimulate economic activity",
-          "Used to control short-term money supply and inflation"
+          "Key Examples",
+          "Repo Rate, Reverse Repo Rate, CRR, SLR, MSF, Open Market Operations (OMO)",
+          "Margin Requirements, Consumer Credit Regulation, Credit Rationing, Moral Suasion"
         ]
       ],
-      "id": "9y4a95n"
+      "id": "w2ceki9"
     },
     {
       "type": "paragraph",
-      "id": "mx8jyr3"
+      "id": "jbcdqyz"
     },
     {
-      "id": "74mwm86",
+      "id": "a5x27bg",
       "type": "heading",
       "level": 2,
       "content": "5. Organization of RBI"
     },
     {
       "type": "paragraph",
-      "id": "wl5rqf6"
+      "id": "hviv7es"
     },
     {
       "type": "paragraph",
-      "id": "wv6i4wj"
+      "id": "87nzle5"
     },
     {
       "type": "paragraph",
-      "id": "jlx35zi"
+      "id": "lr50pmq"
     },
     {
-      "id": "j89rhue",
+      "id": "ts0ywh4",
       "type": "heading",
       "level": 2,
       "content": "6. Importance of RBI"
     },
     {
       "type": "paragraph",
-      "id": "gb8n2mp"
+      "id": "xgtvnux"
     },
     {
       "type": "paragraph",
-      "id": "abqr4k8"
+      "id": "cda35t5"
     },
     {
       "type": "paragraph",
-      "id": "u78b0qr"
+      "id": "t1tgld6"
     },
     {
       "type": "examAlert",
       "items": [
-        "Sir Osborne Smith was the first Governor of RBI, while C.D. Deshmukh was the first Indian Governor.",
-        "The central office of RBI was initially established in Kolkata and permanently moved to Mumbai in 1937.",
-        "One-rupee notes and coins bear the signature of the Finance Secretary, whereas other currency notes bear the RBI Governor's signature."
+        "Hilton Young Commission (1926) recommended the creation of the Reserve Bank of India.",
+        "Re-1 note bears the signature of the Finance Secretary, while all other bank notes carry the signature of the RBI Governor.",
+        "Cash Reserve Ratio (CRR) is maintained in cash form with the RBI, whereas Statutory Liquidity Ratio (SLR) is maintained by commercial banks with themselves in liquid assets.",
+        "Osborne Smith was the first Governor of RBI, while C.D. Deshmukh was the first Indian Governor."
       ],
-      "id": "rkqe66n"
+      "id": "0x201pb"
     },
     {
       "type": "paragraph",
-      "id": "8tvj69x"
+      "id": "kbkjkcn"
     },
     {
-      "id": "28m5ths",
+      "id": "q85cgte",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "tg78atz"
+      "id": "v8md2yb"
     },
     {
       "type": "paragraph",
-      "id": "bkwpbeq"
+      "id": "0nq3yej"
     },
     {
       "type": "paragraph",
-      "id": "tu5zlvc"
+      "id": "e4h0ebq"
     },
     {
       "type": "paragraph",
-      "id": "fojazby"
+      "id": "3jkvzdu"
     }
   ],
   "enriched": true

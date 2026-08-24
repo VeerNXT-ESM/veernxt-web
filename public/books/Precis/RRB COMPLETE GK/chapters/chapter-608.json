@@ -1,0 +1,133 @@
+{
+  "id": "q74rgo2",
+  "title": "Powers of CCI (EXTREMELY IMPORTANT)",
+  "order": 608,
+  "blocks": [
+    {
+      "id": "um5scg5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Competition Commission of India possesses broad regulatory, investigative, and quasi-judicial powers to eliminate practices having an appreciable adverse effect on competition in India.",
+      "id": "2gesnt8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Anti-Competitive Agreements (Sec 3)",
+        "Abuse of Dominant Position (Sec 4)"
+      ],
+      "rows": [
+        [
+          "Nature of Conduct",
+          "Collusive conduct between two or more market players/enterprises",
+          "Unilateral conduct by a single dominant enterprise or group"
+        ],
+        [
+          "Prerequisite",
+          "Agreement causing Appreciable Adverse Effect on Competition (AAEC)",
+          "Proof that the enterprise holds a dominant position in the relevant market"
+        ],
+        [
+          "Key Categories",
+          "Horizontal (cartels, bid rigging) and Vertical agreements (resale price maintenance)",
+          "Predatory pricing, discriminatory conditions, leveraging, denial of market access"
+        ],
+        [
+          "Special Penalty Provision",
+          "Up to 3x profit or 10% turnover for cartels (whichever is higher)",
+          "Up to 10% of average turnover for the preceding 3 financial years"
+        ]
+      ],
+      "id": "3fekuoz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Legislation",
+          "value": "Competition Act, 2002",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Provisions",
+          "value": "Sections 3, 4, 5 & 6",
+          "icon": "info"
+        },
+        {
+          "label": "Maximum Penalty",
+          "value": "10% Avg Turnover",
+          "icon": "award"
+        },
+        {
+          "label": "Appellate Authority",
+          "value": "NCLAT",
+          "icon": "check"
+        }
+      ],
+      "id": "f6e42er"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "For cartel violations under Section 3, CCI can impose a penalty of up to 3 times the profit for each year of agreement OR 10% of turnover, whichever is higher.",
+        "An appeal against any direction, decision, or order passed by the CCI lies with the National Company Law Appellate Tribunal (NCLAT).",
+        "CCI has the power under Section 28 to order the division of an enterprise enjoying a dominant position to ensure it does not abuse its dominance.",
+        "CCI can issue interim orders under Section 33 restraining any party from carrying out an anti-competitive act during an ongoing inquiry."
+      ],
+      "id": "7fghzzl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways on Powers of CCI",
+      "items": [
+        "The Competition Commission of India (CCI) is a statutory quasi-judicial body empowered to prohibit anti-competitive agreements, abuse of dominant position, and regulate combinations.",
+        "Under Section 3, CCI inquires into anti-competitive agreements including horizontal cartels and vertical restraints that cause an Appreciable Adverse Effect on Competition (AAEC).",
+        "Under Section 4, CCI targets unilateral conduct by dominant enterprises engaging in unfair, discriminatory, or predatory pricing and denial of market access.",
+        "Under Sections 5 and 6, CCI regulates combinations (mergers, acquisitions, and amalgamations) above prescribed economic thresholds.",
+        "The Director General (DG) functions as the investigative wing of CCI, initiating detailed investigations upon a prima facie order issued under Section 26(1)."
+      ],
+      "id": "d83zmng"
+    }
+  ],
+  "enriched": true
+}

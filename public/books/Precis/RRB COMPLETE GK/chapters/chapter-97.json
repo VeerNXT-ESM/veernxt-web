@@ -1,0 +1,124 @@
+{
+  "id": "wjsjlgy",
+  "title": "7. Global Distribution of Earthquakes",
+  "order": 97,
+  "blocks": [
+    {
+      "id": "5s45um0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Pacific Ring of Fire accounts for nearly 68% of the total earthquakes on Earth due to intense convergent plate boundary interactions.",
+      "id": "dv9r0ii"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Seismic Belt",
+        "Tectonic Boundary Type",
+        "Global Share",
+        "Focal Depths"
+      ],
+      "rows": [
+        [
+          "Circum-Pacific Belt",
+          "Convergent (Subduction Zones)",
+          "~68%",
+          "Shallow, Intermediate, and Deep"
+        ],
+        [
+          "Mid-Continental Belt",
+          "Convergent (Continental Collision)",
+          "~21%",
+          "Mostly Shallow and Intermediate"
+        ],
+        [
+          "Mid-Atlantic Belt",
+          "Divergent (Oceanic Ridges)",
+          "~11%",
+          "Predominantly Shallow"
+        ]
+      ],
+      "id": "mlflz2h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Circum-Pacific Share",
+          "value": "68%",
+          "icon": "award"
+        },
+        {
+          "label": "Mid-Continental Share",
+          "value": "21%",
+          "icon": "info"
+        },
+        {
+          "label": "Seismic Zones (India)",
+          "value": "4 Zones",
+          "icon": "book"
+        },
+        {
+          "label": "Max Focal Depth",
+          "value": "700 km",
+          "icon": "clock"
+        }
+      ],
+      "id": "g3m8rvx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Deep-focus earthquakes occur almost exclusively along subduction zones in convergent plate boundaries like the Circum-Pacific Belt.",
+        "India is divided into four seismic risk zones by the Bureau of Indian Standards (BIS): Zone II (Low), Zone III (Moderate), Zone IV (High), and Zone V (Very High). Zone I is no longer used.",
+        "Questions frequently contrast shallow-focus earthquakes at divergent ridges with deep-focus earthquakes along ocean trenches."
+      ],
+      "id": "cileyva"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Circum-Pacific Belt, known as the Pacific Ring of Fire, accounts for roughly 68% of global earthquake activity along convergent margins.",
+        "The Mid-Continental Belt stretches from the Alpine region across the Himalayas to Indonesia, encompassing around 21% of worldwide earthquakes.",
+        "Earthquakes are categorized by focal depth into shallow-focus (<70 km), intermediate-focus (70–300 km), and deep-focus (>300 km).",
+        "Mid-oceanic ridges witness frequent shallow-focus earthquakes created by divergent tectonic movements and seafloor spreading.",
+        "India's active seismic region falls under the Alpine-Himalayan Belt and is classified into four distinct seismic threat zones (Zone II to Zone V)."
+      ],
+      "id": "0o0r65j"
+    }
+  ],
+  "enriched": true
+}

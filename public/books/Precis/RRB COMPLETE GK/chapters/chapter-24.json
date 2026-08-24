@@ -1,0 +1,95 @@
+{
+  "id": "ei0ktme",
+  "title": "Chapter 3: Latitudes and Longitudes",
+  "order": 24,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "atdhhe3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Standard Meridian of India passes through Mirzapur in Uttar Pradesh and is taken as the standard time for the entire country.",
+      "id": "7zpepom"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes (Parallels)",
+        "Longitudes (Meridians)"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "Run East-West parallel to the Equator",
+          "Run North-South converging at the Poles"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0°)"
+        ],
+        [
+          "Primary Function",
+          "Determines temperature and heat zones",
+          "Determines local time and time zones"
+        ],
+        [
+          "Length",
+          "Decreases from the Equator to the Poles",
+          "All meridians are equal in length"
+        ]
+      ],
+      "id": "rlx0b1o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator Latitude",
+          "value": "0°",
+          "icon": "globe"
+        },
+        {
+          "label": "Tropic of Cancer",
+          "value": "23.5° N",
+          "icon": "compass"
+        },
+        {
+          "label": "Indian Standard Time",
+          "value": "82.5° E",
+          "icon": "clock"
+        },
+        {
+          "label": "Time per 1° Longitude",
+          "value": "4 Minutes",
+          "icon": "info"
+        }
+      ],
+      "id": "adcmvs2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer (23.5° N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "The Earth rotates 15° in 1 hour, meaning a difference of 1° longitude equals a 4-minute difference in local time.",
+        "The International Date Line roughly follows the 180° meridian, where crossing westward gains a day and crossing eastward loses a day."
+      ],
+      "id": "3o0uyob"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are imaginary horizontal lines parallel to the Equator measuring distance North or South.",
+        "Longitudes are imaginary vertical lines extending from pole to pole measuring distance East or West of the Prime Meridian.",
+        "The Equator (0°) divides the Earth into the Northern and Southern Hemispheres.",
+        "The Prime Meridian (0°) passes through Greenwich, London, and serves as the baseline for global time zones.",
+        "India's Standard Time (IST) is based on the 82.5° E meridian, placing it 5 hours and 30 minutes ahead of GMT."
+      ],
+      "id": "n9o2zjz"
+    }
+  ],
+  "enriched": true
+}

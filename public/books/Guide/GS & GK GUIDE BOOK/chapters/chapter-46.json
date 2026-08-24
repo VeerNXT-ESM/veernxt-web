@@ -1,11 +1,11 @@
 {
-  "id": "m70l1zy",
+  "id": "is3yxps",
   "title": "Chapter 46: Banking System in India",
   "order": 46,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "fdgrhk5"
+      "id": "tucqod4"
     },
     {
       "type": "statStrip",
@@ -21,20 +21,20 @@
           "icon": "check"
         },
         {
-          "label": "Bank Categories",
-          "value": "Scheduled & Non-Scheduled",
-          "icon": "book"
+          "label": "Bank Nationalisation",
+          "value": "1969",
+          "icon": "award"
         },
         {
-          "label": "Key Instruments",
-          "value": "Repo, CRR, SLR",
-          "icon": "clock"
+          "label": "MPC Members",
+          "value": "6",
+          "icon": "info"
         }
       ],
-      "id": "ecc0a6a"
+      "id": "wxvf9ef"
     },
     {
-      "id": "kheyks1",
+      "id": "jvb8yqu",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Banking"
@@ -43,35 +43,33 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Reserve Bank of India (RBI) serves as the central bank and chief regulatory body of the Indian banking structure.",
-        "Commercial banks in India are broadly divided into Scheduled Commercial Banks and Non-Scheduled Banks under the RBI Act, 1934.",
-        "Primary functions of RBI include issuing currency, managing monetary policy, controlling credit, and acting as banker to the government.",
-        "Standard bank account types include Savings Account, Current Account, Fixed Deposit (FD), and Recurring Deposit (RD).",
-        "Monetary policy tools are divided into quantitative tools (CRR, SLR, Repo Rate, Bank Rate) and qualitative tools.",
-        "Modern digital banking services include real-time and batch settlement systems like UPI, NEFT, RTGS, and IMPS."
+        "The Reserve Bank of India (RBI) was established on April 1, 1935, under the RBI Act, 1934, based on the Hilton Young Commission recommendations.",
+        "Commercial banks are broadly categorized into Scheduled Banks (listed in the 2nd Schedule of the RBI Act, 1934) and Non-Scheduled Banks.",
+        "Monetary policy instruments include quantitative tools (CRR, SLR, Repo Rate, MSF) and qualitative tools (moral suasion, credit rationing).",
+        "Modern digital banking architecture relies heavily on NPCI products, including UPI, IMPS, RTGS, and NEFT for seamless payment settlement."
       ],
-      "id": "h1l3iov"
+      "id": "gb1se7n"
     },
     {
       "type": "paragraph",
-      "id": "475txm0"
+      "id": "853j3se"
     },
     {
       "type": "paragraph",
-      "id": "ofuyjjb"
+      "id": "u7za7hs"
     },
     {
       "type": "paragraph",
-      "id": "tuyddbt"
+      "id": "c9dkbem"
     },
     {
-      "id": "g0vhu9v",
+      "id": "3dswyoi",
       "type": "heading",
       "level": 2,
       "content": "2. Structure of Banking System in India"
     },
     {
-      "id": "d0holnn",
+      "id": "39i4ts8",
       "type": "table",
       "rows": [
         {
@@ -112,121 +110,116 @@
       ]
     },
     {
-      "id": "qpgrpqg",
+      "id": "9xfw519",
       "type": "heading",
       "level": 2,
       "content": "3. Reserve Bank of India (RBI)"
     },
     {
       "type": "paragraph",
-      "id": "etqb9xl"
+      "id": "eoi3km5"
     },
     {
-      "id": "24trgz0",
+      "id": "83qu2js",
       "type": "heading",
       "level": 3,
       "content": "Functions of RBI"
     },
     {
       "type": "paragraph",
-      "id": "3ehjjid"
+      "id": "w5zr7oh"
     },
     {
       "type": "paragraph",
-      "id": "js01h28"
+      "id": "zbk5wlc"
     },
     {
       "type": "paragraph",
-      "id": "8ejh641"
+      "id": "cynpzc2"
     },
     {
       "type": "pullQuote",
-      "content": "Reserve Bank of India (RBI)",
-      "id": "euu5vnq"
+      "content": "The Reserve Bank of India acts as the bank of issue, banker to the government, and lender of last resort.",
+      "id": "khzdqit"
     },
     {
       "type": "paragraph",
-      "id": "j1i8v1l"
+      "id": "257j6ur"
     },
     {
       "type": "paragraph",
-      "id": "pen8yx4"
+      "id": "wfozzse"
     },
     {
-      "id": "jw413yt",
+      "id": "n8paeza",
       "type": "heading",
       "level": 2,
       "content": "4. Commercial Banks"
     },
     {
       "type": "paragraph",
-      "id": "f24ob7g"
+      "id": "m96cgpo"
     },
     {
       "type": "paragraph",
-      "id": "ypoyxbp"
+      "id": "l7x6ky7"
     },
     {
       "type": "paragraph",
-      "id": "l7trbda"
+      "id": "x32csio"
     },
     {
-      "id": "1xxcp6e",
+      "id": "ncqmayf",
       "type": "heading",
       "level": 3,
       "content": "Types of Commercial Banks"
     },
     {
       "type": "paragraph",
-      "id": "84r3nhg"
+      "id": "xpyhej8"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
-        "NEFT",
-        "RTGS"
+        "Parameter",
+        "Cash Reserve Ratio (CRR)",
+        "Statutory Liquidity Ratio (SLR)"
       ],
       "rows": [
         [
-          "Full Form",
-          "National Electronic Funds Transfer",
-          "Real Time Gross Settlement"
+          "Form of Holding",
+          "Maintained as liquid cash with the RBI",
+          "Maintained as cash, gold, or approved securities with the bank itself"
         ],
         [
-          "Settlement Basis",
-          "Half-hourly batches",
-          "Real-time gross basis"
+          "Interest Earned",
+          "No interest earned from RBI",
+          "Earns yield/interest on held government securities"
         ],
         [
-          "Minimum Limit",
-          "No minimum limit",
-          "₹2,00,000"
-        ],
-        [
-          "Primary Use",
-          "Small to medium transactions",
-          "High-value transactions"
+          "Primary Objective",
+          "Controls systemic liquidity and inflation",
+          "Ensures bank solvency and fulfills government borrowing needs"
         ]
       ],
-      "id": "ly8v19g"
+      "id": "2wmsjd2"
     },
     {
       "type": "paragraph",
-      "id": "yyzculf"
+      "id": "2h2po84"
     },
     {
       "type": "paragraph",
-      "id": "tu8hggv"
+      "id": "n9tkqlh"
     },
     {
-      "id": "p0s10li",
+      "id": "g5wry6x",
       "type": "heading",
       "level": 2,
       "content": "5. Types of Bank Accounts"
     },
     {
-      "id": "0ki9gag",
+      "id": "k2s0z4g",
       "type": "table",
       "rows": [
         {
@@ -267,68 +260,67 @@
       ]
     },
     {
-      "id": "u5m9k22",
+      "id": "3odqvwc",
       "type": "heading",
       "level": 2,
       "content": "6. Monetary Policy"
     },
     {
       "type": "paragraph",
-      "id": "yg9srrg"
+      "id": "6wh2j4p"
     },
     {
       "type": "paragraph",
-      "id": "j8unbp4"
+      "id": "o4bzkfk"
     },
     {
-      "id": "69t7z4y",
+      "id": "b75uoi7",
       "type": "heading",
       "level": 2,
       "content": "7. Modern Banking Services"
     },
     {
       "type": "paragraph",
-      "id": "seulm55"
+      "id": "u14951c"
     },
     {
       "type": "examAlert",
       "items": [
-        "RBI was established on April 1, 1935 under the Reserve Bank of India Act, 1934, and nationalized on January 1, 1949.",
-        "Repo Rate is the rate at which RBI lends money to commercial banks, whereas Reverse Repo Rate is the rate at which RBI absorbs liquidity from banks.",
-        "Cash Reserve Ratio (CRR) requires banks to hold a specified percentage of Net Demand and Time Liabilities (NDTL) as cash reserves with the RBI.",
-        "RTGS (Real Time Gross Settlement) requires a minimum transfer amount of ₹2 Lakhs, whereas NEFT has no minimum transfer limit."
+        "RBI nationalisation took place on January 1, 1949; 14 major private banks were nationalised in 1969, and 6 more in 1980.",
+        "Minimum capital requirement for Scheduled Commercial Banks is ₹5 Lakhs under Section 42(6)(a) of the RBI Act, 1934.",
+        "RTGS operates on a real-time gross settlement basis with a minimum transfer threshold of ₹2 Lakhs, whereas NEFT has no minimum limit."
       ],
-      "id": "hdafwyb"
+      "id": "xzlg20g"
     },
     {
       "type": "paragraph",
-      "id": "yj2b1bx"
+      "id": "ocbjdvv"
     },
     {
       "type": "paragraph",
-      "id": "ezwtgy0"
+      "id": "wk7fyzz"
     },
     {
       "type": "paragraph",
-      "id": "o8kwikv"
+      "id": "auzxxtk"
     },
     {
-      "id": "2puyt8a",
+      "id": "lb5nf85",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "r1ocjsm"
+      "id": "7sl3q5r"
     },
     {
       "type": "paragraph",
-      "id": "2msyxhf"
+      "id": "k1pusir"
     },
     {
       "type": "paragraph",
-      "id": "r4mfkl3"
+      "id": "gc6vc3i"
     }
   ],
   "enriched": true

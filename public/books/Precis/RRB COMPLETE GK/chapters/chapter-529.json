@@ -1,0 +1,95 @@
+{
+  "id": "wqrjxls",
+  "title": "2. Meaning of Ombudsman",
+  "order": 529,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "g5mt6b5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "An Ombudsman is an officer appointed by the legislature to supervise the administration, investigate complaints against administrative officialdom, and report findings back to the legislature.",
+      "id": "92cjdnc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Swedish Ombudsman",
+        "Indian Lokpal"
+      ],
+      "rows": [
+        [
+          "Year of Origin",
+          "1809",
+          "2013 (Act enacted) / 2019 (Established)"
+        ],
+        [
+          "Appointing Authority",
+          "Parliament (Riksdag)",
+          "President (on recommendation of a Selection Committee)"
+        ],
+        [
+          "Jurisdiction Scope",
+          "Covers executive, judiciary, and military personnel",
+          "Covers PM, Ministers, MPs, Group A-D officers (Judiciary excluded)"
+        ],
+        [
+          "Initiation Power",
+          "Can take Suo-Motu action and act on complaints",
+          "Acts on complaints received; limited suo-motu powers"
+        ]
+      ],
+      "id": "ikrdnpe"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Origin Year",
+          "value": "1809 (Sweden)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Literal Meaning",
+          "value": "Delegate / Representative",
+          "icon": "info"
+        },
+        {
+          "label": "First Commonwealth Adoption",
+          "value": "1962 (New Zealand)",
+          "icon": "book"
+        },
+        {
+          "label": "Indian Model",
+          "value": "Lokpal & Lokayukta",
+          "icon": "award"
+        }
+      ],
+      "id": "orpajqv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sweden was the world's first country to constitutionalize the Ombudsman system in 1809.",
+        "The First Administrative Reforms Commission (1966) headed by Morarji Desai recommended the setting up of Lokpal and Lokayukta in India.",
+        "New Zealand (1962) was the first Commonwealth country to adopt the Ombudsman institution under the Parliamentary Commissioner Act."
+      ],
+      "id": "7dby8b3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The institution of Ombudsman was first established in Sweden in 1809 to protect citizens from administrative injustice and corruption.",
+        "Etymologically, 'Ombudsman' is a Swedish word meaning an officer, representative, or delegate acting on behalf of citizens.",
+        "The Scandinavian Ombudsman model functions as an independent officer appointed by the legislature to supervise executive administration.",
+        "In India, the concept of Ombudsman was institutionalized as Lokpal at the Central level and Lokayuktas at the State level based on ARC recommendations.",
+        "The Ombudsman generally possesses powers of investigation, inquiry, and recommendation, operating free from executive interference."
+      ],
+      "id": "anr7fr5"
+    }
+  ],
+  "enriched": true
+}

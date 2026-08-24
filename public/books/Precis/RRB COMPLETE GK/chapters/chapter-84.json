@@ -1,0 +1,56 @@
+{
+  "id": "f0s9xnv",
+  "title": "Untitled Chapter",
+  "order": 84,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cg097lq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Untitled Chapter",
+      "id": "cdnk8sk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "Untitled",
+          "icon": "book"
+        },
+        {
+          "label": "Status",
+          "value": "Pending Content",
+          "icon": "info"
+        },
+        {
+          "label": "Target Exams",
+          "value": "Competitive",
+          "icon": "award"
+        }
+      ],
+      "id": "zrjaduo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always verify chapter topics against the official examination syllabus.",
+        "Focus on core definitions and high-yield formulas during revision."
+      ],
+      "id": "5ahiss7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Chapter content is required to generate specific study notes.",
+        "Review official syllabus guides for relevant chapter updates.",
+        "Key takeaways will summarize essential definitions, theorems, and rules."
+      ],
+      "id": "ozvd8rh"
+    }
+  ],
+  "enriched": true
+}

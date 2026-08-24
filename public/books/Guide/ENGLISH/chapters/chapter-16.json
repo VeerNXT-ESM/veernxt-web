@@ -1,451 +1,311 @@
 {
-  "id": "uff2s68",
-  "title": "CHAPTER 16 : WORDS OFTEN CONFUSED & MISUSED",
+  "id": "mxtxizm",
+  "title": "CHAPTER 17 : CLAUSES",
   "order": 16,
   "blocks": [
     {
-      "id": "6e1abvw",
+      "id": "8azb0q3",
       "type": "heading",
       "level": 2,
-      "content": "1. Introduction"
+      "content": "1. FIRST UNDERSTAND THIS — WHY CLAUSES MATTER"
     },
     {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Distinction between noun and verb forms is vital for word pairs like Advice vs Advise and Practice vs Practise.",
-        "Affect is predominantly used as a verb meaning 'to influence', whereas Effect is usually a noun meaning 'a result'.",
-        "Prepositions like Beside (by the side of) and Besides (in addition to) carry vastly different meanings.",
-        "Verbs such as Borrow (receive temporarily) and Lend (give temporarily) denote opposite directions of transaction.",
-        "Differentiating similar-sounding or visually similar words is essential for solving error detection questions in competitive exams."
+        "A clause is built on the fundamental distinction between complete thoughts (independent) and incomplete thoughts (dependent).",
+        "The three major clauses heavily tested in competitive exams are Noun Clauses, Adjective Clauses, and Adverb Clauses.",
+        "Noun clauses function as 'things' (subjects or objects) and are prone to word-order errors with question words.",
+        "Adjective clauses describe nouns using relative pronouns and relative adverbs, divided into defining and non-defining types.",
+        "Adverb clauses supply extra information and frequently trap candidates with future tense misuse and double conjunctions.",
+        "Advanced areas like conditional clauses, subjunctive mood, participle clauses, and reduced clauses require precise logical analysis."
       ],
-      "id": "bk5vtye"
+      "id": "qju8uc7"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Chapter",
-          "value": "16",
+          "label": "Clause Types",
+          "value": "3 Main Types",
           "icon": "book"
         },
         {
-          "label": "Word Pairs Covered",
-          "value": "9 Pairs",
+          "label": "Core Foundation",
+          "value": "Independent vs Dependent",
           "icon": "check"
         },
         {
-          "label": "Focus Area",
-          "value": "Confused & Misused Words",
-          "icon": "info"
+          "label": "Exam Target",
+          "value": "SSC & Competitive Exams",
+          "icon": "award"
         },
         {
-          "label": "Exam Relevance",
-          "value": "High Priority",
-          "icon": "award"
+          "label": "Golden Rule",
+          "value": "Find Main Clause First",
+          "icon": "info"
         }
       ],
-      "id": "bcmt9a1"
+      "id": "k2oxt02"
     },
     {
       "type": "paragraph",
-      "id": "awf65oe"
+      "id": "potzagp"
     },
     {
-      "id": "77d4zil",
+      "id": "wyhq0dw",
       "type": "heading",
       "level": 2,
-      "content": "2. Advice vs Advise"
+      "content": "2. WHAT EXACTLY IS A CLAUSE? (REAL UNDERSTANDING)"
     },
     {
       "type": "paragraph",
-      "id": "ln418bc"
+      "id": "11eyrh1"
     },
     {
-      "type": "paragraph",
-      "id": "fg0i3hk"
-    },
-    {
-      "id": "n8q9xod",
+      "id": "ec4hqoi",
       "type": "heading",
       "level": 2,
-      "content": "3. Affect vs Effect"
+      "content": "3. THE BIG IDEA — COMPLETE vs INCOMPLETE THOUGHT"
     },
     {
       "type": "paragraph",
-      "id": "jx0zjx8"
+      "id": "szeo42o"
     },
     {
-      "type": "paragraph",
-      "id": "i7gbfdl"
-    },
-    {
-      "id": "dtc1gd2",
+      "id": "ewplh6i",
       "type": "heading",
       "level": 2,
-      "content": "4. Practice vs Practise"
+      "content": "4. INDEPENDENT vs DEPENDENT — THE FOUNDATION OF THE ENTIRE CHAPTER"
     },
     {
       "type": "paragraph",
-      "id": "th4yj99"
+      "id": "fdnr99x"
     },
     {
-      "type": "paragraph",
-      "id": "cvip4cl"
-    },
-    {
-      "id": "z0y77bc",
+      "id": "3b7f25t",
       "type": "heading",
       "level": 2,
-      "content": "5. Accept vs Except"
+      "content": "5. GOLDEN EXAM TECHNIQUE — FIND THE MAIN CLAUSE FIRST"
+    },
+    {
+      "type": "paragraph",
+      "id": "plyrf8l"
+    },
+    {
+      "id": "3g5h0re",
+      "type": "heading",
+      "level": 2,
+      "content": "6. NOW LEARN THE THREE CLAUSES THAT SSC LOVES"
+    },
+    {
+      "type": "paragraph",
+      "id": "gm8ktx8"
+    },
+    {
+      "id": "t1jyfwc",
+      "type": "heading",
+      "level": 2,
+      "content": "7. NOUN CLAUSE — THINK OF IT AS A ‘THING’"
+    },
+    {
+      "type": "paragraph",
+      "id": "tbygsyg"
+    },
+    {
+      "id": "f8v2dlv",
+      "type": "heading",
+      "level": 2,
+      "content": "8. NOUN CLAUSE POSITIONS — EXPLAINED PROPERLY"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ftzcye"
     },
     {
       "type": "pullQuote",
-      "content": "CHAPTER 16 : WORDS OFTEN CONFUSED & MISUSED",
-      "id": "17vqjtz"
+      "content": "GOLDEN EXAM TECHNIQUE — FIND THE MAIN CLAUSE FIRST",
+      "id": "yjgmrch"
     },
     {
-      "type": "paragraph",
-      "id": "ogm4x5t"
-    },
-    {
-      "type": "paragraph",
-      "id": "bn4w2fl"
-    },
-    {
-      "id": "65igk31",
+      "id": "c1ukedn",
       "type": "heading",
       "level": 2,
-      "content": "6. Beside vs Besides"
+      "content": "9. MOST COMMON SSC ERROR — QUESTION WORD ORDER"
     },
     {
       "type": "paragraph",
-      "id": "c4ig3kx"
+      "id": "9qtclwv"
     },
     {
-      "type": "paragraph",
-      "id": "bu1adq6"
-    },
-    {
-      "id": "nuy9vzv",
+      "id": "40pdbu0",
       "type": "heading",
       "level": 2,
-      "content": "7. Loose vs Lose"
+      "content": "10. WHETHER vs IF — FINALLY MADE SIMPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "cshmpok"
+    },
+    {
+      "id": "k647jjh",
+      "type": "heading",
+      "level": 2,
+      "content": "11. ADJECTIVE CLAUSE — ITS ONLY JOB IS TO DESCRIBE"
+    },
+    {
+      "type": "paragraph",
+      "id": "eiuazq8"
+    },
+    {
+      "id": "myifsmn",
+      "type": "heading",
+      "level": 2,
+      "content": "12. RELATIVE PRONOUNS — DO NOT JUST MEMORIZE, SEE THE LOGIC"
+    },
+    {
+      "type": "paragraph",
+      "id": "ym0p6is"
+    },
+    {
+      "id": "4se3a6f",
+      "type": "heading",
+      "level": 2,
+      "content": "13. DEFINING vs NON-DEFINING — UNDERSTAND THE MEANING CHANGE"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Word Pair",
-        "Key Distinction"
+        "Clause Type",
+        "Primary Job",
+        "Key Exam Trap to Avoid"
       ],
       "rows": [
         [
-          "Advice vs Advise",
-          "Advice is a Noun; Advise is a Verb"
+          "Noun Clause",
+          "Acts as a noun ('a thing')",
+          "Incorrect question word order in indirect statements"
         ],
         [
-          "Affect vs Effect",
-          "Affect is a Verb (to influence); Effect is a Noun (result)"
+          "Adjective Clause",
+          "Describes a noun or pronoun",
+          "Misusing relative pronouns (who/which/that) and adverbs"
         ],
         [
-          "Practice vs Practise",
-          "Practice is a Noun; Practise is a Verb"
-        ],
-        [
-          "Beside vs Besides",
-          "Beside means 'by the side of'; Besides means 'in addition to'"
-        ],
-        [
-          "Borrow vs Lend",
-          "Borrow means to receive; Lend means to give"
-        ],
-        [
-          "Rise vs Raise",
-          "Rise is an intransitive verb; Raise is a transitive verb"
+          "Adverb Clause",
+          "Gives extra information (time, cause, condition)",
+          "Future tense trap and double conjunction logical errors"
         ]
       ],
-      "id": "2jxhfm1"
+      "id": "chl26np"
     },
     {
       "type": "paragraph",
-      "id": "wkxlbvv"
+      "id": "42huozi"
     },
     {
-      "type": "paragraph",
-      "id": "25nay7m"
-    },
-    {
-      "id": "ofr1esu",
+      "id": "1pzlnfb",
       "type": "heading",
       "level": 2,
-      "content": "8. Borrow vs Lend"
+      "content": "14. RELATIVE ADVERBS — THE MOST IGNORED SSC AREA"
     },
     {
       "type": "paragraph",
-      "id": "l69k9ko"
+      "id": "zusozb2"
     },
     {
-      "type": "paragraph",
-      "id": "974hpk5"
-    },
-    {
-      "id": "ja3rgsh",
+      "id": "dx88dgt",
       "type": "heading",
       "level": 2,
-      "content": "9. Rise vs Raise"
+      "content": "15. ADVERB CLAUSE — THINK ‘EXTRA INFORMATION’"
     },
     {
       "type": "paragraph",
-      "id": "1oaaoaa"
+      "id": "a9bmm6s"
     },
     {
-      "type": "paragraph",
-      "id": "1v437ph"
-    },
-    {
-      "id": "vnndn01",
+      "id": "xxfvl3c",
       "type": "heading",
       "level": 2,
-      "content": "10. Hear vs Listen"
+      "content": "16. FUTURE TENSE TRAP — UNDERSTAND THE REASON"
+    },
+    {
+      "type": "paragraph",
+      "id": "5mkp0u5"
+    },
+    {
+      "id": "775llj9",
+      "type": "heading",
+      "level": 2,
+      "content": "17. DOUBLE CONJUNCTION — LOGICAL ERROR"
+    },
+    {
+      "type": "paragraph",
+      "id": "u0sgs7n"
+    },
+    {
+      "id": "mk5csn8",
+      "type": "heading",
+      "level": 2,
+      "content": "18. CONDITIONAL CLAUSES — EXPLAINED LIKE REAL LIFE"
+    },
+    {
+      "type": "paragraph",
+      "id": "pk04jnb"
+    },
+    {
+      "id": "7c3fgmv",
+      "type": "heading",
+      "level": 2,
+      "content": "19. SUBJUNCTIVE — WHY ‘WERE’ IS USED"
     },
     {
       "type": "examAlert",
       "items": [
-        "Exam questions frequently test the '-ice' (Noun) vs '-ise' (Verb) distinction in Practice/Practise and Advice/Advise.",
-        "Pay attention to 'Beside' vs 'Besides' in sentence improvement and filler tasks.",
-        "Remember the difference between 'Rise' (intransitive) and 'Raise' (transitive) in grammar sections."
+        "Question Word Order Error: Noun clauses in assertive sentences must use normal statement order (Subject + Verb), not inverted question word order.",
+        "Future Tense Trap: Avoid using future tense verbs (will/shall) inside time and conditional adverb clauses.",
+        "Double Conjunction Error: Never use redundant conjunctions (e.g., combining 'Although' with 'But') to connect two clauses.",
+        "Subjunctive 'Were': Use 'were' instead of 'was' in imaginary conditional clauses regardless of subject number."
       ],
-      "id": "dnev7in"
+      "id": "pfajj2b"
     },
     {
       "type": "paragraph",
-      "id": "7g2elys"
+      "id": "sm8gkxt"
     },
     {
-      "type": "paragraph",
-      "id": "kohjhrm"
-    },
-    {
-      "id": "5cfhkyn",
+      "id": "9r5ynko",
       "type": "heading",
       "level": 2,
-      "content": "Some Additional Words That Are Often Misused"
-    },
-    {
-      "id": "dgwue61",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "m9hbxg4",
-      "type": "heading",
-      "level": 2,
-      "content": "12. Important Exam Points"
+      "content": "20. PARTICIPLE CLAUSE — A DANGEROUS ERROR AREA"
     },
     {
       "type": "paragraph",
-      "id": "n99xqyr"
+      "id": "qinwwdc"
+    },
+    {
+      "id": "k55rha4",
+      "type": "heading",
+      "level": 2,
+      "content": "21. REDUCED CLAUSES — MAKE SENTENCES SMARTER"
+    },
+    {
+      "type": "paragraph",
+      "id": "oqxh68o"
+    },
+    {
+      "id": "gtu2sg8",
+      "type": "heading",
+      "level": 2,
+      "content": "22. TOPPER STRATEGY FOR CLAUSES"
+    },
+    {
+      "type": "paragraph",
+      "id": "dr2h018"
+    },
+    {
+      "type": "paragraph",
+      "id": "fuqucsp"
     }
   ],
   "enriched": true

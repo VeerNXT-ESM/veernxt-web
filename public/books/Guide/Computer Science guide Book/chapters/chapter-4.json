@@ -1,11 +1,11 @@
 {
-  "id": "8288fy4",
+  "id": "40d1j4v",
   "title": "Chapter 4: Input Devices",
   "order": 4,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "us8u2fw"
+      "id": "aabunhp"
     },
     {
       "type": "statStrip",
@@ -16,25 +16,25 @@
           "icon": "book"
         },
         {
-          "label": "Function Keys",
-          "value": "12 Keys",
-          "icon": "info"
-        },
-        {
-          "label": "MICR Code",
-          "value": "9 Digits",
+          "label": "Pointing Device",
+          "value": "Mouse",
           "icon": "check"
         },
         {
-          "label": "Cheque Reader",
+          "label": "Optical Recognition",
+          "value": "OMR & OCR",
+          "icon": "info"
+        },
+        {
+          "label": "Banking Technology",
           "value": "MICR",
           "icon": "award"
         }
       ],
-      "id": "pgjx334"
+      "id": "6g3jh23"
     },
     {
-      "id": "mxvinme",
+      "id": "5znciom",
       "type": "heading",
       "level": 2,
       "content": "4.1 Keyboard"
@@ -43,25 +43,25 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Keyboards are the primary input devices containing alphanumeric, numeric, control, and 12 function keys (F1 to F12).",
-        "Computer mice are categorized into mechanical, optical, and wireless types based on movement detection technology.",
-        "Scanners convert physical hard-copy documents into digital format, with main types being flatbed, handheld, and sheetfed.",
-        "Specialized optical input devices include OMR for detecting pencil marks, OCR for converting printed text to editable data, and MICR for reading magnetic ink on bank cheques."
+        "Keyboards and mice are the essential primary input and pointing devices used in computing.",
+        "Scanners convert physical documents and photographs into digital image formats.",
+        "Barcode Readers capture and decode visual barcode patterns into digital alphanumeric data.",
+        "OMR, OCR, and MICR are specialized technologies for optical mark, optical character, and magnetic ink recognition."
       ],
-      "id": "skfqos6"
+      "id": "gub6vt6"
     },
     {
       "type": "paragraph",
-      "id": "10ig9qr"
+      "id": "tkwvcp2"
     },
     {
-      "id": "cdy0uic",
+      "id": "1i7gmiy",
       "type": "heading",
       "level": 3,
       "content": "4.1.1 Types of Keys"
     },
     {
-      "id": "hykrjmi",
+      "id": "5e299kp",
       "type": "table",
       "rows": [
         {
@@ -110,10 +110,10 @@
     },
     {
       "type": "paragraph",
-      "id": "25iuy8c"
+      "id": "yho5yf7"
     },
     {
-      "id": "bvv6upd",
+      "id": "fkzf5k6",
       "type": "list",
       "items": [
         null,
@@ -122,28 +122,28 @@
       ]
     },
     {
-      "id": "k2o1wt0",
+      "id": "326vdow",
       "type": "heading",
       "level": 2,
       "content": "4.2 Mouse"
     },
     {
       "type": "paragraph",
-      "id": "ykw6xnb"
+      "id": "s53i0gp"
     },
     {
       "type": "pullQuote",
-      "content": "Input devices convert human-understandable data into a form that a computer can process.",
-      "id": "9uy6heq"
+      "content": "OMR, OCR, MICR",
+      "id": "8ys13e5"
     },
     {
-      "id": "og4dgs5",
+      "id": "b3noi7x",
       "type": "heading",
       "level": 3,
       "content": "4.2.1 Types of Mouse"
     },
     {
-      "id": "lruw51e",
+      "id": "n7h6o32",
       "type": "table",
       "rows": [
         {
@@ -178,10 +178,10 @@
     },
     {
       "type": "paragraph",
-      "id": "zmb6qxi"
+      "id": "4oix3hl"
     },
     {
-      "id": "md1h58l",
+      "id": "midkkuy",
       "type": "list",
       "items": [
         null,
@@ -192,49 +192,49 @@
       ]
     },
     {
-      "id": "sfqq5xs",
+      "id": "g6402u3",
       "type": "heading",
       "level": 2,
       "content": "4.3 Scanner"
     },
     {
       "type": "paragraph",
-      "id": "wk18c2l"
+      "id": "l8p91gb"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Technology",
-        "Primary Function",
-        "Key Application"
+        "Full Form",
+        "Primary Use Case"
       ],
       "rows": [
         [
-          "OMR (Optical Mark Recognition)",
-          "Detects presence or absence of marks",
-          "Evaluating objective test answer sheets"
+          "OMR",
+          "Optical Mark Recognition",
+          "Evaluating objective exam answer sheets"
         ],
         [
-          "OCR (Optical Character Recognition)",
-          "Converts images of text into editable text",
-          "Digitizing printed books and documents"
+          "OCR",
+          "Optical Character Recognition",
+          "Digitizing printed books and documents into editable text"
         ],
         [
-          "MICR (Magnetic Ink Character Recognition)",
-          "Reads characters printed in magnetic ink",
-          "Processing and clearing bank cheques"
+          "MICR",
+          "Magnetic Ink Character Recognition",
+          "Processing cheques in banking operations"
         ]
       ],
-      "id": "w6y75hy"
+      "id": "9s3shqu"
     },
     {
-      "id": "6hey6xk",
+      "id": "ybgnxb4",
       "type": "heading",
       "level": 3,
       "content": "4.3.1 Types of Scanners"
     },
     {
-      "id": "bxtxtiy",
+      "id": "lep2jmg",
       "type": "table",
       "rows": [
         {
@@ -268,21 +268,21 @@
       ]
     },
     {
-      "id": "co7hoeo",
+      "id": "s18n62t",
       "type": "heading",
       "level": 2,
       "content": "4.4 Barcode Reader"
     },
     {
       "type": "paragraph",
-      "id": "m0m3wfm"
+      "id": "spcmski"
     },
     {
       "type": "paragraph",
-      "id": "m7m6w60"
+      "id": "n8kb5z0"
     },
     {
-      "id": "0ccrv0w",
+      "id": "lkbby66",
       "type": "list",
       "items": [
         null,
@@ -292,7 +292,7 @@
       ]
     },
     {
-      "id": "xz6w25a",
+      "id": "6npmlwv",
       "type": "heading",
       "level": 2,
       "content": "4.5 OMR, OCR, MICR"
@@ -300,14 +300,14 @@
     {
       "type": "examAlert",
       "items": [
-        "MICR uses a 9-digit code printed with magnetic ink: the first 3 digits denote the city, middle 3 denote the bank, and last 3 denote the branch.",
-        "OMR (Optical Mark Recognition) is specifically used for evaluating objective-type OMR answer sheets in competitive exams.",
-        "Function key F2 is used to rename a selected file or folder, while F5 refreshes the current window."
+        "MICR (Magnetic Ink Character Recognition) uses special magnetic ink and is primarily tested in relation to bank cheque processing.",
+        "OMR (Optical Mark Recognition) is specifically used for reading pre-printed forms and evaluating MCQ answer sheets.",
+        "OCR (Optical Character Recognition) converts printed or handwritten text images into editable electronic text."
       ],
-      "id": "q5dfnib"
+      "id": "f5uwpl4"
     },
     {
-      "id": "ivtdzyf",
+      "id": "3fu1jr6",
       "type": "table",
       "rows": [
         {
@@ -345,13 +345,13 @@
       ]
     },
     {
-      "id": "8udmfu7",
+      "id": "g6kv85k",
       "type": "heading",
       "level": 2,
       "content": "4.6 Other Input Devices"
     },
     {
-      "id": "5tad8i6",
+      "id": "p7fssqh",
       "type": "table",
       "rows": [
         {
@@ -385,13 +385,13 @@
       ]
     },
     {
-      "id": "7h091in",
+      "id": "ms27l05",
       "type": "heading",
       "level": 2,
       "content": "4.7 Important Exam Points"
     },
     {
-      "id": "ybvtiag",
+      "id": "tqa1ep6",
       "type": "list",
       "items": [
         null,

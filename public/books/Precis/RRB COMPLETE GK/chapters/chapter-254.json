@@ -1,0 +1,132 @@
+{
+  "id": "lzawgmz",
+  "title": "Union Territories vs States",
+  "order": 254,
+  "blocks": [
+    {
+      "id": "xlow9fk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Union Territories are administrative divisions ruled directly by the Union Government of India.",
+      "id": "xwy91fk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "States",
+        "Union Territories"
+      ],
+      "rows": [
+        [
+          "Relationship with Centre",
+          "Federal (Power sharing under 7th Schedule)",
+          "Unitary (Direct Control of Central Government)"
+        ],
+        [
+          "Executive Head",
+          "Governor (Constitutional Head)",
+          "President through Administrator or Lt. Governor"
+        ],
+        [
+          "Constitutional Provision",
+          "Part VI",
+          "Part VIII (Articles 239-241)"
+        ],
+        [
+          "Legislative Assembly",
+          "Present in all States",
+          "Present only in Delhi, Puducherry, and J&K"
+        ]
+      ],
+      "id": "yiyy12n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total States",
+          "value": "28",
+          "icon": "book"
+        },
+        {
+          "label": "Union Territories",
+          "value": "8",
+          "icon": "award"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part VIII",
+          "icon": "info"
+        },
+        {
+          "label": "Relevant Articles",
+          "value": "239 to 241",
+          "icon": "calendar"
+        }
+      ],
+      "id": "zucicd9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 239AA was created by the 69th Constitutional Amendment Act, 1991, conferring special status to Delhi as the National Capital Territory.",
+        "Parliament can make laws on any subject in the State List for Union Territories without needing constitutional amendment procedures.",
+        "Delhi and Jammu & Kashmir are the only Union Territories with independent High Courts."
+      ],
+      "id": "2zy77h3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "States share a federal relationship with the Centre with distributed legislative powers, whereas Union Territories are under direct central administration.",
+        "Articles 239 to 241 under Part VIII of the Indian Constitution deal with the governance and administration of Union Territories.",
+        "The President administers Union Territories through an Administrator or Lieutenant Governor appointed by them.",
+        "Puducherry, Delhi, and Jammu & Kashmir are Union Territories that possess their own elected Legislative Assemblies.",
+        "Parliament holds ultimate authority to make laws on subjects in any of the three lists for Union Territories."
+      ],
+      "id": "qfzp0rm"
+    }
+  ],
+  "enriched": true
+}

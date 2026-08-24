@@ -1,0 +1,95 @@
+{
+  "id": "qpu7h9k",
+  "title": "2. President of India (Articles 52–62)",
+  "order": 301,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "29nsawc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "There shall be a President of India.",
+      "id": "xxemfeq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Member Category",
+        "Presidential Election (Article 54)",
+        "Impeachment Process (Article 61)"
+      ],
+      "rows": [
+        [
+          "Elected MPs (Lok Sabha & Rajya Sabha)",
+          "Participate",
+          "Participate"
+        ],
+        [
+          "Nominated MPs (Lok Sabha & Rajya Sabha)",
+          "Do Not Participate",
+          "Participate"
+        ],
+        [
+          "Elected MLAs (State Assemblies)",
+          "Participate",
+          "Do Not Participate"
+        ],
+        [
+          "Nominated MLAs & MLCs (State Councils)",
+          "Do Not Participate",
+          "Do Not Participate"
+        ]
+      ],
+      "id": "s3k7cez"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Articles",
+          "value": "52–62",
+          "icon": "book"
+        },
+        {
+          "label": "Minimum Age Limit",
+          "value": "35 Years",
+          "icon": "award"
+        },
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Impeachment Article",
+          "value": "Article 61",
+          "icon": "info"
+        }
+      ],
+      "id": "0jyh6xc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Nominated members of Parliament do NOT participate in the presidential election, but they DO participate in the impeachment process.",
+        "Elected members of State Legislative Assemblies participate in the election, but they DO NOT participate in the impeachment process.",
+        "An impeachment resolution under Article 61 requires a 14-day notice signed by at least 1/4th of the initiating House's total membership and must be passed by a special majority of 2/3rd of total membership of each House."
+      ],
+      "id": "33r7s5v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 52 mandates that there shall be a President of India, who serves as the executive head of the State.",
+        "The President is indirectly elected by an Electoral College consisting of elected members of both Houses of Parliament and elected members of State Legislative Assemblies.",
+        "Qualifications under Article 58 mandate Indian citizenship, a minimum age of 35 years, and eligibility for election to the Lok Sabha.",
+        "The Oath of Office is administered by the Chief Justice of India under Article 60.",
+        "The President can only be impeached under Article 61 on the specific ground of 'violation of the Constitution'."
+      ],
+      "id": "mzo44fa"
+    }
+  ],
+  "enriched": true
+}

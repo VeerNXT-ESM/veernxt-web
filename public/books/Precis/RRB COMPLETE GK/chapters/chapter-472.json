@@ -1,0 +1,89 @@
+{
+  "id": "jejb07a",
+  "title": "13. Exam Traps",
+  "order": 472,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "28khxpx"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Spotting exam traps requires reading the question stem twice and actively searching for qualifier words before selecting an answer.",
+      "id": "uy9vkdv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Key Characteristic",
+        "Mitigation Strategy"
+      ],
+      "rows": [
+        [
+          "Modifier Trap",
+          "Contains extreme qualifiers like 'all', 'only', or 'never'",
+          "Treat absolute assertions with high skepticism"
+        ],
+        [
+          "Reverse Query Trap",
+          "Asks for 'Incorrect' or 'False' statements",
+          "Circle or underline negative words in the stem immediately"
+        ],
+        [
+          "Look-Alike Trap",
+          "Option resembles the correct answer but contains a minor flaw",
+          "Read all four options completely before making a choice"
+        ]
+      ],
+      "id": "gqtvm6k"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Common Trap Types",
+          "value": "4 Categories",
+          "icon": "info"
+        },
+        {
+          "label": "Negative Penalty",
+          "value": "1/3rd Penalty",
+          "icon": "clock"
+        },
+        {
+          "label": "Extreme Modifiers",
+          "value": "Always / Never / Only",
+          "icon": "check"
+        },
+        {
+          "label": "Stem Reversals",
+          "value": "NOT / INCORRECT",
+          "icon": "book"
+        }
+      ],
+      "id": "qtpy1hx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions asking for 'NOT CORRECT' options remain the single highest source of avoidable negative marks.",
+        "In factual statements, closely inspect numbers, dates, and ministry names as examiner traps frequently interchange them.",
+        "Never mark the first plausible option immediately; always evaluate all four choices to rule out look-alike traps."
+      ],
+      "id": "w8ggxnh"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Extreme modifiers such as 'always', 'never', and 'only' usually render a statement false in competitive examinations.",
+        "Always highlight keywords like 'NOT CORRECT', 'INCORRECT', or 'EXCEPT' in the question stem before looking at options.",
+        "Partial-truth traps combine a correct fact with an incorrect detail to mislead superficial readers.",
+        "Time-sink questions are intentionally placed to break your pacing; skip and revisit them during your second pass."
+      ],
+      "id": "m4r3gu1"
+    }
+  ],
+  "enriched": true
+}

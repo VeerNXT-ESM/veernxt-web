@@ -1,0 +1,132 @@
+{
+  "id": "my3drrk",
+  "title": "Important Terms (VERY FREQUENTLY ASKED)",
+  "order": 610,
+  "blocks": [
+    {
+      "id": "6qiebms",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Zero Hour is an Indian parliamentary innovation in the field of parliamentary procedures and has been in existence since 1962.",
+      "id": "a85nvoz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Starred Question",
+        "Unstarred Question"
+      ],
+      "rows": [
+        [
+          "Answer Type",
+          "Oral Answer",
+          "Written Answer"
+        ],
+        [
+          "Supplementary Questions",
+          "Allowed",
+          "Not Allowed"
+        ],
+        [
+          "Paper Colour",
+          "Green",
+          "White"
+        ],
+        [
+          "Notice Period",
+          "Minimum 10 days",
+          "Minimum 10 days"
+        ]
+      ],
+      "id": "ipus5ho"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Zero Hour Start",
+          "value": "12:00 PM",
+          "icon": "clock"
+        },
+        {
+          "label": "Parliamentary Quorum",
+          "value": "1/10th Members",
+          "icon": "check"
+        },
+        {
+          "label": "Inception Year",
+          "value": "1962",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Article",
+          "value": "Article 100",
+          "icon": "book"
+        }
+      ],
+      "id": "w7ggo3x"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Zero Hour is NOT mentioned in the Rules of Procedure; it is an informal device available to members of Parliament.",
+        "Starred questions allow supplementary questions, whereas unstarred questions require written answers and do not allow supplementary questions.",
+        "Quorum for either House of Parliament is 1/10th of the total number of members under Article 100 of the Indian Constitution."
+      ],
+      "id": "v10lsdv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Zero Hour is an informal Indian parliamentary innovation starting immediately after the Question Hour.",
+        "Question Hour is the first hour of a parliamentary sitting dedicated to asking and answering questions.",
+        "Starred Questions require oral answers and permit supplementary questions to be asked.",
+        "Unstarred Questions require written answers and do not allow supplementary questions.",
+        "Guillotine Closure refers to putting remaining clauses of a bill or budget demands to vote directly without further discussion."
+      ],
+      "id": "08sz2eh"
+    }
+  ],
+  "enriched": true
+}

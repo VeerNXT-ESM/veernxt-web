@@ -1,0 +1,481 @@
+{
+  "id": "rn6zf73",
+  "title": "Chapter 16 – Basic Electrical Components and Circuits",
+  "order": 14,
+  "blocks": [
+    {
+      "id": "9hpqo80",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "An electric circuit provides a closed conducting loop necessary for continuous flow of electric current.",
+        "In a series circuit, current remains identical across all components, while the total voltage is divided.",
+        "In a parallel circuit, voltage across all branches remains equal, while the total current is divided.",
+        "Safety devices such as fuses and MCBs protect circuit components against excessive current and short circuits.",
+        "Ammeters are connected in series due to low resistance, whereas voltmeters are connected in parallel due to high resistance."
+      ],
+      "id": "v6b1jyy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ideal Ammeter Resistance",
+          "value": "0 Ω",
+          "icon": "check"
+        },
+        {
+          "label": "Ideal Voltmeter Resistance",
+          "value": "Infinite",
+          "icon": "info"
+        },
+        {
+          "label": "Fuse Wire Composition",
+          "value": "Tin-Lead Alloy",
+          "icon": "award"
+        },
+        {
+          "label": "Domestic Wiring Type",
+          "value": "Parallel",
+          "icon": "book"
+        }
+      ],
+      "id": "ci4ties"
+    },
+    {
+      "type": "paragraph",
+      "id": "5wnmkxt"
+    },
+    {
+      "id": "02rhble",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Basic Electrical Components"
+    },
+    {
+      "id": "h02ec82",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "542ycll",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Electrical Symbols Used in Circuits"
+    },
+    {
+      "id": "el1niqs",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e3nuhu9",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Electrical Circuit"
+    },
+    {
+      "type": "pullQuote",
+      "content": "In a parallel combination, the equivalent resistance is always less than the individual resistance of any single resistor in the circuit.",
+      "id": "vxmewz2"
+    },
+    {
+      "type": "paragraph",
+      "id": "lng9v8b"
+    },
+    {
+      "id": "as9moh6",
+      "type": "heading",
+      "level": 3,
+      "content": "Basic Parts of a Circuit"
+    },
+    {
+      "id": "maurtc3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4qdz1uq",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Electrical Circuits"
+    },
+    {
+      "id": "6h6xksm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Series Circuit",
+        "Parallel Circuit"
+      ],
+      "rows": [
+        [
+          "Electric Current",
+          "Same through all components",
+          "Divides among parallel branches"
+        ],
+        [
+          "Potential Difference",
+          "Divided across components",
+          "Same across all components"
+        ],
+        [
+          "Equivalent Resistance",
+          "R_total = R1 + R2 + R3...",
+          "1/R_total = 1/R1 + 1/R2 + 1/R3..."
+        ],
+        [
+          "Impact of Fault",
+          "One break stops entire circuit",
+          "Other branches continue working"
+        ]
+      ],
+      "id": "3w8ltj7"
+    },
+    {
+      "id": "dfl5c3p",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Series Circuit Characteristics"
+    },
+    {
+      "id": "7by5oc1",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "de55eio",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Parallel Circuit Characteristics"
+    },
+    {
+      "id": "ve2llkt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "9076n3q",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Protective Devices in Electrical Circuits"
+    },
+    {
+      "id": "8n554si",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fuse wire is made of an alloy of Lead and Tin characterized by high resistance and a low melting point.",
+        "An ideal ammeter has zero internal resistance, whereas an ideal voltmeter has infinite internal resistance.",
+        "Domestic household appliances are connected in parallel so that each appliance receives the full voltage and operates independently."
+      ],
+      "id": "6f50119"
+    },
+    {
+      "id": "zoaisc3",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Importance of Electrical Circuits"
+    },
+    {
+      "id": "zzat0y2",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "ajd56oe",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "b97ix2w",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

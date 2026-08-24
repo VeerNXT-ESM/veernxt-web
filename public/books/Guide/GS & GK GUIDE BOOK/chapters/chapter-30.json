@@ -1,11 +1,11 @@
 {
-  "id": "inng6ii",
+  "id": "ftya3h3",
   "title": "Chapter 29: Structure of the Earth",
   "order": 30,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "7bc21fe"
+      "id": "cckn4zh"
     },
     {
       "type": "statStrip",
@@ -13,28 +13,28 @@
         {
           "label": "Mean Radius",
           "value": "6,371 km",
-          "icon": "info"
+          "icon": "globe"
         },
         {
           "label": "Major Layers",
-          "value": "3 Layers",
-          "icon": "book"
+          "value": "3 (Crust, Mantle, Core)",
+          "icon": "layers"
         },
         {
-          "label": "Mantle Volume",
-          "value": "84%",
-          "icon": "check"
+          "label": "Mantle Depth",
+          "value": "2,900 km",
+          "icon": "info"
         },
         {
-          "label": "Discontinuities",
-          "value": "5 Zones",
-          "icon": "clock"
+          "label": "Core Composition",
+          "value": "NIFE (Ni + Fe)",
+          "icon": "award"
         }
       ],
-      "id": "1je59ju"
+      "id": "p6f3jzh"
     },
     {
-      "id": "31skm8b",
+      "id": "u4989yx",
       "type": "heading",
       "level": 2,
       "content": "1. Radius and General Facts about the Earth"
@@ -43,32 +43,32 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Earth is structurally divided into three concentric layers: Crust, Mantle, and Core.",
-        "The Crust consists of Continental Crust (SIAL - Silica and Aluminium) and Oceanic Crust (SIMA - Silica and Magnesium).",
-        "The Mantle extends to a depth of 2,900 km and contains the Asthenosphere, the primary source of magma.",
-        "The Core is composed mainly of Nickel and Iron (NIFE), featuring a liquid Outer Core and a solid Inner Core.",
-        "Seismic boundary zones called discontinuities (e.g., Moho, Gutenberg) mark abrupt changes in density and wave velocity."
+        "The Earth consists of three principal concentric layers: Crust, Mantle, and Core.",
+        "The Crust is subdivided into Continental Crust (Sial: Silica and Aluminium) and Oceanic Crust (Sima: Silica and Magnesium).",
+        "The Mantle reaches a depth of 2,900 km and includes the semi-fluid Asthenosphere responsible for tectonic plate motion.",
+        "The Core is divided into a liquid Outer Core (generating Earth's magnetic field) and a solid Inner Core.",
+        "Internal boundaries are defined by seismic discontinuities including Conrad, Mohorovičić (Moho), Repetti, Gutenberg, and Lehmann."
       ],
-      "id": "fjyjdip"
+      "id": "8l4iu12"
     },
     {
       "type": "paragraph",
-      "id": "mvkei7a"
+      "id": "ltr2dk6"
     },
     {
       "type": "paragraph",
-      "id": "9nxyu41"
+      "id": "7d6m4dg"
     },
     {
       "type": "paragraph",
-      "id": "bhe007j"
+      "id": "n5f6ug8"
     },
     {
       "type": "paragraph",
-      "id": "x6ez3zt"
+      "id": "9ijz356"
     },
     {
-      "id": "unpf6z8",
+      "id": "6io6dsw",
       "type": "heading",
       "level": 2,
       "content": "2. Sources of Information about the Earth's Interior"
@@ -76,45 +76,45 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "4opaerp"
+      "id": "8yid340"
     },
     {
       "type": "paragraph",
-      "id": "okglwqj"
+      "id": "absxjml"
     },
     {
       "type": "paragraph",
-      "id": "sklfkwo"
+      "id": "mihc2kz"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "06rhd51"
+      "id": "fqe0t9b"
     },
     {
       "type": "paragraph",
-      "id": "1qgs9hi"
+      "id": "n9xci51"
     },
     {
       "type": "paragraph",
-      "id": "tkifegk"
+      "id": "oksm0ao"
     },
     {
       "type": "paragraph",
-      "id": "rxtb8vj"
+      "id": "i0unr4x"
     },
     {
       "type": "paragraph",
-      "id": "iuqw23u"
+      "id": "4asrwui"
     },
     {
-      "id": "quglavf",
+      "id": "03uj5cp",
       "type": "heading",
       "level": 2,
       "content": "3. Major Layers of the Earth"
     },
     {
-      "id": "keks32c",
+      "id": "8b999fb",
       "type": "table",
       "rows": [
         {
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "id": "zsxtucz",
+      "id": "y34ihc5",
       "type": "heading",
       "level": 2,
       "content": "4. Crust"
@@ -164,36 +164,36 @@
     {
       "type": "pullQuote",
       "content": "Important Discontinuities inside the Earth",
-      "id": "3gt7xs0"
+      "id": "ikjgfke"
     },
     {
       "type": "paragraph",
-      "id": "6b3qezv"
+      "id": "ptwmrpm"
     },
     {
       "type": "paragraph",
-      "id": "fr1u01k"
+      "id": "nu5ad1h"
     },
     {
       "type": "paragraph",
-      "id": "zvr7ive"
+      "id": "7gchomm"
     },
     {
       "type": "paragraph",
-      "id": "qq1up2f"
+      "id": "rn5f3wr"
     },
     {
       "type": "paragraph",
-      "id": "jk90zbs"
+      "id": "gmpjuuw"
     },
     {
-      "id": "34pg6a6",
+      "id": "apkolrd",
       "type": "heading",
       "level": 3,
       "content": "Types of Crust"
     },
     {
-      "id": "2b4ltjr",
+      "id": "cs2usb7",
       "type": "table",
       "rows": [
         {
@@ -223,104 +223,104 @@
       ]
     },
     {
-      "id": "qbeqlpe",
+      "id": "264itgr",
       "type": "heading",
       "level": 2,
       "content": "5. Mantle"
     },
     {
       "type": "paragraph",
-      "id": "r7s6uyr"
+      "id": "bltrye0"
     },
     {
       "type": "paragraph",
-      "id": "3pej2py"
+      "id": "1px5z4y"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Feature",
-        "Continental Crust (SIAL)",
-        "Oceanic Crust (SIMA)"
+        "Continental Crust (Sial)",
+        "Oceanic Crust (Sima)"
       ],
       "rows": [
         [
-          "Dominant Minerals",
-          "Silica & Aluminium",
-          "Silica & Magnesium"
+          "Primary Composition",
+          "Silica and Aluminium",
+          "Silica and Magnesium"
         ],
         [
           "Average Thickness",
-          "Thicker (30 - 70 km)",
-          "Thinner (5 - 10 km)"
+          "30 – 70 km (Thicker)",
+          "5 – 10 km (Thinner)"
         ],
         [
-          "Average Density",
-          "Lighter (~2.7 g/cm³)",
-          "Denser (~3.0 g/cm³)"
+          "Density",
+          "Lower (~2.7 g/cm³)",
+          "Higher (~3.0 g/cm³)"
         ],
         [
-          "Primary Rock Type",
-          "Granitic Rocks",
-          "Basaltic Rocks"
+          "Dominant Rock Type",
+          "Granitic / Felsic",
+          "Basaltic / Mafic"
         ]
       ],
-      "id": "3utisw8"
+      "id": "68bi0dx"
     },
     {
       "type": "paragraph",
-      "id": "xh24b6v"
+      "id": "rjz5itv"
     },
     {
       "type": "paragraph",
-      "id": "l1atueg"
+      "id": "onsslim"
     },
     {
       "type": "paragraph",
-      "id": "olclb2r"
+      "id": "k47rzgj"
     },
     {
-      "id": "h1rblmh",
+      "id": "66pmyc4",
       "type": "heading",
       "level": 3,
       "content": "Important Zones in the Mantle"
     },
     {
       "type": "paragraph",
-      "id": "2uowgke"
+      "id": "vmpcj21"
     },
     {
       "type": "paragraph",
-      "id": "scy49z5"
+      "id": "ma23uwn"
     },
     {
       "type": "paragraph",
-      "id": "cymaklc"
+      "id": "owh45yu"
     },
     {
-      "id": "uubrgh6",
+      "id": "bcty3mt",
       "type": "heading",
       "level": 2,
       "content": "6. Core"
     },
     {
       "type": "paragraph",
-      "id": "sh6zte8"
+      "id": "z0yolsl"
     },
     {
       "type": "paragraph",
-      "id": "dhc5hqi"
+      "id": "gpac3c5"
     },
     {
       "type": "paragraph",
-      "id": "c2slwhd"
+      "id": "trc7og5"
     },
     {
       "type": "paragraph",
-      "id": "13orto3"
+      "id": "7qlcjhz"
     },
     {
-      "id": "iugraqa",
+      "id": "bx7ycbg",
       "type": "heading",
       "level": 3,
       "content": "Types of Core"
@@ -328,15 +328,15 @@
     {
       "type": "examAlert",
       "items": [
-        "Mohorovicic (Moho) Discontinuity lies between the Crust and the Mantle.",
-        "Gutenberg Discontinuity forms the boundary between the Mantle and the Outer Core.",
-        "Asthenosphere is the ductile upper region of the mantle on which lithospheric plates float.",
-        "The Earth's magnetic field is generated by convection currents in the liquid Outer Core."
+        "Moho Discontinuity lies between the Crust and Mantle, while Gutenberg Discontinuity separates the Mantle from the Core (~2,900 km depth).",
+        "Sial forms the lighter continental crust, whereas Sima forms the denser oceanic crust.",
+        "The Outer Core remains in a liquid state while the Inner Core is solid due to extreme pressure.",
+        "Seismic S-waves cannot travel through the liquid outer core, producing an S-wave shadow zone beyond 103°."
       ],
-      "id": "gg1rphu"
+      "id": "242hx8t"
     },
     {
-      "id": "xrfw4tw",
+      "id": "q9t0hbd",
       "type": "table",
       "rows": [
         {
@@ -369,13 +369,13 @@
       ]
     },
     {
-      "id": "xefd55a",
+      "id": "scnv5v3",
       "type": "heading",
       "level": 2,
       "content": "7. Important Discontinuities inside the Earth"
     },
     {
-      "id": "1lu2cuz",
+      "id": "1v30r90",
       "type": "table",
       "rows": [
         {
@@ -413,26 +413,26 @@
       ]
     },
     {
-      "id": "vfse7nl",
+      "id": "c90a5d8",
       "type": "heading",
       "level": 2,
       "content": "EXAM Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "dvuylo6"
+      "id": "xkamqo9"
     },
     {
       "type": "paragraph",
-      "id": "4m0fzku"
+      "id": "8x3i9gb"
     },
     {
       "type": "paragraph",
-      "id": "rpzc30h"
+      "id": "h5qc38k"
     },
     {
       "type": "paragraph",
-      "id": "lz6slj3"
+      "id": "5lqpd9z"
     }
   ],
   "enriched": true

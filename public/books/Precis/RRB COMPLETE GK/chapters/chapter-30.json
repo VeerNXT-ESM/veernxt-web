@@ -1,0 +1,143 @@
+{
+  "id": "ftmsmv9",
+  "title": "3. Longitudes : Meaning and Characteristics",
+  "order": 30,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "4gh1ics"
+    },
+    {
+      "type": "pullQuote",
+      "content": "All meridians are of equal length and converge at the poles.",
+      "id": "b3di646"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Meridians",
+          "value": "360°",
+          "icon": "book"
+        },
+        {
+          "label": "Prime Meridian",
+          "value": "0°",
+          "icon": "award"
+        },
+        {
+          "label": "Time per Degree",
+          "value": "4 mins",
+          "icon": "clock"
+        },
+        {
+          "label": "Equator Distance",
+          "value": "111 km",
+          "icon": "info"
+        }
+      ],
+      "id": "7gqfd92"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes (Parallels)",
+        "Longitudes (Meridians)"
+      ],
+      "rows": [
+        [
+          "Orientation",
+          "Horizontal complete circles (East to West)",
+          "Vertical semi-circles (North to South)"
+        ],
+        [
+          "Length",
+          "Decreases from equator towards poles",
+          "All meridians are equal in length"
+        ],
+        [
+          "Intersections",
+          "Parallel to each other; never meet",
+          "Converge at the North and South Poles"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0°)"
+        ]
+      ],
+      "id": "dlxi9ra"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Longitudes are vertical imaginary semi-circles running from the North Pole to the South Pole.",
+        "Unlike parallels of latitude, all meridians of longitude are equal in length.",
+        "The distance between lines of longitude is maximum at the equator and steadily decreases to zero at the poles.",
+        "The Prime Meridian (0°) passes through Greenwich near London and divides Earth into Eastern and Western Hemispheres.",
+        "Earth turns 360° in 24 hours, which corresponds to 15° per hour or 1° every 4 minutes."
+      ],
+      "id": "k0hnlz6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) is derived from the standard meridian of 82.5° E passing through Mirzapur, Uttar Pradesh.",
+        "The 180° East and 180° West longitudes lie on the exact same line, forming the basis for the International Date Line.",
+        "Places located to the East of Greenwich are ahead of GMT, while places to the West are behind GMT."
+      ],
+      "id": "1ev8ds5"
+    },
+    {
+      "id": "6behuqp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

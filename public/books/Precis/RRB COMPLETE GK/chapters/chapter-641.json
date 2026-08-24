@@ -1,0 +1,124 @@
+{
+  "id": "wk5ltb0",
+  "title": "Tenure and Salary",
+  "order": 641,
+  "blocks": [
+    {
+      "id": "yzz8ivt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The expenses, including salaries, allowances, and pensions of constitutional office holders, are charged upon the Consolidated Fund of India.",
+      "id": "g40plcg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Union Constitutional Bodies (UPSC, CAG, EC)",
+        "State Constitutional Bodies (SPSC)"
+      ],
+      "rows": [
+        [
+          "Tenure & Age Limit",
+          "6 Years or 65 Years of age",
+          "6 Years or 62 Years of age"
+        ],
+        [
+          "Salary Source",
+          "Consolidated Fund of India",
+          "Consolidated Fund of the State"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India"
+        ]
+      ],
+      "id": "7gajv67"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Max Age (Union)",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Max Age (State)",
+          "value": "62 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Salary Charge",
+          "value": "Consolidated Fund",
+          "icon": "award"
+        }
+      ],
+      "id": "icqzylh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Age Limit Distinction: Central constitutional heads retire at 65 years, whereas State Public Service Commission members retire at 62 years.",
+        "Voting in Parliament: Salaries charged on the Consolidated Fund of India are subject to discussion but not to the vote of Parliament.",
+        "Removal Authority: SPSC members are appointed by the Governor but can only be removed by the President."
+      ],
+      "id": "5bstfrn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Tenure for standard constitutional heads such as the CAG, CEC, and UPSC Chairman is 6 years or until the age of 65 years, whichever is earlier.",
+        "Salaries, allowances, and pensions of constitutional posts are charged upon the Consolidated Fund of India and are non-votable by Parliament.",
+        "Conditions of service cannot be varied to the disadvantage of the office holder after their appointment.",
+        "Resignation letters are addressed directly to the President of India for central constitutional posts."
+      ],
+      "id": "8tuzdll"
+    }
+  ],
+  "enriched": true
+}

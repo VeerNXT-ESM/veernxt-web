@@ -1,0 +1,97 @@
+{
+  "id": "4kka51x",
+  "title": "RRB Quick Revision Box",
+  "order": 326,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "trjjr52"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "award"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "check"
+        },
+        {
+          "label": "Nationalization",
+          "value": "1951",
+          "icon": "info"
+        }
+      ],
+      "id": "ojni2ed"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways is the fourth-largest national railway network in the world by size.",
+      "id": "zmsmeac"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "Mainline routes & trunk corridors"
+        ],
+        [
+          "Meter Gauge",
+          "1000 mm",
+          "Regional feeder routes (mostly converted)"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "Mountain & heritage railways"
+        ]
+      ],
+      "id": "6kzdsxl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bombay (Bori Bunder) and Thane on April 16, 1853.",
+        "Indian Railways was nationalized in 1951 and is currently divided into 19 administrative zones.",
+        "The official mascot of Indian Railways is 'Bholu', an elephant holding a guard lantern.",
+        "The Railway Board was originally constituted in 1905 under the recommendation of the Robertson Committee."
+      ],
+      "id": "6e1u7qy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the year of establishment of the Railway Board (1905) vs. Nationalization of Indian Railways (1951).",
+        "Pay attention to standard rail gauge dimensions: Broad Gauge is strictly 1676 mm (5 ft 6 in).",
+        "Chenab Rail Bridge in Jammu & Kashmir is frequently asked as the world's highest rail bridge."
+      ],
+      "id": "waq7muu"
+    },
+    {
+      "type": "paragraph",
+      "id": "2qdmksy"
+    },
+    {
+      "type": "paragraph",
+      "id": "fv168cs"
+    }
+  ],
+  "enriched": true
+}

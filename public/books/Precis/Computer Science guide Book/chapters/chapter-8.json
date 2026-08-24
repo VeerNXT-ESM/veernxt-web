@@ -1,0 +1,359 @@
+{
+  "id": "jbq0zqj",
+  "title": "Chapter 8: Operating System",
+  "order": 8,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "92i70ad"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Role",
+          "value": "User-Hardware Interface",
+          "icon": "info"
+        },
+        {
+          "label": "Core OS Types",
+          "value": "Batch, Time-Sharing, Multi-CPU",
+          "icon": "book"
+        },
+        {
+          "label": "Key OS Example",
+          "value": "Microsoft Windows",
+          "icon": "award"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "OS Functions & Desktop Basics",
+          "icon": "check"
+        }
+      ],
+      "id": "t8sk2s9"
+    },
+    {
+      "id": "ln42pqt",
+      "type": "heading",
+      "level": 2,
+      "content": "8.1 Meaning of Operating System"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "An Operating System serves as a bridge between the user and computer hardware.",
+        "Primary functions of an OS include process management, memory allocation, device control, and file management.",
+        "Batch operating systems group similar jobs together, whereas time-sharing systems allocate CPU time slots to multiple users.",
+        "Multiprocessing operating systems utilize two or more CPUs to enhance execution speed and system reliability.",
+        "Windows OS relies on a Graphical User Interface (GUI) with core elements like the Taskbar, Desktop, and File Explorer."
+      ],
+      "id": "emo9sw0"
+    },
+    {
+      "type": "paragraph",
+      "id": "c3ztf23"
+    },
+    {
+      "id": "2hnomne",
+      "type": "heading",
+      "level": 3,
+      "content": "8.1.1 Examples of Operating Systems"
+    },
+    {
+      "id": "pcnturb",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "wh22hw1",
+      "type": "heading",
+      "level": 2,
+      "content": "8.2 Functions of Operating System"
+    },
+    {
+      "id": "4rr5cix",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o97thnh",
+      "type": "heading",
+      "level": 2,
+      "content": "8.3 Types of Operating Systems"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Functions of Operating System",
+      "id": "ierilz5"
+    },
+    {
+      "id": "c07xray",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.1 Batch Operating System"
+    },
+    {
+      "type": "paragraph",
+      "id": "34ko511"
+    },
+    {
+      "id": "pofnnxk",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.2 Time Sharing Operating System"
+    },
+    {
+      "type": "paragraph",
+      "id": "bx0dor5"
+    },
+    {
+      "id": "n6bo0dq",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.3 Multiprocessing Operating System"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Operating System Type",
+        "Core Concept",
+        "Key Feature"
+      ],
+      "rows": [
+        [
+          "Batch Operating System",
+          "Jobs prepared offline and processed in groups",
+          "Executes jobs in sequence without direct user interaction"
+        ],
+        [
+          "Time Sharing Operating System",
+          "Allocates CPU time-slices across multiple users",
+          "Provides interactive environment and fast response time"
+        ],
+        [
+          "Multiprocessing Operating System",
+          "Utilizes two or more CPUs simultaneously",
+          "Increases execution speed and parallel processing capacity"
+        ]
+      ],
+      "id": "zta7zyh"
+    },
+    {
+      "type": "paragraph",
+      "id": "j6qhk85"
+    },
+    {
+      "id": "sy7h783",
+      "type": "heading",
+      "level": 3,
+      "content": "8.3.4 Other Types of Operating Systems"
+    },
+    {
+      "id": "bgxw82j",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6ksza85",
+      "type": "heading",
+      "level": 2,
+      "content": "8.4 Windows Operating System Basics"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdpkcrt"
+    },
+    {
+      "id": "n0vn1ga",
+      "type": "heading",
+      "level": 3,
+      "content": "8.4.1 Key Features of Windows OS"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test the difference between Multiprocessing (multiple processors) and Multiprogramming (multiple jobs in memory).",
+        "Time Sharing OS uses CPU scheduling and time-slicing to provide quick response times for multiple users.",
+        "Understand key Windows GUI components, including the Taskbar, System Tray, and Start Menu."
+      ],
+      "id": "0s9eel7"
+    },
+    {
+      "id": "kymedpb",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "mk9t6es",
+      "type": "heading",
+      "level": 3,
+      "content": "8.4.2 Main Components of Windows Desktop"
+    },
+    {
+      "id": "2ch5iej",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ggzsjud",
+      "type": "heading",
+      "level": 2,
+      "content": "8.5 Important Exam Points"
+    },
+    {
+      "id": "2nwbvbu",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,137 @@
+{
+  "id": "3oii0fe",
+  "title": "5. Latitudes vs Longitudes",
+  "order": 38,
+  "blocks": [
+    {
+      "id": "m59wwe6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Latitudes determine the climatic zones of the Earth, whereas longitudes are essential for calculating local time and time zones across the globe.",
+      "id": "d4s6upg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes (Parallels)",
+        "Longitudes (Meridians)"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "East to West (Horizontal)",
+          "North to South (Vertical)"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0° Greenwich)"
+        ],
+        [
+          "Length & Shape",
+          "Complete circles of decreasing size towards poles",
+          "Semi-circles of equal length converging at poles"
+        ],
+        [
+          "Primary Function",
+          "Temperature & climate zone classification",
+          "Local time determination & time zone calculation"
+        ],
+        [
+          "Total Count",
+          "181 lines (including Equator and both poles)",
+          "360 lines"
+        ]
+      ],
+      "id": "ovz31jv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Longitudes",
+          "value": "360°",
+          "icon": "globe"
+        },
+        {
+          "label": "Equator Latitude",
+          "value": "0°",
+          "icon": "compass"
+        },
+        {
+          "label": "Time per 1° Longitude",
+          "value": "4 mins",
+          "icon": "clock"
+        },
+        {
+          "label": "Indian Standard Meridian",
+          "value": "82.5° E",
+          "icon": "award"
+        }
+      ],
+      "id": "nfsxcx9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer (23.5° N) passes through 8 Indian states: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "Indian Standard Meridian (82°30' E) passes through 5 states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
+        "The International Date Line roughly follows the 180° meridian and deviates zig-zag to avoid dividing island nations into two different days."
+      ],
+      "id": "ni46903"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes run horizontally (East-West) as parallel circles and measure distance North or South of the Equator.",
+        "Longitudes run vertically (North-South) as semi-circles converging at the poles, measuring distance East or West of the Prime Meridian.",
+        "The Equator (0°) is the longest parallel of latitude, whereas all meridians of longitude are equal in length.",
+        "Distance between longitudes decreases from the Equator towards the poles, where it becomes zero.",
+        "Earth rotates 360° in 24 hours, meaning 1° of longitude corresponds to a time difference of 4 minutes."
+      ],
+      "id": "7xng6on"
+    }
+  ],
+  "enriched": true
+}

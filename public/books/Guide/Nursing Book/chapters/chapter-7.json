@@ -1,0 +1,682 @@
+{
+  "id": "408uecq",
+  "title": "Chapter 7 – Pharmacology",
+  "order": 7,
+  "blocks": [
+    {
+      "id": "ft1fyyd",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pharmacokinetics describes the body's response to drugs through Absorption, Distribution, Metabolism, and Excretion (ADME).",
+        "Drugs originate from diverse natural and synthetic sources and are chosen based on therapeutic requirements.",
+        "Routes of drug administration dictate the speed of onset, bioavailability, and targeted tissue action.",
+        "Key pharmacological classes include Antibiotics, Analgesics, Antipyretics, Cardiovascular, and Endocrine agents.",
+        "Vaccines and immunological drugs provide essential primary prevention and therapeutic immunomodulation."
+      ],
+      "id": "5mxp3n9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Process",
+          "value": "ADME",
+          "icon": "check"
+        },
+        {
+          "label": "Major Topic",
+          "value": "Pharmacology",
+          "icon": "book"
+        },
+        {
+          "label": "Exam Importance",
+          "value": "High Yield",
+          "icon": "award"
+        },
+        {
+          "label": "Key Area",
+          "value": "Drug Action",
+          "icon": "info"
+        }
+      ],
+      "id": "e26klo4"
+    },
+    {
+      "type": "paragraph",
+      "id": "xzyb1tn"
+    },
+    {
+      "id": "brrf6si",
+      "type": "heading",
+      "level": 2,
+      "content": "Basic Drug Terminology"
+    },
+    {
+      "id": "5c2yh78",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4p4g2wn",
+      "type": "heading",
+      "level": 2,
+      "content": "Sources of Drugs"
+    },
+    {
+      "id": "abe6jd0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6le1usq",
+      "type": "heading",
+      "level": 2,
+      "content": "Routes of Drug Administration"
+    },
+    {
+      "id": "30hsh8h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Pharmacokinetics (ADME)",
+      "id": "6bhflmh"
+    },
+    {
+      "id": "03n1ytx",
+      "type": "heading",
+      "level": 2,
+      "content": "Pharmacokinetics (ADME)"
+    },
+    {
+      "id": "664wjun",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wgujhzg",
+      "type": "heading",
+      "level": 2,
+      "content": "Factors Affecting Drug Action"
+    },
+    {
+      "id": "v1j6qrn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8wvwnhx",
+      "type": "heading",
+      "level": 2,
+      "content": "Antibiotics"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Drug Category",
+        "Primary Action"
+      ],
+      "rows": [
+        [
+          "Analgesics",
+          "Relieve pain without loss of consciousness"
+        ],
+        [
+          "Antipyretics",
+          "Reduce elevated body temperature (fever)"
+        ],
+        [
+          "Antibiotics",
+          "Inhibit or destroy bacterial microorganisms"
+        ],
+        [
+          "Cardiovascular Drugs",
+          "Regulate heart function and vascular circulation"
+        ]
+      ],
+      "id": "u0091gp"
+    },
+    {
+      "id": "6827vns",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kxh8acc",
+      "type": "heading",
+      "level": 2,
+      "content": "Analgesics and Antipyretics"
+    },
+    {
+      "id": "zo1tl55",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ih0gunb",
+      "type": "heading",
+      "level": 2,
+      "content": "Cardiovascular Drugs"
+    },
+    {
+      "id": "y2wjb5q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yn70yse",
+      "type": "heading",
+      "level": 2,
+      "content": "Endocrine Drugs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Understand the four main components of Pharmacokinetics: Absorption, Distribution, Metabolism, and Excretion (ADME).",
+        "Differentiate between Analgesics (pain relief) and Antipyretics (fever reduction) for classification questions.",
+        "Identify various routes of drug administration and their comparative onset of action and systemic bioavailability."
+      ],
+      "id": "zzz3ro1"
+    },
+    {
+      "id": "i486hdq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mu9ui8y",
+      "type": "heading",
+      "level": 2,
+      "content": "Vaccines and Immunological Drugs"
+    },
+    {
+      "id": "xl21vey",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34el6cx",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "xs3flw0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

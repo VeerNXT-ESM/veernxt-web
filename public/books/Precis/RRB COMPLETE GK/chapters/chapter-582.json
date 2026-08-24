@@ -1,0 +1,95 @@
+{
+  "id": "fbjngl2",
+  "title": "7. Telecom Disputes Settlement and Appellate Tribunal (TDSAT)",
+  "order": 582,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "8vh65ee"
+    },
+    {
+      "type": "pullQuote",
+      "content": "TDSAT was established to adjudicate disputes and protect the interests of service providers and consumers in the telecom sector.",
+      "id": "y1w2xqp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "TRAI",
+        "TDSAT"
+      ],
+      "rows": [
+        [
+          "Body Type",
+          "Regulatory Body",
+          "Adjudicatory / Appellate Tribunal"
+        ],
+        [
+          "Primary Function",
+          "Regulates telecom & broadcasting tariffs and services",
+          "Resolves disputes and hears appeals against TRAI orders"
+        ],
+        [
+          "Established Year",
+          "1997",
+          "2000 (via TRAI Amendment)"
+        ],
+        [
+          "Appellate Forum",
+          "Appeals against TRAI lie to TDSAT",
+          "Appeals against TDSAT lie to the Supreme Court"
+        ]
+      ],
+      "id": "23vdnme"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "2000",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "TRAI Act, 1997",
+          "icon": "book"
+        },
+        {
+          "label": "Composition",
+          "value": "1 Chair + 2 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Appellate Court",
+          "value": "Supreme Court",
+          "icon": "award"
+        }
+      ],
+      "id": "uwwxlaa"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Appeals against TDSAT orders lie directly to the Supreme Court of India within 90 days, but only on substantial questions of law.",
+        "Individual consumer complaints that are maintainable before a Consumer Disputes Redressal Forum do not fall under TDSAT's jurisdiction.",
+        "Cyber appellate powers were transferred to TDSAT under the Finance Act, 2017."
+      ],
+      "id": "kxetrj5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TDSAT was set up in 2000 by an amendment to the Telecom Regulatory Authority of India (TRAI) Act, 1997, to separate regulatory functions from adjudicatory functions.",
+        "The tribunal adjudicates disputes between a licensor and a licensee, between two or more service providers, and between a service provider and a group of consumers.",
+        "The Chairperson of TDSAT must be a sitting or former Judge of the Supreme Court or a Chief Justice of a High Court.",
+        "Under the Finance Act 2017, the jurisdiction of the Cyber Appellate Tribunal and the Airport Economic Regulatory Authority Appellate Tribunal (AERAAT) was merged into TDSAT.",
+        "TDSAT is not bound by the Code of Civil Procedure, 1908, but is guided by the principles of natural justice."
+      ],
+      "id": "8ytgjhy"
+    }
+  ],
+  "enriched": true
+}

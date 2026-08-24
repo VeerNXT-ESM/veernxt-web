@@ -1,40 +1,40 @@
 {
-  "id": "huzabzj",
+  "id": "1lb544z",
   "title": "Chapter 19: President of India",
   "order": 20,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "yqlw6oo"
+      "id": "0ahb06a"
     },
     {
       "type": "statStrip",
       "stats": [
-        {
-          "label": "Article 52",
-          "value": "Office of President",
-          "icon": "book"
-        },
-        {
-          "label": "Article 61",
-          "value": "Impeachment",
-          "icon": "check"
-        },
         {
           "label": "Minimum Age",
           "value": "35 Years",
           "icon": "calendar"
         },
         {
-          "label": "Term Duration",
+          "label": "Term of Office",
           "value": "5 Years",
           "icon": "clock"
+        },
+        {
+          "label": "Impeachment Article",
+          "value": "Article 61",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Article 72",
+          "icon": "check"
         }
       ],
-      "id": "5afs20m"
+      "id": "9m43lmn"
     },
     {
-      "id": "a1vsjbu",
+      "id": "hk6pkrf",
       "type": "heading",
       "level": 2,
       "content": "1. Constitutional Articles Related to President"
@@ -43,16 +43,16 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The President is the supreme commander of the defence forces and the head of the Indian State.",
-        "The Presidential election is conducted through an electoral college consisting of elected members of Parliament and State Legislative Assemblies.",
-        "Candidates must be Indian citizens, at least 35 years old, and qualified to be elected as a Lok Sabha member.",
-        "The President exercises executive, legislative, financial, judicial, and emergency powers as prescribed by the Constitution.",
-        "Impeachment proceedings under Article 61 require a 14-day advance notice and a two-thirds majority of the total membership in both Houses."
+        "The President is the head of the Indian State, the first citizen of India, and acts as the symbol of unity, integrity, and solidarity of the nation.",
+        "The President is elected by an electoral college consisting of the elected members of both Houses of Parliament and the elected members of the Legislative Assemblies of the States and UTs of Delhi, Puducherry, and Jammu & Kashmir.",
+        "To qualify for election, a candidate must be a citizen of India, at least 35 years of age, and qualified for election as a member of the Lok Sabha.",
+        "Article 61 outlines the impeachment process for 'violation of the Constitution', requiring a resolution passed by a majority of not less than two-thirds of the total membership of the House.",
+        "The President possesses Executive, Legislative, Financial, Judicial, Diplomatic, Military, and Emergency Powers (Articles 352, 356, and 360)."
       ],
-      "id": "ib0mlcd"
+      "id": "bqqx5wy"
     },
     {
-      "id": "j19px6k",
+      "id": "ph43xim",
       "type": "table",
       "rows": [
         {
@@ -142,80 +142,80 @@
       ]
     },
     {
-      "id": "q52n372",
+      "id": "ngmip74",
       "type": "heading",
       "level": 2,
       "content": "2. Election of the President"
     },
     {
       "type": "paragraph",
-      "id": "9b272cx"
+      "id": "e8b3y5p"
     },
     {
       "type": "paragraph",
-      "id": "ommrvrm"
+      "id": "cynt999"
     },
     {
       "type": "paragraph",
-      "id": "hzzlp5h"
+      "id": "r0u80sb"
     },
     {
       "type": "paragraph",
-      "id": "r9o5y7g"
+      "id": "256vqwt"
     },
     {
-      "id": "v3qk8a7",
+      "id": "6hcv2wr",
       "type": "heading",
       "level": 2,
       "content": "3. Qualifications for President"
     },
     {
       "type": "paragraph",
-      "id": "fammygn"
+      "id": "1r3920z"
     },
     {
       "type": "paragraph",
-      "id": "sw8h1ee"
+      "id": "8c4yjf8"
     },
     {
       "type": "paragraph",
-      "id": "0lnq6tf"
+      "id": "rbj0fxt"
     },
     {
       "type": "paragraph",
-      "id": "6k4m4wj"
+      "id": "t1yecgs"
     },
     {
-      "id": "psh73sg",
+      "id": "2onhpd6",
       "type": "heading",
       "level": 2,
       "content": "4. Powers of the President"
     },
     {
-      "id": "5k12c5g",
+      "id": "wt6ht0w",
       "type": "heading",
       "level": 3,
       "content": "Executive Powers"
     },
     {
       "type": "pullQuote",
-      "content": "Impeachment of the President",
-      "id": "kct90ky"
+      "content": "Constitutional Articles Related to President",
+      "id": "b04tidf"
     },
     {
       "type": "paragraph",
-      "id": "y91i8zz"
+      "id": "8092hxl"
     },
     {
       "type": "paragraph",
-      "id": "9iju19c"
+      "id": "nxyhn8d"
     },
     {
       "type": "paragraph",
-      "id": "p249gby"
+      "id": "o3pw7qs"
     },
     {
-      "id": "1tjz7z3",
+      "id": "no0gqs0",
       "type": "heading",
       "level": 3,
       "content": "Legislative Powers"
@@ -223,24 +223,24 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "6z0mmq7"
+      "id": "3mftad0"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e0xly72"
+      "id": "i0aqvi2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mj8bdzj"
+      "id": "k676xaa"
     },
     {
       "type": "paragraph",
-      "id": "p59xyfk"
+      "id": "cvry6j3"
     },
     {
-      "id": "n6s0czv",
+      "id": "nzcltqc",
       "type": "heading",
       "level": 3,
       "content": "Financial Powers"
@@ -248,54 +248,49 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
-        "Presidential Election",
-        "Presidential Impeachment"
+        "Emergency Type",
+        "Constitutional Article",
+        "Grounds for Imposition"
       ],
       "rows": [
         [
-          "Constitutional Provision",
-          "Articles 54 & 55",
-          "Article 61"
+          "National Emergency",
+          "Article 352",
+          "War, External Aggression, or Armed Rebellion"
         ],
         [
-          "Nominated MPs Role",
-          "Excluded from voting",
-          "Included in voting"
+          "President's Rule (State)",
+          "Article 356 & 365",
+          "Failure of Constitutional Machinery in State / Non-compliance with Centre's directions"
         ],
         [
-          "State MLAs Role",
-          "Included in voting (Elected only)",
-          "Excluded from process"
-        ],
-        [
-          "Voting System",
-          "Single Transferable Vote (Proportional)",
-          "Two-Thirds Majority of Total House Strength"
+          "Financial Emergency",
+          "Article 360",
+          "Threat to the Financial Stability or Credit of India"
         ]
       ],
-      "id": "y0axrz9"
+      "id": "s8kjbee"
     },
     {
       "type": "paragraph",
-      "id": "t4bvjk0"
+      "id": "3z8987k"
     },
     {
       "type": "paragraph",
-      "id": "9yca16c"
+      "id": "50mhjh1"
     },
     {
-      "id": "9v8609w",
+      "id": "hdwrkax",
       "type": "heading",
       "level": 3,
       "content": "Judicial Powers"
     },
     {
       "type": "paragraph",
-      "id": "p7vu0qq"
+      "id": "psjzvs9"
     },
     {
-      "id": "bq1qne6",
+      "id": "hwmaecc",
       "type": "heading",
       "level": 3,
       "content": "Emergency Powers"
@@ -303,70 +298,71 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "v8rjqzs"
+      "id": "6q0k54a"
     },
     {
       "type": "paragraph",
-      "id": "djxfsyv"
+      "id": "1681sea"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hpiu8lh"
+      "id": "hn9i95w"
     },
     {
-      "id": "4w2m7wz",
+      "id": "8at0fmm",
       "type": "heading",
       "level": 2,
       "content": "5. Impeachment of the President"
     },
     {
       "type": "paragraph",
-      "id": "6minxq7"
+      "id": "067pjen"
     },
     {
       "type": "paragraph",
-      "id": "1jy66rj"
+      "id": "3hv17bk"
     },
     {
       "type": "examAlert",
       "items": [
-        "Nominated members of Parliament do NOT participate in the Presidential election, but they DO vote in the impeachment process.",
-        "State Legislative Assembly (MLAs) members vote in the Presidential election, but do NOT participate in the impeachment process.",
-        "Emergency powers are invoked under Article 352 (National), Article 356 (State/President's Rule), and Article 360 (Financial)."
+        "Nominated members of both Houses of Parliament do NOT participate in the election of the President, but they DO participate in the impeachment process.",
+        "Elected members of State Legislative Assemblies participate in the election, but do NOT participate in the impeachment of the President.",
+        "The phrase 'violation of the Constitution' for impeachment is not defined in the Constitution of India.",
+        "Under Article 72, the President's pardoning power extends to court-martial sentences, whereas a Governor's pardoning power does not."
       ],
-      "id": "dgccts4"
+      "id": "ltd4ta4"
     },
     {
       "type": "paragraph",
-      "id": "3qy00kw"
+      "id": "wr0fs7w"
     },
     {
-      "id": "37m12jd",
+      "id": "yu18nw4",
       "type": "heading",
       "level": 2,
       "content": "EXAM Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "8yei3ta"
+      "id": "a87vpdb"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tjc4i7u"
+      "id": "n63vnsa"
     },
     {
       "type": "paragraph",
-      "id": "i0viyri"
+      "id": "uph8yah"
     },
     {
       "type": "paragraph",
-      "id": "5kjh887"
+      "id": "ht8xxis"
     },
     {
       "type": "paragraph",
-      "id": "sn27te4"
+      "id": "4ihn0q0"
     }
   ],
   "enriched": true

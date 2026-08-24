@@ -1,0 +1,404 @@
+{
+  "id": "k7pa2ir",
+  "title": "CHAPTER 9 : ELECTRICITY",
+  "order": 102,
+  "blocks": [
+    {
+      "id": "waa4t8b",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO ELECTRICITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric current is defined as the rate of flow of electric charge (I = Q/t), with its SI unit being the Ampere.",
+        "Electric potential difference (V) is the work done per unit charge in moving it between two points in a circuit.",
+        "Ohm's Law establishes that the current passing through a conductor is directly proportional to the voltage across it, provided temperature is constant.",
+        "Resistance depends on the length, cross-sectional area, material resistivity, and temperature of the conductor.",
+        "Joule's Heating Effect states that heat generated is directly proportional to the square of current, resistance, and time (H = I²Rt)."
+      ],
+      "id": "3cnhk3v"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "info"
+        },
+        {
+          "label": "Ohm's Law Formula",
+          "value": "V = IR",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Resistance",
+          "value": "Ohm (Ω)",
+          "icon": "check"
+        },
+        {
+          "label": "1 kWh in Joules",
+          "value": "3.6 × 10⁶ J",
+          "icon": "award"
+        }
+      ],
+      "id": "kf9b0rs"
+    },
+    {
+      "type": "paragraph",
+      "id": "y4gfsen"
+    },
+    {
+      "id": "04wb6dx",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "xb98xdq"
+    },
+    {
+      "id": "ubtp8dv",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC CHARGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "owlavqm"
+    },
+    {
+      "id": "kho3nye",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "49h4sey"
+    },
+    {
+      "type": "paragraph",
+      "id": "t4ev58u"
+    },
+    {
+      "id": "7d1azn0",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "x7v9gba"
+    },
+    {
+      "type": "paragraph",
+      "id": "nt3kj8v"
+    },
+    {
+      "type": "paragraph",
+      "id": "a9wrpuk"
+    },
+    {
+      "id": "lmxu3d5",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC CIRCUIT"
+    },
+    {
+      "type": "paragraph",
+      "id": "fo0f6jf"
+    },
+    {
+      "id": "z2r6tfm",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "nwr8ft3",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC POTENTIAL DIFFERENCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "kscn1bh"
+    },
+    {
+      "type": "paragraph",
+      "id": "s472r6i"
+    },
+    {
+      "id": "w5ltfyu",
+      "type": "heading",
+      "level": 2,
+      "content": "OHM’S LAW"
+    },
+    {
+      "type": "paragraph",
+      "id": "2tbwczs"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ohm’s Law states that the current flowing through a conductor is directly proportional to the potential difference across its ends, provided physical conditions such as temperature remain constant.",
+      "id": "2g1877n"
+    },
+    {
+      "type": "paragraph",
+      "id": "v4jtz66"
+    },
+    {
+      "type": "paragraph",
+      "id": "bq813gb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hhnj66v"
+    },
+    {
+      "type": "paragraph",
+      "id": "610f0lh"
+    },
+    {
+      "type": "paragraph",
+      "id": "540jvbr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q9bnchv"
+    },
+    {
+      "id": "jlajrhv",
+      "type": "heading",
+      "level": 2,
+      "content": "RESISTANCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "gxvg4kj"
+    },
+    {
+      "type": "paragraph",
+      "id": "myufoph"
+    },
+    {
+      "id": "wlrps3d",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "xz4o83n",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC POWER"
+    },
+    {
+      "type": "paragraph",
+      "id": "b7l2lor"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Series Combination",
+        "Parallel Combination"
+      ],
+      "rows": [
+        [
+          "Electric Current (I)",
+          "Remains same through all resistors",
+          "Divides among individual branches"
+        ],
+        [
+          "Potential Difference (V)",
+          "Divides across each resistor",
+          "Remains same across all resistors"
+        ],
+        [
+          "Equivalent Resistance",
+          "R_eq = R1 + R2 + R3 (Maximum)",
+          "1/R_eq = 1/R1 + 1/R2 + 1/R3 (Minimum)"
+        ],
+        [
+          "Impact of Fault",
+          "Circuit breaks; all devices stop working",
+          "Other devices continue to operate independently"
+        ]
+      ],
+      "id": "dgi0vlt"
+    },
+    {
+      "type": "paragraph",
+      "id": "gjv1qxj"
+    },
+    {
+      "type": "paragraph",
+      "id": "f7amv4d"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rvvbk62"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2ld6tiv"
+    },
+    {
+      "id": "lliarll",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "l93plfl"
+    },
+    {
+      "type": "paragraph",
+      "id": "xt3auu6"
+    },
+    {
+      "id": "ipigo3u",
+      "type": "heading",
+      "level": 2,
+      "content": "HEATING EFFECT OF ELECTRIC CURRENT"
+    },
+    {
+      "type": "paragraph",
+      "id": "trfk2mq"
+    },
+    {
+      "id": "yecn9cw",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "gqcgxi7"
+    },
+    {
+      "id": "ai47nt1",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "dj7d16m",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC FUSE"
+    },
+    {
+      "type": "paragraph",
+      "id": "0zooljd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An Ammeter is always connected in series due to low resistance, whereas a Voltmeter is connected in parallel due to high resistance.",
+        "Electric fuse wires are designed with high resistance and a low melting point (typically an alloy of tin and lead).",
+        "Commercial unit of electric energy is Kilowatt-hour (kWh), where 1 unit = 1 kWh = 3.6 × 10⁶ Joules.",
+        "In series combination, the current remains constant across all resistors, while in parallel combination, the potential difference remains the same."
+      ],
+      "id": "vwtge7l"
+    },
+    {
+      "type": "paragraph",
+      "id": "lbisp38"
+    },
+    {
+      "id": "3sdj1w2",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "jzkkmcb",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "ypdhx8t"
+    },
+    {
+      "type": "paragraph",
+      "id": "wtghhfu"
+    },
+    {
+      "type": "paragraph",
+      "id": "e3cv45b"
+    },
+    {
+      "type": "paragraph",
+      "id": "cefyqug"
+    },
+    {
+      "type": "paragraph",
+      "id": "4puu3v0"
+    },
+    {
+      "id": "qkuztoi",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "rt7xzd8",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

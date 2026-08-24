@@ -1,0 +1,129 @@
+{
+  "id": "t4apnoq",
+  "title": "5. Types of Deserts Based on Surface",
+  "order": 149,
+  "blocks": [
+    {
+      "id": "u5d0vfs",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Deserts are broadly classified based on surface material into Erg, Reg, Hamada, and Badlands.",
+      "id": "maxl05e"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Desert Type",
+        "Surface Characteristic",
+        "Formative Process",
+        "Example / Regional Name"
+      ],
+      "rows": [
+        [
+          "Erg",
+          "Sand dunes and sand seas",
+          "Wind Deposition",
+          "Rub' al Khali, Sahara"
+        ],
+        [
+          "Reg",
+          "Gravel and stony mantle",
+          "Deflation (Wind Erosion)",
+          "Serir (Libya & Algeria)"
+        ],
+        [
+          "Hamada",
+          "Bare exposed bedrock",
+          "Abrasion & Deflation",
+          "Hamada el Homra (Libya)"
+        ],
+        [
+          "Badlands",
+          "Ravines, gullies, steep slopes",
+          "Water Runoff & Erosion",
+          "Chambal Ravines (India)"
+        ]
+      ],
+      "id": "sbrlr7q"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Types",
+          "value": "4 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Erg Surface",
+          "value": "Sandy Dunes",
+          "icon": "info"
+        },
+        {
+          "label": "Reg Surface",
+          "value": "Gravel & Stones",
+          "icon": "check"
+        },
+        {
+          "label": "Hamada Surface",
+          "value": "Bare Rock",
+          "icon": "award"
+        }
+      ],
+      "id": "sz1z4yr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently ask about local terminology: Reg deserts are called 'Serir' in Libya and Algeria.",
+        "Wind deflation is the key process forming Reg deserts by selectively blowing away finer sand particles.",
+        "Hamada deserts consist of massive exposed bedrock, smoothed and scoured by wind abrasion."
+      ],
+      "id": "tcewp2c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Erg deserts are vast stretches of undulating sand dunes shaped primarily by wind deposition.",
+        "Reg or Serir deserts are covered with pebbles and gravel left behind after fine sand is blown away by wind deflation.",
+        "Hamada deserts consist of bare, wind-scoured bedrock surfaces cleared entirely of sand deposits.",
+        "Badlands feature deeply eroded terrains characterized by intricate networks of gullies, ravines, and sharp ridges."
+      ],
+      "id": "zilzmxh"
+    }
+  ],
+  "enriched": true
+}

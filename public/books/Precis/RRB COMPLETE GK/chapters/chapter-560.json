@@ -1,0 +1,89 @@
+{
+  "id": "qah74l7",
+  "title": "13. Exam Traps",
+  "order": 560,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dzaewwf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Extreme qualifiers such as 'always', 'never', and 'only' often signal incorrect statements in objective questions.",
+      "id": "kef1smb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Correct Approach",
+        "Common Exam Trap"
+      ],
+      "rows": [
+        [
+          "Reading the full question prompt including 'NOT' or 'INCORRECT'",
+          "Skimming the question and selecting the first matching factual option"
+        ],
+        [
+          "Treating extreme statements with skepticism during elimination",
+          "Assuming absolute statements ('always', 'never') are factually sound"
+        ],
+        [
+          "Skipping difficult questions to return to them at the end",
+          "Spending 5+ minutes on a single question out of stubbornness"
+        ],
+        [
+          "Converting units into standard formats before calculations",
+          "Directly plugging given numbers into formulas without checking units"
+        ]
+      ],
+      "id": "8kkcjfx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Trap",
+          "value": "Negative Marking",
+          "icon": "alert"
+        },
+        {
+          "label": "Common Error",
+          "value": "Misreading Prompts",
+          "icon": "check"
+        },
+        {
+          "label": "Time Sink",
+          "value": "Overthinking Options",
+          "icon": "clock"
+        },
+        {
+          "label": "Best Remedy",
+          "value": "Elimination Method",
+          "icon": "award"
+        }
+      ],
+      "id": "v46yozh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions containing 'NOT CORRECT' cause over 15% of avoidable negative marks in competitive exams.",
+        "Distractor options often feature correct numerical calculations based on incorrect or un-converted units.",
+        "Double-check option letters before finalizing on the Computer-Based Test (CBT) portal to prevent mis-clicks."
+      ],
+      "id": "j2oodpd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Always read negative qualifiers like 'NOT', 'INCORRECT', and 'EXCEPT' carefully before choosing an option.",
+        "Extreme qualifiers such as 'always', 'never', and 'only' often signal incorrect statements in objective questions.",
+        "Avoid spending more than 1 to 2 minutes on a single tricky question to protect overall exam time management.",
+        "Verify unit conversions (e.g., km/h to m/s) in quantitative aptitude questions before finalizing your answer."
+      ],
+      "id": "671k5pn"
+    }
+  ],
+  "enriched": true
+}

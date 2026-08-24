@@ -1,0 +1,89 @@
+{
+  "id": "cunlulz",
+  "title": "RRB Quick Revision Box",
+  "order": 442,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "uqa5hp1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Time management and accuracy are the two most decisive factors in clearing Railway Recruitment Board examinations.",
+      "id": "27z2yjb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "CBT Stage 1",
+        "CBT Stage 2"
+      ],
+      "rows": [
+        [
+          "Purpose",
+          "Screening / Shortlisting",
+          "Final Merit Selection"
+        ],
+        [
+          "Total Questions",
+          "100 Questions",
+          "120 Questions"
+        ],
+        [
+          "Exam Duration",
+          "90 Minutes",
+          "90 Minutes"
+        ]
+      ],
+      "id": "7dotz8r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Selection Stages",
+          "value": "CBT 1 & 2",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Duration",
+          "value": "90 Mins",
+          "icon": "clock"
+        },
+        {
+          "label": "Negative Marking",
+          "value": "1/3rd Mark",
+          "icon": "info"
+        },
+        {
+          "label": "Core Focus",
+          "value": "Gen Awareness",
+          "icon": "book"
+        }
+      ],
+      "id": "flekp0h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exactly 1/3rd mark is deducted for each wrong answer in RRB CBT examinations.",
+        "General Science questions are heavily derived from NCERT Class 9 and 10 fundamentals.",
+        "Questions on Indian Railways zones, headquarters, and recent infrastructure developments are frequently asked."
+      ],
+      "id": "z8vqieb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RRB exams primarily consist of Computer Based Tests assessing General Awareness, Mathematics, and General Intelligence & Reasoning.",
+        "A negative marking penalty of 1/3rd mark is applied for every incorrect response in RRB objective papers.",
+        "The General Awareness section places significant emphasis on current affairs, Indian Railways facts, and general science.",
+        "Consistent practice and speed are essential to navigate 100 to 120 questions within a strict 90-minute limit."
+      ],
+      "id": "64bc85i"
+    }
+  ],
+  "enriched": true
+}

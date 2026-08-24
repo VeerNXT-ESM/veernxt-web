@@ -1,0 +1,673 @@
+{
+  "id": "7q7n8qv",
+  "title": "Chapter 17 – Nursing Research & Statistics",
+  "order": 17,
+  "blocks": [
+    {
+      "id": "06kk6mn",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Nursing research provides a scientific foundation for evidence-based practice and improved patient outcomes.",
+        "The research process systematically moves from problem identification to data collection, analysis, and interpretation.",
+        "Sampling techniques are classified into probability (random) and non-probability methods.",
+        "Data analysis relies on measures of central tendency (Mean, Median, Mode) and measures of dispersion (Range, Variance, Standard Deviation).",
+        "Effective presentation of data uses tables, graphs, and charts to communicate statistical findings clearly."
+      ],
+      "id": "btri5nr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Focus Area",
+          "value": "Nursing Research",
+          "icon": "book"
+        },
+        {
+          "label": "Core Component",
+          "value": "Statistics",
+          "icon": "award"
+        },
+        {
+          "label": "Key Analysis",
+          "value": "Central Tendency",
+          "icon": "check"
+        },
+        {
+          "label": "Data Method",
+          "value": "Sampling Techniques",
+          "icon": "info"
+        }
+      ],
+      "id": "nq36ebo"
+    },
+    {
+      "type": "paragraph",
+      "id": "l9c81l0"
+    },
+    {
+      "id": "bshvnim",
+      "type": "heading",
+      "level": 2,
+      "content": "Basic Concepts in Nursing Research"
+    },
+    {
+      "id": "0zpncs4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk314x4",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Research"
+    },
+    {
+      "id": "0wkvpkq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heg13w2",
+      "type": "heading",
+      "level": 2,
+      "content": "Steps of the Research Process"
+    },
+    {
+      "id": "gtfbkq9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nnkr3nu",
+      "type": "heading",
+      "level": 2,
+      "content": "Research Design"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chapter 17 – Nursing Research & Statistics",
+      "id": "fvc8945"
+    },
+    {
+      "id": "1fd4ujd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xxal2cf",
+      "type": "heading",
+      "level": 2,
+      "content": "Sampling Techniques"
+    },
+    {
+      "id": "gw44su5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t79gpru",
+      "type": "heading",
+      "level": 2,
+      "content": "Methods of Data Collection"
+    },
+    {
+      "id": "exe3ak9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Probability Sampling",
+        "Non-Probability Sampling"
+      ],
+      "rows": [
+        [
+          "Random Selection",
+          "Uses random selection techniques",
+          "Does not use random selection"
+        ],
+        [
+          "Selection Chance",
+          "Every element has a known, non-zero chance",
+          "Element chance of selection is unknown"
+        ],
+        [
+          "Generalizability",
+          "High generalizability to entire population",
+          "Limited generalizability; prone to bias"
+        ],
+        [
+          "Common Types",
+          "Simple Random, Stratified, Systematic, Cluster",
+          "Convenience, Purposive, Quota, Snowball"
+        ]
+      ],
+      "id": "n6fcszb"
+    },
+    {
+      "id": "1i8feui",
+      "type": "heading",
+      "level": 2,
+      "content": "Basic Statistical Concepts"
+    },
+    {
+      "id": "fadiibg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pd7o8f6",
+      "type": "heading",
+      "level": 2,
+      "content": "Measures of Central Tendency"
+    },
+    {
+      "id": "ofje4zd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8bwiejq",
+      "type": "heading",
+      "level": 2,
+      "content": "Measures of Dispersion"
+    },
+    {
+      "id": "n1619cb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwwc05g",
+      "type": "heading",
+      "level": 2,
+      "content": "Presentation of Data"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Median is the preferred measure of central tendency for highly skewed distributions, whereas Mean is sensitive to extreme values.",
+        "Standard Deviation is the most stable and widely used measure of variability/dispersion in inferential statistics.",
+        "Simple Random Sampling ensures every element in the target population has an equal, non-zero chance of selection.",
+        "Phenomenology explores lived human experiences (Qualitative), whereas Experimental studies test cause-and-effect relationships (Quantitative)."
+      ],
+      "id": "4gsp78l"
+    },
+    {
+      "id": "6d7ffqk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lykcji9",
+      "type": "heading",
+      "level": 2,
+      "content": "Importance of Research in Nursing"
+    },
+    {
+      "id": "x3ysegb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eg3i1z6",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "ac3woas",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

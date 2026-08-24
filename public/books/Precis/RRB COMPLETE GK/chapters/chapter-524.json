@@ -1,0 +1,134 @@
+{
+  "id": "3mwjbjm",
+  "title": "Difference Between CBI and NIA",
+  "order": 524,
+  "blocks": [
+    {
+      "id": "adh7mfu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The NIA has nationwide jurisdiction to investigate terror-related offences without requiring prior consent from state governments, whereas the CBI requires state consent under the DSPE Act.",
+      "id": "qncutv2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Bureau of Investigation (CBI)",
+        "National Investigation Agency (NIA)"
+      ],
+      "rows": [
+        [
+          "Statutory Status",
+          "Non-statutory (Derives powers from DSPE Act, 1946)",
+          "Statutory body (Established under NIA Act, 2008)"
+        ],
+        [
+          "Parent Ministry",
+          "Ministry of Personnel, Public Grievances and Pensions (DoPT)",
+          "Ministry of Home Affairs (MHA)"
+        ],
+        [
+          "Primary Mandate",
+          "Anti-corruption, economic fraud, complex conventional crimes",
+          "Counter-terrorism, insurgency, and scheduled national security offences"
+        ],
+        [
+          "State Consent Requirement",
+          "Mandatory under Section 6 of DSPE Act",
+          "Not required; holds concurrent jurisdiction nationwide"
+        ],
+        [
+          "Extraterritorial Jurisdiction",
+          "Limited; requires Interpol/Mutual Legal Assistance Treaties",
+          "Empowered to investigate offences outside India (2019 Amendment)"
+        ]
+      ],
+      "id": "ezf0jzb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CBI Established",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "NIA Established",
+          "value": "2008",
+          "icon": "calendar"
+        },
+        {
+          "label": "CBI Governing Act",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "NIA Governing Act",
+          "value": "NIA Act, 2008",
+          "icon": "book"
+        }
+      ],
+      "id": "pwcosju"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is a non-statutory body established via an executive resolution in 1963, whereas NIA is a statutory body created by an Act of Parliament.",
+        "Under the 2019 amendment, NIA has extraterritorial jurisdiction to investigate offences committed against Indian citizens or interests outside India.",
+        "Superintendence over CBI regarding Prevention of Corruption Act cases vests with the Central Vigilance Commission (CVC), not DoPT."
+      ],
+      "id": "fbijpn5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Bureau of Investigation (CBI) operates under the Department of Personnel and Training (DoPT), whereas the National Investigation Agency (NIA) functions under the Ministry of Home Affairs (MHA).",
+        "CBI derives its police powers from the Delhi Special Police Establishment (DSPE) Act, 1946, while the NIA is a statutory body constituted under the National Investigation Agency Act, 2008.",
+        "CBI primary mandate includes corruption, economic offences, and complex multi-state crimes; NIA specializes exclusively in counter-terrorism and national security offences.",
+        "NIA possesses suo motu power to investigate terror-related cases nationwide without requiring state government consent.",
+        "CBI requires state consent (General or Specific) under Section 6 of the DSPE Act to investigate cases within a state's jurisdiction."
+      ],
+      "id": "jbmh1v7"
+    }
+  ],
+  "enriched": true
+}

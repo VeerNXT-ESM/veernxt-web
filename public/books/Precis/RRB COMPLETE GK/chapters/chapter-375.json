@@ -1,0 +1,143 @@
+{
+  "id": "54q3vta",
+  "title": "Comparison: State Executive vs Union Executive",
+  "order": 375,
+  "blocks": [
+    {
+      "id": "n6pme0j",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor is appointed by the President by warrant under his hand and seal, and holds office during the pleasure of the President.",
+      "id": "yhwlcxb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature / Parameter",
+        "Union Executive",
+        "State Executive"
+      ],
+      "rows": [
+        [
+          "Constitutional Location",
+          "Part V (Articles 52 to 78)",
+          "Part VI (Articles 153 to 167)"
+        ],
+        [
+          "Nominal Executive Head",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Real Executive Head",
+          "Prime Minister",
+          "Chief Minister"
+        ],
+        [
+          "Ordinance Making Power",
+          "Article 123 (When Parliament is not in session)",
+          "Article 213 (When State Legislature is not in session)"
+        ],
+        [
+          "Pardoning Power Scope",
+          "Article 72 (Includes Court-Martial and Death Sentences)",
+          "Article 161 (Excludes Court-Martial and cannot pardon Death Sentences)"
+        ],
+        [
+          "Top Law Officer",
+          "Attorney General of India (Article 76)",
+          "Advocate General of the State (Article 165)"
+        ]
+      ],
+      "id": "ylmgmth"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Union Executive Articles",
+          "value": "Articles 52-78",
+          "icon": "book"
+        },
+        {
+          "label": "State Executive Articles",
+          "value": "Articles 153-167",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Art 72 vs Art 161",
+          "icon": "award"
+        },
+        {
+          "label": "Ordinance Making",
+          "value": "Art 123 vs Art 213",
+          "icon": "clock"
+        }
+      ],
+      "id": "j8lbwt5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Governor cannot pardon a death sentence even if it is prescribed under a state law; only the President holds the power to fully pardon death sentences.",
+        "There is no position of Vice-Governor at the State level, unlike the Vice-President at the Union level.",
+        "Articles to remember for ordinance power: Article 123 for the President and Article 213 for the Governor.",
+        "The Attorney General of India (Article 76) is part of the Union Executive, whereas the Advocate General for the State (Article 165) belongs to the State Executive."
+      ],
+      "id": "kcc5slq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Union Executive consists of the President, Vice-President, Prime Minister, Council of Ministers, and Attorney General of India.",
+        "The State Executive consists of the Governor, Chief Minister, Council of Ministers, and Advocate General of the State.",
+        "While the President is elected indirectly by an electoral college, the Governor is nominated by the Centre and appointed by the President.",
+        "The President has exclusive authority to pardon death sentences and military court-martial sentences under Article 72, which the Governor lacks under Article 161.",
+        "The ordinance-making power of the President (Article 123) and the Governor (Article 213) is non-discretionary and exercised on cabinet advice."
+      ],
+      "id": "crrco56"
+    }
+  ],
+  "enriched": true
+}

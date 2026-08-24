@@ -1,0 +1,90 @@
+{
+  "id": "ok5n0oz",
+  "title": "8. Vacancy in the Office of President",
+  "order": 305,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zx7d19n"
+    },
+    {
+      "type": "pullQuote",
+      "content": "When the vacancy occurs in the office of the President due to resignation, removal, death or otherwise, the Vice-President acts as the President until a new President is elected.",
+      "id": "6bshov5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Vacancy by Expiration of Term",
+        "Vacancy by Resignation / Death / Removal"
+      ],
+      "rows": [
+        [
+          "Conduct of Election",
+          "Must be held before the expiration of the five-year term",
+          "Must be held within 6 months from the date of vacancy"
+        ],
+        [
+          "Interim Charge",
+          "Outgoing President continues in office until successor enters",
+          "Vice-President acts as President until new President is elected"
+        ],
+        [
+          "Tenure of New President",
+          "Full term of 5 years",
+          "Full term of 5 years (not remaining period)"
+        ]
+      ],
+      "id": "iagxo5f"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Presidential Tenure",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Election Timeline",
+          "value": "Within 6 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "First Successor",
+          "value": "Vice-President",
+          "icon": "award"
+        },
+        {
+          "label": "Max Acting Term",
+          "value": "6 Months",
+          "icon": "info"
+        }
+      ],
+      "id": "sytidip"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Vice-President can act as President for a maximum period of six months, within which a fresh presidential election must be conducted.",
+        "In 1969, Chief Justice M. Hidayatullah acted as President of India when President Dr. Zakir Hussain died and Vice-President V.V. Giri resigned.",
+        "When acting as President or discharging President's functions, the Vice-President or CJI enjoys all powers, immunities, and emoluments of the President."
+      ],
+      "id": "xwgeg6n"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A vacancy in the President's office can occur due to expiration of tenure, resignation, removal by impeachment, death, or setting aside of election by the Supreme Court.",
+        "If the vacancy is caused by expiration of tenure, the election to fill the vacancy must be completed before the expiration of the term.",
+        "When the vacancy arises due to death, resignation, or removal, an election must be held within six months from the date of occurrence of such vacancy.",
+        "The Vice-President acts as President when a vacancy occurs due to death, resignation, or removal until a new President is elected.",
+        "If the office of Vice-President is also vacant, the Chief Justice of India (or the senior-most judge of the Supreme Court) discharges the functions of the President."
+      ],
+      "id": "h8atuy9"
+    }
+  ],
+  "enriched": true
+}

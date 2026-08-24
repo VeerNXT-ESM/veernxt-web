@@ -1,0 +1,95 @@
+{
+  "id": "uiquzjq",
+  "title": "3. Legislative Assembly (Vidhan Sabha)",
+  "order": 381,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "wqijjxw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 170 of the Constitution provides for the composition of the Legislative Assemblies of each State.",
+      "id": "gbiqnsg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Legislative Assembly (Vidhan Sabha)",
+        "Legislative Council (Vidhan Parishad)"
+      ],
+      "rows": [
+        [
+          "House Status",
+          "Lower House (Directly elected)",
+          "Upper House (Indirectly elected)"
+        ],
+        [
+          "Tenure",
+          "5 Years (Subject to dissolution)",
+          "Permanent body (1/3rd members retire every 2 years)"
+        ],
+        [
+          "Minimum Age",
+          "25 Years",
+          "30 Years"
+        ],
+        [
+          "Money Bill Power",
+          "Exclusive power to introduce and pass",
+          "Can only delay for 14 days"
+        ]
+      ],
+      "id": "1xpfzye"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 170",
+          "icon": "book"
+        },
+        {
+          "label": "Maximum Strength",
+          "value": "500 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Minimum Strength",
+          "value": "60 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Normal Tenure",
+          "value": "5 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "u4wqol1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "State assemblies with fewer than 60 seats (Sikkim, Mizoram, Goa, and Puducherry) are frequently tested exception cases.",
+        "Money Bills originate solely in the Vidhan Sabha; the Vidhan Parishad can only delay a Money Bill for up to 14 days.",
+        "The minimum age qualification for election to the Vidhan Sabha is 25 years."
+      ],
+      "id": "4l6bb7l"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Legislative Assembly (Vidhan Sabha) is the directly elected lower house of the state legislature in India.",
+        "Article 170 specifies that the maximum strength of a Legislative Assembly is 500 and the minimum strength is 60.",
+        "Exceptions to the minimum strength requirement include Sikkim (32), Mizoram (40), Goa (40), and Puducherry (30).",
+        "The normal term of the Legislative Assembly is 5 years, but it can be dissolved earlier by the Governor.",
+        "Money Bills can only be introduced in the Legislative Assembly and cannot be introduced in the Legislative Council."
+      ],
+      "id": "y0jyfl9"
+    }
+  ],
+  "enriched": true
+}

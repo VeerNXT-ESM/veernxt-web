@@ -1,0 +1,99 @@
+{
+  "id": "d9sgoik",
+  "title": "Why Latitudes are Parallel",
+  "order": 26,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "i9twzeq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Lines of latitude are called parallels because they maintain an equal distance from one another and never intersect.",
+      "id": "5na7h7k"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator Position",
+          "value": "0° Latitude",
+          "icon": "globe"
+        },
+        {
+          "label": "Distance Per Degree",
+          "value": "~111 km",
+          "icon": "ruler"
+        },
+        {
+          "label": "Key Parallels",
+          "value": "5 Main Lines",
+          "icon": "book"
+        },
+        {
+          "label": "Pole Latitudes",
+          "value": "90° N & 90° S",
+          "icon": "check"
+        }
+      ],
+      "id": "7yf5v5a"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Parallels of Latitude",
+        "Meridians of Longitude"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "Run East to West",
+          "Run North to South"
+        ],
+        [
+          "Intersection",
+          "Never intersect (Parallel)",
+          "Converge and intersect at the Poles"
+        ],
+        [
+          "Length",
+          "Varies; decreases towards the Poles",
+          "Equal length for all lines"
+        ],
+        [
+          "Circle Classification",
+          "Only Equator is a Great Circle",
+          "All pairs of opposite meridians form Great Circles"
+        ]
+      ],
+      "id": "elagmhx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Parallels of latitude are imaginary concentric circles drawn parallel to the Equator running in an east-west direction.",
+        "Unlike meridians of longitude, lines of latitude remain at a constant distance from each other and never intersect.",
+        "The linear distance between each degree of latitude is constant across the globe at approximately 111 kilometres (69 miles).",
+        "The Equator is the longest parallel and the only line of latitude that forms a Great Circle.",
+        "The circumference of latitude circles progressively decreases from the Equator toward the poles, where they shrink to single points."
+      ],
+      "id": "q27421j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct questions often ask for the distance between two degrees of latitude (111 km or 69 miles).",
+        "Crucial distinction: All meridians of longitude are equal in length, whereas parallels of latitude decrease in length from the Equator to the Poles.",
+        "Only the Equator (0°) is a Great Circle among all parallels; all other parallels are Small Circles."
+      ],
+      "id": "39holy2"
+    },
+    {
+      "type": "paragraph",
+      "id": "2fmx292"
+    }
+  ],
+  "enriched": true
+}

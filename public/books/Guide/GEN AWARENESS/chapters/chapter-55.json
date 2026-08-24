@@ -1,0 +1,377 @@
+{
+  "id": "hapcbmn",
+  "title": "Chapter 6: Sound",
+  "order": 55,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "q9uhycg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Audible Range",
+          "value": "20 Hz - 20 kHz",
+          "icon": "check"
+        },
+        {
+          "label": "Speed in Air (20°C)",
+          "value": "343 m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Min Echo Distance",
+          "value": "17.2 m",
+          "icon": "award"
+        },
+        {
+          "label": "Persistence of Hearing",
+          "value": "0.1 s",
+          "icon": "info"
+        }
+      ],
+      "id": "j5o5y8f"
+    },
+    {
+      "id": "0mjgavr",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Sound"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sound is a form of energy produced by vibrating objects and travels as a mechanical longitudinal wave.",
+        "Sound requires a material medium (solid, liquid, or gas) to propagate and cannot travel through a vacuum.",
+        "Characteristics of sound waves include amplitude (loudness), frequency (pitch), and wave speed.",
+        "An echo occurs due to the reflection of sound when the reflecting surface is at least 17.2 meters away.",
+        "Ultrasound refers to sound frequencies above 20,000 Hz and is used in medical imaging, SONAR, and industrial cleaning."
+      ],
+      "id": "ya9vdyc"
+    },
+    {
+      "type": "paragraph",
+      "id": "c9m8i9u"
+    },
+    {
+      "type": "paragraph",
+      "id": "2xhluom"
+    },
+    {
+      "type": "paragraph",
+      "id": "yyzdfqb"
+    },
+    {
+      "type": "paragraph",
+      "id": "eqv6vwj"
+    },
+    {
+      "id": "jxk9azf",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Production of Sound"
+    },
+    {
+      "type": "paragraph",
+      "id": "3nwnetk"
+    },
+    {
+      "type": "paragraph",
+      "id": "uwg0juy"
+    },
+    {
+      "type": "paragraph",
+      "id": "ea9h8oz"
+    },
+    {
+      "id": "326yt2a",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Sound Waves"
+    },
+    {
+      "type": "paragraph",
+      "id": "ki9bpkn"
+    },
+    {
+      "type": "paragraph",
+      "id": "oho0e29"
+    },
+    {
+      "type": "paragraph",
+      "id": "1c3cjhs"
+    },
+    {
+      "id": "gv8mzdt",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Characteristics of Sound Waves"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sound is a mechanical wave that requires a material medium such as air, water, or steel for its propagation.",
+      "id": "bf9pzy4"
+    },
+    {
+      "id": "9zzjnct",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iburgu7",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Sound"
+    },
+    {
+      "id": "c0af02x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6ulpg3v",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Speed of Sound"
+    },
+    {
+      "type": "paragraph",
+      "id": "3693p2w"
+    },
+    {
+      "id": "v6xgtc8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uvqfo05",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Reflection of Sound"
+    },
+    {
+      "type": "paragraph",
+      "id": "9oqstl0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Sound",
+        "Frequency Range",
+        "Human Perception",
+        "Key Applications / Examples"
+      ],
+      "rows": [
+        [
+          "Infrasonic",
+          "Below 20 Hz",
+          "Inaudible",
+          "Produced by earthquakes, volcanic eruptions, elephants, and whales"
+        ],
+        [
+          "Audible Sound",
+          "20 Hz to 20,000 Hz",
+          "Audible",
+          "Human speech, musical instruments, everyday sounds"
+        ],
+        [
+          "Ultrasonic",
+          "Above 20,000 Hz (20 kHz)",
+          "Inaudible",
+          "SONAR, Echocardiography, NDT testing, bat navigation"
+        ]
+      ],
+      "id": "oor1bms"
+    },
+    {
+      "id": "5yiqb89",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Echo"
+    },
+    {
+      "type": "paragraph",
+      "id": "6od0ztq"
+    },
+    {
+      "type": "paragraph",
+      "id": "289sjln"
+    },
+    {
+      "type": "paragraph",
+      "id": "9xithbe"
+    },
+    {
+      "id": "99p56li",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Uses of Ultrasound"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lwnwc1v"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "393dpwo"
+    },
+    {
+      "type": "paragraph",
+      "id": "aatgznz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hfjtc5w"
+    },
+    {
+      "id": "kpirvji",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Noise Pollution"
+    },
+    {
+      "type": "paragraph",
+      "id": "pfby1e8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sound travels fastest in solids, slower in liquids, and slowest in gases; it cannot travel in a vacuum.",
+        "Loudness of sound depends on the square of its amplitude, whereas pitch depends on frequency.",
+        "To hear a distinct echo, the time gap between the original sound and reflected sound must be at least 0.1 seconds.",
+        "SONAR (Sound Navigation and Ranging) utilizes ultrasonic waves to measure underwater distances and depths."
+      ],
+      "id": "sl89wa4"
+    },
+    {
+      "type": "paragraph",
+      "id": "phokimc"
+    },
+    {
+      "type": "paragraph",
+      "id": "03wnifl"
+    },
+    {
+      "id": "nmm1scl",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "p4hfj40"
+    },
+    {
+      "type": "paragraph",
+      "id": "5fgfjug"
+    },
+    {
+      "type": "paragraph",
+      "id": "qyo336r"
+    },
+    {
+      "type": "paragraph",
+      "id": "3bsummi"
+    }
+  ],
+  "enriched": true
+}

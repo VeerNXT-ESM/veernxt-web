@@ -1,0 +1,95 @@
+{
+  "id": "6bxgtw9",
+  "title": "RRB Quick Revision Box",
+  "order": 257,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "0933qf8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways was nationalized in 1951 and is currently the fourth-largest national railway system in the world by size.",
+      "id": "b796d4y"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (Meters)",
+        "Width (Feet & Inches)",
+        "Primary Usage"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m",
+          "5 ft 6 in",
+          "Main routes and high-density traffic corridors"
+        ],
+        [
+          "Meter Gauge",
+          "1.000 m",
+          "3 ft 3 3/8 in",
+          "Regional routes (under conversion via Project Unigauge)"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "2 ft 6 in / 2 ft 0 in",
+          "Heritage and hill rail lines (e.g., Toy Trains)"
+        ]
+      ],
+      "id": "e05h6rm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "18",
+          "icon": "book"
+        },
+        {
+          "label": "First Route Distance",
+          "value": "34 km",
+          "icon": "info"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu Elephant",
+          "icon": "award"
+        }
+      ],
+      "id": "p1mkpl9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exact date and route of the first train journey in India (16 April 1853, Mumbai to Thane over 34 km) are repeatedly tested in RRB NTPC & Group D exams.",
+        "Questions matching Railway Zones with their Headquarters (e.g., Central Railway – Mumbai CSMT, South Eastern Railway – Kolkata) are highly frequent.",
+        "Identify the 18th and newest Railway Zone: South Coast Railway headquartered at Visakhapatnam.",
+        "Know Project Unigauge, which aims to convert all Meter Gauge and Narrow Gauge tracks into 1.676 m Broad Gauge."
+      ],
+      "id": "rpbveo2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on April 16, 1853.",
+        "Indian Railways was nationalized in 1951 and is currently the fourth-largest national railway system in the world by size.",
+        "The entire rail network is administratively divided into 18 zones, with the South Coast Railway Zone (Visakhapatnam) being the 18th zone.",
+        "Bholu, an elephant holding a signal lamp and dressed as a guard, is the official mascot of Indian Railways.",
+        "The Fairy Queen is recognized by the Guinness Book of World Records as the world's oldest working steam locomotive."
+      ],
+      "id": "eubcsm0"
+    }
+  ],
+  "enriched": true
+}

@@ -1,11 +1,11 @@
 {
-  "id": "3qbz1g6",
+  "id": "muvjojw",
   "title": "Chapter 3: Jainism and Buddhism",
   "order": 3,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "pldnhr8"
+      "id": "79ps1ud"
     },
     {
       "type": "statStrip",
@@ -16,30 +16,25 @@
           "icon": "award"
         },
         {
-          "label": "Four Noble Truths",
+          "label": "Noble Truths",
           "value": "4",
-          "icon": "check"
-        },
-        {
-          "label": "Eightfold Path",
-          "value": "8 Steps",
           "icon": "book"
         },
         {
-          "label": "Buddhist Councils",
-          "value": "4",
-          "icon": "calendar"
+          "label": "Triratna (Jewels)",
+          "value": "3",
+          "icon": "info"
         },
         {
-          "label": "Jain Councils",
-          "value": "2",
-          "icon": "clock"
+          "label": "Eightfold Path",
+          "value": "8",
+          "icon": "check"
         }
       ],
-      "id": "r9i37ad"
+      "id": "19rpbqk"
     },
     {
-      "id": "lj2sztv",
+      "id": "1h0dlwa",
       "type": "heading",
       "level": 2,
       "content": "1. Background: Rise of New Religions"
@@ -48,48 +43,48 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Vardhamana Mahavira propagated Jainism as the 24th Tirthankara, emphasizing strict non-violence (Ahimsa).",
-        "Jainism prescribes the Triratna (Three Jewels) comprising Right Faith, Right Knowledge, and Right Conduct.",
-        "Gautama Buddha founded Buddhism and taught the Four Noble Truths to end human suffering.",
-        "Buddhism advocates the Eightfold Path (Ashtangika Marga) as a Middle Path between extreme asceticism and indulgence.",
-        "Four major Buddhist Councils were held to preserve Buddhist teachings, eventually leading to sects like Hinayana and Mahayana."
+        "Jainism was founded by Rishabhdev (1st Tirthankara) and popularized by Vardhamana Mahavira (24th Tirthankara).",
+        "The Three Jewels of Jainism (Triratna) consist of Right Faith, Right Knowledge, and Right Conduct.",
+        "Buddhism was founded by Gautama Buddha, focusing on the Four Noble Truths and the Eightfold Path (Astangika Marga).",
+        "Important scriptures include the Jain Agamas and the Buddhist Tripitakas (Sutta, Vinaya, and Abhidhamma Pitakas).",
+        "Major sectarian splits led to Svetambara and Digambara in Jainism, and Hinayana and Mahayana in Buddhism."
       ],
-      "id": "xevv8vu"
+      "id": "k6t1rg2"
     },
     {
       "type": "paragraph",
-      "id": "9g2fdch"
+      "id": "ncokz3c"
     },
     {
       "type": "paragraph",
-      "id": "4fe6jm1"
+      "id": "8i5h0un"
     },
     {
       "type": "paragraph",
-      "id": "rczdwgf"
+      "id": "lukzrsb"
     },
     {
       "type": "paragraph",
-      "id": "pdeftrg"
+      "id": "uirddyi"
     },
     {
-      "id": "i4mkcsl",
+      "id": "akxzfzh",
       "type": "heading",
       "level": 2,
       "content": "2. Jainism"
     },
     {
       "type": "paragraph",
-      "id": "ofda497"
+      "id": "umi40p6"
     },
     {
-      "id": "x3xug43",
+      "id": "m2h9q32",
       "type": "heading",
       "level": 3,
       "content": "Founder and Tirthankaras"
     },
     {
-      "id": "apn7466",
+      "id": "towld72",
       "type": "table",
       "rows": [
         {
@@ -151,7 +146,7 @@
       ]
     },
     {
-      "id": "m8gkass",
+      "id": "u2i5m2h",
       "type": "heading",
       "level": 3,
       "content": "Teachings of Mahavira"
@@ -159,30 +154,30 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "v4a5k60"
+      "id": "9c2me4x"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5mzo790"
+      "id": "7qwx80q"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qxz9wll"
+      "id": "1xepy8y"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "od9l65n"
+      "id": "j46tako"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gxtrhfs"
+      "id": "nxek5xd"
     },
     {
-      "id": "0hd8ydd",
+      "id": "p2fimtc",
       "type": "heading",
       "level": 3,
       "content": "Three Jewels of Jainism (Triratna)"
@@ -190,26 +185,26 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "v4unidl"
+      "id": "52ie10v"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x0p36yg"
+      "id": "e24v0v0"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ii67wk6"
+      "id": "ucxn33c"
     },
     {
-      "id": "ec1tc2r",
+      "id": "k9jrtwy",
       "type": "heading",
       "level": 3,
       "content": "Jain Councils"
     },
     {
-      "id": "5ygl8qw",
+      "id": "ihl527f",
       "type": "table",
       "rows": [
         {
@@ -239,7 +234,7 @@
       ]
     },
     {
-      "id": "5qxqrlu",
+      "id": "ftdw5xu",
       "type": "heading",
       "level": 3,
       "content": "Jain Sects"
@@ -247,10 +242,10 @@
     {
       "type": "pullQuote",
       "content": "Three Jewels of Jainism (Triratna)",
-      "id": "1z3f5ch"
+      "id": "jtpugwz"
     },
     {
-      "id": "l55i2ey",
+      "id": "cyff4md",
       "type": "table",
       "rows": [
         {
@@ -277,41 +272,41 @@
       ]
     },
     {
-      "id": "6amez3v",
+      "id": "wa5p486",
       "type": "heading",
       "level": 3,
       "content": "Contribution of Jainism"
     },
     {
       "type": "paragraph",
-      "id": "6867eah"
+      "id": "956ed23"
     },
     {
       "type": "paragraph",
-      "id": "2tje1d5"
+      "id": "i0k28r6"
     },
     {
       "type": "paragraph",
-      "id": "b8v2ajt"
+      "id": "xpmh84h"
     },
     {
-      "id": "uggufvh",
+      "id": "lltj5jx",
       "type": "heading",
       "level": 2,
       "content": "3. Buddhism"
     },
     {
       "type": "paragraph",
-      "id": "0vrljpo"
+      "id": "9buyrz8"
     },
     {
-      "id": "ljyp3r4",
+      "id": "sulgd2i",
       "type": "heading",
       "level": 3,
       "content": "Life of Gautama Buddha"
     },
     {
-      "id": "hxe7602",
+      "id": "3rn3sdu",
       "type": "table",
       "rows": [
         {
@@ -373,18 +368,18 @@
       ]
     },
     {
-      "id": "orea1p2",
+      "id": "t87c1zb",
       "type": "heading",
       "level": 3,
       "content": "Four Noble Truths"
     },
     {
       "type": "paragraph",
-      "id": "cwpglb3"
+      "id": "0ykeoxz"
     },
     {
       "type": "paragraph",
-      "id": "lcdyvdi"
+      "id": "78n76qf"
     },
     {
       "type": "comparisonTable",
@@ -395,38 +390,38 @@
       ],
       "rows": [
         [
-          "Key Personality",
+          "Key Figure",
           "Vardhamana Mahavira (24th Tirthankara)",
           "Gautama Buddha"
         ],
         [
-          "Core Philosophy",
-          "Extreme Penance, Asceticism & Ahimsa",
-          "Middle Path (Madhyama Marga)"
+          "Core Path",
+          "Extreme Ascetism and Non-violence (Ahimsa)",
+          "The Middle Path (Madhyama Pratipada)"
+        ],
+        [
+          "Ultimate Goal",
+          "Moksha (Liberation of Soul)",
+          "Nirvana (Extinction of Desire)"
         ],
         [
           "Major Sects",
-          "Digambara and Svetambara",
-          "Hinayana, Mahayana, and Vajrayana"
-        ],
-        [
-          "Prominent Language",
-          "Prakrit (Ardhamagadhi)",
-          "Pali"
+          "Svetambara and Digambara",
+          "Hinayana and Mahayana"
         ]
       ],
-      "id": "palyxe8"
+      "id": "oioye5d"
     },
     {
       "type": "paragraph",
-      "id": "j79c34n"
+      "id": "u2if42z"
     },
     {
       "type": "paragraph",
-      "id": "7gud7j8"
+      "id": "anho3ez"
     },
     {
-      "id": "gjwklv2",
+      "id": "l8mlvvp",
       "type": "heading",
       "level": 3,
       "content": "Eightfold Path"
@@ -434,51 +429,51 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "6jz90uj"
+      "id": "jh5h5tl"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pcqgk2r"
+      "id": "dpwj1th"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "egqvsc8"
+      "id": "ql8fon3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nbiwnfo"
+      "id": "nqjxez9"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "li51gco"
+      "id": "euvt5gr"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q519fw5"
+      "id": "72k4oph"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "djzsysr"
+      "id": "c6yk912"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i2uvg2t"
+      "id": "5wgntms"
     },
     {
-      "id": "qggsbi4",
+      "id": "ny09sce",
       "type": "heading",
       "level": 3,
       "content": "Buddhist Councils"
     },
     {
-      "id": "sfv4sz4",
+      "id": "se5skvd",
       "type": "table",
       "rows": [
         {
@@ -524,7 +519,7 @@
       ]
     },
     {
-      "id": "kghzjk0",
+      "id": "mqnhss1",
       "type": "heading",
       "level": 3,
       "content": "Buddhist Sects"
@@ -532,67 +527,67 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "w7nonj2"
+      "id": "2ig9ie2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4jomizk"
+      "id": "x6myb25"
     },
     {
       "type": "examAlert",
       "items": [
-        "The First Buddhist Council was held at Rajagriha under King Ajatashatru, and the Fourth was held in Kashmir under King Kanishka.",
-        "Gautama Buddha's first sermon at Sarnath is known as 'Dharmachakra Pravartana', and his death at Kushinagar is called 'Mahaparinirvana'.",
-        "Jainism split into two major sects: Svetambaras (white-clad) and Digambaras (sky-clad)."
+        "Frequently tested: Locations, rulers/patrons, and presidents of the Four Buddhist Councils (Rajgriha, Vaishali, Pataliputra, Kashmir).",
+        "Remember the symbols associated with Gautama Buddha's life stages: Lotus/Bull (Birth), Horse (Renunciation), Bodhi Tree (Enlightenment), Wheel (First Sermon), Stupa (Death).",
+        "Distinguish between Jain sects (Svetambara & Digambara) and Buddhist sects (Mahayana, Hinayana & Vajrayana)."
       ],
-      "id": "my4nlmr"
+      "id": "agj42ft"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "atqym4m"
+      "id": "x4zmn27"
     },
     {
-      "id": "n99t80m",
+      "id": "szp8624",
       "type": "heading",
       "level": 3,
       "content": "Important Buddhist Literature"
     },
     {
       "type": "paragraph",
-      "id": "t65l2lc"
+      "id": "szu8sm7"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zj0aa2t"
+      "id": "pf0zv2j"
     },
     {
-      "id": "tgt8zvl",
+      "id": "q6sj99h",
       "type": "heading",
       "level": 2,
       "content": "SSC Exam Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "w4dngwk"
+      "id": "9qe7uaf"
     },
     {
       "type": "paragraph",
-      "id": "h51metj"
+      "id": "vnsk3ax"
     },
     {
       "type": "paragraph",
-      "id": "cn0l2ag"
+      "id": "799x8d8"
     },
     {
       "type": "paragraph",
-      "id": "3n2e115"
+      "id": "lvqox5u"
     },
     {
       "type": "paragraph",
-      "id": "onckuml"
+      "id": "5vgq06j"
     }
   ],
   "enriched": true

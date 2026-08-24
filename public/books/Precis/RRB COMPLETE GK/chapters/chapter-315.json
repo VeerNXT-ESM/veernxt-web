@@ -1,0 +1,96 @@
+{
+  "id": "urznjz8",
+  "title": "2. Lok Sabha – House of the People",
+  "order": 315,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "t61jjxe"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Lok Sabha is the popular house of the Parliament and represents the people of India as a whole.",
+      "id": "591ul89"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lok Sabha (House of the People)",
+        "Rajya Sabha (Council of States)"
+      ],
+      "rows": [
+        [
+          "House Type",
+          "Lower / Directly elected house",
+          "Upper / Indirectly elected house"
+        ],
+        [
+          "Tenure",
+          "5 years (Subject to dissolution)",
+          "Permanent body (1/3rd members retire every 2 years)"
+        ],
+        [
+          "Minimum Qualifying Age",
+          "25 years",
+          "30 years"
+        ],
+        [
+          "Financial Powers",
+          "Exclusive control over Money Bills",
+          "Limited powers (Can delay Money Bill by max 14 days)"
+        ]
+      ],
+      "id": "zitf4lg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Maximum Strength",
+          "value": "550",
+          "icon": "users"
+        },
+        {
+          "label": "Present Strength",
+          "value": "543",
+          "icon": "check"
+        },
+        {
+          "label": "Minimum Age",
+          "value": "25 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Normal Tenure",
+          "value": "5 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "z2asqup"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The 104th Constitutional Amendment Act, 2019 discontinued the provision for nominating two Anglo-Indian members to the Lok Sabha.",
+        "A Motion of No-Confidence can only be introduced and passed in the Lok Sabha, not the Rajya Sabha.",
+        "In case of a joint sitting (Article 108), the Speaker of the Lok Sabha presides over the session.",
+        "The Rajya Sabha has only 14 days to return a Money Bill passed by the Lok Sabha, with or without recommendations."
+      ],
+      "id": "fhja3xm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Lok Sabha is the lower house of India's bicameral Parliament, directly elected by the people through universal adult suffrage.",
+        "The normal tenure of the Lok Sabha is five years from the date of its first meeting, though it can be dissolved earlier by the President.",
+        "To qualify for membership, a candidate must be a citizen of India and not less than 25 years of age.",
+        "Money Bills can only be introduced in the Lok Sabha and cannot be rejected or amended by the Rajya Sabha.",
+        "The Speaker is elected by the Lok Sabha from among its members to conduct the business of the House."
+      ],
+      "id": "vouczj1"
+    }
+  ],
+  "enriched": true
+}

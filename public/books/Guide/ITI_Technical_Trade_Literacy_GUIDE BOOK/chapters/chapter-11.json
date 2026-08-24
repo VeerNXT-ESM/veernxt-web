@@ -1,0 +1,517 @@
+{
+  "id": "eifxgf2",
+  "title": "Chapter 12 – Lines, Symbols, and Views in Engineering Drawing",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "rtclldn",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Continuous thick lines (Type A) are used for visible outlines and edges, while continuous thin lines (Type B) are used for dimensioning, hatching, and extension lines.",
+        "Hidden edges and outlines are represented by dashed thin lines, whereas center lines and lines of symmetry use chain thin lines (long-dash-dot).",
+        "Orthographic projection represents a three-dimensional object through two-dimensional plane views, primarily using First Angle or Third Angle projection systems.",
+        "An Isometric view is a pictorial view where three axes are inclined equally at 120 degrees to each other, maintaining true scale along isometric lines.",
+        "Sectional views are used to reveal internal details and features of a part that would otherwise be obscured by hidden lines."
+      ],
+      "id": "gjsjrdf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Projection Types",
+          "value": "1st & 3rd Angle",
+          "icon": "book"
+        },
+        {
+          "label": "Standard Code",
+          "value": "IS 10711 / BIS",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Views",
+          "value": "Orthographic & Isometric",
+          "icon": "info"
+        },
+        {
+          "label": "Key Lines",
+          "value": "Visible, Hidden, Center",
+          "icon": "check"
+        }
+      ],
+      "id": "lg7m8ey"
+    },
+    {
+      "type": "paragraph",
+      "id": "dwolta4"
+    },
+    {
+      "id": "nwnugqk",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Importance of Lines and Symbols in Engineering Drawing"
+    },
+    {
+      "id": "j35e36g",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "apc0q9t",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Lines Used in Engineering Drawing"
+    },
+    {
+      "id": "4qigtr5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ke06pph",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Dimensioning Symbols"
+    },
+    {
+      "id": "4jn9x4f",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Importance of Lines and Symbols in Engineering Drawing",
+      "id": "scivyi8"
+    },
+    {
+      "id": "xlddg2f",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Surface Finish Symbols"
+    },
+    {
+      "id": "rz7yafn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3to8a3m",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Orthographic Views"
+    },
+    {
+      "type": "paragraph",
+      "id": "pn83l6d"
+    },
+    {
+      "id": "g2cdk0l",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "First Angle Projection",
+        "Third Angle Projection"
+      ],
+      "rows": [
+        [
+          "Object Position",
+          "Object is placed between observer and projection plane",
+          "Projection plane is placed between observer and object"
+        ],
+        [
+          "Plane of Projection",
+          "Assumed to be opaque",
+          "Assumed to be transparent"
+        ],
+        [
+          "Top View Location",
+          "Drawn below the Front View",
+          "Drawn above the Front View"
+        ],
+        [
+          "Standard Symbol",
+          "Frustum frustum with smaller base near axis circle",
+          "Frustum with larger base near axis circle"
+        ]
+      ],
+      "id": "136otpy"
+    },
+    {
+      "id": "74vrhgm",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Isometric View"
+    },
+    {
+      "type": "paragraph",
+      "id": "vcmm2kr"
+    },
+    {
+      "id": "zedc02p",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Sectional Views"
+    },
+    {
+      "type": "paragraph",
+      "id": "vcfbg4v"
+    },
+    {
+      "id": "b9frqcm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eod0akp",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Standard Abbreviations in Engineering Drawing"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "First Angle Projection vs Third Angle Projection: Remember that in 1st angle, the top view lies below the front view, while in 3rd angle, the top view lies above the front view.",
+        "Line Types and Thickness: Standard ratio of thick to thin line thickness is 2:1 (e.g., 0.5 mm thick and 0.25 mm thin).",
+        "Cutting Plane Lines: Identified by thin chain lines with thick ends and direction arrows."
+      ],
+      "id": "ob17xt7"
+    },
+    {
+      "id": "bsacvr6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7584lnl",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Care of Drawing Instruments"
+    },
+    {
+      "id": "6c6wew4",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "n5hav9w",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "blt9p7s",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

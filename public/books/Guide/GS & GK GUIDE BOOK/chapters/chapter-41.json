@@ -1,40 +1,40 @@
 {
-  "id": "8mscaoj",
+  "id": "8o93ssw",
   "title": "Chapter 41: Basic Concepts of Economics",
   "order": 41,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ywrno2o"
+      "id": "rzntarg"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Main Branches",
+          "label": "Branches of Economics",
           "value": "2 (Micro & Macro)",
           "icon": "book"
         },
         {
           "label": "Factors of Production",
           "value": "4 Core Factors",
-          "icon": "check"
+          "icon": "award"
         },
         {
-          "label": "Fundamental Problem",
+          "label": "Primary Focus",
           "value": "Scarcity & Choice",
           "icon": "info"
         },
         {
-          "label": "Core Mechanism",
-          "value": "Opportunity Cost",
-          "icon": "award"
+          "label": "Economic Activities",
+          "value": "3 Key Types",
+          "icon": "check"
         }
       ],
-      "id": "bcruvmh"
+      "id": "a0qnpk5"
     },
     {
-      "id": "ftbxqzs",
+      "id": "n1kxaiw",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Economics"
@@ -43,34 +43,34 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Economics originates from the Greek word 'Oikonomia', which translates to household management.",
-        "The discipline is divided into Microeconomics (study of individual units) and Macroeconomics (study of the economy as a whole).",
+        "Economics analyzes how society manages its scarce resources to satisfy unlimited human wants.",
+        "Microeconomics focuses on individual decision-makers like households and firms, whereas Macroeconomics studies aggregate economic phenomena.",
         "The four essential factors of production are Land, Labour, Capital, and Entrepreneurship.",
-        "Scarcity arises because human wants are unlimited while resources available to satisfy them are limited.",
-        "Opportunity cost measures the value of the next best alternative forgone when a choice is made."
+        "Opportunity cost represents the value of the next best alternative foregone when making a choice.",
+        "Basic economic activities encompass Production, Consumption, and Distribution."
       ],
-      "id": "wwjt8ys"
+      "id": "2oj6wwh"
     },
     {
       "type": "paragraph",
-      "id": "oieqh0r"
+      "id": "qx6vj5z"
     },
     {
       "type": "paragraph",
-      "id": "ybafovw"
+      "id": "6tbd4q9"
     },
     {
       "type": "paragraph",
-      "id": "gfidnwr"
+      "id": "kfm3ah6"
     },
     {
-      "id": "sgxu8pw",
+      "id": "z1pgjig",
       "type": "heading",
       "level": 2,
       "content": "2. Definitions of Economics"
     },
     {
-      "id": "rv5cmhz",
+      "id": "twt4jsm",
       "type": "table",
       "rows": [
         {
@@ -104,13 +104,13 @@
       ]
     },
     {
-      "id": "m55qxzu",
+      "id": "and5979",
       "type": "heading",
       "level": 2,
       "content": "3. Branches of Economics"
     },
     {
-      "id": "zu4t5jw",
+      "id": "9ny0671",
       "type": "table",
       "rows": [
         {
@@ -146,30 +146,30 @@
     {
       "type": "pullQuote",
       "content": "Economics is a science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.",
-      "id": "ok9tl2n"
+      "id": "hehfl53"
     },
     {
-      "id": "tof2oc4",
+      "id": "0v8qvj4",
       "type": "heading",
       "level": 2,
       "content": "4. Goods and Services"
     },
     {
       "type": "paragraph",
-      "id": "njht45k"
+      "id": "9to267w"
     },
     {
       "type": "paragraph",
-      "id": "7ndf66p"
+      "id": "864s8k0"
     },
     {
-      "id": "q3i84ul",
+      "id": "t29nwcz",
       "type": "heading",
       "level": 2,
       "content": "5. Factors of Production"
     },
     {
-      "id": "ennjgu9",
+      "id": "c2xeh09",
       "type": "table",
       "rows": [
         {
@@ -215,7 +215,7 @@
       ]
     },
     {
-      "id": "66zeq6s",
+      "id": "jau8vqo",
       "type": "heading",
       "level": 2,
       "content": "6. Scarcity and Choice"
@@ -223,64 +223,59 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
+        "Basis",
         "Microeconomics",
         "Macroeconomics"
       ],
       "rows": [
         [
-          "Scope of Study",
-          "Individual economic agents ( consumers, firms, industries )",
-          "Aggregate economy ( total national output, overall price level )"
+          "Scope",
+          "Studies individual economic units (e.g., consumer, firm)",
+          "Studies the economy as a whole (e.g., national income, inflation)"
         ],
         [
-          "Core Objective",
-          "Determination of price and allocation of individual resources",
-          "Determination of national income, employment, and growth rate"
+          "Central Issue",
+          "Allocation of resources and price determination",
+          "Determination of overall income and employment level"
         ],
         [
-          "Major Variables",
-          "Individual demand, individual supply, price of a product",
-          "Aggregate demand, aggregate supply, national inflation rate"
-        ],
-        [
-          "Key Thinkers",
-          "Alfred Marshall, Arthur Pigou",
-          "John Maynard Keynes, Ragnar Frisch"
+          "Key Variable",
+          "Individual price, supply, and demand",
+          "Aggregate demand, aggregate supply, and general price level"
         ]
       ],
-      "id": "2pj716f"
+      "id": "p2lw502"
     },
     {
       "type": "paragraph",
-      "id": "uzgsgnh"
+      "id": "38t3wgf"
     },
     {
       "type": "paragraph",
-      "id": "otmj379"
+      "id": "inrykqj"
     },
     {
       "type": "paragraph",
-      "id": "4xxg59w"
+      "id": "ow61s4m"
     },
     {
-      "id": "7cnddjv",
+      "id": "n6dvcwc",
       "type": "heading",
       "level": 2,
       "content": "7. Opportunity Cost"
     },
     {
       "type": "paragraph",
-      "id": "1i3936x"
+      "id": "d9ny2q8"
     },
     {
-      "id": "tluj5y0",
+      "id": "d65903w",
       "type": "heading",
       "level": 2,
       "content": "8. Types of Economic Activities"
     },
     {
-      "id": "bbd9d9e",
+      "id": "a019q70",
       "type": "table",
       "rows": [
         {
@@ -323,33 +318,33 @@
     {
       "type": "examAlert",
       "items": [
-        "Adam Smith is known as the 'Father of Economics' and published 'The Wealth of Nations' in 1776.",
-        "Factor returns must be matched correctly for exams: Land earns Rent, Labour earns Wages, Capital earns Interest, and Entrepreneurship earns Profit.",
-        "John Maynard Keynes is considered the father of modern Macroeconomics following his work during the Great Depression."
+        "Lionel Robbins' Scarcity Definition of Economics is frequently tested in competitive examinations.",
+        "Factor Rewards: Land earns Rent, Labour earns Wages, Capital earns Interest, and Entrepreneurship earns Profit.",
+        "Distinguish clearly between Microeconomics (focus on price determination) and Macroeconomics (focus on income determination)."
       ],
-      "id": "s345gz5"
+      "id": "roetak1"
     },
     {
-      "id": "jdmrrae",
+      "id": "vfnnq9i",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "naqkpcv"
+      "id": "gf052kx"
     },
     {
       "type": "paragraph",
-      "id": "acey8zl"
+      "id": "1su8pjv"
     },
     {
       "type": "paragraph",
-      "id": "n2e4gpy"
+      "id": "n7fvcze"
     },
     {
       "type": "paragraph",
-      "id": "y6qjfdw"
+      "id": "o9g3y3f"
     }
   ],
   "enriched": true

@@ -1,0 +1,90 @@
+{
+  "id": "x7ha78v",
+  "title": "9. Penalties",
+  "order": 612,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ct0rv5q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Whoever fails to comply with any provision of this Act, for which no penalty has been separately provided, shall be liable to pay a penalty not exceeding twenty-five thousand rupees.",
+      "id": "54twf1g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Section",
+        "Nature of Non-Compliance",
+        "Maximum Penalty / Compensation"
+      ],
+      "rows": [
+        [
+          "Section 43",
+          "Damage or unauthorized access to computer systems",
+          "Compensation to the affected party"
+        ],
+        [
+          "Section 44",
+          "Failure to furnish report, return, or information",
+          "Penalty up to ₹1,50,000 or ₹5,000 per day"
+        ],
+        [
+          "Section 45",
+          "Residuary penalty for unspecified contraventions",
+          "Penalty not exceeding ₹25,000"
+        ]
+      ],
+      "id": "zs0l4gl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Residuary Penalty Cap",
+          "value": "₹25,000",
+          "icon": "award"
+        },
+        {
+          "label": "Adjudicating Officer Rank",
+          "value": "Director Level",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Section",
+          "value": "Section 43",
+          "icon": "book"
+        },
+        {
+          "label": "Failure Return Fine",
+          "value": "₹1,50,000",
+          "icon": "info"
+        }
+      ],
+      "id": "8gikf5k"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The residuary penalty under Section 45 carries a maximum fine cap of ₹25,000.",
+        "Adjudicating Officers under Section 46 must hold a rank not below Director to the Government of India or State equivalent.",
+        "Section 43A specifically addresses corporate negligence in protecting sensitive personal data."
+      ],
+      "id": "2wz3ltj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Section 43 mandates compensation to affected parties for unauthorized access, downloading, or damaging computer systems.",
+        "Section 43A establishes corporate liability for failure to implement reasonable security practices to protect sensitive personal data.",
+        "Section 44 prescribes statutory penalties for failure to furnish required documents, returns, or information within specified time limits.",
+        "Section 45 serves as the residuary penalty clause, prescribing a fine of up to ₹25,000 where no specific penalty is provided.",
+        "Section 46 empowers an Adjudicating Officer, not below the rank of Director to the Government of India or State equivalent, to hold inquiries."
+      ],
+      "id": "4wggdq5"
+    }
+  ],
+  "enriched": true
+}

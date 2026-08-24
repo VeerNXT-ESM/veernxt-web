@@ -1,0 +1,89 @@
+{
+  "id": "d80x2g5",
+  "title": "RRB Quick Revision Box",
+  "order": 299,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "akjp2kf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on 16 April 1853.",
+      "id": "t0ixyjc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm)",
+        "Width (ft in)"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "5 ft 6 in"
+        ],
+        [
+          "Metre Gauge",
+          "1000 mm",
+          "3 ft 3 3/8 in"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "2 ft 6 in / 2 ft"
+        ]
+      ],
+      "id": "ymjk860"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "book"
+        },
+        {
+          "label": "Nationalization",
+          "value": "1951",
+          "icon": "award"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "info"
+        }
+      ],
+      "id": "txs6j1u"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Acworth Committee (1920-21) led to the separation of Railway Budget in 1924.",
+        "Bibek Debroy Committee recommended merging the Railway Budget back with the Union Budget in 2017.",
+        "Chenab Bridge in Jammu & Kashmir is recognized as the world's highest railway arch bridge."
+      ],
+      "id": "frt4fsv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on 16 April 1853.",
+        "Indian Railways was nationalized in 1951 and is now one of the largest railway networks in the world.",
+        "The Railway Budget was separated from the General Budget in 1924 based on the Acworth Committee recommendations.",
+        "The Railway Budget was merged back with the Union Budget in 2017 based on the Bibek Debroy Committee recommendations."
+      ],
+      "id": "misgvxt"
+    }
+  ],
+  "enriched": true
+}

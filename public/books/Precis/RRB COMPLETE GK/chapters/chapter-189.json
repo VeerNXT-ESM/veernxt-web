@@ -1,0 +1,118 @@
+{
+  "id": "tw32vp3",
+  "title": "1. Evolutionary Basis of Biodiversity",
+  "order": 189,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "kvidagl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "History of Life",
+          "value": "3.5 Billion Yrs",
+          "icon": "calendar"
+        },
+        {
+          "label": "Described Species",
+          "value": "1.7-1.8 Million",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Mechanism",
+          "value": "Natural Selection",
+          "icon": "check"
+        },
+        {
+          "label": "Domains of Life",
+          "value": "3 Domains",
+          "icon": "info"
+        }
+      ],
+      "id": "n7t7my5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Biodiversity is the cumulative product of over 3.5 billion years of evolutionary processes and ecological interactions.",
+        "Genetic variations arising from mutations and recombination serve as the foundational raw material for evolution.",
+        "Natural selection acts on phenotypic variations, enhancing the reproductive fitness of adapted individuals.",
+        "Adaptive radiation enables a common ancestral lineage to diversify into distinct ecological niches."
+      ],
+      "id": "topsty2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Biodiversity is the cumulative result of evolutionary changes shaped by natural selection over billions of years.",
+      "id": "1f96f1f"
+    },
+    {
+      "type": "paragraph",
+      "id": "5qfb7w2"
+    },
+    {
+      "type": "paragraph",
+      "id": "0kq81ki"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Divergent Evolution",
+        "Convergent Evolution"
+      ],
+      "rows": [
+        [
+          "Anatomical Basis",
+          "Homologous structures (same origin, different functions)",
+          "Analogous structures (different origins, same function)"
+        ],
+        [
+          "Ancestry",
+          "Shares a recent common ancestor",
+          "Does not share a recent common ancestor"
+        ],
+        [
+          "Environmental Factor",
+          "Adaptation to varied ecological habitats",
+          "Adaptation to similar ecological challenges"
+        ],
+        [
+          "Key Example",
+          "Forelimbs of whales, bats, and humans",
+          "Wings of butterflies and birds"
+        ]
+      ],
+      "id": "yh5z2yb"
+    },
+    {
+      "type": "paragraph",
+      "id": "678mbdk"
+    },
+    {
+      "type": "paragraph",
+      "id": "2cw5qgy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Homologous organs signify divergent evolution and common ancestral origin (e.g., forelimbs of humans and bats).",
+        "Analogous organs demonstrate convergent evolution in response to similar environmental pressures (e.g., wings of birds and insects).",
+        "Darwin's Finches are the most frequently cited example of adaptive radiation and geographic speciation in competitive exams."
+      ],
+      "id": "eqp1uo1"
+    },
+    {
+      "type": "paragraph",
+      "id": "2iieqky"
+    },
+    {
+      "type": "paragraph",
+      "id": "t7qqiut"
+    }
+  ],
+  "enriched": true
+}

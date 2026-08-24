@@ -1,0 +1,99 @@
+{
+  "id": "jhgpstw",
+  "title": "6. Oath and Tenure",
+  "order": 331,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qol4h9u"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Every President and every person acting as President shall, before entering upon his office, make and subscribe in the presence of the Chief Justice of India an oath or affirmation to preserve, protect and defend the Constitution and the law.",
+      "id": "k9eke35"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Office",
+        "Oath Administered By",
+        "Tenure / Retirement Age"
+      ],
+      "rows": [
+        [
+          "President of India",
+          "Chief Justice of India",
+          "5 Years (Eligible for re-election)"
+        ],
+        [
+          "Governor of State",
+          "Chief Justice of High Court",
+          "Pleasure of President (Nominally 5 Years)"
+        ],
+        [
+          "Supreme Court Judge",
+          "President of India",
+          "Until 65 Years of Age"
+        ],
+        [
+          "High Court Judge",
+          "Governor of State",
+          "Until 62 Years of Age"
+        ],
+        [
+          "CAG / UPSC Chairman",
+          "President of India",
+          "6 Years or 65 Years of Age"
+        ]
+      ],
+      "id": "4hou4un"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Schedule",
+          "value": "3rd Schedule",
+          "icon": "book"
+        },
+        {
+          "label": "President's Oath",
+          "value": "Article 60",
+          "icon": "award"
+        },
+        {
+          "label": "Standard Term",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Max Retirement Age",
+          "value": "65 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "2bowztt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that oaths for the President (Art 60), Vice-President (Art 69), and Governor (Art 159) are listed under their specific articles, NOT in the Third Schedule.",
+        "High Court judges retire at 62 years, whereas Supreme Court judges retire at 65 years.",
+        "The Governor holds office during the pleasure of the President and has no fixed security of tenure."
+      ],
+      "id": "irmzlwf"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Third Schedule of the Constitution outlines forms of oaths or affirmations for MPs, Union Ministers, CAG, and Judges, but excludes the President, Vice-President, and Governor.",
+        "The President's oath is administered by the Chief Justice of India under Article 60, pledging to preserve, protect, and defend the Constitution.",
+        "The Governor's oath is administered by the Chief Justice of the respective High Court under Article 159.",
+        "Independent constitutional authorities like the CAG, Chief Election Commissioner, and UPSC Chairman serve for a tenure of 6 years or until reaching 65 years of age, whichever is earlier."
+      ],
+      "id": "hwdbc0g"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,838 @@
+{
+  "id": "mxgchkd",
+  "title": "CHAPTER 2: OPERATING SYSTEMS",
+  "order": 2,
+  "blocks": [
+    {
+      "id": "zamgx97",
+      "type": "heading",
+      "level": 2,
+      "content": "2.1 Introduction and Functions of OS"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Operating Systems oversee system resources through core modules: Process, Memory, File, and I/O Management.",
+        "Process Management includes thread allocation, state transitions, and execution scheduling using CPU Scheduling Algorithms.",
+        "Process Synchronisation deals with concurrent execution risks, resolving the Critical Section Problem and preventing Deadlocks.",
+        "Memory Management optimizes RAM utilization using Page Replacement Algorithms.",
+        "I/O Systems and Disk Scheduling organize external storage access and minimize read/write seek time."
+      ],
+      "id": "999i4ke"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Modules",
+          "value": "6 Units",
+          "icon": "book"
+        },
+        {
+          "label": "Key Concept",
+          "value": "Process & Memory",
+          "icon": "check"
+        },
+        {
+          "label": "Concurrency Control",
+          "value": "Synchronisation & Deadlock",
+          "icon": "award"
+        },
+        {
+          "label": "Storage Handling",
+          "value": "Disk Scheduling",
+          "icon": "clock"
+        }
+      ],
+      "id": "47z2mgs"
+    },
+    {
+      "type": "paragraph",
+      "id": "3j19s2o"
+    },
+    {
+      "id": "xgtn9vm",
+      "type": "heading",
+      "level": 3,
+      "content": "Functions of OS"
+    },
+    {
+      "id": "x6acciv",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "1mb6n7w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glxwqv4",
+      "type": "heading",
+      "level": 2,
+      "content": "2.2 Process Management"
+    },
+    {
+      "id": "czdh00r",
+      "type": "heading",
+      "level": 3,
+      "content": "Process vs Thread"
+    },
+    {
+      "id": "j6o43jh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk9cfd0",
+      "type": "heading",
+      "level": 3,
+      "content": "Process States"
+    },
+    {
+      "id": "9uf6h5d",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Critical Section Problem",
+      "id": "vdzjmvd"
+    },
+    {
+      "id": "ebvr26f",
+      "type": "heading",
+      "level": 3,
+      "content": "CPU Scheduling Algorithms"
+    },
+    {
+      "id": "xxrn99q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8y9hsn9",
+      "type": "heading",
+      "level": 2,
+      "content": "2.3 Process Synchronisation"
+    },
+    {
+      "id": "6gauc6x",
+      "type": "heading",
+      "level": 3,
+      "content": "Critical Section Problem"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ogqz5x"
+    },
+    {
+      "id": "16l69rj",
+      "type": "heading",
+      "level": 3,
+      "content": "Synchronisation Mechanisms"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Attribute",
+        "Process",
+        "Thread"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "An independent execution unit with its own memory space",
+          "A lightweight segment of a process executing tasks concurrently"
+        ],
+        [
+          "Memory & Resources",
+          "Allocated separate memory and address space",
+          "Shares memory and address space with the parent process"
+        ],
+        [
+          "Context Switching",
+          "Slower context switching due to isolated address space",
+          "Faster context switching due to shared resources"
+        ],
+        [
+          "Termination Impact",
+          "Termination does not directly terminate other processes",
+          "Termination of parent process terminates all its threads"
+        ]
+      ],
+      "id": "mp2ds0w"
+    },
+    {
+      "id": "do65hii",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "98kaqzy",
+      "type": "heading",
+      "level": 3,
+      "content": "Deadlock"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ihcbyu"
+    },
+    {
+      "id": "td27a18",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "hheiq4p"
+    },
+    {
+      "id": "lmb4in9",
+      "type": "heading",
+      "level": 2,
+      "content": "2.4 Memory Management"
+    },
+    {
+      "id": "1y0r4se",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0xtwd5y",
+      "type": "heading",
+      "level": 3,
+      "content": "Page Replacement Algorithms"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CPU Scheduling Algorithms (FCFS, SJF, Round Robin, Priority) are frequently tested for calculating average waiting and turnaround times.",
+        "Deadlock conditions (Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait) and Banker's Algorithm are high-yield exam topics.",
+        "Page Replacement Algorithms (FIFO, LRU, Optimal) and Belady's Anomaly are recurring questions in competitive exams.",
+        "Disk Scheduling algorithms (SSTF, SCAN, C-SCAN, LOOK) are consistently evaluated for head movement calculation."
+      ],
+      "id": "prcavnd"
+    },
+    {
+      "id": "8a9e0jg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r01guua",
+      "type": "heading",
+      "level": 2,
+      "content": "2.5 File Systems"
+    },
+    {
+      "id": "9dawl7n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yq08gla",
+      "type": "heading",
+      "level": 2,
+      "content": "2.6 I/O Systems and Disk Scheduling"
+    },
+    {
+      "id": "ehp9r24",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}
