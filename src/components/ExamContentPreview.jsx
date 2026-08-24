@@ -4,7 +4,7 @@ import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, R
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
-import { resolveSubjectForTitle, getFamilyHex } from '../lib/thumbnailTaxonomy';
+import { resolveSubjectForTitle, getFamilyHex, getSubjectThumbnailImage } from '../lib/thumbnailTaxonomy';
 
 const BUCKETS = [
   { key: 'Intro', label: 'Intro', icon: FileText, anchor: 'section-intro' },
@@ -174,6 +174,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.75rem', marginBottom: '1.1rem' }}>
             {subjectGroups.map((group) => {
               const bg = getFamilyHex(group.family);
+              const image = getSubjectThumbnailImage(group.key);
               const active = openSubjectKey === group.key;
               const availableCats = SUBJECT_CATEGORY_ORDER.filter((c) => group.categories.has(c));
               return (
@@ -187,7 +188,9 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                     style={{
                       aspectRatio: '4 / 3', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
                       textAlign: 'center', padding: '0.6rem', fontWeight: 800, fontSize: '0.72rem', color: 'rgba(255,255,255,0.95)',
-                      background: `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
+                      background: image ? `linear-gradient(160deg, ${bg}b3 0%, ${bg}e6 100%), url("${image}")` : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
+                      backgroundSize: image ? 'cover' : undefined,
+                      backgroundPosition: image ? 'center' : undefined,
                       boxShadow: active ? '0 0 0 3px var(--ios-olive, #4b6b32)' : 'none',
                     }}
                   >
