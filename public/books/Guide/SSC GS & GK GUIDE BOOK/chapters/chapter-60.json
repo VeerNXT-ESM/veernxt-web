@@ -1,0 +1,377 @@
+{
+  "id": "y55wk4b",
+  "title": "Chapter 11: Metals and Non-metals",
+  "order": 60,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "n04mbez"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Liquid Metal",
+          "value": "Mercury (Hg)",
+          "icon": "info"
+        },
+        {
+          "label": "Liquid Non-metal",
+          "value": "Bromine (Br)",
+          "icon": "info"
+        },
+        {
+          "label": "Most Abundant Metal",
+          "value": "Aluminium (Al)",
+          "icon": "award"
+        },
+        {
+          "label": "Most Reactive Metal",
+          "value": "Potassium (K)",
+          "icon": "check"
+        }
+      ],
+      "id": "sz976bf"
+    },
+    {
+      "id": "l9ebcwl",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Metals"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metals are electropositive elements that lose electrons to form positive ions, characterized by metallic luster, malleability, and high electrical conductivity.",
+        "Non-metals are electronegative elements that gain or share electrons, forming acidic or neutral oxides when reacted with oxygen.",
+        "The Reactivity Series ranks metals in decreasing order of reactivity, with Potassium at the top and Gold at the bottom.",
+        "Extraction methods depend on reactivity: highly reactive metals are extracted via electrolysis, while moderately reactive ones undergo reduction with carbon."
+      ],
+      "id": "rqcxqkw"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ln7xz3"
+    },
+    {
+      "type": "paragraph",
+      "id": "lodxqzo"
+    },
+    {
+      "type": "paragraph",
+      "id": "4jyysw5"
+    },
+    {
+      "id": "w7knuu6",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Physical Properties of Metals"
+    },
+    {
+      "id": "1s7e0ap",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "97bt8rp",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Chemical Properties of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "u1gyqi3"
+    },
+    {
+      "type": "paragraph",
+      "id": "q3l7nr3"
+    },
+    {
+      "type": "paragraph",
+      "id": "h2vh725"
+    },
+    {
+      "type": "paragraph",
+      "id": "u6cj5vu"
+    },
+    {
+      "id": "7vnt5kc",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "gjnklud"
+    },
+    {
+      "type": "paragraph",
+      "id": "bmpl2d0"
+    },
+    {
+      "type": "paragraph",
+      "id": "uwyeu4e"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Reactivity Series of Metals",
+      "id": "oz9ofkk"
+    },
+    {
+      "id": "koz4z18",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Physical Properties of Non-metals"
+    },
+    {
+      "id": "pqif3wf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8ocplfl",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Chemical Properties of Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "sjupajs"
+    },
+    {
+      "type": "paragraph",
+      "id": "vhjfk57"
+    },
+    {
+      "type": "paragraph",
+      "id": "zbfqa6i"
+    },
+    {
+      "id": "cnm1h90",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Reactivity Series of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "sx7qgko"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d0cq5um"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Metals",
+        "Non-metals"
+      ],
+      "rows": [
+        [
+          "Physical State",
+          "Solids at room temp (except Mercury)",
+          "Solids, gases, or liquid (Bromine)"
+        ],
+        [
+          "Conductivity",
+          "Good conductors of heat & electricity",
+          "Poor conductors (except Graphite)"
+        ],
+        [
+          "Nature of Oxides",
+          "Basic or Amphoteric",
+          "Acidic or Neutral"
+        ],
+        [
+          "Malleability & Ductility",
+          "Highly malleable and ductile",
+          "Brittle (solids), non-malleable"
+        ]
+      ],
+      "id": "bmnz7es"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f561hdx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uw1c2wy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kxxev7n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "inz9z1q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6ruj94o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pc479mn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vf4zadu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "volyyxj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6p0r4cs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n3jf61w"
+    },
+    {
+      "id": "1ij8m5j",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Extraction of Metals"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sodium and Potassium are soft metals that can be cut with a knife and must be stored in kerosene to prevent reaction with moisture.",
+        "Mercury is the only liquid metal at room temperature, whereas Bromine is the only liquid non-metal.",
+        "Amphoteric oxides like Aluminium Oxide (Al2O3) and Zinc Oxide (ZnO) react with both acids and bases to produce salt and water.",
+        "Aqua Regia (3:1 ratio of concentrated HCl and concentrated HNO3) can dissolve noble metals like Gold and Platinum."
+      ],
+      "id": "r31cgu0"
+    },
+    {
+      "type": "paragraph",
+      "id": "byjojee"
+    },
+    {
+      "type": "paragraph",
+      "id": "w0n1zsr"
+    },
+    {
+      "type": "paragraph",
+      "id": "smwjzzq"
+    },
+    {
+      "id": "5xr1g4c",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "pcq380k"
+    },
+    {
+      "type": "paragraph",
+      "id": "i32cayi"
+    },
+    {
+      "type": "paragraph",
+      "id": "zynk6wz"
+    },
+    {
+      "type": "paragraph",
+      "id": "svyx3cg"
+    }
+  ],
+  "enriched": true
+}

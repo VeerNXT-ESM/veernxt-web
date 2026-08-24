@@ -1,0 +1,90 @@
+{
+  "id": "a40t9dw",
+  "title": "5. Jurisdiction of CBI",
+  "order": 518,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "b12ta35"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The High Courts and the Supreme Court can order the CBI to investigate a crime anywhere in the country without the consent of the State.",
+      "id": "frph3ot"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "General Consent",
+        "Specific Consent"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Blanket permission granted to CBI to conduct investigations against central employees in a state.",
+          "Case-by-case approval required from the state government for specific investigations."
+        ],
+        [
+          "Operational Ease",
+          "CBI can seamlessly register cases and enter state jurisdiction without prior notice.",
+          "CBI must submit an application and wait for explicit approval before initiating action."
+        ],
+        [
+          "Revocation Impact",
+          "If withdrawn, CBI cannot register new cases without seeking specific consent.",
+          "Applies automatically to individual cases when general consent stands withdrawn."
+        ]
+      ],
+      "id": "gt42gko"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Suo Motu Power",
+          "value": "Union Territories",
+          "icon": "check"
+        },
+        {
+          "label": "Consent Types",
+          "value": "General & Specific",
+          "icon": "info"
+        },
+        {
+          "label": "Global Role",
+          "value": "Interpol NCB",
+          "icon": "award"
+        }
+      ],
+      "id": "mgsunxd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body; it is an executive body deriving investigative powers from the DSPE Act, 1946.",
+        "Withdrawal of general consent by a State does not affect ongoing investigations initiated prior to the withdrawal.",
+        "The CBI acts as the National Central Bureau (NCB) of Interpol in India."
+      ],
+      "id": "2iy2ctl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CBI derives its powers to investigate from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "CBI has jurisdiction to investigate offences primarily in Union Territories and against Central Government employees.",
+        "To extend its investigation into a State, consent of that State government is mandatory under Section 6 of the DSPE Act.",
+        "State consent can be either 'General Consent' (blanket permission) or 'Specific Consent' (case-by-case approval).",
+        "The Supreme Court and High Courts can direct the CBI to investigate a crime anywhere in the country without the consent of the State."
+      ],
+      "id": "pzjks08"
+    }
+  ],
+  "enriched": true
+}

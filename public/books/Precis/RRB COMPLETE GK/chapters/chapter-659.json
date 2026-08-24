@@ -1,0 +1,96 @@
+{
+  "id": "bedx2r6",
+  "title": "7. Public Distribution System (PDS) Linkage",
+  "order": 659,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "bg8hxwz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The National Food Security Act, 2013 marks a paradigm shift in the approach to food security—moving from a traditional welfare approach to a rights-based entitlement system.",
+      "id": "8hueegc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Targeted PDS (TPDS - 1997)",
+        "National Food Security Act (NFSA - 2013)"
+      ],
+      "rows": [
+        [
+          "Approach",
+          "Welfare-based administrative targeting",
+          "Rights-based legal entitlement"
+        ],
+        [
+          "Population Coverage",
+          "Focused strictly on estimated BPL population",
+          "75% Rural & 50% Urban (~67% of total population)"
+        ],
+        [
+          "Beneficiary Categories",
+          "APL (Above Poverty Line) & BPL",
+          "Antyodaya Anna Yojana (AAY) & Priority Households (PHH)"
+        ],
+        [
+          "Entitlement Basis",
+          "Fixed allocation per household (10–35 kg)",
+          "Per person allocation (5 kg/person for PHH, 35 kg/family for AAY)"
+        ]
+      ],
+      "id": "q8ffadq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "NFSA Enactment",
+          "value": "2013",
+          "icon": "calendar"
+        },
+        {
+          "label": "National Population Coverage",
+          "value": "67%",
+          "icon": "check"
+        },
+        {
+          "label": "AAY Family Entitlement",
+          "value": "35 kg/month",
+          "icon": "award"
+        },
+        {
+          "label": "PHH Individual Entitlement",
+          "value": "5 kg/person/month",
+          "icon": "info"
+        }
+      ],
+      "id": "z7rhmd1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Coverage percentages under NFSA 2013 (75% Rural, 50% Urban, 67% Overall) are frequently asked in UPSC and State PSC exams.",
+        "Entitlement distinction: Antyodaya Anna Yojana (AAY) households get 35 kg per household per month, whereas Priority Households (PHH) receive 5 kg per person per month.",
+        "Nodal central agency: Food Corporation of India (FCI) is responsible for procurement, storage, and inter-state transportation of PDS food grains.",
+        "ONORC scheme enables migrant workers to lift their entitled food grains from any Fair Price Shop (FPS) across India using technology and biometrics."
+      ],
+      "id": "zuqjsuo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Public Distribution System (PDS) evolved from a general scarcity-management system into a targeted food security mechanism.",
+        "The Targeted Public Distribution System (TPDS) was launched in June 1997 to focus benefits specifically on Below Poverty Line (BPL) families.",
+        "The National Food Security Act (NFSA), 2013 converted food security from a welfare-based scheme into a legal entitlement.",
+        "NFSA legally covers up to 75% of the rural population and 50% of the urban population under two categories: Antyodaya Anna Yojana (AAY) and Priority Households (PHH).",
+        "Technological reforms such as One Nation One Ration Card (ONORC), Aadhaar seeding, and Electronic Point of Sale (ePoS) devices have digitized and modernized PDS operation."
+      ],
+      "id": "ghcfqpj"
+    }
+  ],
+  "enriched": true
+}

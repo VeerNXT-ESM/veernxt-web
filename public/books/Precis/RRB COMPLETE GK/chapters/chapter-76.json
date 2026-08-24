@@ -1,0 +1,94 @@
+{
+  "id": "hv17eye",
+  "title": "Chapter 6: Plate Tectonics and Continental Drift",
+  "order": 76,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "vw1nogc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The lithosphere is broken into a series of tectonic plates that move horizontally over the asthenosphere.",
+      "id": "nvkmpxe"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Boundary Type",
+        "Plate Motion",
+        "Crustal Effect",
+        "Prominent Example"
+      ],
+      "rows": [
+        [
+          "Divergent",
+          "Plates move away from each other",
+          "New crust generated (Constructive)",
+          "Mid-Atlantic Ridge"
+        ],
+        [
+          "Convergent",
+          "Plates collide or subduct",
+          "Crust destroyed or folded (Destructive)",
+          "Himalayas / Mariana Trench"
+        ],
+        [
+          "Transform",
+          "Plates slide past horizontally",
+          "Crust neither created nor destroyed (Conservative)",
+          "San Andreas Fault"
+        ]
+      ],
+      "id": "2w3c255"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Theory Proposed",
+          "value": "1912",
+          "icon": "calendar"
+        },
+        {
+          "label": "Supercontinent",
+          "value": "Pangea",
+          "icon": "book"
+        },
+        {
+          "label": "Major Plates",
+          "value": "7",
+          "icon": "check"
+        },
+        {
+          "label": "Boundary Types",
+          "value": "3",
+          "icon": "info"
+        }
+      ],
+      "id": "ut1geyd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between minor plates: Cocos Plate is located between Central America and the Pacific Plate, Nazca Plate is between South America and the Pacific Plate, and the Philippine Plate lies between the Asiatic and Pacific Plate.",
+        "Divergent boundaries create new oceanic crust (e.g., Mid-Atlantic Ridge), Convergent boundaries destroy or fold crust (e.g., Himalayas, Mariana Trench), and Transform boundaries neither create nor destroy crust (e.g., San Andreas Fault).",
+        "Force driving plate movement is primarily thermal convection currents in the mantle as proposed by Arthur Holmes."
+      ],
+      "id": "mam4fkf"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alfred Wegener proposed the Continental Drift Theory in 1912 to explain the movement and distribution of continents.",
+        "Pangea initially split into Laurasia in the north and Gondwanaland in the south during the Mesozoic Era.",
+        "Key evidence supporting continental drift includes the Jig-Saw fit of shorelines, tillite deposits, placer deposits, and fossil distribution like Glossopteris and Mesosaurus.",
+        "Plate Tectonics Theory incorporates seafloor spreading and mantle convection, stating that Earth's rigid lithosphere floats over the asthenosphere.",
+        "Tectonic plate interactions occur along three main boundary types: Divergent, Convergent, and Transform boundaries."
+      ],
+      "id": "7zovth3"
+    }
+  ],
+  "enriched": true
+}

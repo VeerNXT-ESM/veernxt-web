@@ -1,0 +1,83 @@
+{
+  "id": "rkdjih2",
+  "title": "2. Check conclusions one by one3. Do not assume anything extra",
+  "order": 11,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "br1hcsb"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Do not assume anything extra",
+      "id": "hil8wsj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Rule 1",
+          "value": "Check One by One",
+          "icon": "check"
+        },
+        {
+          "label": "Rule 2",
+          "value": "No Extra Assumptions",
+          "icon": "info"
+        },
+        {
+          "label": "Subject Area",
+          "value": "Logical Reasoning",
+          "icon": "book"
+        },
+        {
+          "label": "Core Focus",
+          "value": "Statement & Conclusion",
+          "icon": "award"
+        }
+      ],
+      "id": "c60eo9g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Principle",
+        "Core Rule"
+      ],
+      "rows": [
+        [
+          "Sequential Evaluation",
+          "Check conclusions one by one"
+        ],
+        [
+          "Strict Boundaries",
+          "Do not assume anything extra"
+        ]
+      ],
+      "id": "zeml1er"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Evaluate each given conclusion independently against the provided statement.",
+        "Strictly refrain from assuming facts or drawing from external real-world knowledge outside the text.",
+        "Treat the statements given in the question as absolute truth, even if they deviate from established facts."
+      ],
+      "id": "vrsbc9a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Examiners often trick candidates by including real-world facts that are not explicitly stated in the premise.",
+        "Conclusions must be tested individually; one conclusion's validity should not automatically determine another's unless explicit logic demands it."
+      ],
+      "id": "nhdnjhf"
+    },
+    {
+      "type": "paragraph",
+      "id": "r6u8v6q"
+    }
+  ],
+  "enriched": true
+}

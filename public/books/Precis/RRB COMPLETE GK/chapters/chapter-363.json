@@ -1,0 +1,90 @@
+{
+  "id": "clvq699",
+  "title": "2. Governor – Constitutional Position",
+  "order": 363,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dt5u1vl"
+    },
+    {
+      "type": "pullQuote",
+      "content": "There shall be a Council of Ministers with the Chief Minister at the head to aid and advise the Governor in the exercise of his functions, except in so far as he is by or under this Constitution required to exercise his functions or any of them in his discretion.",
+      "id": "eczumsa"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "President of India",
+        "Governor of a State"
+      ],
+      "rows": [
+        [
+          "Constitutional Discretion",
+          "No explicit constitutional discretion granted under Article 74",
+          "Explicit constitutional discretion granted under Article 163"
+        ],
+        [
+          "Binding Nature of Advice",
+          "Advice of Union Council of Ministers is explicitly binding (42nd & 44th CAA)",
+          "Advice of State Council of Ministers is binding except in discretionary areas"
+        ],
+        [
+          "Pardon Power Scope",
+          "Can pardon death sentences and court-martial punishments",
+          "Cannot pardon death sentences or court-martial punishments"
+        ]
+      ],
+      "id": "q4ikhgv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Executive Power",
+          "value": "Article 154",
+          "icon": "book"
+        },
+        {
+          "label": "Aid & Advice",
+          "value": "Article 163",
+          "icon": "info"
+        },
+        {
+          "label": "Key Amendment",
+          "value": "7th CAA 1956",
+          "icon": "calendar"
+        },
+        {
+          "label": "Discretionary Scope",
+          "value": "Wider than President",
+          "icon": "check"
+        }
+      ],
+      "id": "vxt6iem"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 163 provides explicit constitutional discretion to the Governor, whereas Article 74 gives no explicit constitutional discretion to the President.",
+        "The 42nd and 44th Constitutional Amendments made the advice of the Council of Ministers explicitly binding on the President, but no such parallel amendment was made for the Governor.",
+        "The Governor's decision on whether a matter lies within his discretionary power is non-justiciable and cannot be questioned in any court."
+      ],
+      "id": "cbh5jr1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor acts as the nominal executive (de jure head) of the state, whereas the Chief Minister is the real executive (de facto head).",
+        "The 7th Constitutional Amendment Act of 1956 allowed the appointment of the same person as Governor for two or more states.",
+        "Under Article 163, the Governor is aided and advised by the Council of Ministers headed by the Chief Minister in all functions except those required to be performed in discretion.",
+        "Unlike the President, the Governor is endowed with both constitutional discretion and situational discretion.",
+        "If any question arises whether a matter falls within the Governor's discretion, the decision of the Governor is final and cannot be challenged."
+      ],
+      "id": "cymxffo"
+    }
+  ],
+  "enriched": true
+}

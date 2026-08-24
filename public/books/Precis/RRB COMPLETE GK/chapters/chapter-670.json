@@ -1,0 +1,95 @@
+{
+  "id": "p2cjc62",
+  "title": "2. What is a Tribunal?",
+  "order": 670,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "z5vnmdi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Tribunals are quasi-judicial bodies established to perform judicial or administrative functions and ensure speedy adjudication outside the traditional court hierarchy.",
+      "id": "wy1rusb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Ordinary Courts",
+        "Tribunals"
+      ],
+      "rows": [
+        [
+          "Procedure",
+          "Bound by strict provisions of the CPC and Indian Evidence Act",
+          "Guided flexibly by the Principles of Natural Justice"
+        ],
+        [
+          "Composition",
+          "Exclusively judicial officers and judges",
+          "Includes both judicial and expert/technical members"
+        ],
+        [
+          "Jurisdiction",
+          "Broad general jurisdiction over civil and criminal matters",
+          "Specialized, subject-specific statutory jurisdiction"
+        ],
+        [
+          "Legislative Authority",
+          "Constitutional judicial framework",
+          "Created under Article 323A or 323B by statute"
+        ]
+      ],
+      "id": "bmccgnt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Amendment",
+          "value": "42nd Amendment, 1976",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part XIV-A",
+          "icon": "book"
+        },
+        {
+          "label": "Key Articles",
+          "value": "Art 323A & 323B",
+          "icon": "info"
+        },
+        {
+          "label": "Recommending Committee",
+          "value": "Swaran Singh Committee",
+          "icon": "award"
+        }
+      ],
+      "id": "9p0i5mw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 323A tribunals can be established ONLY by Parliament, whereas Article 323B tribunals can be established by BOTH Parliament and State Legislatures.",
+        "Post the L. Chandra Kumar Case (1997), appeals against tribunal decisions must go before a Division Bench of the concerned High Court before approaching the Supreme Court.",
+        "Tribunals consist of both judicial and technical members to provide domain expertise in technical matters."
+      ],
+      "id": "5qeq85u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Tribunals are quasi-judicial bodies set up to adjudicate specific disputes and relieve overburdened traditional courts.",
+        "Part XIV-A was incorporated into the Constitution of India through the 42nd Amendment Act, 1976, upon recommendations of the Swaran Singh Committee.",
+        "Article 323A provides for Administrative Tribunals for public service matters and can be created solely by Parliament.",
+        "Article 323B enables both Parliament and State Legislatures to establish tribunals for subjects like taxation, land reforms, and foreign exchange.",
+        "Unlike ordinary courts, tribunals are guided by the Principles of Natural Justice rather than strict procedural codes like the CPC or Indian Evidence Act."
+      ],
+      "id": "g8gysgw"
+    }
+  ],
+  "enriched": true
+}

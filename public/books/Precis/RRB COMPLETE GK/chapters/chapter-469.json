@@ -1,0 +1,89 @@
+{
+  "id": "kg9rgdq",
+  "title": "10. Limitations of CAG",
+  "order": 469,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "czybd1v"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The CAG of India is in reality an Auditor General rather than a Comptroller, having no control over the issue of money from the consolidated fund.",
+      "id": "xct9ret"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "CAG of India",
+        "CAG of Britain (UK)"
+      ],
+      "rows": [
+        [
+          "Control over Money Issue",
+          "No control over issue of money from the Consolidated Fund",
+          "Has full control; money cannot be issued without CAG's approval"
+        ],
+        [
+          "Primary Function",
+          "Acts primarily as an Auditor General after expenditure",
+          "Acts as both Comptroller before issue and Auditor General after"
+        ],
+        [
+          "Executive Sanction",
+          "Executive can draw money without prior sanction of CAG",
+          "Executive cannot draw money without prior approval of CAG"
+        ]
+      ],
+      "id": "gjlpg26"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Accounting Separated",
+          "value": "1976",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 148",
+          "icon": "book"
+        },
+        {
+          "label": "Audit Nature",
+          "value": "Post-Facto",
+          "icon": "clock"
+        },
+        {
+          "label": "Money Control",
+          "value": "No Issue Power",
+          "icon": "info"
+        }
+      ],
+      "id": "5ak9ne7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinction between Indian CAG and UK CAG: Indian CAG acts only as Auditor General, whereas UK CAG acts as both Comptroller and Auditor General.",
+        "Year of separation of accounts from audit at the Centre: 1976 (CAG still compiles accounts for State Governments).",
+        "Limitation regarding Secret Service Expenditure: CAG accepts the certificate of administrative authorities without inspecting detailed vouchers."
+      ],
+      "id": "8qmtfti"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The audit conducted by the CAG is mostly post-facto in nature, conducted after the expenditure has already taken place.",
+        "In 1976, accounting functions were separated from auditing functions at the Central level, relieving CAG of accounting responsibilities.",
+        "Secret service expenditure is a major limitation, as the CAG cannot demand detailed vouchers and must accept certificates from competent administrative authorities.",
+        "Unlike the CAG in the UK, the CAG of India has no power to control the issue of money from the Consolidated Fund of India."
+      ],
+      "id": "plrav2k"
+    }
+  ],
+  "enriched": true
+}

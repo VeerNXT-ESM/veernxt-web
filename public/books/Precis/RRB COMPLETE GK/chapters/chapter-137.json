@@ -1,0 +1,125 @@
+{
+  "id": "0t1f6uu",
+  "title": "5. Glacial Erosion Processes",
+  "order": 137,
+  "blocks": [
+    {
+      "id": "1ubx128",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Glacial erosion transforms pre-existing river V-shaped valleys into broad, steep-sided U-shaped troughs through plucking and abrasion.",
+      "id": "5s568sw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature / Mechanism",
+        "Plucking (Quarrying)",
+        "Abrasion"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Lifting away of jointed blocks of rock frozen into moving ice",
+          "Scouring, scratching, and polishing of bedrock by rock fragments embedded in ice"
+        ],
+        [
+          "Prerequisites",
+          "Jointed or fractured bedrock and freeze-thaw meltwater activity",
+          "Presence of hard debris and rock fragments carried along glacier base"
+        ],
+        [
+          "Surface Result",
+          "Jagged, rough, and uneven rock faces",
+          "Striated, polished, and grooved rock surfaces"
+        ],
+        [
+          "Roche Moutonnée Side",
+          "Steep, rugged lee side (down-glacier)",
+          "Gently sloping, smooth stoss side (up-glacier)"
+        ]
+      ],
+      "id": "1px345n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Processes",
+          "value": "Plucking & Abrasion",
+          "icon": "check"
+        },
+        {
+          "label": "Valley Profile",
+          "value": "U-Shaped Trough",
+          "icon": "info"
+        },
+        {
+          "label": "Key Landforms",
+          "value": "Cirque, Arete, Horn",
+          "icon": "book"
+        },
+        {
+          "label": "Movement Driver",
+          "value": "Gravity & Ice Weight",
+          "icon": "clock"
+        }
+      ],
+      "id": "zoooh9m"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish Erosional vs Depositional Landforms: Cirques, Horns, Arêtes, Fiords, and Roche Moutonnées are purely EROSIONAL landforms, whereas Moraines, Drumlins, Eskers, and Kames are DEPOSITIONAL.",
+        "Roche Moutonnée Features: Frequently asked in Prelims—the smooth, gently sloping up-glacier (stoss) side is formed by abrasion, while the steep, rugged down-glacier (lee) side is formed by plucking.",
+        "Valley Profiles: Fluvial valleys are V-shaped with interlocking spurs, whereas Glacial valleys are U-shaped with truncated spurs."
+      ],
+      "id": "6bh546d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Glacial erosion proceeds mainly through two distinct physical mechanisms: plucking (lifting of fractured bedrock blocks) and abrasion (striating and polishing by embedded sediment load).",
+        "Cirques (or corries) are arm-chair-shaped, steep-walled depressions carved at glacier sources that often contain cirque lakes or tarns upon melting.",
+        "Headward erosion of multiple adjacent cirques creates sharp, knife-edge ridges called arêtes and pyramidal peaks termed horns.",
+        "Glaciers transform narrow, V-shaped river valleys into broad, flat-bottomed U-shaped glacial troughs.",
+        "Hanging valleys are tributary valleys truncated high above the main valley floor, creating spectacular waterfalls after glacial retreat."
+      ],
+      "id": "6dh83q1"
+    }
+  ],
+  "enriched": true
+}

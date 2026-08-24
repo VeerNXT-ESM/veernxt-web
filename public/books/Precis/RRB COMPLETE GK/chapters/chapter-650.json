@@ -1,0 +1,89 @@
+{
+  "id": "a425uz0",
+  "title": "15. Exam Traps",
+  "order": 650,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "a7a4201"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Exam Traps",
+      "id": "y6mjt9l"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Common Feature",
+        "Mitigation Strategy"
+      ],
+      "rows": [
+        [
+          "Absolute Statements",
+          "Uses words like 'Always', 'Never', 'Only'",
+          "Look for exceptions; extreme statements are usually false"
+        ],
+        [
+          "Negative Stems",
+          "Asks for 'NOT correct' or 'INCORRECT'",
+          "Rephrase the question stem as a simple True/False test"
+        ],
+        [
+          "Time Sinks",
+          "Excessively long text or complex calculations",
+          "Skip on first pass; return only after solving easy items"
+        ]
+      ],
+      "id": "cf33ztt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "0.25 - 0.66",
+          "icon": "alert"
+        },
+        {
+          "label": "Trap Types",
+          "value": "4 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Key Strategy",
+          "value": "Elimination",
+          "icon": "check"
+        },
+        {
+          "label": "Time Wasted",
+          "value": "15-20%",
+          "icon": "clock"
+        }
+      ],
+      "id": "vuvsoya"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always circle or highlight absolute qualifiers like 'Always', 'Never', and 'Only' before picking an option.",
+        "Double-check option numbers when filling answer sheets, especially after skipping difficult questions.",
+        "Beware of options that look familiar from formulas but miss basic unit conversions."
+      ],
+      "id": "3it2ap4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Exam traps are engineered to exploit candidate speed, overconfidence, and fatigue under pressure.",
+        "Negative stems containing terms like 'NOT', 'INCORRECT', or 'EXCEPT' cause maximum unforced errors.",
+        "Partial truth options present correct premises with subtly flawed conclusions to mislead hasty readers.",
+        "Time-sink questions are strategically positioned to disrupt overall paper pacing and time management."
+      ],
+      "id": "sjgsgwa"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,101 @@
+{
+  "id": "y3h95y5",
+  "title": "10. State Finance Commission (Article 243I)",
+  "order": 404,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "b54lsnp"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor of a State shall, as soon as may be within one year from the commencement of the Constitution (Seventy-third Amendment) Act, 1992, and thereafter at the expiration of every fifth year, constitute a Finance Commission to review the financial position of the Panchayats.",
+      "id": "4gyprgf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Finance Commission",
+        "State Finance Commission"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 280",
+          "Article 243I & Article 243Y"
+        ],
+        [
+          "Constituted By",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Frequency",
+          "Every 5th year (or earlier)",
+          "Every 5th year"
+        ],
+        [
+          "Primary Mandate",
+          "Tax distribution between Union and States",
+          "Tax distribution between State and Local Bodies (PRIs/ULBs)"
+        ],
+        [
+          "Report Submitted To",
+          "President (laid before Parliament)",
+          "Governor (laid before State Legislature)"
+        ]
+      ],
+      "id": "qdw0dnm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 243I & 243Y",
+          "icon": "book"
+        },
+        {
+          "label": "Constitution Period",
+          "value": "Every 5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "Governor of the State",
+          "icon": "check"
+        },
+        {
+          "label": "Constitutional Amendment",
+          "value": "73rd & 74th CAA, 1992",
+          "icon": "award"
+        }
+      ],
+      "id": "n9n08uc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 243I pertains to Panchayats, while Article 243Y extends the same provisions to Municipalities.",
+        "The Central Finance Commission (Article 280) suggests measures to augment the State Consolidated Fund based on recommendations made by the State Finance Commission.",
+        "The report of the State Finance Commission is submitted to the Governor, NOT the Chief Minister or State Legislature directly."
+      ],
+      "id": "vky8rn1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The State Finance Commission (SFC) is a constitutional body established under Article 243I (for Panchayats) and Article 243Y (for Municipalities).",
+        "The Governor of a State constitutes the Commission every five years to review the financial position of local bodies.",
+        "Recommends the distribution of net proceeds of taxes, duties, tolls, and fees levied by the State between the State and local bodies.",
+        "Suggests principles for determining grants-in-aid to Panchayats and Municipalities from the Consolidated Fund of the State.",
+        "The State Legislature determines the composition of the commission, required qualifications of members, and the manner of selection.",
+        "The Governor places the recommendations of the SFC along with an Action Taken Report (ATR) before the State Legislature."
+      ],
+      "id": "uu1n3vu"
+    }
+  ],
+  "enriched": true
+}

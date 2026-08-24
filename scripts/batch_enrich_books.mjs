@@ -49,8 +49,14 @@ function generateId() {
   return Math.random().toString(36).substring(2, 9);
 }
 
+let PRESERVE_PREFIX = false;
+
 function cleanTitle(fileName) {
-  return fileName.replace(/^Cluster_\d+_/, '').replace(/\.[^/.]+$/, '').replace(/\s*\(\d+\)\s*$/, '').trim();
+  let title = fileName;
+  if (!PRESERVE_PREFIX) {
+    title = title.replace(/^Cluster_\d+_/, '');
+  }
+  return title.replace(/\.[^/.]+$/, '').replace(/\s*\(\d+\)\s*$/, '').trim();
 }
 
 // Prompt to only return new decoration blocks
@@ -119,15 +125,16 @@ async function enrichChapter(chapter) {
           generationConfig: {
             temperature: 0.3,
             responseMimeType: 'application/json'
-          }
+          },
+          serviceTier: "flex"
         })
       });
 
       if (!response.ok) {
         const errorText = await response.text();
         console.error(`    Gemini API error (Status ${response.status}):`, errorText);
-        if (response.status === 429) {
-          console.log("    Rate limited. Sleeping for 15 seconds...");
+        if (response.status === 429 || response.status === 503 || response.status === 500) {
+          console.log(`    API issue (Status ${response.status}). Sleeping for 15 seconds...`);
           await new Promise(r => setTimeout(r, 15000));
           attempts--;
           continue;
@@ -374,12 +381,14 @@ async function main() {
   let onlyBook = null;
   let dryRun = false;
   let processAll = false;
+  let processIgnoredOnly = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--limit') limit = parseInt(args[++i], 10);
     else if (args[i] === '--only-book') onlyBook = args[++i];
     else if (args[i] === '--dry-run') dryRun = true;
     else if (args[i] === '--all') processAll = true;
+    else if (args[i] === '--ignored-only') processIgnoredOnly = true;
   }
 
   console.log("=== VEERNXT CONTENT PIPELINE (BATCH ENRICHMENT) ===");
@@ -403,7 +412,30 @@ async function main() {
     'Guide\\Hindi\\Cluster_010_HINDI.docx'
   ];
 
-  if (onlyBook) {
+  const IGNORED_BOOKS = [
+    'Guide\\English\\Cluster_087_ENGLISH.docx',
+    'Guide\\GK-GS\\Cluster_013_GS & GK GUIDE BOOK.docx',
+    'Guide\\GK-GS\\Cluster_035_GS & GK GUIDE BOOK.docx',
+    'Guide\\Mathematics\\Cluster_008_MATHEMATICS.docx',
+    'Guide\\Mathematics\\Cluster_019_MATHS AND REASONING GUIDE BOOK.docx',
+    'Guide\\Mathematics\\Cluster_083_MATHEMATICS.docx',
+    'Guide\\Reasoning\\Cluster_052_REASONING.docx',
+    'Precis\\GK-GS\\Cluster_014_SSC COMPLETE GK.docx',
+    'Precis\\GK-GS\\Cluster_047_SSC COMPLETE GK.docx',
+    'Precis\\GK-GS\\Cluster_075_SSC COMPLETE GK.docx',
+    'Precis\\GK-GS\\Cluster_079_RRB COMPLETE GK.docx',
+    'Precis\\Hindi\\Cluster_057_HINDI.docx',
+    'Precis\\Mathematics\\Cluster_085_MATHEMATICS.docx'
+  ];
+
+  if (processIgnoredOnly) {
+    PRESERVE_PREFIX = true;
+    filesToProcess = allFiles.filter(f => {
+      const normRel = f.relPath.replace(/\//g, '\\');
+      return IGNORED_BOOKS.some(ignored => normRel.includes(ignored) || ignored.includes(normRel));
+    });
+    console.log(`Queueing ONLY the 13 ignored collision books: ${filesToProcess.length} found.`);
+  } else if (onlyBook) {
     filesToProcess = allFiles.filter(f => f.fileName.includes(onlyBook));
     console.log(`Filtering to files matching '${onlyBook}': ${filesToProcess.length} found.`);
   } else if (processAll) {
@@ -444,6 +476,13 @@ async function main() {
       const cleanBookName = cleanTitle(file.fileName);
       const bookFolder = path.join(OUTPUT_DIR_ROOT, category, cleanBookName);
       const chaptersFolder = path.join(bookFolder, 'chapters');
+
+      // Skip if already processed
+      if (fs.existsSync(path.join(bookFolder, 'metadata.json'))) {
+        console.log(`  [Skip] Book already completed. Skipping.`);
+        successCount++;
+        continue;
+      }
 
       fs.mkdirSync(chaptersFolder, { recursive: true });
 

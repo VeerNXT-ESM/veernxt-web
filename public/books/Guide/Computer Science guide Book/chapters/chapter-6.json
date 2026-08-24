@@ -1,40 +1,40 @@
 {
-  "id": "ic11k09",
+  "id": "uz2x3v1",
   "title": "Chapter 6: Computer Memory",
   "order": 6,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "zv5cr5r"
+      "id": "cmhudtc"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Primary Memory Types",
+          "label": "Primary Storage",
           "value": "RAM & ROM",
-          "icon": "book"
-        },
-        {
-          "label": "Fastest Memory Layer",
-          "value": "Cache Memory",
-          "icon": "clock"
-        },
-        {
-          "label": "Basic Memory Unit",
-          "value": "1 Bit (0 or 1)",
           "icon": "info"
         },
         {
-          "label": "Storage Categories",
-          "value": "Primary & Secondary",
+          "label": "Volatile Memory",
+          "value": "RAM",
+          "icon": "clock"
+        },
+        {
+          "label": "Non-Volatile Memory",
+          "value": "ROM",
           "icon": "check"
+        },
+        {
+          "label": "Fastest Buffer",
+          "value": "Cache Memory",
+          "icon": "award"
         }
       ],
-      "id": "8x4hg41"
+      "id": "35hgf5i"
     },
     {
-      "id": "cdksjj8",
+      "id": "vdwrw5b",
       "type": "heading",
       "level": 2,
       "content": "6.1 Primary Memory (Main Memory)"
@@ -43,27 +43,26 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Primary memory (Main Memory) directly interacts with the CPU and includes volatile RAM and non-volatile ROM.",
-        "RAM (Random Access Memory) provides temporary high-speed access for active programs, losing data when power is off.",
-        "ROM (Read Only Memory) holds permanent firmware instructions like BIOS required during the system startup process.",
-        "Cache memory acts as a high-speed semiconductor buffer between the CPU and main memory to accelerate processing.",
-        "Secondary memory devices (HDDs, SSDs, optical drives) provide non-volatile, mass storage capacity for long-term data preservation.",
-        "Memory measurement follows a hierarchy: 1 Nibble = 4 Bits, 1 Byte = 8 Bits, 1 KB = 1024 Bytes, progressing up to TB and beyond."
+        "Primary memory is directly accessible by the CPU for processing instructions.",
+        "RAM is temporary and volatile, losing contents when power is turned off.",
+        "ROM is non-volatile and permanently stores essential startup software like BIOS.",
+        "Cache memory bridges CPU and RAM to accelerate access to frequently used data.",
+        "Secondary memory offers mass, non-volatile long-term storage for files and programs."
       ],
-      "id": "6azk5ca"
+      "id": "ry1z0to"
     },
     {
       "type": "paragraph",
-      "id": "vpjla69"
+      "id": "g1a6tls"
     },
     {
-      "id": "9umuz9m",
+      "id": "04k703g",
       "type": "heading",
       "level": 3,
       "content": "6.1.1 Types of Primary Memory"
     },
     {
-      "id": "o4gogu2",
+      "id": "lumkf0r",
       "type": "table",
       "rows": [
         {
@@ -101,21 +100,21 @@
       ]
     },
     {
-      "id": "ltq3t55",
+      "id": "yvx2hml",
       "type": "heading",
       "level": 3,
       "content": "6.1.2 RAM (Random Access Memory)"
     },
     {
       "type": "paragraph",
-      "id": "as62q3l"
+      "id": "fh1b1o1"
     },
     {
       "type": "paragraph",
-      "id": "i6lwz73"
+      "id": "hio18xg"
     },
     {
-      "id": "e2zwmi6",
+      "id": "5optabm",
       "type": "list",
       "items": [
         null,
@@ -124,25 +123,25 @@
     },
     {
       "type": "pullQuote",
-      "content": "6.1 Primary Memory (Main Memory)",
-      "id": "370c46t"
+      "content": "Primary Memory (Main Memory)",
+      "id": "j0wbei2"
     },
     {
-      "id": "1ndayvi",
+      "id": "ea2k2jt",
       "type": "heading",
       "level": 3,
       "content": "6.1.3 ROM (Read Only Memory)"
     },
     {
       "type": "paragraph",
-      "id": "rkycyp6"
+      "id": "0ce3z4n"
     },
     {
       "type": "paragraph",
-      "id": "wzf9pxv"
+      "id": "2gec3ug"
     },
     {
-      "id": "cih7ywf",
+      "id": "efrbfrv",
       "type": "list",
       "items": [
         null,
@@ -151,7 +150,7 @@
       ]
     },
     {
-      "id": "7zb1o84",
+      "id": "37jvs5c",
       "type": "heading",
       "level": 3,
       "content": "6.1.4 Cache Memory"
@@ -159,56 +158,56 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Parameter",
+        "Feature",
         "Primary Memory",
         "Secondary Memory"
       ],
       "rows": [
         [
-          "Data Volatility",
-          "Mostly volatile (RAM loses data without power)",
-          "Non-volatile (retains data permanently)"
+          "CPU Access",
+          "Directly accessible",
+          "Indirectly accessible (via I/O)"
         ],
         [
-          "CPU Direct Access",
-          "Directly accessible by the CPU",
-          "Indirectly accessible via I/O channels"
+          "Data Retention",
+          "Mostly Volatile (RAM)",
+          "Non-Volatile"
         ],
         [
-          "Speed & Performance",
-          "Much faster read/write speeds",
-          "Slower data transfer speeds"
+          "Speed & Cost",
+          "Faster and more expensive",
+          "Slower and less expensive"
         ],
         [
-          "Cost & Capacity",
-          "Higher cost per bit, lower storage capacity",
-          "Lower cost per bit, higher storage capacity"
+          "Storage Capacity",
+          "Limited capacity",
+          "Very high capacity"
         ]
       ],
-      "id": "15650p5"
+      "id": "xdbfqgr"
     },
     {
       "type": "paragraph",
-      "id": "skepdya"
+      "id": "qm8xgif"
     },
     {
-      "id": "1x1yxrj",
+      "id": "jcqd25x",
       "type": "heading",
       "level": 2,
       "content": "6.2 Secondary Memory"
     },
     {
       "type": "paragraph",
-      "id": "5pg038q"
+      "id": "xc1i3sh"
     },
     {
-      "id": "5880xif",
+      "id": "kf61093",
       "type": "heading",
       "level": 3,
       "content": "6.2.1 Types of Secondary Storage Devices"
     },
     {
-      "id": "fnobm8v",
+      "id": "rvi1si5",
       "type": "table",
       "rows": [
         {
@@ -262,26 +261,26 @@
       ]
     },
     {
-      "id": "2k2j1tq",
+      "id": "07f94a7",
       "type": "heading",
       "level": 2,
       "content": "6.3 Memory Units"
     },
     {
       "type": "paragraph",
-      "id": "4q4nr79"
+      "id": "6r8njlq"
     },
     {
       "type": "examAlert",
       "items": [
-        "Questions frequently test memory hierarchy speed order: Registers > Cache > RAM > Secondary Storage.",
-        "Remember key conversions: 1 Byte = 8 Bits, 1 Nibble = 4 Bits, and 1 KB = 1024 Bytes.",
-        "Distinguish volatile memory (RAM) from non-volatile memory (ROM, HDD, SSD, Flash Memory) for classification questions."
+        "Distinction between Volatile (RAM) and Non-Volatile (ROM/Secondary) memory is heavily tested.",
+        "Cache memory hierarchy (L1, L2, L3) and its position between CPU and RAM is a recurring topic.",
+        "Conversion between memory units (Bits, Bytes, KB, MB, GB, TB) frequently appears in numerical questions."
       ],
-      "id": "yz0d3ze"
+      "id": "eikza8m"
     },
     {
-      "id": "ak68lra",
+      "id": "s1h4kku",
       "type": "table",
       "rows": [
         {
@@ -336,13 +335,13 @@
       ]
     },
     {
-      "id": "7srq2zn",
+      "id": "7kgstog",
       "type": "heading",
       "level": 2,
       "content": "6.4 Primary vs Secondary Memory"
     },
     {
-      "id": "g3z4z91",
+      "id": "o5q8z73",
       "type": "table",
       "rows": [
         {
@@ -383,13 +382,13 @@
       ]
     },
     {
-      "id": "b8bp0rd",
+      "id": "35p43no",
       "type": "heading",
       "level": 2,
       "content": "6.5 Important Exam Points"
     },
     {
-      "id": "62aehvm",
+      "id": "31y01g6",
       "type": "list",
       "items": [
         null,

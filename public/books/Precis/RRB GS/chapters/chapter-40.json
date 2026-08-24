@@ -1,0 +1,603 @@
+{
+  "id": "bwxoetn",
+  "title": "RRB PHYSICS – CHAPTER 7",
+  "order": 40,
+  "blocks": [
+    {
+      "id": "h2uzvqj",
+      "type": "heading",
+      "level": 2,
+      "content": "LIGHT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light exhibits dual nature and undergoes reflection, refraction, dispersion, total internal reflection, and scattering.",
+        "The Mirror Formula is given by 1/f = 1/v + 1/u, while the Lens Formula is 1/f = 1/v - 1/u.",
+        "Power of a lens is the reciprocal of its focal length in meters (P = 1/f) and is expressed in Dioptres (D).",
+        "Total Internal Reflection requires light to travel from a denser to a rarer medium at an angle of incidence greater than the critical angle.",
+        "Defects of vision like Myopia are corrected with concave lenses, whereas Hypermetropia is corrected with convex lenses."
+      ],
+      "id": "fz64q98"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Topics",
+          "value": "21 Sections",
+          "icon": "book"
+        },
+        {
+          "label": "Core Subject",
+          "value": "Optics & Light",
+          "icon": "award"
+        },
+        {
+          "label": "Key Formulae",
+          "value": "Mirror & Lens Rules",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "High Yield RRB Topic",
+          "icon": "info"
+        }
+      ],
+      "id": "zsyoujf"
+    },
+    {
+      "type": "paragraph",
+      "id": "owzshfu"
+    },
+    {
+      "id": "sn1hi70",
+      "type": "heading",
+      "level": 3,
+      "content": "1. NATURE OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "b83jx9s"
+    },
+    {
+      "type": "paragraph",
+      "id": "3leovs7"
+    },
+    {
+      "type": "paragraph",
+      "id": "nv8v6n9"
+    },
+    {
+      "id": "czht4uy",
+      "type": "heading",
+      "level": 3,
+      "content": "2. REFLECTION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "honlius"
+    },
+    {
+      "type": "paragraph",
+      "id": "cmrt1pv"
+    },
+    {
+      "type": "paragraph",
+      "id": "u9bzp63"
+    },
+    {
+      "id": "qmt2ctq",
+      "type": "heading",
+      "level": 3,
+      "content": "3. MIRROR FORMULA"
+    },
+    {
+      "type": "paragraph",
+      "id": "e0ol47w"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x87vl46"
+    },
+    {
+      "id": "utyt4wq",
+      "type": "heading",
+      "level": 3,
+      "content": "4. TYPES OF MIRRORS"
+    },
+    {
+      "id": "dx4ve2m",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "id": "wnfktry",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6qhlzd6",
+      "type": "heading",
+      "level": 3,
+      "content": "5. REFRACTION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "joa76ds"
+    },
+    {
+      "type": "paragraph",
+      "id": "jgmpyvg"
+    },
+    {
+      "id": "qrligub",
+      "type": "heading",
+      "level": 3,
+      "content": "6. REFRACTIVE INDEX"
+    },
+    {
+      "type": "paragraph",
+      "id": "sj3jqkp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vobjr7x"
+    },
+    {
+      "id": "602x1wm",
+      "type": "heading",
+      "level": 3,
+      "content": "7. LENS FORMULA"
+    },
+    {
+      "type": "paragraph",
+      "id": "w5f4vd1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uvv5v1t"
+    },
+    {
+      "id": "7qjicx6",
+      "type": "heading",
+      "level": 3,
+      "content": "8. TYPES OF LENSES"
+    },
+    {
+      "id": "lhh4paj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b6x3qfj",
+      "type": "heading",
+      "level": 3,
+      "content": "9. POWER OF LENS"
+    },
+    {
+      "type": "paragraph",
+      "id": "kdwy1gm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kl34q7l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h5l8ufq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mc9epbe"
+    },
+    {
+      "id": "yghra0u",
+      "type": "heading",
+      "level": 3,
+      "content": "10. DISPERSION OF LIGHT"
+    },
+    {
+      "id": "ym9am49",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "type": "pullQuote",
+      "content": "SIGN CONVENTION (CARTESIAN SIGN RULE)",
+      "id": "uke250v"
+    },
+    {
+      "type": "paragraph",
+      "id": "7lns5ts"
+    },
+    {
+      "type": "paragraph",
+      "id": "05nbog4"
+    },
+    {
+      "type": "paragraph",
+      "id": "2orn9yj"
+    },
+    {
+      "id": "4vnmllg",
+      "type": "heading",
+      "level": 3,
+      "content": "11. TOTAL INTERNAL REFLECTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "ebznpc5"
+    },
+    {
+      "type": "paragraph",
+      "id": "9wz301n"
+    },
+    {
+      "type": "paragraph",
+      "id": "ulcoo9k"
+    },
+    {
+      "id": "ml4lf65",
+      "type": "heading",
+      "level": 3,
+      "content": "12. DEFECTS OF VISION"
+    },
+    {
+      "id": "dyf783z",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wkkoew1",
+      "type": "heading",
+      "level": 3,
+      "content": "13. SIGN CONVENTION (CARTESIAN SIGN RULE)"
+    },
+    {
+      "type": "paragraph",
+      "id": "bhgnc3r"
+    },
+    {
+      "type": "paragraph",
+      "id": "ozsrv8z"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdipzff"
+    },
+    {
+      "type": "paragraph",
+      "id": "ruk986k"
+    },
+    {
+      "type": "paragraph",
+      "id": "qe81bqf"
+    },
+    {
+      "type": "paragraph",
+      "id": "hk8djxc"
+    },
+    {
+      "id": "d5q26cu",
+      "type": "heading",
+      "level": 3,
+      "content": "14. IMPORTANT RAY DIAGRAM RULES (MIRRORS)"
+    },
+    {
+      "type": "paragraph",
+      "id": "l8o0vmk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Concave Lens",
+        "Convex Lens"
+      ],
+      "rows": [
+        [
+          "Beam Effect",
+          "Diverging",
+          "Converging"
+        ],
+        [
+          "Focal Length (f)",
+          "Negative (-)",
+          "Positive (+)"
+        ],
+        [
+          "Power (P)",
+          "Negative Dioptres",
+          "Positive Dioptres"
+        ],
+        [
+          "Vision Correction",
+          "Myopia (Short-sightedness)",
+          "Hypermetropia (Far-sightedness)"
+        ]
+      ],
+      "id": "80nlg6u"
+    },
+    {
+      "type": "paragraph",
+      "id": "aybn3kz"
+    },
+    {
+      "type": "paragraph",
+      "id": "czsg355"
+    },
+    {
+      "type": "paragraph",
+      "id": "hihx3nr"
+    },
+    {
+      "id": "18rdgit",
+      "type": "heading",
+      "level": 3,
+      "content": "15. IMPORTANT RAY DIAGRAM RULES (LENSES)"
+    },
+    {
+      "type": "paragraph",
+      "id": "0fnozbl"
+    },
+    {
+      "type": "paragraph",
+      "id": "gn481m7"
+    },
+    {
+      "type": "paragraph",
+      "id": "ifd18wv"
+    },
+    {
+      "type": "paragraph",
+      "id": "kr3mqlj"
+    },
+    {
+      "id": "l1djs62",
+      "type": "heading",
+      "level": 3,
+      "content": "16. REFRACTION THROUGH GLASS SLAB"
+    },
+    {
+      "type": "paragraph",
+      "id": "sgqr97r"
+    },
+    {
+      "type": "paragraph",
+      "id": "mt3if44"
+    },
+    {
+      "type": "paragraph",
+      "id": "p7bmmq2"
+    },
+    {
+      "id": "txyzgfr",
+      "type": "heading",
+      "level": 3,
+      "content": "17. CRITICAL ANGLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "xj530q3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7heotag"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ir5tyu"
+    },
+    {
+      "id": "ic37lv4",
+      "type": "heading",
+      "level": 3,
+      "content": "18. COMBINATION OF LENSES"
+    },
+    {
+      "type": "paragraph",
+      "id": "aasudhz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uo02d46"
+    },
+    {
+      "type": "paragraph",
+      "id": "fgtt4p0"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4y3jbr"
+    },
+    {
+      "id": "mzbxnvb",
+      "type": "heading",
+      "level": 3,
+      "content": "19. MAGNIFICATION (DETAILED)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "76ry22d"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Pay strict attention to sign conventions: Focal length is negative for concave optical elements and positive for convex ones.",
+        "Conditions for Total Internal Reflection (denser to rarer medium, i > critical angle) are repeatedly tested in RRB exams.",
+        "Differentiate clearly between Mirror Formula (1/f = 1/v + 1/u) and Lens Formula (1/f = 1/v - 1/u)."
+      ],
+      "id": "hpxa726"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1tt94fl"
+    },
+    {
+      "type": "paragraph",
+      "id": "o7vmri4"
+    },
+    {
+      "type": "paragraph",
+      "id": "arif0t1"
+    },
+    {
+      "type": "paragraph",
+      "id": "i75bboc"
+    },
+    {
+      "id": "m4dnybz",
+      "type": "heading",
+      "level": 3,
+      "content": "20. SCATTERING OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "i8cgblz"
+    },
+    {
+      "type": "paragraph",
+      "id": "qwpbwqp"
+    },
+    {
+      "type": "paragraph",
+      "id": "6gshhq8"
+    },
+    {
+      "type": "paragraph",
+      "id": "dtq2q4x"
+    },
+    {
+      "id": "i1wmjr9",
+      "type": "heading",
+      "level": 3,
+      "content": "21. ADVANCED RRB EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "zu6e40u"
+    },
+    {
+      "type": "paragraph",
+      "id": "wnmlysk"
+    },
+    {
+      "type": "paragraph",
+      "id": "2jj9lq2"
+    },
+    {
+      "type": "paragraph",
+      "id": "25twrc1"
+    },
+    {
+      "type": "paragraph",
+      "id": "26eceta"
+    }
+  ],
+  "enriched": true
+}

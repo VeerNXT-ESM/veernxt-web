@@ -1,0 +1,129 @@
+{
+  "id": "8txlmvq",
+  "title": "Tenure and Removal",
+  "order": 492,
+  "blocks": [
+    {
+      "id": "p5fcqty",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A judge of the Supreme Court can be removed from his office by an order of the President only after an address by Parliament has been presented to him in the same session.",
+      "id": "q8tmtvm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SC Judge Retirement Age",
+          "value": "65 Years",
+          "icon": "award"
+        },
+        {
+          "label": "HC Judge Retirement Age",
+          "value": "62 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Lok Sabha Motion Support",
+          "value": "100 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Rajya Sabha Motion Support",
+          "value": "50 Members",
+          "icon": "info"
+        }
+      ],
+      "id": "9fviixl"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Authority",
+        "Tenure / Retirement Age",
+        "Removal Authority & Procedure"
+      ],
+      "rows": [
+        [
+          "Supreme Court Judge",
+          "Until age of 65",
+          "President (Special Majority of Parliament on grounds of proved misbehaviour/incapacity)"
+        ],
+        [
+          "High Court Judge",
+          "Until age of 62",
+          "President (Same process as Supreme Court Judge)"
+        ],
+        [
+          "Comptroller & Auditor General",
+          "6 years or 65 years age",
+          "President (Same process as Supreme Court Judge)"
+        ],
+        [
+          "UPSC Chairman / Member",
+          "6 years or 65 years age",
+          "President (After Supreme Court reference and inquiry for misbehaviour)"
+        ]
+      ],
+      "id": "pcggr6r"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Judges of the Supreme Court hold office until they attain the age of 65 years, whereas High Court judges hold office until 62 years.",
+        "Grounds for the removal of Supreme Court and High Court judges are restricted to 'proved misbehaviour' or 'incapacity'.",
+        "The process of removal requires a special majority in both Houses of Parliament in the same session.",
+        "The Comptroller and Auditor General (CAG) and Chief Election Commissioner (CEC) are removed in the same manner and on the same grounds as a judge of the Supreme Court.",
+        "Members of the UPSC can be removed by the President only after an inquiry by the Supreme Court."
+      ],
+      "id": "8v1n2v6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "No judge of the Supreme Court or High Court has been successfully impeached so far in Indian history.",
+        "The term 'violation of the Constitution' is the ground for presidential impeachment, but it is not defined in the Constitution.",
+        "Removal motion for a judge must be signed by at least 100 members in Lok Sabha or 50 members in Rajya Sabha before submission to the Presiding Officer."
+      ],
+      "id": "mx3msqt"
+    },
+    {
+      "type": "paragraph",
+      "id": "y47it1l"
+    }
+  ],
+  "enriched": true
+}

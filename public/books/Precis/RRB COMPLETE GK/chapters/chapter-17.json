@@ -1,0 +1,110 @@
+{
+  "id": "1ij1ilz",
+  "title": "Coriolis Effect",
+  "order": 17,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1ftc9ul"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Deflection at Equator",
+          "value": "Zero (0°)",
+          "icon": "info"
+        },
+        {
+          "label": "Deflection at Poles",
+          "value": "Maximum",
+          "icon": "check"
+        },
+        {
+          "label": "Discovered In",
+          "value": "1835",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Rule",
+          "value": "Ferrel's Law",
+          "icon": "book"
+        }
+      ],
+      "id": "0ecclwt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Coriolis force is an apparent force caused by Earth's rotation from west to east.",
+        "It deflects freely moving objects to the right in the Northern Hemisphere and to the left in the Southern Hemisphere.",
+        "The magnitude of the Coriolis force increases with latitude, reaching zero at the equator and maximum at the poles.",
+        "The force acts perpendicular to the direction of motion and affects wind direction, not wind speed.",
+        "Absence of Coriolis force at the equator prevents the formation of tropical cyclones in the 0°–5° latitude belt."
+      ],
+      "id": "qsp40zu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Coriolis force deflects fluids to the right in the Northern Hemisphere and to the left in the Southern Hemisphere due to Earth's rotation.",
+      "id": "ovw4k7e"
+    },
+    {
+      "type": "paragraph",
+      "id": "mbcr7jk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Northern Hemisphere",
+        "Southern Hemisphere"
+      ],
+      "rows": [
+        [
+          "Direction of Deflection",
+          "To the Right",
+          "To the Left"
+        ],
+        [
+          "Cyclonic Wind Movement",
+          "Counter-clockwise",
+          "Clockwise"
+        ],
+        [
+          "Anticyclonic Wind Movement",
+          "Clockwise",
+          "Counter-clockwise"
+        ]
+      ],
+      "id": "wa675x2"
+    },
+    {
+      "type": "paragraph",
+      "id": "azznefs"
+    },
+    {
+      "type": "paragraph",
+      "id": "1xdxlip"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Why do tropical cyclones not originate at the equator? Because the Coriolis force is zero at 0° latitude, preventing cyclonic vortex formation.",
+        "Ferrel's Law states that any fluid moving horizontally in the Northern Hemisphere is deflected to its right, and in the Southern Hemisphere to its left.",
+        "Coriolis force is directly proportional to wind velocity and the sine of latitude (F ∝ v sin φ)."
+      ],
+      "id": "me1c5yg"
+    },
+    {
+      "type": "paragraph",
+      "id": "laxjm1l"
+    },
+    {
+      "type": "paragraph",
+      "id": "s773lui"
+    }
+  ],
+  "enriched": true
+}

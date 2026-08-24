@@ -1,0 +1,89 @@
+{
+  "id": "oxgz2gl",
+  "title": "14. Exam Traps",
+  "order": 633,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "evr9hbm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Avoiding exam traps is not just about knowledge, but about strategy, speed, and careful question reading.",
+      "id": "npyb9tp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Identification Marker",
+        "Avoidance Strategy"
+      ],
+      "rows": [
+        [
+          "Extreme Statements",
+          "Contains words like 'Always', 'Never', 'Only'",
+          "Check for valid exceptions before selecting the option"
+        ],
+        [
+          "Negative Phrasing",
+          "Uses 'NOT', 'EXCEPT', or 'INCORRECT'",
+          "Rephrase the question into a positive statement before answering"
+        ],
+        [
+          "Time Sink",
+          "Overly convoluted text or multi-step calculation",
+          "Skip immediately and attempt only if time permits at the end"
+        ]
+      ],
+      "id": "cjcv9vr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "0.25 - 0.33",
+          "icon": "info"
+        },
+        {
+          "label": "Common Traps",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Time Limit / Question",
+          "value": "1 Minute",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Accuracy",
+          "value": "90%+",
+          "icon": "check"
+        }
+      ],
+      "id": "yolev23"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always circle keywords like 'NOT', 'INCORRECT', or 'EXCEPT' before reviewing response options.",
+        "Watch out for options containing correct numeric values paired with incorrect units of measurement.",
+        "Never spend more than 60-90 seconds on a single complex trap during your first pass through the paper."
+      ],
+      "id": "kjad467"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Exam traps are deliberately crafted by paper setters to trigger negative marking and consume excess time.",
+        "Extreme keywords such as 'always', 'never', and 'completely' frequently signal false statements in multiple-choice questions.",
+        "Question phrasing containing 'NOT', 'INCORRECT', or 'EXCEPT' causes the highest rate of avoidable errors.",
+        "Effective exam strategy requires skipping time-sink traps during the initial question sweep."
+      ],
+      "id": "hsblpml"
+    }
+  ],
+  "enriched": true
+}

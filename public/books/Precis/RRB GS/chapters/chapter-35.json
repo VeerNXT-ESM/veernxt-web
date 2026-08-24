@@ -1,0 +1,1183 @@
+{
+  "id": "p46axt2",
+  "title": "PHYSICS – CHAPTER 3",
+  "order": 35,
+  "blocks": [
+    {
+      "id": "stua4zb",
+      "type": "heading",
+      "level": 2,
+      "content": "FORCE AND LAWS OF MOTION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Force causes changes in an object's state of motion, velocity, or direction.",
+        "Inertia is the inherent property of a body to resist any change in its state of rest or uniform motion.",
+        "Linear momentum is the product of mass and velocity, conserved in isolated systems.",
+        "Friction opposes relative motion between contacting surfaces and varies across static, kinetic, and rolling types.",
+        "Weight varies with gravitational acceleration, whereas mass remains constant regardless of location."
+      ],
+      "id": "59bzrud"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topics",
+          "value": "21 Sections",
+          "icon": "book"
+        },
+        {
+          "label": "Key Subject",
+          "value": "Laws of Motion",
+          "icon": "award"
+        },
+        {
+          "label": "Target Exam",
+          "value": "RRB & Competitive",
+          "icon": "check"
+        },
+        {
+          "label": "Practice Set",
+          "value": "5 MCQs",
+          "icon": "clock"
+        }
+      ],
+      "id": "njxdzib"
+    },
+    {
+      "type": "paragraph",
+      "id": "f07e1sq"
+    },
+    {
+      "id": "xkdcrma",
+      "type": "heading",
+      "level": 3,
+      "content": "1. BASIC CONCEPT OF FORCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvm8228"
+    },
+    {
+      "type": "paragraph",
+      "id": "fujp50m"
+    },
+    {
+      "type": "paragraph",
+      "id": "y5hkqxm"
+    },
+    {
+      "type": "paragraph",
+      "id": "9jihh39"
+    },
+    {
+      "type": "paragraph",
+      "id": "ser3vsm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kj8vlky"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1yjte4z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tyxsdgb"
+    },
+    {
+      "id": "ux368gl",
+      "type": "heading",
+      "level": 3,
+      "content": "2. TYPES OF FORCES"
+    },
+    {
+      "id": "2q65blj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24p5va8",
+      "type": "heading",
+      "level": 3,
+      "content": "3. BALANCED AND UNBALANCED FORCES"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ae2ogh"
+    },
+    {
+      "type": "paragraph",
+      "id": "43htlva"
+    },
+    {
+      "id": "fhpfi11",
+      "type": "heading",
+      "level": 3,
+      "content": "4. INERTIA"
+    },
+    {
+      "type": "paragraph",
+      "id": "vw0b6v6"
+    },
+    {
+      "type": "paragraph",
+      "id": "7slu47q"
+    },
+    {
+      "type": "paragraph",
+      "id": "j9l8pnm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nvjwuns"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "womh9fo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9y7xmk6"
+    },
+    {
+      "id": "ueye0q0",
+      "type": "heading",
+      "level": 3,
+      "content": "5. MOMENTUM"
+    },
+    {
+      "type": "paragraph",
+      "id": "l7c4eb2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "808z18w"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e2ldns4"
+    },
+    {
+      "type": "paragraph",
+      "id": "ahtoakv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "71qapgv"
+    },
+    {
+      "id": "mc0r8nj",
+      "type": "heading",
+      "level": 3,
+      "content": "6. IMPULSE"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3ohpt6a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iw3tj65"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e8ux1za"
+    },
+    {
+      "type": "paragraph",
+      "id": "owekkbf"
+    },
+    {
+      "id": "0bmlypq",
+      "type": "heading",
+      "level": 3,
+      "content": "7. NEWTON’S LAWS OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "4mig40b"
+    },
+    {
+      "type": "paragraph",
+      "id": "et66t87"
+    },
+    {
+      "type": "paragraph",
+      "id": "pblt498"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ml8qr9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gzb5qwf"
+    },
+    {
+      "type": "paragraph",
+      "id": "opb3ird"
+    },
+    {
+      "type": "paragraph",
+      "id": "8x2t3yp"
+    },
+    {
+      "type": "paragraph",
+      "id": "ra0ziqz"
+    },
+    {
+      "id": "k6mi7t7",
+      "type": "heading",
+      "level": 3,
+      "content": "8. LAW OF CONSERVATION OF MOMENTUM"
+    },
+    {
+      "type": "paragraph",
+      "id": "u7cb48q"
+    },
+    {
+      "id": "0j1baot",
+      "type": "heading",
+      "level": 3,
+      "content": "9. ROCKET PROPULSION"
+    },
+    {
+      "type": "paragraph",
+      "id": "j2jbzts"
+    },
+    {
+      "type": "paragraph",
+      "id": "pq9s73p"
+    },
+    {
+      "id": "4enn5dd",
+      "type": "heading",
+      "level": 3,
+      "content": "10. FRICTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "5p7rvco"
+    },
+    {
+      "type": "paragraph",
+      "id": "ky29d1q"
+    },
+    {
+      "type": "paragraph",
+      "id": "xc720vc"
+    },
+    {
+      "type": "paragraph",
+      "id": "uy81mds"
+    },
+    {
+      "type": "paragraph",
+      "id": "aadvwas"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0ndxadd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uwuopvo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "87qeglb"
+    },
+    {
+      "id": "1nph252",
+      "type": "heading",
+      "level": 3,
+      "content": "11. PRESSURE"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l2q3dm2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d0k9gow"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pvmqvq5"
+    },
+    {
+      "id": "4sma9zc",
+      "type": "heading",
+      "level": 3,
+      "content": "12. FRAME OF REFERENCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "48lykso"
+    },
+    {
+      "type": "paragraph",
+      "id": "pl2qvcu"
+    },
+    {
+      "type": "paragraph",
+      "id": "wphg0jo"
+    },
+    {
+      "id": "yg481p4",
+      "type": "heading",
+      "level": 3,
+      "content": "13. PSEUDO FORCE (DETAILED)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ftzuv4f"
+    },
+    {
+      "type": "paragraph",
+      "id": "8t8p9m8"
+    },
+    {
+      "type": "paragraph",
+      "id": "odlmsi8"
+    },
+    {
+      "type": "paragraph",
+      "id": "1oosmnj"
+    },
+    {
+      "id": "hd7t2jg",
+      "type": "heading",
+      "level": 3,
+      "content": "14. FREE BODY DIAGRAM (FBD)"
+    },
+    {
+      "type": "paragraph",
+      "id": "uoqorjn"
+    },
+    {
+      "type": "paragraph",
+      "id": "2l7ckuk"
+    },
+    {
+      "type": "paragraph",
+      "id": "csioo25"
+    },
+    {
+      "type": "paragraph",
+      "id": "plwps1o"
+    },
+    {
+      "type": "paragraph",
+      "id": "hbopdml"
+    },
+    {
+      "type": "paragraph",
+      "id": "ugvbqr1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "MASS VS WEIGHT (DETAILED COMPARISON)",
+      "id": "ley954d"
+    },
+    {
+      "type": "paragraph",
+      "id": "5okycp5"
+    },
+    {
+      "id": "xd64093",
+      "type": "heading",
+      "level": 3,
+      "content": "15. EQUILIBRIUM OF A BODY"
+    },
+    {
+      "type": "paragraph",
+      "id": "amzfqap"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ptnm48w"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ot1nl9"
+    },
+    {
+      "type": "paragraph",
+      "id": "3cwb1py"
+    },
+    {
+      "type": "paragraph",
+      "id": "rlw4d9x"
+    },
+    {
+      "type": "paragraph",
+      "id": "sh9sot2"
+    },
+    {
+      "id": "uetqb05",
+      "type": "heading",
+      "level": 3,
+      "content": "16. MASS VS WEIGHT (DETAILED COMPARISON)"
+    },
+    {
+      "id": "ml7gmla",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jxfrhob",
+      "type": "heading",
+      "level": 3,
+      "content": "17. FRICTION (VERY DETAILED)"
+    },
+    {
+      "type": "paragraph",
+      "id": "m4mplg0"
+    },
+    {
+      "id": "78pawkb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "dafibnr"
+    },
+    {
+      "type": "paragraph",
+      "id": "fa52yhl"
+    },
+    {
+      "type": "paragraph",
+      "id": "g1hervl"
+    },
+    {
+      "id": "3nc2kym",
+      "type": "heading",
+      "level": 3,
+      "content": "18. IMPULSE-MOMENTUM THEOREM"
+    },
+    {
+      "type": "paragraph",
+      "id": "i0x4q9e"
+    },
+    {
+      "type": "paragraph",
+      "id": "wj43jrs"
+    },
+    {
+      "type": "paragraph",
+      "id": "2i67asz"
+    },
+    {
+      "type": "paragraph",
+      "id": "ld55r67"
+    },
+    {
+      "type": "paragraph",
+      "id": "vtsy4s8"
+    },
+    {
+      "id": "ezv4ykf",
+      "type": "heading",
+      "level": 3,
+      "content": "19. TYPES OF COLLISION"
+    },
+    {
+      "id": "uged3m2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lltp03i",
+      "type": "heading",
+      "level": 3,
+      "content": "20. FORCE IN CIRCULAR MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "cy158g9"
+    },
+    {
+      "type": "paragraph",
+      "id": "qkag4q8"
+    },
+    {
+      "type": "paragraph",
+      "id": "kdqumhk"
+    },
+    {
+      "id": "m9yoe3t",
+      "type": "heading",
+      "level": 3,
+      "content": "21. ADVANCED RRB EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "gpo1roz"
+    },
+    {
+      "type": "paragraph",
+      "id": "zagwp1u"
+    },
+    {
+      "type": "paragraph",
+      "id": "a9v3sm1"
+    },
+    {
+      "type": "paragraph",
+      "id": "0alkfjv"
+    },
+    {
+      "type": "paragraph",
+      "id": "wr1pkpn"
+    },
+    {
+      "id": "ewljv3l",
+      "type": "heading",
+      "level": 2,
+      "content": "MCQs"
+    },
+    {
+      "id": "q4lzyn6",
+      "type": "heading",
+      "level": 3,
+      "content": "Q1."
+    },
+    {
+      "type": "paragraph",
+      "id": "o2tcqt9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1n0ow19"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pv25kp5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "utnfae6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Mass",
+        "Weight"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Quantity of matter contained in a body",
+          "Gravitational force exerted on a body by Earth"
+        ],
+        [
+          "Quantity Type",
+          "Scalar quantity",
+          "Vector quantity"
+        ],
+        [
+          "SI Unit",
+          "Kilogram (kg)",
+          "Newton (N)"
+        ],
+        [
+          "Constancy",
+          "Remains constant everywhere",
+          "Varies depending on acceleration due to gravity (g)"
+        ]
+      ],
+      "id": "7h97oo4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1j8pff7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rz98ijf"
+    },
+    {
+      "type": "paragraph",
+      "id": "mz748ic"
+    },
+    {
+      "type": "paragraph",
+      "id": "wk2fy2o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "r8hux8c"
+    },
+    {
+      "type": "paragraph",
+      "id": "s47yron"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eandk04"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qhqpxop"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z8yfp3x"
+    },
+    {
+      "type": "paragraph",
+      "id": "4t3dw8f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3hqockv"
+    },
+    {
+      "type": "paragraph",
+      "id": "orbikqp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f59brua"
+    },
+    {
+      "id": "isk7tm9",
+      "type": "heading",
+      "level": 3,
+      "content": "Q2."
+    },
+    {
+      "type": "paragraph",
+      "id": "1f0or5g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pjkasq8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wou0vot"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8rnsvzp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gfeflex"
+    },
+    {
+      "type": "paragraph",
+      "id": "f9txj80"
+    },
+    {
+      "type": "paragraph",
+      "id": "1fqyggf"
+    },
+    {
+      "type": "paragraph",
+      "id": "089z6gi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yaz2zov"
+    },
+    {
+      "type": "paragraph",
+      "id": "4vjwz2t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hg9j35q"
+    },
+    {
+      "type": "paragraph",
+      "id": "4b9feff"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l2s9bwo"
+    },
+    {
+      "type": "paragraph",
+      "id": "nd4w5bh"
+    },
+    {
+      "type": "paragraph",
+      "id": "qh0skko"
+    },
+    {
+      "id": "ua1k3ve",
+      "type": "heading",
+      "level": 3,
+      "content": "Q3."
+    },
+    {
+      "type": "paragraph",
+      "id": "ly3fapi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ffq1qw4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sna8pbn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "caj8uqh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ovhzetj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nmvwfcv"
+    },
+    {
+      "type": "paragraph",
+      "id": "6hex8c3"
+    },
+    {
+      "type": "paragraph",
+      "id": "934ex3r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h1o88pf"
+    },
+    {
+      "type": "paragraph",
+      "id": "n41bc1y"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mhhiwgr"
+    },
+    {
+      "type": "paragraph",
+      "id": "lvc0e5g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bg64y49"
+    },
+    {
+      "type": "paragraph",
+      "id": "25fwr4i"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h35x18c"
+    },
+    {
+      "id": "0oxi4ps",
+      "type": "heading",
+      "level": 3,
+      "content": "Q4."
+    },
+    {
+      "type": "paragraph",
+      "id": "ukms5k4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wkww4k6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gnsdzgb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions comparing Mass vs Weight and their SI units frequently appear in RRB exams.",
+        "Application of the Law of Conservation of Momentum in recoil of guns and rocket propulsion is a top numerical topic.",
+        "Understanding Pseudo Force is essential for solving problems involving non-inertial frames of reference."
+      ],
+      "id": "jxx7msr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y5iqi30"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zrrso38"
+    },
+    {
+      "type": "paragraph",
+      "id": "d5w9dci"
+    },
+    {
+      "type": "paragraph",
+      "id": "uf5px64"
+    },
+    {
+      "type": "paragraph",
+      "id": "thtlymv"
+    },
+    {
+      "type": "paragraph",
+      "id": "h1ogbjf"
+    },
+    {
+      "type": "paragraph",
+      "id": "iomqu88"
+    },
+    {
+      "type": "paragraph",
+      "id": "sbthjfb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9p4cbrk"
+    },
+    {
+      "type": "paragraph",
+      "id": "fm8of59"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ef266or"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "reaquxs"
+    },
+    {
+      "type": "paragraph",
+      "id": "4h0hwkx"
+    },
+    {
+      "type": "paragraph",
+      "id": "vcc6izg"
+    },
+    {
+      "id": "hxj5qp9",
+      "type": "heading",
+      "level": 3,
+      "content": "Q5."
+    },
+    {
+      "type": "paragraph",
+      "id": "yzpyfuc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hsvu3j8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m0i3ror"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4gdrmte"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8xt9clz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wy5akzk"
+    },
+    {
+      "type": "paragraph",
+      "id": "8lqcbq2"
+    },
+    {
+      "type": "paragraph",
+      "id": "j34mghy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "utni357"
+    },
+    {
+      "type": "paragraph",
+      "id": "q5w667y"
+    },
+    {
+      "type": "paragraph",
+      "id": "onk3j3e"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ddn5hmk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e50kcxe"
+    },
+    {
+      "type": "paragraph",
+      "id": "l150o20"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g5ymruf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pgeqltj"
+    }
+  ],
+  "enriched": true
+}

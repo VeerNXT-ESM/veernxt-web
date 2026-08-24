@@ -1,0 +1,103 @@
+{
+  "id": "b9sesg5",
+  "title": "7. Transportation by Glaciers",
+  "order": 139,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qrpmb7h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Transport Zones",
+          "value": "3 Main Types",
+          "icon": "layers"
+        },
+        {
+          "label": "Sediment Sorting",
+          "value": "Unsorted (Till)",
+          "icon": "check"
+        },
+        {
+          "label": "Key Landform",
+          "value": "Moraines",
+          "icon": "book"
+        },
+        {
+          "label": "Transport Speed",
+          "value": "cm to m/day",
+          "icon": "clock"
+        }
+      ],
+      "id": "l8ihqhv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Unlike running water or wind, glaciers transport unsorted rock material ranging from fine rock flour to giant angular boulders without any hydraulic sorting.",
+      "id": "votg7ov"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Supraglacial Transport",
+        "Subglacial Transport"
+      ],
+      "rows": [
+        [
+          "Position",
+          "Carried on the top surface of the glacier",
+          "Dragged beneath the glacier along the bedrock sole"
+        ],
+        [
+          "Origin of Debris",
+          "Frost weathering and rockfalls from valley slopes",
+          "Basal plucking and abrasion of underlying bedrock"
+        ],
+        [
+          "Clast Appearance",
+          "Angular and sharp with minimal edge rounding",
+          "Sub-rounded, faceted, and covered in linear striations"
+        ],
+        [
+          "Erosional Action",
+          "Passive transportation on moving ice surface",
+          "Active grinding, producing fine rock flour"
+        ]
+      ],
+      "id": "4frsomv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Glaciers act as massive natural conveyor belts, transporting debris ranging from fine rock flour to huge boulders.",
+        "Glacial load is categorized into supraglacial (surface debris), englacial (internal load), and subglacial (bed load) transport.",
+        "Unlike water or wind, glacial transportation does not sort material by size, producing poorly sorted sediment known as glacial till.",
+        "Glacial erratics are large boulders transported far from their source and deposited onto bedrock of completely different composition.",
+        "Medial moraines are created when two converging valley glaciers merge their adjacent lateral moraines together."
+      ],
+      "id": "ahqjuda"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Glacial till is unsorted and unstratified, whereas fluvio-glacial outwash deposits are sorted and stratified.",
+        "Medial moraines form specifically at the confluence of two valley glaciers combining their inner lateral moraines.",
+        "Glacial erratics serve as critical indicators for geologists to trace the exact direction of historic ice sheet movements."
+      ],
+      "id": "8uzu1aq"
+    },
+    {
+      "type": "paragraph",
+      "id": "08ovah2"
+    },
+    {
+      "type": "paragraph",
+      "id": "3fy43wt"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,328 @@
+{
+  "id": "qt5pz3d",
+  "title": "Chapter 13: Cyber Security",
+  "order": 13,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "m97p2qi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "Cyber Security",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Threats",
+          "value": "Viruses & Malware",
+          "icon": "info"
+        },
+        {
+          "label": "Key Defenses",
+          "value": "Firewall & Antivirus",
+          "icon": "check"
+        },
+        {
+          "label": "Attack Vectors",
+          "value": "Phishing & Hacking",
+          "icon": "award"
+        }
+      ],
+      "id": "l4chjnu"
+    },
+    {
+      "id": "dw8ya24",
+      "type": "heading",
+      "level": 2,
+      "content": "13.1 Introduction to Cyber Security"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Cyber security encompasses essential concepts for protecting digital systems, networks, and data.",
+        "Computer viruses and malware are distinct forms of malicious threats with specific characteristics.",
+        "Firewalls and antivirus software serve as key defense mechanisms against security breaches.",
+        "Understanding phishing, hacking, and cyber safety practices is vital for digital protection."
+      ],
+      "id": "cse2oxt"
+    },
+    {
+      "type": "paragraph",
+      "id": "42vyaal"
+    },
+    {
+      "id": "m4nuhbg",
+      "type": "heading",
+      "level": 3,
+      "content": "13.1.1 Importance of Cyber Security"
+    },
+    {
+      "id": "bps9p7p",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "iw8n6kw",
+      "type": "heading",
+      "level": 2,
+      "content": "13.2 Computer Virus"
+    },
+    {
+      "type": "paragraph",
+      "id": "87k0eqo"
+    },
+    {
+      "id": "4du31g8",
+      "type": "heading",
+      "level": 3,
+      "content": "13.2.1 Characteristics of Computer Virus"
+    },
+    {
+      "id": "jy9k1gv",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "35cdkxn",
+      "type": "heading",
+      "level": 3,
+      "content": "13.2.2 Types of Computer Viruses"
+    },
+    {
+      "id": "mqo7q0c",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "13.1 Introduction to Cyber Security",
+      "id": "b2xod7q"
+    },
+    {
+      "id": "5of8xpp",
+      "type": "heading",
+      "level": 2,
+      "content": "13.3 Malware"
+    },
+    {
+      "type": "paragraph",
+      "id": "dlh327f"
+    },
+    {
+      "id": "lve7blb",
+      "type": "heading",
+      "level": 3,
+      "content": "13.3.1 Types of Malware"
+    },
+    {
+      "id": "nh3okzy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z5csyk1",
+      "type": "heading",
+      "level": 2,
+      "content": "13.4 Firewall"
+    },
+    {
+      "type": "paragraph",
+      "id": "xrl36y4"
+    },
+    {
+      "type": "paragraph",
+      "id": "i7a65gq"
+    },
+    {
+      "id": "gnd7x16",
+      "type": "heading",
+      "level": 2,
+      "content": "13.5 Antivirus"
+    },
+    {
+      "type": "paragraph",
+      "id": "mjiv3ga"
+    },
+    {
+      "id": "vi8edst",
+      "type": "heading",
+      "level": 3,
+      "content": "13.5.1 Functions of Antivirus Software"
+    },
+    {
+      "id": "6rjch1f",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "nts1qgg",
+      "type": "heading",
+      "level": 2,
+      "content": "13.6 Phishing and Hacking"
+    },
+    {
+      "id": "4v2419h",
+      "type": "heading",
+      "level": 3,
+      "content": "13.6.1 Phishing"
+    },
+    {
+      "type": "paragraph",
+      "id": "2cjdw67"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between various types of computer viruses and malware categories.",
+        "Understand the primary operational functions of firewalls vs antivirus software.",
+        "Recognize key differences between phishing techniques and hacking methods.",
+        "Memorize core cyber safety practices frequently tested in competitive examinations."
+      ],
+      "id": "ik81c6p"
+    },
+    {
+      "id": "ypt3fma",
+      "type": "heading",
+      "level": 3,
+      "content": "13.6.2 Hacking"
+    },
+    {
+      "type": "paragraph",
+      "id": "cfh68l2"
+    },
+    {
+      "id": "nzctsn3",
+      "type": "heading",
+      "level": 2,
+      "content": "13.7 Cyber Safety Practices"
+    },
+    {
+      "id": "z6apl8j",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "vt9wmch",
+      "type": "heading",
+      "level": 2,
+      "content": "13.8 Important Exam Points"
+    },
+    {
+      "id": "qm65pqp",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

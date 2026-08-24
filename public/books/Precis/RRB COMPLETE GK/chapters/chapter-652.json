@@ -1,0 +1,84 @@
+{
+  "id": "enf537k",
+  "title": "Chapter 30: Food Corporation of India (FCI)",
+  "order": 652,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hqm5wi7"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Food Corporation of India was setup under the Food Corporation Act 1964, in order to fulfill the objectives of the Food Policy.",
+      "id": "c7833nn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Buffer Stock",
+        "Operational Stock"
+      ],
+      "rows": [
+        [
+          "Purpose",
+          "Strategic reserve for emergency shortages and price stabilization",
+          "Regular monthly distribution through PDS and welfare schemes"
+        ],
+        [
+          "Time Horizon",
+          "Maintained for long-term food security emergencies",
+          "Maintained for short-term operational fulfillment"
+        ]
+      ],
+      "id": "5prgzgl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "FCI Act 1964",
+          "icon": "book"
+        },
+        {
+          "label": "First Office",
+          "value": "Thanjavur",
+          "icon": "info"
+        },
+        {
+          "label": "Headquarters",
+          "value": "New Delhi",
+          "icon": "check"
+        }
+      ],
+      "id": "e4h97ck"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "FCI was formally inaugurated on 14th January 1965 at Thanjavur, Tamil Nadu.",
+        "MSP is recommended by the Commission for Agricultural Costs and Prices (CACP) and approved by CCEA.",
+        "Buffer stock norms for foodgrains are fixed quarterly by the Government of India."
+      ],
+      "id": "j12u6za"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "FCI was established under the Food Corporation Act, 1964 to execute the national food policy.",
+        "Main objectives include providing price support to farmers, distributing foodgrains via PDS, and maintaining strategic reserves.",
+        "Procurement of foodgrains is undertaken at Minimum Support Price (MSP) announced by the Central Government.",
+        "FCI plays a central role in managing food security through buffer stock management and inter-state movement of grains."
+      ],
+      "id": "fgiulie"
+    }
+  ],
+  "enriched": true
+}

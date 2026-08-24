@@ -1,0 +1,311 @@
+{
+  "id": "lw4sj0u",
+  "title": "Chapter 5: Light",
+  "order": 54,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "xd7zsbe"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed in Vacuum",
+          "value": "3 × 10⁸ m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Visible Wavelength",
+          "value": "400 - 700 nm",
+          "icon": "info"
+        },
+        {
+          "label": "Refractive Index (Vacuum)",
+          "value": "1.0",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Colors",
+          "value": "3 (Red, Green, Blue)",
+          "icon": "book"
+        }
+      ],
+      "id": "hf1yuc8"
+    },
+    {
+      "id": "2sab9qp",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nature of Light"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light exhibits dual nature: both wave-like (interference, diffraction) and particle-like (photoelectric effect) properties.",
+        "Reflection follows two laws: the angle of incidence equals the angle of reflection, and incident ray, reflected ray, and normal lie in the same plane.",
+        "Refraction occurs due to the change in speed of light when traveling from one transparent medium to another, governed by Snell's Law.",
+        "Convex lenses act as converging lenses forming real or virtual images, while Concave lenses act as diverging lenses forming virtual, erect images.",
+        "Dispersion is the splitting of white light into its constituent seven colors (VIBGYOR) when passing through a glass prism."
+      ],
+      "id": "tzxeajk"
+    },
+    {
+      "type": "paragraph",
+      "id": "mgp1khv"
+    },
+    {
+      "type": "paragraph",
+      "id": "tgnogt7"
+    },
+    {
+      "type": "paragraph",
+      "id": "2qw712o"
+    },
+    {
+      "type": "paragraph",
+      "id": "v4eud2f"
+    },
+    {
+      "id": "zu5wb1c",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Sources of Light"
+    },
+    {
+      "id": "36e1ncu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qzk00of",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Reflection of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "0yauh5h"
+    },
+    {
+      "type": "paragraph",
+      "id": "qod36zt"
+    },
+    {
+      "type": "paragraph",
+      "id": "pvxl19w"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Light is a form of electromagnetic radiation that enables vision and travels at a speed of 3 × 10⁸ m/s in vacuum.",
+      "id": "e4k9504"
+    },
+    {
+      "type": "paragraph",
+      "id": "oycd2po"
+    },
+    {
+      "id": "5907pk0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Types of Reflection"
+    },
+    {
+      "id": "9pzscy2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gxj5l7k",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Refraction of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "xwhz74w"
+    },
+    {
+      "type": "paragraph",
+      "id": "d27q3cc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Convex Lens (Converging)",
+        "Concave Lens (Diverging)"
+      ],
+      "rows": [
+        [
+          "Shape",
+          "Thicker at the center, thinner at the edges",
+          "Thinner at the center, thicker at the edges"
+        ],
+        [
+          "Action on Light Rays",
+          "Converges parallel light rays to a real focal point",
+          "Diverges parallel light rays away from a virtual focus"
+        ],
+        [
+          "Nature of Image",
+          "Real & inverted (mostly), Virtual & erect when object < f",
+          "Always virtual, erect, and diminished"
+        ],
+        [
+          "Correction of Vision Defect",
+          "Hypermetropia (Far-sightedness)",
+          "Myopia (Near-sightedness)"
+        ]
+      ],
+      "id": "9hhjr1l"
+    },
+    {
+      "type": "paragraph",
+      "id": "26xpb5x"
+    },
+    {
+      "type": "paragraph",
+      "id": "ngki4fn"
+    },
+    {
+      "id": "fm2m5hk",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Lenses"
+    },
+    {
+      "id": "zcqffiv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u0lq76u",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Optical Instruments"
+    },
+    {
+      "type": "paragraph",
+      "id": "8r2tqj5"
+    },
+    {
+      "type": "paragraph",
+      "id": "24ig62u"
+    },
+    {
+      "type": "paragraph",
+      "id": "lxq5p6b"
+    },
+    {
+      "id": "53kp9w8",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Dispersion of Light"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Total Internal Reflection (TIR) requires light to travel from a denser to a rarer medium at an angle greater than the critical angle; it is the principle behind Optical Fibers and Mirages.",
+        "Myopia (Short-sightedness) is corrected using a Concave lens, whereas Hypermetropia (Far-sightedness) is corrected using a Convex lens.",
+        "Red light scatters the least due to its longer wavelength, making it ideal for danger signals, while Blue light scatters the most in the atmosphere.",
+        "Power of a lens is measured in Diopters (D) and is calculated as the reciprocal of focal length in meters (P = 1/f)."
+      ],
+      "id": "gr0lpj9"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ougvq4"
+    },
+    {
+      "id": "r18hzl1",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "grjurvr"
+    },
+    {
+      "type": "paragraph",
+      "id": "husjcgm"
+    },
+    {
+      "type": "paragraph",
+      "id": "8321hf6"
+    },
+    {
+      "type": "paragraph",
+      "id": "rzzkwlr"
+    }
+  ],
+  "enriched": true
+}

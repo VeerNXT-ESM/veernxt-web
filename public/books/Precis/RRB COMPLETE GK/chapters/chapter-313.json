@@ -1,0 +1,97 @@
+{
+  "id": "jum3jng",
+  "title": "RRB Quick Revision Box",
+  "order": 313,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "veaw6kg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Railway Zones",
+          "value": "18 Zones",
+          "icon": "book"
+        },
+        {
+          "label": "First Train Run",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Nationalized",
+          "value": "1951",
+          "icon": "award"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "info"
+        }
+      ],
+      "id": "04ilafu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Mumbai and Thane on April 16, 1853.",
+      "id": "tyu1ni7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (mm)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm",
+          "Mainline passenger and heavy freight networks"
+        ],
+        [
+          "Meter Gauge",
+          "1000 mm",
+          "Secondary lines currently undergoing Project Unigauge conversion"
+        ],
+        [
+          "Narrow Gauge",
+          "762 / 610 mm",
+          "Heritage mountain railways such as the Darjeeling Himalayan Railway"
+        ]
+      ],
+      "id": "b6n4svn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Mumbai (Bori Bunder) and Thane on April 16, 1853, covering 34 km.",
+        "Indian Railways was nationalized in 1951 and currently operates through 18 distinct administrative zones.",
+        "Bholu, an elephant dressed as a railway guard, serves as the official mascot of Indian Railways.",
+        "The Vivek Express covers the longest train route in India, running from Dibrugarh in Assam to Kanyakumari in Tamil Nadu."
+      ],
+      "id": "ni2cp2i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Kolkata hosts the headquarters for three railway zones: Eastern Railway, South Eastern Railway, and Metro Railway.",
+        "Southern Railway was established on April 14, 1951, as the first railway zone created in independent India.",
+        "The Chenab Rail Bridge in Jammu & Kashmir stands as the world's highest railway arch bridge."
+      ],
+      "id": "f0skhbe"
+    },
+    {
+      "type": "paragraph",
+      "id": "tfe0fwk"
+    },
+    {
+      "type": "paragraph",
+      "id": "ybefeyr"
+    }
+  ],
+  "enriched": true
+}

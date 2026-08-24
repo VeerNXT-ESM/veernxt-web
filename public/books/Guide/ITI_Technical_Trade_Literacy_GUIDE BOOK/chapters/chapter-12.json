@@ -1,0 +1,444 @@
+{
+  "id": "d0rdxmu",
+  "title": "Chapter 13 – Basic Mechanical Concepts",
+  "order": 12,
+  "blocks": [
+    {
+      "id": "dl941i0",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Force is an interaction that changes or tends to change the state of rest or uniform motion of a body (F = ma).",
+        "Work is done only when a force produces displacement in the direction of the force (W = F × d × cos θ).",
+        "Power represents the rate of doing work or energy consumption per unit time (P = W / t).",
+        "Simple machines modify the magnitude or direction of an applied force to facilitate mechanical work.",
+        "Mechanical Advantage (MA) is the ratio of output load to input effort, defining machine efficacy.",
+        "Friction acts tangentially to oppose relative motion between contacting surfaces and can be minimized using lubricants and bearings."
+      ],
+      "id": "877doxr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Work & Energy",
+          "value": "Joule (J)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "clock"
+        },
+        {
+          "label": "Simple Machine Types",
+          "value": "6 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Mechanical Advantage Formula",
+          "value": "Load / Effort",
+          "icon": "check"
+        }
+      ],
+      "id": "hk9nkm9"
+    },
+    {
+      "type": "paragraph",
+      "id": "vw06g1k"
+    },
+    {
+      "type": "paragraph",
+      "id": "23uayx2"
+    },
+    {
+      "id": "lkv5228",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Force"
+    },
+    {
+      "type": "paragraph",
+      "id": "olac3dx"
+    },
+    {
+      "id": "lzz3dwq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m0zdnt6",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Work"
+    },
+    {
+      "type": "paragraph",
+      "id": "iom12uk"
+    },
+    {
+      "type": "paragraph",
+      "id": "gtlsin8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o733d5s"
+    },
+    {
+      "id": "ovjuxqi",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "jujerxv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Mechanical Advantage is the ratio of the output force produced by a machine to the input force applied to it.",
+      "id": "0ga5gco"
+    },
+    {
+      "id": "lhtwgj1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "815wiih",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "ak20isk"
+    },
+    {
+      "type": "paragraph",
+      "id": "cg9uvyl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7q80ijm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f03mvum"
+    },
+    {
+      "id": "1foqmbr",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Simple Machines"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Static Friction",
+        "Kinetic (Dynamic) Friction"
+      ],
+      "rows": [
+        [
+          "State of Motion",
+          "Acts between surfaces at rest relative to each other",
+          "Acts between surfaces in relative motion"
+        ],
+        [
+          "Magnitude",
+          "Self-adjusting up to limiting friction (Maximum Static Friction)",
+          "Constant value for a given pair of surfaces"
+        ],
+        [
+          "Coefficient Value",
+          "Higher coefficient (μs)",
+          "Lower coefficient (μk < μs)"
+        ]
+      ],
+      "id": "mtvia29"
+    },
+    {
+      "type": "paragraph",
+      "id": "uunimbu"
+    },
+    {
+      "id": "g52fove",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5eid8ej",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Mechanical Advantage"
+    },
+    {
+      "type": "paragraph",
+      "id": "urk69hs"
+    },
+    {
+      "type": "paragraph",
+      "id": "u7pvdrm"
+    },
+    {
+      "type": "paragraph",
+      "id": "8lpkcmb"
+    },
+    {
+      "id": "jq3mnlk",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Friction"
+    },
+    {
+      "type": "paragraph",
+      "id": "3texso5"
+    },
+    {
+      "id": "k5l3ffd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Work done is ZERO when force and displacement are perpendicular to each other (θ = 90°), such as a porter carrying a load on his head walking horizontally.",
+        "Frictional force depends on the nature and roughness of the contacting surfaces, but is independent of the apparent area of contact.",
+        "The efficiency of any real machine is always less than 100% due to friction and energy dissipation."
+      ],
+      "id": "ujinw37"
+    },
+    {
+      "id": "s6sl0wi",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Methods to Reduce Friction"
+    },
+    {
+      "id": "1tqqr9o",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "geyjrd8",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Importance of Mechanical Concepts"
+    },
+    {
+      "id": "kq3ckhj",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "jjqay4s",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "5i0nwct",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

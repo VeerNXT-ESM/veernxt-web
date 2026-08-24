@@ -1,0 +1,61 @@
+{
+  "id": "f7xajzh",
+  "title": "ULTRA QUICK REVISION",
+  "order": 45,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lh6t4wv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "ULTRA QUICK REVISION",
+      "id": "sknxi8c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Revision Mode",
+          "value": "Ultra Quick",
+          "icon": "clock"
+        },
+        {
+          "label": "Focus Area",
+          "value": "High Yield",
+          "icon": "book"
+        },
+        {
+          "label": "Target Goal",
+          "value": "Maximum Marks",
+          "icon": "award"
+        },
+        {
+          "label": "Coverage",
+          "value": "Core Concepts",
+          "icon": "check"
+        }
+      ],
+      "id": "1q6u2ja"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Focus on revising high-weightage concepts and frequently asked questions.",
+        "Avoid learning entirely new, complex topics during final quick revision sessions."
+      ],
+      "id": "fykfvwm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ultra Quick Revision focuses on rapid retention of high-yield exam topics.",
+        "Prioritize key formulas, essential definitions, and core historical facts.",
+        "Systematic quick revision helps reduce last-minute exam anxiety and boosts accuracy."
+      ],
+      "id": "n5tg9ri"
+    }
+  ],
+  "enriched": true
+}

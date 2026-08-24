@@ -1,0 +1,136 @@
+{
+  "id": "mw6xe3g",
+  "title": "2. Types of Glaciers",
+  "order": 134,
+  "blocks": [
+    {
+      "id": "gokn3ds",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Valley glaciers originate in high mountain basins and flow downwards through pre-existing valleys under the force of gravity.",
+      "id": "13gj5qn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Glaciers",
+        "Valley Glaciers"
+      ],
+      "rows": [
+        [
+          "Coverage",
+          "Vast ice sheets covering entire continents or islands",
+          "Confined within steep mountain valley walls"
+        ],
+        [
+          "Movement",
+          "Unconstrained outward flow in all directions",
+          "Linear downward flow guided by underlying topography"
+        ],
+        [
+          "Examples",
+          "Antarctic Ice Sheet, Greenland Ice Sheet",
+          "Siachen Glacier, Gangotri Glacier, Baltoro Glacier"
+        ],
+        [
+          "Key Landforms",
+          "Eskers, drumlins, outwash plains, kames",
+          "Cirques, arêtes, horns, hanging valleys, moraines"
+        ]
+      ],
+      "id": "voqpx35"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Types",
+          "value": "4 Primary Classes",
+          "icon": "book"
+        },
+        {
+          "label": "Land Coverage",
+          "value": "10% Earth Area",
+          "icon": "info"
+        },
+        {
+          "label": "Freshwater Share",
+          "value": "69% Global Total",
+          "icon": "check"
+        },
+        {
+          "label": "Longest Indian Glacier",
+          "value": "Siachen (76 km)",
+          "icon": "award"
+        }
+      ],
+      "id": "ubi02dk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "UPSC often asks to differentiate between landforms carved by alpine glaciers (cirques, arêtes, hanging valleys) vs. continental ice sheets (eskers, drumlins).",
+        "Remember that Siachen Glacier in the Karakoram Range is the longest glacier in India and the second-longest non-polar glacier in the world.",
+        "Malaspina Glacier in Alaska is the classic textbook example of a Piedmont glacier frequently asked in geographical landform questions."
+      ],
+      "id": "iott62s"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Continental glaciers cover broad landmasses, flowing outwards in all directions regardless of underlying topography.",
+        "Valley or alpine glaciers originate in high mountain basins and flow downwards through mountain valleys.",
+        "Piedmont glaciers form when valley glaciers emerge from mountain canyons and spread out into broad lobes on flat lowlands.",
+        "Cirque glaciers occupy steep bowl-shaped mountain hollows and are often the birthplace of larger valley glaciers."
+      ],
+      "id": "prg9fvs"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,140 @@
+{
+  "id": "8vxdfvi",
+  "title": "Organizational Structure",
+  "order": 516,
+  "blocks": [
+    {
+      "id": "fm85hch",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Unity of command states that an employee should receive orders from one superior only to avoid confusion and conflict.",
+      "id": "wihykh2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Tall Organizational Structure",
+        "Flat Organizational Structure"
+      ],
+      "rows": [
+        [
+          "Span of Control",
+          "Narrow span (fewer subordinates per supervisor)",
+          "Wide span (more subordinates per supervisor)"
+        ],
+        [
+          "Management Levels",
+          "Many hierarchical levels",
+          "Few hierarchical levels"
+        ],
+        [
+          "Communication",
+          "Slower, multi-layered chain of command",
+          "Faster, direct communication flow"
+        ],
+        [
+          "Supervision style",
+          "Close control and tight supervision",
+          "Greater autonomy and delegation"
+        ]
+      ],
+      "id": "iw4qmuw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Structures",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Fayol's Principles",
+          "value": "14 Principles",
+          "icon": "award"
+        },
+        {
+          "label": "Span of Control",
+          "value": "Narrow vs Wide",
+          "icon": "info"
+        },
+        {
+          "label": "Authority Flow",
+          "value": "Scalar Chain",
+          "icon": "check"
+        }
+      ],
+      "id": "rswjvsg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Matrix organization violates Henri Fayol's principle of Unity of Command due to dual reporting lines (functional manager and project manager).",
+        "F.W. Taylor introduced Functional Foremanship, recommending 8 specialized foremen for planning and execution roles.",
+        "A narrow span of control creates a tall organizational structure, whereas a wide span leads to a flat structure.",
+        "Authority can be delegated to subordinates, but ultimate responsibility and accountability remain with the superior."
+      ],
+      "id": "zb9jd4o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Line organization is the oldest and simplest structural form, characterized by direct scalar authority flowing from top to bottom.",
+        "Functional structure groups organizational activities based on key functions and specialized skills, as championed by F.W. Taylor.",
+        "Matrix organizational structure combines functional and project management approaches, resulting in dual reporting structures.",
+        "Span of control dictates the specific number of subordinates a manager can supervise effectively.",
+        "Centralization concentrates decision-making at top management levels, while decentralization distributes authority throughout all levels."
+      ],
+      "id": "7e5x052"
+    }
+  ],
+  "enriched": true
+}

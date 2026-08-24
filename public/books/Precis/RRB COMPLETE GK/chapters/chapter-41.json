@@ -1,0 +1,99 @@
+{
+  "id": "la488t2",
+  "title": "7. Important Concepts Based on Latitude",
+  "order": 41,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "idrk2kn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator Latitude",
+          "value": "0°",
+          "icon": "info"
+        },
+        {
+          "label": "Tropic of Cancer",
+          "value": "23.5° N",
+          "icon": "calendar"
+        },
+        {
+          "label": "Total Parallels",
+          "value": "181",
+          "icon": "book"
+        },
+        {
+          "label": "Distance Per Degree",
+          "value": "~111 km",
+          "icon": "clock"
+        }
+      ],
+      "id": "uk7uohy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Latitude is the angular distance of a point on the Earth's surface, measured in degrees north or south from the Equator at the center of the Earth.",
+      "id": "3o58j5m"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Heat Zone",
+        "Latitudinal Extent",
+        "Solar Angle & Climate"
+      ],
+      "rows": [
+        [
+          "Torrid Zone",
+          "23.5° N to 23.5° S",
+          "Direct overhead sun at least once a year; maximum heat year-round"
+        ],
+        [
+          "Temperate Zone",
+          "23.5° to 66.5° (N & S)",
+          "Sun rays are never directly overhead; moderate temperatures and distinct seasonal changes"
+        ],
+        [
+          "Frigid Zone",
+          "66.5° to 90° (N & S)",
+          "Sun stays low near the horizon with extreme slanting rays; extremely cold climates"
+        ]
+      ],
+      "id": "r5fcomx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are imaginary angular distances measured in degrees north or south from the center of the Earth.",
+        "The Equator (0°) is the largest parallel of latitude and divides the Earth into the Northern and Southern Hemispheres.",
+        "The Torrid Zone lies between the Tropic of Cancer (23.5° N) and Tropic of Capricorn (23.5° S), receiving maximum solar radiation.",
+        "The Temperate Zones extend from 23.5° to 66.5° in both hemispheres, characterized by moderate temperatures and distinct seasons.",
+        "Parallels of latitude decrease in circumference from the Equator toward the poles, converging to points at 90° N and 90° S."
+      ],
+      "id": "3di3r9e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer (23.5° N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "Distance between any two consecutive parallels of latitude is approximately 111 km across the globe.",
+        "Mahi River is the only river in India that crosses the Tropic of Cancer twice.",
+        "Indira Point, the southernmost tip of Indian territory, is located at 6°45' N latitude in the Andaman and Nicobar Islands."
+      ],
+      "id": "mifbx2l"
+    },
+    {
+      "type": "paragraph",
+      "id": "4fb3o9c"
+    },
+    {
+      "type": "paragraph",
+      "id": "e91jx9g"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,95 @@
+{
+  "id": "s611vmj",
+  "title": "9. Relationship Between CAG and Public Accounts Committee (PAC)",
+  "order": 468,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "gzrymr1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The CAG acts as a friend, philosopher, and guide to the Public Accounts Committee.",
+      "id": "0dq1qtu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Comptroller & Auditor General (CAG)",
+        "Public Accounts Committee (PAC)"
+      ],
+      "rows": [
+        [
+          "Entity Type",
+          "Independent Constitutional Authority (Article 148)",
+          "Parliamentary Standing Committee"
+        ],
+        [
+          "Composition",
+          "Single-member authority",
+          "22 Members (15 from Lok Sabha, 7 from Rajya Sabha)"
+        ],
+        [
+          "Primary Role",
+          "Audits public accounts and prepares technical audit reports",
+          "Examines CAG audit reports and evaluates executive financial conduct"
+        ],
+        [
+          "Report Destination",
+          "Submits audit reports to the President / Governor",
+          "Submits findings and recommendations to Parliament"
+        ]
+      ],
+      "id": "am7rh55"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "PAC Strength",
+          "value": "22 Members",
+          "icon": "info"
+        },
+        {
+          "label": "CAG Audit Reports",
+          "value": "3 Reports",
+          "icon": "book"
+        },
+        {
+          "label": "PAC Established",
+          "value": "1921",
+          "icon": "calendar"
+        },
+        {
+          "label": "CAG's Role",
+          "value": "Friend & Guide",
+          "icon": "check"
+        }
+      ],
+      "id": "r4doxtf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG submits reports to the President (or State Governor), who causes them to be laid before Parliament; CAG does not submit reports directly to the PAC.",
+        "The Chairman of the PAC is appointed by the Speaker of Lok Sabha and, by convention established in 1967, is selected from the Opposition.",
+        "PAC recommendations are advisory in nature and not legally binding on the government."
+      ],
+      "id": "2cvj4v0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Comptroller and Auditor General (CAG) acts as a friend, philosopher, and guide to the Public Accounts Committee (PAC).",
+        "CAG submits three audit reports to the President—on Appropriation Accounts, Finance Accounts, and Public Undertakings—which are subsequently laid before Parliament.",
+        "The PAC scrutinizes the CAG's audit reports to ensure that public funds are spent in accordance with parliamentary sanctions and legal provisions.",
+        "The CAG attends the meetings of the PAC and assists the committee by explaining complex financial and auditing nuances.",
+        "While the CAG conducts technical financial auditing, the PAC provides parliamentary political oversight over executive expenditures."
+      ],
+      "id": "ok05tnk"
+    }
+  ],
+  "enriched": true
+}

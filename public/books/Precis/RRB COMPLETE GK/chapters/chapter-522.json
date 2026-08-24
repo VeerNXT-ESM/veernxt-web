@@ -1,0 +1,114 @@
+{
+  "id": "cc4qp64",
+  "title": "Independence of CBI",
+  "order": 522,
+  "blocks": [
+    {
+      "id": "71hoqr8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Supreme Court famously criticized the agency during the Coal Block Allocation case, calling it a 'caged parrot speaking in its master's voice'.",
+      "id": "ibas46j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "General Consent",
+        "Specific Consent"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Default consent given by states to seamlessly investigate central employees/crimes in their jurisdiction",
+          "Prior permission required on a case-by-case basis before registering a fresh investigation"
+        ],
+        [
+          "Impact of Withdrawal",
+          "CBI loses authority to register new cases in the state without explicit state approval",
+          "Required whenever General Consent is withdrawn; ongoing cases prior to withdrawal remain unaffected"
+        ]
+      ],
+      "id": "yh0gok6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Min. Director Tenure",
+          "value": "2 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Nodal Ministry",
+          "value": "Ministry of Personnel",
+          "icon": "award"
+        }
+      ],
+      "id": "93xaq14"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body (it was created by an executive resolution of the Ministry of Home Affairs).",
+        "Section 6 of the DSPE Act renders state government consent mandatory for CBI investigations within state jurisdiction.",
+        "The selection committee for the CBI Director was modified by the Lokpal and Lokayuktas Act, 2013."
+      ],
+      "id": "xqlax7w"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CBI is not a statutory body; it derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "The CBI Director is provided a security of tenure of two years under the CVC Act, 2003, extendable up to five years through annual extensions.",
+        "The Director is appointed by the Central Government on the recommendation of a three-member committee consisting of the Prime Minister, the Leader of the Opposition (or single largest opposition party), and the Chief Justice of India or a Supreme Court Judge nominated by them.",
+        "State consent under Section 6 of the DSPE Act is mandatory for the CBI to exercise powers and jurisdiction in any state area."
+      ],
+      "id": "8oqbadp"
+    }
+  ],
+  "enriched": true
+}

@@ -1,35 +1,40 @@
 {
-  "id": "9tm54es",
+  "id": "4hhqdz7",
   "title": "Chapter 25: State Government Structure",
   "order": 26,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "2b11305"
+      "id": "uwil4x4"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Chapter",
-          "value": "25",
+          "label": "Constitutional Part",
+          "value": "Part VI",
           "icon": "book"
         },
         {
-          "label": "Key Executive",
-          "value": "Governor & CM",
+          "label": "Governor Minimum Age",
+          "value": "35 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Bicameral States",
+          "value": "6 States",
           "icon": "award"
         },
         {
-          "label": "Legislative Houses",
-          "value": "Vidhan Sabha & Parishad",
+          "label": "Vidhan Sabha Max Seats",
+          "value": "500 Seats",
           "icon": "check"
         }
       ],
-      "id": "06maob8"
+      "id": "hjmiykp"
     },
     {
-      "id": "kzmrohj",
+      "id": "2re720f",
       "type": "heading",
       "level": 2,
       "content": "1. Constitutional Articles Related to State Government"
@@ -38,14 +43,16 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The state structure comprises constitutional provisions governing state administrative bodies.",
-        "The executive arm consists of the Governor, Chief Minister, and Council of Ministers.",
-        "The legislative branch includes the Legislative Assembly (Vidhan Sabha) and Legislative Council (Vidhan Parishad)."
+        "Articles 153 to 167 in Part VI of the Indian Constitution deal with the State Executive.",
+        "The Governor is the constitutional/nominal head of the state executive, while the Chief Minister is the real executive authority.",
+        "The Council of Ministers is collectively responsible to the Legislative Assembly (Vidhan Sabha) of the state.",
+        "Only six states in India currently have a bicameral legislature containing both Vidhan Sabha and Vidhan Parishad.",
+        "The Legislative Assembly is a directly elected house with a normal term of 5 years, while the Legislative Council is a permanent body."
       ],
-      "id": "s9zcf06"
+      "id": "j8d3rpo"
     },
     {
-      "id": "485sc78",
+      "id": "3lh2mbr",
       "type": "table",
       "rows": [
         {
@@ -121,66 +128,66 @@
       ]
     },
     {
-      "id": "h5dmtv8",
+      "id": "eebj4m3",
       "type": "heading",
       "level": 2,
       "content": "2. Governor"
     },
     {
       "type": "paragraph",
-      "id": "uh4y2dy"
+      "id": "uxo109p"
     },
     {
       "type": "paragraph",
-      "id": "yl03isg"
+      "id": "e5qsodz"
     },
     {
       "type": "paragraph",
-      "id": "sjqfnc9"
+      "id": "hk0az6w"
     },
     {
       "type": "paragraph",
-      "id": "ylntdj1"
+      "id": "bz25r3v"
     },
     {
-      "id": "ub24tcy",
+      "id": "27f2bg9",
       "type": "heading",
       "level": 2,
       "content": "3. Chief Minister"
     },
     {
       "type": "paragraph",
-      "id": "jz2305q"
+      "id": "ju1x4c4"
     },
     {
       "type": "paragraph",
-      "id": "43bg6xj"
+      "id": "1d8vhrr"
     },
     {
       "type": "pullQuote",
       "content": "Constitutional Articles Related to State Government",
-      "id": "1z8dh71"
+      "id": "70lddls"
     },
     {
       "type": "paragraph",
-      "id": "2n3tpyd"
+      "id": "kiilq6y"
     },
     {
       "type": "paragraph",
-      "id": "3widlql"
+      "id": "wuj5fgk"
     },
     {
-      "id": "cimo5sg",
+      "id": "0nmsuco",
       "type": "heading",
       "level": 2,
       "content": "4. Council of Ministers"
     },
     {
       "type": "paragraph",
-      "id": "lswq3dr"
+      "id": "ivjlzrj"
     },
     {
-      "id": "eqrukw1",
+      "id": "qoqg6kr",
       "type": "table",
       "rows": [
         {
@@ -214,80 +221,118 @@
       ]
     },
     {
-      "id": "xfovaj5",
+      "id": "h4rhlbw",
       "type": "heading",
       "level": 2,
       "content": "5. State Legislature"
     },
     {
-      "type": "paragraph",
-      "id": "7j1wjkl"
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Legislative Assembly (Vidhan Sabha)",
+        "Legislative Council (Vidhan Parishad)"
+      ],
+      "rows": [
+        [
+          "House Type",
+          "Lower House / Direct Popular House",
+          "Upper House / Permanent Body"
+        ],
+        [
+          "Elections",
+          "Directly elected by voters",
+          "Indirectly elected & nominated"
+        ],
+        [
+          "Tenure",
+          "5 Years (can be dissolved earlier)",
+          "Permanent (1/3rd retire every 2 years)"
+        ],
+        [
+          "Minimum Age",
+          "25 Years",
+          "30 Years"
+        ],
+        [
+          "Strength Limits",
+          "Maximum 500, Minimum 60",
+          "Maximum 1/3rd of Assembly, Minimum 40"
+        ]
+      ],
+      "id": "duu6xs1"
     },
     {
       "type": "paragraph",
-      "id": "horyiuu"
+      "id": "fdz8hym"
     },
     {
-      "id": "tb7ky7g",
+      "type": "paragraph",
+      "id": "ew0rey6"
+    },
+    {
+      "id": "g2qg1n6",
       "type": "heading",
       "level": 2,
       "content": "6. Legislative Assembly (Vidhan Sabha)"
     },
     {
       "type": "paragraph",
-      "id": "f6ikt9m"
+      "id": "yu0i7n6"
     },
     {
       "type": "paragraph",
-      "id": "uacqvx4"
+      "id": "3eey272"
     },
     {
       "type": "paragraph",
-      "id": "jx1q61i"
+      "id": "fwm2j12"
     },
     {
-      "id": "7p41y4s",
+      "id": "6un5e82",
       "type": "heading",
       "level": 2,
       "content": "7. Legislative Council (Vidhan Parishad)"
     },
     {
       "type": "paragraph",
-      "id": "31aq3lv"
+      "id": "1f5pn0g"
     },
     {
       "type": "examAlert",
       "items": [
-        "SSC exams frequently test constitutional articles governing the powers of the Governor and Chief Minister.",
-        "Distinctions between the Legislative Assembly (Vidhan Sabha) and Legislative Council (Vidhan Parishad) are major exam topics."
+        "Article 213 empowers the Governor to promulgate ordinances when the state legislature is not in session.",
+        "The 6 states with bicameral legislatures are Andhra Pradesh, Telangana, Uttar Pradesh, Bihar, Maharashtra, and Karnataka.",
+        "The minimum age required to be appointed as Governor is 35 years.",
+        "The Legislative Council (Vidhan Parishad) cannot be dissolved; 1/3rd of its members retire every second year."
       ],
-      "id": "77nkja3"
+      "id": "pvzuib6"
     },
     {
       "type": "paragraph",
-      "id": "bgir2zc"
+      "id": "9iext8n"
     },
     {
       "type": "paragraph",
-      "id": "yzz1vwi"
+      "id": "der8odg"
     },
     {
-      "id": "2q7b3bh",
+      "id": "o14kq15",
       "type": "heading",
       "level": 2,
       "content": "SSC / SSC Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "pwybznj"
+      "id": "zlzmxeb"
     },
     {
       "type": "paragraph",
-      "id": "9ar13hp"
+      "id": "bh7bzvg"
     },
     {
       "type": "paragraph",
-      "id": "4m8j5wm"
+      "id": "xitmaru"
     }
   ],
   "enriched": true

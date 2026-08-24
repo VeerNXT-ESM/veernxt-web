@@ -1,0 +1,130 @@
+{
+  "id": "wxpubsg",
+  "title": "CIC vs State Information Commission",
+  "order": 647,
+  "blocks": [
+    {
+      "id": "a0gyy2y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Right to Information Act, 2005 provided for the creation of not only the Central Information Commission but also State Information Commissions at the state level to ensure transparency and accountability.",
+      "id": "chuggwf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Information Commission (CIC)",
+        "State Information Commission (SIC)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Central Government offices, Union Territories, and All-India public authorities",
+          "State Government offices and public authorities within the State"
+        ],
+        [
+          "Appointing Body",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Selection Committee Head",
+          "Prime Minister of India",
+          "Chief Minister of the State"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India (after SC inquiry)"
+        ],
+        [
+          "Annual Report Submission",
+          "Submitted to Central Government (laid before Parliament)",
+          "Submitted to State Government (laid before State Legislature)"
+        ]
+      ],
+      "id": "leuzfin"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Enactment Year",
+          "value": "2005",
+          "icon": "calendar"
+        },
+        {
+          "label": "Max Commissioners",
+          "value": "10 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Age Limit",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Governing Act",
+          "value": "RTI Act",
+          "icon": "book"
+        }
+      ],
+      "id": "7zce6y9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial Removal Provision: Although a State Information Commissioner is appointed by the Governor, they can only be removed by the President of India after an inquiry by the Supreme Court.",
+        "2019 Amendment Impact: Salary and tenure are no longer pegged to Election Commissioners; they are now entirely determined by the Central Government.",
+        "Selection Committee Composition: The Prime Minister (or Chief Minister at state level) heads the committee, accompanied by the Leader of Opposition and a nominated Cabinet Minister."
+      ],
+      "id": "dd5bmra"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Both the Central Information Commission (CIC) and State Information Commission (SIC) were constituted under the provisions of the Right to Information (RTI) Act, 2005.",
+        "The Chief Information Commissioner and Information Commissioners at the Central level are appointed by the President of India based on the recommendations of a three-member committee.",
+        "State Chief Information Commissioners and State Information Commissioners are appointed by the Governor on the recommendation of a committee comprising the Chief Minister, Leader of Opposition in the Assembly, and a State Cabinet Minister.",
+        "Following the RTI (Amendment) Act 2019, the tenure, salaries, and service conditions of both Central and State Information Commissioners are prescribed by the Central Government.",
+        "Neither Central nor State Information Commissioners are eligible for reappointment to the same office upon completion of their term."
+      ],
+      "id": "yimjqca"
+    }
+  ],
+  "enriched": true
+}

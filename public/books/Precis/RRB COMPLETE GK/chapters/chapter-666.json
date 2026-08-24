@@ -1,0 +1,95 @@
+{
+  "id": "exw1ul6",
+  "title": "14. Exam Traps",
+  "order": 666,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "tqnbl7x"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Misreading a simple 'NOT' or 'EXCEPT' in a question stem is the single most common cause of negative marks.",
+      "id": "71sqjjo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Category",
+        "Examiner's Tactic",
+        "Smart Candidate Strategy"
+      ],
+      "rows": [
+        [
+          "Negative Framing",
+          "Hiding 'NOT' or 'INCORRECT' in a long stem",
+          "Underline qualifiers before reading options"
+        ],
+        [
+          "Unit Mismatch",
+          "Providing data in mixed units (e.g., meters & km)",
+          "Standardize units in the first line of working"
+        ],
+        [
+          "Option A Magnet",
+          "Putting a partial truth as Option A",
+          "Mandatorily read all options from A to D"
+        ],
+        [
+          "Calculation Sink",
+          "Inserting tedious steps solvable by estimation",
+          "Use digit sum, unit digit, or estimation"
+        ]
+      ],
+      "id": "v0y45h1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Most Common Trap",
+          "value": "Misreading 'NOT'",
+          "icon": "info"
+        },
+        {
+          "label": "Typical Penalty",
+          "value": "1/3rd Mark Deducted",
+          "icon": "check"
+        },
+        {
+          "label": "Time Sink Limit",
+          "value": "Max 2 Mins/Q",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Accuracy",
+          "value": "90%+ Precision",
+          "icon": "award"
+        }
+      ],
+      "id": "gc438dm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Examiners design 'distractor' options that match common calculation errors made mid-way through a problem.",
+        "Questions asking for 'INCORRECT' statements often trick students into marking a correct statement instead.",
+        "Do not assume 'All of the above' is correct without validating at least two options independently."
+      ],
+      "id": "0v97o3l"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Always highlight critical qualifier words like 'NOT', 'EXCEPT', 'ALWAYS', and 'INCORRECT' in the question prompt.",
+        "Beware of Option A bias, where examiners place a plausible but wrong answer early to trap hasty candidates.",
+        "Double-check unit conversions (e.g., converting km/h to m/s or minutes to seconds) before finalizing numerical answers.",
+        "Avoid spending excess time on high-difficulty questions early in the paper; prioritize quick wins first.",
+        "Use the process of elimination to systematically eliminate improbable options before making an educated guess."
+      ],
+      "id": "jv7mlzs"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,98 @@
+{
+  "id": "w9i4elb",
+  "title": "Why Longitudes are Needed",
+  "order": 32,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ah2ba3v"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Prime Meridian",
+          "value": "0°",
+          "icon": "globe"
+        },
+        {
+          "label": "IST Meridian",
+          "value": "82°30' E",
+          "icon": "compass"
+        },
+        {
+          "label": "Time per Degree",
+          "value": "4 mins",
+          "icon": "clock"
+        },
+        {
+          "label": "IST ahead of GMT",
+          "value": "+5 hrs 30 mins",
+          "icon": "award"
+        }
+      ],
+      "id": "qhjkok9"
+    },
+    {
+      "type": "pullQuote",
+      "content": "To locate any place precisely on the globe, we need lines of reference running from the North Pole to the South Pole called meridians of longitude.",
+      "id": "z2917db"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes (Parallels)",
+        "Longitudes (Meridians)"
+      ],
+      "rows": [
+        [
+          "Orientation",
+          "Parallel circles running East to West",
+          "Semi-circles running North to South"
+        ],
+        [
+          "Length",
+          "Varies; decreases from Equator to Poles",
+          "Equal length for all meridians"
+        ],
+        [
+          "Primary Function",
+          "Determining climatic and heat zones",
+          "Determining location East/West and time zones"
+        ]
+      ],
+      "id": "p8t7rey"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes alone are insufficient to pinpoint an exact place, necessitating vertical lines of reference.",
+        "Meridians of longitude run from the North Pole to the South Pole and are all equal in length.",
+        "The Prime Meridian (0°) passes through Greenwich, London, dividing the Earth into Eastern and Western Hemispheres.",
+        "Earth rotates 15° every hour, which creates a 4-minute time difference for every 1° of longitude.",
+        "A uniform Standard Meridian is adopted by countries to establish a single standard time and avoid local time confusion."
+      ],
+      "id": "x6l2ubz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) is calculated from the 82°30' E meridian passing through Mirzapur (UP), placing it 5 hours 30 minutes ahead of GMT.",
+        "The 180° East and 180° West meridians meet on the exact same line, forming the International Date Line.",
+        "The distance between meridians of longitude is maximum at the Equator and decreases to zero at the Poles."
+      ],
+      "id": "5ys5ffa"
+    },
+    {
+      "type": "paragraph",
+      "id": "sfm1isp"
+    },
+    {
+      "type": "paragraph",
+      "id": "wicx0zm"
+    }
+  ],
+  "enriched": true
+}

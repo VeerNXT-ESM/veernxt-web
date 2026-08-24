@@ -1,0 +1,126 @@
+{
+  "id": "qbejkt7",
+  "title": "Classification of Igneous Rocks",
+  "order": 65,
+  "blocks": [
+    {
+      "id": "1qoicof",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because they were the first to form during the evolution of the Earth's crust.",
+      "id": "g6d61h1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Acidic Igneous Rocks",
+        "Basic Igneous Rocks"
+      ],
+      "rows": [
+        [
+          "Silica Content",
+          "High (> 65%)",
+          "Low (45% - 55%)"
+        ],
+        [
+          "Color & Density",
+          "Lighter color, Less dense",
+          "Darker color, High density"
+        ],
+        [
+          "Magma Viscosity",
+          "Highly viscous (flows slowly)",
+          "Fluid / Low viscosity (flows rapidly)"
+        ],
+        [
+          "Key Minerals",
+          "Quartz, Feldspar",
+          "Ferromagnesian minerals (Fe, Mg)"
+        ],
+        [
+          "Examples",
+          "Granite, Rhyolite, Pegmatite",
+          "Basalt, Gabbro, Dolerite"
+        ]
+      ],
+      "id": "051dd55"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Rock Rank",
+          "value": "1st Formed",
+          "icon": "award"
+        },
+        {
+          "label": "Acidic Silica Content",
+          "value": "> 65%",
+          "icon": "info"
+        },
+        {
+          "label": "Basic Silica Content",
+          "value": "45% - 55%",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Modes",
+          "value": "2 Types",
+          "icon": "book"
+        }
+      ],
+      "id": "wgn0xzb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Granite and Gabbro are classic examples of Intrusive (Plutonic) rocks, whereas Basalt and Obsidian are Extrusive (Volcanic) rocks.",
+        "The Deccan Traps of India are composed primarily of extrusive basaltic lava flows.",
+        "Magma viscosity depends on silica content: Acidic magma is highly viscous and explosive, while basic magma is fluid and spreads widely."
+      ],
+      "id": "4iwr71d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are primary rocks formed by the cooling, solidification, and crystallization of molten magma or lava.",
+        "Intrusive (Plutonic) igneous rocks cool slowly beneath the Earth's crust, developing large mineral grains.",
+        "Extrusive (Volcanic) igneous rocks cool rapidly on the Earth's surface, forming fine-grained or glassy textures.",
+        "Acidic igneous rocks contain high silica content (>65%), making them lighter in color and less dense.",
+        "Basic igneous rocks have lower silica content (45–55%) and are rich in iron and magnesium, making them dense and dark."
+      ],
+      "id": "g6g4urz"
+    }
+  ],
+  "enriched": true
+}

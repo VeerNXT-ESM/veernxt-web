@@ -1,0 +1,89 @@
+{
+  "id": "sizz3ca",
+  "title": "8. Procedure After Submission of Report",
+  "order": 451,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "xdwc3s3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Magistrate is not bound by the opinion formed by the investigating officer in the police report submitted under Section 173.",
+      "id": "3vj12w3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Charge Sheet (Final Report)",
+        "Closure Report"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Submitted when sufficient evidence exists to prosecute the accused person.",
+          "Submitted when evidence is insufficient or no prima facie case is made out."
+        ],
+        [
+          "Action by Magistrate",
+          "Magistrate takes cognizance under Section 190 and issues process to the accused.",
+          "Magistrate may accept, reject and order further investigation, or treat it as a private complaint."
+        ],
+        [
+          "Accused Status",
+          "Accused is sent up for trial before the competent court.",
+          "Accused is recommended for discharge or release from bail bond."
+        ]
+      ],
+      "id": "5v2op6k"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Police Report Provision",
+          "value": "Section 173(2)",
+          "icon": "book"
+        },
+        {
+          "label": "Supply of Copies",
+          "value": "Section 207",
+          "icon": "check"
+        },
+        {
+          "label": "Cognizance Power",
+          "value": "Section 190(1)(b)",
+          "icon": "award"
+        },
+        {
+          "label": "Further Investigation",
+          "value": "Section 173(8)",
+          "icon": "clock"
+        }
+      ],
+      "id": "davljkh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Section 207 CrPC strictly mandates providing free copies of the police report and connected documents to the accused without delay before commencement of trial.",
+        "Under Section 173(8) CrPC, submission of a final report does not preclude the police from conducting further investigation or submitting supplementary chargesheets.",
+        "The Magistrate takes cognizance of the offence under Section 190(1)(b) CrPC, not merely of the offender."
+      ],
+      "id": "hdy2f5m"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Upon completion of an investigation, the officer-in-charge of a police station must forward a final report to the Magistrate empowered to take cognizance under Section 173(2) of the Code of Criminal Procedure.",
+        "The Magistrate is not bound by the conclusions of the investigating officer and may accept the report, order further investigation, or issue process against the accused.",
+        "Under Section 207 CrPC, the Magistrate must furnish the accused with a copy of the police report, FIR, statements recorded under Section 161, and relevant documents free of cost.",
+        "Even after submitting a final report, the police retain the statutory power to conduct further investigation and submit a supplementary report under Section 173(8) CrPC."
+      ],
+      "id": "wcs4yqo"
+    }
+  ],
+  "enriched": true
+}

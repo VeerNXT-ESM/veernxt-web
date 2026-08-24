@@ -1,0 +1,90 @@
+{
+  "id": "aaukewr",
+  "title": "RRB Quick Revision Box",
+  "order": 343,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "wierjbq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran between Bombay and Thane on 16 April 1853 covering a distance of 34 km.",
+      "id": "qjo7zkd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Track Width",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m (5 ft 6 in)",
+          "Mainlines and high-density traffic routes"
+        ],
+        [
+          "Meter Gauge",
+          "1.000 m (3 ft 3 3/8 in)",
+          "Legacy routes being upgraded under Project Unigauge"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "Hill railways and specialized heritage routes"
+        ]
+      ],
+      "id": "xepnld8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "info"
+        },
+        {
+          "label": "Nationalised",
+          "value": "1951",
+          "icon": "check"
+        },
+        {
+          "label": "Mascot",
+          "value": "Bholu",
+          "icon": "award"
+        }
+      ],
+      "id": "fboa79p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember track gauge widths: Broad Gauge (1.676 m), Meter Gauge (1.000 m), and Narrow Gauge (0.762 m / 0.610 m).",
+        "Headquarters of major railway zones are heavily tested (e.g., Central Railway at Mumbai CST, Southern Railway at Chennai Central).",
+        "Official mascot 'Bholu' was introduced to commemorate the 150th anniversary of Indian Railways in 2002."
+      ],
+      "id": "bcaaek7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bombay (Bori Bunder) and Thane on 16 April 1853 covering a distance of 34 km.",
+        "Indian Railways was nationalised in 1951 and is currently divided into 19 operational zones.",
+        "Bholu the guard elephant, holding a lamp with a green light, is the official mascot of Indian Railways.",
+        "The Vivek Express holds the record for the longest route by distance in Indian Railways, running from Dibrugarh to Kanyakumari.",
+        "Darjeeling Himalayan Railway, Nilgiri Mountain Railway, and Kalka-Shimla Railway are designated UNESCO World Heritage sites."
+      ],
+      "id": "kxi81uw"
+    }
+  ],
+  "enriched": true
+}

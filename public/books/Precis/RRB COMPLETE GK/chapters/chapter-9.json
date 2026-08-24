@@ -1,0 +1,106 @@
+{
+  "id": "uy1lzvu",
+  "title": "9. Why Pluto is a Dwarf Planet (VERY FREQUENTLY ASKED)",
+  "order": 9,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sgjrr7t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Year Reclassified",
+          "value": "2006",
+          "icon": "calendar"
+        },
+        {
+          "label": "Criteria Met",
+          "value": "2 of 3",
+          "icon": "check"
+        },
+        {
+          "label": "IAU Assembly",
+          "value": "26th General Assembly",
+          "icon": "book"
+        },
+        {
+          "label": "Current Status",
+          "value": "Dwarf Planet",
+          "icon": "info"
+        }
+      ],
+      "id": "npvlkit"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Pluto failed to satisfy the third condition: it has not cleared the neighborhood around its orbit.",
+      "id": "lovey68"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "In August 2006, the International Astronomical Union (IAU) redefined the official criteria required for a celestial body to be designated as a planet.",
+        "To be a planet, an object must orbit the Sun, have sufficient mass to be spherical (hydrostatic equilibrium), and clear the neighborhood around its orbit.",
+        "Pluto meets the first two criteria but fails the third because its gravity is not strong enough to clear debris and other objects from its orbital neighborhood.",
+        "Pluto resides in the Kuiper Belt, sharing its orbital region with thousands of other icy objects and periodically crossing the path of Neptune."
+      ],
+      "id": "kk8eqb2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "IAU Criterion",
+        "Full Planet",
+        "Dwarf Planet (Pluto)"
+      ],
+      "rows": [
+        [
+          "Orbits the Sun",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "Sufficient mass for spherical shape",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "Cleared its orbital neighborhood",
+          "Yes",
+          "No (Shares path with Kuiper Belt objects)"
+        ],
+        [
+          "Is a satellite/moon of another planet",
+          "No",
+          "No"
+        ]
+      ],
+      "id": "h9xh6kc"
+    },
+    {
+      "type": "paragraph",
+      "id": "8wpmfbn"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The official decision to downgrade Pluto was made by the International Astronomical Union (IAU) in August 2006 in Prague.",
+        "Examiners frequently ask which specific condition Pluto failed: 'Clearing the neighborhood around its orbit'.",
+        "Pluto is located in the Kuiper Belt and is now officially designated as minor planet 134340 Pluto."
+      ],
+      "id": "tj87e1p"
+    },
+    {
+      "type": "paragraph",
+      "id": "c73yzk6"
+    },
+    {
+      "type": "paragraph",
+      "id": "cbtnec4"
+    }
+  ],
+  "enriched": true
+}

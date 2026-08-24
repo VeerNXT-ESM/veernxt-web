@@ -1,64 +1,64 @@
 {
-  "id": "6znpkhm",
+  "id": "dyuaeg0",
   "title": "2. Check conclusions one by one3. Do not assume anything extra",
   "order": 4,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "lwafbyu"
+      "id": "pgo1935"
     },
     {
       "type": "pullQuote",
       "content": "Do not assume anything extra",
-      "id": "wk8fbr6"
+      "id": "i69kolb"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Core Rules",
-          "value": "2 Rules",
+          "label": "Core Rule",
+          "value": "Check Conclusions 1-by-1",
           "icon": "check"
         },
         {
-          "label": "Topic",
-          "value": "Logical Reasoning",
+          "label": "Golden Principle",
+          "value": "Zero Extra Assumptions",
+          "icon": "info"
+        },
+        {
+          "label": "Topic Domain",
+          "value": "Statement & Conclusion",
           "icon": "book"
         },
         {
-          "label": "Primary Strategy",
-          "value": "Step-by-Step Evaluation",
-          "icon": "award"
-        },
-        {
-          "label": "Key Pitfall",
-          "value": "Over-assumption",
-          "icon": "info"
+          "label": "Ideal Speed",
+          "value": "30-45 Secs/Qn",
+          "icon": "clock"
         }
       ],
-      "id": "29izfwg"
+      "id": "955h3n7"
     },
     {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Analyze every given conclusion independently and sequentially.",
-        "Base all deductions strictly on the given premise without incorporating external real-world knowledge.",
-        "Avoid making extra assumptions or extrapolating beyond the explicit context."
+        "Evaluate each conclusion independently without letting one influence another.",
+        "Strictly restrict your logic to the facts explicitly stated in the premise.",
+        "Avoid using external real-world knowledge or unstated assumptions to validate a conclusion."
       ],
-      "id": "ruhrvjv"
+      "id": "dao5sfv"
     },
     {
       "type": "examAlert",
       "items": [
-        "Competitive exam questions often trick candidates with real-world facts that are logically invalid based on the given text alone.",
-        "Always evaluate each conclusion one by one to avoid combining conditions across different options."
+        "Competitive exams frequently feature trap conclusions that are factually true in real life but do not logically follow from the given statement.",
+        "Always test each conclusion individually before evaluating combination options such as 'Either I or II follows'."
       ],
-      "id": "07m65nx"
+      "id": "m3y0wo8"
     },
     {
       "type": "paragraph",
-      "id": "2nxpz7c"
+      "id": "rmjpkm1"
     }
   ],
   "enriched": true

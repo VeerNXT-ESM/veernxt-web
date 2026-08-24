@@ -1,0 +1,59 @@
+{
+  "book_id": "okggggh",
+  "title": "MATHEMATICS",
+  "source_file": "Cluster_008_MATHEMATICS.docx",
+  "category": "Guide",
+  "chapter_count": 7,
+  "image_count": 0,
+  "chapters": [
+    {
+      "title": "PART 1",
+      "order": 1,
+      "enriched": true,
+      "blocks_count": 21,
+      "file_name": "chapters/chapter-1.json"
+    },
+    {
+      "title": "PART 2",
+      "order": 2,
+      "enriched": true,
+      "blocks_count": 32,
+      "file_name": "chapters/chapter-2.json"
+    },
+    {
+      "title": "PART 4",
+      "order": 3,
+      "enriched": true,
+      "blocks_count": 34,
+      "file_name": "chapters/chapter-3.json"
+    },
+    {
+      "title": "PART 5",
+      "order": 4,
+      "enriched": true,
+      "blocks_count": 28,
+      "file_name": "chapters/chapter-4.json"
+    },
+    {
+      "title": "PART 8",
+      "order": 5,
+      "enriched": true,
+      "blocks_count": 29,
+      "file_name": "chapters/chapter-5.json"
+    },
+    {
+      "title": "PART 9",
+      "order": 6,
+      "enriched": true,
+      "blocks_count": 34,
+      "file_name": "chapters/chapter-6.json"
+    },
+    {
+      "title": "PART 10",
+      "order": 7,
+      "enriched": true,
+      "blocks_count": 35,
+      "file_name": "chapters/chapter-7.json"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "wf78a2a",
+  "title": "Important Election Terms",
+  "order": 425,
+  "blocks": [
+    {
+      "id": "98digvk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Model Code of Conduct comes into force immediately upon the announcement of the election schedule by the Election Commission.",
+      "id": "gcimcsu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "First-Past-The-Post (FPTP)",
+        "Proportional Representation (PR)"
+      ],
+      "rows": [
+        [
+          "Voter Choice",
+          "Voter votes for a specific candidate",
+          "Voter votes for a political party list"
+        ],
+        [
+          "Victory Condition",
+          "Candidate with highest number of votes wins",
+          "Seats allocated proportional to total percentage of votes received"
+        ],
+        [
+          "Indian Context",
+          "Lok Sabha and Legislative Assembly Elections",
+          "Rajya Sabha and Legislative Council Elections"
+        ]
+      ],
+      "id": "pywoldx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "Voting Age (61st Amendment)",
+          "value": "18 Years",
+          "icon": "award"
+        },
+        {
+          "label": "NOTA Introduction Year",
+          "value": "2013",
+          "icon": "calendar"
+        },
+        {
+          "label": "Conduct of Elections Act",
+          "value": "RPA 1951",
+          "icon": "info"
+        }
+      ],
+      "id": "6asdnfq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate RPA 1950 (voter qualification, delimitation, seat allocation) from RPA 1951 (actual conduct of elections, corrupt practices, qualifications for membership).",
+        "Proportional Representation by Means of Single Transferable Vote (STV) is used for Rajya Sabha and Presidential elections, NOT for Lok Sabha elections.",
+        "Model Code of Conduct is non-statutory; it does not have backing by enforceable law, but ECI enforces it via guidelines and moral suasion."
+      ],
+      "id": "p2w7hhj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Model Code of Conduct (MCC) comes into force immediately upon the announcement of the election schedule by the Election Commission.",
+        "NOTA (None of the Above) was introduced following a Supreme Court ruling in 2013 to preserve voter secrecy and right to reject.",
+        "The First-Past-The-Post (FPTP) system requires a candidate to secure more votes than any other candidate, not necessarily a majority.",
+        "The 61st Constitutional Amendment Act, 1988 lowered the voting age from 21 to 18 years by amending Article 326.",
+        "VVPAT (Voter Verifiable Paper Audit Trail) units generate a physical paper slip visible for 7 seconds to verify EVM votes."
+      ],
+      "id": "v16cdlc"
+    }
+  ],
+  "enriched": true
+}

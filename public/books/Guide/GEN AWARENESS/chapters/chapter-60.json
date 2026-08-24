@@ -1,0 +1,383 @@
+{
+  "id": "dinllhe",
+  "title": "Chapter 11: Metals and Non-metals",
+  "order": 60,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "c23wcka"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Most Reactive Metal",
+          "value": "Potassium (K)",
+          "icon": "award"
+        },
+        {
+          "label": "Liquid Metal (RT)",
+          "value": "Mercury (Hg)",
+          "icon": "info"
+        },
+        {
+          "label": "Liquid Non-Metal",
+          "value": "Bromine (Br)",
+          "icon": "info"
+        },
+        {
+          "label": "Most Abundant Metal",
+          "value": "Aluminium (Al)",
+          "icon": "check"
+        }
+      ],
+      "id": "1fssuqs"
+    },
+    {
+      "id": "lk3se1j",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Metals"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metals are electropositive elements that easily lose electrons to form positive ions, while non-metals are electronegative elements.",
+        "Metals form basic or amphoteric oxides, whereas non-metals produce acidic or neutral oxides when reacted with oxygen.",
+        "The Reactivity Series ranks metals in decreasing order of reactivity, determining displacement reactions and extraction methods.",
+        "Highly reactive metals are extracted via electrolysis, moderately reactive metals via reduction with carbon, and low reactivity metals by heating alone.",
+        "Ionic compounds formed between metals and non-metals have high melting points and conduct electricity in molten or aqueous states."
+      ],
+      "id": "soknri8"
+    },
+    {
+      "type": "paragraph",
+      "id": "pc4tzj3"
+    },
+    {
+      "type": "paragraph",
+      "id": "cw6n05o"
+    },
+    {
+      "type": "paragraph",
+      "id": "sku5icm"
+    },
+    {
+      "id": "7vmhppf",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Physical Properties of Metals"
+    },
+    {
+      "id": "b1h9csd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mlshpje",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Chemical Properties of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "7gv3ks0"
+    },
+    {
+      "type": "paragraph",
+      "id": "0exucu5"
+    },
+    {
+      "type": "paragraph",
+      "id": "21y0xko"
+    },
+    {
+      "type": "paragraph",
+      "id": "q7omr2v"
+    },
+    {
+      "id": "pmq7zal",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "cohwjit"
+    },
+    {
+      "type": "paragraph",
+      "id": "a1u8g10"
+    },
+    {
+      "type": "paragraph",
+      "id": "6r6r3y3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metals are electropositive elements that lose electrons to form positive ions, whereas non-metals are electronegative elements that gain electrons.",
+      "id": "8u4jtaj"
+    },
+    {
+      "id": "m4ka54c",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Physical Properties of Non-metals"
+    },
+    {
+      "id": "nh1k8e3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5a1676p",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Chemical Properties of Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "2twt31z"
+    },
+    {
+      "type": "paragraph",
+      "id": "x1b4tgp"
+    },
+    {
+      "type": "paragraph",
+      "id": "1645jxw"
+    },
+    {
+      "id": "wak7nym",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Reactivity Series of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "y9w4tcs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s8apiwe"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Metals",
+        "Non-metals"
+      ],
+      "rows": [
+        [
+          "Physical State",
+          "Solid at room temperature (except Mercury)",
+          "Solids, liquids (Bromine), or gases"
+        ],
+        [
+          "Malleability & Ductility",
+          "Malleable and ductile",
+          "Non-malleable, non-ductile (brittle)"
+        ],
+        [
+          "Electrical Conductivity",
+          "Good conductors of electricity",
+          "Poor conductors (except Graphite)"
+        ],
+        [
+          "Nature of Oxides",
+          "Basic oxides (e.g., Na2O) or Amphoteric",
+          "Acidic oxides (e.g., CO2) or Neutral"
+        ],
+        [
+          "Reaction with Dilute Acids",
+          "Displace Hydrogen gas from acids",
+          "Do not react with dilute acids to displace H2"
+        ]
+      ],
+      "id": "nvd00wk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ixg8uf4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f5bdqex"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "upkc2u3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aexkn9p"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "carvyzj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0b2r0jm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2yh0vuk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3uhuupt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "583fktf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o5drin5"
+    },
+    {
+      "id": "14iqj9h",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Extraction of Metals"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Aqua Regia is a freshly prepared 3:1 mixture of concentrated Hydrochloric Acid (HCl) and concentrated Nitric Acid (HNO3), capable of dissolving Gold and Platinum.",
+        "Sodium and Potassium are stored under kerosene oil to prevent violent reactions with atmospheric oxygen and moisture.",
+        "Amphoteric oxides like Aluminium Oxide (Al2O3) and Zinc Oxide (ZnO) react with both acids and bases to yield salt and water.",
+        "Cinnabar (HgS) is the primary ore of mercury, which is converted to mercuric oxide (HgO) and reduced to mercury upon heating in air."
+      ],
+      "id": "iers7jh"
+    },
+    {
+      "type": "paragraph",
+      "id": "9f4xwhq"
+    },
+    {
+      "type": "paragraph",
+      "id": "gigfl0a"
+    },
+    {
+      "type": "paragraph",
+      "id": "cei7cuz"
+    },
+    {
+      "id": "4g3w9vv",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "hsm5umg"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8uwuw0"
+    },
+    {
+      "type": "paragraph",
+      "id": "zcq4qsp"
+    },
+    {
+      "type": "paragraph",
+      "id": "g68oupx"
+    }
+  ],
+  "enriched": true
+}

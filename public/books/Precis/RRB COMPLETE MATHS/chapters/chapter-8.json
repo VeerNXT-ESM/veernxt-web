@@ -1,0 +1,866 @@
+{
+  "id": "spxx677",
+  "title": "CHAPTER 6 : PROFIT AND LOSS – ZERO GAP AUTHOR EDITION",
+  "order": 8,
+  "blocks": [
+    {
+      "id": "1vwrvg0",
+      "type": "heading",
+      "level": 3,
+      "content": "Introduction to Profit and Loss"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Chapter",
+          "value": "Chapter 6",
+          "icon": "book"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "RRB & Competitive Exams",
+          "icon": "award"
+        },
+        {
+          "label": "Key Model",
+          "value": "False Weights",
+          "icon": "info"
+        },
+        {
+          "label": "Important Trick",
+          "value": "Equal Profit & Loss",
+          "icon": "check"
+        }
+      ],
+      "id": "t7imik1"
+    },
+    {
+      "type": "paragraph",
+      "id": "z9mkhv7"
+    },
+    {
+      "type": "paragraph",
+      "id": "516gefk"
+    },
+    {
+      "type": "paragraph",
+      "id": "a4272yw"
+    },
+    {
+      "type": "paragraph",
+      "id": "9sddwc5"
+    },
+    {
+      "id": "zhfwvdw",
+      "type": "heading",
+      "level": 3,
+      "content": "Basic Formulas"
+    },
+    {
+      "type": "paragraph",
+      "id": "pzmwg31"
+    },
+    {
+      "type": "paragraph",
+      "id": "5zhjgww"
+    },
+    {
+      "type": "paragraph",
+      "id": "8e4g5lc"
+    },
+    {
+      "id": "jkonktd",
+      "type": "heading",
+      "level": 3,
+      "content": "Finding Profit"
+    },
+    {
+      "type": "paragraph",
+      "id": "dakobxv"
+    },
+    {
+      "type": "paragraph",
+      "id": "kkwp9gt"
+    },
+    {
+      "type": "paragraph",
+      "id": "uqhhecy"
+    },
+    {
+      "type": "paragraph",
+      "id": "j9p7zd2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "om38fzl"
+    },
+    {
+      "type": "paragraph",
+      "id": "ncwa294"
+    },
+    {
+      "type": "paragraph",
+      "id": "iixwlgj"
+    },
+    {
+      "id": "n2gwtm1",
+      "type": "heading",
+      "level": 3,
+      "content": "Finding Loss"
+    },
+    {
+      "type": "paragraph",
+      "id": "8bzipz9"
+    },
+    {
+      "type": "paragraph",
+      "id": "sj96fna"
+    },
+    {
+      "type": "paragraph",
+      "id": "jzac3og"
+    },
+    {
+      "type": "paragraph",
+      "id": "fcdbg41"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dr4x22f"
+    },
+    {
+      "type": "paragraph",
+      "id": "47014vo"
+    },
+    {
+      "type": "paragraph",
+      "id": "ftoebnt"
+    },
+    {
+      "id": "3guu75h",
+      "type": "heading",
+      "level": 3,
+      "content": "Finding Selling Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "1v01tel"
+    },
+    {
+      "type": "paragraph",
+      "id": "ms8f3ow"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aet7g8z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2sjys38"
+    },
+    {
+      "type": "paragraph",
+      "id": "d8yw074"
+    },
+    {
+      "id": "1gpg3ka",
+      "type": "heading",
+      "level": 3,
+      "content": "Finding Cost Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "edrev61"
+    },
+    {
+      "type": "paragraph",
+      "id": "tw2oh0r"
+    },
+    {
+      "type": "paragraph",
+      "id": "jfphtsx"
+    },
+    {
+      "type": "paragraph",
+      "id": "2qqtecj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bn57u26"
+    },
+    {
+      "type": "paragraph",
+      "id": "vre698f"
+    },
+    {
+      "id": "28kwqgf",
+      "type": "heading",
+      "level": 3,
+      "content": "Loss-Based Selling Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "ni2qe1s"
+    },
+    {
+      "type": "paragraph",
+      "id": "skzfdff"
+    },
+    {
+      "type": "paragraph",
+      "id": "r565w73"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g9t6lac"
+    },
+    {
+      "type": "paragraph",
+      "id": "jgnallq"
+    },
+    {
+      "id": "mimuzy2",
+      "type": "heading",
+      "level": 3,
+      "content": "Discount and Marked Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pu1v8k"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7noufr"
+    },
+    {
+      "type": "paragraph",
+      "id": "rbvuvty"
+    },
+    {
+      "type": "paragraph",
+      "id": "tf6boje"
+    },
+    {
+      "id": "k793yvq",
+      "type": "heading",
+      "level": 3,
+      "content": "Successive Discounts"
+    },
+    {
+      "type": "paragraph",
+      "id": "ymvdx46"
+    },
+    {
+      "type": "paragraph",
+      "id": "3x1ln8h"
+    },
+    {
+      "type": "paragraph",
+      "id": "j11f83s"
+    },
+    {
+      "type": "paragraph",
+      "id": "nrovtvo"
+    },
+    {
+      "type": "paragraph",
+      "id": "zl47erb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cawp7pv"
+    },
+    {
+      "type": "paragraph",
+      "id": "pczfrbb"
+    },
+    {
+      "type": "paragraph",
+      "id": "ikhu1ex"
+    },
+    {
+      "id": "vnc3yp7",
+      "type": "heading",
+      "level": 3,
+      "content": "Markup and Profit Relationship"
+    },
+    {
+      "type": "paragraph",
+      "id": "kebdczv"
+    },
+    {
+      "type": "paragraph",
+      "id": "ruc2hfc"
+    },
+    {
+      "type": "paragraph",
+      "id": "843j94n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "09xcwp3"
+    },
+    {
+      "type": "paragraph",
+      "id": "qj95fc5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h1qansb"
+    },
+    {
+      "type": "paragraph",
+      "id": "mij69a7"
+    },
+    {
+      "id": "3ie1we5",
+      "type": "heading",
+      "level": 3,
+      "content": "Dishonest Shopkeeper – False Weights"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Markup with Discount (Very Important RRB Model)",
+      "id": "recnzyq"
+    },
+    {
+      "type": "paragraph",
+      "id": "vqnkpy9"
+    },
+    {
+      "type": "paragraph",
+      "id": "cgq3u9p"
+    },
+    {
+      "type": "paragraph",
+      "id": "b3g52u0"
+    },
+    {
+      "type": "paragraph",
+      "id": "e5rvn3g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gt75ic9"
+    },
+    {
+      "id": "w9gu551",
+      "type": "heading",
+      "level": 3,
+      "content": "Profit When Selling Two Articles Together"
+    },
+    {
+      "type": "paragraph",
+      "id": "rd7orzn"
+    },
+    {
+      "type": "paragraph",
+      "id": "cx2xx4k"
+    },
+    {
+      "type": "paragraph",
+      "id": "6o2k9ei"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lte4tfx"
+    },
+    {
+      "type": "paragraph",
+      "id": "yb86bl7"
+    },
+    {
+      "type": "paragraph",
+      "id": "an6ckrg"
+    },
+    {
+      "id": "iryqxbv",
+      "type": "heading",
+      "level": 3,
+      "content": "Equal Profit and Loss Trick (Important)"
+    },
+    {
+      "type": "paragraph",
+      "id": "nvaqqpc"
+    },
+    {
+      "type": "paragraph",
+      "id": "laoam7a"
+    },
+    {
+      "type": "paragraph",
+      "id": "hllbzrd"
+    },
+    {
+      "id": "s386kpv",
+      "type": "heading",
+      "level": 3,
+      "content": "Profit Based on Selling Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "f50un1e"
+    },
+    {
+      "type": "paragraph",
+      "id": "7b5usp9"
+    },
+    {
+      "type": "paragraph",
+      "id": "5c66suh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "se5ypbq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mecqk6a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zdkor78"
+    },
+    {
+      "type": "paragraph",
+      "id": "796n8yv"
+    },
+    {
+      "id": "ni5rcce",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "8mos9wb"
+    },
+    {
+      "id": "tocpp6l",
+      "type": "heading",
+      "level": 3,
+      "content": "Solved Examples IMPORTANT FORMULAS"
+    },
+    {
+      "type": "paragraph",
+      "id": "w2ftvvi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "omqwpau"
+    },
+    {
+      "type": "paragraph",
+      "id": "rqzjyjz"
+    },
+    {
+      "type": "paragraph",
+      "id": "37rdb2f"
+    },
+    {
+      "id": "ftyj941",
+      "type": "heading",
+      "level": 2,
+      "content": "SMART EXAM TRICKS"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Profit and Loss calculations are primarily evaluated relative to the Cost Price (CP) unless specifically calculated on Selling Price (SP).",
+        "Discounts are always offered on the Marked Price (MP) to determine the final Selling Price (SP).",
+        "Successive discounts require step-by-step reduction or the application of the effective discount percentage formula.",
+        "Dishonest shopkeeper problems determine profit percentage based on the true weight versus the false weight used.",
+        "Equal profit and loss scenarios on two articles sold at the same selling price result in an overall loss percentage."
+      ],
+      "id": "3aboqka"
+    },
+    {
+      "id": "rfddlja",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Concept",
+        "Base Parameter",
+        "Condition / Formula"
+      ],
+      "rows": [
+        [
+          "Profit",
+          "Cost Price (CP)",
+          "SP > CP (Profit = SP - CP)"
+        ],
+        [
+          "Loss",
+          "Cost Price (CP)",
+          "CP > SP (Loss = CP - SP)"
+        ],
+        [
+          "Discount",
+          "Marked Price (MP)",
+          "MP > SP (Discount = MP - SP)"
+        ]
+      ],
+      "id": "n8eiokk"
+    },
+    {
+      "id": "oesl6jl",
+      "type": "heading",
+      "level": 2,
+      "content": "SOLVED EXAMPLES"
+    },
+    {
+      "id": "90qwxgf",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 1: Find Profit and Profit Percentage"
+    },
+    {
+      "type": "paragraph",
+      "id": "iwufam6"
+    },
+    {
+      "type": "paragraph",
+      "id": "ewqoi5p"
+    },
+    {
+      "type": "paragraph",
+      "id": "qnrkzc0"
+    },
+    {
+      "type": "paragraph",
+      "id": "gruu779"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9rtvzqa"
+    },
+    {
+      "type": "paragraph",
+      "id": "m7rwshw"
+    },
+    {
+      "id": "yj1vn1a",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 2: Find Selling Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "fopp9iy"
+    },
+    {
+      "type": "paragraph",
+      "id": "b2orqmw"
+    },
+    {
+      "type": "paragraph",
+      "id": "7gc8nm9"
+    },
+    {
+      "type": "paragraph",
+      "id": "g3urzx0"
+    },
+    {
+      "type": "paragraph",
+      "id": "pflrr77"
+    },
+    {
+      "id": "lgazkon",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 3: Marked Price and Discount"
+    },
+    {
+      "type": "paragraph",
+      "id": "oul5d6y"
+    },
+    {
+      "type": "paragraph",
+      "id": "xthi03v"
+    },
+    {
+      "type": "paragraph",
+      "id": "9hh55ca"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ktoltb"
+    },
+    {
+      "type": "paragraph",
+      "id": "r3807ti"
+    },
+    {
+      "id": "6ticnyc",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 4: Markup with Discount (Very Important RRB Model)"
+    },
+    {
+      "type": "paragraph",
+      "id": "qrf247z"
+    },
+    {
+      "type": "paragraph",
+      "id": "l28tdbf"
+    },
+    {
+      "type": "paragraph",
+      "id": "fow96ea"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yh5w98b"
+    },
+    {
+      "type": "paragraph",
+      "id": "2x5ptp4"
+    },
+    {
+      "type": "paragraph",
+      "id": "8q637dh"
+    },
+    {
+      "type": "paragraph",
+      "id": "9yupmou"
+    },
+    {
+      "type": "paragraph",
+      "id": "gnqxvp9"
+    },
+    {
+      "type": "paragraph",
+      "id": "j40f89n"
+    },
+    {
+      "type": "paragraph",
+      "id": "1tm5pk7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nlo07td"
+    },
+    {
+      "type": "paragraph",
+      "id": "qr7z6nu"
+    },
+    {
+      "id": "x9yt3dj",
+      "type": "heading",
+      "level": 3,
+      "content": "Example 5: False Weight"
+    },
+    {
+      "type": "paragraph",
+      "id": "359jtej"
+    },
+    {
+      "type": "paragraph",
+      "id": "5bwuaq2"
+    },
+    {
+      "type": "paragraph",
+      "id": "qh4ex2u"
+    },
+    {
+      "type": "paragraph",
+      "id": "1gz4r2f"
+    },
+    {
+      "type": "paragraph",
+      "id": "2subxmf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "blomedb"
+    },
+    {
+      "type": "paragraph",
+      "id": "8n3uun1"
+    },
+    {
+      "id": "r46gxpl",
+      "type": "heading",
+      "level": 3,
+      "content": "Practice Questions with Detailed Solutions"
+    },
+    {
+      "id": "jh27f3t",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Markup with Discount is a high-yield model frequently tested in RRB and national competitive examinations.",
+        "Pay attention to examiner traps where profit percentage is calculated on Selling Price rather than Cost Price.",
+        "False weight problems require careful identification of actual quantity delivered versus claimed weight."
+      ],
+      "id": "ldbcx1l"
+    },
+    {
+      "type": "paragraph",
+      "id": "8goq288"
+    },
+    {
+      "type": "paragraph",
+      "id": "v05qlrw"
+    },
+    {
+      "type": "paragraph",
+      "id": "che8u6w"
+    },
+    {
+      "id": "bxfbv7b",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "lljkvhp"
+    },
+    {
+      "type": "paragraph",
+      "id": "rh9p1y6"
+    },
+    {
+      "type": "paragraph",
+      "id": "ym7lk22"
+    },
+    {
+      "id": "1oa9rpk",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 3"
+    },
+    {
+      "type": "paragraph",
+      "id": "osm57z2"
+    },
+    {
+      "type": "paragraph",
+      "id": "dbgktip"
+    },
+    {
+      "type": "paragraph",
+      "id": "bpwengl"
+    },
+    {
+      "id": "ti9gif3",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 4"
+    },
+    {
+      "type": "paragraph",
+      "id": "ld3iffa"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d9obunc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "majqdio"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yi9qi55"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vxsw07p"
+    },
+    {
+      "type": "paragraph",
+      "id": "dtwvwky"
+    },
+    {
+      "id": "4c9s5gc",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 5"
+    },
+    {
+      "type": "paragraph",
+      "id": "sgdz4br"
+    },
+    {
+      "type": "paragraph",
+      "id": "djpq8x0"
+    },
+    {
+      "type": "paragraph",
+      "id": "u7ab0j2"
+    },
+    {
+      "id": "llefdvp",
+      "type": "heading",
+      "level": 3,
+      "content": "Examiner Traps"
+    },
+    {
+      "id": "k7mu5kb",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "nlxmpml",
+      "type": "heading",
+      "level": 3,
+      "content": "Final Insight"
+    },
+    {
+      "type": "paragraph",
+      "id": "2okiekz"
+    },
+    {
+      "type": "paragraph",
+      "id": "yd5kfn5"
+    }
+  ],
+  "enriched": true
+}

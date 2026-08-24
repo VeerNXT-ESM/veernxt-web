@@ -1,0 +1,104 @@
+{
+  "id": "k068hl6",
+  "title": "8. Great Circles",
+  "order": 42,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "inx9noj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Great Circle is the largest circle that can be drawn on a sphere, dividing it into two equal hemispheres and defining the shortest distance between any two points on its surface.",
+      "id": "ef52zhn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Only Great Latitude",
+          "value": "Equator (0°)",
+          "icon": "check"
+        },
+        {
+          "label": "Route Property",
+          "value": "Shortest Distance",
+          "icon": "award"
+        },
+        {
+          "label": "Earth Division",
+          "value": "2 Equal Halves",
+          "icon": "info"
+        },
+        {
+          "label": "Navigation Term",
+          "value": "Orthodrome",
+          "icon": "clock"
+        }
+      ],
+      "id": "m0kp4l2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Great Circle",
+        "Small Circle"
+      ],
+      "rows": [
+        [
+          "Center Plane",
+          "Passes through the center of the Earth",
+          "Does not pass through the center of the Earth"
+        ],
+        [
+          "Division of Earth",
+          "Divides Earth into two equal halves (hemispheres)",
+          "Divides Earth into two unequal sections"
+        ],
+        [
+          "Latitudinal Examples",
+          "Equator (0°) only",
+          "Tropic of Cancer (23.5° N), Tropic of Capricorn (23.5° S), Polar Circles"
+        ],
+        [
+          "Longitudinal Examples",
+          "All paired opposite meridians",
+          "None"
+        ],
+        [
+          "Navigation Role",
+          "Used for calculating the shortest distance (Orthodromic route)",
+          "Does not represent the shortest distance route between points"
+        ]
+      ],
+      "id": "64pa09y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A Great Circle is the largest possible circle that can be drawn on a sphere, created by a plane passing through the sphere's center.",
+        "The Equator is the only line of latitude (parallel) that forms a Great Circle.",
+        "All pairs of opposite meridians (e.g., 0° and 180°) combine to form complete Great Circles.",
+        "An infinite number of Great Circles can be drawn on a sphere.",
+        "Great circle routes represent the shortest distance between any two points on the Earth's surface and are widely used in air and sea navigation."
+      ],
+      "id": "aq6brsr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Equator is the ONLY parallel of latitude that is a Great Circle; all other parallels are Small Circles.",
+        "Pairs of opposite meridians (e.g., 70°E and 110°W) together form a single complete Great Circle.",
+        "Aviation and maritime navigators use Great Circle routes (Orthodromes) to minimize flight time and fuel consumption."
+      ],
+      "id": "96e0ck3"
+    },
+    {
+      "type": "paragraph",
+      "id": "ysk23h1"
+    }
+  ],
+  "enriched": true
+}

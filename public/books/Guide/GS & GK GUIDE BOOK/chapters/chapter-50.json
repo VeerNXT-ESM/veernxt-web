@@ -1,35 +1,35 @@
 {
-  "id": "f4lxtbw",
+  "id": "8h4ee6u",
   "title": "Chapter 1: Motion",
   "order": 50,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "itkjy6t"
+      "id": "giez3yl"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Chapter Title",
-          "value": "Motion",
+          "label": "Core Topics",
+          "value": "8 Sections",
           "icon": "book"
         },
         {
-          "label": "Key Sections",
-          "value": "8 Topics",
-          "icon": "info"
+          "label": "Equations of Motion",
+          "value": "3 Equations",
+          "icon": "check"
         },
         {
-          "label": "Core Equations",
-          "value": "Equations of Motion",
-          "icon": "check"
+          "label": "Exam Importance",
+          "value": "High Focus",
+          "icon": "award"
         }
       ],
-      "id": "n38xkzw"
+      "id": "inxp9v8"
     },
     {
-      "id": "htt5gpy",
+      "id": "7l97bmp",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Motion"
@@ -38,32 +38,34 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Motion is analyzed through concepts of distance, displacement, speed, velocity, and acceleration.",
-        "A complete study of motion requires distinguishing between scalar quantities (distance, speed) and vector quantities (displacement, velocity).",
-        "Motion can be represented mathematically using equations of motion and visually through graphical representations."
+        "Distance measures the total path length (scalar), while displacement is the shortest straight-line path between initial and final positions (vector).",
+        "Speed is the rate of change of distance, whereas velocity includes both speed and direction.",
+        "Acceleration is defined as the rate of change of velocity with respect to time.",
+        "The three equations of motion govern bodies undergoing uniform acceleration along a straight line.",
+        "Graphical analysis of motion uses distance-time and velocity-time graphs to calculate speed, acceleration, and displacement."
       ],
-      "id": "fcdsj5r"
+      "id": "6mm1wmn"
     },
     {
       "type": "paragraph",
-      "id": "55eqsjt"
+      "id": "taps0rw"
     },
     {
       "type": "paragraph",
-      "id": "rh09qfq"
+      "id": "hutg5a4"
     },
     {
       "type": "paragraph",
-      "id": "jocnxj6"
+      "id": "bn99fr1"
     },
     {
-      "id": "3665ylg",
+      "id": "jq5ze8h",
       "type": "heading",
       "level": 2,
       "content": "2. Types of Motion"
     },
     {
-      "id": "kkr1dzt",
+      "id": "dkdbtam",
       "type": "table",
       "rows": [
         {
@@ -111,13 +113,13 @@
       ]
     },
     {
-      "id": "a0pasw2",
+      "id": "gtrre76",
       "type": "heading",
       "level": 2,
       "content": "3. Distance and Displacement"
     },
     {
-      "id": "16bmu5s",
+      "id": "8gyymal",
       "type": "table",
       "rows": [
         {
@@ -147,13 +149,13 @@
       ]
     },
     {
-      "id": "ojl6qqv",
+      "id": "rz34sqj",
       "type": "heading",
       "level": 2,
       "content": "4. Speed and Velocity"
     },
     {
-      "id": "7kpzyl0",
+      "id": "100rngl",
       "type": "table",
       "rows": [
         {
@@ -183,7 +185,7 @@
       ]
     },
     {
-      "id": "opzuruf",
+      "id": "l27xdll",
       "type": "heading",
       "level": 2,
       "content": "5. Types of Speed"
@@ -191,133 +193,138 @@
     {
       "type": "pullQuote",
       "content": "Distance and Displacement",
-      "id": "v03bu9l"
+      "id": "779z414"
     },
     {
       "type": "paragraph",
-      "id": "75zju86"
+      "id": "t7by18t"
     },
     {
       "type": "paragraph",
-      "id": "go76po0"
+      "id": "dea9rvc"
     },
     {
       "type": "paragraph",
-      "id": "88u7zx6"
+      "id": "pm8zpit"
     },
     {
-      "id": "99s0pcd",
+      "id": "b41jhf7",
       "type": "heading",
       "level": 2,
       "content": "6. Acceleration"
     },
     {
       "type": "paragraph",
-      "id": "xjxizfz"
+      "id": "ammp8p5"
     },
     {
       "type": "paragraph",
-      "id": "pv2le68"
+      "id": "rgx73ar"
     },
     {
       "type": "paragraph",
-      "id": "rf5ggvv"
+      "id": "btrjq4f"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Concept Pair",
-        "Scalar Quantity",
-        "Vector Quantity"
+        "Parameter",
+        "Distance",
+        "Displacement"
       ],
       "rows": [
         [
-          "Position Change",
-          "Distance (Total path length)",
-          "Displacement (Shortest path with direction)"
+          "Quantity Type",
+          "Scalar (Magnitude only)",
+          "Vector (Magnitude & Direction)"
         ],
         [
-          "Rate of Motion",
-          "Speed (Distance per unit time)",
-          "Velocity (Displacement per unit time)"
+          "Value",
+          "Always positive or zero",
+          "Can be positive, negative, or zero"
+        ],
+        [
+          "Path Dependency",
+          "Depends on actual path taken",
+          "Shortest distance between initial and final position"
         ]
       ],
-      "id": "sel28hm"
+      "id": "jdlg7np"
     },
     {
-      "id": "tp2h0n7",
+      "id": "aaqzpj7",
       "type": "heading",
       "level": 2,
       "content": "7. Equations of Motion"
     },
     {
       "type": "paragraph",
-      "id": "aqrmmec"
+      "id": "unt9fhi"
     },
     {
       "type": "paragraph",
-      "id": "ojmmnwe"
+      "id": "ws8z3kp"
     },
     {
       "type": "paragraph",
-      "id": "e33icdy"
+      "id": "hftcr9n"
     },
     {
       "type": "paragraph",
-      "id": "rkoa8cs"
+      "id": "5ztgf0q"
     },
     {
-      "id": "562dvre",
+      "id": "5ytq446",
       "type": "heading",
       "level": 2,
       "content": "8. Graphs of Motion"
     },
     {
       "type": "paragraph",
-      "id": "0x5cmu0"
+      "id": "yhj66bh"
     },
     {
       "type": "paragraph",
-      "id": "vba7zaq"
+      "id": "f7kfc26"
     },
     {
       "type": "paragraph",
-      "id": "r7czz9p"
+      "id": "pzack92"
     },
     {
       "type": "examAlert",
       "items": [
-        "Competitive exams frequently test the difference between scalar quantities (Distance, Speed) and vector quantities (Displacement, Velocity).",
-        "Pay special attention to interpreting slope and area under Distance-Time and Velocity-Time graphs.",
-        "Derivations and numerical applications of the three primary Equations of Motion are highly tested."
+        "Displacement can be zero even when total distance covered is non-zero (e.g., returning to the starting point).",
+        "The slope of a Distance-Time graph gives Speed, while the slope of a Velocity-Time graph gives Acceleration.",
+        "The area under a Velocity-Time graph represents the total Displacement covered by the object."
       ],
-      "id": "s6u1sau"
+      "id": "jjgg3m4"
     },
     {
       "type": "paragraph",
-      "id": "5sxb8g9"
+      "id": "tzy4lb9"
     },
     {
-      "id": "yr5av0u",
+      "id": "ih724ek",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "lsw0jrt"
+      "id": "k57xg0m"
     },
     {
       "type": "paragraph",
-      "id": "f8jh7v1"
+      "id": "6f26knz"
     },
     {
       "type": "paragraph",
-      "id": "sncd6wf"
+      "id": "cw1rwpu"
     },
     {
       "type": "paragraph",
-      "id": "s0womhr"
+      "id": "cy1so5v"
     }
   ],
   "enriched": true

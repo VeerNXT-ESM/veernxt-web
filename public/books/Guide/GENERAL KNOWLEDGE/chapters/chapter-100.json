@@ -1,0 +1,433 @@
+{
+  "id": "5pk8axo",
+  "title": "CHAPTER 7 : SOUND",
+  "order": 100,
+  "blocks": [
+    {
+      "id": "s8j75b5",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO SOUND"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sound is produced through vibrations and travels as longitudinal waves through a medium.",
+        "Key sound characteristics include pitch, loudness, speed, and frequency range.",
+        "Echo and SONAR utilize the reflection of sound waves for detection and distance measurement.",
+        "Human hearing is limited to a specific audible range, beyond which sound can lead to noise pollution."
+      ],
+      "id": "x996qc2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "Chapter 7",
+          "icon": "book"
+        },
+        {
+          "label": "Wave Type",
+          "value": "Longitudinal",
+          "icon": "check"
+        },
+        {
+          "label": "Core Subject",
+          "value": "Sound",
+          "icon": "info"
+        },
+        {
+          "label": "Applications",
+          "value": "SONAR & Echo",
+          "icon": "award"
+        }
+      ],
+      "id": "34q10pr"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa1i16d"
+    },
+    {
+      "type": "paragraph",
+      "id": "yzieral"
+    },
+    {
+      "id": "c72te6i",
+      "type": "heading",
+      "level": 2,
+      "content": "PRODUCTION OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "3y2ytpk"
+    },
+    {
+      "type": "paragraph",
+      "id": "qsycowj"
+    },
+    {
+      "type": "paragraph",
+      "id": "fokf7co"
+    },
+    {
+      "id": "x765v2w",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "9fwgzth",
+      "type": "heading",
+      "level": 2,
+      "content": "SOUND WAVES"
+    },
+    {
+      "type": "paragraph",
+      "id": "f9rnkbr"
+    },
+    {
+      "id": "f8kapcu",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "6kvtp23"
+    },
+    {
+      "id": "0smrb3b",
+      "type": "heading",
+      "level": 2,
+      "content": "LONGITUDINAL WAVES"
+    },
+    {
+      "type": "paragraph",
+      "id": "v26yvzs"
+    },
+    {
+      "type": "paragraph",
+      "id": "ezm23vm"
+    },
+    {
+      "id": "0mxdupy",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "lrr7tv9",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT TERMS OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "6wtiuef"
+    },
+    {
+      "type": "paragraph",
+      "id": "wxof6vq"
+    },
+    {
+      "type": "paragraph",
+      "id": "vog0nzl"
+    },
+    {
+      "type": "paragraph",
+      "id": "8tw0b55"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlg51g0"
+    },
+    {
+      "type": "paragraph",
+      "id": "5xrlbj3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uu460lc"
+    },
+    {
+      "type": "paragraph",
+      "id": "ke516s3"
+    },
+    {
+      "type": "paragraph",
+      "id": "50et710"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 7 : SOUND",
+      "id": "20zqhi9"
+    },
+    {
+      "id": "wgx640e",
+      "type": "heading",
+      "level": 2,
+      "content": "SPEED OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "7stthf7"
+    },
+    {
+      "id": "s8lztu9",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "giwfowd"
+    },
+    {
+      "type": "paragraph",
+      "id": "sdfrcsx"
+    },
+    {
+      "type": "paragraph",
+      "id": "zsywdik"
+    },
+    {
+      "id": "yqxwhji",
+      "type": "heading",
+      "level": 2,
+      "content": "CHARACTERISTICS OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "id": "sd7thq3"
+    },
+    {
+      "type": "paragraph",
+      "id": "8modbtn"
+    },
+    {
+      "type": "paragraph",
+      "id": "g78r8z4"
+    },
+    {
+      "type": "paragraph",
+      "id": "insaxdz"
+    },
+    {
+      "type": "paragraph",
+      "id": "wtwh1ky"
+    },
+    {
+      "type": "paragraph",
+      "id": "9tbca5c"
+    },
+    {
+      "type": "paragraph",
+      "id": "qgwypsz"
+    },
+    {
+      "id": "tv8zcwf",
+      "type": "heading",
+      "level": 2,
+      "content": "AUDIBLE RANGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "yyvt24j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "juyreu0"
+    },
+    {
+      "id": "f1il69x",
+      "type": "heading",
+      "level": 2,
+      "content": "ECHO"
+    },
+    {
+      "type": "paragraph",
+      "id": "exy1fve"
+    },
+    {
+      "id": "w66p4qz",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cza5ejj",
+      "type": "heading",
+      "level": 2,
+      "content": "SONAR"
+    },
+    {
+      "type": "paragraph",
+      "id": "e10sz5z"
+    },
+    {
+      "id": "38fk0vr",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "qc0y49c",
+      "type": "heading",
+      "level": 2,
+      "content": "HUMAN EAR"
+    },
+    {
+      "type": "paragraph",
+      "id": "ewjun8x"
+    },
+    {
+      "id": "2hbjijb",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "ksmvvwk",
+      "type": "heading",
+      "level": 2,
+      "content": "NOISE POLLUTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "pp6o7l3"
+    },
+    {
+      "type": "paragraph",
+      "id": "cn6pnms"
+    },
+    {
+      "id": "ej48d1p",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "04k23yn"
+    },
+    {
+      "id": "u9p1z6s",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Mathematical calculations based on Echo and SONAR principles.",
+        "High yield topic: The human audible range of sound frequencies and parameters affecting speed of sound.",
+        "Key conceptual area: Distinguishing characteristics of sound (pitch, amplitude, and quality)."
+      ],
+      "id": "mt3fo2i"
+    },
+    {
+      "type": "paragraph",
+      "id": "l8gdoce"
+    },
+    {
+      "id": "37qugfv",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "ts7tydn",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT  QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "gv9rt05"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yusatld"
+    },
+    {
+      "type": "paragraph",
+      "id": "a2kry12"
+    },
+    {
+      "type": "paragraph",
+      "id": "z8aer3h"
+    },
+    {
+      "type": "paragraph",
+      "id": "48vu03j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t9wuz41"
+    },
+    {
+      "id": "hxr79ae",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "4ug43t5",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

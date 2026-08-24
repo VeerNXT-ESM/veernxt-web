@@ -1,0 +1,141 @@
+{
+  "id": "edq5thr",
+  "title": "9. Powers of the President",
+  "order": 306,
+  "blocks": [
+    {
+      "id": "0jkx55q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The executive power of the Union shall be vested in the President and shall be exercised by him either directly or through officers subordinate to him in accordance with this Constitution.",
+      "id": "sn1evtu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Pardoning Power of President (Article 72)",
+        "Pardoning Power of Governor (Article 161)"
+      ],
+      "rows": [
+        [
+          "Court-Martial Sentences",
+          "Can pardon, reprieve, or remit sentences passed by a Court-Martial",
+          "Has no power to pardon sentences passed by a Military Court"
+        ],
+        [
+          "Death Sentence",
+          "Can grant pardon, reprieve, respite, or commutation for a death sentence",
+          "Cannot grant full pardon for a death sentence; can only suspend, remit, or commute"
+        ],
+        [
+          "Jurisdiction",
+          "Extends to offences against any law relating to a matter to which the executive power of the Union extends",
+          "Extends to offences against any law relating to a matter to which the executive power of the State extends"
+        ]
+      ],
+      "id": "2dmnmf0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Executive Head",
+          "value": "Article 52",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Article 72",
+          "icon": "check"
+        },
+        {
+          "label": "Ordinance Power",
+          "value": "Article 123",
+          "icon": "clock"
+        },
+        {
+          "label": "Emergency Powers",
+          "value": "Articles 352-360",
+          "icon": "info"
+        }
+      ],
+      "id": "qb3zz48"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An Ordinance issued by the President under Article 123 must be laid before Parliament and ceases to operate 6 weeks after its reassembly unless approved earlier.",
+        "The President cannot exercise Suspensive Veto in the case of Money Bills and Constitutional Amendment Bills.",
+        "The exercise of pardoning power under Article 72 is subject to judicial review if it is shown to be arbitrary, mala fide, or discriminatory."
+      ],
+      "id": "s4tk31d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "All executive actions of the Government of India are formally taken in the name of the President under Article 77.",
+        "The President can promulgate ordinances when either House of Parliament is not in session under Article 123.",
+        "Money Bills can be introduced in the Lok Sabha only with the prior recommendation of the President.",
+        "Under Article 72, the President possesses judicial powers to grant pardons, reprieves, respites, or remissions of punishment.",
+        "The President is the Supreme Commander of the Defence Forces of India and appoints the heads of the Army, Navy, and Air Force."
+      ],
+      "id": "lyy0bai"
+    }
+  ],
+  "enriched": true
+}

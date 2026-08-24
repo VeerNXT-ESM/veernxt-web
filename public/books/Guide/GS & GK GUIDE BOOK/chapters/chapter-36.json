@@ -1,40 +1,35 @@
 {
-  "id": "l2chxyg",
+  "id": "u98jofb",
   "title": "Chapter 35: Rivers of India",
   "order": 36,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ituccyb"
+      "id": "njjb9z9"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Major Systems",
-          "value": "2 Primary Types",
+          "label": "Primary Systems",
+          "value": "2 Main Groups",
           "icon": "book"
         },
         {
-          "label": "Flow Directions",
-          "value": "East & West",
+          "label": "Flow Categories",
+          "value": "East vs West",
           "icon": "info"
         },
         {
-          "label": "Key Systems",
-          "value": "Himalayan & Peninsular",
-          "icon": "check"
-        },
-        {
-          "label": "Core Topics",
+          "label": "Key Study Focus",
           "value": "Dams & Drainage",
-          "icon": "award"
+          "icon": "check"
         }
       ],
-      "id": "6t4mtbc"
+      "id": "wc340f6"
     },
     {
-      "id": "4r80pxf",
+      "id": "2o0df1y",
       "type": "heading",
       "level": 2,
       "content": "1. Classification of Rivers of India"
@@ -43,16 +38,15 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Indian river systems are broadly categorized into Himalayan and Peninsular rivers.",
-        "The Himalayan system comprises major rivers such as the Ganga, Indus, and Brahmaputra along with their tributaries.",
-        "Peninsular rivers are differentiated by direction into East Flowing and West Flowing systems.",
-        "Geological structures and terrain determine specific drainage patterns across Indian landscapes.",
-        "Important dams and river projects serve multiple purposes including hydroelectric power and irrigation."
+        "Indian river systems are broadly divided into Himalayan and Peninsular systems.",
+        "The Himalayan System includes major networks like the Ganga and its important tributaries.",
+        "Peninsular rivers are categorized into East-flowing and West-flowing rivers based on their drainage direction.",
+        "Drainage patterns and major river valley projects/dams play a critical role in regional hydrography."
       ],
-      "id": "7uwx2dq"
+      "id": "51fontj"
     },
     {
-      "id": "p72bhzu",
+      "id": "6ckb7uo",
       "type": "table",
       "rows": [
         {
@@ -79,17 +73,17 @@
       ]
     },
     {
-      "id": "ehm51uw",
+      "id": "k3ce9rq",
       "type": "heading",
       "level": 2,
       "content": "2. Himalayan River System"
     },
     {
       "type": "paragraph",
-      "id": "j495i84"
+      "id": "0eeozir"
     },
     {
-      "id": "jikindo",
+      "id": "imcq2x7",
       "type": "table",
       "rows": [
         {
@@ -131,7 +125,7 @@
       ]
     },
     {
-      "id": "kflt6ey",
+      "id": "by3s26z",
       "type": "heading",
       "level": 3,
       "content": "Important Tributaries of the Ganga"
@@ -139,50 +133,50 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "83f4043"
+      "id": "7hcypl5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jdrkkiq"
+      "id": "6plrtl6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "401ga5z"
+      "id": "g5jbxi3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q5rv96p"
+      "id": "ks2g8ez"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3ibllii"
+      "id": "wl96sag"
     },
     {
       "type": "pullQuote",
-      "content": "East Flowing vs West Flowing Rivers",
-      "id": "kffciep"
+      "content": "Classification of Rivers of India",
+      "id": "hr54lhc"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o6gl6mu"
+      "id": "h6bitrw"
     },
     {
-      "id": "t9p4wbv",
+      "id": "e2k8uo1",
       "type": "heading",
       "level": 2,
       "content": "3. Peninsular River System"
     },
     {
       "type": "paragraph",
-      "id": "44fy9hl"
+      "id": "kdysrru"
     },
     {
-      "id": "oowv85p",
+      "id": "n9iyi09",
       "type": "table",
       "rows": [
         {
@@ -251,13 +245,13 @@
       ]
     },
     {
-      "id": "ilubyxt",
+      "id": "p4hd7of",
       "type": "heading",
       "level": 2,
       "content": "4. East Flowing vs West Flowing Rivers"
     },
     {
-      "id": "wdh9die",
+      "id": "5tch21e",
       "type": "table",
       "rows": [
         {
@@ -305,7 +299,7 @@
       ]
     },
     {
-      "id": "yke9vz4",
+      "id": "ifkpdwc",
       "type": "heading",
       "level": 2,
       "content": "5. Drainage Patterns in India"
@@ -313,101 +307,93 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Feature",
         "East Flowing Rivers",
         "West Flowing Rivers"
       ],
       "rows": [
         [
-          "Drainage Destination",
-          "Bay of Bengal",
-          "Arabian Sea"
+          "Drain into the Bay of Bengal",
+          "Drain into the Arabian Sea"
         ],
         [
-          "Mouth Landforms",
-          "Form prominent deltas",
-          "Form estuaries (no deltas)"
-        ],
-        [
-          "Major Examples",
-          "Godavari, Krishna, Kaveri, Mahanadi",
-          "Narmada, Tapi, Sabarmati, Mahi"
+          "Form extensive deltas at their mouths",
+          "Form estuaries rather than deltas"
         ]
       ],
-      "id": "t5jbmc3"
+      "id": "bbvmf18"
     },
     {
       "type": "paragraph",
-      "id": "s3imj27"
+      "id": "vts32q4"
     },
     {
       "type": "paragraph",
-      "id": "929jeem"
+      "id": "swn39q2"
     },
     {
       "type": "paragraph",
-      "id": "u1wyqbc"
+      "id": "8y7z7oi"
     },
     {
       "type": "paragraph",
-      "id": "tncb7wm"
+      "id": "1vd6vcq"
     },
     {
-      "id": "s1lp451",
+      "id": "nts45x1",
       "type": "heading",
       "level": 2,
       "content": "6. Important Dams and River Projects"
     },
     {
       "type": "paragraph",
-      "id": "ddtiy59"
+      "id": "p5skn4a"
     },
     {
       "type": "paragraph",
-      "id": "senfpa5"
+      "id": "n3vkq7s"
     },
     {
       "type": "paragraph",
-      "id": "2pby6e5"
+      "id": "cen5qde"
     },
     {
       "type": "paragraph",
-      "id": "qim09fe"
+      "id": "njnk40r"
     },
     {
       "type": "examAlert",
       "items": [
-        "Understand key distinctions between East Flowing rivers (forming deltas) and West Flowing rivers (forming estuaries).",
-        "Memorize main left-bank and right-bank tributaries of the Ganga river system.",
-        "Match major dams and river valley projects with their respective rivers and states."
+        "Questions frequently compare East-flowing and West-flowing rivers regarding deltas versus estuaries.",
+        "Identification of important left-bank and right-bank tributaries of the Ganga is a recurring exam topic.",
+        "Matching major dams and river projects with their respective rivers and states is crucial for competitive exams."
       ],
-      "id": "kflstfj"
+      "id": "r11fb0v"
     },
     {
       "type": "paragraph",
-      "id": "2uecmio"
+      "id": "nlqp5s8"
     },
     {
-      "id": "th3bq1p",
+      "id": "4perghj",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "4mhnxyh"
+      "id": "1znlg3w"
     },
     {
       "type": "paragraph",
-      "id": "25trk61"
+      "id": "cmgfl1l"
     },
     {
       "type": "paragraph",
-      "id": "9fzs2ac"
+      "id": "y44i44h"
     },
     {
       "type": "paragraph",
-      "id": "ro0e05d"
+      "id": "3ei60b7"
     }
   ],
   "enriched": true

@@ -1,0 +1,96 @@
+{
+  "id": "t2bfany",
+  "title": "11. Vice President of India (Articles 63–71)",
+  "order": 308,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cebpusw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Vice-President shall be ex-officio Chairman of the Council of States and shall not hold any other office of profit.",
+      "id": "y45sv86"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "President of India",
+        "Vice President of India"
+      ],
+      "rows": [
+        [
+          "Electoral College Composition",
+          "Elected members of Parliament + Elected members of State Legislative Assemblies (including Delhi & Puducherry)",
+          "Elected AND Nominated members of Parliament only (No State Legislative Assemblies)"
+        ],
+        [
+          "House Qualification",
+          "Must be qualified for election as a member of Lok Sabha",
+          "Must be qualified for election as a member of Rajya Sabha"
+        ],
+        [
+          "Grounds for Removal",
+          "Violation of the Constitution (Article 61)",
+          "No specific constitutional ground mentioned"
+        ],
+        [
+          "Removal Initiation",
+          "Can be initiated in either House of Parliament",
+          "Can ONLY be initiated in the Rajya Sabha"
+        ]
+      ],
+      "id": "44ii7dp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Articles",
+          "value": "Articles 63–71",
+          "icon": "book"
+        },
+        {
+          "label": "Precedence Order",
+          "value": "2nd Highest Office",
+          "icon": "award"
+        },
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Minimum Age",
+          "value": "35 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "ogzbirl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Unlike Presidential elections, nominated members of Parliament CAN vote in the Vice-Presidential election.",
+        "Members of State Legislative Assemblies (MLAs) DO NOT participate in the Vice-Presidential election.",
+        "All doubts and disputes arising out of or in connection with the election of a Vice-President are inquired into and decided exclusively by the Supreme Court, whose decision is final.",
+        "A formal impeachment is not required for the removal of the Vice-President, and the resolution can ONLY be introduced in the Rajya Sabha."
+      ],
+      "id": "o1pxwh6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Vice-President occupies the second highest office in the country, modeled on the lines of the American Vice-President.",
+        "Acts as the ex-officio Chairman of the Council of States (Rajya Sabha) and draws salary in that capacity.",
+        "Elected by an electoral college consisting of both elected and nominated members of both Houses of Parliament.",
+        "State Legislative Assemblies do not participate in the election or removal of the Vice-President.",
+        "Can be removed by a resolution passed by a majority of all the then members of Rajya Sabha (effective majority) and agreed to by the Lok Sabha."
+      ],
+      "id": "h0kj7qr"
+    }
+  ],
+  "enriched": true
+}

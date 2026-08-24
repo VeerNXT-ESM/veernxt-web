@@ -1,0 +1,95 @@
+{
+  "id": "w2x9xy0",
+  "title": "4. Time Calculation : Fundamental Concept",
+  "order": 33,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "m89u3rv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Since the Earth rotates 360° in 24 hours, every 1° of longitude corresponds to a time difference of 4 minutes.",
+      "id": "u5bok8q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Greenwich Mean Time (GMT)",
+        "Indian Standard Time (IST)"
+      ],
+      "rows": [
+        [
+          "Reference Meridian",
+          "0° Longitude (Prime Meridian)",
+          "82°30' E Longitude"
+        ],
+        [
+          "Location",
+          "Royal Observatory, Greenwich, UK",
+          "Mirzapur, Uttar Pradesh, India"
+        ],
+        [
+          "Time Offset",
+          "UTC +0:00 (Base Time)",
+          "UTC +5:30 (5 hours 30 mins ahead)"
+        ],
+        [
+          "States/Territories Covered",
+          "Passes through UK, France, Spain, Africa",
+          "Passes through 5 Indian States"
+        ]
+      ],
+      "id": "nqwojrf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "1° Longitude",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "15° Longitude",
+          "value": "1 Hour",
+          "icon": "clock"
+        },
+        {
+          "label": "IST Meridian",
+          "value": "82°30' E",
+          "icon": "check"
+        },
+        {
+          "label": "IST Difference",
+          "value": "+5h 30m GMT",
+          "icon": "award"
+        }
+      ],
+      "id": "qxd56fi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the golden rule for time calculation: 'East Gain Add (EGA)' and 'West Lose Subtract (WLS)' relative to Greenwich.",
+        "The Standard Meridian of India (82°30' E) passes through 5 states: Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh.",
+        "Direct questions often ask to calculate local time of a city given its longitude relative to GMT or IST."
+      ],
+      "id": "1exf4ue"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth rotates 360° on its axis in 24 hours, which calculates to 15° per hour or 1° every 4 minutes.",
+        "As the Earth rotates from West to East, places east of Greenwich are ahead of GMT, while places west of Greenwich are behind GMT.",
+        "Indian Standard Time (IST) is calculated from the standard meridian of 82°30' E longitude, passing through Mirzapur, Uttar Pradesh.",
+        "IST is exactly 5 hours and 30 minutes ahead of Greenwich Mean Time (GMT +5:30).",
+        "Crossing the International Date Line (180° Longitude) from West to East gains a day, while crossing from East to West loses a day."
+      ],
+      "id": "z1lzm7e"
+    }
+  ],
+  "enriched": true
+}

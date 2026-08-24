@@ -1,0 +1,103 @@
+{
+  "id": "pkro5xm",
+  "title": "RRB Quick Revision Box",
+  "order": 294,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "4ybslje"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Exam Mode",
+          "value": "Online CBT",
+          "icon": "book"
+        },
+        {
+          "label": "Negative Marking",
+          "value": "1/3rd Mark",
+          "icon": "info"
+        },
+        {
+          "label": "RRB Zones",
+          "value": "21 Boards",
+          "icon": "check"
+        },
+        {
+          "label": "CBT Duration",
+          "value": "90 Minutes",
+          "icon": "clock"
+        }
+      ],
+      "id": "qlpp1qu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Normalization of marks is carried out in multi-shift examinations to ensure equity among candidates across different difficulty levels.",
+      "id": "ur6q5av"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "CBT Stage 1 (Screening)",
+        "CBT Stage 2 (Selection)"
+      ],
+      "rows": [
+        [
+          "Total Questions",
+          "100 Questions",
+          "120 Questions"
+        ],
+        [
+          "Duration",
+          "90 Minutes",
+          "90 Minutes"
+        ],
+        [
+          "General Awareness",
+          "40 Questions",
+          "50 Questions"
+        ],
+        [
+          "Mathematics & Reasoning",
+          "60 Questions (30 + 30)",
+          "70 Questions (35 + 35)"
+        ]
+      ],
+      "id": "enpb18m"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RRB recruitment examinations are conducted across 21 Railway Recruitment Boards in Computer Based Test (CBT) mode.",
+        "A standard penalty of 1/3rd mark is deducted for every incorrect response in objective tests.",
+        "Normalization of marks is mandatory for multi-shift examinations to account for variation in paper difficulty.",
+        "General Awareness, Mathematics, and General Intelligence & Reasoning form the core syllabus for RRB exams.",
+        "General Science questions are directly based on Class 9 and Class 10 NCERT fundamentals."
+      ],
+      "id": "tsitpju"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Negative marking of 1/3rd mark applies to all objective CBT stages; avoid arbitrary guessing.",
+        "Focus heavily on NCERT Class 9 and 10 Physics, Chemistry, and Biology concepts.",
+        "Current Affairs questions predominantly cover national initiatives, schemes, and sports from the preceding 6 to 12 months."
+      ],
+      "id": "5wdsd8k"
+    },
+    {
+      "type": "paragraph",
+      "id": "o72eibk"
+    },
+    {
+      "type": "paragraph",
+      "id": "wcfacrr"
+    }
+  ],
+  "enriched": true
+}

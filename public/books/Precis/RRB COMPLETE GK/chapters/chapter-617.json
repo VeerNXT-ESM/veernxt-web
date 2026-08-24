@@ -1,0 +1,90 @@
+{
+  "id": "3641qed",
+  "title": "14. Exam Traps",
+  "order": 617,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lrt1gmo"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Recognizing examiners' traps is just as crucial as mastering the core syllabus.",
+      "id": "zrajn79"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Common Manifestation",
+        "Prevention Strategy"
+      ],
+      "rows": [
+        [
+          "Qualifier Trap",
+          "Overlooking words like 'NOT' or 'EXCEPT'",
+          "Underline key qualifiers during first reading"
+        ],
+        [
+          "Partial Truth Trap",
+          "Option A contains half-correct facts",
+          "Read all options thoroughly before marking"
+        ],
+        [
+          "Time-Sink Trap",
+          "Spending 5+ minutes on a complex problem",
+          "Apply strict 90-second skip rule"
+        ]
+      ],
+      "id": "jy2zcl7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Common Misreads",
+          "value": "15-20%",
+          "icon": "clock"
+        },
+        {
+          "label": "Negative Penalty",
+          "value": "0.25 - 0.66",
+          "icon": "info"
+        },
+        {
+          "label": "Option Choices",
+          "value": "4 Options",
+          "icon": "check"
+        },
+        {
+          "label": "Avg Time/Q",
+          "value": "60 Seconds",
+          "icon": "calendar"
+        }
+      ],
+      "id": "vhn79bt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always re-read questions containing double negatives or negative qualifiers like 'NOT true'.",
+        "Verify units of measurement in options before marking the final calculated answer.",
+        "Never spend more than 2 minutes on a single question during your first iteration."
+      ],
+      "id": "5b2nkcj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pay close attention to key qualifier words like 'NOT', 'INCORRECT', 'ONLY', and 'ALWAYS' in question stems.",
+        "Read all four options completely before selecting an answer, even if the first choice seems correct.",
+        "Beware of option traps where factual details are partially true but contextually incorrect.",
+        "Avoid getting stuck on single time-sink questions during competitive exam passes.",
+        "Double-check units and conversion factors in numerical and data interpretation questions."
+      ],
+      "id": "z78m717"
+    }
+  ],
+  "enriched": true
+}

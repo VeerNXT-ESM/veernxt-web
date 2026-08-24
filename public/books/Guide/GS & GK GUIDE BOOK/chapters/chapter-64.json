@@ -1,40 +1,40 @@
 {
-  "id": "wua9amw",
+  "id": "6jzolj5",
   "title": "Chapter 15: Diseases and Immunity",
   "order": 64,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "yyic1r4"
+      "id": "4b98635"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Disease Categories",
+          "label": "Types of Immunity",
           "value": "2 Major Types",
-          "icon": "book"
+          "icon": "shield"
         },
         {
-          "label": "Key Mechanism",
-          "value": "Immune Response",
-          "icon": "check"
-        },
-        {
-          "label": "Primary Defense",
-          "value": "Vaccination",
+          "label": "First Vaccine",
+          "value": "1796 (Smallpox)",
           "icon": "award"
         },
         {
-          "label": "Chapter Scope",
-          "value": "9 Core Topics",
+          "label": "Pathogen Categories",
+          "value": "4 Main Types",
           "icon": "info"
+        },
+        {
+          "label": "Primary Defense",
+          "value": "Innate Immunity",
+          "icon": "check"
         }
       ],
-      "id": "x98axc4"
+      "id": "5b69bgu"
     },
     {
-      "id": "r1jm0s0",
+      "id": "xwdm0fw",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Disease"
@@ -43,56 +43,56 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Diseases are broadly classified into communicable (infectious) and non-communicable (non-infectious) types.",
-        "Deficiency diseases occur due to a lack of essential vitamins, minerals, or nutrients in the diet.",
-        "The immune system protects the host from pathogens using innate and acquired defense mechanisms.",
-        "Vaccination induces active acquired immunity by training the immune system to recognize specific antigens.",
-        "Effective prevention involves personal hygiene, sanitation, vector management, and timely immunization."
+        "Diseases are broadly classified into Communicable (infectious) and Non-Communicable (non-infectious) diseases.",
+        "Deficiency diseases occur due to a lack of specific vitamins, minerals, or essential nutrients in the diet over a long period.",
+        "The immune system consists of innate immunity (present at birth) and acquired immunity (developed after exposure to pathogens).",
+        "Vaccination works by introducing killed or weakened antigens to stimulate antibody production and build long-term memory.",
+        "Preventive measures include maintaining hygiene, balanced nutrition, vector control, and timely immunization schedules."
       ],
-      "id": "749v4ct"
+      "id": "c1ns5xo"
     },
     {
       "type": "paragraph",
-      "id": "ecpp63i"
+      "id": "kkw0h6k"
     },
     {
       "type": "paragraph",
-      "id": "0q9v4sl"
+      "id": "17kmkql"
     },
     {
       "type": "paragraph",
-      "id": "tpkkcz7"
+      "id": "w28n2vv"
     },
     {
-      "id": "xk3jctb",
+      "id": "yyaghsw",
       "type": "heading",
       "level": 2,
       "content": "2. Types of Diseases"
     },
     {
       "type": "paragraph",
-      "id": "7ufcmzp"
+      "id": "8lpujxg"
     },
     {
       "type": "paragraph",
-      "id": "6ku7zl2"
+      "id": "zym50r1"
     },
     {
       "type": "paragraph",
-      "id": "aarlf7r"
+      "id": "9u637dh"
     },
     {
       "type": "paragraph",
-      "id": "jo5dpfs"
+      "id": "4gsmrnx"
     },
     {
-      "id": "fkzl9z8",
+      "id": "6qnp6xn",
       "type": "heading",
       "level": 2,
       "content": "3. Communicable Diseases"
     },
     {
-      "id": "2zmiapc",
+      "id": "jmm2tn3",
       "type": "table",
       "rows": [
         {
@@ -162,40 +162,40 @@
       ]
     },
     {
-      "id": "pzxq1da",
+      "id": "zeyepp4",
       "type": "heading",
       "level": 2,
       "content": "4. Non‑Communicable Diseases"
     },
     {
       "type": "paragraph",
-      "id": "izztnce"
+      "id": "kejroqv"
     },
     {
       "type": "pullQuote",
-      "content": "Chapter 15: Diseases and Immunity",
-      "id": "ichnj2p"
+      "content": "Vaccination introduces an antigen into the body to stimulate the production of antibodies and confer immunity against specific diseases.",
+      "id": "bxnlguu"
     },
     {
       "type": "paragraph",
-      "id": "fwjacq2"
+      "id": "mhu95p5"
     },
     {
       "type": "paragraph",
-      "id": "wx6d88a"
+      "id": "m1042i2"
     },
     {
       "type": "paragraph",
-      "id": "0epy8km"
+      "id": "h6ll4au"
     },
     {
-      "id": "l6y7boi",
+      "id": "mgnvjgo",
       "type": "heading",
       "level": 2,
       "content": "5. Deficiency Diseases"
     },
     {
-      "id": "pz7pnwx",
+      "id": "4rm7t76",
       "type": "table",
       "rows": [
         {
@@ -257,57 +257,62 @@
       ]
     },
     {
-      "id": "ckdm5av",
+      "id": "zirugzc",
       "type": "heading",
       "level": 2,
       "content": "6. Immune System"
     },
     {
       "type": "paragraph",
-      "id": "lins8ke"
+      "id": "5ry8k4c"
     },
     {
       "type": "paragraph",
-      "id": "kyo970c"
+      "id": "bv3r7mp"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Feature",
-        "Communicable Diseases",
-        "Non-Communicable Diseases"
+        "Innate Immunity",
+        "Acquired Immunity"
       ],
       "rows": [
         [
-          "Causative Agent",
-          "Infectious pathogens (Bacteria, Viruses, Protozoa)",
-          "Nutritional deficits, lifestyle, or genetic factors"
+          "Presence",
+          "Present from birth",
+          "Acquired after birth"
         ],
         [
-          "Transmission",
-          "Transmitted from infected to healthy individual via vectors/air/water",
-          "Does not transmit from person to person"
+          "Specificity",
+          "Non-specific defense mechanism",
+          "Pathogen-specific response"
         ],
         [
-          "Examples",
-          "Tuberculosis, Malaria, Typhoid",
-          "Diabetes, Scurvy, Hypertension"
+          "Memory",
+          "Lacks immunological memory",
+          "Retains memory for faster secondary response"
+        ],
+        [
+          "Components",
+          "Physical & chemical barriers (skin, mucosa)",
+          "T-cells, B-cells, and specific antibodies"
         ]
       ],
-      "id": "q5x1mx5"
+      "id": "7orosz7"
     },
     {
       "type": "paragraph",
-      "id": "uwiskni"
+      "id": "ag4p1ke"
     },
     {
-      "id": "wzc7huf",
+      "id": "khv19l5",
       "type": "heading",
       "level": 2,
       "content": "7. Types of Immunity"
     },
     {
-      "id": "nde179f",
+      "id": "frbjswq",
       "type": "table",
       "rows": [
         {
@@ -348,79 +353,79 @@
       ]
     },
     {
-      "id": "5qajmek",
+      "id": "ww0opy1",
       "type": "heading",
       "level": 2,
       "content": "8. Vaccination"
     },
     {
       "type": "paragraph",
-      "id": "iwdhbv8"
+      "id": "li7sp11"
     },
     {
       "type": "paragraph",
-      "id": "7k56x72"
+      "id": "xqylgtg"
     },
     {
       "type": "paragraph",
-      "id": "wxws5do"
+      "id": "sc76eio"
     },
     {
-      "id": "cflos23",
+      "id": "5por9rf",
       "type": "heading",
       "level": 2,
       "content": "9. Prevention of Diseases"
     },
     {
       "type": "paragraph",
-      "id": "kcym7uk"
+      "id": "ha51x6t"
     },
     {
       "type": "paragraph",
-      "id": "7bsle5d"
+      "id": "08dgb02"
     },
     {
       "type": "paragraph",
-      "id": "102vv88"
+      "id": "dvbb2y1"
     },
     {
       "type": "examAlert",
       "items": [
-        "Competitive exams frequently test the differences between innate immunity (present at birth) and acquired immunity (developed after exposure).",
-        "Memorize specific nutrient deficiencies and their resulting clinical conditions (e.g., Vitamin A - Night Blindness, Vitamin C - Scurvy, Vitamin D - Rickets).",
-        "Understand the primary pathogens (bacteria, virus, protozoa) responsible for major communicable diseases like Tuberculosis, Malaria, and Dengue."
+        "Edward Jenner is known as the 'Father of Vaccination' for developing the smallpox vaccine in 1796.",
+        "Key deficiency diseases frequently asked: Vitamin A (Night Blindness), Vitamin C (Scurvy), Vitamin D (Rickets), and Iodine (Goitre).",
+        "Distinguish between Active Immunity (body produces own antibodies) and Passive Immunity (direct transfer of readymade antibodies)."
       ],
-      "id": "da2hhiz"
+      "id": "umzpmd8"
     },
     {
       "type": "paragraph",
-      "id": "6ntq6k9"
+      "id": "1lrcwsl"
     },
     {
       "type": "paragraph",
-      "id": "vwo377y"
+      "id": "x3ll3hs"
     },
     {
-      "id": "3afmw17",
+      "id": "01cc4yp",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "p8peqik"
+      "id": "02ipv84"
     },
     {
       "type": "paragraph",
-      "id": "rwvnxri"
+      "id": "ih4pccj"
     },
     {
       "type": "paragraph",
-      "id": "ppielke"
+      "id": "100xd2f"
     },
     {
       "type": "paragraph",
-      "id": "0tqtkjs"
+      "id": "rmk787u"
     }
   ],
   "enriched": true

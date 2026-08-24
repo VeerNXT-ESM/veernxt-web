@@ -1,0 +1,124 @@
+{
+  "id": "7vgf6s6",
+  "title": "Organizational Structure",
+  "order": 661,
+  "blocks": [
+    {
+      "id": "zgpb4py",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A matrix organizational structure explicitly violates Henri Fayol's principle of unity of command due to its dual reporting relationships.",
+      "id": "2lpmfxe"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Tall Structure",
+        "Flat Structure"
+      ],
+      "rows": [
+        [
+          "Span of Control",
+          "Narrow (few subordinates per manager)",
+          "Wide (many subordinates per manager)"
+        ],
+        [
+          "Management Levels",
+          "Many hierarchical levels",
+          "Few hierarchical levels"
+        ],
+        [
+          "Communication Speed",
+          "Slower due to multiple scalar steps",
+          "Faster due to direct communication lines"
+        ],
+        [
+          "Supervision & Control",
+          "Close supervision and tight control",
+          "Loose supervision and higher delegation"
+        ]
+      ],
+      "id": "z8jxmgx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Oldest Form",
+          "value": "Line Structure",
+          "icon": "book"
+        },
+        {
+          "label": "Graicunas Theory",
+          "value": "Span of Control",
+          "icon": "info"
+        },
+        {
+          "label": "Matrix Structure",
+          "value": "Dual Command",
+          "icon": "award"
+        },
+        {
+          "label": "Optimal Span",
+          "value": "5-6 Subordinates",
+          "icon": "check"
+        }
+      ],
+      "id": "0idfqqz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Matrix organization is frequently tested as the structure that violates the Unity of Command principle.",
+        "V.A. Graicunas' formula for calculating direct and group relationships in span of control is a common direct question.",
+        "Differentiate between Line and Line & Staff structures, specifically regarding the advisory role of staff specialists versus scalar authority."
+      ],
+      "id": "yoj48jc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Line organization represents the simplest and oldest structure, characterized by direct vertical authority flow from top to bottom.",
+        "Functional organizational structure groups activities according to specialized functions like production, marketing, and finance.",
+        "Matrix organization overlays functional hierarchy with project-based teams, leading to dual reporting systems.",
+        "Span of control determines whether an organization adopts a tall structure with narrow supervision or a flat structure with wide delegation."
+      ],
+      "id": "demr4lr"
+    }
+  ],
+  "enriched": true
+}

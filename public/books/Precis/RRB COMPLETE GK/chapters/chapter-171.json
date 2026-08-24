@@ -1,0 +1,120 @@
+{
+  "id": "flij4p4",
+  "title": "5. Important Soil Processes",
+  "order": 171,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "d7yumo0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Processes",
+          "value": "6 Core Types",
+          "icon": "book"
+        },
+        {
+          "label": "Eluviation Zone",
+          "value": "A-Horizon",
+          "icon": "info"
+        },
+        {
+          "label": "Illuviation Zone",
+          "value": "B-Horizon",
+          "icon": "check"
+        },
+        {
+          "label": "Laterization Zone",
+          "value": "Humid Tropics",
+          "icon": "award"
+        }
+      ],
+      "id": "yz8w7t6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Eluviation is the washing out and leaching of soluble minerals and organic matter from upper soil horizons.",
+        "Illuviation is the process of deposition and accumulation of leached minerals in lower horizons (B horizon).",
+        "Podzolization occurs in cool, humid climates under coniferous vegetation, producing acidic, ash-grey soils.",
+        "Laterization involves heavy leaching of silica in hot, humid tropical climates, leaving behind iron and aluminum oxides.",
+        "Gleization occurs in poorly drained, waterlogged conditions, producing bluish-grey soils due to reduced iron compounds."
+      ],
+      "id": "1r92d44"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil forming processes continuously transform parent material through physical, chemical, and biological actions to develop distinct soil horizons.",
+      "id": "i27niwv"
+    },
+    {
+      "type": "paragraph",
+      "id": "0xdq8j6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Soil Process",
+        "Climatic Condition",
+        "Primary Chemical Action",
+        "Resulting Soil Feature"
+      ],
+      "rows": [
+        [
+          "Podzolization",
+          "Cool, humid / Coniferous",
+          "Leaching of Fe & Al oxides; silica remains",
+          "Ash-grey acidic A horizon"
+        ],
+        [
+          "Laterization",
+          "Hot, wet tropical climates",
+          "Leaching of silica; Fe & Al accumulate",
+          "Reddish, iron-rich hard soil"
+        ],
+        [
+          "Calcification",
+          "Arid and semi-arid regions",
+          "Precipitation of Calcium Carbonate (CaCO3)",
+          "Calcium-rich horizon / Kankar"
+        ],
+        [
+          "Gleization",
+          "Waterlogged / Poor drainage",
+          "Reduction of ferric iron to ferrous iron",
+          "Bluish-grey sticky clay layer"
+        ]
+      ],
+      "id": "smf2nc3"
+    },
+    {
+      "type": "paragraph",
+      "id": "xr4ai7r"
+    },
+    {
+      "type": "paragraph",
+      "id": "h8nm519"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Eluviation (removal/washing out from A horizon) and Illuviation (accumulation in B horizon).",
+        "Remember that Laterization removes silica and retains Fe/Al oxides, whereas Podzolization removes Fe/Al and retains silica.",
+        "Gleization is specifically tested in context with waterlogged, anaerobic conditions resulting in reduced ferrous iron."
+      ],
+      "id": "aq91lm4"
+    },
+    {
+      "type": "paragraph",
+      "id": "6y4bydh"
+    },
+    {
+      "type": "paragraph",
+      "id": "jppvrt1"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,89 @@
+{
+  "id": "npwthax",
+  "title": "MOST IMPORTANT EXAM TRAPS",
+  "order": 22,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "z4r0twb"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Read the question stem twice to identify whether it asks for correct or incorrect options.",
+      "id": "65cfm8g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Common Example",
+        "Avoidance Strategy"
+      ],
+      "rows": [
+        [
+          "Negation Trap",
+          "Which of the following is NOT correct?",
+          "Circle or highlight 'NOT' immediately before reading options."
+        ],
+        [
+          "Unit Trap",
+          "Speed given in km/h while time is given in seconds.",
+          "Convert all parameters into unified SI units first."
+        ],
+        [
+          "Extreme Qualifier Trap",
+          "Statement uses absolute terms like 'Always' or 'Only'.",
+          "Treat extreme statements with skepticism unless factually backed."
+        ]
+      ],
+      "id": "9lhaq1f"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "0.25 - 0.66",
+          "icon": "info"
+        },
+        {
+          "label": "Avg. Time per Q",
+          "value": "36-54 Sec",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Accuracy",
+          "value": "85%+",
+          "icon": "check"
+        },
+        {
+          "label": "Major Trap Types",
+          "value": "5 Categories",
+          "icon": "book"
+        }
+      ],
+      "id": "i59xff5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Negation traps ('Which of the following is NOT correct?') account for a high percentage of avoidable negative marks.",
+        "Option 'A' is frequently designed as a partial distractor to trick rushed candidates.",
+        "Watch for subtle word changes in static GK and polity questions that alter the legal or historical meaning completely."
+      ],
+      "id": "fjijnrd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Always verify measurement units (e.g., converting km/h to m/s) before starting calculations.",
+        "Identify negation keywords like 'NOT', 'EXCEPT', or 'INCORRECT' in the question stem.",
+        "Be skeptical of extreme qualifiers such as 'Always', 'Never', 'All', or 'Only' in option statements.",
+        "Verify that all conditions in multi-statement questions are completely satisfied before choosing the final option."
+      ],
+      "id": "xrd521y"
+    }
+  ],
+  "enriched": true
+}

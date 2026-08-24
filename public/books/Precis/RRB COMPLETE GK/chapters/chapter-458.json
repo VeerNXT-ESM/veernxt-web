@@ -1,0 +1,90 @@
+{
+  "id": "q079rcn",
+  "title": "RRB Quick Revision Box",
+  "order": 458,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qdyf3il"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways was nationalized in 1951 and is currently the fourth-largest national railway network in the world by size.",
+      "id": "5pydmp1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (Meters)",
+        "Width (Feet & Inches)"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m",
+          "5 ft 6 in"
+        ],
+        [
+          "Metre Gauge",
+          "1.000 m",
+          "3 ft 3 3/8 in"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "2 ft 6 in / 2 ft"
+        ]
+      ],
+      "id": "oz0e4cv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "18 Zones",
+          "icon": "info"
+        },
+        {
+          "label": "Nationalized",
+          "value": "1951",
+          "icon": "check"
+        },
+        {
+          "label": "World Rank",
+          "value": "4th Largest",
+          "icon": "award"
+        }
+      ],
+      "id": "ck4dc5w"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Track Gauge Dimensions: Broad Gauge (1.676 m), Metre Gauge (1.000 m), and Narrow Gauge (0.762 m / 0.610 m) are frequently asked in RRB NTPC & Group D.",
+        "First Electric Train: Deccan Queen / Victoria Terminus to Kurla, which ran on February 3, 1925.",
+        "Railway Zone Headquarters: Matching zones with their respective headquarters (e.g., West Central Railway at Jabalpur, North Eastern Railway at Gorakhpur)."
+      ],
+      "id": "iz7vaz4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train ran between Bori Bunder (Mumbai) and Thane on April 16, 1853.",
+        "Indian Railways was nationalized in 1951 and is currently the fourth-largest railway network in the world.",
+        "The mascot of Indian Railways is 'Bholu', an elephant dressed as a railway guard holding a lamp.",
+        "Broad Gauge (1.676 m) accounts for the vast majority of the track route length in India.",
+        "South Coast Railway (headquartered at Visakhapatnam) is the 18th and newest railway zone in India."
+      ],
+      "id": "l9ws8tr"
+    }
+  ],
+  "enriched": true
+}

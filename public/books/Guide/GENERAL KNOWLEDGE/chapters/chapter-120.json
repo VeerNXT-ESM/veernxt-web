@@ -1,0 +1,262 @@
+{
+  "id": "gkgc1gq",
+  "title": "CHAPTER 10: EXCRETORY SYSTEM",
+  "order": 120,
+  "blocks": [
+    {
+      "id": "ns15s8o",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Excretion – Concept and Importance"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Excretion removes metabolic nitrogenous wastes (ammonia, urea, and uric acid) to maintain homeostasis and osmoregulation.",
+        "The human excretory system comprises a pair of kidneys, ureters, a urinary bladder, and a urethra.",
+        "The nephron is the structural and functional unit of the kidney, divided into the renal corpuscle (glomerulus and Bowman's capsule) and renal tubule.",
+        "Urine formation occurs through three sequential processes: Glomerular Ultrafiltration, Selective Reabsorption, and Tubular Secretion.",
+        "Hormones like Anti-Diuretic Hormone (ADH), Aldosterone (via RAAS pathway), and Atrial Natriuretic Factor (ANF) strictly regulate kidney function.",
+        "Renal disorders include kidney stones (renal calculi), uremia, glomerulonephritis, and end-stage renal disease treated via hemodialysis or kidney transplantation."
+      ],
+      "id": "43j913r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Functional Units",
+          "value": "~1 Million Nephrons/Kidney",
+          "icon": "info"
+        },
+        {
+          "label": "Daily GFR",
+          "value": "180 L/day",
+          "icon": "clock"
+        },
+        {
+          "label": "Average Urine Volume",
+          "value": "1.0 - 1.5 L/day",
+          "icon": "check"
+        },
+        {
+          "label": "Main Human Waste",
+          "value": "Urea",
+          "icon": "award"
+        }
+      ],
+      "id": "clqxv3n"
+    },
+    {
+      "type": "paragraph",
+      "id": "ofippha"
+    },
+    {
+      "id": "7xe8m9f",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Nitrogenous Wastes"
+    },
+    {
+      "type": "paragraph",
+      "id": "5igtuff"
+    },
+    {
+      "id": "lswwu1x",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Human Excretory System – Organs"
+    },
+    {
+      "type": "paragraph",
+      "id": "7bs9adn"
+    },
+    {
+      "id": "gjb8csb",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Kidney – External Structure"
+    },
+    {
+      "type": "paragraph",
+      "id": "bf3kmh1"
+    },
+    {
+      "id": "359sb9s",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Kidney – Internal Structure"
+    },
+    {
+      "type": "paragraph",
+      "id": "o26ahw2"
+    },
+    {
+      "id": "c51imc9",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Nephron – Functional Unit of Kidney"
+    },
+    {
+      "type": "paragraph",
+      "id": "4qv8j8o"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Nephron – Functional Unit of Kidney",
+      "id": "2b0dszp"
+    },
+    {
+      "id": "r2xm8bx",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Blood Supply to Nephron"
+    },
+    {
+      "type": "paragraph",
+      "id": "6wet9tk"
+    },
+    {
+      "id": "8mtk3gg",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Formation of Urine – Ultrafiltration"
+    },
+    {
+      "type": "paragraph",
+      "id": "npzyud4"
+    },
+    {
+      "id": "z0l8q40",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Reabsorption"
+    },
+    {
+      "type": "paragraph",
+      "id": "ppxs1u6"
+    },
+    {
+      "id": "4lt495l",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Tubular Secretion"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Excretory Type",
+        "Nitrogenous Waste",
+        "Toxicity & Water Requirement",
+        "Representative Organisms"
+      ],
+      "rows": [
+        [
+          "Ammonotelic",
+          "Ammonia",
+          "Highly toxic; requires large volume of water for elimination",
+          "Aquatic invertebrates, bony fishes, aquatic amphibians"
+        ],
+        [
+          "Ureotelic",
+          "Urea",
+          "Moderately toxic; requires moderate water for excretion",
+          "Mammals, terrestrial amphibians, marine fishes"
+        ],
+        [
+          "Uricotelic",
+          "Uric Acid",
+          "Least toxic; excreted with minimal water loss as paste or pellet",
+          "Reptiles, birds, land snails, insects"
+        ]
+      ],
+      "id": "dnguoe3"
+    },
+    {
+      "type": "paragraph",
+      "id": "2mcn7wd"
+    },
+    {
+      "id": "vcc3peq",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Role of Loop of Henle"
+    },
+    {
+      "type": "paragraph",
+      "id": "32axlqs"
+    },
+    {
+      "id": "9o5h7se",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Hormonal Regulation of Excretion"
+    },
+    {
+      "type": "paragraph",
+      "id": "r374se1"
+    },
+    {
+      "id": "5pge96p",
+      "type": "heading",
+      "level": 2,
+      "content": "13. Urinary Bladder and Micturition"
+    },
+    {
+      "type": "paragraph",
+      "id": "k593eij"
+    },
+    {
+      "id": "iobns5y",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Excretion in Other Organisms"
+    },
+    {
+      "type": "paragraph",
+      "id": "77rpcum"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinction between Ammonotelic (bony fish), Ureotelic (mammals, frogs), and Uricotelic (birds, reptiles, insects) animals is frequently tested.",
+        "Glomerular Filtration Rate (GFR) in a healthy individual is approximately 125 mL/min (180 Liters/day), though 99% of filtrate is reabsorbed.",
+        "Descending limb of Loop of Henle is permeable to water but impermeable to electrolytes; ascending limb is impermeable to water but allows transport of electrolytes.",
+        "Juxtaglomerular Apparatus (JGA) secretes Renin in response to a fall in glomerular blood pressure/GFR to trigger the RAAS cascade."
+      ],
+      "id": "2zpu4rg"
+    },
+    {
+      "id": "a1yivgm",
+      "type": "heading",
+      "level": 2,
+      "content": "15. Disorders of Excretory System"
+    },
+    {
+      "type": "paragraph",
+      "id": "x5s2pg2"
+    },
+    {
+      "id": "77gol8n",
+      "type": "heading",
+      "level": 2,
+      "content": "16. Dialysis and Kidney Transplant"
+    },
+    {
+      "type": "paragraph",
+      "id": "9l1sowd"
+    },
+    {
+      "id": "l321408",
+      "type": "heading",
+      "level": 2,
+      "content": "17. IMPORTANT FACTS –  FOCUS"
+    },
+    {
+      "type": "paragraph",
+      "id": "4u5c5bj"
+    }
+  ],
+  "enriched": true
+}

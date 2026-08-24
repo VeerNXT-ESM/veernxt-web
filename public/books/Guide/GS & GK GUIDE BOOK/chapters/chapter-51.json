@@ -1,40 +1,40 @@
 {
-  "id": "rowoyr0",
+  "id": "1h89m8c",
   "title": "Chapter 2: Force and Work",
   "order": 51,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "lk3lro5"
+      "id": "mu740qz"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Laws of Motion",
-          "value": "3 Laws",
-          "icon": "book"
-        },
-        {
           "label": "SI Unit of Force",
           "value": "Newton (N)",
-          "icon": "award"
+          "icon": "check"
         },
         {
           "label": "SI Unit of Work",
           "value": "Joule (J)",
-          "icon": "check"
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "clock"
         },
         {
           "label": "1 Horsepower",
           "value": "746 Watts",
-          "icon": "info"
+          "icon": "award"
         }
       ],
-      "id": "3ff4ts8"
+      "id": "rclmrq0"
     },
     {
-      "id": "0ps9rdh",
+      "id": "8lnpcq7",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Force"
@@ -43,60 +43,59 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Force is an external agent capable of changing the body's state of rest or motion.",
-        "Newton's First Law defines inertia, Second Law provides force calculation (F = ma), and Third Law states action and reaction are equal and opposite.",
-        "Work is calculated as the product of force and displacement in the direction of force (W = F × s × cos θ).",
-        "Work done can be positive (θ < 90°), negative (θ > 90°), or zero (θ = 90° or zero displacement).",
-        "Power represents the rate of doing work or energy consumption rate per unit time (P = W / t)."
+        "Force is a vector quantity defined as an push or pull that can alter an object's state of rest, motion, direction, or shape.",
+        "Newton's Laws of Motion describe the relationship between a body and the forces acting upon it, establishing concepts of Inertia (1st Law), Momentum and F = ma (2nd Law), and Action-Reaction (3rd Law).",
+        "Work is done when a force causes displacement in the direction of the force (W = F × s × cos θ), and it can be positive, negative, or zero.",
+        "Power represents the rate at which work is done or energy is transferred (P = W / t)."
       ],
-      "id": "f78p2ct"
+      "id": "a3p4u8l"
     },
     {
       "type": "paragraph",
-      "id": "eqgos90"
+      "id": "xadozwf"
     },
     {
       "type": "paragraph",
-      "id": "i0272p7"
+      "id": "qx36130"
     },
     {
       "type": "paragraph",
-      "id": "gnqu6t1"
+      "id": "hxzwwoa"
     },
     {
       "type": "paragraph",
-      "id": "cvym4dh"
+      "id": "956hvgm"
     },
     {
-      "id": "dbm1jwu",
+      "id": "zhphm4b",
       "type": "heading",
       "level": 2,
       "content": "2. Effects of Force"
     },
     {
       "type": "paragraph",
-      "id": "wlwkb1s"
+      "id": "zepnjeb"
     },
     {
       "type": "paragraph",
-      "id": "mgcjez9"
+      "id": "4hivx9o"
     },
     {
       "type": "paragraph",
-      "id": "osl8a2z"
+      "id": "hjgbqdl"
     },
     {
       "type": "paragraph",
-      "id": "3dm37ju"
+      "id": "yc99l9q"
     },
     {
-      "id": "z61ma0g",
+      "id": "emvqqek",
       "type": "heading",
       "level": 2,
       "content": "3. Types of Force"
     },
     {
-      "id": "x9n2fq5",
+      "id": "js26uos",
       "type": "table",
       "rows": [
         {
@@ -123,42 +122,42 @@
       ]
     },
     {
-      "id": "h4sfnzf",
+      "id": "hj2kz2o",
       "type": "heading",
       "level": 2,
       "content": "4. Newton’s Laws of Motion"
     },
     {
       "type": "pullQuote",
-      "content": "Work is done when a force acts on an object and causes displacement in the direction of the force.",
-      "id": "af5if57"
+      "content": "Newton’s Laws of Motion form the fundamental basis of classical mechanics.",
+      "id": "27wqihz"
     },
     {
       "type": "paragraph",
-      "id": "cg6hh80"
+      "id": "3y8wier"
     },
     {
       "type": "paragraph",
-      "id": "m489f1z"
+      "id": "c4impnl"
     },
     {
       "type": "paragraph",
-      "id": "j74zim8"
+      "id": "f22y02y"
     },
     {
       "type": "paragraph",
-      "id": "fkmxsnb"
+      "id": "euz5gfc"
     },
     {
       "type": "paragraph",
-      "id": "96fuqtg"
+      "id": "ccflph6"
     },
     {
       "type": "paragraph",
-      "id": "lsoa4el"
+      "id": "j8z0vpg"
     },
     {
-      "id": "6migfjq",
+      "id": "17acmg9",
       "type": "heading",
       "level": 2,
       "content": "5. Meaning of Work"
@@ -173,13 +172,13 @@
       "rows": [
         [
           "Definition",
-          "Energy transferred by a force acting through a distance",
-          "Rate at which work is performed or energy is converted"
+          "Energy transferred when a force causes displacement",
+          "Rate at which work is performed"
         ],
         [
           "Formula",
-          "W = Force × Displacement",
-          "P = Work / Time"
+          "W = Force × Displacement (F × s)",
+          "P = Work / Time (W / t)"
         ],
         [
           "SI Unit",
@@ -187,19 +186,19 @@
           "Watt (W)"
         ],
         [
-          "Time Dependency",
-          "Independent of time taken",
-          "Directly dependent on time taken"
+          "Nature",
+          "Scalar Quantity",
+          "Scalar Quantity"
         ]
       ],
-      "id": "fvfny8b"
+      "id": "fz1qeqa"
     },
     {
       "type": "paragraph",
-      "id": "dwmly7g"
+      "id": "10whohf"
     },
     {
-      "id": "mou4dma",
+      "id": "obw8uk1",
       "type": "heading",
       "level": 2,
       "content": "6. Formula of Work"
@@ -207,79 +206,79 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "fdg9xlk"
+      "id": "mxykxqw"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ju2hfbr"
+      "id": "q45esd0"
     },
     {
-      "id": "lckwcks",
+      "id": "j7p4sel",
       "type": "heading",
       "level": 2,
       "content": "7. Types of Work"
     },
     {
       "type": "paragraph",
-      "id": "vb1vzxj"
+      "id": "oegazcj"
     },
     {
       "type": "paragraph",
-      "id": "pixo14k"
+      "id": "tcq71gq"
     },
     {
       "type": "paragraph",
-      "id": "vscmfqd"
+      "id": "oovv2mt"
     },
     {
-      "id": "oydrdd5",
+      "id": "6vy6hw9",
       "type": "heading",
       "level": 2,
       "content": "8. Power"
     },
     {
       "type": "paragraph",
-      "id": "pi23qci"
+      "id": "5djmusv"
     },
     {
       "type": "examAlert",
       "items": [
-        "Zero work is performed when force is perpendicular to displacement (e.g., motion of satellites, carrying load on head horizontally).",
-        "Frictional force does negative work because it acts opposite to the direction of motion.",
-        "Commercial unit of electrical energy is 1 kWh, which equals 3.6 × 10⁶ Joules."
+        "Zero Work Condition: When force and displacement are perpendicular (θ = 90°), work done is ZERO (e.g., a porter holding a heavy bag on his head while standing still or walking horizontally).",
+        "Conversion Factor: 1 Horsepower (HP) = 746 Watts; 1 Joule = 10^7 Ergs.",
+        "Recoil of a Gun: An example of Newton's Third Law of Motion and Conservation of Linear Momentum frequently asked in SSC and Railway exams."
       ],
-      "id": "bw1jd9k"
+      "id": "yvkalj6"
     },
     {
       "type": "paragraph",
-      "id": "w4uhyzm"
+      "id": "f4q8ccv"
     },
     {
       "type": "paragraph",
-      "id": "abc0ebi"
+      "id": "u63oi9z"
     },
     {
-      "id": "5pud0v0",
+      "id": "qgs2i7u",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "cv7yck4"
+      "id": "c12g9zf"
     },
     {
       "type": "paragraph",
-      "id": "1pzi3tq"
+      "id": "agtpjl8"
     },
     {
       "type": "paragraph",
-      "id": "sprymei"
+      "id": "jdmtgv7"
     },
     {
       "type": "paragraph",
-      "id": "05qqcf3"
+      "id": "0fnvugs"
     }
   ],
   "enriched": true

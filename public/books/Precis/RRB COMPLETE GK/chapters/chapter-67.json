@@ -1,0 +1,105 @@
+{
+  "id": "j8cwakw",
+  "title": "6. Sedimentary Rocks",
+  "order": 67,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "wt1diwf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Surface Cover",
+          "value": "~75%",
+          "icon": "book"
+        },
+        {
+          "label": "Crustal Volume",
+          "value": "~5%",
+          "icon": "info"
+        },
+        {
+          "label": "Core Process",
+          "value": "Lithification",
+          "icon": "check"
+        },
+        {
+          "label": "Major Types",
+          "value": "Clastic, Organic, Chemical",
+          "icon": "award"
+        }
+      ],
+      "id": "rcd25ej"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sedimentary rocks are formed by the deposition and subsequent cementation of material at the Earth's surface and within bodies of water.",
+      "id": "jv14vma"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Formed by the accumulation, compaction, and cementation of mineral and organic particles over geological time.",
+        "Characterized by distinct bedding planes or strata, making them stratified rocks.",
+        "Only rock type that contains fossils, offering vital clues about earth's prehistoric climate and evolution.",
+        "Categorized into mechanically formed (clastic), organically formed, and chemically formed rocks."
+      ],
+      "id": "7bz6ft5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type",
+        "Formation Process",
+        "Key Examples"
+      ],
+      "rows": [
+        [
+          "Mechanically Formed (Clastic)",
+          "Compaction and cementation of weathered pre-existing rock fragments",
+          "Sandstone, Shale, Conglomerate, Breccia"
+        ],
+        [
+          "Organically Formed",
+          "Accumulation and compaction of plant and animal organic debris",
+          "Limestone, Chalk, Coal, Peat"
+        ],
+        [
+          "Chemically Formed",
+          "Precipitation of dissolved minerals from water bodies through evaporation",
+          "Rock Salt (Halite), Gypsum, Dolomite, Potash"
+        ]
+      ],
+      "id": "3nghojj"
+    },
+    {
+      "type": "paragraph",
+      "id": "dtfjigw"
+    },
+    {
+      "type": "paragraph",
+      "id": "s3xmfkt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fossils are found exclusively in sedimentary rocks; igneous and metamorphic processes destroy organic remains.",
+        "Shale is the most abundant sedimentary rock, accounting for over 50% of all sedimentary rocks on Earth's crust.",
+        "Limestone can form either organically through skeletal remains or chemically through calcite precipitation."
+      ],
+      "id": "0gs5ul2"
+    },
+    {
+      "type": "paragraph",
+      "id": "t0tiq6j"
+    },
+    {
+      "type": "paragraph",
+      "id": "bq7e0qh"
+    }
+  ],
+  "enriched": true
+}

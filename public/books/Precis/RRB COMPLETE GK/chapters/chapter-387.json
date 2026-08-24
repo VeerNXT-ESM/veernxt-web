@@ -1,0 +1,90 @@
+{
+  "id": "5go1tjx",
+  "title": "9. Sessions of State Legislature",
+  "order": 387,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5oxe55x"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor shall from time to time summon the House or each House of the Legislature of the State to meet at such time and place as he thinks fit, but six months shall not intervene between its last sitting in one session and the date appointed for its first sitting in the next session.",
+      "id": "7084lmt"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Adjournment",
+        "Prorogation"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Terminates a sitting of the House",
+          "Terminates a session of the House"
+        ],
+        [
+          "Authority",
+          "Presiding Officer (Speaker / Chairman)",
+          "Governor of the State"
+        ],
+        [
+          "Effect on Business",
+          "Does not affect pending bills or business; they are resumed in the next sitting",
+          "Does not affect pending bills, but fresh notices must be given for other pending business"
+        ]
+      ],
+      "id": "lsea4w3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 174",
+          "icon": "book"
+        },
+        {
+          "label": "Max Session Gap",
+          "value": "6 Months",
+          "icon": "calendar"
+        },
+        {
+          "label": "Minimum Sessions/Year",
+          "value": "2 Sessions",
+          "icon": "clock"
+        },
+        {
+          "label": "Quorum Requirement",
+          "value": "10 or 1/10th",
+          "icon": "check"
+        }
+      ],
+      "id": "rnhtsxh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Adjournment and Adjournment Sine Die are declared by the Presiding Officer (Speaker/Chairman), while Prorogation and Dissolution are issued by the Governor.",
+        "A bill pending in the Legislative Council which has not been passed by the Legislative Assembly does NOT lapse on the dissolution of the Assembly.",
+        "A bill passed by the Legislative Assembly and pending in the Legislative Council lapses on the dissolution of the Assembly."
+      ],
+      "id": "86wnzkk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor summons, prorogues, and dissolves the State Legislative Assembly under Article 174 of the Indian Constitution.",
+        "The maximum gap between two sessions of a State Legislature cannot be more than six months; hence, the legislature must meet at least twice a year.",
+        "Adjournment suspends the work in a sitting for a specified time, whereas Prorogation terminates a session of the House.",
+        "Dissolution ends the life of the Legislative Assembly, whereas the Legislative Council is a permanent body not subject to dissolution.",
+        "Quorum to constitute a meeting of either House is 10 members or one-tenth of the total strength of the House, whichever is greater."
+      ],
+      "id": "egre2iz"
+    }
+  ],
+  "enriched": true
+}

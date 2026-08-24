@@ -1,0 +1,835 @@
+{
+  "id": "ye1imu3",
+  "title": "CHAPTER 12: ANIMAL KINGDOM",
+  "order": 12,
+  "blocks": [
+    {
+      "id": "9o1n7iv",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction to Animal Kingdom"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Animals are multicellular, heterotrophic eukaryotes displaying cellular, tissue, organ, or organ-system level organization.",
+        "Body symmetry transitions from asymmetrical (Porifera) to radial (Cnidaria, Ctenophora) and bilateral (Platyhelminthes to Chordates).",
+        "Coelom classification divides animals into acoelomates, pseudocoelomates (Nematoda), and eucoelomates (Annelida to Chordata).",
+        "Phylum Arthropoda represents the largest group in Animalia, distinguished by jointed appendages and chitinous exoskeletons.",
+        "Chordates are defined by the presence of a notochord, dorsal hollow nerve cord, and pharyngeal gill slits at some developmental stage."
+      ],
+      "id": "qrq4vi4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Phyla",
+          "value": "11 Primary Phyla",
+          "icon": "book"
+        },
+        {
+          "label": "Largest Phylum",
+          "value": "Arthropoda",
+          "icon": "award"
+        },
+        {
+          "label": "Symmetry Types",
+          "value": "Radial & Bilateral",
+          "icon": "check"
+        },
+        {
+          "label": "Germ Layers",
+          "value": "Diplo / Triploblastic",
+          "icon": "info"
+        }
+      ],
+      "id": "a474mao"
+    },
+    {
+      "type": "paragraph",
+      "id": "6n880ex"
+    },
+    {
+      "id": "fqogj8t",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Levels of Organization"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5v4twi7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7iqwnd9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q7dypga"
+    },
+    {
+      "type": "paragraph",
+      "id": "b3ipqo8"
+    },
+    {
+      "id": "gtkx3if",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Symmetry & Germ Layers"
+    },
+    {
+      "id": "3ciqekb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kblolb8",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "c3pfuji",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non-Chordates Overview"
+    },
+    {
+      "type": "paragraph",
+      "id": "gpupa72"
+    },
+    {
+      "id": "n0itdlj",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Phylum Porifera"
+    },
+    {
+      "type": "paragraph",
+      "id": "9d5zyq7"
+    },
+    {
+      "id": "c5jyxgj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Phylum Cnidaria (Coelenterata)"
+    },
+    {
+      "type": "paragraph",
+      "id": "hzgevzb"
+    },
+    {
+      "id": "j386vjf",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Phylum Platyhelminthes"
+    },
+    {
+      "type": "paragraph",
+      "id": "vx7h1tr"
+    },
+    {
+      "id": "ssjsop5",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Phylum Nematoda"
+    },
+    {
+      "type": "paragraph",
+      "id": "aikjuhc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 12: ANIMAL KINGDOM",
+      "id": "4rhqg08"
+    },
+    {
+      "id": "5pu3t9w",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Phylum Annelida"
+    },
+    {
+      "type": "paragraph",
+      "id": "wv1s7fh"
+    },
+    {
+      "id": "9by561m",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Phylum Arthropoda"
+    },
+    {
+      "type": "paragraph",
+      "id": "twdra07"
+    },
+    {
+      "id": "47xizly",
+      "type": "heading",
+      "level": 3,
+      "content": "Non-Chordate Mega Comparative Table"
+    },
+    {
+      "id": "ijdulbt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0cf5haz",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Phylum Chordata"
+    },
+    {
+      "type": "paragraph",
+      "id": "4tzd1jo"
+    },
+    {
+      "id": "3vcnxvo",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Vertebrate Classification"
+    },
+    {
+      "type": "paragraph",
+      "id": "3v8x63f"
+    },
+    {
+      "id": "ikxli2k",
+      "type": "heading",
+      "level": 2,
+      "content": "13. Pisces, Amphibia & Reptilia"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Chordates",
+        "Non-Chordates"
+      ],
+      "rows": [
+        [
+          "Notochord",
+          "Present at some stage",
+          "Absent"
+        ],
+        [
+          "Central Nervous System",
+          "Dorsal, hollow, and single",
+          "Ventral, solid, and double"
+        ],
+        [
+          "Pharyngeal Gill Slits",
+          "Present",
+          "Absent"
+        ],
+        [
+          "Heart Position",
+          "Ventral",
+          "Dorsal (if present)"
+        ],
+        [
+          "Post-anal Tail",
+          "Present",
+          "Absent"
+        ]
+      ],
+      "id": "stgvk99"
+    },
+    {
+      "type": "paragraph",
+      "id": "rnkycat"
+    },
+    {
+      "id": "lasxfdr",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Class Aves"
+    },
+    {
+      "type": "paragraph",
+      "id": "6h9x30i"
+    },
+    {
+      "id": "mpwze2i",
+      "type": "heading",
+      "level": 2,
+      "content": "15. Class Mammalia"
+    },
+    {
+      "type": "paragraph",
+      "id": "06frisi"
+    },
+    {
+      "id": "zk02abp",
+      "type": "heading",
+      "level": 3,
+      "content": "Vertebrate Advanced Comparison Table"
+    },
+    {
+      "id": "rzmwxpy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lbtao49",
+      "type": "heading",
+      "level": 2,
+      "content": "16. Non-Chordates Comparison"
+    },
+    {
+      "id": "xyzhzza",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xmu60u9",
+      "type": "heading",
+      "level": 2,
+      "content": "17. Chordates vs Non-Chordates Comparison"
+    },
+    {
+      "id": "lkn4qvl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6zkusop",
+      "type": "heading",
+      "level": 2,
+      "content": "18. Vertebrate Classes Mega Comparison"
+    },
+    {
+      "id": "wtygr2h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "gvhxxn6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Echinoderms display a unique symmetry shift: larvae are bilaterally symmetrical, whereas adults exhibit radial symmetry.",
+        "Nematodes (Aschelminthes) are the only pseudocoelomates; Platyhelminthes are acoelomate, and Annelids onwards are true coelomates.",
+        "Aves possess pneumatic (air-filled) long bones for flight adaptation, while mammals are uniquely characterized by mammary glands."
+      ],
+      "id": "2f82w8k"
+    },
+    {
+      "id": "6blbtft",
+      "type": "heading",
+      "level": 2,
+      "content": "19. Rapid Exam Trap Points"
+    },
+    {
+      "id": "iudc617",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i99erpd",
+      "type": "heading",
+      "level": 2,
+      "content": "20.Revision Points"
+    },
+    {
+      "type": "paragraph",
+      "id": "ichori0"
+    },
+    {
+      "type": "paragraph",
+      "id": "7ipkqxf"
+    },
+    {
+      "type": "paragraph",
+      "id": "k68fsuu"
+    },
+    {
+      "type": "paragraph",
+      "id": "f7nah81"
+    },
+    {
+      "type": "paragraph",
+      "id": "1suqzia"
+    },
+    {
+      "type": "paragraph",
+      "id": "a5xkxca"
+    }
+  ],
+  "enriched": true
+}

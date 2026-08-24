@@ -1,0 +1,114 @@
+{
+  "id": "rj3nicw",
+  "title": "Evidence That Earth is Spherical",
+  "order": 13,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ig295ms"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Scholar",
+          "value": "Eratosthenes",
+          "icon": "award"
+        },
+        {
+          "label": "Period",
+          "value": "c. 240 BC",
+          "icon": "calendar"
+        },
+        {
+          "label": "Key Field",
+          "value": "Geodesy",
+          "icon": "book"
+        },
+        {
+          "label": "Measurement",
+          "value": "Earth Circumference",
+          "icon": "check"
+        }
+      ],
+      "id": "hgrsorl"
+    },
+    {
+      "type": "paragraph",
+      "id": "7trw666"
+    },
+    {
+      "type": "paragraph",
+      "id": "5hz1p5q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Eratosthenes calculated the circumference of the Earth using simple geometric observations.",
+      "id": "eqj689m"
+    },
+    {
+      "type": "paragraph",
+      "id": "7953583"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Location",
+        "Sun Angle at Summer Solstice",
+        "Shadow Observation"
+      ],
+      "rows": [
+        [
+          "Syene (Aswan)",
+          "0° (Directly overhead)",
+          "No shadow cast inside a deep well"
+        ],
+        [
+          "Alexandria",
+          "7.2° from vertical",
+          "Definite shadow cast by a vertical pole"
+        ]
+      ],
+      "id": "3pf4s66"
+    },
+    {
+      "type": "paragraph",
+      "id": "ho4lbsx"
+    },
+    {
+      "type": "paragraph",
+      "id": "z9wx7m1"
+    },
+    {
+      "id": "uvsj7ly",
+      "type": "heading",
+      "level": 2,
+      "content": "Advanced Fact: Eratosthenes"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Eratosthenes is frequently referred to as the 'Father of Geography' in competitive exams.",
+        "Remember the two key reference locations in his experiment: Syene (modern-day Aswan) and Alexandria.",
+        "Note the mathematical relationship used: an angle of 7.2° represents 1/50th of a 360° sphere."
+      ],
+      "id": "e8ez8c5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Eratosthenes was an ancient Greek polymath who provided early scientific evidence for the spherical shape of the Earth.",
+        "He measured the Earth's circumference by comparing shadow angles cast by the Sun at noon on the summer solstice in two locations: Syene and Alexandria.",
+        "The angular difference of approximately 7.2 degrees between the two cities allowed him to calculate that the distance between them was 1/50th of Earth's total circumference.",
+        "This geometric calculation served as one of the earliest and most accurate historical proofs of a spherical Earth."
+      ],
+      "id": "pvyobu2"
+    },
+    {
+      "type": "paragraph",
+      "id": "gjtedzh"
+    }
+  ],
+  "enriched": true
+}

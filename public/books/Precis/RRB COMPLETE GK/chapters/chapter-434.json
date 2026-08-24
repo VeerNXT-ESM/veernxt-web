@@ -1,0 +1,95 @@
+{
+  "id": "lcgtvyy",
+  "title": "Grounds for Removal (VERY IMPORTANT)",
+  "order": 434,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "6e9rtok"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A judge of the Supreme Court can be removed from his office by an order of the President on grounds of proved misbehaviour or incapacity.",
+      "id": "rvogdsx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Office",
+        "Grounds for Removal",
+        "Removal Authority & Process"
+      ],
+      "rows": [
+        [
+          "President of India",
+          "Violation of the Constitution",
+          "Parliament (Impeachment Motion under Article 61 by 2/3rd total membership)"
+        ],
+        [
+          "SC / HC Judges",
+          "Proved misbehaviour or incapacity",
+          "President (After Parliamentary address under Judges Inquiry Act, 1968)"
+        ],
+        [
+          "CAG & CEC",
+          "Proved misbehaviour or incapacity",
+          "President (Same manner and grounds as a Supreme Court Judge)"
+        ],
+        [
+          "UPSC Members",
+          "Misbehaviour / Insolvency / Infirmity",
+          "President (Inquiry by Supreme Court under Article 317; advice is binding)"
+        ]
+      ],
+      "id": "ovim2uu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Judges/CAG/CEC Grounds",
+          "value": "2 Grounds",
+          "icon": "award"
+        },
+        {
+          "label": "President Ground",
+          "value": "Violation of Constitution",
+          "icon": "book"
+        },
+        {
+          "label": "SC Judge Removal Art.",
+          "value": "Article 124(4)",
+          "icon": "info"
+        },
+        {
+          "label": "President Impeachment Art.",
+          "value": "Article 61",
+          "icon": "calendar"
+        }
+      ],
+      "id": "oue3jtq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The phrase 'violation of the Constitution' applies ONLY to the President's impeachment and is NOT explicitly defined in the Constitution.",
+        "The Supreme Court's inquiry advice regarding misbehaviour of UPSC members is BINDING on the President.",
+        "State Election Commissioners and CAG are removed in the same manner and on the same grounds as a judge of the Supreme Court."
+      ],
+      "id": "marjt0v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Judges of the Supreme Court and High Courts, the Comptroller and Auditor General (CAG), and the Chief Election Commissioner (CEC) can be removed only on grounds of proved misbehaviour or incapacity.",
+        "The President of India can be impeached exclusively on the ground of violation of the Constitution, a phrase which is not defined in the Constitution.",
+        "The term proved misbehaviour requires an investigation by a committee of three under the Judges (Inquiry) Act, 1968 before Parliament votes on the motion.",
+        "UPSC Chairman and members are removed by the President for misbehaviour only after a reference to and inquiry by the Supreme Court under Article 317.",
+        "The Vice-President can be removed by a resolution passed by a majority of all the then members of the Rajya Sabha (effective majority) and agreed to by the Lok Sabha."
+      ],
+      "id": "2vwidsa"
+    }
+  ],
+  "enriched": true
+}

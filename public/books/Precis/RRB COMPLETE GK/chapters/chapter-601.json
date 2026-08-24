@@ -1,0 +1,63 @@
+{
+  "id": "qgx9lp2",
+  "title": "12. Exam Traps",
+  "order": 601,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zumitfv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Exam traps test not just your knowledge, but your presence of mind and critical evaluation under time constraints.",
+      "id": "d4vbseq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Risk",
+          "value": "Negative Marking",
+          "icon": "info"
+        },
+        {
+          "label": "Main Cause",
+          "value": "Misreading Prompts",
+          "icon": "book"
+        },
+        {
+          "label": "Time Management",
+          "value": "Skip & Return Strategy",
+          "icon": "clock"
+        },
+        {
+          "label": "Accuracy Factor",
+          "value": "Elimination Method",
+          "icon": "check"
+        }
+      ],
+      "id": "4qinnvg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions containing words like 'NOT' or 'EXCEPT' account for a significant portion of avoidable negative marks.",
+        "Distractor options often feature correct numerical values but incorrect units.",
+        "Never select Option A without reading Options B, C, and D first."
+      ],
+      "id": "aea2sng"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Always watch out for trick keywords like 'NOT', 'INCORRECT', 'ONLY', and 'ALL OF THE ABOVE'.",
+        "Differentiate between partially correct distractors and fully accurate options before marking answers.",
+        "Manage time efficiently by skipping disproportionately lengthy or ambiguous questions on the first pass.",
+        "Verify numerical units and operational signs carefully in quantitative and reasoning problems."
+      ],
+      "id": "kxlndt8"
+    }
+  ],
+  "enriched": true
+}

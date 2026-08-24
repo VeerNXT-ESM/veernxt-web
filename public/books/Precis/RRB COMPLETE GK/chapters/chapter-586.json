@@ -1,0 +1,98 @@
+{
+  "id": "tq7x3qs",
+  "title": "11. Challenges Faced by TRAI",
+  "order": 586,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "g73zgen"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Year",
+          "value": "1997",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "TRAI Act, 1997",
+          "icon": "book"
+        },
+        {
+          "label": "Appellate Body",
+          "value": "TDSAT (Est. 2000)",
+          "icon": "award"
+        },
+        {
+          "label": "Mandate Extension",
+          "value": "2004 (Broadcasting)",
+          "icon": "clock"
+        }
+      ],
+      "id": "bjncaur"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The fundamental challenge facing TRAI stems from its recommendatory nature, leaving key policy decisions and spectrum management subject to executive discretion.",
+      "id": "dwhs83r"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "TRAI",
+        "TDSAT"
+      ],
+      "rows": [
+        [
+          "Primary Mandate",
+          "Regulation of telecom/broadcasting tariffs, service standards, and policy advice",
+          "Adjudication of disputes and hearing appeals against TRAI decisions"
+        ],
+        [
+          "Establishment Year",
+          "1997 (TRAI Act)",
+          "2000 (TRAI Amendment Act)"
+        ],
+        [
+          "Nature of Authority",
+          "Regulatory and Advisory Body",
+          "Quasi-Judicial Appellate Tribunal"
+        ]
+      ],
+      "id": "4w53x7u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TRAI was established under the Telecom Regulatory Authority of India Act, 1997 to ensure fair and transparent regulatory environment for telecom services.",
+        "A primary structural challenge is that TRAI's recommendations regarding spectrum allocation and licensing terms are advisory and not binding on the Department of Telecommunications (DoT).",
+        "Regulatory overlap frequently occurs between TRAI, the Competition Commission of India (CCI), and MeitY over data protection and digital platforms.",
+        "Emerging technologies like 5G, Over-The-Top (OTT) communication services, and AI create regulatory lag and enforcement difficulties.",
+        "The 2000 amendment bifurcated powers by creating TDSAT to handle adjudicatory functions, restricting TRAI purely to regulatory and advisory roles."
+      ],
+      "id": "07cdhtf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "TRAI is a statutory body established in 1997; it is NOT a constitutional or executive body.",
+        "TDSAT was set up via the 2000 TRAI Amendment Act to remove adjudicatory functions from TRAI's domain.",
+        "The Supreme Court affirmed that TRAI holds primary sectoral jurisdiction before issues can be escalated to competition regulators like CCI."
+      ],
+      "id": "ptvz1ci"
+    },
+    {
+      "type": "paragraph",
+      "id": "f8xcjgr"
+    },
+    {
+      "type": "paragraph",
+      "id": "j284lf7"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,416 @@
+{
+  "id": "4vp6bq0",
+  "title": "CHAPTER 4: PLANT PATHOLOGY — DISEASES AND MANAGEMENT",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "8x2ptf6",
+      "type": "heading",
+      "level": 2,
+      "content": "4.1 Introduction to Plant Pathology"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Plant pathology studies plant diseases, their etiology, disease cycles, and management strategies.",
+        "Disease manifestation requires three essential elements of the Disease Triangle: a susceptible host, a virulent pathogen, and a favorable environment.",
+        "Fungi are responsible for the vast majority of plant diseases, followed by bacteria, viruses, phytoplasmas, and nematodes.",
+        "Plant disease management relies on five general principles: avoidance, exclusion, eradication, protection, and host resistance.",
+        "Integrated Disease Management (IDM) optimizes chemical, biological, physical, and cultural practices to minimize economic loss."
+      ],
+      "id": "1xfyra8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Disease Triangle",
+          "value": "3 Factors",
+          "icon": "check"
+        },
+        {
+          "label": "Bordeaux Mixture",
+          "value": "1882",
+          "icon": "calendar"
+        },
+        {
+          "label": "Pathogen Groups",
+          "value": "5 Types",
+          "icon": "book"
+        },
+        {
+          "label": "IDM Strategies",
+          "value": "5 Pillars",
+          "icon": "award"
+        }
+      ],
+      "id": "vi2l67e"
+    },
+    {
+      "type": "paragraph",
+      "id": "jyvnxll"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Plant pathology studies plant diseases, their etiology, disease cycles, and management strategies.",
+      "id": "g0i90o9"
+    },
+    {
+      "type": "paragraph",
+      "id": "3j0moye"
+    },
+    {
+      "id": "2w5rk1c",
+      "type": "heading",
+      "level": 2,
+      "content": "4.2 Classification of Plant Pathogens"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Contact Fungicides",
+        "Systemic Fungicides"
+      ],
+      "rows": [
+        [
+          "Mode of Action",
+          "Remains on the plant surface to form a protective barrier",
+          "Absorbed and translocated through plant vascular tissues"
+        ],
+        [
+          "Application Nature",
+          "Strictly preventive",
+          "Both preventive and curative"
+        ],
+        [
+          "Resistance Risk",
+          "Low risk of pathogen resistance (multi-site action)",
+          "Higher risk of pathogen resistance (single-site action)"
+        ],
+        [
+          "Common Examples",
+          "Bordeaux mixture, Mancozeb, Captan",
+          "Carbendazim, Metalaxyl, Hexaconazole"
+        ]
+      ],
+      "id": "q4wkaue"
+    },
+    {
+      "id": "qbw53rk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k4g7z4c",
+      "type": "heading",
+      "level": 2,
+      "content": "4.3 Major Diseases of Field Crops"
+    },
+    {
+      "id": "nn4m1g3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Anton de Bary is known as the Father of Plant Pathology, whereas E.J. Butler is recognized as the Father of Indian Plant Pathology.",
+        "Late blight of potato is caused by Phytophthora infestans, the organism responsible for the Great Irish Famine of 1845.",
+        "Bordeaux mixture is composed of Copper Sulfate, Lime, and Water (1:1:100 ratio) and was discovered by P.M.A. Millardet in 1882.",
+        "Karnal bunt of wheat is caused by Tilletia indica and carries major sanitary and phytosanitary quarantine significance."
+      ],
+      "id": "gw70jx2"
+    },
+    {
+      "id": "iyvnwsk",
+      "type": "heading",
+      "level": 2,
+      "content": "4.4 Principles of Plant Disease Management"
+    },
+    {
+      "id": "g4redxo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

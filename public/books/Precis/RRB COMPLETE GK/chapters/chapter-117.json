@@ -1,0 +1,94 @@
+{
+  "id": "9wupks5",
+  "title": "Chapter 9: Weathering, Mass Wasting and Erosion",
+  "order": 117,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "6b4cvox"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Weathering is an in-situ or on-site process, where little or no motion of materials takes place from one place to another.",
+      "id": "3sl5s5j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Weathering",
+        "Mass Wasting",
+        "Erosion"
+      ],
+      "rows": [
+        [
+          "Nature of Process",
+          "In-situ (static) breakdown",
+          "Downslope movement",
+          "Ex-situ (dynamic) transport"
+        ],
+        [
+          "Driving Agent",
+          "Weather elements, temperature, moisture",
+          "Gravity alone",
+          "Mobile agents (water, wind, ice, waves)"
+        ],
+        [
+          "Material Transport",
+          "No transportation involved",
+          "Local movement along slopes",
+          "Active long-distance transportation"
+        ]
+      ],
+      "id": "0jo5fo9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Process Type",
+          "value": "Exogenic",
+          "icon": "info"
+        },
+        {
+          "label": "Weathering Types",
+          "value": "3 Main Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Driver of Mass Wasting",
+          "value": "Gravity",
+          "icon": "check"
+        },
+        {
+          "label": "Weathering Nature",
+          "value": "In-situ (Static)",
+          "icon": "award"
+        }
+      ],
+      "id": "7stucvg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: Weathering is purely an in-situ (static) process, whereas Erosion is an ex-situ (dynamic) process involving transport.",
+        "Categorize mass movements accurately: Soil creep and solifluction are extremely slow, while rockfalls, mudflows, and debris avalanches are rapid.",
+        "Exfoliation domes and tors result primarily from unloading, pressure release, and thermal expansion in crystalline rocks like granite."
+      ],
+      "id": "9uzdrgi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Weathering is an in-situ or static process involving the mechanical disintegration and chemical decomposition of rocks without significant transportation.",
+        "Mass wasting refers to the downslope movement of rock debris, soil, and regolith primarily under the direct influence of gravity.",
+        "Physical weathering processes rely on thermal expansion, frost action, and unloading, dominant in dry or high-altitude environments.",
+        "Chemical weathering includes hydration, carbonation, oxidation, and solution, operating most rapidly in warm and humid climates.",
+        "Erosion is an active, dynamic exogenic process that involves the acquisition and transportation of rock materials by mobile agents such as water, wind, glaciers, and waves."
+      ],
+      "id": "fzz0txs"
+    }
+  ],
+  "enriched": true
+}

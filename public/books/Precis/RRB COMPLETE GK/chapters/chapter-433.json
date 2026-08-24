@@ -1,0 +1,129 @@
+{
+  "id": "yskvgs8",
+  "title": "Tenure, Removal and Resignation",
+  "order": 433,
+  "blocks": [
+    {
+      "id": "lyjv29d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Judge of the Supreme Court or the Comptroller and Auditor General can only be removed from office by an order of the President passed after an address by each House of Parliament supported by a special majority.",
+      "id": "o0qiuar"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Office",
+        "Tenure / Retirement",
+        "Resignation To",
+        "Removal Process & Grounds"
+      ],
+      "rows": [
+        [
+          "CAG & Chief Election Commissioner",
+          "6 years or 65 years of age",
+          "President",
+          "Presidential order following a Special Majority address in Parliament (Proved misbehaviour/incapacity)"
+        ],
+        [
+          "UPSC Chairman & Members",
+          "6 years or 65 years of age",
+          "President",
+          "Presidential order after inquiry by Supreme Court under Article 317 (Misbehaviour)"
+        ],
+        [
+          "Supreme Court Judge",
+          "Until age 65",
+          "President",
+          "Presidential order after Special Majority address in Parliament"
+        ],
+        [
+          "High Court Judge",
+          "Until age 62",
+          "President",
+          "Same grounds and parliamentary procedure as a Supreme Court Judge"
+        ]
+      ],
+      "id": "eafp937"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "UPSC / CAG Tenure",
+          "value": "6 Yrs / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "HC Judge Retirement",
+          "value": "62 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Resignation Authority",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Removal Article (UPSC)",
+          "value": "Article 317",
+          "icon": "book"
+        }
+      ],
+      "id": "4zp86np"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish carefully between Parliamentary Address removal (CAG, CEC, SC/HC Judges) and Supreme Court Inquiry removal (UPSC members under Article 317).",
+        "Remember the critical age distinction: High Court Judges retire at 62 years, whereas Supreme Court Judges, CAG, and CEC retire at 65 years.",
+        "Note that resignation letters for all key constitutional offices must be addressed to the President, not to their respective department or ministry."
+      ],
+      "id": "4slcgwb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional functionaries like CAG, CEC, and UPSC members hold office for a tenure of 6 years or until attaining 65 years of age, whichever is earlier.",
+        "Resignations of major constitutional postholders must be submitted in writing directly to the President of India.",
+        "Removal of CAG, CEC, and Supreme Court judges requires a special majority in Parliament on grounds of proved misbehaviour or incapacity.",
+        "UPSC Chairman and members are removed by the President following a mandatory Supreme Court reference inquiry under Article 317.",
+        "High Court judges hold office until 62 years of age, whereas Supreme Court judges serve until 65 years."
+      ],
+      "id": "mq0gukr"
+    }
+  ],
+  "enriched": true
+}

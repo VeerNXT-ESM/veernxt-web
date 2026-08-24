@@ -1,0 +1,427 @@
+{
+  "id": "xvtkg8f",
+  "title": "Chapter 15: Diseases and Immunity",
+  "order": 64,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ai3fjpg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Main Categories",
+          "value": "Communicable & Non-Communicable",
+          "icon": "info"
+        },
+        {
+          "label": "Key Protection",
+          "value": "Immune System & Vaccination",
+          "icon": "award"
+        },
+        {
+          "label": "Immunity Types",
+          "value": "Innate & Acquired",
+          "icon": "check"
+        },
+        {
+          "label": "Chapter Focus",
+          "value": "Diseases & Immunity",
+          "icon": "book"
+        }
+      ],
+      "id": "1jr0bwd"
+    },
+    {
+      "id": "5wrlbi4",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Disease"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Diseases are broadly categorized into communicable, non-communicable, and deficiency diseases.",
+        "Communicable diseases are caused by pathogens such as bacteria, viruses, fungi, and protozoa.",
+        "Deficiency diseases arise from a prolonged lack of specific essential vitamins or minerals in the diet.",
+        "The immune system provides defense via innate (present from birth) and acquired (developed) immunity.",
+        "Vaccination activates the body's adaptive immunity to protect against specific pathogens."
+      ],
+      "id": "4e0fuxy"
+    },
+    {
+      "type": "paragraph",
+      "id": "bedzbcg"
+    },
+    {
+      "type": "paragraph",
+      "id": "ozszfg0"
+    },
+    {
+      "type": "paragraph",
+      "id": "udahc60"
+    },
+    {
+      "id": "0g4ygut",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "crt4fd6"
+    },
+    {
+      "type": "paragraph",
+      "id": "8dmudul"
+    },
+    {
+      "type": "paragraph",
+      "id": "23uhcrk"
+    },
+    {
+      "type": "paragraph",
+      "id": "4x0wkx4"
+    },
+    {
+      "id": "oxpvjl0",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Communicable Diseases"
+    },
+    {
+      "id": "5r49hwe",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68xm4ts",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non‑Communicable Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "gib8m15"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Diseases and Immunity",
+      "id": "z6lx82m"
+    },
+    {
+      "type": "paragraph",
+      "id": "k5klk1s"
+    },
+    {
+      "type": "paragraph",
+      "id": "poyr3vu"
+    },
+    {
+      "type": "paragraph",
+      "id": "hi9lj6q"
+    },
+    {
+      "id": "mcawc5t",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Deficiency Diseases"
+    },
+    {
+      "id": "x0vrmo8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2pihmac",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Immune System"
+    },
+    {
+      "type": "paragraph",
+      "id": "jytsmdq"
+    },
+    {
+      "type": "paragraph",
+      "id": "k7b554g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Communicable Diseases",
+        "Non-Communicable Diseases"
+      ],
+      "rows": [
+        [
+          "Transmission",
+          "Spreads from an infected individual to others",
+          "Does not spread from person to person"
+        ],
+        [
+          "Causative Agent",
+          "Pathogens (Bacteria, Viruses, Protozoa)",
+          "Genetics, Lifestyle, Nutritional Deficiency"
+        ],
+        [
+          "Examples",
+          "Tuberculosis, Malaria, Influenza",
+          "Diabetes, Hypertension, Scurvy"
+        ]
+      ],
+      "id": "osrv9cx"
+    },
+    {
+      "type": "paragraph",
+      "id": "75kv5dp"
+    },
+    {
+      "id": "rrzk7dm",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Immunity"
+    },
+    {
+      "id": "gy9prek",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mm6uy5l",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Vaccination"
+    },
+    {
+      "type": "paragraph",
+      "id": "3hqaxn3"
+    },
+    {
+      "type": "paragraph",
+      "id": "m887quv"
+    },
+    {
+      "type": "paragraph",
+      "id": "qqvopp3"
+    },
+    {
+      "id": "lxq7bbh",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Prevention of Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "r18x04f"
+    },
+    {
+      "type": "paragraph",
+      "id": "q76i90e"
+    },
+    {
+      "type": "paragraph",
+      "id": "sufwnvl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test differences between active and passive acquired immunity.",
+        "Memorize specific nutrient deficiencies and associated disorders (e.g., Vitamin C - Scurvy, Iron - Anemia).",
+        "Distinguish between viral, bacterial, and protozoan vectors in communicable disease transmission."
+      ],
+      "id": "y1vt93u"
+    },
+    {
+      "type": "paragraph",
+      "id": "fzvj6gd"
+    },
+    {
+      "type": "paragraph",
+      "id": "yks5e1u"
+    },
+    {
+      "id": "rr1ve6d",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "uqne7cz"
+    },
+    {
+      "type": "paragraph",
+      "id": "8gjbs0l"
+    },
+    {
+      "type": "paragraph",
+      "id": "xsapbbb"
+    },
+    {
+      "type": "paragraph",
+      "id": "tvi9n35"
+    }
+  ],
+  "enriched": true
+}

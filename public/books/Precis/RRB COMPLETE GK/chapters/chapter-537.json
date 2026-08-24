@@ -1,0 +1,95 @@
+{
+  "id": "03lr9wg",
+  "title": "10. Asset Disclosure (VERY IMPORTANT & FREQUENTLY MISSED)",
+  "order": 537,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "jfvlnm3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Voters have a fundamental right under Article 19(1)(a) to know the antecedents, assets, liabilities, and educational qualifications of candidates contesting elections.",
+      "id": "8mlwgw8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Electoral Candidate Asset Disclosure",
+        "Civil Servant Asset Disclosure"
+      ],
+      "rows": [
+        [
+          "Primary Framework",
+          "Representation of the People Act, 1951 & Conduct of Election Rules (Form 26)",
+          "CCS (Conduct) Rules, 1964 & Lokpal/Lokayuktas Act"
+        ],
+        [
+          "Filing Frequency",
+          "At the time of filing nomination papers before elections",
+          "Annual declaration (submitted periodically by designated deadlines)"
+        ],
+        [
+          "Public Availability",
+          "Mandatorily published on the Election Commission of India portal for public scrutiny",
+          "Submitted internally to controlling authority / Lokpal registry"
+        ],
+        [
+          "Constitutional Source",
+          "Article 19(1)(a) - Right to Freedom of Speech and Expression / Right to Know",
+          "Article 309 - Regulation of Conditions of Service of Public Servants"
+        ]
+      ],
+      "id": "yhini43"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Form",
+          "value": "Form 26 Affidavit",
+          "icon": "book"
+        },
+        {
+          "label": "Governing Act",
+          "value": "RPA 1951 (Sec 33A)",
+          "icon": "award"
+        },
+        {
+          "label": "Landmark Year",
+          "value": "2002 (ADR Case)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Penal Provision",
+          "value": "Sec 125A (6 Months)",
+          "icon": "info"
+        }
+      ],
+      "id": "h50gyd8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 19(1)(a) serves as the primary constitutional basis for candidate asset disclosure as established in the landmark ADR (2002) and PUCL (2003) Supreme Court judgments.",
+        "Form 26 requires full asset declaration not only for the candidate but also for their spouse and dependents, including liabilities and government dues.",
+        "Material non-disclosure of high-value assets can be treated as 'undue influence' on voters, attracting election nullification under Section 123(2) of the Representation of the People Act, 1951."
+      ],
+      "id": "e1t63a9"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Candidates contesting elections must mandatorily file an affidavit in Form 26 disclosing movable and immovable assets, liabilities, criminal antecedents, and educational qualifications.",
+        "The Supreme Court in Union of India v. Association for Democratic Reforms (2002) established that voter awareness of candidate assets is a fundamental right under Article 19(1)(a).",
+        "Section 125A of the Representation of the People Act, 1951 penalizes the submission of false affidavits or non-disclosure of assets with imprisonment up to 6 months, fine, or both.",
+        "Civil servants are bound by Rule 18 of the Central Civil Services (Conduct) Rules, 1964 to submit annual declarations of immovable properties.",
+        "In Lok Prahari v. Union of India (2018), the Supreme Court held that non-disclosure of asset growth sources amounts to corrupt practice under Section 123(2) of RPA 1951."
+      ],
+      "id": "hge3k45"
+    }
+  ],
+  "enriched": true
+}

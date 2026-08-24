@@ -1,0 +1,391 @@
+{
+  "id": "aflirg4",
+  "title": "CHAPTER 8: PROGRAMMING LANGUAGES AND OBJECT-ORIENTED PROGRAMMING",
+  "order": 8,
+  "blocks": [
+    {
+      "id": "04hbmz8",
+      "type": "heading",
+      "level": 2,
+      "content": "8.1 Programming Paradigms"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Overview of essential Programming Paradigms.",
+        "Core Object-Oriented Programming (OOP) Concepts.",
+        "Implementation of SOLID Principles in software design.",
+        "Comparison of key Programming Language Features."
+      ],
+      "id": "5g8vknl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "8",
+          "icon": "book"
+        },
+        {
+          "label": "Total Sections",
+          "value": "4",
+          "icon": "info"
+        },
+        {
+          "label": "Core Focus",
+          "value": "OOP & SOLID",
+          "icon": "check"
+        }
+      ],
+      "id": "k1wp92k"
+    },
+    {
+      "id": "tw2cn02",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 8: PROGRAMMING LANGUAGES AND OBJECT-ORIENTED PROGRAMMING",
+      "id": "84889tk"
+    },
+    {
+      "id": "f1x1334",
+      "type": "heading",
+      "level": 2,
+      "content": "8.2 OOP Concepts"
+    },
+    {
+      "id": "kb5q6yp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80imvxw",
+      "type": "heading",
+      "level": 2,
+      "content": "8.3 SOLID Principles"
+    },
+    {
+      "id": "g50g940",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SOLID Principles are a high-frequency topic in Object-Oriented Design exam questions.",
+        "Questions often contrast core OOP concepts like Abstraction vs. Encapsulation and Inheritance vs. Polymorphism.",
+        "Language Feature comparisons frequently appear in technical multiple-choice questions."
+      ],
+      "id": "4et8c8s"
+    },
+    {
+      "id": "fst5w3d",
+      "type": "heading",
+      "level": 2,
+      "content": "8.4 Programming Language Features Comparison"
+    },
+    {
+      "id": "0lc26vt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

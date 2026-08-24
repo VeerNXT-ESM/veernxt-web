@@ -1,0 +1,401 @@
+{
+  "id": "ln9tnlx",
+  "title": "Chapter 4: Input Devices",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "246orvk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Device",
+          "value": "Keyboard",
+          "icon": "book"
+        },
+        {
+          "label": "Pointing Device",
+          "value": "Mouse",
+          "icon": "check"
+        },
+        {
+          "label": "Recognition Systems",
+          "value": "OMR, OCR, MICR",
+          "icon": "info"
+        }
+      ],
+      "id": "m6et6ul"
+    },
+    {
+      "id": "uwkyr4k",
+      "type": "heading",
+      "level": 2,
+      "content": "4.1 Keyboard"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Keyboards and mice serve as the core manual input devices for user interaction.",
+        "Scanners capture physical documents and convert them into digital formats.",
+        "Barcode Readers quickly read encoded visual strip patterns for tracking and sales.",
+        "Specialized recognition systems comprise OMR, OCR, and MICR for rapid data capture and processing."
+      ],
+      "id": "b9zagko"
+    },
+    {
+      "type": "paragraph",
+      "id": "3kkxd1m"
+    },
+    {
+      "id": "bv6z0zv",
+      "type": "heading",
+      "level": 3,
+      "content": "4.1.1 Types of Keys"
+    },
+    {
+      "id": "x6ryyqx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "zc4xdcv"
+    },
+    {
+      "id": "9h3gnlt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "ub7tr0v",
+      "type": "heading",
+      "level": 2,
+      "content": "4.2 Mouse"
+    },
+    {
+      "type": "paragraph",
+      "id": "7xt0i74"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chapter 4: Input Devices",
+      "id": "5nwdmi2"
+    },
+    {
+      "id": "5i93cjf",
+      "type": "heading",
+      "level": 3,
+      "content": "4.2.1 Types of Mouse"
+    },
+    {
+      "id": "e54gap9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9kzc2pj"
+    },
+    {
+      "id": "fcmmuqh",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "7kf610v",
+      "type": "heading",
+      "level": 2,
+      "content": "4.3 Scanner"
+    },
+    {
+      "type": "paragraph",
+      "id": "sews4rd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Technology",
+        "Full Name",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "OMR",
+          "Optical Mark Recognition",
+          "Evaluating objective test answer sheets"
+        ],
+        [
+          "OCR",
+          "Optical Character Recognition",
+          "Converting scanned text images into editable text"
+        ],
+        [
+          "MICR",
+          "Magnetic Ink Character Recognition",
+          "Processing bank cheques using special magnetic ink"
+        ]
+      ],
+      "id": "ged8rms"
+    },
+    {
+      "id": "np0rycw",
+      "type": "heading",
+      "level": 3,
+      "content": "4.3.1 Types of Scanners"
+    },
+    {
+      "id": "reh4oo4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "695xl2c",
+      "type": "heading",
+      "level": 2,
+      "content": "4.4 Barcode Reader"
+    },
+    {
+      "type": "paragraph",
+      "id": "3lv90w6"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvt21nv"
+    },
+    {
+      "id": "e7p7sps",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "88hpe69",
+      "type": "heading",
+      "level": 2,
+      "content": "4.5 OMR, OCR, MICR"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently distinguish between OMR (Optical Mark Recognition), OCR (Optical Character Recognition), and MICR (Magnetic Ink Character Recognition).",
+        "Be prepared for questions regarding key classifications (Function keys, Toggle keys, Modifier keys) on standard keyboards.",
+        "Understand MICR application specifically in banking for processing cheques."
+      ],
+      "id": "o92psc8"
+    },
+    {
+      "id": "xpqbhds",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpzo2p6",
+      "type": "heading",
+      "level": 2,
+      "content": "4.6 Other Input Devices"
+    },
+    {
+      "id": "c3qiw2g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "55e0sj4",
+      "type": "heading",
+      "level": 2,
+      "content": "4.7 Important Exam Points"
+    },
+    {
+      "id": "ra5g6cp",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

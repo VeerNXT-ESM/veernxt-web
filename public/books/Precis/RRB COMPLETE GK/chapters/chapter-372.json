@@ -1,0 +1,90 @@
+{
+  "id": "qhspx3s",
+  "title": "11. Relationship Between Governor and Council of Ministers",
+  "order": 372,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cywsuwd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "There shall be a Council of Ministers with the Chief Minister at the head to aid and advise the Governor in the exercise of his functions, except in so far as he is by or under this Constitution required to exercise his functions or any of them in his discretion.",
+      "id": "ovqyxoi"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Feature",
+        "President of India",
+        "Governor of a State"
+      ],
+      "rows": [
+        [
+          "Express Constitutional Discretion",
+          "No explicit constitutional discretion granted",
+          "Explicitly granted under Article 163"
+        ],
+        [
+          "Nature of Ministerial Advice",
+          "Advice made explicitly binding by 42nd and 44th Constitutional Amendments",
+          "Advice is generally binding except where discretion applies under the Constitution"
+        ],
+        [
+          "Minimum Strength of Council",
+          "No constitutional minimum strength specified",
+          "Minimum floor of 12 ministers mandatory under 91st Amendment Act, 2003"
+        ]
+      ],
+      "id": "f5hek2z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Aid & Advice Clause",
+          "value": "Article 163",
+          "icon": "book"
+        },
+        {
+          "label": "Ministers' Appointment",
+          "value": "Article 164",
+          "icon": "info"
+        },
+        {
+          "label": "CM's Duties to Governor",
+          "value": "Article 167",
+          "icon": "check"
+        },
+        {
+          "label": "Council Size Ceiling",
+          "value": "15% Assembly",
+          "icon": "award"
+        }
+      ],
+      "id": "lc6d5qp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 163(3) explicitly prohibits courts from inquiring into whether any advice was tendered by Ministers to the Governor or what that advice was.",
+        "Unlike the President of India, the Governor is vested with both Constitutional Discretion (e.g., reserving bills under Article 200) and Situational Discretion.",
+        "Ministers hold office during the pleasure of the Governor, but the Governor cannot dismiss the Council of Ministers as long as it enjoys a majority in the Legislative Assembly."
+      ],
+      "id": "qmnwl3o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 163 provides for a Council of Ministers with the Chief Minister at the head to aid and advise the Governor, except in matters where the Governor acts in discretion.",
+        "Article 164 states that the Chief Minister shall be appointed by the Governor, and other ministers shall be appointed by the Governor on the advice of the Chief Minister.",
+        "The Council of Ministers is collectively responsible to the Legislative Assembly of the State under Article 164.",
+        "The 91st Constitutional Amendment Act of 2003 fixed the total number of ministers (including the CM) at a maximum of 15% of the total Assembly strength, with a minimum floor of 12 ministers.",
+        "Article 167 explicitly defines the duties of the Chief Minister to furnish information regarding state administration and legislative proposals to the Governor."
+      ],
+      "id": "tbqfc5e"
+    }
+  ],
+  "enriched": true
+}

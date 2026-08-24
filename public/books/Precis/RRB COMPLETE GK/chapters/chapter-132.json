@@ -1,0 +1,90 @@
+{
+  "id": "y9v5mep",
+  "title": "Chapter 11: Glacial Landforms",
+  "order": 132,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "z3u1z1x"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Drumlins are inverted spoon-shaped or teardrop-shaped hills of till, often giving rise to what is known as a basket of eggs topography.",
+      "id": "3zq7zry"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Landform Type",
+        "Erosional Features",
+        "Depositional Features"
+      ],
+      "rows": [
+        [
+          "Valleys & Plains",
+          "U-Shaped Valley, Hanging Valley, Fjords",
+          "Outwash Plain, Till Plain"
+        ],
+        [
+          "Hills & Ridges",
+          "Aretes, Horns, Roche Moutonnée",
+          "Moraines, Drumlins, Eskers, Kames"
+        ],
+        [
+          "Depressions & Lakes",
+          "Cirques (Tarn Lakes), Col",
+          "Kettle Holes"
+        ]
+      ],
+      "id": "xntsm9h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Valley Profile",
+          "value": "U-Shaped Trough",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Erosional Feature",
+          "value": "Cirque / Corrie",
+          "icon": "check"
+        },
+        {
+          "label": "Key Till Landform",
+          "value": "Moraines & Drumlins",
+          "icon": "book"
+        },
+        {
+          "label": "Topography Pattern",
+          "value": "Basket of Eggs",
+          "icon": "award"
+        }
+      ],
+      "id": "5xpebj8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "U-shaped valleys are formed by glacial erosion, whereas V-shaped valleys are produced by river erosion.",
+        "Do not confuse Eskers (sinuous ridges deposited by subglacial streams) with Drumlins (streamlined hills of unsorted till).",
+        "Roche Moutonnée features a gentle, smooth stoss side (abrasion) and a steep, jagged lee side (plucking), showing ice movement direction."
+      ],
+      "id": "98m6j80"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Glaciers erode land mainly through two processes: plucking (lifting of rock blocks) and abrasion (scratching and polishing by debris).",
+        "Cirques are deep, arm-chair-shaped depressions carved into mountain crests, which often hold Tarn lakes after the ice melts.",
+        "Hanging valleys are tributary valleys truncated high above the main U-shaped glacial trough, frequently giving rise to high waterfalls.",
+        "Moraines are unsorted glacial till deposits categorized as lateral, medial, ground, and terminal moraines based on position.",
+        "Drumlins are smooth, oval-shaped hills composed of till, oriented parallel to ice flow, creating a 'basket of eggs topography'."
+      ],
+      "id": "pbzz62t"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,124 @@
+{
+  "id": "lgj7o6p",
+  "title": "Texture of Igneous Rocks",
+  "order": 66,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "il67d0c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Factor",
+          "value": "Rate of Cooling",
+          "icon": "clock"
+        },
+        {
+          "label": "Major Textures",
+          "value": "6 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "Porphyritic History",
+          "value": "2-Stage Cooling",
+          "icon": "info"
+        },
+        {
+          "label": "Glassy Origin",
+          "value": "Rapid Quenching",
+          "icon": "check"
+        }
+      ],
+      "id": "bmvjrtn"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The texture of an igneous rock is primarily determined by the rate at which the magma or lava cools and crystallizes.",
+      "id": "d02i8s3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The rate of cooling of magma or lava is the primary factor controlling the crystal size and overall texture of igneous rocks.",
+        "Phaneritic texture consists of coarse grains visible to the naked eye, indicating slow cooling deep underground within plutonic bodies.",
+        "Aphanitic texture features fine-grained crystals that require magnification, resulting from rapid cooling at or near the Earth's surface.",
+        "Porphyritic texture reflects a two-stage cooling history, characterized by large phenocrysts embedded within a finer groundmass.",
+        "Vesicular texture arises when expanding gas bubbles become trapped in solidifying lava, producing cavities called vesicles."
+      ],
+      "id": "aja8usc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Texture Type",
+        "Cooling Rate",
+        "Grain Size",
+        "Formation Environment",
+        "Representative Example"
+      ],
+      "rows": [
+        [
+          "Phaneritic",
+          "Slow",
+          "Coarse-grained (visible)",
+          "Intrusive / Plutonic",
+          "Granite, Gabbro"
+        ],
+        [
+          "Aphanitic",
+          "Rapid",
+          "Fine-grained (microscopic)",
+          "Extrusive / Volcanic",
+          "Basalt, Rhyolite"
+        ],
+        [
+          "Porphyritic",
+          "Two-Stage",
+          "Mixed (Phenocrysts + Groundmass)",
+          "Hypabyssal / Volcanic",
+          "Porphyritic Andesite"
+        ],
+        [
+          "Glassy",
+          "Extremely Rapid",
+          "Non-crystalline (Glass)",
+          "Extrusive Quenching",
+          "Obsidian"
+        ],
+        [
+          "Vesicular",
+          "Rapid with Gas Escape",
+          "Fine to Variable with Pores",
+          "Volcanic Surface Lava",
+          "Pumice, Scoria"
+        ]
+      ],
+      "id": "ovp5sqy"
+    },
+    {
+      "type": "paragraph",
+      "id": "jbf8mxq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct correlation between cooling rates and grain size is a high-yield topic: slow intrusive cooling produces coarse grain, while fast extrusive cooling produces fine grain.",
+        "Questions frequently test the distinction between phenocrysts (large crystals) and matrix/groundmass in porphyritic rocks to infer a two-stage cooling history.",
+        "Be prepared to identify obsidian (glassy) and pumice (vesicular) based on their specific physical formation conditions rather than mineral composition alone."
+      ],
+      "id": "3cti01y"
+    },
+    {
+      "type": "paragraph",
+      "id": "ha16c3v"
+    },
+    {
+      "type": "paragraph",
+      "id": "pswt9q5"
+    }
+  ],
+  "enriched": true
+}

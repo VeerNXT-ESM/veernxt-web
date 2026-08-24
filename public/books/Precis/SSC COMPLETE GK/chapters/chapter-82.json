@@ -1,0 +1,367 @@
+{
+  "id": "o52j1u5",
+  "title": "CHAPTER 12: INEQUALITY",
+  "order": 82,
+  "blocks": [
+    {
+      "id": "gwol3rm",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: FOUNDATIONAL UNDERSTANDING OF INEQUALITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Inequality measures the relative distribution of income, wealth, and opportunities across a population, whereas poverty represents absolute deprivation below a basic threshold.",
+        "Wealth inequality is significantly more severe and persistent than income inequality due to asset accumulation and inheritance.",
+        "The Lorenz Curve graphically demonstrates income distribution, showing the cumulative percentage of income earned by cumulative percentages of the population.",
+        "The Gini Coefficient mathematically quantifies inequality, where 0 represents perfect equality and 1 represents absolute inequality.",
+        "India's inequality pattern is driven by a combination of economic, social, and institutional factors, requiring targeted policies like inclusive growth and progressive taxation."
+      ],
+      "id": "gykjluq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Gini Range",
+          "value": "0 to 1",
+          "icon": "check"
+        },
+        {
+          "label": "Key Visual Tool",
+          "value": "Lorenz Curve",
+          "icon": "book"
+        },
+        {
+          "label": "Major Types",
+          "value": "5 Core Dimensions",
+          "icon": "info"
+        },
+        {
+          "label": "Policy Goal",
+          "value": "Inclusive Growth",
+          "icon": "award"
+        }
+      ],
+      "id": "nbivmjk"
+    },
+    {
+      "id": "69v0y4i",
+      "type": "heading",
+      "level": 3,
+      "content": "1. What Exactly is Inequality?"
+    },
+    {
+      "type": "paragraph",
+      "id": "nlqf7jn"
+    },
+    {
+      "type": "paragraph",
+      "id": "cho6xdu"
+    },
+    {
+      "id": "ax2vbcq",
+      "type": "heading",
+      "level": 3,
+      "content": "2. Inequality is NOT Only About Money"
+    },
+    {
+      "type": "paragraph",
+      "id": "9kqw6uh"
+    },
+    {
+      "id": "veoobmg",
+      "type": "heading",
+      "level": 3,
+      "content": "3. Inequality vs Poverty (Critical SSC Area)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5866lrs"
+    },
+    {
+      "type": "paragraph",
+      "id": "mqafzmk"
+    },
+    {
+      "id": "izfozzk",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: DETAILED TYPES OF INEQUALITY"
+    },
+    {
+      "id": "ke2myhu",
+      "type": "heading",
+      "level": 3,
+      "content": "4. Income Inequality (Explained Deeply)"
+    },
+    {
+      "type": "paragraph",
+      "id": "gh91ndn"
+    },
+    {
+      "type": "paragraph",
+      "id": "uhwmhkv"
+    },
+    {
+      "id": "2uvjq02",
+      "type": "heading",
+      "level": 3,
+      "content": "5. Wealth Inequality (More Severe Than Income)"
+    },
+    {
+      "type": "paragraph",
+      "id": "x7buvej"
+    },
+    {
+      "type": "paragraph",
+      "id": "g6q9p91"
+    },
+    {
+      "id": "v3i1uwv",
+      "type": "heading",
+      "level": 3,
+      "content": "6. Gender Inequality (Economic + Social)"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlpqlc9"
+    },
+    {
+      "type": "paragraph",
+      "id": "a6rwcka"
+    },
+    {
+      "id": "ta9ogwy",
+      "type": "heading",
+      "level": 3,
+      "content": "7. Social Inequality"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Inequality is NOT Only About Money",
+      "id": "44xcu91"
+    },
+    {
+      "type": "paragraph",
+      "id": "tdrz8ms"
+    },
+    {
+      "id": "jiaxhgj",
+      "type": "heading",
+      "level": 3,
+      "content": "8. Regional Inequality"
+    },
+    {
+      "type": "paragraph",
+      "id": "mw6oxhe"
+    },
+    {
+      "id": "bs67bki",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: ROOT CAUSES OF INEQUALITY (STEP‑BY‑STEP LOGIC)"
+    },
+    {
+      "id": "kyjitb1",
+      "type": "heading",
+      "level": 3,
+      "content": "9. Economic Causes"
+    },
+    {
+      "type": "paragraph",
+      "id": "ci0s4sg"
+    },
+    {
+      "id": "0iksbdv",
+      "type": "heading",
+      "level": 3,
+      "content": "10. Social Causes"
+    },
+    {
+      "type": "paragraph",
+      "id": "znt7bag"
+    },
+    {
+      "id": "brjz9ab",
+      "type": "heading",
+      "level": 3,
+      "content": "11. Institutional & Policy Causes"
+    },
+    {
+      "type": "paragraph",
+      "id": "baoqgqe"
+    },
+    {
+      "id": "y5xmtgc",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: MEASUREMENT OF INEQUALITY (VERY HIGH SSC WEIGHTAGE)"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Inequality",
+        "Poverty"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Disparity in economic assets, income, or opportunities among individuals or groups.",
+          "Inability to meet minimum basic survival needs such as food, shelter, and health."
+        ],
+        [
+          "Concept Type",
+          "Relative measure (compares individuals/groups across the distribution).",
+          "Absolute or relative threshold measure (compared against a Poverty Line)."
+        ],
+        [
+          "Primary Tools",
+          "Lorenz Curve, Gini Coefficient, Palma Ratio.",
+          "Headcount Ratio, Poverty Line Basket (PLB), Multidimensional Poverty Index."
+        ],
+        [
+          "Focus",
+          "Distribution of the total economic resource pie.",
+          "Minimum level of income or consumption required for subsistence."
+        ]
+      ],
+      "id": "s8vi4p4"
+    },
+    {
+      "id": "262v2em",
+      "type": "heading",
+      "level": 3,
+      "content": "12. Why Measuring Inequality is Necessary"
+    },
+    {
+      "type": "paragraph",
+      "id": "64uaz7e"
+    },
+    {
+      "id": "3b02zm2",
+      "type": "heading",
+      "level": 3,
+      "content": "13. Lorenz Curve (Graphical Explanation)"
+    },
+    {
+      "type": "paragraph",
+      "id": "eb75jtu"
+    },
+    {
+      "id": "tjy7qch",
+      "type": "heading",
+      "level": 3,
+      "content": "14. Gini Coefficient (Mathematical Logic Explained Simply)"
+    },
+    {
+      "type": "paragraph",
+      "id": "qwi6apy"
+    },
+    {
+      "id": "a7etvwf",
+      "type": "heading",
+      "level": 3,
+      "content": "15. Other Indicators"
+    },
+    {
+      "type": "paragraph",
+      "id": "5azw5el"
+    },
+    {
+      "id": "c8wvqof",
+      "type": "heading",
+      "level": 2,
+      "content": "PART E: EFFECTS OF INEQUALITY (DEEP ECONOMIC & SOCIAL IMPACT)"
+    },
+    {
+      "id": "7r3s12t",
+      "type": "heading",
+      "level": 3,
+      "content": "16. Economic Effects"
+    },
+    {
+      "type": "paragraph",
+      "id": "cia1tvz"
+    },
+    {
+      "id": "z5q4v4l",
+      "type": "heading",
+      "level": 3,
+      "content": "17. Social & Political Effects"
+    },
+    {
+      "type": "paragraph",
+      "id": "m9h0ze7"
+    },
+    {
+      "id": "z0heluj",
+      "type": "heading",
+      "level": 2,
+      "content": "PART F: INEQUALITY IN INDIA (COMPLETE CONTEXT)"
+    },
+    {
+      "id": "f1cmime",
+      "type": "heading",
+      "level": 3,
+      "content": "18. India’s Inequality Pattern"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Gini Coefficient values: 0 represents Perfect Equality, while 1 represents Perfect Inequality (100% inequality).",
+        "Lorenz Curve deviation: The further the Lorenz Curve bows away from the 45-degree Line of Absolute Equality, the higher the level of inequality.",
+        "SSC Distinction: Poverty is an absolute concept measured relative to a poverty line, while Inequality is a relative concept measuring relative income/wealth gaps."
+      ],
+      "id": "oy4ub2i"
+    },
+    {
+      "type": "paragraph",
+      "id": "ehlt1ch"
+    },
+    {
+      "type": "paragraph",
+      "id": "dvowi0r"
+    },
+    {
+      "id": "gcvpvfn",
+      "type": "heading",
+      "level": 2,
+      "content": "PART G: SOLUTIONS & POLICY RESPONSE"
+    },
+    {
+      "id": "31u3r4b",
+      "type": "heading",
+      "level": 3,
+      "content": "19. Government Measures to Reduce Inequality"
+    },
+    {
+      "type": "paragraph",
+      "id": "b4qello"
+    },
+    {
+      "id": "wwqdp1f",
+      "type": "heading",
+      "level": 3,
+      "content": "20. Importance of Inclusive Growth"
+    },
+    {
+      "type": "paragraph",
+      "id": "cynqx9s"
+    },
+    {
+      "id": "je2k1fx",
+      "type": "heading",
+      "level": 3,
+      "content": "SSC HYPER FINAL REVISION POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4odx37"
+    }
+  ],
+  "enriched": true
+}

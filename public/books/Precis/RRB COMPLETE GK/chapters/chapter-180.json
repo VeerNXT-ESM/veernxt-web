@@ -1,0 +1,132 @@
+{
+  "id": "mgdpbu8",
+  "title": "2. Factors Controlling Natural Vegetation",
+  "order": 180,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "by2pv7w"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The variation in duration of sunlight at different places is due to differences in latitude, altitude, season and duration of the day.",
+      "id": "dtspd5t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Relief Factors",
+          "value": "2 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Climate Factors",
+          "value": "3 Major",
+          "icon": "info"
+        },
+        {
+          "label": "Target Forest Cover",
+          "value": "33%",
+          "icon": "award"
+        },
+        {
+          "label": "Evergreen Rainfall",
+          "value": "> 200 cm",
+          "icon": "calendar"
+        }
+      ],
+      "id": "7ndrebw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Factor Type",
+        "Key Components",
+        "Impact on Natural Vegetation"
+      ],
+      "rows": [
+        [
+          "Relief",
+          "Land & Soil",
+          "Determines topography, soil nutrients, and drainage, influencing whether land supports agriculture, grasslands, or forests."
+        ],
+        [
+          "Climate",
+          "Temperature, Photoperiod, Precipitation",
+          "Governs thermal vegetation zones, seasonal leaf shedding, tree growth rates, and spatial density of forests."
+        ]
+      ],
+      "id": "d1tkc73"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Relief factors, including land and soil, determine the physical terrain and nutrient availability for vegetation growth.",
+        "Temperature along with atmospheric humidity significantly governs the character, distribution, and thermal limits of vegetation zones.",
+        "Photoperiod variations due to latitude, altitude, and season lead to faster tree growth during longer summer days.",
+        "Precipitation levels directly dictate forest density, where heavy rainfall areas support lush, dense vegetation."
+      ],
+      "id": "t2uitei"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Relief (Land & Soil) and Climate (Temperature, Photoperiod, Precipitation) as primary controlling factors.",
+        "Note that longer photoperiod duration during summer months directly accelerates tree growth.",
+        "Remember precipitation thresholds determining vegetation types (e.g., >200 cm rainfall for Tropical Evergreen Forests)."
+      ],
+      "id": "egt4y8g"
+    },
+    {
+      "id": "dvuhru9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

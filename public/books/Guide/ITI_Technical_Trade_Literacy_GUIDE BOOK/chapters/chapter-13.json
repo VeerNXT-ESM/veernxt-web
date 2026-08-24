@@ -1,0 +1,522 @@
+{
+  "id": "q34hynf",
+  "title": "Chapter 14 – Engineering Materials and Their Properties",
+  "order": 13,
+  "blocks": [
+    {
+      "id": "1vvc4ge",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Engineering materials are broadly classified into Metals, Ceramics, Polymers, and Composites.",
+        "Ferrous metals contain iron as their major constituent, whereas non-ferrous metals lack iron.",
+        "Mechanical properties such as tensile strength, ductility, hardness, and toughness govern structural performance under applied loads.",
+        "Physical properties like thermal conductivity, electrical resistivity, density, and melting point dictate operational limits.",
+        "Alloying elements are added to pure metals to significantly enhance strength, corrosion resistance, and heat behavior."
+      ],
+      "id": "dyoiwgo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Material Classes",
+          "value": "4 Groups",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Base Metal",
+          "value": "Iron (Fe)",
+          "icon": "check"
+        },
+        {
+          "label": "Core Test Metric",
+          "value": "Tensile Strength",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Criterion",
+          "value": "Material Selection",
+          "icon": "info"
+        }
+      ],
+      "id": "6c63sf8"
+    },
+    {
+      "type": "paragraph",
+      "id": "8azpk2f"
+    },
+    {
+      "type": "paragraph",
+      "id": "gd6a9j6"
+    },
+    {
+      "id": "pqvq8qt",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Classification of Engineering Materials"
+    },
+    {
+      "id": "v7vm0zp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "165maol",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Ferrous and Non-Ferrous Metals"
+    },
+    {
+      "id": "2vmt1ab",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Mechanical properties of engineering materials determine their structural performance and deformation behavior under external loads.",
+      "id": "ih1ggvh"
+    },
+    {
+      "id": "yjk9c06",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Common Engineering Metals"
+    },
+    {
+      "id": "z2watyb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f3yelh0",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Non-Metallic Materials"
+    },
+    {
+      "id": "hojgu4r",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ypubpdy",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Alloys"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property / Feature",
+        "Ferrous Metals",
+        "Non-Ferrous Metals"
+      ],
+      "rows": [
+        [
+          "Primary Element",
+          "Contains Iron (Fe)",
+          "Does not contain Iron as main constituent"
+        ],
+        [
+          "Corrosion Resistance",
+          "Generally poor (susceptible to rusting)",
+          "High resistance to atmospheric corrosion"
+        ],
+        [
+          "Magnetic Property",
+          "Strongly Magnetic (Ferromagnetic)",
+          "Generally Non-Magnetic"
+        ],
+        [
+          "Typical Examples",
+          "Carbon Steel, Cast Iron, Stainless Steel",
+          "Aluminum, Copper, Brass, Bronze"
+        ]
+      ],
+      "id": "bgfyf2h"
+    },
+    {
+      "type": "paragraph",
+      "id": "h0qvnpe"
+    },
+    {
+      "id": "okok6vm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9uyss19",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Mechanical Properties of Materials"
+    },
+    {
+      "id": "eq5pnc7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ei28kjm",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Physical Properties of Materials"
+    },
+    {
+      "id": "mdxcyin",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Cast Iron contains more than 2% Carbon, rendering it hard, brittle, and excellent in damping compressive loads.",
+        "Ductility allows materials to be drawn into wires, whereas Malleability enables flattening into thin sheets without rupture.",
+        "Hooke's Law strictly applies only up to the Proportional Limit on the stress-strain curve."
+      ],
+      "id": "q15kckm"
+    },
+    {
+      "id": "a0i5ib4",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Factors for Selecting Engineering Materials"
+    },
+    {
+      "id": "j8g0mnu",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "ki96796",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "zw116aj",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

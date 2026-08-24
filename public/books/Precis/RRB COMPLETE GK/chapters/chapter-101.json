@@ -1,0 +1,106 @@
+{
+  "id": "jurob5u",
+  "title": "11. Earthquake Preparedness and Mitigation",
+  "order": 101,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9bmowbk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Seismic Zones",
+          "value": "Zones II to V",
+          "icon": "info"
+        },
+        {
+          "label": "Vulnerable Area",
+          "value": "59% Landmass",
+          "icon": "check"
+        },
+        {
+          "label": "BIS Design Code",
+          "value": "IS 1893:2016",
+          "icon": "book"
+        },
+        {
+          "label": "Nodal Agency",
+          "value": "NDMA / MHA",
+          "icon": "award"
+        }
+      ],
+      "id": "293yahd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Earthquakes do not kill people; it is unsafe buildings and unreinforced structures that cause casualties.",
+      "id": "r2nyns6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "India is classified into four seismic zones (Zone II to Zone V), with Zone V representing the highest seismic hazard.",
+        "Over 59% of India's landmass is prone to earthquakes of moderate to very high intensity.",
+        "Earthquake mitigation strategies include structural measures like base isolation and retrofitting, alongside non-structural land-use planning.",
+        "The National Disaster Management Guidelines emphasize microzonation and strict enforcement of building codes."
+      ],
+      "id": "0dko7q0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Richter Scale",
+        "Mercalli Scale"
+      ],
+      "rows": [
+        [
+          "Measures",
+          "Magnitude (Energy released)",
+          "Intensity (Observed damage)"
+        ],
+        [
+          "Type",
+          "Quantitative (Logarithmic)",
+          "Qualitative (Descriptive)"
+        ],
+        [
+          "Scale Range",
+          "1 to 10+",
+          "I to XII (Roman numerals)"
+        ],
+        [
+          "Determination",
+          "Seismograph recording",
+          "Human observation and structural impact"
+        ]
+      ],
+      "id": "zv41wj5"
+    },
+    {
+      "type": "paragraph",
+      "id": "vsp89z7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Zone V includes the entire North-East India, parts of Jammu & Kashmir, Himachal Pradesh, Uttarakhand, Rann of Kutch, and Andaman & Nicobar Islands.",
+        "IS 1893 is the primary BIS code governing earthquake-resistant design of structures in India.",
+        "Richter scale measures magnitude (energy released), whereas Modified Mercalli scale measures intensity (observed damage)."
+      ],
+      "id": "y2lmx23"
+    },
+    {
+      "type": "paragraph",
+      "id": "4iq8kd5"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvnfngs"
+    }
+  ],
+  "enriched": true
+}

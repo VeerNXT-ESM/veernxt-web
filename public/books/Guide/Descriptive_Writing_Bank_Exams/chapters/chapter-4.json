@@ -1,0 +1,173 @@
+{
+  "id": "rnix7z9",
+  "title": "LETTER 3: Letter from Branch Manager to Head Office — NPA Report",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "mem628n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Letter Category",
+          "value": "Internal Banking Correspondence",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Subject",
+          "value": "NPA Reporting & Recovery",
+          "icon": "info"
+        },
+        {
+          "label": "NPA Threshold",
+          "value": "> 90 Days Overdue",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Audience",
+          "value": "Head Office / Credit Dept",
+          "icon": "check"
+        }
+      ],
+      "id": "vpkzrgo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Serves as an official internal document sent from the Branch Manager to the Head Office or Regional Credit Department detailing non-performing loans.",
+        "Requires a systematic structure including borrower details, loan limit, outstanding balance, date of NPA classification, and valuation of available security.",
+        "Outlines specific causes for default (e.g., market downturn, delayed payments, operational failure) alongside recovery steps already initiated.",
+        "Maintains an objective, factual, and analytical tone while seeking necessary approvals or legal sanctions for further recovery measures."
+      ],
+      "id": "0kpiphl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "psr6rtd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ran2xqy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tn3kc8j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1br4tmp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dag62ef"
+    },
+    {
+      "type": "pullQuote",
+      "content": "I am writing to submit the quarterly Non-Performing Asset (NPA) status report for our branch, highlighting key delinquent accounts and proposed recovery strategies.",
+      "id": "rwbtokw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8iuw0z2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ysqoa7r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "70fnl4c"
+    },
+    {
+      "type": "paragraph",
+      "id": "a4s8xe3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Internal NPA Report (Branch to HO)",
+        "External NPA Notice (Bank to Borrower)"
+      ],
+      "rows": [
+        [
+          "Primary Recipient",
+          "Head Office / General Manager (Recovery)",
+          "Borrower / Guarantor"
+        ],
+        [
+          "Tone & Objective",
+          "Analytical & Managerial; seeks guidance and approvals",
+          "Legal & Firm; demands immediate dues clearance"
+        ],
+        [
+          "Core Contents",
+          "Security valuation, provision status, causes of default, recovery roadmap",
+          "Overdue amount break-up, statutory notice under SARFAESI Act, legal warning"
+        ]
+      ],
+      "id": "ryuc4tu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v2enqip"
+    },
+    {
+      "type": "paragraph",
+      "id": "73s2lzb"
+    },
+    {
+      "type": "paragraph",
+      "id": "3myvmu6"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ejjxv0"
+    },
+    {
+      "type": "paragraph",
+      "id": "ncpbh6y"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "In descriptive bank exams, internal letters to Head Office must follow formal inter-departmental format, including Reference Number, Date, Subject, and structured tabular account summaries.",
+        "Candidates must remember the RBI definition of NPA (principal or interest overdue for more than 90 days) when explaining the rationale behind account classification.",
+        "Always include concrete recovery proposals such as SARFAESI action, DRT filing, or One-Time Settlement (OTS) recommendations in the letter body."
+      ],
+      "id": "icxuteu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e0gmox1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ro1pr2x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kpumvej"
+    },
+    {
+      "type": "paragraph",
+      "id": "kmby8pd"
+    }
+  ],
+  "enriched": true
+}

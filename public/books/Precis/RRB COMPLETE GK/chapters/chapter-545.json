@@ -1,0 +1,89 @@
+{
+  "id": "p89pql2",
+  "title": "18. Exam Traps",
+  "order": 545,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sfrol57"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Avoiding exam traps is not just about knowledge, but about disciplined question reading and strategic time management under pressure.",
+      "id": "fthqub5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Exam Trap Type",
+        "Common Pitfall",
+        "Prevention Strategy"
+      ],
+      "rows": [
+        [
+          "Keyword Misreading",
+          "Overlooking words like 'NOT' or 'EXCEPT'",
+          "Underline or highlight negative qualifiers before reading options"
+        ],
+        [
+          "Time Sinks",
+          "Spending over 3 minutes on a single question",
+          "Use a two-pass approach: flag complex questions and move on"
+        ],
+        [
+          "Absolute Statements",
+          "Assuming 'Always' or 'Never' options are factual",
+          "Recognize that extreme absolute statements in GS/Polity are usually false"
+        ]
+      ],
+      "id": "jqabfwn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "0.25 - 0.66",
+          "icon": "info"
+        },
+        {
+          "label": "Avg Time / Question",
+          "value": "36 - 90 Sec",
+          "icon": "clock"
+        },
+        {
+          "label": "Trap Categories",
+          "value": "4 Core Types",
+          "icon": "book"
+        },
+        {
+          "label": "Target Accuracy",
+          "value": "85%+",
+          "icon": "check"
+        }
+      ],
+      "id": "jngtlv2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Double-check questions asking for 'NOT CORRECT' options to prevent selecting the correct option by mistake.",
+        "Beware of distractors in options that represent common calculation errors made mid-way through a problem.",
+        "Treat extreme generalisations ('Always', 'Never', 'All') with caution in statement-based questions."
+      ],
+      "id": "ddudtd7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Negative marking severely penalizes blind guessing; prioritize logical elimination over random attempts.",
+        "Examiners frequently use qualifiers like 'NOT', 'INCORRECT', 'ALWAYS', and 'ONLY' to create subtle traps.",
+        "Time-sink questions are intentionally placed to disrupt pacing—skip difficult items on your first pass.",
+        "Always verify units, signs (+/-), and decimal positions before selecting numerical options."
+      ],
+      "id": "0xm68sl"
+    }
+  ],
+  "enriched": true
+}

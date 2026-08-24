@@ -1,0 +1,89 @@
+{
+  "id": "pub5f6b",
+  "title": "RRB Quick Revision Box",
+  "order": 546,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "tt3t4i8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Normalization of marks is mandatorily applied for multi-shift examinations to ensure equity across candidate batches.",
+      "id": "3i9l9dj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Exam Parameter",
+        "CBT Stage 1",
+        "CBT Stage 2"
+      ],
+      "rows": [
+        [
+          "Primary Purpose",
+          "Screening / Shortlisting candidates",
+          "Final Merit / Qualification"
+        ],
+        [
+          "Negative Marking",
+          "1/3rd mark per wrong answer",
+          "1/3rd mark per wrong answer"
+        ],
+        [
+          "Score Utilization",
+          "Qualifying for next stage",
+          "Final Selection Panel list creation"
+        ]
+      ],
+      "id": "b690x0i"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RRB Zones",
+          "value": "21 Zones",
+          "icon": "book"
+        },
+        {
+          "label": "Exam Stages",
+          "value": "CBT-1 & CBT-2",
+          "icon": "check"
+        },
+        {
+          "label": "Negative Marking",
+          "value": "1/3rd Mark",
+          "icon": "info"
+        },
+        {
+          "label": "Qualifying Marks",
+          "value": "40% UR/EWS",
+          "icon": "award"
+        }
+      ],
+      "id": "l38d01f"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always remember: 1/3rd mark deduction applies for every wrong response in CBT stages.",
+        "Minimum qualifying percentage: UR/EWS - 40%, OBC - 30%, SC - 30%, ST - 25%.",
+        "Shortlisting for CBT-2 is strictly based on normalized marks obtained in CBT-1."
+      ],
+      "id": "jg5yfas"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RRB competitive recruitment consists of Computer Based Tests (CBT-1 and CBT-2) for selection across technical and non-technical cadres.",
+        "A negative marking penalty of 1/3rd mark is applied for every incorrect answer in objective CBTs.",
+        "Normalization of marks is mandatorily applied for multi-shift examinations to ensure equity.",
+        "Core subjects tested include General Awareness, Mathematics, General Intelligence & Reasoning, and General Science."
+      ],
+      "id": "z7bfwue"
+    }
+  ],
+  "enriched": true
+}

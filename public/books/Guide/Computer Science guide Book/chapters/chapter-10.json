@@ -1,35 +1,40 @@
 {
-  "id": "bvv1k2h",
+  "id": "2kdlwyj",
   "title": "Chapter 10: Data Representation",
   "order": 10,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "cpesm3e"
+      "id": "1kneuy6"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Number Systems",
-          "value": "4 Types",
+          "label": "Binary Base",
+          "value": "Base 2",
+          "icon": "check"
+        },
+        {
+          "label": "Octal Base",
+          "value": "Base 8",
+          "icon": "info"
+        },
+        {
+          "label": "Decimal Base",
+          "value": "Base 10",
           "icon": "book"
         },
         {
-          "label": "Key Standard",
-          "value": "ASCII",
+          "label": "Hexadecimal Base",
+          "value": "Base 16",
           "icon": "award"
-        },
-        {
-          "label": "Core System",
-          "value": "Binary",
-          "icon": "check"
         }
       ],
-      "id": "dh6nrbn"
+      "id": "jn1liea"
     },
     {
-      "id": "9vz3lfp",
+      "id": "umwvpkp",
       "type": "heading",
       "level": 2,
       "content": "10.1 Number System"
@@ -38,19 +43,20 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Data representation covers four primary number systems: Binary, Octal, Decimal, and Hexadecimal.",
-        "Binary conversions involve converting numbers between Decimal, Octal, Hexadecimal, and Binary formats.",
-        "ASCII stands for American Standard Code for Information Interchange.",
-        "Understanding number system comparisons and conversion logic is essential for computer data representation."
+        "Binary Number System operates on Base 2 using only digits 0 and 1.",
+        "Octal Number System operates on Base 8 using digits 0 through 7.",
+        "Decimal Number System operates on Base 10 using standard digits 0 through 9.",
+        "Hexadecimal Number System operates on Base 16 using digits 0-9 and letters A-F.",
+        "ASCII stands for American Standard Code for Information Interchange used for character encoding."
       ],
-      "id": "ra9og0r"
+      "id": "hay2rhv"
     },
     {
       "type": "paragraph",
-      "id": "5yvzjue"
+      "id": "xeeimwz"
     },
     {
-      "id": "jqnbqzk",
+      "id": "4tszvg6",
       "type": "table",
       "rows": [
         {
@@ -96,138 +102,149 @@
       ]
     },
     {
-      "id": "o3xyphl",
+      "id": "h13vxuf",
       "type": "heading",
       "level": 3,
       "content": "10.1.1 Binary Number System"
     },
     {
       "type": "paragraph",
-      "id": "an3d9hi"
+      "id": "xy9djn9"
     },
     {
-      "id": "mxhrp7q",
+      "id": "iubbq02",
       "type": "heading",
       "level": 3,
       "content": "10.1.2 Octal Number System"
     },
     {
       "type": "paragraph",
-      "id": "xmh46xb"
+      "id": "z35l3lk"
     },
     {
-      "id": "hjketfj",
+      "id": "c57d3uz",
       "type": "heading",
       "level": 3,
       "content": "10.1.3 Decimal Number System"
     },
     {
       "type": "paragraph",
-      "id": "z2gngl3"
+      "id": "ixc5k9e"
     },
     {
       "type": "pullQuote",
       "content": "ASCII (American Standard Code for Information Interchange)",
-      "id": "cvypqtb"
+      "id": "2l4ypwf"
     },
     {
-      "id": "epcw5vf",
+      "id": "b9dfg1x",
       "type": "heading",
       "level": 3,
       "content": "10.1.4 Hexadecimal Number System"
     },
     {
       "type": "paragraph",
-      "id": "u2mnd2g"
+      "id": "9l8fjx2"
     },
     {
-      "id": "wjt4qjj",
+      "id": "xj72dzp",
       "type": "heading",
       "level": 2,
       "content": "10.2 Binary Conversions"
     },
     {
-      "id": "3zzsbem",
+      "id": "6ccah8n",
       "type": "heading",
       "level": 3,
       "content": "10.2.1 Decimal to Binary Conversion"
     },
     {
       "type": "paragraph",
-      "id": "dn81yf0"
+      "id": "siyycyt"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Number System",
-        "Associated Binary Conversions"
+        "Base (Radix)",
+        "Digits / Symbols Used"
       ],
       "rows": [
         [
-          "Decimal Number System",
-          "Decimal to Binary / Binary to Decimal"
+          "Binary",
+          "2",
+          "0, 1"
         ],
         [
-          "Octal Number System",
-          "Binary to Octal"
+          "Octal",
+          "8",
+          "0, 1, 2, 3, 4, 5, 6, 7"
         ],
         [
-          "Hexadecimal Number System",
-          "Binary to Hexadecimal"
+          "Decimal",
+          "10",
+          "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"
+        ],
+        [
+          "Hexadecimal",
+          "16",
+          "0-9, A-F (where A=10, B=11, C=12, D=13, E=14, F=15)"
         ]
       ],
-      "id": "tfbehn5"
+      "id": "lwhp5em"
     },
     {
-      "id": "wwkmn1i",
+      "id": "ydb0f4y",
       "type": "heading",
       "level": 3,
       "content": "10.2.2 Binary to Decimal Conversion"
     },
     {
       "type": "paragraph",
-      "id": "pg61u37"
+      "id": "ssafyp1"
     },
     {
-      "id": "8j61vey",
+      "id": "niacyud",
       "type": "heading",
       "level": 3,
       "content": "10.2.3 Binary to Octal Conversion"
     },
     {
       "type": "paragraph",
-      "id": "1djjip6"
+      "id": "u2z6d7w"
     },
     {
-      "id": "pn0li2o",
+      "id": "9iv2t7w",
       "type": "heading",
       "level": 3,
       "content": "10.2.4 Binary to Hexadecimal Conversion"
     },
     {
       "type": "paragraph",
-      "id": "6x8k11v"
+      "id": "vysa86u"
     },
     {
-      "id": "olfb30e",
+      "id": "iewb7at",
       "type": "heading",
       "level": 2,
       "content": "10.3 ASCII (American Standard Code for Information Interchange)"
     },
     {
       "type": "paragraph",
-      "id": "pdcvwyd"
+      "id": "rvddsd4"
     },
     {
       "type": "examAlert",
       "items": [
-        "Full form of ASCII (American Standard Code for Information Interchange) is frequently asked in competitive exams.",
-        "Conversion techniques between Decimal, Binary, Octal, and Hexadecimal are high-yield problem-solving topics."
+        "In Hexadecimal system, letters A to F represent values 10 to 15 respectively.",
+        "Converting Binary to Octal requires grouping binary bits into groups of 3 from right to left.",
+        "Converting Binary to Hexadecimal requires grouping binary bits into groups of 4 from right to left.",
+        "Full expansion of ASCII is frequently asked in competitive computer awareness sections."
       ],
-      "id": "fam10wf"
+      "id": "6cknn36"
     },
     {
-      "id": "cw9u3bm",
+      "id": "7qpo3ct",
       "type": "table",
       "rows": [
         {
@@ -289,13 +306,13 @@
       ]
     },
     {
-      "id": "bgucxx5",
+      "id": "ioajege",
       "type": "heading",
       "level": 2,
       "content": "10.4 Comparison of Number Systems"
     },
     {
-      "id": "rylh5h5",
+      "id": "85lmh0a",
       "type": "table",
       "rows": [
         {
@@ -341,13 +358,13 @@
       ]
     },
     {
-      "id": "ck5cvo5",
+      "id": "t8ha4o2",
       "type": "heading",
       "level": 2,
       "content": "10.5 Important Exam Points"
     },
     {
-      "id": "6gp0h4x",
+      "id": "i2bivtk",
       "type": "list",
       "items": [
         null,

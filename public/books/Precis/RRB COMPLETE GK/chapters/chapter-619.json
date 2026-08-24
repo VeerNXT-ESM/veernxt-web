@@ -1,0 +1,95 @@
+{
+  "id": "6fuyi2j",
+  "title": "Chapter 28: National Green Tribunal (NGT)",
+  "order": 619,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "oxcar9q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The National Green Tribunal is not bound by the procedure laid down under the Code of Civil Procedure, 1908, but is guided by principles of natural justice.",
+      "id": "5gsf2jv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "National Green Tribunal (NGT)",
+        "Regular Civil Courts"
+      ],
+      "rows": [
+        [
+          "Governing Procedure",
+          "Guided by Principles of Natural Justice",
+          "Bound strictly by Code of Civil Procedure (CPC), 1908"
+        ],
+        [
+          "Disposal Timeframe",
+          "Mandated disposal within 6 months of filing",
+          "No fixed statutory timeframe for case disposal"
+        ],
+        [
+          "Bench Composition",
+          "Judicial Members and Technical Expert Members",
+          "Strictly Judicial Officers"
+        ],
+        [
+          "Reappointment",
+          "Members are not eligible for reappointment",
+          "Subject to standard judicial service rules"
+        ]
+      ],
+      "id": "ychvbe1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "2010",
+          "icon": "calendar"
+        },
+        {
+          "label": "Disposal Limit",
+          "value": "6 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "Member Tenure",
+          "value": "5 Years",
+          "icon": "award"
+        },
+        {
+          "label": "Sitting Benches",
+          "value": "5 Benches",
+          "icon": "info"
+        }
+      ],
+      "id": "lvjtkae"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NGT members are NOT eligible for reappointment after their 5-year term.",
+        "Appeals against the award/decision of NGT lie directly to the Supreme Court within 90 days.",
+        "NGT jurisdiction covers 7 civil environmental laws, but explicitly EXCLUDES the Wildlife (Protection) Act, 1972 and the Scheduled Tribes and Other Traditional Forest Dwellers Act, 2006."
+      ],
+      "id": "w9wdfa0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The National Green Tribunal (NGT) was established in 2010 under the National Green Tribunal Act, 2010 for effective and speedy disposal of cases relating to environmental protection.",
+        "India became the third country in the world (and the first developing country) to establish a specialized environmental tribunal, after Australia and New Zealand.",
+        "The Tribunal is not bound by the procedure laid down under the Code of Civil Procedure, 1908, but is guided by principles of natural justice.",
+        "NGT is mandated to make an endeavor for final disposal of applications or appeals within 6 months of filing.",
+        "The Chairperson, Judicial Members, and Expert Members hold office for a term of 5 years and are strictly not eligible for reappointment."
+      ],
+      "id": "nx3cs6u"
+    }
+  ],
+  "enriched": true
+}

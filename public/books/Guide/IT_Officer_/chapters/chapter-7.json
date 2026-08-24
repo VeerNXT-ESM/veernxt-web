@@ -1,0 +1,517 @@
+{
+  "id": "yk8x9hg",
+  "title": "CHAPTER 7: COMPUTER ORGANISATION AND ARCHITECTURE",
+  "order": 7,
+  "blocks": [
+    {
+      "id": "6drcsud",
+      "type": "heading",
+      "level": 2,
+      "content": "7.1 Basic Computer Organisation"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Basic Computer Organisation defines the functional units including CPU, Memory, and Input/Output components.",
+        "The Instruction Execution Cycle consists of Fetch, Decode, Execute, and Writeback stages.",
+        "Memory Hierarchy organizes memory based on speed, cost, and capacity from Registers down to Secondary Storage.",
+        "Number Systems and Conversions cover Binary, Octal, Decimal, Hexadecimal, and Binary Arithmetic representations.",
+        "Pipelining optimizes execution throughput by overlapping multiple instruction processing stages.",
+        "RISC emphasizes simple, fixed-length instructions, whereas CISC utilizes complex, variable-length instruction sets."
+      ],
+      "id": "kc0m84w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Number",
+          "value": "7",
+          "icon": "book"
+        },
+        {
+          "label": "Core Topics",
+          "value": "6 Sections",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Architecture Types",
+          "value": "RISC & CISC",
+          "icon": "award"
+        },
+        {
+          "label": "Key Concept",
+          "value": "Memory Hierarchy",
+          "icon": "check"
+        }
+      ],
+      "id": "ilqv7r3"
+    },
+    {
+      "id": "1rhx6kb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k5uqc52",
+      "type": "heading",
+      "level": 2,
+      "content": "7.2 Instruction Execution Cycle"
+    },
+    {
+      "id": "a31xft4",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 7: COMPUTER ORGANISATION AND ARCHITECTURE",
+      "id": "aqnfuja"
+    },
+    {
+      "id": "cvzj4z1",
+      "type": "heading",
+      "level": 2,
+      "content": "7.3 Memory Hierarchy"
+    },
+    {
+      "id": "bh66068",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9shkwk4",
+      "type": "heading",
+      "level": 2,
+      "content": "7.4 Number Systems and Conversions"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "RISC (Reduced Instruction Set)",
+        "CISC (Complex Instruction Set)"
+      ],
+      "rows": [
+        [
+          "Instruction Complexity",
+          "Simple and fixed-length instructions",
+          "Complex and variable-length instructions"
+        ],
+        [
+          "Execution Time",
+          "Single clock cycle for most instructions",
+          "Multiple clock cycles per instruction"
+        ],
+        [
+          "Memory Access",
+          "Load and Store architecture only",
+          "Direct memory access allowed in instructions"
+        ],
+        [
+          "Register Usage",
+          "Uses a large number of registers",
+          "Uses fewer general-purpose registers"
+        ]
+      ],
+      "id": "mzcogp7"
+    },
+    {
+      "id": "wzdgf0d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e52yar6",
+      "type": "heading",
+      "level": 3,
+      "content": "Binary Arithmetic and Representation"
+    },
+    {
+      "id": "07lumqc",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "pvcwraj",
+      "type": "heading",
+      "level": 2,
+      "content": "7.5 Pipelining"
+    },
+    {
+      "type": "paragraph",
+      "id": "h5n2ds0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Memory Hierarchy ranking questions frequently test relative access speed, cost, and capacity across Registers, Cache, RAM, and Hard Drive.",
+        "RISC vs CISC architectural differences, such as register usage, instruction length, and clock cycles per instruction, are repeatedly asked in competitive exams.",
+        "Number System conversions and 1's/2's Complement representations form a major part of numerical problems."
+      ],
+      "id": "8all1e2"
+    },
+    {
+      "id": "523cctp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alowqsu",
+      "type": "heading",
+      "level": 2,
+      "content": "7.6 RISC vs CISC"
+    },
+    {
+      "id": "87w5e39",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

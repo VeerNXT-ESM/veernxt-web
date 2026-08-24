@@ -1,0 +1,90 @@
+{
+  "id": "6s6vk96",
+  "title": "RRB Quick Revision Box",
+  "order": 377,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1fbjnsw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regional Rural Banks were established to develop the rural economy by providing credit and other facilities for agriculture and rural activities.",
+      "id": "l84mmp5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Stakeholder",
+        "Shareholding Percentage",
+        "Key Responsibility"
+      ],
+      "rows": [
+        [
+          "Central Government",
+          "50%",
+          "Policy direction and major capital contribution"
+        ],
+        [
+          "Sponsor Bank",
+          "35%",
+          "Managerial support, financial assistance, and training"
+        ],
+        [
+          "State Government",
+          "15%",
+          "Local administrative backing and regional coordination"
+        ]
+      ],
+      "id": "4593mtt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Established",
+          "value": "1975",
+          "icon": "calendar"
+        },
+        {
+          "label": "Central Govt Share",
+          "value": "50%",
+          "icon": "award"
+        },
+        {
+          "label": "Sponsor Bank Share",
+          "value": "35%",
+          "icon": "info"
+        },
+        {
+          "label": "State Govt Share",
+          "value": "15%",
+          "icon": "check"
+        }
+      ],
+      "id": "4qqsscb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the exact equity sharing ratio: Central Government (50%), Sponsor Bank (35%), and State Government (15%).",
+        "Prathama Bank was the first RRB in India, sponsored by Syndicate Bank.",
+        "NABARD is the supervising authority for RRBs, while RBI is the statutory regulator."
+      ],
+      "id": "uw0kbsg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Regional Rural Banks (RRBs) were established on 2 October 1975 following the recommendations of the Narasimham Working Group.",
+        "The statutory backing for RRBs was provided by the Regional Rural Banks Act, 1976.",
+        "Prathama Bank in Moradabad, Uttar Pradesh, sponsored by Syndicate Bank, was the first RRB established in India.",
+        "RRBs are jointly owned by the Central Government, the concerned State Government, and the Sponsor Bank in a 50:15:35 ratio.",
+        "RRBs operate under the regulatory purview of the Reserve Bank of India (RBI) and are supervised by NABARD."
+      ],
+      "id": "v9r4d2h"
+    }
+  ],
+  "enriched": true
+}

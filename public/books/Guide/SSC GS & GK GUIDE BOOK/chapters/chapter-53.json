@@ -1,0 +1,296 @@
+{
+  "id": "bdogywl",
+  "title": "Chapter 4: Heat",
+  "order": 53,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ycdlitb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Modes of Transfer",
+          "value": "3 Modes",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Heat",
+          "value": "Joule (J)",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Scales",
+          "value": "Celsius, Fahrenheit, Kelvin",
+          "icon": "info"
+        },
+        {
+          "label": "Absolute Zero",
+          "value": "-273.15 °C",
+          "icon": "clock"
+        }
+      ],
+      "id": "fmmvxi7"
+    },
+    {
+      "id": "lbarmfb",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Heat"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Heat is a form of energy that flows spontaneously from a region of higher temperature to a region of lower temperature.",
+        "Temperature measures the degree of hotness or coldness of a body and determines the direction of heat flow.",
+        "Heat transfer occurs through three distinct mechanisms: conduction in solids, convection in fluids, and radiation through vacuum.",
+        "Thermal expansion occurs in solids, liquids, and gases upon heating, with gases exhibiting the maximum rate of expansion."
+      ],
+      "id": "34n1cp4"
+    },
+    {
+      "type": "paragraph",
+      "id": "qm3j1x0"
+    },
+    {
+      "type": "paragraph",
+      "id": "arxvy0j"
+    },
+    {
+      "type": "paragraph",
+      "id": "30rkyqw"
+    },
+    {
+      "type": "paragraph",
+      "id": "bo53cag"
+    },
+    {
+      "id": "7aavpec",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "ex35vvf"
+    },
+    {
+      "type": "paragraph",
+      "id": "fb2s607"
+    },
+    {
+      "type": "paragraph",
+      "id": "lvkijav"
+    },
+    {
+      "id": "uy9xloz",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Temperature Scales"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Radiation is the mode of heat transfer that does not require any material medium to travel.",
+      "id": "3ivpxv9"
+    },
+    {
+      "id": "0xdq8tx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qvti62r",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Modes of Heat Transfer"
+    },
+    {
+      "id": "ftlwrqa",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gbv3ue5",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Conduction"
+    },
+    {
+      "type": "paragraph",
+      "id": "4sz6occ"
+    },
+    {
+      "id": "h9bl1dw",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Convection"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Conduction",
+        "Convection",
+        "Radiation"
+      ],
+      "rows": [
+        [
+          "Medium Required",
+          "Solid medium necessary",
+          "Fluid medium (Liquid/Gas) necessary",
+          "No material medium required (Vacuum)"
+        ],
+        [
+          "Movement of Particles",
+          "Particles vibrate in fixed positions",
+          "Actual movement of fluid particles",
+          "No movement of matter involved"
+        ],
+        [
+          "Speed of Transfer",
+          "Slowest process",
+          "Moderate speed",
+          "Fastest process (Speed of light)"
+        ]
+      ],
+      "id": "7miap8n"
+    },
+    {
+      "type": "paragraph",
+      "id": "ht8bqhm"
+    },
+    {
+      "id": "tmxrjhi",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Radiation"
+    },
+    {
+      "type": "paragraph",
+      "id": "a95n6od"
+    },
+    {
+      "id": "7ytndv6",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Effects of Heat"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9d8u014"
+    },
+    {
+      "type": "paragraph",
+      "id": "w6sudk8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oaozruw"
+    },
+    {
+      "id": "9ponjyq",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Expansion due to Heat"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Clinical thermometer range is 35°C to 42°C (94°F to 108°F) because human body temperature stays within this limit.",
+        "Temperature conversion formula frequently asked: C/5 = (F - 32)/9 = (K - 273.15)/5.",
+        "Sea breeze during the day and land breeze at night are driven by convection currents in air.",
+        "Dark-colored surfaces absorb and radiate heat much better than light-colored or polished surfaces."
+      ],
+      "id": "0w4xt3g"
+    },
+    {
+      "type": "paragraph",
+      "id": "w4j4cf7"
+    },
+    {
+      "id": "obc5468",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "vme2jsf"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8i5x3f"
+    },
+    {
+      "type": "paragraph",
+      "id": "828rkgs"
+    },
+    {
+      "type": "paragraph",
+      "id": "uangdps"
+    }
+  ],
+  "enriched": true
+}

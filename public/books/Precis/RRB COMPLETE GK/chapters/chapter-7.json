@@ -1,0 +1,102 @@
+{
+  "id": "7jf8y67",
+  "title": "7. Earth's Moon",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "0rs4n4c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Average Distance",
+          "value": "384,400 km",
+          "icon": "info"
+        },
+        {
+          "label": "Orbital Period",
+          "value": "27.3 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Surface Gravity",
+          "value": "1/6th of Earth",
+          "icon": "check"
+        },
+        {
+          "label": "Diameter",
+          "value": "3,474 km",
+          "icon": "book"
+        }
+      ],
+      "id": "xz7yv22"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Moon is in synchronous rotation with Earth, always showing the same face to our planet.",
+      "id": "sw9zw7c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Moon is Earth's only natural satellite and the fifth-largest satellite in the Solar System.",
+        "It is in synchronous rotation with Earth, completing both its rotation and revolution in approximately 27.3 days.",
+        "The lack of a significant atmosphere results in extreme temperature swings and a crater-marked surface.",
+        "Gravitational forces between Earth and the Moon generate the primary force behind ocean tides."
+      ],
+      "id": "a5ubasa"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Perigee",
+        "Apogee"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Point in orbit closest to Earth",
+          "Point in orbit farthest from Earth"
+        ],
+        [
+          "Average Distance",
+          "Approx. 363,300 km",
+          "Approx. 405,500 km"
+        ],
+        [
+          "Apparent Size",
+          "Appears larger (Supermoon)",
+          "Appears smaller (Micromoon)"
+        ]
+      ],
+      "id": "n5ju1uk"
+    },
+    {
+      "type": "paragraph",
+      "id": "u4n6mv4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The scientific study of the Moon's physical features and geology is known as Selenology.",
+        "Light reflected from the Moon takes approximately 1.3 seconds to reach the Earth.",
+        "Due to tidal locking and libration, observers on Earth can see up to 59% of the lunar surface over time.",
+        "India's Chandrayaan-3 made history as the first mission to soft-land near the lunar South Pole."
+      ],
+      "id": "e8u1mul"
+    },
+    {
+      "type": "paragraph",
+      "id": "p2v5tj7"
+    },
+    {
+      "type": "paragraph",
+      "id": "tqzmft9"
+    }
+  ],
+  "enriched": true
+}

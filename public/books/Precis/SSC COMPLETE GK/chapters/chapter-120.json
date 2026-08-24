@@ -1,0 +1,267 @@
+{
+  "id": "rgpm6pl",
+  "title": "CHAPTER 10: EXCRETORY SYSTEM",
+  "order": 120,
+  "blocks": [
+    {
+      "id": "ec8vr6b",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Excretion – Concept and Importance"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Excretion is the biological process of removing metabolic nitrogenous wastes such as ammonia, urea, and uric acid from the body.",
+        "The human excretory system comprises a pair of kidneys, a pair of ureters, a urinary bladder, and a single urethra.",
+        "The nephron is the structural and functional unit of the kidney, consisting of the Bowman's capsule, Glomerulus, PCT, Loop of Henle, and DCT.",
+        "Urine formation occurs in three sequential steps: Glomerular Ultrafiltration, Selective Reabsorption, and Tubular Secretion.",
+        "Hormones like ADH (Vasopressin) and Aldosterone regulate water reabsorption and blood pressure through the RAAS mechanism."
+      ],
+      "id": "t984z35"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Functional Unit",
+          "value": "Nephron",
+          "icon": "info"
+        },
+        {
+          "label": "Nephrons per Kidney",
+          "value": "~1 Million",
+          "icon": "check"
+        },
+        {
+          "label": "Daily Filtrate",
+          "value": "180 Liters",
+          "icon": "clock"
+        },
+        {
+          "label": "Daily Urine Output",
+          "value": "1.5 Liters",
+          "icon": "award"
+        }
+      ],
+      "id": "gh85fc7"
+    },
+    {
+      "type": "paragraph",
+      "id": "4q35bs4"
+    },
+    {
+      "id": "s9jtaim",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Nitrogenous Wastes"
+    },
+    {
+      "type": "paragraph",
+      "id": "qj8eyjc"
+    },
+    {
+      "id": "zhkfd2a",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Human Excretory System – Organs"
+    },
+    {
+      "type": "paragraph",
+      "id": "ohcqab1"
+    },
+    {
+      "id": "84ytx89",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Kidney – External Structure"
+    },
+    {
+      "type": "paragraph",
+      "id": "iddu18j"
+    },
+    {
+      "id": "i10uohr",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Kidney – Internal Structure"
+    },
+    {
+      "type": "paragraph",
+      "id": "d47bwp6"
+    },
+    {
+      "id": "p60g14c",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Nephron – Functional Unit of Kidney"
+    },
+    {
+      "type": "paragraph",
+      "id": "6kbll8c"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The nephron is the structural and functional unit of the kidney responsible for filtering blood and forming urine.",
+      "id": "rj6v4r2"
+    },
+    {
+      "id": "zsgi94q",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Blood Supply to Nephron"
+    },
+    {
+      "type": "paragraph",
+      "id": "77czw52"
+    },
+    {
+      "id": "mkibjwu",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Formation of Urine – Ultrafiltration"
+    },
+    {
+      "type": "paragraph",
+      "id": "221xrpu"
+    },
+    {
+      "id": "uc4bh6z",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Reabsorption"
+    },
+    {
+      "type": "paragraph",
+      "id": "tvkttb8"
+    },
+    {
+      "id": "an71du6",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Tubular Secretion"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Ammonia (Ammonotelic)",
+        "Urea (Ureotelic)",
+        "Uric Acid (Uricotelic)"
+      ],
+      "rows": [
+        [
+          "Toxicity Level",
+          "Extremely High",
+          "Moderate",
+          "Very Low / Least Toxic"
+        ],
+        [
+          "Water Required for Excretion",
+          "Large volume required",
+          "Moderate volume required",
+          "Minimal volume (paste/pellet)"
+        ],
+        [
+          "Energy Requirement",
+          "Lowest energy required",
+          "Moderate energy required",
+          "Highest energy required"
+        ],
+        [
+          "Example Organisms",
+          "Aquatic insects, bony fishes",
+          "Humans, mammals, adult amphibians",
+          "Birds, reptiles, land snails, insects"
+        ]
+      ],
+      "id": "aqy9oyl"
+    },
+    {
+      "type": "paragraph",
+      "id": "czopzf0"
+    },
+    {
+      "id": "6fse22e",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Role of Loop of Henle"
+    },
+    {
+      "type": "paragraph",
+      "id": "d4izqps"
+    },
+    {
+      "id": "oy1l8xo",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Hormonal Regulation of Excretion"
+    },
+    {
+      "type": "paragraph",
+      "id": "wlgj35z"
+    },
+    {
+      "id": "izt5phy",
+      "type": "heading",
+      "level": 2,
+      "content": "13. Urinary Bladder and Micturition"
+    },
+    {
+      "type": "paragraph",
+      "id": "n77ztk3"
+    },
+    {
+      "id": "b3mcf71",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Excretion in Other Organisms"
+    },
+    {
+      "type": "paragraph",
+      "id": "qigx1kc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ammonotelic animals (bony fish) excrete toxic ammonia, Ureotelic (mammals) excrete urea, and Uricotelic (birds, reptiles) excrete insoluble uric acid.",
+        "Ultrafiltration takes place in the Malpighian corpuscle under high hydrostatic pressure in glomerular capillaries.",
+        "Deficiency of Antidiuretic Hormone (ADH) leads to Diabetes Insipidus, resulting in excessive loss of water through dilute urine.",
+        "Hemodialysis uses a cellophane membrane immersed in a dialyzing fluid to clear nitrogenous wastes from blood in patients with renal failure."
+      ],
+      "id": "6ic0gih"
+    },
+    {
+      "id": "ex4jngt",
+      "type": "heading",
+      "level": 2,
+      "content": "15. Disorders of Excretory System"
+    },
+    {
+      "type": "paragraph",
+      "id": "mf8808a"
+    },
+    {
+      "id": "ttwaz02",
+      "type": "heading",
+      "level": 2,
+      "content": "16. Dialysis and Kidney Transplant"
+    },
+    {
+      "type": "paragraph",
+      "id": "0642sl3"
+    },
+    {
+      "id": "3rvaysv",
+      "type": "heading",
+      "level": 2,
+      "content": "17. IMPORTANT FACTS – SSC FOCUS"
+    },
+    {
+      "type": "paragraph",
+      "id": "u3zmgj6"
+    }
+  ],
+  "enriched": true
+}

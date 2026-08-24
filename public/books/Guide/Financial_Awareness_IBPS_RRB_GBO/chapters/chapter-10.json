@@ -1,0 +1,220 @@
+{
+  "id": "xupfipo",
+  "title": "CHAPTER 10: FINTECH AND DIGITAL PAYMENTS",
+  "order": 10,
+  "blocks": [
+    {
+      "id": "wr16vmr",
+      "type": "heading",
+      "level": 2,
+      "content": "10.1 Digital Payment Systems in India"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Digital Payment Systems in India cover various retail payment and settlement mechanisms regulated by the RBI.",
+        "NPCI is an initiative of RBI and IBA operating retail payments and settlement systems under the Payment and Settlement Systems Act, 2007.",
+        "RBI maintains strict regulatory oversight on private cryptocurrencies while introducing the Central Bank Digital Currency (CBDC).",
+        "The Account Aggregator (AA) Framework enables secure, consent-based sharing of financial data across financial entities."
+      ],
+      "id": "eosjmra"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Regulator",
+          "value": "RBI",
+          "icon": "book"
+        },
+        {
+          "label": "Umbrella Organization",
+          "value": "NPCI",
+          "icon": "award"
+        },
+        {
+          "label": "Data Framework",
+          "value": "AA System",
+          "icon": "info"
+        },
+        {
+          "label": "Digital Fiat",
+          "value": "CBDC",
+          "icon": "check"
+        }
+      ],
+      "id": "rmeq8kd"
+    },
+    {
+      "id": "puwz30b",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "NPCI – National Payments Corporation of India",
+      "id": "n9nw1l2"
+    },
+    {
+      "type": "paragraph",
+      "id": "p3fmcz8"
+    },
+    {
+      "id": "talh3mi",
+      "type": "heading",
+      "level": 2,
+      "content": "10.2 NPCI – National Payments Corporation of India"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Cryptocurrency",
+        "CBDC (e-Rupee)"
+      ],
+      "rows": [
+        [
+          "Issuing Authority",
+          "Decentralized / Private Entities",
+          "Reserve Bank of India (RBI)"
+        ],
+        [
+          "Legal Tender Status",
+          "Not Recognized as Legal Tender",
+          "Sovereign Legal Tender"
+        ],
+        [
+          "Value Stability",
+          "Highly Volatile",
+          "Stable (1:1 with Physical Cash)"
+        ]
+      ],
+      "id": "oewyest"
+    },
+    {
+      "type": "paragraph",
+      "id": "nxfyyaz"
+    },
+    {
+      "id": "k69bs9c",
+      "type": "heading",
+      "level": 2,
+      "content": "10.3 Cryptocurrency & RBI's Stand"
+    },
+    {
+      "type": "paragraph",
+      "id": "p4c4836"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NPCI's key innovations including UPI, IMPS, NETC FASTag, and RuPay are frequently tested in competitive exams.",
+        "Account Aggregators act strictly as intermediaries for data transfer with consent and cannot store financial data.",
+        "Key legal distinction between decentralized cryptocurrencies (not legal tender) and CBDC (sovereign legal tender)."
+      ],
+      "id": "580p9ow"
+    },
+    {
+      "id": "os018p3",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "043dsat",
+      "type": "heading",
+      "level": 2,
+      "content": "10.4 Account Aggregator (AA) Framework"
+    },
+    {
+      "type": "paragraph",
+      "id": "4fvyg6g"
+    }
+  ],
+  "enriched": true
+}

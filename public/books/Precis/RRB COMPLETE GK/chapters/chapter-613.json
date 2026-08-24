@@ -1,0 +1,100 @@
+{
+  "id": "8ylsv9i",
+  "title": "10. Appeals Mechanism",
+  "order": 613,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "aamqljk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "No appeal shall be filed before the Appellate Authority unless the appellant has paid in full such part of the amount of tax, interest, fine, fee and penalty arising from the challenged order as is admitted by him, and a sum equal to ten per cent of the remaining amount of tax in dispute.",
+      "id": "gsmeo19"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Appellate Forum",
+        "Time Limit",
+        "Pre-Deposit",
+        "Grounds of Appeal"
+      ],
+      "rows": [
+        [
+          "First Appellate Authority",
+          "3 Months (Taxpayer) / 6 Months (Dept)",
+          "10% of disputed tax amount",
+          "Questions of Fact and Law"
+        ],
+        [
+          "Appellate Tribunal (GSTAT)",
+          "3 Months from order date",
+          "Additional 20% of disputed tax",
+          "Questions of Fact and Law"
+        ],
+        [
+          "High Court",
+          "180 Days from order date",
+          "As determined by HC rules",
+          "Substantial Question of Law only"
+        ],
+        [
+          "Supreme Court",
+          "90 Days from HC order",
+          "N/A",
+          "Order of HC or National Bench (Place of Supply)"
+        ]
+      ],
+      "id": "d7mi3e4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Appeal Limit",
+          "value": "3 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "Dept Review Limit",
+          "value": "6 Months",
+          "icon": "calendar"
+        },
+        {
+          "label": "1st Appeal Pre-Deposit",
+          "value": "10% Disputed Tax",
+          "icon": "check"
+        },
+        {
+          "label": "High Court Appeal Window",
+          "value": "180 Days",
+          "icon": "info"
+        }
+      ],
+      "id": "b5880l4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinction in Time Limits: Taxpayers get 3 months to appeal, while the Department gets 6 months for review application.",
+        "Condonation Period: The First Appellate Authority can condone a delay of up to a maximum of 1 month beyond the prescribed deadline if sufficient cause is shown.",
+        "Place of Supply Exception: Orders passed by the National or Regional Benches of GSTAT regarding 'Place of Supply' are directly appealable to the Supreme Court, bypassing the High Court."
+      ],
+      "id": "6d9ex9q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Any person aggrieved by any decision or order passed under the Act by an adjudicating authority may appeal to the Appellate Authority within three months from the date of communication of the order.",
+        "The Departmental Commissioner may review an adjudicating order and direct a subordinate officer to apply to the Appellate Authority within six months.",
+        "A mandatory pre-deposit of 100% of the admitted tax/penalty plus 10% of the disputed tax amount is required before filing the first appeal.",
+        "The Goods and Services Tax Appellate Tribunal (GSTAT) functions as the second appellate forum to hear appeals against orders passed by the First Appellate Authority.",
+        "Appeals to the High Court are maintainable only if the case involves a substantial question of law, except in Place of Supply disputes which go directly to the Supreme Court."
+      ],
+      "id": "efkyqi5"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,90 @@
+{
+  "id": "1irwwxy",
+  "title": "7. Removal of Judges (Impeachment)",
+  "order": 332,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sghyfq2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A judge of the Supreme Court can be removed from his office by an order of the President.",
+      "id": "4ifahcd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Lok Sabha Initiation",
+        "Rajya Sabha Initiation"
+      ],
+      "rows": [
+        [
+          "Minimum Signatures Required",
+          "100 Members",
+          "50 Members"
+        ],
+        [
+          "Presiding Officer Authority",
+          "Speaker of Lok Sabha",
+          "Chairman of Rajya Sabha"
+        ],
+        [
+          "Discretionary Power",
+          "Speaker may admit or refuse the motion",
+          "Chairman may admit or refuse the motion"
+        ]
+      ],
+      "id": "75ymqkb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 124(4)",
+          "icon": "book"
+        },
+        {
+          "label": "LS / RS Motion Threshold",
+          "value": "100 / 50 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Enquiry Committee",
+          "value": "3 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Governing Act",
+          "value": "1968 Act",
+          "icon": "calendar"
+        }
+      ],
+      "id": "5tttgai"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Grounds for removal are strictly limited to 'proved misbehaviour' or 'incapacity'—the term 'impeachment' is implicitly used in common parlance but explicitly specified in the Constitution only for the President.",
+        "The Speaker or Chairman has full discretion to either admit or refuse to admit the removal motion.",
+        "No judge of the Supreme Court of India has been successfully impeached to date."
+      ],
+      "id": "wc774xr"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A judge of the Supreme Court or High Court can be removed only on grounds of proved misbehaviour or incapacity.",
+        "The procedure for removal is regulated by the Judges (Inquiry) Act, 1968.",
+        "The removal motion must be signed by at least 100 members in the Lok Sabha or 50 members in the Rajya Sabha.",
+        "A three-member committee consisting of a Supreme Court judge, a High Court Chief Justice, and a distinguished jurist investigates the charges.",
+        "The removal address must be passed by each House of Parliament by a special majority and presented to the President in the same session."
+      ],
+      "id": "9n6dnrz"
+    }
+  ],
+  "enriched": true
+}

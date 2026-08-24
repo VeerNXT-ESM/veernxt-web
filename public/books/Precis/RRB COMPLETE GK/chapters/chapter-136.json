@@ -1,0 +1,103 @@
+{
+  "id": "2dczogm",
+  "title": "4. Movement of Glaciers",
+  "order": 136,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1a7i01p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Mechanisms",
+          "value": "2 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Brittle Zone Depth",
+          "value": "Top 50 m",
+          "icon": "info"
+        },
+        {
+          "label": "Average Speed",
+          "value": "1-2 m/day",
+          "icon": "clock"
+        },
+        {
+          "label": "Surge Speed Multiplier",
+          "value": "Up to 100x",
+          "icon": "award"
+        }
+      ],
+      "id": "w4w8i4q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Glaciers move under the force of gravity through internal plastic deformation and basal sliding.",
+      "id": "a7ebyb4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Basal Sliding",
+        "Internal Plastic Deformation"
+      ],
+      "rows": [
+        [
+          "Primary Mechanism",
+          "Glacier body slides over bedrock on a water film",
+          "Ice crystals slip and re-align under immense pressure"
+        ],
+        [
+          "Zone of Occurrence",
+          "Glacial sole / bedrock interface",
+          "Deep ice layers (below 50 m depth)"
+        ],
+        [
+          "Thermal Requirement",
+          "Dominant in warm-based (temperate) glaciers",
+          "Occurs in both cold-based and warm-based glaciers"
+        ],
+        [
+          "Frictional Effect",
+          "Controlled by basal water pressure and bed roughness",
+          "Controlled by ice temperature and cumulative ice mass pressure"
+        ]
+      ],
+      "id": "fdxwqgi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Glaciers move downward under the influence of gravity through internal deformation and basal sliding.",
+        "Internal plastic deformation occurs deep within the glacier where high pressure forces ice crystals to slide past one another.",
+        "Basal sliding is facilitated by thin layers of meltwater acting as a lubricant between the bedrock and the glacial base.",
+        "The rigid upper layer (top 50 meters) lacks sufficient pressure for plastic deformation, leading to fracture and crevasse formation.",
+        "Glacial velocity is highest at the center and surface due to reduced friction compared to the sides and bottom."
+      ],
+      "id": "82pvjnb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crevasses only form in the brittle zone above 50 meters depth; below this depth, plastic flow seals cracks.",
+        "Warm-based (temperate) glaciers move significantly faster than cold-based (polar) glaciers due to basal meltwater lubricant.",
+        "Glacial surges refer to short-lived events where movement speed increases up to 100 times normal rates."
+      ],
+      "id": "j3963tz"
+    },
+    {
+      "type": "paragraph",
+      "id": "vi6mv4m"
+    },
+    {
+      "type": "paragraph",
+      "id": "bp6dzq7"
+    }
+  ],
+  "enriched": true
+}

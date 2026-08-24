@@ -1,0 +1,116 @@
+{
+  "id": "bsi65h5",
+  "title": "5. Vertical Structure of Forests",
+  "order": 183,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "8evj44q"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Stratification Layers",
+          "value": "4 Main Strata",
+          "icon": "book"
+        },
+        {
+          "label": "Canopy Light Absorption",
+          "value": "80-90%",
+          "icon": "info"
+        },
+        {
+          "label": "Emergent Layer Height",
+          "value": "40-70 Meters",
+          "icon": "check"
+        },
+        {
+          "label": "Forest Floor Light",
+          "value": "< 2%",
+          "icon": "clock"
+        }
+      ],
+      "id": "dvfd268"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Vertical stratification in a forest maximizes light capture and creates distinct ecological niches across varying heights.",
+      "id": "j35oa2a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Vertical stratification is the structural arrangement of forest vegetation into distinct horizontal layers driven by light gradient.",
+        "The Emergent Layer consists of giant trees towering above the forest crown, exposed to strong winds and intense solar radiation.",
+        "The Canopy Layer forms a continuous umbrella-like roof where the highest biodiversity and photosynthetic activity occur.",
+        "The Understory Layer receives limited filtered sunlight and is dominated by shade-tolerant shrubs, saplings, and epiphytes.",
+        "The Forest Floor is characterized by high humidity, low light (<2%), and rapid decomposition of organic matter by soil organisms."
+      ],
+      "id": "rlsrioy"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Layer",
+        "Height Range",
+        "Light Availability",
+        "Dominant Life Forms"
+      ],
+      "rows": [
+        [
+          "Emergent Layer",
+          "> 40 meters",
+          "Full Sunlight (100%)",
+          "Giant trees, eagles, bats, broad-winged birds"
+        ],
+        [
+          "Canopy Layer",
+          "20 - 40 meters",
+          "High (80-90% absorbed)",
+          "Dense tree crowns, arboreal mammals, birds, epiphytes"
+        ],
+        [
+          "Understory Layer",
+          "2 - 20 meters",
+          "Low (2-15%)",
+          "Shade-tolerant shrubs, saplings, orchids, amphibians"
+        ],
+        [
+          "Forest Floor",
+          "0 - 2 meters",
+          "Very Low (< 2%)",
+          "Fungi, decomposers, insects, fallen leaf litter"
+        ]
+      ],
+      "id": "d7m1u8c"
+    },
+    {
+      "type": "paragraph",
+      "id": "vsjkbi5"
+    },
+    {
+      "type": "paragraph",
+      "id": "nus7so7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sequence of layers from top to bottom: Emergent Layer -> Canopy -> Understory -> Forest Floor.",
+        "Canopy layer houses over 50% of all forest plant and animal species due to maximum productivity.",
+        "Light intensity decreases exponentially from the canopy to the forest floor, driving physiological adaptations in understory vegetation."
+      ],
+      "id": "pwd8y1l"
+    },
+    {
+      "type": "paragraph",
+      "id": "j047cp6"
+    },
+    {
+      "type": "paragraph",
+      "id": "3tx21h4"
+    }
+  ],
+  "enriched": true
+}

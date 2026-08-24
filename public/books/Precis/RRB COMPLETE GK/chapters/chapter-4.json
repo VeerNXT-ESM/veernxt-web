@@ -1,0 +1,130 @@
+{
+  "id": "sd0sgt4",
+  "title": "Untitled Chapter",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zmu854v"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Planets",
+          "value": "8",
+          "icon": "book"
+        },
+        {
+          "label": "Closest Planet",
+          "value": "Mercury",
+          "icon": "award"
+        },
+        {
+          "label": "Farthest Planet",
+          "value": "Neptune",
+          "icon": "info"
+        },
+        {
+          "label": "Topic Priority",
+          "value": "High",
+          "icon": "check"
+        }
+      ],
+      "id": "fkxc5tx"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Order of Planets from the Sun (MEMORY FAVORITE)",
+      "id": "51g7ar9"
+    },
+    {
+      "id": "hp19mnx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lw5iabo",
+      "type": "heading",
+      "level": 2,
+      "content": "Order of Planets from the Sun (MEMORY FAVORITE)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The exact order of planets from the Sun is Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+        "Mercury, Venus, Earth, and Mars are categorized as inner/terrestrial planets.",
+        "Jupiter, Saturn, Uranus, and Neptune constitute the outer planets (gas and ice giants)."
+      ],
+      "id": "3oui6nb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the correct sequence of planets from nearest to farthest from the Sun.",
+        "Use popular mnemonics such as 'My Very Educated Mother Just Served Us Noodles' for quick recall during exams."
+      ],
+      "id": "k48dkoe"
+    },
+    {
+      "type": "paragraph",
+      "id": "74jjynp"
+    },
+    {
+      "type": "paragraph",
+      "id": "h39g3xw"
+    }
+  ],
+  "enriched": true
+}

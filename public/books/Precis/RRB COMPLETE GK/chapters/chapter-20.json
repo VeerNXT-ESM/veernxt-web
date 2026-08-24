@@ -1,0 +1,127 @@
+{
+  "id": "42rcvop",
+  "title": "7. Perihelion vs Aphelion",
+  "order": 20,
+  "blocks": [
+    {
+      "id": "zat3ab2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "At Perihelion, Earth is closest to the Sun at about 147 million kilometers on January 3, whereas at Aphelion, it is farthest at about 152 million kilometers on July 4.",
+      "id": "3csbzbs"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Perihelion Distance",
+          "value": "147 Million km",
+          "icon": "info"
+        },
+        {
+          "label": "Perihelion Date",
+          "value": "January 3",
+          "icon": "calendar"
+        },
+        {
+          "label": "Aphelion Distance",
+          "value": "152 Million km",
+          "icon": "info"
+        },
+        {
+          "label": "Aphelion Date",
+          "value": "July 4",
+          "icon": "calendar"
+        }
+      ],
+      "id": "27cl2f4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Perihelion",
+        "Aphelion"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Point nearest to the Sun",
+          "Point farthest from the Sun"
+        ],
+        [
+          "Approximate Date",
+          "January 3",
+          "July 4"
+        ],
+        [
+          "Distance from Sun",
+          "~147 million km",
+          "~152 million km"
+        ],
+        [
+          "Orbital Velocity",
+          "Maximum (Fastest)",
+          "Minimum (Slowest)"
+        ],
+        [
+          "Etymology",
+          "Peri (near) + Helios (sun)",
+          "Apo (away) + Helios (sun)"
+        ]
+      ],
+      "id": "ue30t77"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Perihelion refers to the position in Earth's elliptical orbit where it is nearest to the Sun.",
+        "Aphelion refers to the position in Earth's elliptical orbit where it is farthest from the Sun.",
+        "Earth reaches Perihelion around January 3 at approximately 147 million kilometers.",
+        "Earth reaches Aphelion around July 4 at approximately 152 million kilometers.",
+        "Earth's orbital speed is highest at Perihelion and lowest at Aphelion due to gravitational force variations."
+      ],
+      "id": "0wcfzjo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distance variation during Perihelion and Aphelion does not cause seasons; axial tilt (23.5°) causes seasonal change.",
+        "Counterintuitively, Perihelion occurs during the Northern Hemisphere's winter (January 3).",
+        "According to Kepler's Second Law of Planetary Motion, Earth moves fastest in its orbit during Perihelion."
+      ],
+      "id": "gldo5h3"
+    },
+    {
+      "type": "paragraph",
+      "id": "ym7on0t"
+    }
+  ],
+  "enriched": true
+}

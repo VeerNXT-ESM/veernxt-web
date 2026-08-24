@@ -1,0 +1,88 @@
+{
+  "id": "lr46zmk",
+  "title": "Chapter 13: Coastal Landforms (Marine Geomorphology )",
+  "order": 154,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "iutquzx"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Coastal landforms are dynamic features continuously reshaped by the relentless action of ocean waves, tides, currents, and tectonic movements.",
+      "id": "u90v6sf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature Type",
+        "Primary Process",
+        "Key Examples",
+        "Formation Environment"
+      ],
+      "rows": [
+        [
+          "Erosional Landforms",
+          "Hydraulic action, abrasion, and attrition by high-energy waves",
+          "Cliffs, Wave-cut platforms, Sea Caves, Arches, Stacks, Stumps",
+          "High-energy, rocky coastlines with strong wave action"
+        ],
+        [
+          "Depositional Landforms",
+          "Accumulation of sediments carried by waves and longshore drift",
+          "Beaches, Bars, Spits, Barrier Islands, Tombolos, Lagoons",
+          "Low-energy coastlines or shallow sheltered waters"
+        ]
+      ],
+      "id": "ps735i0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Process",
+          "value": "Wave Action",
+          "icon": "info"
+        },
+        {
+          "label": "Erosional Features",
+          "value": "Cliffs & Stacks",
+          "icon": "check"
+        },
+        {
+          "label": "Depositional Features",
+          "value": "Spits & Tombolos",
+          "icon": "award"
+        },
+        {
+          "label": "Coastal Types",
+          "value": "Emergent & Submergent",
+          "icon": "book"
+        }
+      ],
+      "id": "yqno4mi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "A tombolo is a depositional landform formed when a sand ridge or spit connects an island to the mainland.",
+        "Ria coasts are formed by the submergence of river valleys, whereas Fiord/Fjord coasts are formed by the submergence of glaciated valleys.",
+        "Sequence of erosional landforms evolution: Sea Cave -> Sea Arch -> Sea Stack -> Sea Stump."
+      ],
+      "id": "9gzeupg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Coastal landforms are dynamically shaped by wave erosion, longshore drift, tidal fluctuations, and tectonic movements.",
+        "Marine erosional landforms include sea cliffs, wave-cut platforms, sea caves, sea arches, stacks, and stumps.",
+        "Marine depositional landforms comprise beaches, sand bars, barrier islands, spits, lagoons, and tombolos.",
+        "Submergent coastlines result from rising sea levels or tectonic subsidence, forming Ria coasts (drowned river valleys) and Fiord coasts (drowned glacial valleys).",
+        "Emergent coastlines result from falling sea levels or land uplift, featuring raised wave-cut terraces and cliffed coastlines."
+      ],
+      "id": "j4cdiaa"
+    }
+  ],
+  "enriched": true
+}

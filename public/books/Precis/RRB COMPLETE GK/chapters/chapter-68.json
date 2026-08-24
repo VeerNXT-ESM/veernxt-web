@@ -1,0 +1,125 @@
+{
+  "id": "oqdiiyp",
+  "title": "Types of Sedimentary Rocks",
+  "order": 68,
+  "blocks": [
+    {
+      "id": "bv3x1rj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sedimentary rocks cover nearly 75 percent of the Earth's continental surface, preserving invaluable records of ancient environments and prehistoric life.",
+      "id": "i45c36e"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Rock",
+        "Formation Mechanism",
+        "Key Examples"
+      ],
+      "rows": [
+        [
+          "Clastic (Mechanically Formed)",
+          "Compaction and cementation of physical rock fragments derived from weathering",
+          "Sandstone, Shale, Conglomerate, Breccia, Siltstone"
+        ],
+        [
+          "Chemically Formed",
+          "Direct chemical precipitation of dissolved minerals as water evaporates",
+          "Rock Salt (Halite), Gypsum, Flint, Potash, Dolomite"
+        ],
+        [
+          "Organically Formed",
+          "Accumulation and thermal conversion of animal bones/shells or plant matter",
+          "Coal, Chalk, Fossiliferous Limestone, Peat, Lignite"
+        ]
+      ],
+      "id": "fi1cwgl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Surface Coverage",
+          "value": "~75%",
+          "icon": "globe"
+        },
+        {
+          "label": "Major Types",
+          "value": "3 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Core Process",
+          "value": "Lithification",
+          "icon": "check"
+        },
+        {
+          "label": "Fossil Preservation",
+          "value": "Primary Source",
+          "icon": "award"
+        }
+      ],
+      "id": "g77ssbq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fossils are exclusively preserved in sedimentary rocks; extreme heat and pressure in igneous and metamorphic rocks destroy organic remains.",
+        "Differentiate Conglomerate (composed of rounded fragments due to transport action) from Breccia (composed of sharp, angular fragments).",
+        "Limestone can be classified as both organic (fossiliferous chalk/coral reef) and chemical (travertine) based on its environmental origin.",
+        "Remember the sequence of coal formation by increasing carbon content and heat value: Peat -> Lignite -> Bituminous -> Anthracite."
+      ],
+      "id": "mcf9xqw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Clastic sedimentary rocks are formed from the accumulation, compaction, and cementation of pre-existing rock fragments and mineral grains.",
+        "Chemically formed sedimentary rocks originate from the precipitation of dissolved minerals out of water solutions during evaporation.",
+        "Organically formed sedimentary rocks develop from the accumulated debris of dead plants and marine organisms over geological time scales.",
+        "Lithification is the dual process of compaction under heavy pressure and cementation by precipitating minerals that converts loose sediment into solid rock.",
+        "Sedimentary rocks are uniquely characterized by stratification (layering) and are the primary source of fossil evidence on Earth."
+      ],
+      "id": "x845in1"
+    }
+  ],
+  "enriched": true
+}

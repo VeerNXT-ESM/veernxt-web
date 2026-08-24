@@ -1,0 +1,399 @@
+{
+  "id": "thc7d3a",
+  "title": "CHAPTER 1: UNITS AND MEASUREMENTS",
+  "order": 94,
+  "blocks": [
+    {
+      "id": "v3xqtme",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Base Units",
+          "value": "7 Fundamental",
+          "icon": "book"
+        },
+        {
+          "label": "Supplementary Units",
+          "value": "2 Units",
+          "icon": "check"
+        },
+        {
+          "label": "Standard Systems",
+          "value": "CGS, MKS, FPS",
+          "icon": "info"
+        },
+        {
+          "label": "SI System Adopted",
+          "value": "1960",
+          "icon": "calendar"
+        }
+      ],
+      "id": "2lpgstn"
+    },
+    {
+      "type": "paragraph",
+      "id": "71ej987"
+    },
+    {
+      "type": "paragraph",
+      "id": "5jg5anq"
+    },
+    {
+      "type": "paragraph",
+      "id": "gl6ie3n"
+    },
+    {
+      "id": "1h7rgeg",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "54h8xgl",
+      "type": "heading",
+      "level": 2,
+      "content": "PHYSICAL QUANTITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Fundamental quantities (Mass, Length, Time, Temperature, Electric Current, Luminous Intensity, Amount of Substance) are independent of other physical quantities.",
+        "Derived quantities such as velocity, acceleration, force, and density are expressed in terms of fundamental quantities.",
+        "The SI system consists of 7 base units and 2 supplementary units (Radian for plane angle and Steradian for solid angle).",
+        "Dimensional formulas represent physical quantities in terms of basic dimensions [M], [L], and [T].",
+        "Density is defined as mass per unit volume and has the SI unit kg/m³."
+      ],
+      "id": "ykhs9wv"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ldrdft"
+    },
+    {
+      "type": "paragraph",
+      "id": "uobgdso"
+    },
+    {
+      "type": "paragraph",
+      "id": "zmfkd9f"
+    },
+    {
+      "type": "paragraph",
+      "id": "r0uwmvt"
+    },
+    {
+      "id": "4014rdt",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF PHYSICAL QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "e523ul7"
+    },
+    {
+      "id": "x369os9",
+      "type": "numberedList",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "42porqg",
+      "type": "heading",
+      "level": 3,
+      "content": "FUNDAMENTAL QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "cfaokan"
+    },
+    {
+      "type": "paragraph",
+      "id": "1yn9q16"
+    },
+    {
+      "id": "xicxil3",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "hcaautq"
+    },
+    {
+      "type": "paragraph",
+      "id": "icwa2ii"
+    },
+    {
+      "id": "gbyurdv",
+      "type": "heading",
+      "level": 3,
+      "content": "DERIVED QUANTITIES"
+    },
+    {
+      "type": "paragraph",
+      "id": "heiob6p"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cow3bga"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Physical quantities are those quantities which can be measured directly or indirectly and in terms of which the laws of physics can be expressed.",
+      "id": "piw0mqa"
+    },
+    {
+      "type": "paragraph",
+      "id": "toggdt2"
+    },
+    {
+      "type": "paragraph",
+      "id": "3bb0bek"
+    },
+    {
+      "id": "f3lkxk8",
+      "type": "heading",
+      "level": 2,
+      "content": "SI SYSTEM OF UNITS"
+    },
+    {
+      "type": "paragraph",
+      "id": "2yzo2o4"
+    },
+    {
+      "type": "paragraph",
+      "id": "elz697a"
+    },
+    {
+      "type": "paragraph",
+      "id": "58ymogk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "715zqya"
+    },
+    {
+      "id": "6kkb8kb",
+      "type": "heading",
+      "level": 2,
+      "content": "CONVERSION OF UNITS"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ewbin8u"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w8swaz2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qfg4egd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5cwmo5l"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fundamental Quantities",
+        "Derived Quantities"
+      ],
+      "rows": [
+        [
+          "Dependency",
+          "Independent of other quantities",
+          "Derived from fundamental quantities"
+        ],
+        [
+          "SI Count",
+          "7 base quantities",
+          "Infinite number of combinations"
+        ],
+        [
+          "Examples",
+          "Length (m), Mass (kg), Time (s)",
+          "Velocity (m/s), Force (N), Density (kg/m³)"
+        ],
+        [
+          "Measurement Unit",
+          "Base Units",
+          "Derived Units"
+        ]
+      ],
+      "id": "zdtb47n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "of6hrdq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "te6au2m"
+    },
+    {
+      "id": "26qqe1q",
+      "type": "heading",
+      "level": 2,
+      "content": "DENSITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "i3082ft"
+    },
+    {
+      "type": "paragraph",
+      "id": "tek7swo"
+    },
+    {
+      "type": "paragraph",
+      "id": "1tctt0t"
+    },
+    {
+      "type": "paragraph",
+      "id": "f894jbe"
+    },
+    {
+      "type": "paragraph",
+      "id": "67jmtlw"
+    },
+    {
+      "id": "25urnwp",
+      "type": "heading",
+      "level": 2,
+      "content": "DIMENSIONAL FORMULA"
+    },
+    {
+      "type": "paragraph",
+      "id": "w2nbxr7"
+    },
+    {
+      "type": "paragraph",
+      "id": "hvf8mjf"
+    },
+    {
+      "type": "paragraph",
+      "id": "5lq6m91"
+    },
+    {
+      "type": "paragraph",
+      "id": "gxjltb6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d4vc0db"
+    },
+    {
+      "id": "jtfrzhg",
+      "type": "heading",
+      "level": 2,
+      "content": "USES OF DIMENSIONAL FORMULA"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Light year, Astronomical Unit (AU), and Parsec are units of length/distance, not time (1 Parsec = 3.26 Light Years).",
+        "Radian measures plane angles while Steradian measures solid angles.",
+        "Density of pure water is maximum at 4°C (1000 kg/m³ or 1 g/cm³).",
+        "Dimensional analysis cannot be used to determine dimensionless constants or trigonometric functions."
+      ],
+      "id": "ivk3opa"
+    },
+    {
+      "id": "hrfumih",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "svh8a9u",
+      "type": "heading",
+      "level": 2,
+      "content": "EXAM IMPORTANT QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "s18rbw8"
+    },
+    {
+      "type": "paragraph",
+      "id": "cbhvy0t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "odd4ilt"
+    },
+    {
+      "type": "paragraph",
+      "id": "4z9dv9d"
+    },
+    {
+      "type": "paragraph",
+      "id": "zpgo8sm"
+    },
+    {
+      "type": "paragraph",
+      "id": "y5xso5u"
+    },
+    {
+      "id": "qyn3r3f",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "6cr11oq",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

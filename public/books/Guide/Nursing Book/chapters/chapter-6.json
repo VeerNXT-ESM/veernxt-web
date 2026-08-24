@@ -1,0 +1,574 @@
+{
+  "id": "2vaupw2",
+  "title": "Chapter 6 – Genetics",
+  "order": 6,
+  "blocks": [
+    {
+      "id": "5fbk36v",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Gregor Mendel is recognized as the Father of Genetics for his pioneering work on pea plants (Pisum sativum).",
+        "Human somatic cells contain 23 pairs of chromosomes, consisting of 22 pairs of autosomes and 1 pair of sex chromosomes.",
+        "DNA carries genetic information in a double-helix structure containing Adenine, Thymine, Guanine, and Cytosine.",
+        "Mendel proposed three fundamental principles: Law of Dominance, Law of Segregation, and Law of Independent Assortment.",
+        "Gene mutations can be point mutations or frameshift mutations, leading to genetic disorders like Sickle Cell Anemia."
+      ],
+      "id": "s0zru0c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Human Chromosomes",
+          "value": "46 (23 Pairs)",
+          "icon": "info"
+        },
+        {
+          "label": "Mendelian Laws",
+          "value": "3 Laws",
+          "icon": "book"
+        },
+        {
+          "label": "Double Helix Model",
+          "value": "1953",
+          "icon": "calendar"
+        },
+        {
+          "label": "Father of Genetics",
+          "value": "Gregor Mendel",
+          "icon": "award"
+        }
+      ],
+      "id": "dquk9m2"
+    },
+    {
+      "type": "paragraph",
+      "id": "lrml6jr"
+    },
+    {
+      "id": "f9nvmdj",
+      "type": "heading",
+      "level": 2,
+      "content": "Basic Genetic Terminology"
+    },
+    {
+      "id": "7bx0xdz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1ouy0y6",
+      "type": "heading",
+      "level": 2,
+      "content": "Chromosomes"
+    },
+    {
+      "type": "paragraph",
+      "id": "tddn6l2"
+    },
+    {
+      "id": "pptez52",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "54lka9u",
+      "type": "heading",
+      "level": 2,
+      "content": "DNA and RNA"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Genetics is the study of heredity and the variation of inherited characteristics in living organisms.",
+      "id": "y59lx4f"
+    },
+    {
+      "id": "ff7z6kl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0zbjho9",
+      "type": "heading",
+      "level": 2,
+      "content": "Mendel's Laws of Inheritance"
+    },
+    {
+      "type": "paragraph",
+      "id": "swg8dxi"
+    },
+    {
+      "id": "zdx0k4f",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "td6bvu5",
+      "type": "heading",
+      "level": 2,
+      "content": "Patterns of Genetic Inheritance"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "DNA",
+        "RNA"
+      ],
+      "rows": [
+        [
+          "Sugar",
+          "Deoxyribose",
+          "Ribose"
+        ],
+        [
+          "Strand Count",
+          "Double-stranded",
+          "Single-stranded"
+        ],
+        [
+          "Pyrimidines",
+          "Cytosine and Thymine",
+          "Cytosine and Uracil"
+        ],
+        [
+          "Primary Function",
+          "Long-term storage of genetic code",
+          "Protein synthesis and gene regulation"
+        ]
+      ],
+      "id": "z2pw420"
+    },
+    {
+      "id": "bxeuzg1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg3635x",
+      "type": "heading",
+      "level": 2,
+      "content": "Genetic Mutations"
+    },
+    {
+      "type": "paragraph",
+      "id": "vd37tcy"
+    },
+    {
+      "id": "x3l71ab",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v8uv0oh",
+      "type": "heading",
+      "level": 2,
+      "content": "Common Genetic Disorders"
+    },
+    {
+      "id": "sya24gb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Down Syndrome is caused by Trisomy 21, resulting in 47 chromosomes in somatic cells.",
+        "Uracil replaces Thymine in RNA molecules.",
+        "Haemophilia and Colour Blindness are classic examples of Sex-Linked Recessive disorders."
+      ],
+      "id": "3oruait"
+    },
+    {
+      "id": "e9jjybh",
+      "type": "heading",
+      "level": 2,
+      "content": "Genetic Testing and Counseling"
+    },
+    {
+      "type": "paragraph",
+      "id": "w3u5kwj"
+    },
+    {
+      "id": "p6dpbko",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mnm577f",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "hnlmk9g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

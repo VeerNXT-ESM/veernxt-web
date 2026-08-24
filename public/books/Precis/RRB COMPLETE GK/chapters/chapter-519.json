@@ -1,0 +1,90 @@
+{
+  "id": "pe1d0tf",
+  "title": "State Consent (VERY FREQUENTLY ASKED)",
+  "order": 519,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "j8pbfli"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Section 6 of the DSPE Act, 1946 mandates that the Delhi Special Police Establishment cannot exercise powers and jurisdiction in any area in a State without the consent of the Government of that State.",
+      "id": "pp8cvv0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "General Consent",
+        "Specific Consent"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Blanket approval granted by states for seamless investigation of corruption cases.",
+          "Case-by-case permission required prior to registering an investigation."
+        ],
+        [
+          "Operational Efficiency",
+          "High efficiency; officers can conduct operations without prior administrative delay.",
+          "Lower efficiency; approval must be sought individually for each new case or officer."
+        ],
+        [
+          "Impact of Revocation",
+          "Stops registration of fresh cases without explicit permission; pending cases continue unaffected.",
+          "Does not apply since consent is granted individually on a per-case basis."
+        ]
+      ],
+      "id": "34yowla"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "DSPE Act Provision",
+          "value": "Section 6",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Amendment",
+          "value": "Article 368(2)",
+          "icon": "award"
+        },
+        {
+          "label": "Federal Ratification Required",
+          "value": "50% States",
+          "icon": "check"
+        },
+        {
+          "label": "State Boundary Views",
+          "value": "Article 3 (Non-binding)",
+          "icon": "info"
+        }
+      ],
+      "id": "hd8c548"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Withdrawal of general consent by a state does not affect existing, previously registered CBI cases, nor does it restrict Supreme Court or High Court orders directing CBI inquiries.",
+        "Constitutional amendments amending federal provisions require state ratification by a SIMPLE majority, not a special majority in state legislatures.",
+        "Parliament can re-name, alter boundaries, or create new states under Article 3 even if the affected state legislature opposes the bill."
+      ],
+      "id": "r2bd1zv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Section 6 of the Delhi Special Police Establishment (DSPE) Act, 1946 mandates State Government consent for CBI investigations within state jurisdiction.",
+        "General Consent permits the CBI to investigate corruption and crime seamlessly without seeking individual approvals for each case.",
+        "Withdrawal of General Consent forces the CBI to obtain specific case-by-case approval before registering fresh cases in that state.",
+        "Constitutional amendments affecting federal structures under Article 368 require ratification by at least 50% of state legislatures via simple majority.",
+        "Under Article 3, while the President refers state reorganization bills to state legislatures for views, state consent is not binding on Parliament."
+      ],
+      "id": "xxpsjec"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,135 @@
+{
+  "id": "d04mot0",
+  "title": "Comparison: TRAI vs RBI vs SEBI",
+  "order": 583,
+  "blocks": [
+    {
+      "id": "9si53fh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regulatory bodies like RBI, SEBI, and TRAI serve as autonomous market watchdogs ensuring stability, fair trade, and consumer protection across key sectors of the Indian economy.",
+      "id": "hemsywz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Regulatory Body",
+        "Established",
+        "Governing Act",
+        "Primary Sector",
+        "Headquarters"
+      ],
+      "rows": [
+        [
+          "RBI",
+          "1935",
+          "RBI Act, 1934",
+          "Banking & Monetary Policy",
+          "Mumbai"
+        ],
+        [
+          "SEBI",
+          "1992 (Statutory)",
+          "SEBI Act, 1992",
+          "Capital & Securities Market",
+          "Mumbai"
+        ],
+        [
+          "TRAI",
+          "1997",
+          "TRAI Act, 1997",
+          "Telecommunications",
+          "New Delhi"
+        ]
+      ],
+      "id": "50t8c2f"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI Established",
+          "value": "1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "SEBI Statutory Status",
+          "value": "1992",
+          "icon": "award"
+        },
+        {
+          "label": "TRAI Act Year",
+          "value": "1997",
+          "icon": "book"
+        },
+        {
+          "label": "Regulated Domains",
+          "value": "3 Key Sectors",
+          "icon": "check"
+        }
+      ],
+      "id": "228rn1c"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "RBI was established on the recommendation of the Hilton Young Commission in 1935 and nationalised in 1949.",
+        "SEBI was established as a non-statutory body in 1988 before gaining full statutory powers via the SEBI Act in 1992.",
+        "TRAI's adjudicatory powers were separated and transferred to TDSAT through an amendment in the year 2000."
+      ],
+      "id": "d3jkh0q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RBI acts as the central bank regulating monetary policy, currency issuance, and banking operations under the RBI Act, 1934.",
+        "SEBI protects investor interests and regulates capital and securities markets under the SEBI Act, 1992.",
+        "TRAI regulates telecom services, tariffs, and spectrum management in India under the TRAI Act, 1997.",
+        "RBI and SEBI operate from Mumbai, whereas TRAI is headquartered in New Delhi."
+      ],
+      "id": "gv2wz16"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,105 @@
+{
+  "id": "roj2irs",
+  "title": "13. Suspension of Fundamental Rights",
+  "order": 280,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "l5anxxm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Article 358",
+          "value": "Suspends Art 19",
+          "icon": "book"
+        },
+        {
+          "label": "Article 359",
+          "value": "Suspends Enforcement",
+          "icon": "info"
+        },
+        {
+          "label": "Protected Rights",
+          "value": "Articles 20 & 21",
+          "icon": "check"
+        },
+        {
+          "label": "Key Amendment",
+          "value": "44th Amendment, 1978",
+          "icon": "calendar"
+        }
+      ],
+      "id": "9j2fbpj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The right to move any court for the enforcement of Fundamental Rights conferred by Articles 20 and 21 cannot be suspended even during a National Emergency.",
+      "id": "7r443cf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Article 358",
+        "Article 359"
+      ],
+      "rows": [
+        [
+          "Scope",
+          "Confined strictly to Article 19",
+          "Extends to rights specified in Presidential Order (except Arts 20 & 21)"
+        ],
+        [
+          "Automaticity",
+          "Operates automatically upon emergency proclamation",
+          "Requires a specific order passed by the President"
+        ],
+        [
+          "Grounds",
+          "External Emergency only (War or External Aggression)",
+          "Both External Emergency and Internal Emergency"
+        ],
+        [
+          "Territorial Extent",
+          "Extends to the entire country automatically",
+          "May extend to the whole or any specific part of India"
+        ]
+      ],
+      "id": "79o630f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 358 automatically suspends the six Fundamental Rights under Article 19 upon declaration of a National Emergency on grounds of war or external aggression.",
+        "Article 359 authorizes the President to suspend the right to move any court for the enforcement of specified Fundamental Rights during an emergency.",
+        "The 44th Constitutional Amendment Act of 1978 ensured that Articles 20 and 21 remain non-suspendable under any circumstances.",
+        "Article 358 applies automatically to the whole of India, whereas Article 359 requires a Presidential Order and can apply to the whole or any part of the country."
+      ],
+      "id": "xsn111d"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Articles 20 and 21 are absolute exceptions and can NEVER be suspended during a National Emergency.",
+        "Article 358 applies strictly to External Emergencies (War/External Aggression), excluding Internal Emergencies (Armed Rebellion).",
+        "Article 358 suspends the right itself under Article 19, whereas Article 359 suspends only the judicial remedy/enforcement of specified rights, not the rights themselves."
+      ],
+      "id": "ulv87c1"
+    },
+    {
+      "id": "lnvwc6k",
+      "type": "numberedList",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9243ckd"
+    }
+  ],
+  "enriched": true
+}

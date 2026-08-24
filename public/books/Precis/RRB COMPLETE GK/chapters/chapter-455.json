@@ -1,0 +1,141 @@
+{
+  "id": "x39dox5",
+  "title": "Finance Commission vs NITI Aayog",
+  "order": 455,
+  "blocks": [
+    {
+      "id": "wupvzed",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Finance Commission is a constitutional body under Article 280, whereas NITI Aayog is an extra-constitutional body formed via an executive resolution.",
+      "id": "dv4zb09"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Finance Commission",
+        "NITI Aayog"
+      ],
+      "rows": [
+        [
+          "Nature of Body",
+          "Constitutional Body (Article 280)",
+          "Non-Constitutional, Executive Body"
+        ],
+        [
+          "Establishment",
+          "Constituted by the President every 5 years",
+          "Established by Cabinet Resolution on Jan 1, 2015"
+        ],
+        [
+          "Primary Function",
+          "Recommends tax devolution and grants-in-aid",
+          "Functions as a policy think tank for long-term strategies"
+        ],
+        [
+          "Financial Powers",
+          "Has powers to recommend distribution of revenues",
+          "No powers to allocate funds to states"
+        ],
+        [
+          "Approach",
+          "Quasi-judicial allocation framework",
+          "Bottom-up approach promoting cooperative federalism"
+        ]
+      ],
+      "id": "pyxhcr8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FC Constitutional Status",
+          "value": "Article 280",
+          "icon": "book"
+        },
+        {
+          "label": "NITI Aayog Established",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "FC Tenure Period",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "NITI Body Type",
+          "value": "Extra-Constitutional",
+          "icon": "info"
+        }
+      ],
+      "id": "jf3jnss"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Finance Commission is a constitutional and quasi-judicial body (Article 280), whereas NITI Aayog is a non-statutory, non-constitutional body.",
+        "NITI Aayog has no mandate or power to allocate funds to state governments; financial transfers are recommended by the Finance Commission.",
+        "The Finance Commission submits its recommendations directly to the President of India."
+      ],
+      "id": "6zimfmj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Finance Commission is a constitutional body established under Article 280 of the Constitution of India.",
+        "NITI Aayog (National Institution for Transforming India) was formed via an executive resolution on January 1, 2015, replacing the Planning Commission.",
+        "The Finance Commission determines the distribution of net proceeds of taxes between the Union and the States.",
+        "NITI Aayog functions primarily as a policy think tank fostering cooperative federalism and does not possess financial allocation powers."
+      ],
+      "id": "evt4eps"
+    }
+  ],
+  "enriched": true
+}

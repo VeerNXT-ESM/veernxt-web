@@ -1,0 +1,90 @@
+{
+  "id": "pzis91s",
+  "title": "Chapter 23: Securities and Exchange Board of India (SEBI)",
+  "order": 547,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ayriva1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The primary objective of the Securities and Exchange Board of India is to protect the interests of investors in securities and to promote the development of, and to regulate, the securities market.",
+      "id": "d4v3zk3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Pre-1992 SEBI (Non-Statutory)",
+        "Post-1992 SEBI (Statutory Body)"
+      ],
+      "rows": [
+        [
+          "Legal Status",
+          "Created via executive resolution",
+          "Statutory body established under SEBI Act, 1992"
+        ],
+        [
+          "Enforcement Power",
+          "Advisory role; lacked statutory power to penalize",
+          "Full powers to investigate, issue summons, and impose penalties"
+        ],
+        [
+          "Appellate Authority",
+          "Ministry of Finance",
+          "Securities Appellate Tribunal (SAT)"
+        ]
+      ],
+      "id": "ovb70uy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "12 April 1988",
+          "icon": "calendar"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "30 January 1992",
+          "icon": "award"
+        },
+        {
+          "label": "Governing Act",
+          "value": "SEBI Act, 1992",
+          "icon": "book"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Mumbai",
+          "icon": "info"
+        }
+      ],
+      "id": "v7slwgw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that SEBI became a statutory body on January 30, 1992, through an Ordinance later replaced by the SEBI Act, 1992.",
+        "Direct appeals against SEBI orders do not go to High Courts; they go to the Securities Appellate Tribunal (SAT), and SAT orders can be appealed directly in the Supreme Court of India.",
+        "Distinguish between SEBI's functions: Protective (checking price rigging/insider trading), Regulatory (registering brokers/mutual funds), and Development (training intermediaries/promoting electronic trading)."
+      ],
+      "id": "i6ck5yi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "SEBI was established in 1988 as an executive non-statutory body and received statutory powers under the SEBI Act, 1992.",
+        "The primary mandate of SEBI is to protect the interests of investors in securities and regulate the capital markets in India.",
+        "SEBI operates with a triple power structure: quasi-legislative (drafts regulations), quasi-executive (conducts investigations), and quasi-judicial (passes rulings and penalties).",
+        "The board comprises a Chairman, two members from the Finance Ministry, one member from the Reserve Bank of India, and five members appointed by the Central Government.",
+        "Appeals against decisions and orders of SEBI are filed with the Securities Appellate Tribunal (SAT)."
+      ],
+      "id": "fwemxld"
+    }
+  ],
+  "enriched": true
+}

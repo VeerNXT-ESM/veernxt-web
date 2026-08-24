@@ -1,0 +1,626 @@
+{
+  "id": "slsvdrh",
+  "title": "Chapter 3 – Biochemistry",
+  "order": 3,
+  "blocks": [
+    {
+      "id": "1ykasoj",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Biomolecules comprise carbohydrates, proteins, lipids, and nucleic acids, serving as the building blocks of life.",
+        "Carbohydrate metabolism covers glycolysis, the citric acid cycle, glycogenesis, and glycogenolysis.",
+        "Proteins are broken down into amino acids, with excess nitrogen processed through the urea cycle.",
+        "Enzymes function as biological catalysts, significantly reducing activation energy for cellular reactions.",
+        "Vitamins and minerals serve as critical cofactors and micronutrients for physiological stability.",
+        "Strict regulation of arterial pH between 7.35 and 7.45 maintains acid-base homeostasis."
+      ],
+      "id": "5s7k95r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Biomolecule Types",
+          "value": "4 Main Classes",
+          "icon": "book"
+        },
+        {
+          "label": "Fat-Soluble Vitamins",
+          "value": "A, D, E, K",
+          "icon": "check"
+        },
+        {
+          "label": "Normal Blood pH",
+          "value": "7.35 - 7.45",
+          "icon": "clock"
+        },
+        {
+          "label": "Enzyme Classes",
+          "value": "6 Standard Types",
+          "icon": "award"
+        }
+      ],
+      "id": "jsaipka"
+    },
+    {
+      "type": "paragraph",
+      "id": "6gk6q31"
+    },
+    {
+      "id": "qix6yiw",
+      "type": "heading",
+      "level": 2,
+      "content": "Biomolecules"
+    },
+    {
+      "type": "paragraph",
+      "id": "jb4qpnk"
+    },
+    {
+      "id": "xuhafvy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rw09qhx",
+      "type": "heading",
+      "level": 2,
+      "content": "Carbohydrate Metabolism"
+    },
+    {
+      "type": "paragraph",
+      "id": "akq70o7"
+    },
+    {
+      "id": "l4vq814",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lojfzrf",
+      "type": "heading",
+      "level": 2,
+      "content": "Protein Metabolism"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Important Exam Facts",
+      "id": "mhe4k2j"
+    },
+    {
+      "type": "paragraph",
+      "id": "8w9qzlm"
+    },
+    {
+      "id": "g3ijntp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k6ovdkb",
+      "type": "heading",
+      "level": 2,
+      "content": "Lipid Metabolism"
+    },
+    {
+      "type": "paragraph",
+      "id": "j6wpeug"
+    },
+    {
+      "id": "88abje4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fat-Soluble Vitamins",
+        "Water-Soluble Vitamins"
+      ],
+      "rows": [
+        [
+          "Members",
+          "Vitamins A, D, E, and K",
+          "Vitamin C and B-Complex Vitamins"
+        ],
+        [
+          "Absorption & Storage",
+          "Absorbed with lipids; stored in liver and adipose tissue",
+          "Absorbed directly with water; minimal body storage"
+        ],
+        [
+          "Excretion",
+          "Not readily excreted; risk of hypervitaminosis",
+          "Excreted in urine when in excess"
+        ]
+      ],
+      "id": "aaxweym"
+    },
+    {
+      "id": "pg8nari",
+      "type": "heading",
+      "level": 2,
+      "content": "Enzymes"
+    },
+    {
+      "type": "paragraph",
+      "id": "zr1mljb"
+    },
+    {
+      "id": "hng7aqz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rc3zcqm",
+      "type": "heading",
+      "level": 2,
+      "content": "Vitamins"
+    },
+    {
+      "id": "191xlkn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uh52jav",
+      "type": "heading",
+      "level": 2,
+      "content": "Minerals"
+    },
+    {
+      "id": "ppl1u0d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Glycolysis takes place in the cytoplasm and produces a net yield of 2 ATP and 2 NADH molecules per glucose molecule.",
+        "The urea cycle occurs predominantly in the liver to convert toxic ammonia into urea for excretion.",
+        "Fat-soluble vitamins (A, D, E, K) can accumulate in the body leading to toxicity, whereas water-soluble vitamins (B, C) are readily excreted.",
+        "Metabolic acidosis occurs when blood pH falls below 7.35 due to bicarbonate loss or acid accumulation."
+      ],
+      "id": "ix55wqj"
+    },
+    {
+      "id": "a2gsuzf",
+      "type": "heading",
+      "level": 2,
+      "content": "Acid–Base Balance"
+    },
+    {
+      "type": "paragraph",
+      "id": "5jriyvt"
+    },
+    {
+      "id": "f5desms",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v0spd7u",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "xvo3a4f",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

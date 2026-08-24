@@ -1,0 +1,95 @@
+{
+  "id": "b3x1if6",
+  "title": "11. Special Powers of Legislative Assembly",
+  "order": 389,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "w9rn878"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Money Bill shall not be introduced in a Legislative Council, and the Council of Ministers shall be collectively responsible to the Legislative Assembly of the State.",
+      "id": "8soq1du"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Legislative Assembly (Vidhan Sabha)",
+        "Legislative Council (Vidhan Parishad)"
+      ],
+      "rows": [
+        [
+          "Money Bills",
+          "Exclusive right to introduce and pass Money Bills",
+          "Cannot introduce or reject; can delay for maximum 14 days"
+        ],
+        [
+          "Executive Control",
+          "Can remove the Council of Ministers via No-Confidence Motion",
+          "Cannot pass a No-Confidence Motion or remove the ministry"
+        ],
+        [
+          "Demands for Grants",
+          "Sole authority to vote on demands for grants",
+          "Can only discuss the budget; no power to vote on grants"
+        ],
+        [
+          "Electoral Participation",
+          "Members vote in Presidential and Rajya Sabha elections",
+          "Members do not participate in Presidential or Rajya Sabha elections"
+        ]
+      ],
+      "id": "0jl2gl4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Article 169",
+          "value": "Creation/Abolition of Council",
+          "icon": "book"
+        },
+        {
+          "label": "14 Days",
+          "value": "Max Delay for Money Bills",
+          "icon": "clock"
+        },
+        {
+          "label": "4 Months",
+          "value": "Max Total Delay on Ordinary Bills",
+          "icon": "calendar"
+        },
+        {
+          "label": "Article 198",
+          "value": "Procedure for Money Bills",
+          "icon": "info"
+        }
+      ],
+      "id": "jzyq6yi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "There is NO provision for a joint sitting of the two houses at the state level to resolve a legislative deadlock.",
+        "The Speaker of the Legislative Assembly has the final authority to decide whether a bill is a Money Bill.",
+        "Only elected members of the Legislative Assembly (MLAs) participate in the election of the President of India and members of the Rajya Sabha."
+      ],
+      "id": "mttyf3r"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Money Bills can originate only in the Legislative Assembly and cannot be rejected or substantially altered by the Legislative Council.",
+        "The Council of Ministers is collectively responsible exclusively to the Legislative Assembly, which holds the sole power to pass a No-Confidence Motion.",
+        "The Legislative Assembly possesses the exclusive power to vote on Demands for Grants presented in the state budget.",
+        "Under Article 169, the Assembly can pass a resolution by a special majority to create or abolish the state Legislative Council.",
+        "Unlike Parliament, there is no provision for a joint sitting in state legislatures; the ultimate authority on ordinary legislation rests with the Legislative Assembly."
+      ],
+      "id": "2xm5uwc"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,85 @@
+{
+  "id": "npbs9et",
+  "title": "8. Reports of CAG",
+  "order": 467,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cb6g4tj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The CAG submits three audit reports to the President: audit report on appropriation accounts, audit report on finance accounts, and audit report on public undertakings.",
+      "id": "m59slk7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Report Type",
+        "Scope and Function"
+      ],
+      "rows": [
+        [
+          "Audit Report on Appropriation Accounts",
+          "Compares the actual expenditure incurred against the expenditure sanctioned by Parliament through the Appropriation Act."
+        ],
+        [
+          "Audit Report on Finance Accounts",
+          "Presents a comprehensive account of the annual receipts and disbursements of the Union Government."
+        ],
+        [
+          "Audit Report on Public Undertakings",
+          "Evaluates the financial health, commercial performance, and management efficiency of Central Public Sector Enterprises."
+        ]
+      ],
+      "id": "8w3pt7z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 151",
+          "icon": "book"
+        },
+        {
+          "label": "Reports to President",
+          "value": "3 Audit Reports",
+          "icon": "award"
+        },
+        {
+          "label": "Examining Body",
+          "value": "Public Accounts Committee",
+          "icon": "check"
+        },
+        {
+          "label": "State Level Submission",
+          "value": "Governor",
+          "icon": "info"
+        }
+      ],
+      "id": "p2ve7ed"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 151 mandates the submission of CAG audit reports to the President (for Centre) and Governor (for States).",
+        "The Public Accounts Committee (PAC) acts as a guide, friend, and philosopher to the CAG during the examination of reports.",
+        "Questions often distinguish between Appropriation Accounts (expenditure vs. grant) and Finance Accounts (annual receipts and disbursements)."
+      ],
+      "id": "bfo1jbb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CAG submits three audit reports to the President: Audit Report on Appropriation Accounts, Audit Report on Finance Accounts, and Audit Report on Public Undertakings.",
+        "The President causes these reports to be laid before both Houses of Parliament.",
+        "The Public Accounts Committee (PAC) examines the CAG's audit reports and submits its findings to Parliament.",
+        "In the case of states, the CAG submits audit reports to the Governor, who lays them before the State Legislature."
+      ],
+      "id": "64rpvcp"
+    }
+  ],
+  "enriched": true
+}

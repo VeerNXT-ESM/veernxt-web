@@ -1,0 +1,94 @@
+{
+  "id": "xvk9r63",
+  "title": "Chapter 10: Landforms Created by Running Water (Fluvial Geomorphology)",
+  "order": 122,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5bf4rfw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Running water, which is considered the most important of all geomorphic agents, operates through two components: overland flow on the general land surface as a sheet and linear flow as streams and rivers in valleys.",
+      "id": "q513bdw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Erosional Landforms",
+        "Depositional Landforms"
+      ],
+      "rows": [
+        [
+          "Primary Process",
+          "Removal of rock materials by hydraulic action and abrasion",
+          "Settling of transported sediments due to reduced river velocity"
+        ],
+        [
+          "Dominant Stage",
+          "Youthful and early mature stages",
+          "Late mature and old stages"
+        ],
+        [
+          "Prominent Examples",
+          "Valleys, Gorges, Canyons, Potholes, Waterfalls",
+          "Alluvial Fans, Floodplains, Natural Levees, Oxbow Lakes, Deltas"
+        ],
+        [
+          "Energy Level",
+          "High Kinetic Energy and steep stream gradient",
+          "Low Kinetic Energy and gentle stream gradient"
+        ]
+      ],
+      "id": "a88nxyp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "River Stages",
+          "value": "3 Stages (Youth, Mature, Old)",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Agent",
+          "value": "Running Water",
+          "icon": "book"
+        },
+        {
+          "label": "Peak Erosion",
+          "value": "Youthful Stage",
+          "icon": "award"
+        },
+        {
+          "label": "Key Output",
+          "value": "Erosional & Depositional Features",
+          "icon": "check"
+        }
+      ],
+      "id": "rrkqmq0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Alluvial Fans are formed at the foot of mountain slopes due to sudden drop in gradient, whereas Deltas form at the river mouth.",
+        "Potholes form on river beds due to abrasion, while Plunge Pools form at the base of waterfalls due to hydraulic action.",
+        "Meanders are both erosional and depositional features, commonly asked in UPSC and State PSC exams regarding river stage identification."
+      ],
+      "id": "k287suq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Running water is the most dominant geomorphic agent shaping landscapes in humid climate regions.",
+        "Upper course (youthful stage) is characterized by steep gradients, dominant vertical erosion, and landforms like V-shaped valleys, gorges, and waterfalls.",
+        "Middle course (mature stage) sees dominant lateral erosion, forming wider floodplains, meanders, and alluvial fans.",
+        "Lower course (old stage) features slow-moving rivers, oxbow lakes, natural levees, and deltas near the river mouth."
+      ],
+      "id": "kihygkd"
+    }
+  ],
+  "enriched": true
+}

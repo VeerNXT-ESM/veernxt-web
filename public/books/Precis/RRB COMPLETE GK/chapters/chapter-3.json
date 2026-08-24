@@ -1,0 +1,100 @@
+{
+  "id": "oosuu0s",
+  "title": "Untitled Chapter",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "0br78fu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic",
+          "value": "Constellation",
+          "icon": "book"
+        },
+        {
+          "label": "Domain",
+          "value": "Astronomy",
+          "icon": "info"
+        },
+        {
+          "label": "Category",
+          "value": "Stellar Science",
+          "icon": "check"
+        }
+      ],
+      "id": "zt97m6h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constellation",
+      "id": "twvy68j"
+    },
+    {
+      "id": "d5vtvli",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dqutzsy",
+      "type": "heading",
+      "level": 2,
+      "content": "Constellation"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that the International Astronomical Union (IAU) divided the sky into exactly 88 official constellations in 1922.",
+        "Identify major constellations frequently asked in exam questions, such as Ursa Major (Saptarishi), Orion (The Hunter), and Cassiopeia."
+      ],
+      "id": "jdba4cr"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A constellation is an area on the celestial sphere in which a group of visible stars forms a perceived pattern or outline.",
+        "Constellations have historically been used for navigation, agriculture, and tracking seasons.",
+        "Modern astronomy officially recognizes 88 designated constellations covering the entire night sky."
+      ],
+      "id": "fgb96qc"
+    },
+    {
+      "type": "paragraph",
+      "id": "2un6o3c"
+    }
+  ],
+  "enriched": true
+}

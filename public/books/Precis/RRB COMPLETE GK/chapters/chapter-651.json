@@ -1,0 +1,90 @@
+{
+  "id": "tb6krj4",
+  "title": "RRB Quick Revision Box",
+  "order": 651,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "28pca9o"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first passenger train in India ran on 16 April 1853 between Bombay and Thane over a distance of 34 kilometers.",
+      "id": "m4gkgkx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Railway Zone",
+        "Headquarters"
+      ],
+      "rows": [
+        [
+          "Northern Railway (NR)",
+          "New Delhi"
+        ],
+        [
+          "Southern Railway (SR)",
+          "Chennai"
+        ],
+        [
+          "Eastern Railway (ER)",
+          "Kolkata"
+        ],
+        [
+          "Western Railway (WR)",
+          "Mumbai (Churchgate)"
+        ]
+      ],
+      "id": "clhw1hd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Run",
+          "value": "16 April 1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Route Distance",
+          "value": "34 km",
+          "icon": "award"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "info"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu the Guard",
+          "icon": "check"
+        }
+      ],
+      "id": "ukjntgr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Lord Dalhousie introduced the first passenger railway line in India in 1853.",
+        "The world's longest railway platform is at Hubballi Junction (Karnataka), measuring 1,507 meters.",
+        "The Railway Budget was merged back with the Union Budget in 2017 based on the Bibek Debroy Committee recommendations.",
+        "Kolkata Metro was the first rapid transit system in India, beginning operations in 1984."
+      ],
+      "id": "j3jv2dy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bombay (Bori Bunder) and Thane on April 16, 1853, covering a distance of 34 km.",
+        "Indian Railways was nationalized in 1951 and is currently divided into 19 administrative zones, including Metro Railway Kolkata.",
+        "Lord Dalhousie is recognized as the 'Father of Indian Railways' for launching the railway network in British India.",
+        "Bholu, an elephant holding a green guard lamp, was introduced in 2002 as the official mascot of Indian Railways."
+      ],
+      "id": "0xbguw5"
+    }
+  ],
+  "enriched": true
+}

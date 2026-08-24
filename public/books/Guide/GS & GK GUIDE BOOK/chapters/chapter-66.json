@@ -1,11 +1,11 @@
 {
-  "id": "pmo5gec",
+  "id": "l585l6q",
   "title": "Chapter 17:Plant Biology",
   "order": 66,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "50x42yp"
+      "id": "b99ijh3"
     },
     {
       "type": "statStrip",
@@ -16,25 +16,20 @@
           "icon": "book"
         },
         {
-          "label": "Key Mechanism",
-          "value": "Photosynthesis",
-          "icon": "check"
-        },
-        {
-          "label": "Exam Relevance",
-          "value": "High Priority",
-          "icon": "award"
-        },
-        {
-          "label": "Focus Subject",
+          "label": "Primary Focus",
           "value": "Plant Biology",
           "icon": "info"
+        },
+        {
+          "label": "Target Area",
+          "value": "Botany & Physiology",
+          "icon": "award"
         }
       ],
-      "id": "9ndrczp"
+      "id": "9dvsbsg"
     },
     {
-      "id": "8f1ghyn",
+      "id": "ssmh2kj",
       "type": "heading",
       "level": 2,
       "content": "1. Characteristics of Plants"
@@ -43,42 +38,42 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Plant cell walls are composed of cellulose, distinguishing them from animal cells.",
-        "Plant tissues are classified into dividing Meristematic Tissues and specialized Permanent Tissues.",
-        "Photosynthesis converts carbon dioxide and water into glucose and oxygen using light energy in chloroplasts.",
-        "Vascular tissues include Xylem (water transport) and Phloem (food transport).",
-        "Plant growth and responses are regulated by key hormones like Auxin, Gibberellin, Cytokinin, Ethylene, and Abscisic Acid."
+        "Plant cells contain cell walls made of cellulose, chloroplasts for light absorption, and large central vacuoles.",
+        "Plant tissues are categorized into Meristematic (active cell division) and Permanent (specialized functional) tissues.",
+        "Photosynthesis takes place in chloroplasts, converting light energy into chemical energy to synthesize glucose.",
+        "Plant reproduction occurs through both sexual mechanisms via flowers and asexual methods via vegetative propagation.",
+        "Phytohormones including Auxins, Gibberellins, Cytokinins, Abscisic Acid, and Ethylene regulate growth and responses."
       ],
-      "id": "4ki4nmo"
+      "id": "9y347y2"
     },
     {
       "type": "paragraph",
-      "id": "t2aoyx0"
+      "id": "ze0xylj"
     },
     {
       "type": "paragraph",
-      "id": "c6ysdl9"
+      "id": "hfm5nvh"
     },
     {
       "type": "paragraph",
-      "id": "ydzfhbx"
+      "id": "s1d9a04"
     },
     {
       "type": "paragraph",
-      "id": "tonhrnn"
+      "id": "fdtni50"
     },
     {
       "type": "paragraph",
-      "id": "le92nd7"
+      "id": "iq4zn75"
     },
     {
-      "id": "4us15tc",
+      "id": "zhypnhg",
       "type": "heading",
       "level": 2,
       "content": "2. Classification of Plants"
     },
     {
-      "id": "hap5yuq",
+      "id": "2j8rgg4",
       "type": "table",
       "rows": [
         {
@@ -132,13 +127,13 @@
       ]
     },
     {
-      "id": "oyvkhts",
+      "id": "v1fkmex",
       "type": "heading",
       "level": 2,
       "content": "3. Plant Cell"
     },
     {
-      "id": "tntrhpb",
+      "id": "2z160uz",
       "type": "table",
       "rows": [
         {
@@ -193,18 +188,18 @@
       ]
     },
     {
-      "id": "foynfjr",
+      "id": "rtv5v5a",
       "type": "heading",
       "level": 2,
       "content": "4. Plant Tissues"
     },
     {
       "type": "pullQuote",
-      "content": "Chapter 17: Plant Biology",
-      "id": "iya230n"
+      "content": "Important Exam Points",
+      "id": "4cw55ly"
     },
     {
-      "id": "szsc81o",
+      "id": "jpnrsx1",
       "type": "table",
       "rows": [
         {
@@ -266,13 +261,13 @@
       ]
     },
     {
-      "id": "d0xv27s",
+      "id": "39oxib9",
       "type": "heading",
       "level": 2,
       "content": "5. Parts of a Plant"
     },
     {
-      "id": "k5f7zsr",
+      "id": "u6ziqmz",
       "type": "table",
       "rows": [
         {
@@ -327,21 +322,21 @@
       ]
     },
     {
-      "id": "87mqprm",
+      "id": "m7dfqlh",
       "type": "heading",
       "level": 2,
       "content": "6. Photosynthesis"
     },
     {
       "type": "paragraph",
-      "id": "f44gqgv"
+      "id": "psa1hl7"
     },
     {
       "type": "paragraph",
-      "id": "pw165ry"
+      "id": "wo13zn1"
     },
     {
-      "id": "1kdd62a",
+      "id": "5tle9g9",
       "type": "heading",
       "level": 2,
       "content": "7. Types of Plant Nutrition"
@@ -350,52 +345,52 @@
       "type": "comparisonTable",
       "headers": [
         "Feature",
-        "Xylem",
-        "Phloem"
+        "Xylem Tissue",
+        "Phloem Tissue"
       ],
       "rows": [
         [
           "Primary Function",
-          "Transports water and minerals",
-          "Transports food and nutrients"
+          "Transports water and dissolved minerals",
+          "Transports food and organic nutrients"
         ],
         [
-          "Direction of Flow",
-          "Unidirectional (Roots to Leaves)",
-          "Bidirectional (Leaves to all parts)"
+          "Direction of Transport",
+          "Unidirectional (Root to aerial parts)",
+          "Bidirectional (Leaves to all storage organs)"
         ],
         [
-          "Composition",
-          "Mostly dead cells at maturity",
-          "Mostly living cells"
+          "Living Status",
+          "Mostly dead cells at maturity (except Xylem Parenchyma)",
+          "Mostly living cells (except Phloem Fibres)"
         ]
       ],
-      "id": "julkdtf"
+      "id": "df0m1mp"
     },
     {
       "type": "paragraph",
-      "id": "a8la6dg"
+      "id": "b8dwtbu"
     },
     {
       "type": "paragraph",
-      "id": "ry5hfbk"
+      "id": "gezb2fm"
     },
     {
       "type": "paragraph",
-      "id": "kp8sd82"
+      "id": "l4v6pqr"
     },
     {
       "type": "paragraph",
-      "id": "tzpmqv7"
+      "id": "t8z1zvw"
     },
     {
-      "id": "g3ku0zg",
+      "id": "lsvifcz",
       "type": "heading",
       "level": 2,
       "content": "8. Plant Reproduction"
     },
     {
-      "id": "ul34dzb",
+      "id": "67bzqvx",
       "type": "table",
       "rows": [
         {
@@ -422,13 +417,13 @@
       ]
     },
     {
-      "id": "7v8nxyv",
+      "id": "8ovm920",
       "type": "heading",
       "level": 2,
       "content": "9. Vegetative Propagation"
     },
     {
-      "id": "d0evtyp",
+      "id": "551t4uu",
       "type": "table",
       "rows": [
         {
@@ -469,13 +464,13 @@
       ]
     },
     {
-      "id": "i0wli9n",
+      "id": "u1y8ofr",
       "type": "heading",
       "level": 2,
       "content": "10. Plant Hormones"
     },
     {
-      "id": "4nmbev9",
+      "id": "bdxrjld",
       "type": "table",
       "rows": [
         {
@@ -525,37 +520,38 @@
     {
       "type": "examAlert",
       "items": [
-        "Xylem transports water unidirectionally, whereas Phloem transports food bidirectionally.",
-        "Ethylene is the only gaseous plant hormone responsible for natural fruit ripening.",
-        "Light reactions of photosynthesis take place in the Grana, while dark reactions (Calvin Cycle) take place in the Stroma."
+        "Xylem transports water and minerals unidirectionally, whereas Phloem conducts synthesized food bidirectionally.",
+        "The light-dependent reaction of photosynthesis occurs in Grana, while the light-independent (Dark) reaction occurs in Stroma.",
+        "Ethylene is the primary natural gaseous phytohormone responsible for fruit ripening.",
+        "Asexual vegetative propagation produces genetically identical offspring from roots, stems, or leaves."
       ],
-      "id": "4yhqjfb"
+      "id": "wczot0t"
     },
     {
-      "id": "57gmbkg",
+      "id": "im2b1w3",
       "type": "heading",
       "level": 2,
       "content": "Important Exam Points"
     },
     {
       "type": "paragraph",
-      "id": "h5eg669"
+      "id": "inl552f"
     },
     {
       "type": "paragraph",
-      "id": "svxztvi"
+      "id": "zyl4xmr"
     },
     {
       "type": "paragraph",
-      "id": "fgo6o80"
+      "id": "os7abdy"
     },
     {
       "type": "paragraph",
-      "id": "pzeixam"
+      "id": "pmwwn7q"
     },
     {
       "type": "paragraph",
-      "id": "zknee81"
+      "id": "4cl8wtf"
     }
   ],
   "enriched": true

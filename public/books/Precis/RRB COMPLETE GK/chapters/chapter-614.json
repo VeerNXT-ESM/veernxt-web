@@ -1,0 +1,130 @@
+{
+  "id": "wtye80p",
+  "title": "CCI vs MRTP Commission",
+  "order": 614,
+  "blocks": [
+    {
+      "id": "tdo2ifu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Competition Act, 2002 marked a paradigm shift from curbing monopolies to promoting healthy market competition in India.",
+      "id": "8nh18b4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "MRTP Commission (MRTP Act, 1969)",
+        "CCI (Competition Act, 2002)"
+      ],
+      "rows": [
+        [
+          "Core Philosophy",
+          "Curbing monopolies and economic concentration",
+          "Promoting fair competition and market freedom"
+        ],
+        [
+          "Regulatory Approach",
+          "Pre-entry restrictions and mandatory permissions",
+          "Post-entry regulation of anti-competitive practices"
+        ],
+        [
+          "Criteria for Dominance",
+          "Asset size thresholds (e.g., > Rs. 20 Crore)",
+          "Market power and abuse of dominant position"
+        ],
+        [
+          "Penalizing Capacity",
+          "Cease-and-desist powers with limited penal action",
+          "Direct heavy monetary fines up to 10% of turnover"
+        ],
+        [
+          "Recommending Body",
+          "Mahalanobis & Hazari Committees",
+          "S.V.S. Raghavan Committee (2000)"
+        ]
+      ],
+      "id": "btsbuax"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "MRTP Enactment",
+          "value": "1969",
+          "icon": "calendar"
+        },
+        {
+          "label": "Competition Act",
+          "value": "2002",
+          "icon": "book"
+        },
+        {
+          "label": "CCI Established",
+          "value": "2003",
+          "icon": "clock"
+        },
+        {
+          "label": "MRTP Dissolved",
+          "value": "2009",
+          "icon": "check"
+        }
+      ],
+      "id": "nv30pt2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The S.V.S. Raghavan Committee (2000) laid the structural foundation for replacing the MRTP Act with the Competition Act, 2002.",
+        "CCI enforces the 'Effects Doctrine' under Section 32, giving it extra-territorial jurisdiction over acts outside India that impact domestic competition.",
+        "Dominance under MRTP was strictly asset-size based, whereas under CCI it is conduct-based (abuse of dominant position)."
+      ],
+      "id": "40tq6qt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The MRTP Act, 1969 focused primarily on controlling monopolies and preventing the concentration of economic power.",
+        "The Raghavan Committee (2000) recommended replacing the outdated MRTP framework with a modern competition law suited for liberalized markets.",
+        "The Competition Act, 2002 led to the creation of the Competition Commission of India (CCI), shifting regulatory focus to market conduct rather than market size.",
+        "Unlike the MRTP Commission which had limited penalty powers, CCI can levy penalties up to 10% of average turnover for anti-competitive agreements.",
+        "The MRTP Commission was formally dissolved in 2009, transferring its pending matters to the Competition Appellate Tribunal (COMPAT)."
+      ],
+      "id": "4pj6qno"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,578 @@
+{
+  "id": "0ivt5kq",
+  "title": "CHAPTER 11: EMERGING TECHNOLOGIES AND FINTECH",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "ka5aajo",
+      "type": "heading",
+      "level": 2,
+      "content": "11.1 Artificial Intelligence and Machine Learning"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Artificial Intelligence and Machine Learning form the cognitive backbone for automated financial services and predictive modeling.",
+        "Important ML Metrics are crucial for evaluating model accuracy, precision, and performance reliability in technical applications.",
+        "Blockchain Technology delivers decentralized, immutable, and transparent ledger solutions for digital finance.",
+        "Internet of Things (IoT) enables real-time data collection and automated interaction across interconnected device networks.",
+        "Big Data Technologies coupled with DevOps and CI/CD pipelines facilitate scalable data processing and continuous software delivery."
+      ],
+      "id": "4gra6zf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "11",
+          "icon": "book"
+        },
+        {
+          "label": "Domain",
+          "value": "Emerging Tech & FinTech",
+          "icon": "award"
+        },
+        {
+          "label": "Core Pillars",
+          "value": "5 Key Modules",
+          "icon": "check"
+        },
+        {
+          "label": "Key Topics",
+          "value": "AI, Blockchain, IoT, DevOps",
+          "icon": "info"
+        }
+      ],
+      "id": "dbnk7v1"
+    },
+    {
+      "id": "ahx16ki",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c95rrme",
+      "type": "heading",
+      "level": 3,
+      "content": "Important ML Metrics"
+    },
+    {
+      "id": "bbs0ire",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 11: EMERGING TECHNOLOGIES AND FINTECH",
+      "id": "9k4p86q"
+    },
+    {
+      "id": "bvddytb",
+      "type": "heading",
+      "level": 2,
+      "content": "11.2 Blockchain Technology"
+    },
+    {
+      "type": "paragraph",
+      "id": "i3k3wkx"
+    },
+    {
+      "id": "muk6ups",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "peimhrl",
+      "type": "heading",
+      "level": 2,
+      "content": "11.3 Internet of Things (IoT)"
+    },
+    {
+      "id": "yswzedp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23mlenw",
+      "type": "heading",
+      "level": 2,
+      "content": "11.4 Big Data Technologies"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Pay special attention to ML evaluation metrics such as Precision, Recall, F1-score, and ROC-AUC frequently asked in competitive technical exams.",
+        "Understand fundamental concepts of Blockchain such as distributed ledgers, consensus algorithms, and smart contracts.",
+        "Review CI/CD workflow automation, continuous integration stages, and continuous deployment practices under DevOps infrastructure."
+      ],
+      "id": "1fa9fjz"
+    },
+    {
+      "id": "k3hqfy4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phoyuz4",
+      "type": "heading",
+      "level": 2,
+      "content": "11.5 DevOps and CI/CD"
+    },
+    {
+      "id": "n21r83g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

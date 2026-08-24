@@ -1,0 +1,85 @@
+{
+  "id": "3btr3fk",
+  "title": "RRB Quick Revision Box",
+  "order": 526,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9jeo72q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "RRB Quick Revision Box",
+      "id": "qkx5kpu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Track Gauge Type",
+        "Width (mm / feet)"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1676 mm (5 ft 6 in)"
+        ],
+        [
+          "Metre Gauge",
+          "1000 mm (3 ft 3 3/8 in)"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm or 610 mm"
+        ]
+      ],
+      "id": "jlvt4mv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Railway Zones",
+          "value": "19 Zones",
+          "icon": "book"
+        },
+        {
+          "label": "First Train Run",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "award"
+        },
+        {
+          "label": "Railway Board Est.",
+          "value": "1905",
+          "icon": "clock"
+        }
+      ],
+      "id": "1ae3rxn"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions on the headquarters of various Railway Zones (e.g., Eastern Zone in Kolkata, Southern Zone in Chennai) appear frequently in general awareness papers.",
+        "Remember the year of Nationalization of Indian Railways (1951) and the year of the first rail line (1853).",
+        "World's highest railway bridge, the Chenab Bridge in Jammu & Kashmir, is a major current affairs focal point."
+      ],
+      "id": "t6jiswc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian Railways was nationalized in the year 1951 and is currently divided into 19 administrative zones.",
+        "The first passenger train in India operated between Bori Bunder (Mumbai) and Thane on April 16, 1853.",
+        "Bholu, an elephant dressed as a railway guard, was introduced as the official mascot for the 150th anniversary of Indian Railways.",
+        "RRB recruitment examinations evaluate candidates on General Awareness, Mathematics, and Reasoning capabilities."
+      ],
+      "id": "mpnfzna"
+    }
+  ],
+  "enriched": true
+}

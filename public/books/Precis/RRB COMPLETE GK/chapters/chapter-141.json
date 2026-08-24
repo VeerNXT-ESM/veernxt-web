@@ -1,0 +1,129 @@
+{
+  "id": "12kr6ji",
+  "title": "9. Glacial vs River Landforms",
+  "order": 141,
+  "blocks": [
+    {
+      "id": "ebzitjj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While running water shapes landforms primarily through hydraulic action forming V-shaped valleys, moving ice carves deep U-shaped troughs through plucking and abrasion.",
+      "id": "hqjcgfg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect / Feature",
+        "River (Fluvial) Landforms",
+        "Glacial Landforms"
+      ],
+      "rows": [
+        [
+          "Valley Cross-Section",
+          "V-Shaped Valley",
+          "U-Shaped Valley (Glacial Trough)"
+        ],
+        [
+          "Erosional Processes",
+          "Hydraulic action, attrition, solution, vertical downcutting",
+          "Plucking (quarrying) and abrasion by moving ice mass"
+        ],
+        [
+          "Tributary Valleys",
+          "Confluence at main stream grade (Accordant)",
+          "Hanging Valleys above main valley floor (Discordant)"
+        ],
+        [
+          "Key Erosional Landforms",
+          "Waterfalls, gorges, meanders, river terraces",
+          "Cirques, arêtes, horns, roche moutonnées"
+        ],
+        [
+          "Key Depositional Landforms",
+          "Alluvial fans, natural levees, oxbow lakes, deltas",
+          "Moraines, drumlins, eskers, till plains"
+        ]
+      ],
+      "id": "6gchat2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Glacial Valley Shape",
+          "value": "U-Shaped",
+          "icon": "book"
+        },
+        {
+          "label": "River Valley Shape",
+          "value": "V-Shaped",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Fluvial Action",
+          "value": "Downcutting",
+          "icon": "clock"
+        },
+        {
+          "label": "Primary Glacial Action",
+          "value": "Plucking & Abrasion",
+          "icon": "check"
+        }
+      ],
+      "id": "09uxkxb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Hanging valleys, formed where smaller tributary glaciers join a deeper main trough, are frequently tested landforms in UPSC and State PSC exams.",
+        "Distinct depositional contrasts: Drumlins (basket of eggs topography) belong to glacial landscapes, while Oxbow Lakes belong to mature river stages.",
+        "Cirques represent armchair-shaped steep-walled hollows carved at glacier heads."
+      ],
+      "id": "bw20b1v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Glaciers carve steep-sided, flat-floored U-shaped valleys, whereas rivers produce sharp V-shaped valleys through vertical downcutting.",
+        "Glacial erosion proceeds mainly through plucking and abrasion, forming features like cirques, arêtes, horns, and hanging valleys.",
+        "Fluvial erosion occurs via hydraulic action, abrasion, attrition, and solution, forming features such as waterfalls, meanders, and canyons.",
+        "Glacial depositional features include moraines, drumlins, eskers, and till plains, while fluvial deposition creates alluvial fans, levees, and deltas."
+      ],
+      "id": "23y9n99"
+    }
+  ],
+  "enriched": true
+}

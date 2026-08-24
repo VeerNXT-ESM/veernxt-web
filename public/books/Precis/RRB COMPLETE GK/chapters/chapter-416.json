@@ -1,0 +1,95 @@
+{
+  "id": "dvph9d1",
+  "title": "Chapter 13: Election Commission of India",
+  "order": 416,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "bc3ek6s"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Election Commission is a permanent and an independent body established by the Constitution of India directly to ensure free and fair elections in the country.",
+      "id": "zewfqz0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Election Commission of India (ECI)",
+        "State Election Commission (SEC)"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 324",
+          "Article 243K and 243ZA"
+        ],
+        [
+          "Elections Conducted",
+          "Parliament, State Legislatures, President, Vice-President",
+          "Panchayats and Municipalities (Local Bodies)"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Process",
+          "Same manner as a Supreme Court Judge (CEC)",
+          "Same manner as a High Court Judge"
+        ]
+      ],
+      "id": "xssy412"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "Date of Establishment",
+          "value": "25th January 1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "Tenure of CEC & ECs",
+          "value": "6 Years / Age of 65",
+          "icon": "clock"
+        },
+        {
+          "label": "Body Composition",
+          "value": "1 CEC + 2 ECs",
+          "icon": "check"
+        }
+      ],
+      "id": "d2bpzz5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Election Commission is NOT concerned with elections to Panchayats and Municipalities in the states; separate State Election Commissions handle them.",
+        "Although appointed by the President, the Chief Election Commissioner does NOT hold office during the pleasure of the President.",
+        "The Constitution has not prescribed the qualifications (legal, educational, administrative, or judicial) of the members of the Election Commission."
+      ],
+      "id": "pq25snv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Election Commission of India is a permanent and independent body created directly by Article 324 of the Constitution to ensure free and fair elections.",
+        "It is responsible for conducting elections to the Parliament, State Legislatures, and the offices of the President and Vice-President of India.",
+        "The Chief Election Commissioner (CEC) and Election Commissioners (ECs) enjoy equal powers, salaries, and allowances equivalent to a judge of the Supreme Court.",
+        "The CEC is provided with security of tenure and can only be removed from office in the same manner and on the same grounds as a judge of the Supreme Court.",
+        "Elections to local bodies like Panchayats and Municipalities are not conducted by the ECI, but by the respective State Election Commissions."
+      ],
+      "id": "bukikgd"
+    }
+  ],
+  "enriched": true
+}

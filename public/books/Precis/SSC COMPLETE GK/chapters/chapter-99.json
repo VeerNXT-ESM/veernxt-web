@@ -1,0 +1,361 @@
+{
+  "id": "fz3159r",
+  "title": "CHAPTER 6 : PRESSURE AND FLUIDS",
+  "order": 99,
+  "blocks": [
+    {
+      "id": "cywc6pk",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pressure is thrust acting per unit area; smaller surface area produces higher pressure for the same force.",
+        "Pressure in liquids depends on depth, density of liquid, and acceleration due to gravity (P = hρg).",
+        "Atmospheric pressure decreases with altitude, which lowers the boiling point of liquids.",
+        "Archimedes' Principle states that the buoyant force equals the weight of the fluid displaced by an immersed body.",
+        "Relative density has no units as it is the ratio of a substance's density to water's density at 4°C."
+      ],
+      "id": "mqfo7gv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "check"
+        },
+        {
+          "label": "Liquid Pressure Formula",
+          "value": "P = hρg",
+          "icon": "info"
+        },
+        {
+          "label": "1 Atm Pressure",
+          "value": "1.013 × 10⁵ Pa",
+          "icon": "award"
+        },
+        {
+          "label": "Density of Water (4°C)",
+          "value": "1000 kg/m³",
+          "icon": "calendar"
+        }
+      ],
+      "id": "n88bnlc"
+    },
+    {
+      "type": "paragraph",
+      "id": "rctoqdy"
+    },
+    {
+      "type": "paragraph",
+      "id": "h9gusnv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x8ikg30"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k6784mg"
+    },
+    {
+      "type": "paragraph",
+      "id": "76takt4"
+    },
+    {
+      "id": "mpd3dww",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Pressure"
+    },
+    {
+      "id": "rv3940j",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "a652t9x",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE IN SOLIDS"
+    },
+    {
+      "type": "paragraph",
+      "id": "ny6ii2d"
+    },
+    {
+      "id": "fduwavy",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "x9v5zl3"
+    },
+    {
+      "id": "7alddo6",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE IN LIQUIDS"
+    },
+    {
+      "type": "paragraph",
+      "id": "lwx5fwb"
+    },
+    {
+      "id": "vzdqv6w",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "vp3h3d1",
+      "type": "heading",
+      "level": 3,
+      "content": "Formula for Pressure in Liquid"
+    },
+    {
+      "type": "paragraph",
+      "id": "tmpheeq"
+    },
+    {
+      "type": "paragraph",
+      "id": "it65dr5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "When a body is partially or fully immersed in a fluid, it experiences an upward force equal to the weight of the fluid displaced by it.",
+      "id": "760ksib"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4zaarap"
+    },
+    {
+      "type": "paragraph",
+      "id": "wizc3wl"
+    },
+    {
+      "id": "czu3d8z",
+      "type": "heading",
+      "level": 2,
+      "content": "ATMOSPHERIC PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "id": "hj7rmdy"
+    },
+    {
+      "id": "al1xa3q",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Atmospheric Pressure"
+    },
+    {
+      "id": "fml3tfq",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "2ko0hva",
+      "type": "heading",
+      "level": 2,
+      "content": "BUOYANT FORCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "04m4udg"
+    },
+    {
+      "id": "rdtvdlu",
+      "type": "heading",
+      "level": 2,
+      "content": "ARCHIMEDES' PRINCIPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdo7flf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Density",
+        "Relative Density"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Mass per unit volume of a substance",
+          "Ratio of density of substance to density of water at 4°C"
+        ],
+        [
+          "Formula",
+          "Density = Mass / Volume",
+          "Relative Density = Density of substance / Density of water"
+        ],
+        [
+          "SI Unit",
+          "kg/m³",
+          "Dimensionless (No units)"
+        ]
+      ],
+      "id": "ri6qnbo"
+    },
+    {
+      "type": "paragraph",
+      "id": "rad0342"
+    },
+    {
+      "type": "paragraph",
+      "id": "gp9aod4"
+    },
+    {
+      "id": "h335uoa",
+      "type": "heading",
+      "level": 3,
+      "content": "Applications of Archimedes’ Principle"
+    },
+    {
+      "id": "69a1xau",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "5owxmlp",
+      "type": "heading",
+      "level": 2,
+      "content": "FLOATATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "zbmdd4d"
+    },
+    {
+      "type": "paragraph",
+      "id": "fhxw3ue"
+    },
+    {
+      "id": "bhe883v",
+      "type": "heading",
+      "level": 2,
+      "content": "DENSITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "rsamyej"
+    },
+    {
+      "type": "paragraph",
+      "id": "0dg1yzp"
+    },
+    {
+      "type": "paragraph",
+      "id": "dlzpyt0"
+    },
+    {
+      "id": "u33sqze",
+      "type": "heading",
+      "level": 2,
+      "content": "APPLICATIONS OF PRESSURE"
+    },
+    {
+      "id": "3in5up9",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sudden drop in barometer reading indicates a storm, while a slow fall predicts rain.",
+        "Lactometer (milk purity) and Hydrometer (liquid density) are based on Archimedes' Principle.",
+        "Hydraulic brakes, lifts, and presses work on Pascal's Law.",
+        "Dams are made thicker at the bottom because liquid pressure increases with depth."
+      ],
+      "id": "d5u5cuf"
+    },
+    {
+      "id": "5icmior",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "fkqahy8"
+    },
+    {
+      "type": "paragraph",
+      "id": "x8yfydn"
+    },
+    {
+      "type": "paragraph",
+      "id": "on69ud2"
+    },
+    {
+      "type": "paragraph",
+      "id": "s0ot4se"
+    },
+    {
+      "type": "paragraph",
+      "id": "ksj9r2o"
+    },
+    {
+      "id": "02d1bh9",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "nnuftaf",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,531 @@
+{
+  "id": "5ncjb8i",
+  "title": "Chapter 16: Nutrition and Health",
+  "order": 65,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "e7pn0xi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Macronutrients",
+          "value": "Carbohydrates, Proteins, Fats",
+          "icon": "book"
+        },
+        {
+          "label": "Micronutrients",
+          "value": "Vitamins & Minerals",
+          "icon": "check"
+        },
+        {
+          "label": "Health Focus",
+          "value": "Balanced Diet",
+          "icon": "award"
+        },
+        {
+          "label": "Clinical Relevance",
+          "value": "Nutrition Disorders",
+          "icon": "info"
+        }
+      ],
+      "id": "7r22nrk"
+    },
+    {
+      "id": "rwirn9h",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Nutrition"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Nutrition encompasses sequential steps starting from food intake to digestion and assimilation.",
+        "Carbohydrates, proteins, and fats constitute the major energy-yielding macronutrients.",
+        "Vitamins and minerals serve as essential micronutrients vital for cellular functions and immunity.",
+        "A balanced diet is essential to maintain optimal health and prevent deficiency syndromes.",
+        "Malnutrition encompasses both undernutrition and overnutrition, leading to common nutritional disorders."
+      ],
+      "id": "jycuer1"
+    },
+    {
+      "type": "paragraph",
+      "id": "4j3eavq"
+    },
+    {
+      "type": "paragraph",
+      "id": "wwq3k0a"
+    },
+    {
+      "type": "paragraph",
+      "id": "19ik75o"
+    },
+    {
+      "id": "ogj0vjt",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Steps in Nutrition"
+    },
+    {
+      "type": "paragraph",
+      "id": "yi1ulrf"
+    },
+    {
+      "type": "paragraph",
+      "id": "wb1llp6"
+    },
+    {
+      "type": "paragraph",
+      "id": "xhantc0"
+    },
+    {
+      "type": "paragraph",
+      "id": "2rcqg39"
+    },
+    {
+      "type": "paragraph",
+      "id": "d0avuue"
+    },
+    {
+      "id": "40cwof4",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Major Nutrients in Food"
+    },
+    {
+      "id": "c4o8iji",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ykhd8sz",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Carbohydrates"
+    },
+    {
+      "type": "paragraph",
+      "id": "a8jmwat"
+    },
+    {
+      "type": "paragraph",
+      "id": "yqcwjko"
+    },
+    {
+      "type": "paragraph",
+      "id": "ywpyftm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Nutrition and Health",
+      "id": "xi2im2a"
+    },
+    {
+      "id": "r1hqqrl",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Proteins"
+    },
+    {
+      "type": "paragraph",
+      "id": "88c7rpu"
+    },
+    {
+      "type": "paragraph",
+      "id": "oq283f7"
+    },
+    {
+      "type": "paragraph",
+      "id": "uabezyt"
+    },
+    {
+      "id": "ds83ken",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Fats"
+    },
+    {
+      "type": "paragraph",
+      "id": "mil6od6"
+    },
+    {
+      "type": "paragraph",
+      "id": "5kpcr60"
+    },
+    {
+      "type": "paragraph",
+      "id": "eg8rfi6"
+    },
+    {
+      "id": "4ku37zb",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Vitamins"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Nutrient Class",
+        "Major Categories",
+        "Primary Function"
+      ],
+      "rows": [
+        [
+          "Carbohydrates",
+          "Simple Sugars, Complex Starches",
+          "Immediate Energy Supply"
+        ],
+        [
+          "Proteins",
+          "Essential & Non-essential Amino Acids",
+          "Tissue Building and Structural Maintenance"
+        ],
+        [
+          "Fats",
+          "Saturated & Unsaturated Lipids",
+          "Long-term Energy Reserve & Insulation"
+        ],
+        [
+          "Vitamins & Minerals",
+          "Fat/Water Soluble Vitamins, Trace Elements",
+          "Metabolic Regulation & Immune Function"
+        ]
+      ],
+      "id": "bsapufw"
+    },
+    {
+      "id": "3v8x7rp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0h9qw0e",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Minerals"
+    },
+    {
+      "id": "qp6a3s6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fts5tt5",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Balanced Diet"
+    },
+    {
+      "type": "paragraph",
+      "id": "pj84jwa"
+    },
+    {
+      "type": "paragraph",
+      "id": "emhepbd"
+    },
+    {
+      "type": "paragraph",
+      "id": "bfo1g5x"
+    },
+    {
+      "id": "xwuux12",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Malnutrition"
+    },
+    {
+      "type": "paragraph",
+      "id": "nme8nik"
+    },
+    {
+      "type": "paragraph",
+      "id": "nkqnezo"
+    },
+    {
+      "id": "9c52zyj",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Common Nutrition Disorders"
+    },
+    {
+      "id": "nob3axg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test specific deficiency diseases associated with individual vitamins and minerals.",
+        "Be prepared to identify the main steps involved in human digestive and nutritive processes.",
+        "Differentiate between macronutrients and micronutrients based on daily requirement and physiological roles.",
+        "Understand the clinical features and dietary remedies for common malnutrition disorders."
+      ],
+      "id": "1uuf8wq"
+    },
+    {
+      "id": "w0pey7v",
+      "type": "heading",
+      "level": 2,
+      "content": "12.Important Exam Points"
+    },
+    {
+      "type": "paragraph",
+      "id": "i4u5tw1"
+    },
+    {
+      "type": "paragraph",
+      "id": "ch7922c"
+    },
+    {
+      "type": "paragraph",
+      "id": "n8eop69"
+    },
+    {
+      "type": "paragraph",
+      "id": "e8kp5xf"
+    },
+    {
+      "type": "paragraph",
+      "id": "p4pvjjf"
+    },
+    {
+      "type": "paragraph",
+      "id": "vng3szl"
+    },
+    {
+      "type": "paragraph",
+      "id": "cqvtdc5"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,131 @@
+{
+  "id": "vwii7uo",
+  "title": "6. Armed Forces Tribunal (AFT)",
+  "order": 674,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "webukp8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Armed Forces Tribunal was established under the Armed Forces Tribunal Act, 2007 to adjudicate service matters and court-martial appeals.",
+      "id": "y8yg4ee"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "2007",
+          "icon": "book"
+        },
+        {
+          "label": "Inauguration Year",
+          "value": "2009",
+          "icon": "calendar"
+        },
+        {
+          "label": "Principal Bench",
+          "value": "New Delhi",
+          "icon": "info"
+        },
+        {
+          "label": "Jurisdiction Coverage",
+          "value": "3 Services",
+          "icon": "check"
+        }
+      ],
+      "id": "o2954le"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Armed Forces (Army, Navy, Air Force)",
+        "Paramilitary & Central Armed Police Forces"
+      ],
+      "rows": [
+        [
+          "AFT Jurisdiction",
+          "Covered under AFT Act, 2007",
+          "Excluded from AFT Jurisdiction"
+        ],
+        [
+          "Adjudicating Forum",
+          "Armed Forces Tribunal (AFT)",
+          "Central Administrative Tribunal (CAT) / High Courts"
+        ],
+        [
+          "Court-Martial Appeals",
+          "Heard directly by the AFT",
+          "Governed by respective force acts and regular courts"
+        ]
+      ],
+      "id": "goln0np"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Armed Forces Tribunal (AFT) was established under the Armed Forces Tribunal Act, 2007, and formally inaugurated in August 2009.",
+        "It consists of a Judicial Member (a retired Supreme Court Judge or retired High Court Chief Justice) and Administrative Members with military experience.",
+        "The tribunal possesses both original jurisdiction over service matters and appellate jurisdiction over court-martial orders.",
+        "Jurisdiction covers members of the Army, Navy, and Air Force, but specifically excludes Paramilitary forces such as BSF, CRPF, and Coast Guard.",
+        "Appeals against the orders and decisions of the Armed Forces Tribunal can be preferred directly before the Supreme Court of India."
+      ],
+      "id": "0wqx5qv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Paramilitary forces like BSF, CRPF, ITBP, Assam Rifles, and Coast Guard do NOT come under the jurisdiction of the Armed Forces Tribunal.",
+        "The Chairperson of the AFT must be a retired Supreme Court Judge or a retired Chief Justice of a High Court.",
+        "The AFT exercises both Original Jurisdiction (service disputes) and Appellate Jurisdiction (court-martial verdicts)."
+      ],
+      "id": "s49kicv"
+    },
+    {
+      "id": "hbsqiu4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

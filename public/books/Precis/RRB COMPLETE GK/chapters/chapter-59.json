@@ -1,0 +1,94 @@
+{
+  "id": "oa3uf8i",
+  "title": "Chapter 5: Rocks",
+  "order": 59,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "rh8krkz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The earth's crust is composed of rocks, and a rock is an aggregate of one or more minerals.",
+      "id": "j1bdbta"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Mode of Formation",
+        "Key Characteristics",
+        "Examples"
+      ],
+      "rows": [
+        [
+          "Igneous Rocks",
+          "Cooling and solidification of magma or lava",
+          "Crystalline, unstratified, non-porous, no fossils",
+          "Granite, Basalt, Gabbro, Obsidian"
+        ],
+        [
+          "Sedimentary Rocks",
+          "Deposition, compaction, and lithification of sediments",
+          "Stratified (layered), porous, contains fossils",
+          "Sandstone, Limestone, Shale, Conglomerate"
+        ],
+        [
+          "Metamorphic Rocks",
+          "Recrystallization of pre-existing rocks under high heat & pressure",
+          "Foliated or banded structure, highly dense and hard, no fossils",
+          "Gneiss, Marble, Quartzite, Slate"
+        ]
+      ],
+      "id": "cvytu2f"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Rock Types",
+          "value": "3 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Rocks",
+          "value": "Igneous",
+          "icon": "check"
+        },
+        {
+          "label": "Fossil Presence",
+          "value": "Sedimentary",
+          "icon": "info"
+        },
+        {
+          "label": "Metamorphic Agents",
+          "value": "Heat & Pressure",
+          "icon": "award"
+        }
+      ],
+      "id": "ivh2yg8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Primary vs Derivative Rocks: Igneous rocks are primary, while Sedimentary and Metamorphic rocks are derivative.",
+        "Fossil-bearing Rocks: SSC and UPSC preliminary exams frequently ask which rock group contains fossils—the answer is Sedimentary rocks.",
+        "Metamorphic Transitions: Frequently tested parent-to-metamorphic conversions include Granite to Gneiss, Limestone to Marble, Sandstone to Quartzite, and Shale to Slate."
+      ],
+      "id": "4yoidrw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks form from the cooling and solidification of magma or lava and are known as primary rocks because all other rocks originate from them.",
+        "Sedimentary rocks are characterized by distinct strata (layers) and are formed through the process of lithification of broken rock fragments and organic matter.",
+        "Metamorphic rocks develop under extreme temperature (thermal) and pressure (dynamic) conditions, leading to the recrystallization and reorganization of original minerals.",
+        "Sedimentary rocks are the chief source of organic fossils and fossil fuels such as coal, petroleum, and natural gas.",
+        "The rock cycle is a continuous geological process through which old rocks are transformed into new metamorphic, igneous, or sedimentary forms."
+      ],
+      "id": "wqltrrf"
+    }
+  ],
+  "enriched": true
+}

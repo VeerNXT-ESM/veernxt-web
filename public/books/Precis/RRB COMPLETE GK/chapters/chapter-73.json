@@ -1,0 +1,146 @@
+{
+  "id": "c46qjbf",
+  "title": "9. Comparison of Rock Types",
+  "order": 73,
+  "blocks": [
+    {
+      "id": "wmrtppt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because all other rock types are directly or indirectly derived from them.",
+      "id": "kp2p3ct"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Characteristic",
+        "Igneous Rocks",
+        "Sedimentary Rocks",
+        "Metamorphic Rocks"
+      ],
+      "rows": [
+        [
+          "Mode of Origin",
+          "Cooling and solidification of magma or lava",
+          "Weathering, deposition, and lithification of sediments",
+          "Recrystallization due to high pressure and temperature"
+        ],
+        [
+          "Presence of Fossils",
+          "Absent",
+          "Present",
+          "Absent (Destroyed during metamorphism)"
+        ],
+        [
+          "Structure & Texture",
+          "Crystalline, massive, non-layered",
+          "Stratified, layered, clastic or non-clastic",
+          "Foliated, lineated, or banded"
+        ],
+        [
+          "Key Examples",
+          "Granite, Basalt, Gabbro, Pumice",
+          "Sandstone, Limestone, Shale, Conglomerate",
+          "Marble, Quartzite, Slate, Gneiss, Schist"
+        ]
+      ],
+      "id": "6rjks1z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Rock Types",
+          "value": "3 Main Classes",
+          "icon": "book"
+        },
+        {
+          "label": "Earth Surface Coverage",
+          "value": "~75% Sedimentary",
+          "icon": "info"
+        },
+        {
+          "label": "Origin Sequence",
+          "value": "Igneous as Parent",
+          "icon": "award"
+        },
+        {
+          "label": "Fossil Preservation",
+          "value": "Sedimentary Only",
+          "icon": "check"
+        }
+      ],
+      "id": "5h0ye8v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fossils are found only in sedimentary rocks; igneous rocks never contain fossils, while metamorphism destroys them.",
+        "Deccan Traps are composed of extrusive igneous basaltic rock, which weathers to form black cotton soil (Regur).",
+        "Common metamorphic pairs frequently asked in exams: Limestone transforms to Marble, Sandstone to Quartzite, Shale to Slate, and Granite to Gneiss."
+      ],
+      "id": "qmvk8of"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are formed by the cooling and crystallization of molten magma or lava and serve as the primary source for all other rock types.",
+        "Sedimentary rocks develop through weathering, erosion, deposition, compaction, and lithification of existing rock fragments or organic matter.",
+        "Metamorphic rocks arise from the alteration of pre-existing rocks under extreme thermal and pressure conditions without complete melting.",
+        "Fossils are exclusively preserved in sedimentary rocks, as the heat and pressure associated with igneous and metamorphic processes destroy organic remains."
+      ],
+      "id": "b56ysl0"
+    }
+  ],
+  "enriched": true
+}

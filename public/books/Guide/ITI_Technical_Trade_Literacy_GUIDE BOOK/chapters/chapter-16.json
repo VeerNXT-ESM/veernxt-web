@@ -1,0 +1,443 @@
+{
+  "id": "b6fi9fu",
+  "title": "Chapter 18 – Types of Current: AC and DC",
+  "order": 16,
+  "blocks": [
+    {
+      "id": "uem78tj",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Direct Current (DC) flows continuously in a single direction with a constant magnitude and zero frequency.",
+        "Alternating Current (AC) periodically reverses its direction and alters its magnitude continuously with time.",
+        "In India, the frequency of domestic AC supply is 50 Hz, meaning current changes direction 100 times per second.",
+        "AC is preferred for long-distance transmission because it can be stepped up or down efficiently using transformers.",
+        "Batteries, solar cells, and thermocouples produce DC, whereas alternators in power plants produce AC."
+      ],
+      "id": "dydvo6b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Indian AC Frequency",
+          "value": "50 Hz",
+          "icon": "clock"
+        },
+        {
+          "label": "US AC Frequency",
+          "value": "60 Hz",
+          "icon": "calendar"
+        },
+        {
+          "label": "DC Frequency",
+          "value": "0 Hz",
+          "icon": "info"
+        },
+        {
+          "label": "Standard Household Voltage",
+          "value": "220 V",
+          "icon": "check"
+        }
+      ],
+      "id": "e5rf72b"
+    },
+    {
+      "type": "paragraph",
+      "id": "79p89in"
+    },
+    {
+      "id": "wbweben",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Direct Current (DC)"
+    },
+    {
+      "type": "paragraph",
+      "id": "j862u4s"
+    },
+    {
+      "id": "p1gnguc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ugissli",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Examples of DC Sources"
+    },
+    {
+      "id": "r0e0avh",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "tspldcr",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Alternating Current (AC)"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7gbl6m"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Direct current flows in one constant direction, whereas alternating current periodically reverses its direction at regular intervals.",
+      "id": "ufqtgfm"
+    },
+    {
+      "id": "f7d7am2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yam28iz",
+      "type": "heading",
+      "level": 2,
+      "content": "5. AC Waveform"
+    },
+    {
+      "type": "paragraph",
+      "id": "ca4vmzt"
+    },
+    {
+      "id": "ynxgzy1",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Terms in AC Waveform"
+    },
+    {
+      "id": "drqvzwr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "royfqtj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Frequency of AC"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Direct Current (DC)",
+        "Alternating Current (AC)"
+      ],
+      "rows": [
+        [
+          "Direction of Flow",
+          "Unidirectional (constant direction)",
+          "Bidirectional (reverses periodically)"
+        ],
+        [
+          "Frequency",
+          "0 Hz",
+          "50 Hz (India) / 60 Hz (USA)"
+        ],
+        [
+          "Long Distance Transmission",
+          "Incurs high energy loss",
+          "Transmitted over long distances with minimal loss using step-up transformers"
+        ],
+        [
+          "Energy Storage",
+          "Can be stored in batteries and electrochemical cells",
+          "Cannot be stored directly; must be converted to DC for storage"
+        ],
+        [
+          "Primary Sources",
+          "Dry cells, solar panels, DC generators",
+          "Nuclear/Thermal/Hydroelectric power plant generators"
+        ]
+      ],
+      "id": "a7zk36z"
+    },
+    {
+      "type": "paragraph",
+      "id": "mrur7hu"
+    },
+    {
+      "type": "paragraph",
+      "id": "ocn7df0"
+    },
+    {
+      "id": "0pva0r0",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Comparison Between AC and DC"
+    },
+    {
+      "id": "d3q1q19",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m5e4bpl",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Applications of AC and DC"
+    },
+    {
+      "id": "xze93zn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i1hydik",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Advantages of AC"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Transformers operate exclusively on AC and cannot function on DC because DC does not produce a changing magnetic flux.",
+        "In a 50 Hz AC cycle, the magnitude of current becomes zero 100 times every second.",
+        "Rectifiers are devices used to convert AC into DC, while inverters convert DC into AC."
+      ],
+      "id": "ifpgdhz"
+    },
+    {
+      "id": "08q61l6",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "acudjwi",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Advantages of DC"
+    },
+    {
+      "id": "apr22f9",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "bwfgie3",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "k4t6e7f",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

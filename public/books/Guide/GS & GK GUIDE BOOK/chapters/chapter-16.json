@@ -1,40 +1,40 @@
 {
-  "id": "ohrfjo9",
+  "id": "als3bfk",
   "title": "Chapter 15: Salient Features of the Indian Constitution",
   "order": 16,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "4xsxt3q"
+      "id": "d0eusk3"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Constitution Type",
-          "value": "Lengthiest Written",
+          "label": "Drafting Duration",
+          "value": "2 yrs 11 mos 18 days",
+          "icon": "clock"
+        },
+        {
+          "label": "Original Articles",
+          "value": "395 Articles",
           "icon": "book"
         },
         {
-          "label": "Form of Govt",
-          "value": "Parliamentary",
-          "icon": "award"
+          "label": "Present Schedules",
+          "value": "12 Schedules",
+          "icon": "calendar"
         },
         {
-          "label": "Citizenship",
-          "value": "Single Citizenship",
+          "label": "Voting Age",
+          "value": "18 Years",
           "icon": "check"
-        },
-        {
-          "label": "Franchise Type",
-          "value": "Universal Adult",
-          "icon": "info"
         }
       ],
-      "id": "03rausp"
+      "id": "jsqwy0r"
     },
     {
-      "id": "glz49v5",
+      "id": "yr42yot",
       "type": "heading",
       "level": 2,
       "content": "1. Lengthiest Written Constitution"
@@ -43,26 +43,26 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Indian Constitution is recognized as the lengthiest written constitution in the world.",
-        "It establishes a federal system with strong unitary features and a parliamentary form of government.",
-        "Guarantees Fundamental Rights, Directive Principles of State Policy, and an Independent Judiciary.",
-        "Promotes a Secular State with Single Citizenship and Universal Adult Franchise.",
-        "Contains specific Emergency Provisions to handle extraordinary situations."
+        "The Indian Constitution is the lengthiest written constitution in the world, originally containing 395 Articles, 22 Parts, and 8 Schedules.",
+        "It establishes a quasi-federal system, blending federal features like division of powers with unitary features like single citizenship and a strong Centre.",
+        "Part III guarantees six Fundamental Rights that are justiciable under Article 32.",
+        "The 42nd Amendment Act (1976) added 'Secular' to the Preamble and is known as the Mini-Constitution.",
+        "The 61st Constitutional Amendment Act (1988) lowered the voting age from 21 to 18 years."
       ],
-      "id": "4f7fq17"
+      "id": "u4supfc"
     },
     {
       "type": "paragraph",
-      "id": "hhil0i6"
+      "id": "at2wb6u"
     },
     {
-      "id": "d21rcni",
+      "id": "dfr3oz4",
       "type": "heading",
       "level": 2,
       "content": "2. Sources of the Indian Constitution"
     },
     {
-      "id": "9novphw",
+      "id": "0g3u5mm",
       "type": "table",
       "rows": [
         {
@@ -138,79 +138,79 @@
       ]
     },
     {
-      "id": "rwnipc1",
+      "id": "vrz3q8j",
       "type": "heading",
       "level": 2,
       "content": "3. Federal System with Unitary Features"
     },
     {
       "type": "paragraph",
-      "id": "f2yeu46"
+      "id": "uy0bmlf"
     },
     {
       "type": "paragraph",
-      "id": "f58bqgp"
+      "id": "bl6napz"
     },
     {
       "type": "paragraph",
-      "id": "r9dj97t"
+      "id": "0khuo15"
     },
     {
-      "id": "snbxlpe",
+      "id": "0ep5y9t",
       "type": "heading",
       "level": 2,
       "content": "4. Parliamentary Form of Government"
     },
     {
       "type": "paragraph",
-      "id": "3see6xf"
+      "id": "uamykvk"
     },
     {
       "type": "paragraph",
-      "id": "gbiqxao"
+      "id": "y9j8ish"
     },
     {
       "type": "paragraph",
-      "id": "t94abmy"
+      "id": "e5d0zyp"
     },
     {
       "type": "pullQuote",
-      "content": "Salient Features of the Indian Constitution",
-      "id": "u131t63"
+      "content": "The Constitution of India is the lengthiest of all the written constitutions of the world.",
+      "id": "3umhhdy"
     },
     {
-      "id": "4c7e2q2",
+      "id": "9k58tan",
       "type": "heading",
       "level": 2,
       "content": "5. Fundamental Rights"
     },
     {
       "type": "paragraph",
-      "id": "vh00jvo"
+      "id": "c3eax5w"
     },
     {
-      "id": "48szj86",
+      "id": "xhmg39t",
       "type": "heading",
       "level": 2,
       "content": "6. Directive Principles of State Policy"
     },
     {
       "type": "paragraph",
-      "id": "8to4y3x"
+      "id": "73el1h5"
     },
     {
-      "id": "hyrxvvn",
+      "id": "t62a4ep",
       "type": "heading",
       "level": 2,
       "content": "7. Independent Judiciary"
     },
     {
       "type": "paragraph",
-      "id": "apualt8"
+      "id": "yn0jt16"
     },
     {
       "type": "paragraph",
-      "id": "moq2qru"
+      "id": "u1jyiun"
     },
     {
       "type": "comparisonTable",
@@ -220,102 +220,107 @@
       ],
       "rows": [
         [
-          "Two Level Government",
-          "Single Citizenship"
+          "Two Governments (Centre and States)",
+          "Single Constitution & Single Citizenship"
         ],
         [
-          "Division of Powers",
-          "Single Integrated Judiciary"
+          "Division of Powers across Three Lists",
+          "Strong Centre with emergency powers"
         ],
         [
-          "Written Constitution",
-          "Emergency Provisions"
+          "Independent Judiciary and Bicameralism",
+          "Integrated Judiciary and All-India Services"
+        ],
+        [
+          "Rigid Constitution & Supremacy of Constitution",
+          "Appointment of State Governors by the Governor/Centre"
         ]
       ],
-      "id": "qoibano"
+      "id": "qolj0ro"
     },
     {
       "type": "paragraph",
-      "id": "mnggu4r"
+      "id": "zw1edrk"
     },
     {
-      "id": "86l51vn",
+      "id": "ennaxg7",
       "type": "heading",
       "level": 2,
       "content": "8. Single Citizenship"
     },
     {
       "type": "paragraph",
-      "id": "q7dhdsz"
+      "id": "mb8g49i"
     },
     {
-      "id": "y8ef4ho",
+      "id": "tup04zu",
       "type": "heading",
       "level": 2,
       "content": "9. Secular State"
     },
     {
       "type": "paragraph",
-      "id": "9kg6auz"
+      "id": "xwfch89"
     },
     {
-      "id": "rl066yk",
+      "id": "85o0hhs",
       "type": "heading",
       "level": 2,
       "content": "10. Universal Adult Franchise"
     },
     {
       "type": "paragraph",
-      "id": "wzwy3c0"
+      "id": "o2zu6qm"
     },
     {
-      "id": "hqn4s9d",
+      "id": "p1a1nhy",
       "type": "heading",
       "level": 2,
       "content": "11. Emergency Provisions"
     },
     {
       "type": "paragraph",
-      "id": "1xby9if"
+      "id": "obnzj0n"
     },
     {
       "type": "paragraph",
-      "id": "stma9lo"
+      "id": "2ctismc"
     },
     {
       "type": "examAlert",
       "items": [
-        "Questions frequently test the various foreign sources from which features of the Indian Constitution were borrowed.",
-        "Differentiate clearly between Federal features (e.g., division of powers) and Unitary features (e.g., single citizenship, emergency provisions).",
-        "Focus on the structure of Fundamental Rights, Directive Principles, and Emergency Provisions for SSC exam facts."
+        "42nd Amendment Act (1976) is known as the 'Mini-Constitution' and inserted the words Socialist, Secular, and Integrity into the Preamble.",
+        "61st Amendment Act (1988) reduced the voting age from 21 to 18 years (effective from 1989).",
+        "44th Amendment Act (1978) removed the Right to Property from the list of Fundamental Rights in Part III.",
+        "K.C. Wheare described the Constitution of India as 'quasi-federal'."
       ],
-      "id": "fomvy7f"
+      "id": "n46jfbp"
     },
     {
       "type": "paragraph",
-      "id": "b7lfux1"
+      "id": "oxxlqtw"
     },
     {
-      "id": "cl63s57",
+      "id": "7vo360o",
       "type": "heading",
       "level": 2,
       "content": "SSC / SSC Exam Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "8yhcevk"
+      "id": "bvtjqbi"
     },
     {
       "type": "paragraph",
-      "id": "bs42dol"
+      "id": "63w5oht"
     },
     {
       "type": "paragraph",
-      "id": "1yrawlx"
+      "id": "otkbidp"
     },
     {
       "type": "paragraph",
-      "id": "pizxwrm"
+      "id": "wibz7f1"
     }
   ],
   "enriched": true

@@ -1,0 +1,139 @@
+{
+  "id": "le4ljmv",
+  "title": "4. Plate Boundaries and Earthquake Generation",
+  "order": 92,
+  "blocks": [
+    {
+      "id": "ilvcmzj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Earthquakes primarily occur along tectonic plate boundaries where accumulated strain energy is abruptly released along fault lines.",
+      "id": "ra0e1ug"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Boundary Types",
+          "value": "3 Primary Types",
+          "icon": "book"
+        },
+        {
+          "label": "Ring of Fire",
+          "value": "90% Earthquakes",
+          "icon": "award"
+        },
+        {
+          "label": "Seismic Waves",
+          "value": "P, S & Surface Waves",
+          "icon": "info"
+        },
+        {
+          "label": "Measurement",
+          "value": "Richter & Mercalli",
+          "icon": "check"
+        }
+      ],
+      "id": "c9qgwcr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Boundary Type",
+        "Plate Motion",
+        "Crustal Effect",
+        "Earthquake Depth"
+      ],
+      "rows": [
+        [
+          "Divergent",
+          "Moving apart",
+          "Constructive (New Crust)",
+          "Shallow Focus"
+        ],
+        [
+          "Convergent",
+          "Colliding together",
+          "Destructive (Subduction/Folding)",
+          "Shallow to Deep Focus"
+        ],
+        [
+          "Transform",
+          "Sliding past horizontally",
+          "Conservative (No Change)",
+          "Shallow Focus"
+        ]
+      ],
+      "id": "h0ky9uc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Divergent boundaries create new oceanic crust at mid-ocean ridges through constructive volcanic activity.",
+        "Convergent boundaries result in crustal destruction, deep-sea trenches, fold mountains, and deep-focus earthquakes.",
+        "Transform boundaries slide past each other laterally, generating conservative shear strain and shallow-focus earthquakes.",
+        "The point within Earth where seismic energy originates is the focus (hypocenter), whereas the surface point directly above it is the epicenter."
+      ],
+      "id": "i7qfudo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate between Focus (underground point of origin) and Epicenter (surface location directly above the focus).",
+        "P-waves can travel through solid, liquid, and gas, while S-waves travel exclusively through solids.",
+        "Deep-focus earthquakes (Benioff zones) are exclusively associated with convergent plate subduction zones."
+      ],
+      "id": "1ps3nbf"
+    },
+    {
+      "type": "paragraph",
+      "id": "szyw5wh"
+    }
+  ],
+  "enriched": true
+}

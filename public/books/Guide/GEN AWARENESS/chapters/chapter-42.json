@@ -1,0 +1,364 @@
+{
+  "id": "7ad80j9",
+  "title": "Chapter 42: National Income",
+  "order": 42,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yab7u8v"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "42",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Metrics",
+          "value": "GDP, GNP, NNP",
+          "icon": "award"
+        },
+        {
+          "label": "Estimation Methods",
+          "value": "3 Approaches",
+          "icon": "check"
+        },
+        {
+          "label": "Core Focus",
+          "value": "India Estimation",
+          "icon": "info"
+        }
+      ],
+      "id": "px8vj6m"
+    },
+    {
+      "id": "gp8rlic",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of National Income"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Gross Domestic Product (GDP) measures the total monetary value of final goods and services produced within a nation's geographical territory.",
+        "Gross National Product (GNP) calculates the total value produced by normal residents, accounting for Net Factor Income from Abroad (NFIA).",
+        "Net National Product (NNP) at Factor Cost is considered the official measure of National Income after accounting for depreciation.",
+        "Three distinct calculation methods exist for National Income: the Value Added (Product) Method, the Income Method, and the Expenditure Method.",
+        "Key limitations in estimating National Income include non-monetary transactions, the informal economy, and double counting."
+      ],
+      "id": "7y37f8d"
+    },
+    {
+      "type": "paragraph",
+      "id": "pxw7jqq"
+    },
+    {
+      "type": "paragraph",
+      "id": "2pe64wd"
+    },
+    {
+      "type": "paragraph",
+      "id": "lxkv6sx"
+    },
+    {
+      "type": "paragraph",
+      "id": "mq6zt5x"
+    },
+    {
+      "id": "aba5sxs",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Important Concepts of National Income"
+    },
+    {
+      "id": "qd6d3qu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v0xda32",
+      "type": "heading",
+      "level": 2,
+      "content": "3. GDP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "b5yfzek"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pu0c3c"
+    },
+    {
+      "type": "paragraph",
+      "id": "iox4l9d"
+    },
+    {
+      "type": "paragraph",
+      "id": "mtombqq"
+    },
+    {
+      "id": "mz697hf",
+      "type": "heading",
+      "level": 2,
+      "content": "4. GNP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "0qak8j5"
+    },
+    {
+      "type": "paragraph",
+      "id": "u8a24by"
+    },
+    {
+      "type": "pullQuote",
+      "content": "National Income Estimation in India",
+      "id": "30nd4rg"
+    },
+    {
+      "type": "paragraph",
+      "id": "osu8c7n"
+    },
+    {
+      "id": "fqgvfi2",
+      "type": "heading",
+      "level": 2,
+      "content": "5. NNP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "vcbgw9p"
+    },
+    {
+      "type": "paragraph",
+      "id": "klbetxz"
+    },
+    {
+      "type": "paragraph",
+      "id": "iu6ww1e"
+    },
+    {
+      "id": "gf79njv",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Methods of Calculating National Income"
+    },
+    {
+      "id": "xhr841r",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3t2bgad",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Components of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "w9yrah6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "GDP (Gross Domestic Product)",
+        "GNP (Gross National Product)"
+      ],
+      "rows": [
+        [
+          "Core Definition",
+          "Total market value of final goods & services produced within domestic boundaries.",
+          "Total value of final goods & services produced by normal residents regardless of location."
+        ],
+        [
+          "Territorial Focus",
+          "Geographical boundary of the country.",
+          "National residents (citizens & domestic entities globally)."
+        ],
+        [
+          "Key Formula",
+          "GDP = C + I + G + (X - M)",
+          "GNP = GDP + Net Factor Income from Abroad (NFIA)"
+        ],
+        [
+          "Impact of Foreign Factor Income",
+          "Excludes income earned by domestic residents abroad.",
+          "Includes Net Factor Income from Abroad (NFIA)."
+        ]
+      ],
+      "id": "ukhae70"
+    },
+    {
+      "type": "paragraph",
+      "id": "waccnfq"
+    },
+    {
+      "type": "paragraph",
+      "id": "u34bslx"
+    },
+    {
+      "type": "paragraph",
+      "id": "dotwujh"
+    },
+    {
+      "id": "3lj2h0f",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "o6kdw9t"
+    },
+    {
+      "type": "paragraph",
+      "id": "uuud8es"
+    },
+    {
+      "type": "paragraph",
+      "id": "xxh9dey"
+    },
+    {
+      "type": "paragraph",
+      "id": "oo34ugo"
+    },
+    {
+      "id": "w2n3bfp",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Limitations of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "tlkwibo"
+    },
+    {
+      "type": "paragraph",
+      "id": "mqpw2ak"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NNP at Factor Cost (NNP_FC) is officially recognized as the National Income of a nation.",
+        "Depreciation must be deducted from Gross aggregates to derive Net aggregates (e.g., GDP - Depreciation = NDP).",
+        "Central Statistics Office (CSO), now under the National Statistical Office (NSO), is the primary agency responsible for National Income estimation in India.",
+        "Transfer payments (like pensions and scholarships) are excluded from National Income calculations as they do not reflect current production."
+      ],
+      "id": "mf33lt9"
+    },
+    {
+      "type": "paragraph",
+      "id": "oerzwos"
+    },
+    {
+      "type": "paragraph",
+      "id": "m0eg6sg"
+    },
+    {
+      "id": "jy0boje",
+      "type": "heading",
+      "level": 2,
+      "content": "10. National Income Estimation in India"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pja799"
+    },
+    {
+      "id": "j5qxuks",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "psbodxk"
+    },
+    {
+      "type": "paragraph",
+      "id": "ii03v2j"
+    },
+    {
+      "type": "paragraph",
+      "id": "yd605hg"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,95 @@
+{
+  "id": "twbyu6g",
+  "title": "9. Time Limit for Filing Cases",
+  "order": 628,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "oqqw5ku"
+    },
+    {
+      "type": "pullQuote",
+      "content": "No consumer forum shall admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.",
+      "id": "c81bvdw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Stage / Forum",
+        "Filing Time Limit",
+        "Next Appellate Authority"
+      ],
+      "rows": [
+        [
+          "Original Complaint (District/State/National)",
+          "2 Years from Cause of Action",
+          "Respective Consumer Commission"
+        ],
+        [
+          "Appeal against District Commission",
+          "45 Days from Order Date",
+          "State Commission"
+        ],
+        [
+          "Appeal against State Commission",
+          "30 Days from Order Date",
+          "National Commission (NCDRC)"
+        ],
+        [
+          "Appeal against National Commission",
+          "45 Days from Order Date",
+          "Supreme Court of India"
+        ]
+      ],
+      "id": "jcof5x6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Complaint Limit",
+          "value": "2 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Appeal to State Commission",
+          "value": "45 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Appeal to National Commission",
+          "value": "30 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Appeal to Supreme Court",
+          "value": "45 Days",
+          "icon": "award"
+        }
+      ],
+      "id": "sqaw1rx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The general limitation period for filing a original consumer complaint is strictly 2 years from the date of cause of action under Section 69 of the Consumer Protection Act, 2019.",
+        "Condonation of delay requires recording reasons in writing by the Commission after satisfying itself with sufficient cause.",
+        "Note the revised appeal window to the State Commission under the CPA 2019 (increased from 30 days under the 1986 Act to 45 days)."
+      ],
+      "id": "cgqvg99"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A consumer complaint must be filed within two years from the date on which the cause of action arises.",
+        "The Consumer Disputes Redressal Commission may entertain a complaint after the two-year limitation period if the complainant demonstrates sufficient cause for the delay.",
+        "An appeal against an order passed by the District Commission must be preferred to the State Commission within a period of 45 days.",
+        "An appeal against an order passed by the State Commission must be preferred to the National Consumer Disputes Redressal Commission (NCDRC) within 30 days.",
+        "Any appeal against the order of the National Commission goes to the Supreme Court of India within 45 days from the date of the order."
+      ],
+      "id": "tsaf4xa"
+    }
+  ],
+  "enriched": true
+}

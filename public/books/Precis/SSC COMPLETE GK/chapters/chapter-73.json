@@ -1,0 +1,344 @@
+{
+  "id": "93u855q",
+  "title": "CHAPTER 3: NATIONAL INCOME",
+  "order": 73,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3jvc6qd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Measurement Methods",
+          "value": "3 Approaches",
+          "icon": "book"
+        },
+        {
+          "label": "Core Aggregates",
+          "value": "GDP, GNP, NDP, NNP",
+          "icon": "check"
+        },
+        {
+          "label": "GDP Measures",
+          "value": "Nominal & Real",
+          "icon": "info"
+        },
+        {
+          "label": "Key Indicator",
+          "value": "Per Capita Income",
+          "icon": "award"
+        }
+      ],
+      "id": "dvkc3ny"
+    },
+    {
+      "id": "1x7q1e1",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: CONCEPT OF NATIONAL INCOME"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "National Income aggregates measure the monetary value of final goods and services produced within or by a nation.",
+        "Gross National Product (GNP) accounts for Net Factor Income from Abroad (NFIA) in addition to Domestic Product (GDP).",
+        "Net Domestic Product (NDP) and Net National Product (NNP) are obtained by deducting Depreciation from Gross figures.",
+        "Market Price (MP) includes Net Indirect Taxes (NIT), whereas Factor Cost (FC) reflects the actual cost of production factors.",
+        "Three distinct methods exist for measuring National Income: Value Added Method, Income Method, and Expenditure Method."
+      ],
+      "id": "qzcsuj0"
+    },
+    {
+      "id": "ilk5tt1",
+      "type": "heading",
+      "level": 3,
+      "content": "1. Meaning of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "dfr2ojd"
+    },
+    {
+      "type": "paragraph",
+      "id": "7qpue7p"
+    },
+    {
+      "id": "l3rf5wq",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: BASIC NATIONAL INCOME AGGREGATES (WITH FORMULAS)"
+    },
+    {
+      "id": "g5xp74q",
+      "type": "heading",
+      "level": 3,
+      "content": "2. Gross Domestic Product (GDP)"
+    },
+    {
+      "type": "paragraph",
+      "id": "tdvsdmb"
+    },
+    {
+      "type": "paragraph",
+      "id": "it86cpp"
+    },
+    {
+      "id": "rdt8b2t",
+      "type": "heading",
+      "level": 3,
+      "content": "3. Gross National Product (GNP)"
+    },
+    {
+      "type": "paragraph",
+      "id": "d29pttp"
+    },
+    {
+      "type": "paragraph",
+      "id": "6rerxp7"
+    },
+    {
+      "id": "u5m1eyz",
+      "type": "heading",
+      "level": 3,
+      "content": "4. Net Domestic Product (NDP)"
+    },
+    {
+      "type": "paragraph",
+      "id": "7gcdlzs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nd8ybxe"
+    },
+    {
+      "id": "vjrw31e",
+      "type": "heading",
+      "level": 3,
+      "content": "5. Net National Product (NNP)"
+    },
+    {
+      "type": "paragraph",
+      "id": "01th42x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vqol3d3"
+    },
+    {
+      "id": "ehep9gs",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: MARKET PRICE AND FACTOR COST (FORMULA BASED)"
+    },
+    {
+      "type": "pullQuote",
+      "content": "SSC ULTRA FINAL REVISION FORMULAS",
+      "id": "3dmaq8h"
+    },
+    {
+      "id": "0bwmhxl",
+      "type": "heading",
+      "level": 3,
+      "content": "6. Market Price"
+    },
+    {
+      "type": "paragraph",
+      "id": "vqwr4w6"
+    },
+    {
+      "id": "o7n9klt",
+      "type": "heading",
+      "level": 3,
+      "content": "7. Factor Cost"
+    },
+    {
+      "type": "paragraph",
+      "id": "iqwqovs"
+    },
+    {
+      "type": "paragraph",
+      "id": "xb08kr2"
+    },
+    {
+      "id": "twxtxvw",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: REAL GDP, NOMINAL GDP & GDP DEFLATOR"
+    },
+    {
+      "id": "jsttwi9",
+      "type": "heading",
+      "level": 3,
+      "content": "8. Nominal GDP"
+    },
+    {
+      "type": "paragraph",
+      "id": "w1v6dvd"
+    },
+    {
+      "id": "epjfndq",
+      "type": "heading",
+      "level": 3,
+      "content": "9. Real GDP"
+    },
+    {
+      "type": "paragraph",
+      "id": "4fho8yf"
+    },
+    {
+      "id": "bi415dv",
+      "type": "heading",
+      "level": 3,
+      "content": "10. GDP Deflator"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Nominal GDP",
+        "Real GDP"
+      ],
+      "rows": [
+        [
+          "Price Valuation",
+          "Current market prices",
+          "Constant base-year prices"
+        ],
+        [
+          "Inflation Impact",
+          "Reflects both price changes and quantity changes",
+          "Reflects only physical output volume changes"
+        ],
+        [
+          "Economic Indicator",
+          "Can give a false picture of growth during high inflation",
+          "True measure of economic performance and growth"
+        ]
+      ],
+      "id": "7om8949"
+    },
+    {
+      "type": "paragraph",
+      "id": "bcdtkje"
+    },
+    {
+      "type": "paragraph",
+      "id": "7zvh8m5"
+    },
+    {
+      "id": "0rd1vqv",
+      "type": "heading",
+      "level": 2,
+      "content": "PART E: PER CAPITA INCOME (FORMULA)"
+    },
+    {
+      "id": "09om7a2",
+      "type": "heading",
+      "level": 3,
+      "content": "11. Meaning of Per Capita Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "lm8pwge"
+    },
+    {
+      "type": "paragraph",
+      "id": "b1o2ngd"
+    },
+    {
+      "id": "dljxjd2",
+      "type": "heading",
+      "level": 2,
+      "content": "PART F: METHODS OF MEASURING NATIONAL INCOME (FORMULAS)"
+    },
+    {
+      "id": "2513816",
+      "type": "heading",
+      "level": 3,
+      "content": "12. Product (Value Added) Method"
+    },
+    {
+      "type": "paragraph",
+      "id": "bdp243n"
+    },
+    {
+      "id": "1zumhna",
+      "type": "heading",
+      "level": 3,
+      "content": "13. Income Method"
+    },
+    {
+      "type": "paragraph",
+      "id": "12tttrf"
+    },
+    {
+      "type": "paragraph",
+      "id": "9xun55h"
+    },
+    {
+      "id": "uu3wzxh",
+      "type": "heading",
+      "level": 3,
+      "content": "14. Expenditure Method"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "GDP Deflator formula: (Nominal GDP / Real GDP) × 100 — frequently asked in inflation and national accounting questions.",
+        "Factor Cost = Market Price - Indirect Taxes + Subsidies (FC = MP - NIT).",
+        "Real GDP is evaluated at constant base-year prices, making it the true metric for economic growth without inflationary distortions."
+      ],
+      "id": "8ryu2lb"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ijfsyc"
+    },
+    {
+      "type": "paragraph",
+      "id": "622g46m"
+    },
+    {
+      "id": "ih65eyh",
+      "type": "heading",
+      "level": 2,
+      "content": "PART G: IMPORTANCE & LIMITATIONS"
+    },
+    {
+      "id": "7v6qgtj",
+      "type": "heading",
+      "level": 3,
+      "content": "15. Importance of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "qml67b9"
+    },
+    {
+      "id": "19tu3bb",
+      "type": "heading",
+      "level": 3,
+      "content": "16. Limitations of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "b63t5yv"
+    },
+    {
+      "id": "fi255v9",
+      "type": "heading",
+      "level": 3,
+      "content": "SSC ULTRA FINAL REVISION FORMULAS"
+    },
+    {
+      "type": "paragraph",
+      "id": "nivjeo9"
+    }
+  ],
+  "enriched": true
+}

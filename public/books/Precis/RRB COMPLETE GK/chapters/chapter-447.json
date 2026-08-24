@@ -1,0 +1,95 @@
+{
+  "id": "u48vety",
+  "title": "4. Removal of Members",
+  "order": 447,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "mau7qum"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chairman or any other member of a Public Service Commission shall only be removed from his office by order of the President on the ground of proved misbehaviour after the Supreme Court inquiry.",
+      "id": "ysri9g9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature / Parameter",
+        "UPSC Members",
+        "SPSC Members"
+      ],
+      "rows": [
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Suspension Pending Inquiry",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Inquiry Body for Misbehaviour",
+          "Supreme Court of India",
+          "Supreme Court of India"
+        ]
+      ],
+      "id": "7laobcx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 317",
+          "icon": "book"
+        },
+        {
+          "label": "Removing Authority",
+          "value": "President of India",
+          "icon": "award"
+        },
+        {
+          "label": "Inquiry Authority",
+          "value": "Supreme Court",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Ground",
+          "value": "Proved Misbehaviour",
+          "icon": "info"
+        }
+      ],
+      "id": "d688hg1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: The Governor appoints State PSC members, but ONLY the President can remove them.",
+        "The Supreme Court's report and advice during the removal inquiry under Article 317 is strictly binding on the President.",
+        "Pending the Supreme Court inquiry, the Governor can suspend an SPSC member, whereas the President suspends a UPSC member."
+      ],
+      "id": "ak1j85n"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Members of both Central and State Public Service Commissions can only be removed from office by the President of India.",
+        "Although the Governor appoints members of a State Public Service Commission, the Governor has no power to remove them.",
+        "Removal on grounds of proved misbehaviour requires a mandatory reference to and inquiry by the Supreme Court.",
+        "The advice tendered by the Supreme Court following an inquiry under Article 317 is binding on the President.",
+        "Other grounds for removal include insolvency, engaging in paid employment outside duties, or infirmity of mind or body."
+      ],
+      "id": "w2zxqqi"
+    }
+  ],
+  "enriched": true
+}

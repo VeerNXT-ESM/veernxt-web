@@ -1,0 +1,129 @@
+{
+  "id": "k00y3j2",
+  "title": "7. Securities Appellate Tribunal (SAT)",
+  "order": 675,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dct3jmy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Securities Appellate Tribunal is a statutory body established under the provisions of Section 15K of the Securities and Exchange Board of India Act, 1992.",
+      "id": "v85wg4h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "SEBI Act, 1992",
+          "icon": "book"
+        },
+        {
+          "label": "Appeal Period to SAT",
+          "value": "45 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Appeal to Supreme Court",
+          "value": "60 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Jurisdiction",
+          "value": "Pan-India",
+          "icon": "info"
+        }
+      ],
+      "id": "jq9g9b8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "SEBI",
+        "SAT"
+      ],
+      "rows": [
+        [
+          "Nature of Body",
+          "Regulatory & Adjudicating Body",
+          "Appellate Tribunal (Judicial)"
+        ],
+        [
+          "Jurisdiction",
+          "Securities Market Regulations",
+          "Appeals against SEBI, IRDAI & PFRDA orders"
+        ],
+        [
+          "Appeal Forum",
+          "Appeals go to SAT",
+          "Appeals go to the Supreme Court"
+        ],
+        [
+          "Limitation Period",
+          "N/A",
+          "45 Days to file appeal"
+        ]
+      ],
+      "id": "lhs9mk5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Securities Appellate Tribunal (SAT) is a statutory body established under Section 15K of the SEBI Act, 1992.",
+        "SAT hears appeals against orders passed by SEBI, IRDAI, and PFRDA.",
+        "The Presiding Officer of SAT is appointed by the Central Government in consultation with the Chief Justice of India.",
+        "SAT exercises powers equivalent to a Civil Court under the Code of Civil Procedure, 1908, and is guided by the principles of natural justice.",
+        "An appeal against the decision or order of SAT lies exclusively to the Supreme Court of India on questions of law."
+      ],
+      "id": "g65qeiw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Appeals against orders of SEBI, IRDAI, or PFRDA must be filed before SAT within 45 days from the date of receipt of the order.",
+        "Further appeal against SAT orders lies directly to the Supreme Court of India within 60 days, limited strictly to questions of law.",
+        "SAT is not bound by the procedure laid down by the Code of Civil Procedure, 1908, but is guided by principles of natural justice."
+      ],
+      "id": "5fn3ka3"
+    },
+    {
+      "id": "y01f1eg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

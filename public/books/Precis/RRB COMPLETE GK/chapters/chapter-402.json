@@ -1,0 +1,95 @@
+{
+  "id": "3a89n22",
+  "title": "8. Tenure and Dissolution",
+  "order": 402,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "jcohtee"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Rajya Sabha is a permanent body and not subject to dissolution, whereas the Lok Sabha is not a permanent body and its normal term is five years.",
+      "id": "8gs9wv6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lok Sabha",
+        "Rajya Sabha"
+      ],
+      "rows": [
+        [
+          "Nature of Chamber",
+          "Temporary (Subject to Dissolution)",
+          "Permanent Body (Not Subject to Dissolution)"
+        ],
+        [
+          "Normal Tenure",
+          "5 years from first meeting",
+          "6 years (per individual member)"
+        ],
+        [
+          "Dissolution Authority",
+          "President of India",
+          "N/A (Cannot be dissolved)"
+        ],
+        [
+          "Retirement Pattern",
+          "Entire House dissolves at once",
+          "1/3rd of members retire every 2nd year"
+        ]
+      ],
+      "id": "kblztuw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Lok Sabha Term",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Rajya Sabha Status",
+          "value": "Permanent Body",
+          "icon": "check"
+        },
+        {
+          "label": "RS Member Tenure",
+          "value": "6 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Emergency Extension",
+          "value": "1 Year at a time",
+          "icon": "info"
+        }
+      ],
+      "id": "hyi7w4t"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An extension of Lok Sabha's tenure during a National Emergency cannot continue beyond a period of six months after the Emergency has ceased to operate.",
+        "The power to dissolve the Lok Sabha rests with the President, acting on the advice of the Council of Ministers.",
+        "The Constitution itself did not fix the tenure of Rajya Sabha members; it was determined by the Representation of the People Act, 1951."
+      ],
+      "id": "7mc5xey"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lok Sabha is not a permanent body, and its normal term is five years from the date of its first meeting.",
+        "The President is authorized to dissolve the Lok Sabha at any time even before the completion of five years.",
+        "During a National Emergency, the term of Lok Sabha can be extended by Parliament for one year at a time.",
+        "Rajya Sabha is a permanent body and is not subject to dissolution, with one-third of its members retiring every second year.",
+        "The Constitution did not fix the tenure of Rajya Sabha members, leaving it to Parliament, which specified six years under the Representation of the People Act, 1951."
+      ],
+      "id": "qjnyr83"
+    }
+  ],
+  "enriched": true
+}

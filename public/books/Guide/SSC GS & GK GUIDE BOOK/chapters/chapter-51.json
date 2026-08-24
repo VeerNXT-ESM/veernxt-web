@@ -1,0 +1,286 @@
+{
+  "id": "2zhktl1",
+  "title": "Chapter 2: Force and Work",
+  "order": 51,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ybjsopn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Force",
+          "value": "Newton (N)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Work",
+          "value": "Joule (J)",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "clock"
+        },
+        {
+          "label": "1 Horsepower",
+          "value": "746 Watts",
+          "icon": "check"
+        }
+      ],
+      "id": "zymwv2r"
+    },
+    {
+      "id": "k0khd2l",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Force"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Force is an external push or pull that changes or tends to change the state of rest or uniform motion of a body.",
+        "Work is defined as the scalar product of force and displacement (W = F × s × cos θ).",
+        "Work can be positive, negative, or zero depending on the angle between the applied force and the direction of displacement.",
+        "Power is the time rate of doing work (P = W / t), measured in Watts or Horsepower.",
+        "Newton's First Law introduces inertia, the Second Law gives the formula F = ma, and the Third Law states action and reaction are equal and opposite."
+      ],
+      "id": "djytt5u"
+    },
+    {
+      "type": "paragraph",
+      "id": "wr36mdo"
+    },
+    {
+      "type": "paragraph",
+      "id": "nuu4aib"
+    },
+    {
+      "type": "paragraph",
+      "id": "tj3k3hr"
+    },
+    {
+      "type": "paragraph",
+      "id": "74bgq5l"
+    },
+    {
+      "id": "mkapt75",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Effects of Force"
+    },
+    {
+      "type": "paragraph",
+      "id": "1r4y7p5"
+    },
+    {
+      "type": "paragraph",
+      "id": "aotvows"
+    },
+    {
+      "type": "paragraph",
+      "id": "m3396ga"
+    },
+    {
+      "type": "paragraph",
+      "id": "zj7ghlv"
+    },
+    {
+      "id": "wwf37eg",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Force"
+    },
+    {
+      "id": "9ig2ty6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2lx9u3o",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Newton’s Laws of Motion"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Work is done when a force applied on a body produces displacement in the direction of the force.",
+      "id": "sxrk8qc"
+    },
+    {
+      "type": "paragraph",
+      "id": "wpogsjc"
+    },
+    {
+      "type": "paragraph",
+      "id": "uyohe0f"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0gr6y3"
+    },
+    {
+      "type": "paragraph",
+      "id": "cc6x1qf"
+    },
+    {
+      "type": "paragraph",
+      "id": "9sl5gc2"
+    },
+    {
+      "type": "paragraph",
+      "id": "keiw6ex"
+    },
+    {
+      "id": "bt4fiq5",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Meaning of Work"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Work",
+        "Angle (θ)",
+        "Key Condition",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Positive Work",
+          "0° ≤ θ < 90°",
+          "Force and displacement are in the same direction",
+          "A body pulled along a horizontal floor"
+        ],
+        [
+          "Negative Work",
+          "90° < θ ≤ 180°",
+          "Force opposes the direction of displacement",
+          "Work done by friction force on a moving vehicle"
+        ],
+        [
+          "Zero Work",
+          "θ = 90° or s = 0",
+          "Force is perpendicular to displacement or displacement is zero",
+          "A person standing still holding a heavy box"
+        ]
+      ],
+      "id": "d8o05bc"
+    },
+    {
+      "type": "paragraph",
+      "id": "qeja4aw"
+    },
+    {
+      "id": "773x48w",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Formula of Work"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b8v6k5n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iwhuan4"
+    },
+    {
+      "id": "rdchx2l",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Work"
+    },
+    {
+      "type": "paragraph",
+      "id": "xlegjse"
+    },
+    {
+      "type": "paragraph",
+      "id": "la44sq4"
+    },
+    {
+      "type": "paragraph",
+      "id": "koxsa46"
+    },
+    {
+      "id": "qz7ezhu",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "6z7ef0t"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "If a porter holds luggage on his head and walks horizontally on a platform, the work done against gravity is zero because the force and displacement are perpendicular (θ = 90°).",
+        "Newton's First Law of Motion is frequently asked as the 'Law of Inertia'.",
+        "Centripetal force acts towards the center in a circular path, whereas centrifugal force is a pseudo-force acting outwards.",
+        "1 Horsepower (HP) is equal to 746 W, a standard conversion repeatedly tested in RRB, SSC, and state PSC exams."
+      ],
+      "id": "0eroauc"
+    },
+    {
+      "type": "paragraph",
+      "id": "ky9dcej"
+    },
+    {
+      "type": "paragraph",
+      "id": "1hewewm"
+    },
+    {
+      "id": "1gg46ha",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "bleu7hc"
+    },
+    {
+      "type": "paragraph",
+      "id": "8z88r5f"
+    },
+    {
+      "type": "paragraph",
+      "id": "wm19107"
+    },
+    {
+      "type": "paragraph",
+      "id": "itd573n"
+    }
+  ],
+  "enriched": true
+}

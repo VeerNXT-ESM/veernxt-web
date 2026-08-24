@@ -1,0 +1,95 @@
+{
+  "id": "sid04sv",
+  "title": "12. Election of the Vice President",
+  "order": 309,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ubmuxek"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Vice-President, like the President, is elected not directly by the people but by the method of indirect election.",
+      "id": "hiv745a"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Presidential Election",
+        "Vice-Presidential Election"
+      ],
+      "rows": [
+        [
+          "Nominated MPs",
+          "Excluded from Electoral College",
+          "Included in Electoral College"
+        ],
+        [
+          "State MLAs",
+          "Elected members participate",
+          "Do not participate at all"
+        ],
+        [
+          "System of Voting",
+          "Proportional representation via single transferable vote",
+          "Proportional representation via single transferable vote"
+        ],
+        [
+          "Dispute Adjudication",
+          "Supreme Court of India",
+          "Supreme Court of India"
+        ]
+      ],
+      "id": "4n5krs5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 66",
+          "icon": "book"
+        },
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Minimum Age",
+          "value": "35 Years",
+          "icon": "check"
+        },
+        {
+          "label": "Electoral College",
+          "value": "Both Houses of Parliament",
+          "icon": "info"
+        }
+      ],
+      "id": "rjm3yna"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Unlike the Presidential election, nominated members of Parliament participate in the election of the Vice-President.",
+        "Members of State Legislative Assemblies (MLAs) do NOT participate in the Vice-Presidential election.",
+        "Actions taken by the Vice-President before their election is declared void by the Supreme Court remain valid and effective."
+      ],
+      "id": "qobd3g5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Vice-President is elected indirectly by an electoral college consisting of members of both Houses of Parliament.",
+        "The electoral college includes both elected and nominated members of Parliament.",
+        "State Legislative Assemblies do not participate in the election of the Vice-President.",
+        "The election is held in accordance with the system of proportional representation by means of the single transferable vote via secret ballot.",
+        "All disputes regarding the Vice-Presidential election are inquired into and decided by the Supreme Court of India, whose decision is final."
+      ],
+      "id": "g8nl111"
+    }
+  ],
+  "enriched": true
+}

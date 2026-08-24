@@ -1,0 +1,106 @@
+{
+  "id": "hd966qn",
+  "title": "6. Oath and Tenure",
+  "order": 350,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9szz85t"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Every person entering upon a constitutional office shall, before taking his seat, make and subscribe an oath or affirmation according to the form set out for the purpose.",
+      "id": "93qldjq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Post",
+        "Oath Administered By",
+        "Tenure / Retirement Age",
+        "Resignation Addressed To"
+      ],
+      "rows": [
+        [
+          "President",
+          "Chief Justice of India",
+          "5 Years",
+          "Vice-President"
+        ],
+        [
+          "Vice-President",
+          "President",
+          "5 Years",
+          "President"
+        ],
+        [
+          "Governor",
+          "Chief Justice of High Court",
+          "5 Years (Pleasure of President)",
+          "President"
+        ],
+        [
+          "Supreme Court Judge",
+          "President",
+          "Up to age 65",
+          "President"
+        ],
+        [
+          "CAG of India",
+          "President",
+          "6 Years or Age 65",
+          "President"
+        ]
+      ],
+      "id": "b007wz1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Presidential Term",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "CAG & UPSC Term",
+          "value": "6 Yrs / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "SC Judge Max Age",
+          "value": "65 Years",
+          "icon": "award"
+        },
+        {
+          "label": "Oaths Schedule",
+          "value": "3rd Schedule",
+          "icon": "book"
+        }
+      ],
+      "id": "34wsca2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Third Schedule Exception: Oaths of the President, Vice-President, and Governors are NOT listed under the 3rd Schedule.",
+        "Oath Cross-Verification: The Chief Justice of India administers the oath to the President, while the President administers the oath to the CJI.",
+        "Pleasure Doctrine: The Governor and Attorney General hold office during the pleasure of the President and lack fixed security of tenure."
+      ],
+      "id": "07zehbt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President takes an oath to preserve, protect, and defend the Constitution, administered by the Chief Justice of India.",
+        "Oaths for the President (Art. 60), Vice-President (Art. 69), and Governor (Art. 159) are specified in their respective articles, not in the Third Schedule.",
+        "The Governor holds office during the pleasure of the President, with a customary tenure of 5 years.",
+        "Supreme Court judges hold office until 65 years of age, whereas High Court judges hold office until 62 years of age.",
+        "The CAG and UPSC members serve for a term of 6 years or until the age of 65 years, whichever is earlier."
+      ],
+      "id": "ikb9bi6"
+    }
+  ],
+  "enriched": true
+}

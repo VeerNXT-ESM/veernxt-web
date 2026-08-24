@@ -1,0 +1,151 @@
+{
+  "id": "6h5e09x",
+  "title": "4. Types of Volcanic Eruptions",
+  "order": 107,
+  "blocks": [
+    {
+      "id": "fo7uz1k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Plinian eruptions are the most explosive and dangerous type of volcanic eruption, capable of sending ash columns high into the stratosphere.",
+      "id": "cjuz5iq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Eruption Type",
+        "Lava Type & Viscosity",
+        "Explosivity Level",
+        "Characteristic Feature"
+      ],
+      "rows": [
+        [
+          "Hawaiian",
+          "Basic / Basaltic (Low Viscosity)",
+          "Non-explosive to Very Low",
+          "Gentle lava fountains and broad shield volcano formation"
+        ],
+        [
+          "Strombolian",
+          "Basaltic-Andesitic (Medium Viscosity)",
+          "Mild to Moderate",
+          "Rhythmic bursts of lava bombs and glowing cinders"
+        ],
+        [
+          "Vulcanian",
+          "Andesitic (High Viscosity)",
+          "Moderate to High Explosive",
+          "Cauliflower-shaped ash clouds resulting from cleared conduit plugs"
+        ],
+        [
+          "Plinian",
+          "Rhyolitic / Felsic (Very High Viscosity)",
+          "Extremely Violent (VEI 5–8)",
+          "Colossal stratospheric ash columns and catastrophic pyroclastic flows"
+        ]
+      ],
+      "id": "etemhfu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Eruption Types",
+          "value": "6 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "VEI Scale Range",
+          "value": "0 to 8",
+          "icon": "award"
+        },
+        {
+          "label": "Most Violent Type",
+          "value": "Plinian",
+          "icon": "clock"
+        },
+        {
+          "label": "Quiet Eruption Lava",
+          "value": "Basaltic Lava",
+          "icon": "check"
+        }
+      ],
+      "id": "v2q7obg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Silica content and lava viscosity are frequently tested: High silica (felsic) lava causes violent explosions, while low silica (mafic) lava yields gentle flows.",
+        "Fissure eruptions (Basalt Plateau eruptions) formed the Deccan Traps in India, a favorite topic in Geography Prelims.",
+        "Differentiate between Vulcanian and Plinian types: Plinian eruptions produce sustained stratospheric ash columns and deadly pyroclastic density currents."
+      ],
+      "id": "o3fdv4f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Hawaiian eruptions are the least explosive, featuring low-viscosity basaltic lava that flows smoothly over large distances.",
+        "Strombolian eruptions feature mild, frequent bursts of incandescent lava bombs and scoria, earning Mount Stromboli the moniker 'Lighthouse of the Mediterranean'.",
+        "Vulcanian eruptions are explosive releases of viscous magma that blow out hardened lava plugs, producing dark, ash-laden eruption clouds.",
+        "Pelean and Plinian eruptions represent the most violent eruption styles, characterized by pyroclastic flows and eruption columns reaching deep into the stratosphere.",
+        "The Volcanic Explosivity Index (VEI) measures the volume of pyroclastic material, cloud height, and explosion intensity on a logarithmic scale from 0 to 8."
+      ],
+      "id": "rce00zb"
+    }
+  ],
+  "enriched": true
+}

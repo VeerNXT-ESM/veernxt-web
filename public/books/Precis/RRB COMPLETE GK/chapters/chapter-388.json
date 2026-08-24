@@ -1,0 +1,100 @@
+{
+  "id": "elhilmx",
+  "title": "10. Legislative Procedure in State Legislature",
+  "order": 388,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lskcdyj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The ultimate power of passing an ordinary bill resides with the Legislative Assembly, and the Legislative Council can at most delay its passage.",
+      "id": "q98nwcp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Ordinary Bill",
+        "Money Bill"
+      ],
+      "rows": [
+        [
+          "House of Origin",
+          "Either Legislative Assembly or Legislative Council",
+          "Legislative Assembly only"
+        ],
+        [
+          "Governor's Recommendation",
+          "Not required prior to introduction",
+          "Mandatory prior to introduction"
+        ],
+        [
+          "Powers of Legislative Council",
+          "Can amend, reject, or delay up to 4 months",
+          "Cannot amend or reject; can delay max 14 days"
+        ],
+        [
+          "Deadlock Resolution",
+          "Assembly overrides Council; no joint sitting",
+          "Assembly overrides Council; no joint sitting"
+        ],
+        [
+          "Governor's Reconsideration Power",
+          "Can return once for reconsideration",
+          "Cannot return for reconsideration"
+        ]
+      ],
+      "id": "kep1pgz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max Council Delay (Ordinary Bill)",
+          "value": "4 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "Max Council Delay (Money Bill)",
+          "value": "14 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governor Alternatives (Art. 200)",
+          "value": "4 Options",
+          "icon": "check"
+        },
+        {
+          "label": "Constitutional Articles",
+          "value": "196 to 207",
+          "icon": "book"
+        }
+      ],
+      "id": "epdmd3e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "There is NO provision for a joint sitting of both Houses of the State Legislature to resolve a deadlock over a bill, unlike at the Union level.",
+        "The Legislative Assembly can override the Legislative Council's amendments or rejection of an ordinary bill by passing it a second time.",
+        "When a bill is reserved by the Governor for the consideration of the President, the Governor drops out of the legislative process and has no further role."
+      ],
+      "id": "cc1erf2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "An ordinary bill can originate in either the Legislative Assembly or the Legislative Council of a state.",
+        "The Legislative Council possesses only suspensive delay powers and can delay an ordinary bill for a maximum period of 4 months (3 months in the first instance and 1 month in the second instance).",
+        "A Money Bill can be introduced only in the Legislative Assembly and only on the prior recommendation of the Governor.",
+        "The Legislative Council has no power to reject or amend a Money Bill and must return it within 14 days with or without recommendations.",
+        "Under Article 200, when a bill is passed by the state legislature, the Governor can give assent, withhold assent, return the bill for reconsideration, or reserve it for the consideration of the President."
+      ],
+      "id": "rgil982"
+    }
+  ],
+  "enriched": true
+}

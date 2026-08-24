@@ -1,0 +1,89 @@
+{
+  "id": "6ng2kz9",
+  "title": "5. Appointment Committee (EXTREMELY IMPORTANT)",
+  "order": 640,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "zk96iyk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Appointments Committee of the Cabinet is chaired by the Prime Minister and decides all top-level administrative and institutional appointments.",
+      "id": "k367clz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Appointments Committee of the Cabinet (ACC)",
+        "Cabinet Committee on Parliamentary Affairs (CCPA)"
+      ],
+      "rows": [
+        [
+          "Chairman",
+          "Prime Minister",
+          "Minister of Home Affairs"
+        ],
+        [
+          "Primary Mandate",
+          "Top bureaucratic and institutional appointments",
+          "Progress of government business in Parliament"
+        ],
+        [
+          "Nature",
+          "Standing Cabinet Committee",
+          "Standing Cabinet Committee"
+        ]
+      ],
+      "id": "du706s0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chairman",
+          "value": "Prime Minister",
+          "icon": "award"
+        },
+        {
+          "label": "Key Member",
+          "value": "Home Minister",
+          "icon": "user"
+        },
+        {
+          "label": "Status",
+          "value": "Extra-Constitutional",
+          "icon": "info"
+        },
+        {
+          "label": "Governing Rules",
+          "value": "GoI Rules 1961",
+          "icon": "calendar"
+        }
+      ],
+      "id": "wzsf5fd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always remember that the Prime Minister chairs the ACC, whereas the Cabinet Committee on Parliamentary Affairs is chaired by the Home Minister.",
+        "Cabinet Committees are extra-constitutional in nature; they are not explicitly mentioned in the Constitution of India.",
+        "Proposals for appointments originate from the respective ministries but require final approval from the ACC."
+      ],
+      "id": "hqoqaul"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Appointments Committee of the Cabinet (ACC) is chaired by the Prime Minister of India.",
+        "The Minister of Home Affairs serves as the other principal member of this committee.",
+        "It makes final decisions on top-level appointments in the Central Secretariat, Public Sector Undertakings, Financial Institutions, and the Reserve Bank of India.",
+        "Cabinet Committees are extra-constitutional bodies created under the Government of India Transaction of Business Rules, 1961."
+      ],
+      "id": "8i5grj9"
+    }
+  ],
+  "enriched": true
+}

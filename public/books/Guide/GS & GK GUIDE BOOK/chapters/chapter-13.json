@@ -1,10 +1,10 @@
 {
-  "id": "tdy2ana",
+  "id": "ivum9bb",
   "title": "Chapter 13 : Important Congress Sessions and Governor-Generals & Viceroys",
   "order": 13,
   "blocks": [
     {
-      "id": "tiw6fmc",
+      "id": "oc6m76u",
       "type": "heading",
       "level": 2,
       "content": "1. Important Sessions of the Indian National Congress"
@@ -13,35 +13,41 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The tenure of Governor-Generals of India spanned from 1773 to 1858.",
-        "The Viceroys of India represented the British administration from 1858 to 1947.",
-        "Key Indian National Congress sessions and associated facts are critical components for SSC competitive exams."
+        "The administration of British India transitioned from East India Company control under Governor-Generals (1773–1858) to direct British Crown control under Viceroys (1858–1947).",
+        "The Indian National Congress was founded in 1885, establishing a platform for annual national political sessions across India.",
+        "The Regulating Act of 1773 created the office of Governor-General of Bengal, which evolved into Governor-General of India with the Charter Act of 1833.",
+        "The Government of India Act 1858 formally introduced the title of Viceroy of India to represent the British monarch directly."
       ],
-      "id": "kaxw4kj"
+      "id": "9q4tswb"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Governor-Generals Era",
+          "label": "Company Rule Era",
           "value": "1773–1858",
           "icon": "calendar"
         },
         {
-          "label": "Viceroys Era",
+          "label": "Crown Rule Era",
           "value": "1858–1947",
-          "icon": "calendar"
+          "icon": "clock"
         },
         {
-          "label": "Focus Area",
+          "label": "INC Foundation",
+          "value": "1885",
+          "icon": "book"
+        },
+        {
+          "label": "Focus Topic",
           "value": "SSC Exam Facts",
           "icon": "award"
         }
       ],
-      "id": "ex4md90"
+      "id": "zhmkijn"
     },
     {
-      "id": "0g34il1",
+      "id": "dr9wm6c",
       "type": "table",
       "rows": [
         {
@@ -151,18 +157,18 @@
       ]
     },
     {
-      "id": "qno7v8p",
+      "id": "3q9itq2",
       "type": "heading",
       "level": 2,
       "content": "2. Governor‑Generals of India (1773–1858)"
     },
     {
       "type": "pullQuote",
-      "content": "Governor‑Generals of India (1773–1858)",
-      "id": "8zvwdyl"
+      "content": "Important Sessions of the Indian National Congress",
+      "id": "k7861u4"
     },
     {
-      "id": "zhueppf",
+      "id": "w0jomob",
       "type": "table",
       "rows": [
         {
@@ -217,13 +223,13 @@
       ]
     },
     {
-      "id": "9507bfq",
+      "id": "can2ygo",
       "type": "heading",
       "level": 2,
       "content": "3. Viceroys of India (1858–1947)"
     },
     {
-      "id": "p4m947q",
+      "id": "bqoqu2d",
       "type": "table",
       "rows": [
         {
@@ -294,54 +300,63 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Administration Title",
-        "Time Period"
+        "Aspect",
+        "Governor-Generals of India (1773–1858)",
+        "Viceroys of India (1858–1947)"
       ],
       "rows": [
         [
-          "Governor‑Generals of India",
-          "1773–1858"
+          "Ruling Entity",
+          "British East India Company (EIC)",
+          "British Crown / Imperial Government"
         ],
         [
-          "Viceroys of India",
-          "1858–1947"
+          "First Administrator",
+          "Warren Hastings (Bengal, 1773) / Lord William Bentinck (India, 1833)",
+          "Lord Canning (1858)"
+        ],
+        [
+          "Governing Legislation",
+          "Regulating Act 1773 & Charter Acts (1793–1853)",
+          "Government of India Acts (1858, 1919, 1935)"
         ]
       ],
-      "id": "6gfz9s6"
+      "id": "8oveq76"
     },
     {
-      "id": "l4uf0yp",
+      "id": "o2mtkkk",
       "type": "heading",
       "level": 2,
       "content": "SSC Exam Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "7djtdiq"
+      "id": "m4b56u7"
     },
     {
       "type": "paragraph",
-      "id": "r80b6mu"
+      "id": "zb7gpxn"
     },
     {
       "type": "examAlert",
       "items": [
-        "Questions frequently distinguish between the Governor-General era (1773–1858) and the Viceroy era (1858–1947).",
-        "Important sessions of the Indian National Congress and SSC Exam facts are heavily tested."
+        "Lord William Bentinck became the first Governor-General of India through the Charter Act of 1833.",
+        "Lord Canning served as both the last Governor-General under company rule and the first Viceroy of India in 1858.",
+        "Womesh Chandra Bonnerjee presided over the first INC session at Bombay in December 1885, attended by 72 delegates."
       ],
-      "id": "p0nt90o"
+      "id": "rrknlji"
     },
     {
       "type": "paragraph",
-      "id": "ai4rvk5"
+      "id": "g4a1trk"
     },
     {
       "type": "paragraph",
-      "id": "ehrs2ml"
+      "id": "gxibiwy"
     },
     {
       "type": "paragraph",
-      "id": "vj5xgo7"
+      "id": "8qyk86k"
     }
   ],
   "enriched": true

@@ -1,0 +1,447 @@
+{
+  "id": "7maixlr",
+  "title": "Chapter 31: Interior of the Earth",
+  "order": 32,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "24ovzxu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Radius",
+          "value": "6,371 km",
+          "icon": "globe"
+        },
+        {
+          "label": "Major Layers",
+          "value": "3 (Crust, Mantle, Core)",
+          "icon": "layers"
+        },
+        {
+          "label": "Mantle Volume",
+          "value": "84% of Earth",
+          "icon": "pie-chart"
+        },
+        {
+          "label": "Core Composition",
+          "value": "NIFE (Ni & Fe)",
+          "icon": "award"
+        }
+      ],
+      "id": "m12vj32"
+    },
+    {
+      "id": "eo3be2h",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Sources of Information about Earth's Interior"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Information about Earth's interior is derived from direct sources (deep mining, volcanic eruptions) and indirect sources (seismic waves, gravity, magnetic field).",
+        "P-waves (Primary) travel through solids, liquids, and gases, whereas S-waves (Secondary) travel exclusively through solid media.",
+        "The crust consists of lighter continental crust (SIAL - Silica & Aluminium) and denser oceanic crust (SIMA - Silica & Magnesium).",
+        "The mantle extends to a depth of 2,900 km, with the weak upper portion called the asthenosphere serving as the primary source of magma.",
+        "The Earth's core is divided into a liquid outer core and a solid inner core, primarily composed of heavy elements like nickel and iron (NIFE)."
+      ],
+      "id": "sgpx2el"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6igm6cf"
+    },
+    {
+      "type": "paragraph",
+      "id": "85p3eha"
+    },
+    {
+      "type": "paragraph",
+      "id": "k5dm0yx"
+    },
+    {
+      "type": "paragraph",
+      "id": "ta13l31"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0bni3tj"
+    },
+    {
+      "type": "paragraph",
+      "id": "ewnnl9y"
+    },
+    {
+      "type": "paragraph",
+      "id": "tdx0qcm"
+    },
+    {
+      "type": "paragraph",
+      "id": "35qy05c"
+    },
+    {
+      "id": "v1rnw75",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Seismic Waves"
+    },
+    {
+      "type": "paragraph",
+      "id": "ava7uuk"
+    },
+    {
+      "type": "paragraph",
+      "id": "5p1yh7x"
+    },
+    {
+      "id": "44pl2h8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Seismic waves are the most important indirect source for understanding the internal structure and composition of the Earth.",
+      "id": "tf9yhba"
+    },
+    {
+      "id": "bcp0vp3",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Layers of the Earth"
+    },
+    {
+      "id": "s17zbe2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zelwm68",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Crust"
+    },
+    {
+      "type": "paragraph",
+      "id": "poetqvx"
+    },
+    {
+      "type": "paragraph",
+      "id": "27zjyzz"
+    },
+    {
+      "type": "paragraph",
+      "id": "gtuzkd0"
+    },
+    {
+      "id": "byyh6fa",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Crust"
+    },
+    {
+      "id": "32l8amt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Crust",
+        "Mantle",
+        "Core"
+      ],
+      "rows": [
+        [
+          "Thickness / Depth",
+          "5 - 70 km",
+          "2,900 km depth",
+          "3,500 km radius"
+        ],
+        [
+          "Major Elements",
+          "SIAL (Silica + Al) & SIMA (Silica + Mg)",
+          "Silica, Iron, Magnesium",
+          "NIFE (Nickel + Iron)"
+        ],
+        [
+          "Physical State",
+          "Solid",
+          "Semi-molten (Asthenosphere) to Solid",
+          "Liquid (Outer) & Solid (Inner)"
+        ],
+        [
+          "Volume Share",
+          "~1%",
+          "~84%",
+          "~15%"
+        ]
+      ],
+      "id": "ukuywru"
+    },
+    {
+      "id": "od5tk30",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Mantle"
+    },
+    {
+      "type": "paragraph",
+      "id": "ewi9sib"
+    },
+    {
+      "type": "paragraph",
+      "id": "b2ufwu4"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ny8q30"
+    },
+    {
+      "type": "paragraph",
+      "id": "jg4j61g"
+    },
+    {
+      "id": "tqdmusq",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Core"
+    },
+    {
+      "type": "paragraph",
+      "id": "5g9akqj"
+    },
+    {
+      "type": "paragraph",
+      "id": "toesk1k"
+    },
+    {
+      "type": "paragraph",
+      "id": "z7il6d4"
+    },
+    {
+      "id": "kiw0edt",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Core"
+    },
+    {
+      "id": "1qlxsrq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sequence of Discontinuities (Top to Bottom): Conrad (Crust) -> Mohorovičić (Crust-Mantle) -> Repetti (Mantle) -> Gutenberg (Mantle-Core) -> Lehmann (Core).",
+        "The shadow zone of S-waves is larger than that of P-waves because S-waves cannot travel through the liquid outer core.",
+        "The asthenosphere (100 km to 400 km) is the upper semi-fluid portion of the mantle that allows tectonic plates to move."
+      ],
+      "id": "i6mi6vt"
+    },
+    {
+      "id": "n79xzpb",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Important Discontinuities"
+    },
+    {
+      "id": "93fbl6t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u7e2b4w",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "semegy1"
+    },
+    {
+      "type": "paragraph",
+      "id": "u9g010i"
+    },
+    {
+      "type": "paragraph",
+      "id": "dynwuu8"
+    },
+    {
+      "type": "paragraph",
+      "id": "30jzejf"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,116 @@
+{
+  "id": "0qn6mg1",
+  "title": "ESSAY 3: Digital India and the Transformation of Banking",
+  "order": 20,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "y5frlsd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Digital India Launch",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "UPI Rollout",
+          "value": "2016",
+          "icon": "clock"
+        },
+        {
+          "label": "Inclusion Pillar",
+          "value": "JAM Trinity",
+          "icon": "check"
+        },
+        {
+          "label": "Key Regulator",
+          "value": "RBI & NPCI",
+          "icon": "award"
+        }
+      ],
+      "id": "aifhhv3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The flagship Digital India campaign launched in 2015 fundamentally reshaped Indian banking from brick-and-mortar branches to digital-first ecosystems.",
+        "The JAM Trinity (Jan Dhan, Aadhaar, and Mobile) enabled targeted delivery of government subsidies through direct benefit transfers (DBT) without intermediaries.",
+        "Unified Payments Interface (UPI), created by NPCI, made India a global leader in instant real-time retail payments.",
+        "The introduction of Central Bank Digital Currency (CBDC / e-Rupee) marks a major step forward in sovereign digital currency adoption.",
+        "Cybersecurity, digital literacy, and the rural-urban digital divide remain crucial focus areas for policy interventions."
+      ],
+      "id": "ep6aooo"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The convergence of the JAM Trinity and UPI has democratized banking services, shifting India from a cash-intensive economy to a global pioneer in real-time digital payments.",
+      "id": "wni00pt"
+    },
+    {
+      "type": "paragraph",
+      "id": "t9pua39"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Traditional Banking",
+        "Digital Banking (UPI / AePS)"
+      ],
+      "rows": [
+        [
+          "Service Availability",
+          "Restricted to physical branch operational hours",
+          "24/7/365 uninterrupted access"
+        ],
+        [
+          "Transaction Speed",
+          "Manual verification and deferred batch processing",
+          "Instant real-time gross/retail settlement"
+        ],
+        [
+          "Operational Cost",
+          "High overheads due to physical infrastructure and staff",
+          "Significantly lower transaction costs and high scalability"
+        ],
+        [
+          "Inclusion Reach",
+          "Limited by geographical reach of bank branches",
+          "Ubiquitous reach via mobile connections and Business Correspondents"
+        ]
+      ],
+      "id": "nkpymox"
+    },
+    {
+      "type": "paragraph",
+      "id": "wzqhax5"
+    },
+    {
+      "type": "paragraph",
+      "id": "3qj32kv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "National Payments Corporation of India (NPCI) was founded in 2008 under the Payment and Settlement Systems Act, 2007 as an initiative of RBI and IBA.",
+        "Key payment systems distinction: UPI operates 24/7 on immediate payment service (IMPS) infrastructure, while RTGS is meant for high-value real-time settlements and NEFT processes transactions in half-hourly batches.",
+        "RBI launched pilot programs for Central Bank Digital Currency in two variants: CBDC-Wholesale (CBDC-W) and CBDC-Retail (CBDC-R).",
+        "Aadhaar Enabled Payment System (AePS) leverages biometric authentication to allow basic banking transactions at micro-ATMs in remote areas."
+      ],
+      "id": "lhsunlt"
+    },
+    {
+      "type": "paragraph",
+      "id": "2aii6s1"
+    },
+    {
+      "type": "paragraph",
+      "id": "j9mp02y"
+    }
+  ],
+  "enriched": true
+}

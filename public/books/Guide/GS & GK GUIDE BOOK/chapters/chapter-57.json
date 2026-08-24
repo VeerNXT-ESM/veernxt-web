@@ -1,18 +1,18 @@
 {
-  "id": "8zwdgrj",
+  "id": "s7gl2tk",
   "title": "Chapter 8: Matter and Its Properties",
   "order": 57,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "uxzuey3"
+      "id": "4tnq4v8"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "States of Matter",
-          "value": "5 States",
+          "label": "Primary States",
+          "value": "3 Main States",
           "icon": "book"
         },
         {
@@ -23,18 +23,18 @@
         {
           "label": "SI Unit of Pressure",
           "value": "Pascal (Pa)",
-          "icon": "award"
+          "icon": "check"
         },
         {
-          "label": "Hooke's Law",
-          "value": "Stress ∝ Strain",
-          "icon": "check"
+          "label": "Total States of Matter",
+          "value": "5 Recognized",
+          "icon": "award"
         }
       ],
-      "id": "fff3ows"
+      "id": "q8d8se5"
     },
     {
-      "id": "sj4k0fq",
+      "id": "qvxhbg1",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Matter"
@@ -43,34 +43,34 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Matter is anything that possesses mass and occupies physical space.",
-        "The primary physical states of matter are Solid, Liquid, Gas, Plasma, and Bose-Einstein Condensate.",
-        "Density measures mass per unit volume and determines whether an object floats or sinks.",
-        "Pressure is defined as force applied per unit area and is measured in Pascals (N/m²).",
-        "Elasticity is the property of a body to recover its original shape when deforming forces are removed."
+        "Matter is defined as anything that possesses mass and occupies space.",
+        "The five physical states of matter are Solid, Liquid, Gas, Plasma, and Bose-Einstein Condensate (BEC).",
+        "Density is the ratio of mass to volume (Density = Mass / Volume).",
+        "Elasticity is the property of a body to regain its original shape and size after removal of deforming forces.",
+        "Pressure is defined as the force acting perpendicularly per unit surface area (Pressure = Force / Area)."
       ],
-      "id": "60cjn13"
+      "id": "cwfqz8y"
     },
     {
       "type": "paragraph",
-      "id": "r2bwrw1"
+      "id": "gm68cm8"
     },
     {
       "type": "paragraph",
-      "id": "l8q7cih"
+      "id": "xewryg5"
     },
     {
       "type": "paragraph",
-      "id": "65nhw5x"
+      "id": "mnu46do"
     },
     {
-      "id": "2er0ca5",
+      "id": "t07gull",
       "type": "heading",
       "level": 2,
       "content": "2. States of Matter"
     },
     {
-      "id": "uzn8r1h",
+      "id": "jmq67zi",
       "type": "table",
       "rows": [
         {
@@ -108,40 +108,40 @@
       ]
     },
     {
-      "id": "enx1eg9",
+      "id": "6sxg40v",
       "type": "heading",
       "level": 2,
       "content": "3. Physical Properties of Matter"
     },
     {
       "type": "paragraph",
-      "id": "xn4rf18"
+      "id": "ml5z8z4"
     },
     {
       "type": "paragraph",
-      "id": "xq35ciu"
+      "id": "vfcldzg"
     },
     {
       "type": "pullQuote",
-      "content": "Matter is defined as anything that has mass and occupies space.",
-      "id": "hdai95e"
+      "content": "Matter is anything that has mass and occupies space, existing in various states depending on thermal energy and intermolecular forces.",
+      "id": "68yxltb"
     },
     {
       "type": "paragraph",
-      "id": "q08xhfj"
+      "id": "5d8dq2i"
     },
     {
       "type": "paragraph",
-      "id": "rivjia9"
+      "id": "uybyvp7"
     },
     {
-      "id": "b6vnxwm",
+      "id": "huq06t9",
       "type": "heading",
       "level": 2,
       "content": "4. Changes in States of Matter"
     },
     {
-      "id": "jt45zcz",
+      "id": "cxs7g4t",
       "type": "table",
       "rows": [
         {
@@ -189,113 +189,125 @@
       ]
     },
     {
-      "id": "xnf908n",
+      "id": "buas864",
       "type": "heading",
       "level": 2,
       "content": "5. Density"
     },
     {
       "type": "paragraph",
-      "id": "kbvnsrc"
+      "id": "3ezbdli"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "Property",
-        "Solids",
-        "Liquids",
-        "Gases"
+        "Solid",
+        "Liquid",
+        "Gas"
       ],
       "rows": [
         [
           "Shape & Volume",
-          "Fixed shape and volume",
+          "Fixed shape and fixed volume",
           "Fixed volume, no fixed shape",
-          "Neither fixed shape nor volume"
+          "No fixed shape or volume"
+        ],
+        [
+          "Intermolecular Space",
+          "Very small",
+          "Moderate",
+          "Very large"
+        ],
+        [
+          "Intermolecular Force",
+          "Extremely strong",
+          "Moderate",
+          "Negligible"
         ],
         [
           "Compressibility",
           "Negligible",
-          "Slight",
-          "High"
+          "Low",
+          "Highly compressible"
         ],
         [
-          "Intermolecular Force",
-          "Very Strong",
-          "Moderate",
-          "Very Weak"
+          "Fluidity",
+          "Cannot flow",
+          "Flows from higher to lower level",
+          "Flows rapidly in all directions"
         ]
       ],
-      "id": "t8imf2e"
+      "id": "tq6bfn6"
     },
     {
       "type": "paragraph",
-      "id": "x4xf1wv"
+      "id": "r5y709o"
     },
     {
       "type": "paragraph",
-      "id": "xz8d53o"
+      "id": "qfl98rz"
     },
     {
-      "id": "pghazdg",
+      "id": "1ztxw15",
       "type": "heading",
       "level": 2,
       "content": "6. Elasticity"
     },
     {
       "type": "paragraph",
-      "id": "3xhtwh8"
+      "id": "sogoa21"
     },
     {
-      "id": "365ymfo",
+      "id": "ku05ke9",
       "type": "heading",
       "level": 2,
       "content": "7. Pressure"
     },
     {
       "type": "paragraph",
-      "id": "arh4u3n"
+      "id": "typ8ocq"
     },
     {
       "type": "paragraph",
-      "id": "wkyxb8b"
+      "id": "yohchgd"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3sfaye5"
+      "id": "5szp3i6"
     },
     {
       "type": "examAlert",
       "items": [
-        "Sublimation is the direct transition of a substance from solid to gas without entering the liquid phase.",
-        "Pascal's Law is the foundational principle behind hydraulic lifts and hydraulic brakes.",
-        "Atmospheric pressure decreases as altitude increases.",
-        "Hooke's Law states that within elastic limits, stress is directly proportional to strain."
+        "Sublimation is the direct conversion of a solid into a gas without passing through the liquid phase (e.g., Camphor, Naphthalene, Dry Ice).",
+        "Atmospheric pressure decreases with altitude, which lowers the boiling point of liquids at higher elevations.",
+        "Hooke's Law states that within the elastic limit, stress is directly proportional to strain.",
+        "Bose-Einstein Condensate is formed by cooling a gas of extremely low density to super low temperatures near absolute zero."
       ],
-      "id": "s8ff8ml"
+      "id": "ehs8mj5"
     },
     {
-      "id": "jbhhi2j",
+      "id": "dm07ekc",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "2r3w63a"
+      "id": "05to64i"
     },
     {
       "type": "paragraph",
-      "id": "w2xew1w"
+      "id": "w1crlch"
     },
     {
       "type": "paragraph",
-      "id": "df9dxef"
+      "id": "h9s0sft"
     },
     {
       "type": "paragraph",
-      "id": "m22xrg8"
+      "id": "45ian6j"
     }
   ],
   "enriched": true

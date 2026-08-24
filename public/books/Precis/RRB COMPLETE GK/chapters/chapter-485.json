@@ -1,0 +1,94 @@
+{
+  "id": "ujjpwcb",
+  "title": "11. Exam Traps",
+  "order": 485,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "sooi0a8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Misreading a simple 'NOT' or 'INCORRECT' in a question stem is the single most common cause of negative marking in competitive examinations.",
+      "id": "el2whh5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Examiner Technique",
+        "Candidate Counter-Strategy"
+      ],
+      "rows": [
+        [
+          "Extreme Qualifier Trap",
+          "Uses rigid words like 'always', 'only', or 'never'",
+          "Search for a single exception; extreme statements are usually false"
+        ],
+        [
+          "Negation Trap",
+          "Embeds 'NOT', 'INCORRECT', or 'EXCEPT' in text",
+          "Rephrase the question into a positive statement before answering"
+        ],
+        [
+          "Half-Truth Trap",
+          "First half of option is correct, second half is wrong",
+          "Read every option completely from start to finish"
+        ],
+        [
+          "Intermediate Step Trap",
+          "Includes partial calculation results as choice options",
+          "Double-check that the final step of the formula was executed"
+        ]
+      ],
+      "id": "fv3gtld"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Penalty",
+          "value": "0.25 - 0.66 Marks",
+          "icon": "clock"
+        },
+        {
+          "label": "Trap Questions",
+          "value": "15-20% of MCQs",
+          "icon": "info"
+        },
+        {
+          "label": "Critical Trigger Words",
+          "value": "NOT / EXCEPT",
+          "icon": "check"
+        },
+        {
+          "label": "Key Skill",
+          "value": "Elimination Technique",
+          "icon": "award"
+        }
+      ],
+      "id": "l43ewrz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always circle or underline words like 'NOT', 'INCORRECT', and 'EXCEPT' immediately upon reading the question stem.",
+        "Verify the exact unit requested in quantitative questions before selecting your answer, as unconverted units are standard distractor choices.",
+        "Do not mark Option A immediately upon finding it plausible; always read options B, C, and D to prevent falling for half-truth traps."
+      ],
+      "id": "5lx1scc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Examiners frequently use extreme qualifiers like 'always', 'never', and 'exclusively' to craft false options.",
+        "Negation phrases in question stems (e.g., 'Which of the following is NOT correct?') trigger the majority of avoidable negative marks.",
+        "Partial correctness traps present options that are accurate in their first half but contain a subtle error at the end.",
+        "Distractor options often feature intermediate calculation values to catch candidates who stop solving early."
+      ],
+      "id": "8iixokg"
+    }
+  ],
+  "enriched": true
+}

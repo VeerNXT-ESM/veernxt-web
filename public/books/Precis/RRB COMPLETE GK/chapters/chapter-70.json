@@ -1,0 +1,119 @@
+{
+  "id": "24o2hoq",
+  "title": "Types of Metamorphism",
+  "order": 70,
+  "blocks": [
+    {
+      "id": "ql40wpy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regional metamorphism affects extensive areas of the Earth's crust and is primarily driven by large-scale tectonic forces involving high temperatures and directed pressures.",
+      "id": "xjxa8m7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Metamorphism",
+        "Dominant Factor",
+        "Geographic Extent",
+        "Characteristic Textures / Rocks"
+      ],
+      "rows": [
+        [
+          "Thermal / Contact",
+          "Extreme Heat (Magma)",
+          "Localized (Metamorphic Aureole)",
+          "Non-foliated (Hornfels, Marble, Quartzite)"
+        ],
+        [
+          "Regional",
+          "Heat + Directed Pressure",
+          "Widespread (Mountain Belts)",
+          "Foliated (Slate, Phyllite, Schist, Gneiss)"
+        ],
+        [
+          "Dynamic / Cataclastic",
+          "Differential Shearing Stress",
+          "Linear / Narrow (Fault Zones)",
+          "Cataclastic / Mylonitic (Mylonite, Fault Breccia)"
+        ]
+      ],
+      "id": "00kd4nc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Contact Metamorphism",
+          "value": "Driven by Heat",
+          "icon": "info"
+        },
+        {
+          "label": "Regional Metamorphism",
+          "value": "Tectonic Scale",
+          "icon": "calendar"
+        },
+        {
+          "label": "Dynamic Metamorphism",
+          "value": "Shear Stress",
+          "icon": "clock"
+        },
+        {
+          "label": "Metamorphic Rock Grade",
+          "value": "Slate to Gneiss",
+          "icon": "book"
+        }
+      ],
+      "id": "eydc611"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Metamorphic Progression Grade: Slate (low grade) → Phyllite → Schist → Gneiss (high grade) is frequently tested in Geography optional and GS papers.",
+        "Hornfels is uniquely identified with thermal/contact metamorphism and lacks directional foliation.",
+        "Mylonites and Fault Breccia serve as diagnostic rocks for dynamic metamorphism occurring along active fault zones."
+      ],
+      "id": "vhxgxoz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Contact (Thermal) metamorphism occurs locally near igneous intrusions due to extreme heat, forming non-foliated rocks such as hornfels and marble.",
+        "Regional metamorphism spans widespread areas along convergent plate boundaries, driven by mountain-building forces, heat, and differential pressure.",
+        "Dynamic (Cataclastic) metamorphism takes place along fault lines under intense shear stress, producing crushed mineral textures such as mylonite.",
+        "Hydrothermal metamorphism is caused by hot, ion-rich fluids circulating through rock fractures, resulting in mineral re-crystallization."
+      ],
+      "id": "f8kfrf6"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,124 @@
+{
+  "id": "vydj9qh",
+  "title": "Tenure and Service Conditions",
+  "order": 462,
+  "blocks": [
+    {
+      "id": "f4jaktj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "No person who is a member of a civil service of the Union or an all-India service or a civil service of a State shall be dismissed or removed by an authority subordinate to that by which he was appointed.",
+      "id": "1slv53c"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Post / Body",
+        "Tenure Limit",
+        "Appointing Authority",
+        "Removal Authority"
+      ],
+      "rows": [
+        [
+          "UPSC Member",
+          "6 Years / 65 Age",
+          "President",
+          "President"
+        ],
+        [
+          "SPSC Member",
+          "6 Years / 62 Age",
+          "Governor",
+          "President"
+        ],
+        [
+          "CAG / CEC",
+          "6 Years / 65 Age",
+          "President",
+          "President (Manner of SC Judge)"
+        ]
+      ],
+      "id": "brqjpt5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max Age (UPSC/CAG)",
+          "value": "65 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Doctrine of Pleasure",
+          "value": "Article 310",
+          "icon": "book"
+        },
+        {
+          "label": "Civil Service Protection",
+          "value": "Article 311",
+          "icon": "check"
+        }
+      ],
+      "id": "gatuzpi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 311 safeguards apply strictly to civil servants and do not extend to defense personnel.",
+        "Members of State Public Service Commissions (SPSC) are appointed by the Governor but can be removed ONLY by the President.",
+        "A departmental inquiry under Article 311 can be dispensed with if the President or Governor is satisfied that it is inexpedient in the interest of the security of the State."
+      ],
+      "id": "dynjl9j"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 310 incorporates the Doctrine of Pleasure, under which civil servants hold office during the pleasure of the President or Governor.",
+        "Article 311 provides constitutional safeguards protecting civil servants against arbitrary dismissal, removal, or reduction in rank.",
+        "A civil servant cannot be dismissed or removed by an authority subordinate to the one by which they were appointed.",
+        "UPSC members and the CAG serve for a tenure of 6 years or until reaching 65 years of age, whichever is earlier.",
+        "Constitutional safeguards under Article 311 do not apply to defense personnel or contractual employees."
+      ],
+      "id": "zjlu0ri"
+    }
+  ],
+  "enriched": true
+}

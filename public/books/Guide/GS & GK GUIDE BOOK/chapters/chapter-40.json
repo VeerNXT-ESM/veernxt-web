@@ -1,35 +1,40 @@
 {
-  "id": "5hdb39o",
+  "id": "4wyqa9o",
   "title": "Chapter 40: Minerals and Resources of India",
   "order": 40,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ji86388"
+      "id": "rvldeib"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Mineral Types",
+          "label": "Major Belts",
+          "value": "3 Main Belts",
+          "icon": "info"
+        },
+        {
+          "label": "Coal Share",
+          "value": ">98% Gondwana",
+          "icon": "award"
+        },
+        {
+          "label": "Oldest Oilfield",
+          "value": "Digboi (Assam)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Classification",
           "value": "Metallic & Non-Metallic",
           "icon": "book"
-        },
-        {
-          "label": "Energy Sources",
-          "value": "Coal & Petroleum",
-          "icon": "clock"
-        },
-        {
-          "label": "Distribution",
-          "value": "Major Mineral Belts",
-          "icon": "check"
         }
       ],
-      "id": "4sjdeu7"
+      "id": "v9b08gm"
     },
     {
-      "id": "8vvwaux",
+      "id": "wjmveyi",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Mineral Resources"
@@ -38,34 +43,34 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Minerals in India are broadly classified into metallic, non-metallic, and energy resources.",
-        "Metallic minerals serve as raw material inputs for industrial, construction, and metallurgical applications.",
-        "Energy resources such as coal and petroleum are concentrated in distinct geological formations and fields.",
-        "India's mineral reserves are strategically distributed across well-defined mineral belts.",
-        "Conservation and efficient utilization of mineral resources are critical for sustainable economic growth."
+        "Minerals are naturally occurring inorganic substances possessing a definite chemical composition and structural arrangement.",
+        "India's primary mineral wealth is concentrated across distinct belts, notably the North-Eastern Peninsular, South-Western, and North-Western belts.",
+        "Metallic minerals such as iron ore, bauxite, and manganese provide the structural foundation for India's heavy manufacturing and metallurgical industries.",
+        "Coal remains the primary source of commercial energy in India, supplemented by domestic petroleum extraction and non-conventional energy sources.",
+        "Because mineral deposits are non-renewable and finite, strategic conservation and sustainable resource management are essential."
       ],
-      "id": "yw39l5e"
+      "id": "gct5isi"
     },
     {
       "type": "paragraph",
-      "id": "ns3qtaq"
+      "id": "1ovcetq"
     },
     {
       "type": "paragraph",
-      "id": "tq1orsp"
+      "id": "ozh120t"
     },
     {
       "type": "paragraph",
-      "id": "u4b5aty"
+      "id": "rpx66mz"
     },
     {
-      "id": "c5mn5qs",
+      "id": "jvb86qb",
       "type": "heading",
       "level": 2,
       "content": "2. Classification of Minerals"
     },
     {
-      "id": "ssc9b3r",
+      "id": "52m3tei",
       "type": "table",
       "rows": [
         {
@@ -99,13 +104,13 @@
       ]
     },
     {
-      "id": "o3qbtqx",
+      "id": "7cf0ffp",
       "type": "heading",
       "level": 2,
       "content": "3. Major Metallic Minerals"
     },
     {
-      "id": "bt1wjw7",
+      "id": "2pfsfit",
       "type": "table",
       "rows": [
         {
@@ -165,13 +170,13 @@
       ]
     },
     {
-      "id": "latv6mj",
+      "id": "vds30x4",
       "type": "heading",
       "level": 2,
       "content": "4. Major Non-Metallic Minerals"
     },
     {
-      "id": "k0iuo28",
+      "id": "mq0glj4",
       "type": "table",
       "rows": [
         {
@@ -217,13 +222,13 @@
       ]
     },
     {
-      "id": "fpk5dy0",
+      "id": "xh6zkv1",
       "type": "heading",
       "level": 2,
       "content": "5. Energy Resources"
     },
     {
-      "id": "0ew9y9z",
+      "id": "4wgmmhr",
       "type": "table",
       "rows": [
         {
@@ -269,34 +274,34 @@
       ]
     },
     {
-      "id": "iz1rtea",
+      "id": "vt38g3d",
       "type": "heading",
       "level": 2,
       "content": "6. Major Mineral Belts of India"
     },
     {
       "type": "paragraph",
-      "id": "27tizg6"
+      "id": "t8ivpss"
     },
     {
       "type": "paragraph",
-      "id": "k2ty6ue"
+      "id": "v8uasxe"
     },
     {
       "type": "pullQuote",
       "content": "Conservation of Mineral Resources",
-      "id": "5pchy8v"
+      "id": "al6zs0x"
     },
     {
       "type": "paragraph",
-      "id": "vf28z9y"
+      "id": "yacauk6"
     },
     {
       "type": "paragraph",
-      "id": "76577q9"
+      "id": "903mu04"
     },
     {
-      "id": "vw8v8i3",
+      "id": "jnrx0p2",
       "type": "heading",
       "level": 2,
       "content": "7. Important Coalfields in India"
@@ -304,28 +309,28 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "zvo4i9y"
+      "id": "7ukz981"
     },
     {
       "type": "paragraph",
-      "id": "4ywpyqv"
+      "id": "xmks77j"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f8saihg"
+      "id": "jhvc0al"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4jy74xw"
+      "id": "v1kaip0"
     },
     {
       "type": "paragraph",
-      "id": "7g9yfwu"
+      "id": "tczvqwj"
     },
     {
-      "id": "sby1nnf",
+      "id": "f8qre08",
       "type": "heading",
       "level": 2,
       "content": "8. Petroleum Fields in India"
@@ -340,112 +345,117 @@
       "rows": [
         [
           "Metal Content",
-          "Contain metallic elements in raw state",
+          "Contain metallic elements in their raw form",
           "Do not contain metallic elements"
         ],
         [
-          "Examples",
-          "Iron ore, Manganese, Copper, Bauxite",
-          "Mica, Limestone, Dolomite, Gypsum"
+          "Physical Properties",
+          "Lustrous, hard, malleable, and ductile",
+          "Non-lustrous, brittle, break easily when hit"
         ],
         [
-          "Primary Applications",
-          "Metallurgy, machinery, and construction",
-          "Cement, chemical, and electrical industries"
+          "Conductivity",
+          "Good conductors of heat and electricity",
+          "Poor conductors or insulators"
+        ],
+        [
+          "Key Examples",
+          "Iron Ore, Bauxite, Manganese, Copper",
+          "Mica, Limestone, Gypsum, Dolomite"
         ]
       ],
-      "id": "x6z46d8"
+      "id": "wejj4z5"
     },
     {
       "type": "paragraph",
-      "id": "78vphx6"
+      "id": "5266t67"
     },
     {
       "type": "paragraph",
-      "id": "ui6720l"
+      "id": "s0jwc4m"
     },
     {
       "type": "paragraph",
-      "id": "z8cw7j3"
+      "id": "rqkuoef"
     },
     {
       "type": "paragraph",
-      "id": "271vzlx"
+      "id": "ncr5a67"
     },
     {
-      "id": "ezd5qav",
+      "id": "hhhnyvg",
       "type": "heading",
       "level": 2,
       "content": "9. Importance of Mineral Resources"
     },
     {
       "type": "paragraph",
-      "id": "1rqmup7"
+      "id": "r1vmrld"
     },
     {
       "type": "paragraph",
-      "id": "c1whaco"
+      "id": "yktugjs"
     },
     {
       "type": "paragraph",
-      "id": "z2eqmi4"
+      "id": "toar554"
     },
     {
       "type": "paragraph",
-      "id": "07e0xqn"
+      "id": "36jl2io"
     },
     {
-      "id": "fwt87ae",
+      "id": "uc9yfc5",
       "type": "heading",
       "level": 2,
       "content": "10. Conservation of Mineral Resources"
     },
     {
       "type": "paragraph",
-      "id": "4jc4m7a"
+      "id": "0ywvzn3"
     },
     {
       "type": "examAlert",
       "items": [
-        "Memorize the key locations and geographic distributions of India's major coalfields and petroleum fields.",
-        "Understand the primary distinctions between metallic, non-metallic, and energy minerals.",
-        "Focus on the regional characteristics and coverage of the major mineral belts of India for geography-based questions."
+        "Gondwana coal accounts for over 98% of total coal reserves in India, concentrated primarily along the Damodar, Son, Mahanadi, and Godavari river valleys.",
+        "Digboi in Assam is India's oldest operational oil field, whereas Mumbai High is the largest offshore petroleum reserve.",
+        "The Chota Nagpur Plateau is frequently asked in exams as the 'Ruhr of India' due to its rich repository of mineral wealth."
       ],
-      "id": "g7ccmrz"
+      "id": "grd64l1"
     },
     {
       "type": "paragraph",
-      "id": "qx7chyv"
+      "id": "fjb6ici"
     },
     {
       "type": "paragraph",
-      "id": "axdf62m"
+      "id": "iqpktut"
     },
     {
       "type": "paragraph",
-      "id": "36w5bjt"
+      "id": "p66po2j"
     },
     {
-      "id": "fr6swr6",
+      "id": "8xwociz",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "ja0inbj"
+      "id": "6n0vbck"
     },
     {
       "type": "paragraph",
-      "id": "88fe1rv"
+      "id": "mk9q214"
     },
     {
       "type": "paragraph",
-      "id": "qw80adm"
+      "id": "kc93dnm"
     },
     {
       "type": "paragraph",
-      "id": "wkycm84"
+      "id": "s2l1skg"
     }
   ],
   "enriched": true

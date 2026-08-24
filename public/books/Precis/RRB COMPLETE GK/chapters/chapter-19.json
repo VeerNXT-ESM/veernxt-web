@@ -1,0 +1,151 @@
+{
+  "id": "czxyiw9",
+  "title": "6. Seasons with Complete Scientific Explanation",
+  "order": 19,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "q44sl0j"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Axial Tilt",
+          "value": "23.5°",
+          "icon": "info"
+        },
+        {
+          "label": "Revolution Period",
+          "value": "365.25 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Annual Solstices",
+          "value": "2",
+          "icon": "award"
+        },
+        {
+          "label": "Annual Equinoxes",
+          "value": "2",
+          "icon": "clock"
+        }
+      ],
+      "id": "kcubb60"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The primary cause of changing seasons on Earth is the tilt of its rotational axis relative to its orbital plane, combined with its revolution around the Sun.",
+      "id": "79phgzt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earth's seasons are caused by its 23.5-degree axial tilt combined with its revolution around the Sun.",
+        "Solstices mark the extreme position of the Sun's direct rays at the Tropic of Cancer (June 21) and Tropic of Capricorn (December 22).",
+        "Equinoxes occur when direct sunlight falls directly on the Equator, resulting in equal day and night durations worldwide.",
+        "Orbital distance variations (Perihelion and Aphelion) do not cause seasonal changes; axial orientation is the primary driver."
+      ],
+      "id": "0ey1u81"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Summer Solstice",
+        "Winter Solstice",
+        "Equinox"
+      ],
+      "rows": [
+        [
+          "Date",
+          "June 21",
+          "December 22",
+          "March 21 / Sept 23"
+        ],
+        [
+          "Direct Sun Rays",
+          "Tropic of Cancer (23.5° N)",
+          "Tropic of Capricorn (23.5° S)",
+          "Equator (0°)"
+        ],
+        [
+          "Northern Hemisphere Days",
+          "Longest Day",
+          "Shortest Day",
+          "Equal Day & Night"
+        ]
+      ],
+      "id": "wqtch70"
+    },
+    {
+      "type": "paragraph",
+      "id": "yu36cmk"
+    },
+    {
+      "type": "paragraph",
+      "id": "h7234vj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct overhead Sun rays hit the Tropic of Cancer during Summer Solstice (June 21) and Tropic of Capricorn during Winter Solstice (December 22).",
+        "Equal day and night duration occurs globally during Vernal Equinox (March 21) and Autumnal Equinox (September 23).",
+        "Perihelion occurs around January 3 when Earth is closest to the Sun, while Aphelion occurs around July 4 when Earth is farthest."
+      ],
+      "id": "i7edaak"
+    },
+    {
+      "type": "paragraph",
+      "id": "qvl8zs2"
+    },
+    {
+      "id": "f2eqe2y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

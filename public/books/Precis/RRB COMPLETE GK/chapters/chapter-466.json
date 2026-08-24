@@ -1,0 +1,125 @@
+{
+  "id": "bmz1opd",
+  "title": "Types of Audit Conducted",
+  "order": 466,
+  "blocks": [
+    {
+      "id": "dc2yed5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "An audit is a systematic and independent examination of data, statements, records, operations, and performance of an enterprise for a specified purpose.",
+      "id": "60m1vaw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Statutory Audit",
+        "Internal Audit"
+      ],
+      "rows": [
+        [
+          "Mandate",
+          "Mandatory by law for all companies",
+          "Mandatory only for specified classes of companies"
+        ],
+        [
+          "Scope",
+          "Determined by relevant legal statutes",
+          "Determined by Management and Board"
+        ],
+        [
+          "Appointment",
+          "Appointed by Shareholders in AGM",
+          "Appointed by the Board of Directors"
+        ],
+        [
+          "Primary Focus",
+          "Truth and fairness of financial statements",
+          "Internal controls and operational efficiency"
+        ]
+      ],
+      "id": "qulmdnj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Statutory Audit",
+          "value": "Section 139",
+          "icon": "calendar"
+        },
+        {
+          "label": "Internal Audit",
+          "value": "Section 138",
+          "icon": "check"
+        },
+        {
+          "label": "Secretarial Audit",
+          "value": "Section 204",
+          "icon": "award"
+        },
+        {
+          "label": "CAG Audit",
+          "value": "Article 148",
+          "icon": "book"
+        }
+      ],
+      "id": "tej4h1v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG audit provisions are governed by Articles 148 to 151 of the Indian Constitution.",
+        "Section 204 mandates Secretarial Audit for all listed companies and specified public companies.",
+        "Statutory Auditors are appointed by shareholders under Section 139 of the Companies Act, 2013."
+      ],
+      "id": "ai4u3aj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Statutory Audit is mandatory for companies under the Companies Act, 2013 to ensure true and fair financial reporting.",
+        "Internal Audit focuses on evaluating internal control systems, risk management, and operational efficiency.",
+        "Tax Audit under Section 44AB of the Income Tax Act is required when business turnover crosses prescribed statutory limits.",
+        "Cost Audit under Section 148 is applicable to specified manufacturing and production entities.",
+        "CAG conducts government audits under Article 148 of the Constitution of India."
+      ],
+      "id": "t8jt6gf"
+    }
+  ],
+  "enriched": true
+}

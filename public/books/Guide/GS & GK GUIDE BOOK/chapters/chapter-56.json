@@ -1,29 +1,29 @@
 {
-  "id": "x50hrje",
+  "id": "5hhv7qi",
   "title": "Chapter 7: Electricity and Magnetism",
   "order": 56,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "w3663zb"
+      "id": "a3r4kmj"
     },
     {
       "type": "statStrip",
       "stats": [
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "check"
+        },
         {
           "label": "Ohm's Law Formula",
           "value": "V = IR",
           "icon": "book"
         },
         {
-          "label": "SI Unit of Current",
-          "value": "Ampere (A)",
-          "icon": "info"
-        },
-        {
-          "label": "SI Unit of Resistance",
-          "value": "Ohm (Ω)",
-          "icon": "check"
+          "label": "Commercial Energy Unit",
+          "value": "1 kWh = 3.6 MJ",
+          "icon": "clock"
         },
         {
           "label": "SI Unit of Power",
@@ -31,10 +31,10 @@
           "icon": "award"
         }
       ],
-      "id": "yv1k7e5"
+      "id": "bhx95hj"
     },
     {
-      "id": "nasxmwj",
+      "id": "fqwpa06",
       "type": "heading",
       "level": 2,
       "content": "1. Electricity"
@@ -43,79 +43,79 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Electric current is the rate of flow of electric charge through a conductor per unit of time.",
-        "Voltage (potential difference) provides the electrical pressure required for current to flow.",
-        "Ohm's Law states that electric current is directly proportional to voltage and inversely proportional to resistance.",
-        "Magnetic poles always exist in pairs; magnetic monopoles do not exist.",
-        "Electromagnets are temporary magnets whose strength depends on current magnitude and the number of coil turns."
+        "Electric current is defined as the rate of flow of electric charge (I = Q/t).",
+        "Ohm's Law establishes that voltage (V) is directly proportional to current (I) across a conductor at a constant temperature.",
+        "Resistance depends on the material, length, cross-sectional area, and temperature of the conductor.",
+        "Electric circuits can be arranged in Series (same current) or Parallel (same voltage across branches).",
+        "An electromagnet acts as a temporary magnet when electric current passes through a solenoid containing a soft iron core."
       ],
-      "id": "1rhjpbs"
+      "id": "3hsczoz"
     },
     {
       "type": "paragraph",
-      "id": "a6b796j"
+      "id": "lwsxcur"
     },
     {
       "type": "paragraph",
-      "id": "bax75oi"
+      "id": "2dpkgp3"
     },
     {
       "type": "paragraph",
-      "id": "sdfj7wf"
+      "id": "wspd598"
     },
     {
       "type": "paragraph",
-      "id": "ofcttjr"
+      "id": "4wiczb5"
     },
     {
-      "id": "lx7h08s",
+      "id": "jw01959",
       "type": "heading",
       "level": 2,
       "content": "2. Electric Current"
     },
     {
       "type": "paragraph",
-      "id": "3subv13"
+      "id": "fm9u1hc"
     },
     {
       "type": "paragraph",
-      "id": "5gr8qga"
+      "id": "uz7uleg"
     },
     {
       "type": "paragraph",
-      "id": "lcjrjjh"
+      "id": "4zgjmte"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yg7e3iy"
+      "id": "c5bkrzv"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "canbgza"
+      "id": "hniecna"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x2uf5cs"
+      "id": "k965sou"
     },
     {
-      "id": "o1iodcx",
+      "id": "md9o68x",
       "type": "heading",
       "level": 2,
       "content": "3. Voltage"
     },
     {
       "type": "paragraph",
-      "id": "9vlmzxx"
+      "id": "io7cotb"
     },
     {
       "type": "paragraph",
-      "id": "fn2f5k6"
+      "id": "g8qf7c1"
     },
     {
-      "id": "fatv0mu",
+      "id": "fpua0wj",
       "type": "heading",
       "level": 2,
       "content": "4. Resistance"
@@ -123,53 +123,53 @@
     {
       "type": "pullQuote",
       "content": "Chapter 7: Electricity and Magnetism",
-      "id": "ykk80tg"
+      "id": "ci6pv4j"
     },
     {
       "type": "paragraph",
-      "id": "5emlbl9"
+      "id": "dtui7s5"
     },
     {
       "type": "paragraph",
-      "id": "9hlvjmo"
+      "id": "o5mfvsi"
     },
     {
-      "id": "9g3rkj6",
+      "id": "wdnyq2a",
       "type": "heading",
       "level": 2,
       "content": "5. Ohm’s Law"
     },
     {
       "type": "paragraph",
-      "id": "2yl5ma3"
+      "id": "ehofsao"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "em8cg37"
+      "id": "hfis9fy"
     },
     {
-      "id": "o5qfa8u",
+      "id": "jm4lhgw",
       "type": "heading",
       "level": 2,
       "content": "6. Electric Power"
     },
     {
       "type": "paragraph",
-      "id": "jumu1vi"
+      "id": "s7uuy8r"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7an5j22"
+      "id": "tr5g1m8"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uiuywzk"
+      "id": "e46oj1c"
     },
     {
-      "id": "x6vfzhn",
+      "id": "u0evy4v",
       "type": "heading",
       "level": 2,
       "content": "7. Types of Electric Circuits"
@@ -184,29 +184,29 @@
       "rows": [
         [
           "Current Flow",
-          "Identical through all components",
-          "Splits across different branches"
+          "Same current flows through all components",
+          "Current divides among parallel branches"
         ],
         [
-          "Voltage Drop",
-          "Divided across each component",
-          "Same across all parallel branches"
+          "Voltage",
+          "Voltage divides across components",
+          "Voltage across each branch remains the same"
         ],
         [
-          "Equivalent Resistance",
-          "Increases (R_eq = R1 + R2 + ...)",
-          "Decreases (1/R_eq = 1/R1 + 1/R2 + ...)"
+          "Total Resistance",
+          "Increases (R = R1 + R2 + ...)",
+          "Decreases (1/R = 1/R1 + 1/R2 + ...)"
         ],
         [
           "Fault Impact",
-          "One failure breaks the whole circuit",
-          "Other branches continue to function independently"
+          "One break stops the entire circuit",
+          "Failure of one branch does not affect others"
         ]
       ],
-      "id": "dl4xpem"
+      "id": "rg9tosu"
     },
     {
-      "id": "06ibyed",
+      "id": "0r7a3pp",
       "type": "table",
       "rows": [
         {
@@ -233,100 +233,100 @@
       ]
     },
     {
-      "id": "if3tkgl",
+      "id": "s9zskbl",
       "type": "heading",
       "level": 2,
       "content": "8. Magnetism"
     },
     {
       "type": "paragraph",
-      "id": "t5hqj7b"
+      "id": "056vn3u"
     },
     {
       "type": "paragraph",
-      "id": "a7notj0"
+      "id": "2jub7v7"
     },
     {
-      "id": "k347t31",
+      "id": "e5ufy69",
       "type": "heading",
       "level": 2,
       "content": "9. Properties of Magnets"
     },
     {
       "type": "paragraph",
-      "id": "24rnkkr"
+      "id": "3jt9ijf"
     },
     {
       "type": "paragraph",
-      "id": "fwe9h4w"
+      "id": "jmbzgj0"
     },
     {
       "type": "paragraph",
-      "id": "gfy0gyf"
+      "id": "kbg6dro"
     },
     {
       "type": "paragraph",
-      "id": "00vwase"
+      "id": "80ezevx"
     },
     {
-      "id": "b898k55",
+      "id": "kos1b6w",
       "type": "heading",
       "level": 2,
       "content": "10. Electromagnet"
     },
     {
       "type": "paragraph",
-      "id": "66wsww7"
+      "id": "tvy8nbm"
     },
     {
       "type": "paragraph",
-      "id": "gjlrtvo"
+      "id": "xpgcve7"
     },
     {
       "type": "examAlert",
       "items": [
-        "An ammeter is always connected in series due to its very low resistance, whereas a voltmeter is connected in parallel due to its high resistance.",
-        "Soft iron is preferred for making electromagnet cores because of its high permeability and low retentivity.",
-        "Fuse wires are made of alloys with low melting points and high resistivity, always connected in series with the live wire."
+        "Ammeters have very low resistance and must be connected in series; Voltmeters have very high resistance and must be connected in parallel.",
+        "Fuse wires are made of an alloy with a low melting point and high resistance, always connected in series with the live wire.",
+        "1 kWh (Kilowatt-hour) is the commercial unit of electrical energy, equal to 3.6 × 10^6 Joules."
       ],
-      "id": "dvub0ym"
+      "id": "lyrjhmw"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pknebp2"
+      "id": "xmh25e3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1iaonbt"
+      "id": "niq1t78"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vshjcfx"
+      "id": "z6s9fnt"
     },
     {
-      "id": "peghk77",
+      "id": "qd8cp70",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "fvrtemi"
+      "id": "z4oeykb"
     },
     {
       "type": "paragraph",
-      "id": "s7ljxtl"
+      "id": "5557wtx"
     },
     {
       "type": "paragraph",
-      "id": "7iesrzy"
+      "id": "klzy9go"
     },
     {
       "type": "paragraph",
-      "id": "jkyzrqf"
+      "id": "kuv56r8"
     }
   ],
   "enriched": true

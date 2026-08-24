@@ -1,40 +1,40 @@
 {
-  "id": "yv2dlt7",
+  "id": "8ww7uct",
   "title": "Chapter 24: High Court in India",
   "order": 25,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "scw9sj0"
+      "id": "xz796lu"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Constitutional Part",
-          "value": "Part VI",
-          "icon": "book"
-        },
-        {
-          "label": "Key Articles",
+          "label": "Constitutional Articles",
           "value": "214 to 231",
-          "icon": "calendar"
+          "icon": "book"
         },
         {
           "label": "Retirement Age",
           "value": "62 Years",
-          "icon": "clock"
+          "icon": "calendar"
         },
         {
-          "label": "Writ Article",
+          "label": "Writ Jurisdiction",
           "value": "Article 226",
           "icon": "check"
+        },
+        {
+          "label": "First High Court",
+          "value": "Calcutta (1862)",
+          "icon": "award"
         }
       ],
-      "id": "rrldmpt"
+      "id": "dxeepj7"
     },
     {
-      "id": "otusvvw",
+      "id": "b7hjxo1",
       "type": "heading",
       "level": 2,
       "content": "1. Constitutional Articles Related to High Courts"
@@ -43,15 +43,16 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "High Courts in India are governed under Part VI, Articles 214 to 231 of the Indian Constitution.",
-        "Judges of a High Court are appointed by the President of India in consultation with the Chief Justice of India and the Governor of the concerned state.",
-        "To be eligible, a candidate must be an Indian citizen with at least 10 years of judicial office or 10 years as an advocate in a High Court.",
-        "Under Article 226, High Courts possess the power to issue writs for the enforcement of Fundamental Rights and for any other purpose."
+        "Article 214 provides that there shall be a High Court for each State in India.",
+        "High Court judges are appointed by the President after consultation with the Chief Justice of India and the State Governor.",
+        "A High Court judge holds office until attaining the age of 62 years.",
+        "High Courts have the power to issue writs under Article 226 for fundamental rights and other legal rights.",
+        "Parliament has the power to establish a common High Court for two or more states or Union Territories under Article 231."
       ],
-      "id": "ys5bkxb"
+      "id": "gggrs5u"
     },
     {
-      "id": "8n94f5z",
+      "id": "uu6zhbu",
       "type": "table",
       "rows": [
         {
@@ -169,54 +170,54 @@
       ]
     },
     {
-      "id": "k5zy7qc",
+      "id": "yqz8gw3",
       "type": "heading",
       "level": 2,
       "content": "2. Composition of High Court"
     },
     {
       "type": "paragraph",
-      "id": "isjm627"
+      "id": "m8y3wnh"
     },
     {
       "type": "paragraph",
-      "id": "ddxz4yy"
+      "id": "7eppxqj"
     },
     {
-      "id": "fno9ohx",
+      "id": "audglnk",
       "type": "heading",
       "level": 2,
       "content": "3. Appointment of High Court Judges"
     },
     {
       "type": "paragraph",
-      "id": "b4g71qx"
+      "id": "84el2f5"
     },
     {
       "type": "pullQuote",
-      "content": "Constitutional Articles Related to High Courts",
-      "id": "akfn6pq"
+      "content": "High Court in India",
+      "id": "o4x3h02"
     },
     {
       "type": "paragraph",
-      "id": "pxkt5mp"
+      "id": "27ia45c"
     },
     {
-      "id": "c7ahun9",
+      "id": "lonimyd",
       "type": "heading",
       "level": 2,
       "content": "4. Qualifications of High Court Judges"
     },
     {
       "type": "paragraph",
-      "id": "9i1ux6u"
+      "id": "ak15vls"
     },
     {
       "type": "paragraph",
-      "id": "z6mi1r9"
+      "id": "nwnucmj"
     },
     {
-      "id": "hgajo08",
+      "id": "8bcqjll",
       "type": "heading",
       "level": 2,
       "content": "5. Tenure"
@@ -225,52 +226,52 @@
       "type": "comparisonTable",
       "headers": [
         "Feature",
-        "High Court (Article 226)",
-        "Supreme Court (Article 32)"
+        "Supreme Court (Article 32)",
+        "High Court (Article 226)"
       ],
       "rows": [
         [
-          "Writ Jurisdiction Scope",
-          "Broader (Fundamental Rights and ordinary legal rights)",
-          "Narrower (Exclusively Fundamental Rights)"
+          "Scope of Writs",
+          "Enforcement of Fundamental Rights only",
+          "Enforcement of Fundamental Rights and ordinary legal rights"
         ],
         [
           "Territorial Jurisdiction",
-          "Restricted to the state or combined UT territory",
-          "Extends to the entire territory of India"
+          "Applicable throughout the territory of India",
+          "Confined to the territorial limits of the State/UT"
         ],
         [
-          "Retirement Age of Judges",
-          "62 Years",
-          "65 Years"
+          "Nature of Remedy",
+          "Mandatory obligation to grant relief",
+          "Discretionary remedy by the court"
         ]
       ],
-      "id": "799b79a"
+      "id": "f04b8yv"
     },
     {
       "type": "paragraph",
-      "id": "tqbvh6r"
+      "id": "mce10ey"
     },
     {
       "type": "paragraph",
-      "id": "suirigk"
+      "id": "srysl0u"
     },
     {
       "type": "paragraph",
-      "id": "xsf021m"
+      "id": "b6j6m7n"
     },
     {
-      "id": "wcxkzj0",
+      "id": "p0ntd1g",
       "type": "heading",
       "level": 2,
       "content": "6. Jurisdiction of High Court"
     },
     {
       "type": "paragraph",
-      "id": "jmusycy"
+      "id": "v8m4i86"
     },
     {
-      "id": "1jlsre2",
+      "id": "h2cg82u",
       "type": "heading",
       "level": 2,
       "content": "7. Types of Writs"
@@ -278,14 +279,14 @@
     {
       "type": "examAlert",
       "items": [
-        "High Court writ jurisdiction under Article 226 is wider than the Supreme Court's under Article 32, as it extends to ordinary legal rights as well.",
+        "High Court's writ jurisdiction under Article 226 is wider than the Supreme Court's under Article 32, as it covers both Fundamental Rights and ordinary legal rights.",
         "The retirement age of High Court judges was increased from 60 to 62 years by the 15th Constitutional Amendment Act, 1963.",
-        "Parliament holds the power to establish a common High Court for two or more states or a state and a Union Territory under Article 231."
+        "A judge of a High Court can be removed from office in the same manner and on the same grounds as a Supreme Court judge."
       ],
-      "id": "svlyrpn"
+      "id": "fpljhk0"
     },
     {
-      "id": "qxuli82",
+      "id": "97us28p",
       "type": "table",
       "rows": [
         {
@@ -333,22 +334,22 @@
       ]
     },
     {
-      "id": "3m883dd",
+      "id": "4l4usui",
       "type": "heading",
       "level": 2,
       "content": "EXAM Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "fokv7wo"
+      "id": "zclq4d8"
     },
     {
       "type": "paragraph",
-      "id": "oeqtghn"
+      "id": "t2czifc"
     },
     {
       "type": "paragraph",
-      "id": "rf4iicv"
+      "id": "gqm9pt6"
     }
   ],
   "enriched": true

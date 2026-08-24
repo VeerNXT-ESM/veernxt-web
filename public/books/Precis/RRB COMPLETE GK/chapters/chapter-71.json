@@ -1,0 +1,130 @@
+{
+  "id": "h3bssub",
+  "title": "Parent Rock and Metamorphic Rock",
+  "order": 71,
+  "blocks": [
+    {
+      "id": "8hua91o",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metamorphic rocks are formed through the alteration of pre-existing parent rocks under extreme heat and pressure.",
+      "id": "j79iiir"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parent Rock",
+        "Original Rock Type",
+        "Metamorphic Rock"
+      ],
+      "rows": [
+        [
+          "Granite",
+          "Igneous",
+          "Gneiss"
+        ],
+        [
+          "Limestone",
+          "Sedimentary",
+          "Marble"
+        ],
+        [
+          "Sandstone",
+          "Sedimentary",
+          "Quartzite"
+        ],
+        [
+          "Shale / Clay",
+          "Sedimentary",
+          "Slate / Schist"
+        ],
+        [
+          "Coal",
+          "Sedimentary",
+          "Graphite / Diamond"
+        ]
+      ],
+      "id": "3guocw4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Process",
+          "value": "Metamorphism",
+          "icon": "info"
+        },
+        {
+          "label": "Key Drivers",
+          "value": "Heat & Pressure",
+          "icon": "check"
+        },
+        {
+          "label": "Granite Converts To",
+          "value": "Gneiss",
+          "icon": "book"
+        },
+        {
+          "label": "Limestone Converts To",
+          "value": "Marble",
+          "icon": "award"
+        }
+      ],
+      "id": "1s3j9by"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct matching questions between Parent Rock and Metamorphic Rock (e.g., Granite to Gneiss, Limestone to Marble) are highly frequent in competitive exams.",
+        "Quartzite is derived from Sandstone, whereas Slate and Schist originate from Shale and Clay.",
+        "Coal serves as an organic sedimentary parent rock that metamorphoses into Anthracite, Graphite, and Diamond."
+      ],
+      "id": "ugfojq1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metamorphic rocks originate from pre-existing igneous or sedimentary parent rocks subjected to intense heat and pressure.",
+        "Thermal metamorphism is driven primarily by intense heat, while dynamic metamorphism is driven by intense pressure.",
+        "Granite acts as the parent rock for Gneiss through high-grade regional metamorphism.",
+        "Limestone recrystallizes into Marble, creating a fine-grained non-foliated rock.",
+        "Sandstone transforms into highly durable Quartzite under extreme pressure and heat."
+      ],
+      "id": "uqsruim"
+    }
+  ],
+  "enriched": true
+}

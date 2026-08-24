@@ -1,0 +1,351 @@
+{
+  "id": "oo8gazo",
+  "title": "CHAPTER 13: TEMPERATURE, PRESSURE & WINDS",
+  "order": 14,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qjp1oml"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topics",
+          "value": "3 Main Parts",
+          "icon": "book"
+        },
+        {
+          "label": "Key Priority",
+          "value": "Temperature Inversion",
+          "icon": "award"
+        },
+        {
+          "label": "Focus Area",
+          "value": "Pressure Belts",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "Exam Gold",
+          "icon": "check"
+        }
+      ],
+      "id": "t6av9da"
+    },
+    {
+      "type": "paragraph",
+      "id": "ild85gn"
+    },
+    {
+      "id": "necsf2e",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: TEMPERATURE (EXTREMELY DETAILED)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Temperature distribution is influenced by latitude, altitude, ocean currents, continentality, and cloud cover.",
+        "Temperature inversion occurs when warm air lies above cool air near the surface, acting as an exam-favorite concept.",
+        "Global air pressure belts are formed due to thermal and dynamic factors across different latitudes.",
+        "Wind dynamics are primarily driven by pressure gradient force, Coriolis force, and surface friction.",
+        "Seasonal shifting of pressure belts creates major climate systems like monsoon winds."
+      ],
+      "id": "t4rv3u9"
+    },
+    {
+      "id": "tfcno9t",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "9tgopgv"
+    },
+    {
+      "id": "c4rizem",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Temperature (Cause–Effect)"
+    },
+    {
+      "id": "7t7dvge",
+      "type": "heading",
+      "level": 3,
+      "content": "Latitude"
+    },
+    {
+      "type": "paragraph",
+      "id": "gcno9vl"
+    },
+    {
+      "id": "ugx0460",
+      "type": "heading",
+      "level": 3,
+      "content": "Altitude"
+    },
+    {
+      "type": "paragraph",
+      "id": "e8al6xk"
+    },
+    {
+      "id": "uhvanz0",
+      "type": "heading",
+      "level": 3,
+      "content": "Distance from the Sea (Continentality)"
+    },
+    {
+      "type": "paragraph",
+      "id": "cbzzsg6"
+    },
+    {
+      "id": "ea7ftaz",
+      "type": "heading",
+      "level": 3,
+      "content": "Ocean Currents"
+    },
+    {
+      "type": "paragraph",
+      "id": "uspo0p4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "PART D: INTERRELATIONSHIP (EXAM GOLD)",
+      "id": "9eblzjy"
+    },
+    {
+      "id": "d6nme97",
+      "type": "heading",
+      "level": 3,
+      "content": "Cloud Cover & Winds"
+    },
+    {
+      "type": "paragraph",
+      "id": "mbuxuch"
+    },
+    {
+      "id": "a9dbfej",
+      "type": "heading",
+      "level": 3,
+      "content": "Temperature Inversion ( Favourite)"
+    },
+    {
+      "type": "paragraph",
+      "id": "pl7z94w"
+    },
+    {
+      "id": "874kjua",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: AIR PRESSURE (EXTREMELY DETAILED)"
+    },
+    {
+      "id": "8swmkhv",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Air Pressure"
+    },
+    {
+      "type": "paragraph",
+      "id": "398866r"
+    },
+    {
+      "id": "cc8m97x",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Air Pressure"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Temperature",
+        "Air Pressure"
+      ],
+      "rows": [
+        [
+          "Primary Driving Force",
+          "Insolation (Solar Radiation)",
+          "Weight of the overlying air column"
+        ],
+        [
+          "Primary Factors",
+          "Latitude, Altitude, Ocean Currents",
+          "Altitude, Temperature, Rotation of Earth"
+        ],
+        [
+          "Key Phenomenon",
+          "Temperature Inversion",
+          "Global Pressure Belts"
+        ]
+      ],
+      "id": "9vznpxv"
+    },
+    {
+      "type": "paragraph",
+      "id": "o8gohm9"
+    },
+    {
+      "id": "4fozlvj",
+      "type": "heading",
+      "level": 3,
+      "content": "Pressure Belts of the World (Cause–Effect)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5sf0dbk"
+    },
+    {
+      "id": "mnvupxm",
+      "type": "heading",
+      "level": 3,
+      "content": "Seasonal Shifting of Pressure Belts"
+    },
+    {
+      "type": "paragraph",
+      "id": "lk86g35"
+    },
+    {
+      "id": "qbxdwxr",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: WINDS (EXTREMELY DETAILED)"
+    },
+    {
+      "id": "z0f4d1t",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Wind"
+    },
+    {
+      "type": "paragraph",
+      "id": "bzz91xv"
+    },
+    {
+      "id": "i7skmk9",
+      "type": "heading",
+      "level": 3,
+      "content": "Forces Affecting Winds"
+    },
+    {
+      "type": "paragraph",
+      "id": "fk6byy1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test the ideal conditions required for Temperature Inversion (clear skies, calm air, long winter nights).",
+        "Differentiate between thermally formed pressure belts (Equatorial Low, Polar High) and dynamically formed pressure belts (Subtropical High, Subpolar Low).",
+        "Focus on the Coriolis Force deflection direction: right in the Northern Hemisphere and left in the Southern Hemisphere."
+      ],
+      "id": "6l7wdsz"
+    },
+    {
+      "id": "0nwgpzo",
+      "type": "list",
+      "items": [
+        null
+      ]
+    },
+    {
+      "id": "iln5tmj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ss4i6yd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gmnbb4p",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: INTERRELATIONSHIP (EXAM GOLD)"
+    },
+    {
+      "type": "paragraph",
+      "id": "n9zy5fi"
+    },
+    {
+      "id": "2g9drjm",
+      "type": "heading",
+      "level": 3,
+      "content": "Ultra-Revision Points ()"
+    },
+    {
+      "id": "iv28n6w",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

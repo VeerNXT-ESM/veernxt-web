@@ -1,0 +1,89 @@
+{
+  "id": "f13z140",
+  "title": "RRB Quick Revision Box",
+  "order": 428,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ib1f2nd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The first train in India ran between Mumbai and Thane on 16 April 1853.",
+      "id": "x1yojfk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Railway Gauge",
+        "Track Width",
+        "Primary Usage"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1,676 mm (5 ft 6 in)",
+          "Mainline freight and passenger routes across India"
+        ],
+        [
+          "Meter Gauge",
+          "1,000 mm (3 ft 3 3/8 in)",
+          "Legacy lines currently being upgraded under Project Unigauge"
+        ],
+        [
+          "Narrow Gauge",
+          "762 mm / 610 mm",
+          "Mountain railways and heritage routes like Darjeeling Himalayan Railway"
+        ]
+      ],
+      "id": "vffj639"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Year",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "17 Zones",
+          "icon": "book"
+        },
+        {
+          "label": "Nationalisation Year",
+          "value": "1951",
+          "icon": "check"
+        },
+        {
+          "label": "Official Mascot",
+          "value": "Bholu",
+          "icon": "award"
+        }
+      ],
+      "id": "xouczbl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked: Indian Railways nationalisation year is 1951.",
+        "Match the following: Headquarters of different Railway Zones are repeatedly tested in RRB NTPC & Group D.",
+        "Important date: The first electric train ran between Bombay VT and Kurla on 3 February 1925."
+      ],
+      "id": "7iu0vx0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Mumbai (Bori Bunder) and Thane on 16 April 1853.",
+        "Indian Railways was nationalised in 1951 and is organized into 17 administrative zones.",
+        "Bholu the guard elephant, holding a lamp, serves as the official mascot of Indian Railways.",
+        "Project Unigauge aims to convert all narrow and meter gauge tracks into broad gauge across India."
+      ],
+      "id": "nx9yex0"
+    }
+  ],
+  "enriched": true
+}

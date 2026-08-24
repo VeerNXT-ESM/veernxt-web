@@ -1,0 +1,101 @@
+{
+  "id": "9cnseck",
+  "title": "3. Factors of Soil Formation (CLORPT)",
+  "order": 169,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "z67jjv0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equation Formulated",
+          "value": "1941",
+          "icon": "calendar"
+        },
+        {
+          "label": "CLORPT Factors",
+          "value": "5 Primary Factors",
+          "icon": "check"
+        },
+        {
+          "label": "Active Factors",
+          "value": "2 (Climate, Biota)",
+          "icon": "info"
+        },
+        {
+          "label": "Passive Factors",
+          "value": "3 (Parent, Relief, Time)",
+          "icon": "book"
+        }
+      ],
+      "id": "8dtevcs"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil is a dynamic natural body formed by the interaction of climate, organisms, relief, parent material, and time.",
+      "id": "fsq1o4l"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Hans Jenny formulated the soil formation equation S = f(Cl, o, r, p, t) in 1941.",
+        "Climate and Organisms are active factors that directly supply energy and matter to drive soil processes.",
+        "Parent Material, Relief, and Time act as passive factors determining background conditions and initial substrate.",
+        "Steep relief leads to thin soil layers due to erosion, whereas flat topography allows thick soil horizon development.",
+        "Time determines soil maturity, with older soils exhibiting well-defined horizons compared to young alluvial soils."
+      ],
+      "id": "jjcfrvv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Factors",
+        "Primary Role"
+      ],
+      "rows": [
+        [
+          "Active Factors",
+          "Climate, Organisms",
+          "Actively supply energy, moisture, and biological activity to transform soil"
+        ],
+        [
+          "Passive Factors",
+          "Parent Material, Relief, Time",
+          "Provide original material, condition moisture/drainage, and give duration for soil profile maturity"
+        ]
+      ],
+      "id": "jx9mccf"
+    },
+    {
+      "type": "paragraph",
+      "id": "ox1ffoz"
+    },
+    {
+      "type": "paragraph",
+      "id": "a91w22i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions often ask to categorize factors into Active (Climate, Organisms) versus Passive (Relief, Parent Material, Time).",
+        "Black soil (Regur) is a classic exam example where Parent Material (basalt rock) dictates soil characteristics.",
+        "Hans Jenny is credited with defining the CLORPT formula in 1941."
+      ],
+      "id": "kvm3c5f"
+    },
+    {
+      "type": "paragraph",
+      "id": "tduvxle"
+    },
+    {
+      "type": "paragraph",
+      "id": "v6nq2rx"
+    }
+  ],
+  "enriched": true
+}

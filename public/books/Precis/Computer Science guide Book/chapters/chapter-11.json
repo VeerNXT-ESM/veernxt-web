@@ -1,0 +1,412 @@
+{
+  "id": "vm7yok5",
+  "title": "Chapter 11: Computer Networking",
+  "order": 11,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9ur33ui"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Network Types",
+          "value": "LAN, MAN, WAN",
+          "icon": "book"
+        },
+        {
+          "label": "Core Devices",
+          "value": "Router, Switch, Hub, Modem",
+          "icon": "check"
+        },
+        {
+          "label": "Topologies",
+          "value": "5 Key Layouts",
+          "icon": "info"
+        },
+        {
+          "label": "Mesh Links Formula",
+          "value": "n(n-1)/2",
+          "icon": "award"
+        }
+      ],
+      "id": "lreo768"
+    },
+    {
+      "id": "6o6wswp",
+      "type": "heading",
+      "level": 2,
+      "content": "11.1 Introduction to Computer Networks"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Computer networks enable resource sharing, communication, and centralized data management across connected nodes.",
+        "Networks are classified by geographical scale into Local Area Network (LAN), Metropolitan Area Network (MAN), and Wide Area Network (WAN).",
+        "Essential network devices include Routers (path determination across networks), Switches (intelligent intra-network packet delivery), Hubs (broadcasting devices), and Modems (signal conversion).",
+        "Network topologies represent physical or logical layouts: Bus, Star, Ring, Mesh, and Tree.",
+        "Mesh topology offers maximum redundancy and fault tolerance at the cost of high cabling complexity."
+      ],
+      "id": "q9topag"
+    },
+    {
+      "type": "paragraph",
+      "id": "f6u2xge"
+    },
+    {
+      "id": "6y6sl1l",
+      "type": "heading",
+      "level": 3,
+      "content": "11.1.1 Advantages of Computer Networks"
+    },
+    {
+      "id": "qcuvjnq",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "zmdndsn",
+      "type": "heading",
+      "level": 2,
+      "content": "11.2 Types of Computer Networks"
+    },
+    {
+      "id": "njo28j5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etanknx",
+      "type": "heading",
+      "level": 3,
+      "content": "11.2.1 Local Area Network (LAN)"
+    },
+    {
+      "type": "paragraph",
+      "id": "al5z9k5"
+    },
+    {
+      "id": "o513sll",
+      "type": "heading",
+      "level": 3,
+      "content": "11.2.2 Metropolitan Area Network (MAN)"
+    },
+    {
+      "type": "paragraph",
+      "id": "0b069h7"
+    },
+    {
+      "id": "kajybew",
+      "type": "heading",
+      "level": 3,
+      "content": "11.2.3 Wide Area Network (WAN)"
+    },
+    {
+      "type": "paragraph",
+      "id": "v4y9l77"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Local Area Network (LAN) is confined to a small geographical area, offering high speed and low error rates compared to Wide Area Networks.",
+      "id": "mji1al7"
+    },
+    {
+      "id": "vdwsqjf",
+      "type": "heading",
+      "level": 2,
+      "content": "11.3 Network Devices"
+    },
+    {
+      "id": "5jc2032",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms6orca",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.1 Router"
+    },
+    {
+      "type": "paragraph",
+      "id": "30txe77"
+    },
+    {
+      "id": "yj3kq4q",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.2 Switch"
+    },
+    {
+      "type": "paragraph",
+      "id": "0sb75ud"
+    },
+    {
+      "id": "gsoedp2",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.3 Hub"
+    },
+    {
+      "type": "paragraph",
+      "id": "bfbo2li"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "LAN (Local Area Network)",
+        "MAN (Metropolitan Area Network)",
+        "WAN (Wide Area Network)"
+      ],
+      "rows": [
+        [
+          "Geographical Scope",
+          "Small (Single room, building, or campus)",
+          "Moderate (Entire city or town)",
+          "Large (Country, continent, or global)"
+        ],
+        [
+          "Data Speed",
+          "Very High (up to 10 Gbps)",
+          "Moderate",
+          "Lower compared to LAN"
+        ],
+        [
+          "Setup & Maintenance Cost",
+          "Low",
+          "Medium",
+          "High"
+        ],
+        [
+          "Error / Congestion Rate",
+          "Lowest error rate",
+          "Moderate error rate",
+          "Highest error rate"
+        ]
+      ],
+      "id": "fgz68nc"
+    },
+    {
+      "id": "9gmrl9w",
+      "type": "heading",
+      "level": 3,
+      "content": "11.3.4 Modem"
+    },
+    {
+      "type": "paragraph",
+      "id": "n1io9pr"
+    },
+    {
+      "id": "h7nx3oe",
+      "type": "heading",
+      "level": 2,
+      "content": "11.4 Network Topologies"
+    },
+    {
+      "id": "czq3e32",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pbur73y",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.1 Bus Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "b1ir74t"
+    },
+    {
+      "id": "yjwzvoi",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.2 Star Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "189r938"
+    },
+    {
+      "id": "ocnhhne",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.3 Ring Topology"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Hub is a physical layer (Layer 1) device that broadcasts data to all ports, whereas Switch is a data link layer (Layer 2) device that unicasts data to specific target ports.",
+        "The total number of physical connections required in a fully connected mesh network with 'n' devices is n(n-1)/2.",
+        "Modem performs Modulation (Digital to Analog) and Demodulation (Analog to Digital) for telephone line transmission.",
+        "Star Topology relies on a central hub/switch; if the central node fails, the entire network goes down."
+      ],
+      "id": "1ty9k0u"
+    },
+    {
+      "type": "paragraph",
+      "id": "29e9pyo"
+    },
+    {
+      "id": "4jncqdx",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.4 Mesh Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "micpmn2"
+    },
+    {
+      "id": "r986xti",
+      "type": "heading",
+      "level": 3,
+      "content": "11.4.5 Tree Topology"
+    },
+    {
+      "type": "paragraph",
+      "id": "m74yioz"
+    },
+    {
+      "id": "k0qv3l0",
+      "type": "heading",
+      "level": 2,
+      "content": "11.5 Important Exam Points"
+    },
+    {
+      "id": "omotna2",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

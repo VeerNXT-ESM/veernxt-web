@@ -1,0 +1,308 @@
+{
+  "id": "kurrhqf",
+  "title": "Chapter 8: Matter and Its Properties",
+  "order": 57,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "t0dhlqs"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "States of Matter",
+          "value": "5 Recognized",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Density",
+          "value": "kg/m³",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "award"
+        },
+        {
+          "label": "Standard Atmospheric Pressure",
+          "value": "1.013 × 10⁵ Pa",
+          "icon": "check"
+        }
+      ],
+      "id": "juhsnwd"
+    },
+    {
+      "id": "4yjqhew",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Matter"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Matter is anything that possesses mass, occupies space, and can be perceived by our senses.",
+        "The five fundamental states of matter are Solid, Liquid, Gas, Plasma, and Bose-Einstein Condensate (BEC).",
+        "Density represents the mass per unit volume of a substance and determines whether an object floats or sinks.",
+        "Changes in state (melting, freezing, vaporization, condensation, sublimation) occur due to temperature and pressure variations.",
+        "Elasticity is the property by which a material regains its original shape and size after the removal of deforming forces.",
+        "Pressure is defined as the force applied perpendicular to the surface of an object per unit area."
+      ],
+      "id": "ni9132y"
+    },
+    {
+      "type": "paragraph",
+      "id": "lzp1qdq"
+    },
+    {
+      "type": "paragraph",
+      "id": "bl2a0o4"
+    },
+    {
+      "type": "paragraph",
+      "id": "0gminuf"
+    },
+    {
+      "id": "36ufq8h",
+      "type": "heading",
+      "level": 2,
+      "content": "2. States of Matter"
+    },
+    {
+      "id": "i2moreq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lvpjfem",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Physical Properties of Matter"
+    },
+    {
+      "type": "paragraph",
+      "id": "9bb1zwt"
+    },
+    {
+      "type": "paragraph",
+      "id": "u37qdil"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Matter and Its Properties",
+      "id": "oi379zy"
+    },
+    {
+      "type": "paragraph",
+      "id": "bm10lix"
+    },
+    {
+      "type": "paragraph",
+      "id": "n5jq8ye"
+    },
+    {
+      "id": "eo00bej",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Changes in States of Matter"
+    },
+    {
+      "id": "pq1oxa6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ay0d91g",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Density"
+    },
+    {
+      "type": "paragraph",
+      "id": "1nj60az"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Solid",
+        "Liquid",
+        "Gas"
+      ],
+      "rows": [
+        [
+          "Shape & Volume",
+          "Fixed shape and volume",
+          "Indefinite shape, fixed volume",
+          "Indefinite shape and volume"
+        ],
+        [
+          "Intermolecular Force",
+          "Very strong",
+          "Moderate",
+          "Extremely weak"
+        ],
+        [
+          "Compressibility",
+          "Negligible",
+          "Low",
+          "Very high"
+        ],
+        [
+          "Fluidity",
+          "Cannot flow",
+          "Flows from higher to lower level",
+          "Flows in all directions"
+        ]
+      ],
+      "id": "yxt7rml"
+    },
+    {
+      "type": "paragraph",
+      "id": "pk21nvz"
+    },
+    {
+      "type": "paragraph",
+      "id": "24qewhi"
+    },
+    {
+      "id": "ub1qwgr",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Elasticity"
+    },
+    {
+      "type": "paragraph",
+      "id": "eiuzfhk"
+    },
+    {
+      "id": "azs8xfs",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Pressure"
+    },
+    {
+      "type": "paragraph",
+      "id": "3axq3nx"
+    },
+    {
+      "type": "paragraph",
+      "id": "ey0k2lv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6hw5r4e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Plasma is the 4th state of matter consisting of super energetic, ionized gas particles, responsible for the glowing in stars and sun.",
+        "Hooke's Law states that within the elastic limit, stress is directly proportional to strain (Stress / Strain = Constant).",
+        "Atmospheric pressure decreases with altitude, which causes the boiling point of water to decrease at higher elevations."
+      ],
+      "id": "zmxm18f"
+    },
+    {
+      "id": "a8o2i47",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "l0q0b9o"
+    },
+    {
+      "type": "paragraph",
+      "id": "kemie9p"
+    },
+    {
+      "type": "paragraph",
+      "id": "4314xtx"
+    },
+    {
+      "type": "paragraph",
+      "id": "e77hfg2"
+    }
+  ],
+  "enriched": true
+}

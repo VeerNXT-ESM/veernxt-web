@@ -1,0 +1,338 @@
+{
+  "id": "lritjdv",
+  "title": "Chapter 3: Energy and Power",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "mjo9zsw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Energy",
+          "value": "Joule (J)",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "clock"
+        },
+        {
+          "label": "1 Horsepower",
+          "value": "746 W",
+          "icon": "award"
+        },
+        {
+          "label": "1 kWh Value",
+          "value": "3.6 × 10⁶ J",
+          "icon": "info"
+        }
+      ],
+      "id": "m4hmc5d"
+    },
+    {
+      "id": "vepzl5u",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Energy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Energy is a scalar quantity defined as the capacity of a body to do work, measured in Joules (J).",
+        "Kinetic Energy (KE = ½mv²) is energy possessed by a body due to its motion.",
+        "Potential Energy (PE = mgh) is energy stored in a body by virtue of its position, shape, or configuration.",
+        "The Law of Conservation of Energy states that energy can neither be created nor destroyed, only transformed.",
+        "Mechanical Energy is the sum total of Kinetic Energy and Potential Energy in a system.",
+        "Power is the rate of doing work or transferring energy (P = W/t), measured in Watts (W)."
+      ],
+      "id": "wchooym"
+    },
+    {
+      "type": "paragraph",
+      "id": "y8464mf"
+    },
+    {
+      "type": "paragraph",
+      "id": "zhsxkbu"
+    },
+    {
+      "type": "paragraph",
+      "id": "8453h2r"
+    },
+    {
+      "id": "sc9yz6u",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Forms of Energy"
+    },
+    {
+      "id": "lr54fa9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2hhfnj9",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Kinetic Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "2pl1czp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ashkbp7"
+    },
+    {
+      "type": "paragraph",
+      "id": "6sgymyh"
+    },
+    {
+      "type": "paragraph",
+      "id": "s2756k5"
+    },
+    {
+      "type": "paragraph",
+      "id": "w3trx52"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Energy can neither be created nor destroyed; it can only be transformed from one form to another.",
+      "id": "kihxo0m"
+    },
+    {
+      "id": "osu3ed2",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Potential Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "z0xr303"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5tzlmdz"
+    },
+    {
+      "type": "paragraph",
+      "id": "j48c9y0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1ezt2hb"
+    },
+    {
+      "type": "paragraph",
+      "id": "6j24pxq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ht67ovr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Energy",
+        "Power"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Capacity of a body to perform work",
+          "Rate at which work is done per unit time"
+        ],
+        [
+          "SI Unit",
+          "Joule (J)",
+          "Watt (W) or Joule per second"
+        ],
+        [
+          "Formula",
+          "E = Force × Displacement",
+          "P = Work / Time (W/t)"
+        ],
+        [
+          "Time Dependency",
+          "Independent of the time taken to do work",
+          "Inversely proportional to the time taken"
+        ],
+        [
+          "Commercial Unit",
+          "Kilowatt-hour (kWh)",
+          "Kilowatt (kW)"
+        ]
+      ],
+      "id": "arbw0ne"
+    },
+    {
+      "id": "uf92v8v",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Law of Conservation of Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "us2mzyx"
+    },
+    {
+      "id": "gvopkgj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mechanical Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "3gqyalc"
+    },
+    {
+      "type": "paragraph",
+      "id": "2dea27h"
+    },
+    {
+      "id": "zixab21",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Meaning of Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "bks4dar"
+    },
+    {
+      "type": "paragraph",
+      "id": "c2pv8iq"
+    },
+    {
+      "type": "paragraph",
+      "id": "6740d1l"
+    },
+    {
+      "id": "3zf4pya",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Units of Power"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "If the velocity of an object is doubled, its Kinetic Energy increases by 4 times (KE ∝ v²).",
+        "1 Horsepower (hp) = 746 Watts; this exact unit conversion is frequently tested in SSC and Railway exams.",
+        "1 Commercial Unit of Electrical Energy (1 kWh) is equal to 3.6 × 10⁶ Joules.",
+        "Relationship between Kinetic Energy and Momentum: KE = p² / (2m)."
+      ],
+      "id": "pvwp9xz"
+    },
+    {
+      "id": "9tmmef4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xpe06qz",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0oczvs"
+    },
+    {
+      "type": "paragraph",
+      "id": "rrzcl51"
+    },
+    {
+      "type": "paragraph",
+      "id": "gqqhfef"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0952n5"
+    }
+  ],
+  "enriched": true
+}

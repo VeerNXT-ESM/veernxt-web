@@ -1,40 +1,35 @@
 {
-  "id": "c00yec3",
+  "id": "xcueq6z",
   "title": "Chapter 1: Basics of Computer",
   "order": 1,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "5z34dll"
+      "id": "75dz5um"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Generations of Computers",
-          "value": "5 Generations",
-          "icon": "calendar"
-        },
-        {
-          "label": "Main Computer Types",
-          "value": "3 (Analog, Digital, Hybrid)",
+          "label": "Computer Types",
+          "value": "3 Categories",
           "icon": "book"
         },
         {
-          "label": "Basic Functions",
-          "value": "4 (Input, Process, Output, Storage)",
-          "icon": "check"
+          "label": "Core Sections",
+          "value": "5 Topics",
+          "icon": "info"
         },
         {
-          "label": "Key Evaluation Focus",
-          "value": "Generations & Types",
+          "label": "Focus Area",
+          "value": "Exam Essentials",
           "icon": "award"
         }
       ],
-      "id": "ng9oy2a"
+      "id": "1ma0jv0"
     },
     {
-      "id": "wjc6wbq",
+      "id": "ss9xywe",
       "type": "heading",
       "level": 2,
       "content": "1.1 Definition of Computer"
@@ -43,30 +38,30 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Computers perform four core operations: receiving input, processing data, producing output, and storing results.",
-        "Computers are classified based on operation into Analog (continuous physical data), Digital (discrete binary data), and Hybrid (combined features).",
-        "Computer evolution spans five generations, progressing from Vacuum Tubes to Transistors, Integrated Circuits, Microprocessors, and Artificial Intelligence.",
-        "Primary characteristics of a computer include high processing speed, extreme accuracy, high diligence, versatility, and vast storage capacity."
+        "Computers are defined by their fundamental operational functions and key characteristics.",
+        "Computers are classified based on technology into Analog, Digital, and Hybrid types.",
+        "The history and development of computing are categorized into distinct Generations of Computers.",
+        "Understanding foundational computer concepts is essential for competitive exam preparation."
       ],
-      "id": "1ftka80"
+      "id": "sw6xxux"
     },
     {
       "type": "paragraph",
-      "id": "qyw82os"
+      "id": "1g7rikn"
     },
     {
-      "id": "sj8m24i",
+      "id": "csib267",
       "type": "heading",
       "level": 3,
       "content": "1.1.1 Basic Functions of Computer"
     },
     {
       "type": "pullQuote",
-      "content": "1.3 Types of Computers (Analog, Digital, Hybrid)",
-      "id": "c4eyilw"
+      "content": "Types of Computers (Analog, Digital, Hybrid)",
+      "id": "23jmkzf"
     },
     {
-      "id": "vrstn47",
+      "id": "mdcbcqc",
       "type": "table",
       "rows": [
         {
@@ -107,7 +102,7 @@
       ]
     },
     {
-      "id": "rjxdicw",
+      "id": "uzkdvhy",
       "type": "heading",
       "level": 2,
       "content": "1.2 Characteristics of Computer"
@@ -115,31 +110,31 @@
     {
       "type": "comparisonTable",
       "headers": [
-        "Computer Type",
-        "Data/Signal Processed",
-        "Key Applications & Examples"
+        "Type",
+        "Data Handled",
+        "Primary Characteristic"
       ],
       "rows": [
         [
           "Analog Computer",
-          "Continuous physical variables (voltage, pressure, temperature)",
-          "Speedometers, traditional thermometers, analog clocks"
+          "Continuous physical signals",
+          "Measures physical variables like voltage or temperature"
         ],
         [
           "Digital Computer",
           "Discrete binary data (0s and 1s)",
-          "Personal computers, laptops, digital calculators, smartphones"
+          "Performs high-speed calculations and logical operations"
         ],
         [
           "Hybrid Computer",
-          "Combines continuous analog signals and discrete digital processing",
-          "ECG machines in hospitals, petrol pump dispensers, scientific research units"
+          "Both continuous and discrete data",
+          "Combines the measuring speed of analog with the accuracy of digital"
         ]
       ],
-      "id": "ow74dsd"
+      "id": "lqzyeg0"
     },
     {
-      "id": "mkh4j5d",
+      "id": "vwidqiv",
       "type": "list",
       "items": [
         null,
@@ -152,13 +147,13 @@
       ]
     },
     {
-      "id": "52zep32",
+      "id": "jyapp27",
       "type": "heading",
       "level": 2,
       "content": "1.3 Types of Computers (Analog, Digital, Hybrid)"
     },
     {
-      "id": "8zkvxl5",
+      "id": "d7tqkg9",
       "type": "table",
       "rows": [
         {
@@ -196,7 +191,7 @@
       ]
     },
     {
-      "id": "6sgbyip",
+      "id": "0zjl4gh",
       "type": "heading",
       "level": 2,
       "content": "1.4 Generations of Computers"
@@ -204,14 +199,13 @@
     {
       "type": "examAlert",
       "items": [
-        "First-generation computers used Vacuum Tubes, second-generation used Transistors, third-generation used Integrated Circuits (ICs), fourth-generation used VLSI/Microprocessors, and fifth-generation rely on ULSI/AI.",
-        "Hybrid computers combine the continuous measurement of Analog computers with the precise logical counting of Digital computers (frequently cited example: ECG machines in medical units).",
-        "Questions frequently test the distinction between data processing stages: Input -> Processing -> Output -> Storage (IPOS cycle)."
+        "Distinction between Analog, Digital, and Hybrid computers is a high-frequency exam topic.",
+        "Technological advancements across different Generations of Computers are repeatedly tested."
       ],
-      "id": "kmu6ipl"
+      "id": "kvcza9m"
     },
     {
-      "id": "p43ypls",
+      "id": "d2vip53",
       "type": "table",
       "rows": [
         {
@@ -271,13 +265,13 @@
       ]
     },
     {
-      "id": "xyzo651",
+      "id": "oymax6i",
       "type": "heading",
       "level": 2,
       "content": "1.5 Important Exam Points"
     },
     {
-      "id": "n8vkgss",
+      "id": "pgs65ni",
       "type": "list",
       "items": [
         null,

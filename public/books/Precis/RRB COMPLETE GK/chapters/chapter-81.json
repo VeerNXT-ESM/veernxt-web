@@ -1,0 +1,108 @@
+{
+  "id": "h9f5rk0",
+  "title": "5. Seafloor Spreading",
+  "order": 81,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "d14evwg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Proposed In",
+          "value": "1961",
+          "icon": "calendar"
+        },
+        {
+          "label": "Propounded By",
+          "value": "Harry Hess",
+          "icon": "award"
+        },
+        {
+          "label": "Max Oceanic Age",
+          "value": "200 Mn Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Mechanism",
+          "value": "Convection Currents",
+          "icon": "info"
+        }
+      ],
+      "id": "gitsmgs"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The ocean floor that gets pushed due to volcanic eruptions at the crest, sinks down at the oceanic trenches and gets consumed.",
+      "id": "b4f9s3n"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The seafloor spreading hypothesis was proposed by Harry Hess in 1961 to explain the origin of mid-oceanic ridges and continental drift.",
+        "Constant volcanic eruptions along the crest of mid-oceanic ridges rupture the oceanic crust, pushing new magma outward and spreading the seafloor.",
+        "Rocks equidistant on either side of the mid-oceanic ridge crest show striking similarities in age, chemical composition, and magnetic orientation.",
+        "Oceanic crust is significantly younger (under 200 million years old) compared to continental crust (up to 3,200 million years old).",
+        "As new oceanic crust is created at mid-oceanic ridges, older crust sinks into deep-sea trenches and gets consumed in the mantle."
+      ],
+      "id": "dwky251"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Oceanic Crust",
+        "Continental Crust"
+      ],
+      "rows": [
+        [
+          "Maximum Age",
+          "Younger (less than 200 million years)",
+          "Much older (up to 3,200 million years)"
+        ],
+        [
+          "Composition & Density",
+          "Basaltic (Sima), Higher density",
+          "Granitic (Sial), Lower density"
+        ],
+        [
+          "Average Thickness",
+          "Thinner (approx. 5–10 km)",
+          "Thicker (approx. 30–70 km)"
+        ],
+        [
+          "Geological Fate",
+          "Continuously created at ridges and destroyed at trenches",
+          "Preserved over long periods; rarely subducted into mantle"
+        ]
+      ],
+      "id": "xxtp5cl"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ftmn73"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Harry Hess formulated the 'Seafloor Spreading' hypothesis in 1961 based on Arthur Holmes' convection current theory.",
+        "The age of oceanic rocks nowhere exceeds 200 million years, whereas continental rocks can be up to 3,200 million years old.",
+        "Symmetrical magnetic reversal stripes parallel to mid-oceanic ridge crests provide crucial proof for seafloor spreading.",
+        "Mid-oceanic ridges represent constructive plate boundaries, while deep-sea trenches represent destructive (subduction) zones."
+      ],
+      "id": "6cmi3pe"
+    },
+    {
+      "type": "paragraph",
+      "id": "ar6t674"
+    },
+    {
+      "type": "paragraph",
+      "id": "hguf8cu"
+    }
+  ],
+  "enriched": true
+}

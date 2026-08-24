@@ -1,0 +1,141 @@
+{
+  "id": "p70rx1c",
+  "title": "Comparison: CAG vs Finance Commission",
+  "order": 470,
+  "blocks": [
+    {
+      "id": "pv5xkur",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While the Comptroller and Auditor General acts as the guardian of the public purse through financial audit, the Finance Commission serves as the balancing wheel of fiscal federalism in India.",
+      "id": "22yv3e1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Comptroller & Auditor General (CAG)",
+        "Finance Commission"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 148",
+          "Article 280"
+        ],
+        [
+          "Nature of Body",
+          "Single-member independent authority",
+          "Quasi-judicial multi-member body (1 Chairman + 4 Members)"
+        ],
+        [
+          "Primary Function",
+          "Audits revenue and expenditure of Union and States",
+          "Recommends distribution of tax revenues between Centre and States"
+        ],
+        [
+          "Tenure / Cadence",
+          "Term of 6 years or until age of 65 years",
+          "Constituted every 5 years by the President"
+        ],
+        [
+          "Key Associated Body",
+          "Public Accounts Committee (PAC)",
+          "Ministry of Finance / Parliament"
+        ]
+      ],
+      "id": "44l89zz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CAG Article",
+          "value": "Article 148",
+          "icon": "book"
+        },
+        {
+          "label": "FC Article",
+          "value": "Article 280",
+          "icon": "award"
+        },
+        {
+          "label": "CAG Tenure",
+          "value": "6 Yrs / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "FC Cycle",
+          "value": "Every 5 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "yon54hb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG reports are examined in detail by the Public Accounts Committee (PAC) of Parliament.",
+        "Finance Commission recommendations are advisory in nature and not legally binding on the central government.",
+        "CAG can only be removed from office in like manner and on like grounds as a Judge of the Supreme Court."
+      ],
+      "id": "cud3wo9"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CAG is established under Article 148 as the guardian of the public purse, auditing all accounts and expenditure of Union and State governments.",
+        "Finance Commission is a quasi-judicial body constituted under Article 280 every five years by the President of India.",
+        "CAG submits three audit reports to the President regarding appropriation accounts, finance accounts, and public undertakings.",
+        "Finance Commission makes crucial recommendations regarding tax devolution between the Centre and States and grants-in-aid under Article 275."
+      ],
+      "id": "gk4aifv"
+    }
+  ],
+  "enriched": true
+}

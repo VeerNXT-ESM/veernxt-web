@@ -1,0 +1,236 @@
+{
+  "id": "i2r58sj",
+  "title": "LOCAL WINDS (COMPLETE TABLE)",
+  "order": 15,
+  "blocks": [
+    {
+      "id": "yr7yqfp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Chinook is termed the 'Snow Eater' as it rapidly raises local temperatures and melts snow cover along the eastern slopes of the Rocky Mountains.",
+      "id": "0h2uu1n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chinook",
+          "value": "Snow Eater",
+          "icon": "award"
+        },
+        {
+          "label": "Harmattan",
+          "value": "Doctor Wind",
+          "icon": "info"
+        },
+        {
+          "label": "Indian Wind",
+          "value": "Loo (Hot & Dry)",
+          "icon": "book"
+        },
+        {
+          "label": "Categories",
+          "value": "Hot & Cold Winds",
+          "icon": "check"
+        }
+      ],
+      "id": "476ao24"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Wind Name",
+        "Nature",
+        "Region",
+        "Key Feature"
+      ],
+      "rows": [
+        [
+          "Chinook",
+          "Hot & Dry",
+          "Rockies (North America)",
+          "Known as 'Snow Eater'"
+        ],
+        [
+          "Foehn",
+          "Hot & Dry",
+          "Alps (Europe)",
+          "Melts snow; aids fruit ripening"
+        ],
+        [
+          "Harmattan",
+          "Hot & Dry",
+          "Sahara to West Africa",
+          "Known as 'The Doctor'"
+        ],
+        [
+          "Loo",
+          "Hot & Dry",
+          "Northern India & Pakistan",
+          "Causes severe summer heatwaves"
+        ],
+        [
+          "Mistral",
+          "Cold & Dry",
+          "Rhone Valley (France)",
+          "Blowing towards Mediterranean Sea"
+        ],
+        [
+          "Sirocco",
+          "Hot & Moist",
+          "Sahara to Southern Europe",
+          "Causes 'Blood Rain' in Italy"
+        ],
+        [
+          "Bora",
+          "Cold & Dry",
+          "Adriatic Coast / Balkans",
+          "Strong gusty fall wind"
+        ]
+      ],
+      "id": "9mqa84y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Local winds are generated due to localized spatial differences in temperature, atmospheric pressure, and regional topography.",
+        "Major hot local winds include Chinook (North America), Foehn (Alps), Harmattan (West Africa), Loo (Northern India), and Sirocco (Sahara).",
+        "Major cold local winds include Mistral (France), Bora (Adriatic Coast), Pampero (South America), and Blizzard (Polar/Tundra regions).",
+        "Sirocco carries red dust from the Sahara across the Mediterranean, causing the phenomenon of 'Blood Rain' in Southern Europe.",
+        "Harmattan is termed 'The Doctor' because its dry nature brings relief from the damp humidity of the Gulf of Guinea coast."
+      ],
+      "id": "9v1j2f3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Matching local wind names with their specific origin regions (e.g., Chinook - Rockies, Foehn - Alps, Harmattan - West Africa) is frequently tested in UPSC and SSC exams.",
+        "'Blood Rain' in Southern Italy is caused by Saharan desert dust transported by the Sirocco wind.",
+        "Loo is an extremely hot, dry wind blowing across the Indo-Gangetic Plains during May and June."
+      ],
+      "id": "rzk72wj"
+    },
+    {
+      "id": "u3rbvyq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,90 @@
+{
+  "id": "63iij8z",
+  "title": "7. Governor’s Legislative Role",
+  "order": 368,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "uu8ccky"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor is an integral part of the State Legislature and possesses significant legislative powers including the authority to promulgate ordinances when the legislature is not in session.",
+      "id": "fduzyiw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Governor (Article 213)",
+        "President (Article 123)"
+      ],
+      "rows": [
+        [
+          "Legislative Jurisdiction",
+          "Promulgates ordinances on subjects in the State and Concurrent Lists",
+          "Promulgates ordinances on subjects in the Union and Concurrent Lists"
+        ],
+        [
+          "Previous Sanction",
+          "Requires President's instructions for certain specific bills before promulgation",
+          "Does not require prior instructions from any outside authority"
+        ],
+        [
+          "Council Nomination Categories",
+          "Includes 'Cooperative Movement' along with Art, Science, Literature, and Social Service",
+          "Excludes 'Cooperative Movement' for Rajya Sabha nominations"
+        ]
+      ],
+      "id": "vf56b9w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "State Legislature",
+          "value": "Article 168",
+          "icon": "book"
+        },
+        {
+          "label": "Assent to Bills",
+          "value": "Article 200",
+          "icon": "check"
+        },
+        {
+          "label": "Ordinance Power",
+          "value": "Article 213",
+          "icon": "info"
+        },
+        {
+          "label": "Ordinance Max Life",
+          "value": "6 Weeks",
+          "icon": "clock"
+        }
+      ],
+      "id": "hm1jrn6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Cooperative movement is an additional category for nominations to the Legislative Council by the Governor, which is not present in the President's nomination criteria for Rajya Sabha.",
+        "Reservation of a High Court-related bill for the President is mandatory, not discretionary, under Article 200.",
+        "An ordinance promulgated by the Governor ceases to operate 6 weeks from the date of reassembly of the State Legislature unless approved earlier."
+      ],
+      "id": "rxu4r24"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor is an integral part of the State Legislature under Article 168, despite not being a member of either House.",
+        "Under Article 200, the Governor can give assent, withhold assent, return a non-money bill for reconsideration, or reserve a bill for the consideration of the President.",
+        "The Governor must reserve any bill that endangers the constitutional position of the State High Court for the President's assent.",
+        "Under Article 213, the Governor can promulgate ordinances when either or both Houses of the State Legislature are not in session.",
+        "The Governor nominates 1/6th of the total members of the State Legislative Council from persons having special knowledge in literature, science, art, cooperative movement, and social service."
+      ],
+      "id": "rf4ktpz"
+    }
+  ],
+  "enriched": true
+}

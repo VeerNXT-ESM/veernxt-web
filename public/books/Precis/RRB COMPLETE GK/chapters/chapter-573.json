@@ -1,0 +1,89 @@
+{
+  "id": "qbbbxyo",
+  "title": "11. Exam Traps",
+  "order": 573,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "a0os0hq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Recognizing distractor options and avoiding negative marking traps is essential for maximizing rank in competitive examinations.",
+      "id": "gbqwi35"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Exam Trap Type",
+        "Common Student Mistake",
+        "Prevention Strategy"
+      ],
+      "rows": [
+        [
+          "Qualifier Blindness",
+          "Ignoring terms like 'NOT' or 'INCORRECT'",
+          "Underline or highlight key constraint words immediately while reading the question."
+        ],
+        [
+          "Plausible Distractor",
+          "Selecting the first option that looks familiar without reading all choices",
+          "Read all options completely before marking the answer sheet."
+        ],
+        [
+          "Time Sink Trap",
+          "Spending excessive time on a lengthy or stubborn question",
+          "Use the skip-and-return approach to secure easy marks first."
+        ]
+      ],
+      "id": "whi7xon"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Trap Categories",
+          "value": "4 Major Types",
+          "icon": "alert"
+        },
+        {
+          "label": "Negative Penalty",
+          "value": "-0.25 to -0.33",
+          "icon": "clock"
+        },
+        {
+          "label": "Accuracy Goal",
+          "value": "90%+",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "Distractor Detection",
+          "icon": "award"
+        }
+      ],
+      "id": "61bcet6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always scan for negative framing words like 'NOT', 'INCORRECT', and 'EXCEPT' before selecting an option.",
+        "Verify unit conversions (e.g., converting km/h to m/s) before finalizing numerical answers.",
+        "Never spend more than 60-90 seconds on a single question during the first attempt pass."
+      ],
+      "id": "ofiro4n"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Exam traps heavily exploit negative marking by tempting candidates into making hasty, unverified guesses.",
+        "Overlooking critical qualifiers like 'NOT', 'INCORRECT', or 'EXCEPT' is the most frequent source of silly mistakes.",
+        "Distractor options are intentionally designed using common calculation errors or partial truths to mislead candidates.",
+        "Time-sink questions are placed strategically to create panic and reduce time available for easier questions."
+      ],
+      "id": "qrj9qnp"
+    }
+  ],
+  "enriched": true
+}

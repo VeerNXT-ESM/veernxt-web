@@ -1,0 +1,90 @@
+{
+  "id": "3u55kcr",
+  "title": "8. Insider Trading",
+  "order": 555,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3o6kqta"
+    },
+    {
+      "type": "pullQuote",
+      "content": "No insider shall communicate, provide, or allow access to any unpublished price sensitive information relating to a company or securities.",
+      "id": "rqhx9r3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Connected Person",
+        "Deemed Connected Person"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Directly associated with the company through directorship, employment, or fiduciary relation",
+          "Presumed to be connected due to personal or organizational proximity to a connected person"
+        ],
+        [
+          "Examples",
+          "Directors, Key Managerial Personnel (KMPs), Officers, and Employees",
+          "Immediate relatives, firm partners, holding/subsidiary company officials"
+        ],
+        [
+          "Burden of Proof",
+          "On SEBI to prove that the individual possessed UPSI during trading",
+          "On the individual to prove non-possession of UPSI"
+        ]
+      ],
+      "id": "tu4zyo0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SEBI PIT Regulations",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Post-UPSI Disclosure Window",
+          "value": "48 Hours",
+          "icon": "clock"
+        },
+        {
+          "label": "Contra-Trade Lock-in",
+          "value": "6 Months",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "UPSI",
+          "icon": "info"
+        }
+      ],
+      "id": "7iq2vh8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Trading window closure is mandatory from the end of every quarter until 48 hours after financial results are made public.",
+        "For 'deemed connected persons', the burden of proof shifts to the individual to show they were not in possession of UPSI.",
+        "Contra-trades executed within a period of 6 months from a previous trade attract strict disciplinary and financial penalties."
+      ],
+      "id": "xivdpus"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Insider trading refers to dealing in securities while in possession of Unpublished Price Sensitive Information (UPSI).",
+        "SEBI (Prohibition of Insider Trading) Regulations, 2015 provide the legal framework to prevent market abuse in India.",
+        "A Connected Person includes any individual associated with the company who has access to UPSI through employment, contractual, or fiduciary relationships.",
+        "Compliance Officers in listed entities are responsible for setting trading window closures and pre-clearing trades of designated persons.",
+        "Communication or procurement of UPSI is illegal except for legitimate purposes, performance of duties, or discharge of legal obligations."
+      ],
+      "id": "935d5iu"
+    }
+  ],
+  "enriched": true
+}

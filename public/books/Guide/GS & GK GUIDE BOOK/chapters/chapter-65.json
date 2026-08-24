@@ -1,40 +1,40 @@
 {
-  "id": "aq5ygvc",
+  "id": "zxpcowj",
   "title": "Chapter 16: Nutrition and Health",
   "order": 65,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "e9yahrk"
+      "id": "gmntjht"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Nutrient Categories",
-          "value": "Macro & Micro",
+          "label": "Key Subject",
+          "value": "Nutrition and Health",
           "icon": "book"
         },
         {
-          "label": "Core Focus",
-          "value": "Balanced Diet",
-          "icon": "check"
-        },
-        {
-          "label": "Chapter Sections",
-          "value": "12 Topics",
+          "label": "Core Topic",
+          "value": "Major Nutrients",
           "icon": "info"
         },
         {
-          "label": "Exam Importance",
-          "value": "High Priority",
+          "label": "Optimal State",
+          "value": "Balanced Diet",
           "icon": "award"
+        },
+        {
+          "label": "Health Risk",
+          "value": "Malnutrition",
+          "icon": "clock"
         }
       ],
-      "id": "oqhap6o"
+      "id": "t11y0e9"
     },
     {
-      "id": "3joson9",
+      "id": "5r98vnf",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of Nutrition"
@@ -43,60 +43,59 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Nutrition encompasses the intake, breakdown, and biological utilization of food components by the body.",
-        "Carbohydrates and fats serve as the primary energy sources, whereas proteins are vital for tissue growth and repair.",
-        "Vitamins and minerals function as essential micronutrients needed for regulatory and protective functions.",
-        "A balanced diet provides all essential nutrients in proper proportions to maintain optimal health.",
-        "Malnutrition covers both undernutrition and overnutrition, leading to specific deficiency or excess disorders."
+        "Nutrition encompasses the intake and biological processing of essential nutrients for growth, energy, and maintenance.",
+        "The primary nutrients required by the human body include carbohydrates, proteins, fats, vitamins, and minerals.",
+        "A balanced diet ensures the adequate intake of all essential nutrients in proper proportions to prevent metabolic disorders.",
+        "Malnutrition and nutritional deficiencies lead to severe common nutrition disorders requiring medical and dietary intervention."
       ],
-      "id": "nif33ov"
+      "id": "wkxs3rt"
     },
     {
       "type": "paragraph",
-      "id": "gz9x4e2"
+      "id": "opt51qo"
     },
     {
       "type": "paragraph",
-      "id": "sbz525v"
+      "id": "yfg98cs"
     },
     {
       "type": "paragraph",
-      "id": "cm9zetk"
+      "id": "cfvl2ss"
     },
     {
-      "id": "d1n5neq",
+      "id": "zgoktqw",
       "type": "heading",
       "level": 2,
       "content": "2. Steps in Nutrition"
     },
     {
       "type": "paragraph",
-      "id": "4f2aj0n"
+      "id": "dy2b1c5"
     },
     {
       "type": "paragraph",
-      "id": "f4ymtfu"
+      "id": "pnusuwg"
     },
     {
       "type": "paragraph",
-      "id": "ciou0sd"
+      "id": "pm19uch"
     },
     {
       "type": "paragraph",
-      "id": "4p836c2"
+      "id": "ae20848"
     },
     {
       "type": "paragraph",
-      "id": "l0nhelf"
+      "id": "c3skqtb"
     },
     {
-      "id": "khclu2e",
+      "id": "flabqjj",
       "type": "heading",
       "level": 2,
       "content": "3. Major Nutrients in Food"
     },
     {
-      "id": "a4pgk9k",
+      "id": "ncnm4um",
       "type": "table",
       "rows": [
         {
@@ -174,103 +173,72 @@
       ]
     },
     {
-      "id": "sjhx4yl",
+      "id": "kwuq50u",
       "type": "heading",
       "level": 2,
       "content": "4. Carbohydrates"
     },
     {
       "type": "paragraph",
-      "id": "6zdgs3t"
+      "id": "mopipzw"
     },
     {
       "type": "paragraph",
-      "id": "36h84ef"
+      "id": "9kbuek7"
     },
     {
       "type": "paragraph",
-      "id": "7f9nw0p"
+      "id": "55muar6"
     },
     {
       "type": "pullQuote",
-      "content": "Nutrition and Health",
-      "id": "2j1vb9g"
+      "content": "Major Nutrients in Food",
+      "id": "kc88nxg"
     },
     {
-      "id": "9vbs9qm",
+      "id": "nghjrl5",
       "type": "heading",
       "level": 2,
       "content": "5. Proteins"
     },
     {
       "type": "paragraph",
-      "id": "tgqsuj2"
+      "id": "xm5azpz"
     },
     {
       "type": "paragraph",
-      "id": "1yo2f2n"
+      "id": "2myk9yy"
     },
     {
       "type": "paragraph",
-      "id": "rno7tly"
+      "id": "lb3ul27"
     },
     {
-      "id": "v7nxwqe",
+      "id": "xfptg8o",
       "type": "heading",
       "level": 2,
       "content": "6. Fats"
     },
     {
       "type": "paragraph",
-      "id": "x1ljuz6"
+      "id": "u6ih3zg"
     },
     {
       "type": "paragraph",
-      "id": "08sri5s"
+      "id": "7sm8e9i"
     },
     {
       "type": "paragraph",
-      "id": "d61xa38"
+      "id": "f8q3zxd"
     },
     {
-      "id": "94ji27k",
+      "id": "hk6vx8f",
       "type": "heading",
       "level": 2,
       "content": "7. Vitamins"
     },
     {
-      "type": "comparisonTable",
-      "headers": [
-        "Nutrient Class",
-        "Primary Biological Role",
-        "Key Examples / Components"
-      ],
-      "rows": [
-        [
-          "Carbohydrates",
-          "Immediate energy production",
-          "Glucose, Fructose, Starch"
-        ],
-        [
-          "Proteins",
-          "Body building, repair, and enzymes",
-          "Amino acids, Keratin, Hemoglobin"
-        ],
-        [
-          "Fats",
-          "Energy storage and cell membrane structure",
-          "Triglycerides, Fatty acids"
-        ],
-        [
-          "Vitamins & Minerals",
-          "Metabolic regulation and immunity",
-          "Vitamin A, C, D, Iron, Calcium, Iodine"
-        ]
-      ],
-      "id": "75sc48x"
-    },
-    {
-      "id": "lub42ok",
+      "id": "pa5wqni",
       "type": "table",
       "rows": [
         {
@@ -339,13 +307,13 @@
       ]
     },
     {
-      "id": "s7r6df0",
+      "id": "io9mbxh",
       "type": "heading",
       "level": 2,
       "content": "8. Minerals"
     },
     {
-      "id": "y3setjc",
+      "id": "d2vwe1y",
       "type": "table",
       "rows": [
         {
@@ -399,45 +367,45 @@
       ]
     },
     {
-      "id": "0bcrn32",
+      "id": "bn4tkgu",
       "type": "heading",
       "level": 2,
       "content": "9. Balanced Diet"
     },
     {
       "type": "paragraph",
-      "id": "nqeakcy"
+      "id": "93leil5"
     },
     {
       "type": "paragraph",
-      "id": "fycawih"
+      "id": "dket0hr"
     },
     {
       "type": "paragraph",
-      "id": "s915u6p"
+      "id": "5bmpikx"
     },
     {
-      "id": "jmpq5jg",
+      "id": "aljyqo6",
       "type": "heading",
       "level": 2,
       "content": "10. Malnutrition"
     },
     {
       "type": "paragraph",
-      "id": "3mp0fpm"
+      "id": "m8lbfpf"
     },
     {
       "type": "paragraph",
-      "id": "0yeq7ns"
+      "id": "v0lgd8o"
     },
     {
-      "id": "uepb43u",
+      "id": "ao6v6tx",
       "type": "heading",
       "level": 2,
       "content": "11. Common Nutrition Disorders"
     },
     {
-      "id": "3s5mryx",
+      "id": "k3n5l8e",
       "type": "table",
       "rows": [
         {
@@ -485,45 +453,45 @@
     {
       "type": "examAlert",
       "items": [
-        "Identify the 5 sequential steps in nutrition: Ingestion, Digestion, Absorption, Assimilation, and Egestion.",
-        "Memorize specific deficiency diseases related to key vitamins (e.g., Vitamin A - Night Blindness, Vitamin C - Scurvy, Vitamin D - Rickets).",
-        "Differentiate between macronutrients (Carbohydrates, Proteins, Fats) and micronutrients (Vitamins, Minerals) based on daily required amounts."
+        "Vitamin and mineral deficiency diseases (e.g., Scurvy, Rickets, Anemia, Goitre) are frequently tested in objective questions.",
+        "Key distinction: Kwashiorkor is primarily caused by protein deficiency, whereas Marasmus results from severe total caloric and protein deficiency.",
+        "Caloric values of biomolecules: Carbohydrates and Proteins yield approximately 4 kcal/g, while Fats yield 9 kcal/g."
       ],
-      "id": "md62a8q"
+      "id": "zqhq7jn"
     },
     {
-      "id": "xv3g853",
+      "id": "j049uia",
       "type": "heading",
       "level": 2,
       "content": "12.Important Exam Points"
     },
     {
       "type": "paragraph",
-      "id": "gwit0b4"
+      "id": "7mamlf8"
     },
     {
       "type": "paragraph",
-      "id": "bnath27"
+      "id": "061gyu9"
     },
     {
       "type": "paragraph",
-      "id": "mtjvlcd"
+      "id": "ee6cwag"
     },
     {
       "type": "paragraph",
-      "id": "45orl6g"
+      "id": "mvpwepo"
     },
     {
       "type": "paragraph",
-      "id": "pzfcqtk"
+      "id": "gcykmz1"
     },
     {
       "type": "paragraph",
-      "id": "t8ip6if"
+      "id": "zkiisp9"
     },
     {
       "type": "paragraph",
-      "id": "puly8za"
+      "id": "0iujnrg"
     }
   ],
   "enriched": true

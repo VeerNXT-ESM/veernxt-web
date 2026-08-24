@@ -1,0 +1,128 @@
+{
+  "id": "6uua2vf",
+  "title": "3. Earth's Axis and Axial Tilt",
+  "order": 15,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "udv6erk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Axial Tilt Angle",
+          "value": "23.5°",
+          "icon": "award"
+        },
+        {
+          "label": "Orbital Plane Angle",
+          "value": "66.5°",
+          "icon": "info"
+        },
+        {
+          "label": "Rotation Period",
+          "value": "23h 56m 4s",
+          "icon": "clock"
+        },
+        {
+          "label": "Rotation Direction",
+          "value": "West to East",
+          "icon": "check"
+        }
+      ],
+      "id": "jezcsb1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The inclination of the Earth's axis at an angle of 23.5 degrees to the perpendicular of its orbital plane is the primary cause of seasonal variations on Earth.",
+      "id": "4rqebh7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Angle with Perpendicular",
+        "Angle with Orbital Plane"
+      ],
+      "rows": [
+        [
+          "Value",
+          "23.5°",
+          "66.5°"
+        ],
+        [
+          "Reference Baseline",
+          "Normal line to ecliptic plane",
+          "Plane of Earth's orbit around the Sun"
+        ],
+        [
+          "Significance",
+          "Defines Tropic of Cancer & Capricorn",
+          "Defines Arctic & Antarctic Circles"
+        ]
+      ],
+      "id": "588yxtt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earth's axis is an imaginary line running through its center from the North Pole to the South Pole.",
+        "The axis is tilted at an angle of 23.5° from the perpendicular to its orbital plane.",
+        "The angle made by Earth's axis with its orbital plane is 66.5°.",
+        "Parallelism of the axis means Earth's tilt always points toward Polaris (the North Star) as it orbits the Sun.",
+        "The combination of axial tilt and revolution around the Sun causes the changing of seasons."
+      ],
+      "id": "vcslywp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently test the difference between the tilt angle relative to the normal (23.5°) and relative to the orbital plane (66.5°).",
+        "Remember that Earth rotates from West to East, making celestial bodies appear to move East to West.",
+        "The circle of illumination divides the lit side from the dark side of Earth and does not coincide with the axis of rotation due to the tilt."
+      ],
+      "id": "zgassqo"
+    },
+    {
+      "type": "paragraph",
+      "id": "1qw4ida"
+    },
+    {
+      "id": "hivdw87",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

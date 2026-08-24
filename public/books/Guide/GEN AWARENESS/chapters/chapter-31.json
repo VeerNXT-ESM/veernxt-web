@@ -1,0 +1,407 @@
+{
+  "id": "9891zjn",
+  "title": "Chapter 30: Latitudes and Longitudes",
+  "order": 31,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "8j2mplu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator",
+          "value": "0° Latitude",
+          "icon": "info"
+        },
+        {
+          "label": "Tropic of Cancer",
+          "value": "23.5° N",
+          "icon": "award"
+        },
+        {
+          "label": "IST Longitude",
+          "value": "82.5° E",
+          "icon": "clock"
+        },
+        {
+          "label": "Tropic States",
+          "value": "8 Indian States",
+          "icon": "check"
+        }
+      ],
+      "id": "dfetnht"
+    },
+    {
+      "id": "dqbldxj",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Latitudes"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are parallel lines running east-west that measure angular distance north or south of the Equator.",
+        "Longitudes are vertical lines connecting the North and South Poles, measured east or west from the Prime Meridian (0°).",
+        "Indian Standard Time (IST) is calculated from the 82.5° E meridian passing through Mirzapur, Uttar Pradesh.",
+        "The Tropic of Cancer (23.5° N) passes through eight Indian states from west to east.",
+        "The Equator (0°) crosses three continents: South America, Africa, and Asia."
+      ],
+      "id": "joj9qtr"
+    },
+    {
+      "type": "paragraph",
+      "id": "p8cxre6"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ej2r1q"
+    },
+    {
+      "type": "paragraph",
+      "id": "m0inqch"
+    },
+    {
+      "type": "paragraph",
+      "id": "5489ae9"
+    },
+    {
+      "id": "ik14q5r",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Latitudes"
+    },
+    {
+      "id": "z2j4cnx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "br9wjmq",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Longitudes"
+    },
+    {
+      "type": "paragraph",
+      "id": "aw28vb2"
+    },
+    {
+      "type": "paragraph",
+      "id": "z5ma66i"
+    },
+    {
+      "type": "paragraph",
+      "id": "4n1zi6t"
+    },
+    {
+      "type": "paragraph",
+      "id": "39kp824"
+    },
+    {
+      "id": "v802rnx",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Indian Standard Time (IST)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5r8wwzb"
+    },
+    {
+      "type": "paragraph",
+      "id": "jrl7n91"
+    },
+    {
+      "type": "paragraph",
+      "id": "75at7ya"
+    },
+    {
+      "type": "paragraph",
+      "id": "c0xgeqi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Tropic of Cancer Passing Indian States",
+      "id": "jlvfvbl"
+    },
+    {
+      "id": "wnet1l8",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Tropic of Cancer Passing Indian States"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jtgrqcd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mfyytwy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rnglnuj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pxbr1pf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3hbya2g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rcap93b"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8kxcy4f"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bdjmdph"
+    },
+    {
+      "id": "62oci0w",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Equator Crossing Continents"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitude",
+        "Longitude"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "Horizontal (East to West)",
+          "Vertical (North to South)"
+        ],
+        [
+          "Reference Baseline",
+          "Equator (0°)",
+          "Prime Meridian (0°)"
+        ],
+        [
+          "Total Count",
+          "180 lines",
+          "360 lines"
+        ],
+        [
+          "Primary Application",
+          "Determining climatic/temperature zones",
+          "Determining time zones and local time"
+        ]
+      ],
+      "id": "mhnb7jc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "khnyulr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kdbsyj9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oa25knr"
+    },
+    {
+      "id": "1r8o2tk",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Countries on the Equator"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f2x3ykr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zhscp6o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0cypv8a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k6z9c2a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xqmi4nl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3wmrgnv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v5d1ykc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "495x1xc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "94gt155"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: List of 8 Indian states on Tropic of Cancer (Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, West Bengal, Tripura, Mizoram).",
+        "IST is +5:30 hours ahead of GMT (Greenwich Mean Time).",
+        "1° difference in longitude corresponds to a time difference of 4 minutes."
+      ],
+      "id": "bom32tv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yke0aji"
+    },
+    {
+      "id": "15e796o",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Latitude vs Longitude (Comparison)"
+    },
+    {
+      "id": "cnbohlk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qnz5eqh",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "r1k7row"
+    },
+    {
+      "type": "paragraph",
+      "id": "z80h9d7"
+    },
+    {
+      "type": "paragraph",
+      "id": "iascwuo"
+    },
+    {
+      "type": "paragraph",
+      "id": "9cbf902"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,333 @@
+{
+  "id": "x3l7tz8",
+  "title": "Chapter 7: Electricity and Magnetism",
+  "order": 56,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "g0usbdf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "zap"
+        },
+        {
+          "label": "SI Unit of Voltage",
+          "value": "Volt (V)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Resistance",
+          "value": "Ohm (Ω)",
+          "icon": "award"
+        },
+        {
+          "label": "Ohm's Law Formula",
+          "value": "V = I × R",
+          "icon": "book"
+        }
+      ],
+      "id": "z90saej"
+    },
+    {
+      "id": "zra1qbn",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Electricity"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric current is defined as the rate of flow of electric charges through a conductor, measured in Amperes (A).",
+        "Ohm's Law dictates that current is directly proportional to voltage and inversely proportional to resistance (V = IR).",
+        "Electric power is the rate of electrical energy consumption, expressed as P = VI = I²R = V²/R.",
+        "Like magnetic poles repel each other, while unlike poles attract.",
+        "Electromagnets produce a temporary magnetic field when an electric current flows through a wire coil around a magnetic core."
+      ],
+      "id": "um2wbnq"
+    },
+    {
+      "type": "paragraph",
+      "id": "6qkri8m"
+    },
+    {
+      "type": "paragraph",
+      "id": "u52e2tw"
+    },
+    {
+      "type": "paragraph",
+      "id": "2cikirk"
+    },
+    {
+      "type": "paragraph",
+      "id": "boxne2e"
+    },
+    {
+      "id": "tmy121p",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Electric Current"
+    },
+    {
+      "type": "paragraph",
+      "id": "lfn25cw"
+    },
+    {
+      "type": "paragraph",
+      "id": "dm82lvs"
+    },
+    {
+      "type": "paragraph",
+      "id": "rmq1nvc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8ngo6zm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0wzd0du"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i2i3lrw"
+    },
+    {
+      "id": "gqx7hx7",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Voltage"
+    },
+    {
+      "type": "paragraph",
+      "id": "ajl0724"
+    },
+    {
+      "type": "paragraph",
+      "id": "iye0ewe"
+    },
+    {
+      "id": "8utxmum",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Resistance"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Electricity and Magnetism",
+      "id": "marb5vf"
+    },
+    {
+      "type": "paragraph",
+      "id": "57rqlbl"
+    },
+    {
+      "type": "paragraph",
+      "id": "54jezuy"
+    },
+    {
+      "id": "1fgxuev",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Ohm’s Law"
+    },
+    {
+      "type": "paragraph",
+      "id": "0gnr6qw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t16n4qb"
+    },
+    {
+      "id": "r8rqmoe",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Electric Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "3qeqoq1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qjoiml0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "psdf1in"
+    },
+    {
+      "id": "f0ohej0",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Electric Circuits"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Series Circuit",
+        "Parallel Circuit"
+      ],
+      "rows": [
+        [
+          "Current Flow",
+          "Same current through all components",
+          "Current divides across different branches"
+        ],
+        [
+          "Voltage Drop",
+          "Voltage divides across components",
+          "Same voltage across all branches"
+        ],
+        [
+          "Equivalent Resistance",
+          "R_total = R1 + R2 + ...",
+          "1/R_total = 1/R1 + 1/R2 + ..."
+        ],
+        [
+          "Component Failure",
+          "Failure of one breaks the entire circuit",
+          "Failure of one does not affect other branches"
+        ]
+      ],
+      "id": "fofuafa"
+    },
+    {
+      "id": "n4knhpc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e7d5et2",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Magnetism"
+    },
+    {
+      "type": "paragraph",
+      "id": "bzfqrd0"
+    },
+    {
+      "type": "paragraph",
+      "id": "ylmdwyp"
+    },
+    {
+      "id": "2l4yhat",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Properties of Magnets"
+    },
+    {
+      "type": "paragraph",
+      "id": "wdjfay5"
+    },
+    {
+      "type": "paragraph",
+      "id": "byxo8if"
+    },
+    {
+      "type": "paragraph",
+      "id": "dzqtau9"
+    },
+    {
+      "type": "paragraph",
+      "id": "umu1mqi"
+    },
+    {
+      "id": "c7hd6sl",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Electromagnet"
+    },
+    {
+      "type": "paragraph",
+      "id": "5nuiwfp"
+    },
+    {
+      "type": "paragraph",
+      "id": "89mt425"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An Ammeter is always connected in series due to low resistance, while a Voltmeter is connected in parallel due to high resistance.",
+        "In a series circuit, current remains constant; in a parallel circuit, voltage remains constant across all branches.",
+        "Fuse wire is made of an alloy with a low melting point and high resistance to protect circuits from overcurrent."
+      ],
+      "id": "lwdp2x7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "59xio55"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u6sxki3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "95pl348"
+    },
+    {
+      "id": "ogfn022",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "33oqnhe"
+    },
+    {
+      "type": "paragraph",
+      "id": "3rqaxdq"
+    },
+    {
+      "type": "paragraph",
+      "id": "cabntuf"
+    },
+    {
+      "type": "paragraph",
+      "id": "4rfra2v"
+    }
+  ],
+  "enriched": true
+}

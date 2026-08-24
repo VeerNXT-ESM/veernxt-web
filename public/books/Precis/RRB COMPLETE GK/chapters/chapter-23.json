@@ -1,0 +1,61 @@
+{
+  "id": "7b3zvgg",
+  "title": "ULTRA QUICK REVISION",
+  "order": 23,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "pn47fyk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "ULTRA QUICK REVISION",
+      "id": "o6nzxpu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Module Type",
+          "value": "Quick Revision",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Focus",
+          "value": "High-Yield Topics",
+          "icon": "award"
+        },
+        {
+          "label": "Retention Strategy",
+          "value": "Active Recall",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "UPSC / SSC / State PSC",
+          "icon": "book"
+        }
+      ],
+      "id": "ru6opkj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test direct factual details, dates, and terminology from core revision summaries.",
+        "Ensure quick revision notes are reviewed repeatedly to maximize accuracy in objective-type questions."
+      ],
+      "id": "cx9k9ao"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ultra Quick Revision focuses on rapid memory consolidation and high-yield factual recall.",
+        "Consolidates key definitions, core concepts, and direct factual pointers for fast review.",
+        "Designed specifically for last-minute exam preparation and systematic subject revision."
+      ],
+      "id": "56ft19z"
+    }
+  ],
+  "enriched": true
+}

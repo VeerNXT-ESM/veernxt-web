@@ -1,0 +1,327 @@
+{
+  "id": "11wg891",
+  "title": "Chapter 7: Electricity and Magnetism",
+  "order": 56,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "eejwepu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Current",
+          "value": "Ampere (A)",
+          "icon": "zap"
+        },
+        {
+          "label": "SI Unit of Voltage",
+          "value": "Volt (V)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Resistance",
+          "value": "Ohm (Ω)",
+          "icon": "check"
+        },
+        {
+          "label": "Key Relation",
+          "value": "V = IR",
+          "icon": "book"
+        }
+      ],
+      "id": "98t1rp5"
+    },
+    {
+      "id": "dvhjx1u",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Electricity"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Electric current is the rate of flow of electric charge through a conductor.",
+        "Voltage (Potential Difference) provides the electrical energy required to push current through a circuit.",
+        "Ohm's Law states that current is directly proportional to voltage and inversely proportional to resistance (V = IR).",
+        "Magnets exert forces via magnetic fields, and electromagnets create controllable magnetic fields using electric current."
+      ],
+      "id": "kgkx7if"
+    },
+    {
+      "type": "paragraph",
+      "id": "tbj49kn"
+    },
+    {
+      "type": "paragraph",
+      "id": "jjx3l15"
+    },
+    {
+      "type": "paragraph",
+      "id": "2h6y18j"
+    },
+    {
+      "type": "paragraph",
+      "id": "ptrtpl8"
+    },
+    {
+      "id": "b0yjmmq",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Electric Current"
+    },
+    {
+      "type": "paragraph",
+      "id": "0rv9qei"
+    },
+    {
+      "type": "paragraph",
+      "id": "9rwtlze"
+    },
+    {
+      "type": "paragraph",
+      "id": "m00vhvm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v5nsytv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bezs3s0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "33tjvc7"
+    },
+    {
+      "id": "tgg177u",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Voltage"
+    },
+    {
+      "type": "paragraph",
+      "id": "k1r79ny"
+    },
+    {
+      "type": "paragraph",
+      "id": "7gzqoei"
+    },
+    {
+      "id": "3pb9zsk",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Resistance"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Electricity and Magnetism",
+      "id": "9kfxsq6"
+    },
+    {
+      "type": "paragraph",
+      "id": "kronuyj"
+    },
+    {
+      "type": "paragraph",
+      "id": "di3mxhs"
+    },
+    {
+      "id": "vaaacy4",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Ohm’s Law"
+    },
+    {
+      "type": "paragraph",
+      "id": "b61dnqa"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vwqyulc"
+    },
+    {
+      "id": "um2d0ep",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Electric Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "ediscks"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dy2bgcl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1672380"
+    },
+    {
+      "id": "ctl2clf",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Electric Circuits"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Series Circuit",
+        "Parallel Circuit"
+      ],
+      "rows": [
+        [
+          "Current (I)",
+          "Same through each component",
+          "Splits across different branches"
+        ],
+        [
+          "Voltage (V)",
+          "Divided across components",
+          "Same across all parallel branches"
+        ],
+        [
+          "Total Resistance",
+          "Increases (R = R1 + R2 + ...)",
+          "Decreases (1/R = 1/R1 + 1/R2 + ...)"
+        ]
+      ],
+      "id": "jjn4eph"
+    },
+    {
+      "id": "2mehn4d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hy2dm5i",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Magnetism"
+    },
+    {
+      "type": "paragraph",
+      "id": "5g3faop"
+    },
+    {
+      "type": "paragraph",
+      "id": "o1bwo32"
+    },
+    {
+      "id": "jmw5ox2",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Properties of Magnets"
+    },
+    {
+      "type": "paragraph",
+      "id": "iusdc1k"
+    },
+    {
+      "type": "paragraph",
+      "id": "8uxnu43"
+    },
+    {
+      "type": "paragraph",
+      "id": "oitro5b"
+    },
+    {
+      "type": "paragraph",
+      "id": "9yv2j05"
+    },
+    {
+      "id": "avteuy4",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Electromagnet"
+    },
+    {
+      "type": "paragraph",
+      "id": "8vrbubg"
+    },
+    {
+      "type": "paragraph",
+      "id": "7puz7kh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ohm's Law (V = IR) applies strictly to ohmic conductors at constant physical parameters such as temperature.",
+        "In a series circuit, electric current remains uniform while voltage divides; in a parallel circuit, voltage remains uniform while current divides.",
+        "Frequently tested SI units: Current (Ampere), Resistance (Ohm), Power (Watt), and Magnetic Flux (Weber)."
+      ],
+      "id": "bid40fx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sczuror"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "91vchez"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "soqg896"
+    },
+    {
+      "id": "kh1ze7p",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "kbpkbio"
+    },
+    {
+      "type": "paragraph",
+      "id": "e9vgmf2"
+    },
+    {
+      "type": "paragraph",
+      "id": "qsmqosc"
+    },
+    {
+      "type": "paragraph",
+      "id": "ljrk0d3"
+    }
+  ],
+  "enriched": true
+}

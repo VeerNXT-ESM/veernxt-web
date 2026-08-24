@@ -1,0 +1,96 @@
+{
+  "id": "4sde5ow",
+  "title": "Chapter 14: Soil (Pedology)",
+  "order": 166,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1wvlgel"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Pedology is the branch of soil science that focuses on the formation, morphology, and classification of soil in its natural environment.",
+      "id": "uqm65dp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Khadar Soil",
+        "Bangar Soil"
+      ],
+      "rows": [
+        [
+          "Soil Age",
+          "Newer, young alluvium",
+          "Older, mature alluvium"
+        ],
+        [
+          "Deposition Area",
+          "Low-lying floodplains near rivers",
+          "Higher terraces above flood level"
+        ],
+        [
+          "Texture & Composition",
+          "Fine silt and clay, highly fertile",
+          "Coarser texture with high Kankar (calcareous) deposits"
+        ],
+        [
+          "Agricultural Value",
+          "Very high fertility; requires minimal fertilizers",
+          "Moderate fertility; requires heavy fertilization"
+        ]
+      ],
+      "id": "q4ocxvg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "ICAR Categories",
+          "value": "8 Major Types",
+          "icon": "book"
+        },
+        {
+          "label": "Alluvial Coverage",
+          "value": "43.4%",
+          "icon": "check"
+        },
+        {
+          "label": "Ideal Soil pH",
+          "value": "6.0 - 7.5",
+          "icon": "info"
+        },
+        {
+          "label": "Major Horizons",
+          "value": "4 Layers (O,A,B,C)",
+          "icon": "award"
+        }
+      ],
+      "id": "yxr2yv7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Alluvial soil is rich in potash but generally deficient in nitrogen, phosphorus, and organic humus content.",
+        "Black soil exhibits a unique 'self-ploughing' property because it develops deep cracks during the dry season, promoting aeration.",
+        "Bangar represents older alluvium containing calcareous deposits called 'Kankar', whereas Khadar is newer, more fertile riverbed alluvium.",
+        "Red soil gets its distinctive color from the diffusion of iron in crystalline and metamorphic rocks, turning yellow when hydrated."
+      ],
+      "id": "zx66l5x"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pedology is the branch of soil science that focuses on soil formation, morphology, and classification in its natural environment.",
+        "The Indian Council of Agricultural Research (ICAR) classifies Indian soils into 8 major groups, with Alluvial soil being the most fertile and widespread.",
+        "Black soil (Regur) is rich in clay content and retains moisture well, making it exceptionally suited for cotton cultivation in the Deccan Plateau.",
+        "Laterite soil forms under conditions of high temperature and heavy rainfall through intense leaching (desilication), leaving behind iron and aluminum oxides.",
+        "Soil profile layers are ordered sequentially from top to bottom as Horizon O (Organic), Horizon A (Topsoil), Horizon B (Subsoil), Horizon C (Weathered Parent Rock), and Horizon R (Bedrock)."
+      ],
+      "id": "r7ov63w"
+    }
+  ],
+  "enriched": true
+}

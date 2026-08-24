@@ -1,0 +1,90 @@
+{
+  "id": "eemg6p6",
+  "title": "6. Desertification",
+  "order": 150,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "pjniorf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Land Degradation Neutrality is a state whereby the amount and quality of land resources necessary to support ecosystem functions and services remain stable or increase within specified temporal and spatial scales.",
+      "id": "m39rmid"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Desertification",
+        "Land Degradation"
+      ],
+      "rows": [
+        [
+          "Geographic Scope",
+          "Restricted strictly to drylands (arid, semi-arid, and dry sub-humid regions)",
+          "Applies universally to all land regions and ecological zones globally"
+        ],
+        [
+          "Primary Drivers",
+          "Overgrazing, deforestation, and unsustainable farming in moisture-deficient zones",
+          "Soil erosion, chemical contamination, salinization, and urban expansion across all climates"
+        ],
+        [
+          "Global Mandate",
+          "Specifically addressed under the UNCCD framework",
+          "Covered under broader SDG targets (SDG 15) and FAO conservation guidelines"
+        ]
+      ],
+      "id": "1ipaih1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Degraded Land in India",
+          "value": "29.77% TGA",
+          "icon": "info"
+        },
+        {
+          "label": "UNCCD Adoption",
+          "value": "1994",
+          "icon": "calendar"
+        },
+        {
+          "label": "LDN Target Year",
+          "value": "2030",
+          "icon": "clock"
+        },
+        {
+          "label": "India UNCCD COP14",
+          "value": "2019",
+          "icon": "award"
+        }
+      ],
+      "id": "1rj6vun"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "UNCCD is the only legally binding international agreement linking environment and development to sustainable land management.",
+        "Water erosion constitutes the single largest contributor to land degradation in India, a recurring statement in prelims conceptual questions.",
+        "Sustainable Development Goal (SDG) Target 15.3 specifically aims to combat desertification and restore degraded land and soil to achieve a land degradation-neutral world by 2030."
+      ],
+      "id": "is0156o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Desertification is the degradation of land in arid, semi-arid, and dry sub-humid areas resulting from climatic variations and human activities.",
+        "According to ISRO's Desertification and Land Degradation Atlas, approximately 29.77% of India's Total Geographical Area (TGA) is undergoing land degradation.",
+        "Water erosion is the primary driver of land degradation in India, followed by vegetation degradation and wind erosion.",
+        "India is a party to the United Nations Convention to Combat Desertification (UNCCD) and is committed to achieving Land Degradation Neutrality (LDN) by 2030.",
+        "Under the Bonn Challenge commitment, India pledged to restore 26 million hectares of degraded and deforested land by 2030."
+      ],
+      "id": "bvls5d2"
+    }
+  ],
+  "enriched": true
+}

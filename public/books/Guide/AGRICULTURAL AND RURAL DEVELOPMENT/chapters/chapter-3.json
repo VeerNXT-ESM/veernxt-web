@@ -1,0 +1,518 @@
+{
+  "id": "catutsm",
+  "title": "CHAPTER 3: HORTICULTURE — FRUITS, VEGETABLES AND FLORICULTURE",
+  "order": 3,
+  "blocks": [
+    {
+      "id": "i5wgu05",
+      "type": "heading",
+      "level": 2,
+      "content": "3.1 Scope and Importance of Horticulture"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Horticulture covers the broad scope, cultivation, and economic importance of fruits, vegetables, and floriculture in India.",
+        "Plant propagation is fundamentally divided into Sexual Propagation (seeds) and Vegetative / Asexual Propagation.",
+        "Post-Harvest Technology focuses on reducing post-harvest losses and implementing effective storage methods for perishable produce.",
+        "Understanding major fruits and vegetables of India is crucial for studying horticultural productivity and agricultural management."
+      ],
+      "id": "31tx7hb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Horticulture Branches",
+          "value": "3 Main",
+          "icon": "book"
+        },
+        {
+          "label": "Propagation Types",
+          "value": "2 Primary",
+          "icon": "check"
+        },
+        {
+          "label": "Focus Area",
+          "value": "Post-Harvest",
+          "icon": "clock"
+        },
+        {
+          "label": "Chapter Number",
+          "value": "Chapter 03",
+          "icon": "calendar"
+        }
+      ],
+      "id": "c7ffxml"
+    },
+    {
+      "type": "paragraph",
+      "id": "v612ifk"
+    },
+    {
+      "id": "1rahks5",
+      "type": "heading",
+      "level": 2,
+      "content": "3.2 Major Fruits of India"
+    },
+    {
+      "id": "2puvskf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "y3r0tn3",
+      "type": "heading",
+      "level": 2,
+      "content": "3.3 Major Vegetables of India"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 3: HORTICULTURE — FRUITS, VEGETABLES AND FLORICULTURE",
+      "id": "6bup583"
+    },
+    {
+      "id": "xscizff",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kpufjbz",
+      "type": "heading",
+      "level": 2,
+      "content": "3.4 Propagation Methods in Horticulture"
+    },
+    {
+      "id": "365wyvz",
+      "type": "heading",
+      "level": 3,
+      "content": "Sexual Propagation (Seeds)"
+    },
+    {
+      "id": "e6i9srr",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Method Category",
+        "Propagation Type"
+      ],
+      "rows": [
+        [
+          "Sexual Propagation",
+          "Seeds"
+        ],
+        [
+          "Asexual Propagation",
+          "Vegetative"
+        ]
+      ],
+      "id": "3x9zc49"
+    },
+    {
+      "id": "7qgtp4e",
+      "type": "heading",
+      "level": 3,
+      "content": "Vegetative / Asexual Propagation"
+    },
+    {
+      "id": "tzl8ded",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "230puda",
+      "type": "heading",
+      "level": 2,
+      "content": "3.5 Post-Harvest Technology"
+    },
+    {
+      "type": "paragraph",
+      "id": "d131do0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate clearly between Sexual Propagation (seed-based, genetic diversity) and Vegetative/Asexual Propagation (clones, true-to-type).",
+        "Key concepts under Post-Harvest Technology, particularly causes of post-harvest losses and storage methods, are frequently asked in competitive exams.",
+        "Classification and major growing areas of India's prominent fruit and vegetable crops form essential objective test material."
+      ],
+      "id": "oftnl1l"
+    },
+    {
+      "id": "apg3n57",
+      "type": "heading",
+      "level": 3,
+      "content": "Post-Harvest Losses"
+    },
+    {
+      "id": "xda3565",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "sn801t8",
+      "type": "heading",
+      "level": 3,
+      "content": "Storage Methods"
+    },
+    {
+      "id": "enln2k6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

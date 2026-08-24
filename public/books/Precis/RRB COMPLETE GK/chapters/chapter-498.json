@@ -1,0 +1,89 @@
+{
+  "id": "vybp470",
+  "title": "11. Exam Traps",
+  "order": 498,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "v3o58ae"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Avoidable negative marks from misreading questions often make the difference between selection and rejection.",
+      "id": "it3a9wb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Trap Option",
+        "Correct Option"
+      ],
+      "rows": [
+        [
+          "Language",
+          "Uses extreme terms (Always, Never, Only)",
+          "Uses precise, measured, or conditional terms"
+        ],
+        [
+          "Calculation",
+          "Matches a common miscalculation or partial step",
+          "Derived from complete and verified execution"
+        ],
+        [
+          "Initial Appeal",
+          "Looks familiar and immediately attractive",
+          "May require careful verification against prompt"
+        ]
+      ],
+      "id": "6z1jv39"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking",
+          "value": "-0.25 to -0.66",
+          "icon": "check"
+        },
+        {
+          "label": "Avg Time / Question",
+          "value": "36-54 Secs",
+          "icon": "clock"
+        },
+        {
+          "label": "Trap Question Share",
+          "value": "15-20%",
+          "icon": "info"
+        },
+        {
+          "label": "Paper Solving Passes",
+          "value": "2 Rounds",
+          "icon": "calendar"
+        }
+      ],
+      "id": "h0djvdz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always re-read the final clause of the question stem to confirm if it asks for 'True' or 'Not True'.",
+        "Watch out for distractor options in quantitative aptitude that represent intermediate calculation steps.",
+        "Never attempt random guessing without eliminating at least two options under negative marking schemes."
+      ],
+      "id": "d8bkmvs"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Misreading qualifier words like 'NOT' or 'INCORRECT' in questions leads to heavy negative penalty.",
+        "Options containing absolute terms like 'Always', 'Never', or 'Only' are frequently designed as traps.",
+        "Spending over 2 minutes on a single complex question disrupts overall exam strategy.",
+        "Inserting external unstated assumptions into critical reasoning questions causes avoidable errors."
+      ],
+      "id": "8is0zis"
+    }
+  ],
+  "enriched": true
+}

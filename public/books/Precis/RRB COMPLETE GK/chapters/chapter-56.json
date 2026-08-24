@@ -1,0 +1,107 @@
+{
+  "id": "95lf5nk",
+  "title": "10. Importance of Earth's Interior",
+  "order": 56,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5yrqe4r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Layers",
+          "value": "3 Concentric Zones",
+          "icon": "info"
+        },
+        {
+          "label": "Deepest Hole (Kola)",
+          "value": "12 km Depth",
+          "icon": "book"
+        },
+        {
+          "label": "Core Temperature",
+          "value": "~6000°C",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Evidence",
+          "value": "Seismic Waves",
+          "icon": "check"
+        }
+      ],
+      "id": "gw8h4yg"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Understanding the Earth's interior is essential for comprehending surface landforms, seismic hazards, and the geomagnetic field that sustains life.",
+      "id": "871bj6a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Studying the Earth's interior helps explain endogenic processes, tectonic forces, and surface geomorphology.",
+        "Direct sources of information include deep mining and volcanic materials, while indirect sources rely on seismic wave behavior, gravity, and magnetic anomalies.",
+        "Convection currents in the asthenosphere act as the primary engine behind plate tectonics and continental drift.",
+        "The liquid outer core creates Earth's geomagnetic field via geodynamo action, protecting the atmosphere from solar winds.",
+        "Density and composition changes within internal layers account for Earth's gravitational variations and heat budget."
+      ],
+      "id": "3s6s2bc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Primary Waves (P-Waves)",
+        "Secondary Waves (S-Waves)"
+      ],
+      "rows": [
+        [
+          "Wave Motion",
+          "Longitudinal (Compressional)",
+          "Transverse (Shear)"
+        ],
+        [
+          "Medium of Travel",
+          "Solids, Liquids, and Gases",
+          "Solids only"
+        ],
+        [
+          "Relative Speed",
+          "Fastest (first to arrive)",
+          "Slower (arrives after P-waves)"
+        ],
+        [
+          "Shadow Zone",
+          "103° to 142° from epicenter",
+          "Beyond 103° (covers >40% of Earth)"
+        ]
+      ],
+      "id": "rctlbhe"
+    },
+    {
+      "type": "paragraph",
+      "id": "8trbjl8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Seismic Discontinuities: Mohorovičić (Crust-Mantle), Gutenberg (Mantle-Outer Core), and Lehmann (Outer-Inner Core) are frequently asked in UPSC/State PCS exams.",
+        "S-waves cannot travel through liquids, which proves that Earth's outer core is in a molten state.",
+        "P-wave shadow zone forms between 103° and 142° from the epicenter, while the S-wave shadow zone extends continuously beyond 103°."
+      ],
+      "id": "2sl6m75"
+    },
+    {
+      "type": "paragraph",
+      "id": "vmg17h8"
+    },
+    {
+      "type": "paragraph",
+      "id": "zizp2df"
+    }
+  ],
+  "enriched": true
+}

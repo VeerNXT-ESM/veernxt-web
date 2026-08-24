@@ -1,0 +1,377 @@
+{
+  "id": "ni4d0og",
+  "title": "Chapter 11: Metals and Non-metals",
+  "order": 11,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hnscumg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Focus",
+          "value": "Metals & Non-metals",
+          "icon": "book"
+        },
+        {
+          "label": "Core Assessment",
+          "value": "Reactivity Series",
+          "icon": "award"
+        },
+        {
+          "label": "Practical Application",
+          "value": "Extraction Methods",
+          "icon": "check"
+        },
+        {
+          "label": "Chapter Sections",
+          "value": "8 Topics",
+          "icon": "info"
+        }
+      ],
+      "id": "xh3c90y"
+    },
+    {
+      "id": "kd85mwi",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Metals"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metals are electropositive elements known for malleability, ductility, sonority, and high thermal and electrical conductivity.",
+        "Non-metals are electronegative elements that generally form acidic or neutral oxides and are poor conductors of heat and electricity.",
+        "Chemical reactivity varies significantly, with metals forming basic or amphoteric oxides upon reaction with oxygen.",
+        "The Reactivity Series outlines metals in descending order of reactivity, determining displacement behavior.",
+        "Extraction of metals relies on metallurgical processes selected according to a metal's placement in the reactivity series."
+      ],
+      "id": "85c9x6j"
+    },
+    {
+      "type": "paragraph",
+      "id": "ro1dkiy"
+    },
+    {
+      "type": "paragraph",
+      "id": "if1ud9g"
+    },
+    {
+      "type": "paragraph",
+      "id": "6v2u1ys"
+    },
+    {
+      "id": "ug43i58",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Physical Properties of Metals"
+    },
+    {
+      "id": "2lnoaq5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nl8emu9",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Chemical Properties of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "qx3vzb2"
+    },
+    {
+      "type": "paragraph",
+      "id": "wi1yi21"
+    },
+    {
+      "type": "paragraph",
+      "id": "qpdhujf"
+    },
+    {
+      "type": "paragraph",
+      "id": "zlle2nl"
+    },
+    {
+      "id": "7r1idku",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "qphpj7m"
+    },
+    {
+      "type": "paragraph",
+      "id": "tc0o2zj"
+    },
+    {
+      "type": "paragraph",
+      "id": "88o6isp"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Reactivity Series of Metals",
+      "id": "7i4r8iz"
+    },
+    {
+      "id": "8x22nyt",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Physical Properties of Non-metals"
+    },
+    {
+      "id": "jtfnyed",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ihq0qrh",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Chemical Properties of Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "90c65mj"
+    },
+    {
+      "type": "paragraph",
+      "id": "p4vn6br"
+    },
+    {
+      "type": "paragraph",
+      "id": "5yrgakv"
+    },
+    {
+      "id": "y3jim71",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Reactivity Series of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ft4q4j"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "94fzqoc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Metals",
+        "Non-metals"
+      ],
+      "rows": [
+        [
+          "Physical State",
+          "Generally solids at room temperature (except Mercury)",
+          "Occur as solids, liquids, or gases"
+        ],
+        [
+          "Conductivity",
+          "Good conductors of heat and electricity",
+          "Poor conductors (except Graphite)"
+        ],
+        [
+          "Mechanical Nature",
+          "Malleable, ductile, and sonorous",
+          "Brittle and non-sonorous"
+        ],
+        [
+          "Nature of Oxides",
+          "Form basic or amphoteric oxides",
+          "Form acidic or neutral oxides"
+        ]
+      ],
+      "id": "3s550rf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4v0cyl2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5eestuz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l6guu3a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ggdfn5t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "matu7r7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "44u0qwz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tziw1fi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4yukt9h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ty5ge3q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pqzo9cd"
+    },
+    {
+      "id": "ojdt0zg",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Extraction of Metals"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested exceptions: Mercury (liquid metal), Iodine (lustrous non-metal), and Graphite (conducting non-metal).",
+        "Displacement reactions and predicting product outcomes based on the Reactivity Series are high-yield exam topics.",
+        "Amphoteric oxides (such as Aluminum Oxide and Zinc Oxide) that react with both acids and bases appear repeatedly in competitive exams."
+      ],
+      "id": "ghvtrnp"
+    },
+    {
+      "type": "paragraph",
+      "id": "2rz3qtf"
+    },
+    {
+      "type": "paragraph",
+      "id": "dh21liv"
+    },
+    {
+      "type": "paragraph",
+      "id": "ry1vvte"
+    },
+    {
+      "id": "d019akz",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "z7zfxa7"
+    },
+    {
+      "type": "paragraph",
+      "id": "3oe09hz"
+    },
+    {
+      "type": "paragraph",
+      "id": "vy161cz"
+    },
+    {
+      "type": "paragraph",
+      "id": "zvmj7lm"
+    }
+  ],
+  "enriched": true
+}

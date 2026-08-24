@@ -1,0 +1,90 @@
+{
+  "id": "uhqbpd3",
+  "title": "4. Term and Removal of Governor",
+  "order": 365,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hq0hfnp"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor holds office during the pleasure of the President.",
+      "id": "ur4b4yj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Governor",
+        "President"
+      ],
+      "rows": [
+        [
+          "Tenure Security",
+          "No security of tenure (holds office during President's pleasure)",
+          "Has security of tenure for a 5-year term"
+        ],
+        [
+          "Grounds for Removal",
+          "Not specified in the Constitution",
+          "Violation of the Constitution"
+        ],
+        [
+          "Procedure for Removal",
+          "Direct removal by the President without parliamentary procedure",
+          "Impeachment process passed by both Houses of Parliament"
+        ]
+      ],
+      "id": "8b9hja0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Article",
+          "value": "Article 156",
+          "icon": "book"
+        },
+        {
+          "label": "Removal Authority",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Grounds for Removal",
+          "value": "Not Specified",
+          "icon": "info"
+        }
+      ],
+      "id": "erp06k4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 156 explicitly states that the Governor holds office during the pleasure of the President and lacks security of tenure.",
+        "Unlike the President, there is no requirement for an impeachment process or parliamentary sanction to remove a Governor.",
+        "Questions frequently test the distinction between the tenure of the Governor (pleasure of the President) and judges or the CAG (fixed tenure/security of tenure)."
+      ],
+      "id": "6tdmn2f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor holds office for a term of five years from the date on which he enters upon his office.",
+        "The term of five years is subject to the pleasure of the President, meaning the Governor can be removed at any time.",
+        "A Governor may resign at any time by writing under his hand addressed to the President.",
+        "The Constitution does not lay down any grounds or specific procedure for the removal of a Governor.",
+        "A Governor can continue to hold office beyond his term of five years until his successor enters upon his office."
+      ],
+      "id": "l3fm7s2"
+    }
+  ],
+  "enriched": true
+}

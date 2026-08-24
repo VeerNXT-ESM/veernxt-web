@@ -1,0 +1,145 @@
+{
+  "id": "kg748r9",
+  "title": "4. Soil Profile and Horizons",
+  "order": 170,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "kudaekz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A soil profile is a vertical section of the soil through all its horizons and extending into the parent material.",
+      "id": "pj4akza"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Master Horizons",
+          "value": "6 Principal",
+          "icon": "book"
+        },
+        {
+          "label": "Solum Horizons",
+          "value": "A, E, B",
+          "icon": "check"
+        },
+        {
+          "label": "Zone of Leaching",
+          "value": "E Horizon",
+          "icon": "info"
+        },
+        {
+          "label": "Zone of Accumulation",
+          "value": "B Horizon",
+          "icon": "award"
+        }
+      ],
+      "id": "dq9y6wr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Eluviation (E Horizon)",
+        "Illuviation (B Horizon)"
+      ],
+      "rows": [
+        [
+          "Primary Process",
+          "Washing out / Leaching of soil constituents",
+          "Deposition / Accumulation of leached materials"
+        ],
+        [
+          "Key Elements Moved",
+          "Silicate clays, iron, and aluminum oxides removed",
+          "Accumulates silicate clay, iron, aluminum, and humus"
+        ],
+        [
+          "Appearance",
+          "Bleached or lighter-colored zone",
+          "Densely packed, darker or intensely colored subsoil"
+        ]
+      ],
+      "id": "7ud435y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A soil profile is a vertical section of soil extending through all its horizons from the surface to the underlying parent rock.",
+        "The O Horizon is dominated by organic matter, primarily found in undisturbed forest soils.",
+        "The Solum comprises the true soil layers (A, E, and B) where active pedogenic processes occur.",
+        "Eluviation (washing out) defines the E horizon, whereas Illuviation (accumulation) defines the B horizon.",
+        "Regolith represents the entire mantle of loose, weathered material overlying unweathered bedrock (R horizon)."
+      ],
+      "id": "a4eh729"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Vertical Sequence: O -> A -> E -> B -> C -> R (frequently asked in sequence ordering questions).",
+        "Distinguish Eluviation (E horizon: removal of clay and oxides) from Illuviation (B horizon: deposition of washed-down materials).",
+        "Key Definition: Solum = A + E + B horizons, whereas Regolith = Solum + C horizon."
+      ],
+      "id": "hnv6goj"
+    },
+    {
+      "id": "a097g4l",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

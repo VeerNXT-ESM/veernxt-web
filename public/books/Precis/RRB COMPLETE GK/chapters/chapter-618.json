@@ -1,0 +1,89 @@
+{
+  "id": "j2y5qpl",
+  "title": "RRB Quick Revision Box",
+  "order": 618,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "a3ncmjt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Railways was nationalised in 1951 and now stands as the backbone of the nation's transportation.",
+      "id": "dtsr6yx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Gauge Type",
+        "Width (Meters)",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "Broad Gauge",
+          "1.676 m",
+          "Mainline passenger and heavy freight corridors"
+        ],
+        [
+          "Meter Gauge",
+          "1.000 m",
+          "Regional feeder lines (largely converted under Project Unigauge)"
+        ],
+        [
+          "Narrow Gauge",
+          "0.762 m / 0.610 m",
+          "Mountain railways and heritage lines (e.g., Darjeeling Himalayan Railway)"
+        ]
+      ],
+      "id": "6uyce8p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Train Introduced",
+          "value": "1853",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Run Distance",
+          "value": "34 km",
+          "icon": "info"
+        },
+        {
+          "label": "Year Nationalised",
+          "value": "1951",
+          "icon": "award"
+        },
+        {
+          "label": "Railway Zones",
+          "value": "19 Zones",
+          "icon": "book"
+        }
+      ],
+      "id": "lgyu3uj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "First Electric Train: Introduced on 3rd February 1925 between Victoria Terminus and Kurla.",
+        "Official Mascot: 'Bholu the Guard Elephant' was unveiled in 2002 to commemorate the 150th anniversary of Indian Railways.",
+        "Track Dimensions: Broad Gauge width is strictly 1.676 m (5 ft 6 in), a frequently asked stat in RRB NTPC and Group D exams."
+      ],
+      "id": "b86imiz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on 16th April 1853.",
+        "Indian Railways was official nationalised in 1951 and has grown into one of the largest rail networks in the world.",
+        "Bholu, an elephant dressed as a railway guard holding a signal lamp, serves as the official mascot of Indian Railways.",
+        "Indian Railways predominantly operates on three track gauges: Broad Gauge (1.676 m), Meter Gauge (1.000 m), and Narrow Gauge (0.762 m / 0.610 m)."
+      ],
+      "id": "9yeqhs1"
+    }
+  ],
+  "enriched": true
+}

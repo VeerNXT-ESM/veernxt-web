@@ -1,40 +1,40 @@
 {
-  "id": "hx0wvap",
+  "id": "oiz0ti8",
   "title": "Chapter 9: Advent of Europeans in India",
   "order": 9,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "7fp8ie4"
+      "id": "zhgcz0h"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "First Power",
-          "value": "Portuguese",
-          "icon": "award"
+          "label": "Arrival of Vasco da Gama",
+          "value": "1498",
+          "icon": "calendar"
         },
         {
-          "label": "Key Conflict",
-          "value": "Carnatic Wars",
-          "icon": "info"
-        },
-        {
-          "label": "Primary Route",
-          "value": "Sea Route",
+          "label": "EIC Royal Charter",
+          "value": "1600",
           "icon": "book"
         },
         {
-          "label": "Target Exams",
-          "value": "SSC & State PSC",
-          "icon": "check"
+          "label": "Capture of Goa",
+          "value": "1510",
+          "icon": "award"
+        },
+        {
+          "label": "Battle of Wandiwash",
+          "value": "1760",
+          "icon": "clock"
         }
       ],
-      "id": "ph9jg5b"
+      "id": "vgmu44k"
     },
     {
-      "id": "d7wso3m",
+      "id": "4nqu36b",
       "type": "heading",
       "level": 2,
       "content": "1. Background: Why Europeans Came to India"
@@ -43,37 +43,39 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Europeans sought a direct sea route to India to control the lucrative spice trade and bypass overland monopoly.",
-        "The Portuguese were the first European nation to establish trade settlements and maritime hegemony in India.",
-        "The Dutch, English, and French established rival trading companies throughout the 17th century.",
-        "The Anglo-French Rivalry culminated in the Carnatic Wars, cementing British dominance over India."
+        "Vasco da Gama discovered the direct sea route to India via the Cape of Good Hope, arriving at Calicut in 1498 where he was welcomed by King Zamorin.",
+        "Francisco de Almeida introduced the 'Blue Water Policy' to make the Portuguese the masters of the Indian Ocean.",
+        "Alfonso de Albuquerque acquired Goa from the Sultan of Bijapur in 1510, establishing it as the center of Portuguese rule in India.",
+        "The Dutch established their first factory at Masulipatnam in 1605, but their power ended after the Battle of Bedara in 1759 against the British.",
+        "The English East India Company received its charter from Queen Elizabeth I in 1600 and established its first permanent factory at Surat in 1613.",
+        "The French East India Company was formed in 1664 by Colbert, establishing their first factory at Surat in 1668 and key stronghold at Pondicherry."
       ],
-      "id": "2vdnsx9"
+      "id": "mjzwbfq"
     },
     {
       "type": "paragraph",
-      "id": "f5uo36a"
+      "id": "3ioiiyi"
     },
     {
       "type": "paragraph",
-      "id": "8m6u7xe"
+      "id": "xyo5kj8"
     },
     {
       "type": "paragraph",
-      "id": "aiyoyph"
+      "id": "r963mvn"
     },
     {
       "type": "paragraph",
-      "id": "p6f7hw4"
+      "id": "mpx1350"
     },
     {
-      "id": "g7ymwha",
+      "id": "m7ui5oe",
       "type": "heading",
       "level": 2,
       "content": "2. Discovery of Sea Route to India"
     },
     {
-      "id": "ghva0lb",
+      "id": "wegqmif",
       "type": "table",
       "rows": [
         {
@@ -107,132 +109,147 @@
       ]
     },
     {
-      "id": "eyvi697",
+      "id": "1reqzb3",
       "type": "heading",
       "level": 2,
       "content": "3. Portuguese in India"
     },
     {
       "type": "paragraph",
-      "id": "agzyjbe"
+      "id": "veoulqu"
     },
     {
       "type": "paragraph",
-      "id": "nml5u1q"
+      "id": "er0bxr0"
     },
     {
       "type": "paragraph",
-      "id": "idnw8xv"
+      "id": "kdwjlkc"
     },
     {
       "type": "paragraph",
-      "id": "kjvcu1q"
+      "id": "anof69m"
     },
     {
-      "id": "9094u0o",
+      "id": "klli2k2",
       "type": "heading",
       "level": 2,
       "content": "4. Dutch in India"
     },
     {
       "type": "paragraph",
-      "id": "73ry91k"
+      "id": "a8rnjw1"
     },
     {
       "type": "pullQuote",
-      "content": "Anglo-French Rivalry (Carnatic Wars)",
-      "id": "fohfomy"
+      "content": "Vasco da Gama's arrival at Calicut in 1498 opened a new chapter in the history of Euro-Asian trade and maritime commerce.",
+      "id": "3l72qad"
     },
     {
       "type": "paragraph",
-      "id": "cin2jqw"
+      "id": "3miv55r"
     },
     {
       "type": "paragraph",
-      "id": "rxu6ebc"
+      "id": "ehoyte6"
     },
     {
       "type": "paragraph",
-      "id": "3fafblh"
+      "id": "kqxdc2z"
     },
     {
-      "id": "vvhsrsy",
+      "id": "xd1533k",
       "type": "heading",
       "level": 2,
       "content": "5. English (British) in India"
     },
     {
       "type": "paragraph",
-      "id": "eb4covt"
+      "id": "liwf2pa"
     },
     {
       "type": "paragraph",
-      "id": "tpkkhl8"
+      "id": "evdtlxo"
     },
     {
       "type": "paragraph",
-      "id": "s0gslcg"
+      "id": "2vjvqs4"
     },
     {
       "type": "paragraph",
-      "id": "uoecahz"
+      "id": "osfpns7"
     },
     {
       "type": "comparisonTable",
       "headers": [
         "European Power",
-        "Key Significance in India"
+        "Year of Arrival",
+        "First Factory",
+        "Key Governor / Figure",
+        "Decisive Exit Battle"
       ],
       "rows": [
         [
           "Portuguese",
-          "Discovered sea route; established bases at Goa, Daman, and Diu"
+          "1498",
+          "Cochin (1503)",
+          "Alfonso de Albuquerque",
+          "Naval Losses / Siege of Hooghly (1632)"
         ],
         [
           "Dutch",
-          "Focused primarily on spice trade and textile exports before shifting focus to Indonesia"
+          "1605",
+          "Masulipatnam (1605)",
+          "Jan Pieterszoon Coen",
+          "Battle of Bedara (1759)"
         ],
         [
-          "English (British)",
-          "Emerged as the supreme political power after defeating European and regional rivals"
+          "English",
+          "1608",
+          "Surat (1613)",
+          "Robert Clive",
+          "Remained dominant rulers until 1947"
         ],
         [
           "French",
-          "Chief rival to the British; controlled Pondicherry and lost power after the Carnatic Wars"
+          "1664",
+          "Surat (1668)",
+          "Joseph François Dupleix",
+          "Battle of Wandiwash (1760)"
         ]
       ],
-      "id": "mhf4bw5"
+      "id": "lctb8ev"
     },
     {
-      "id": "p8ig4uk",
+      "id": "ssq73gt",
       "type": "heading",
       "level": 2,
       "content": "6. French in India"
     },
     {
       "type": "paragraph",
-      "id": "9hdqfua"
+      "id": "kffarzf"
     },
     {
       "type": "paragraph",
-      "id": "n7po1v8"
+      "id": "rplijak"
     },
     {
       "type": "paragraph",
-      "id": "ixuwd7z"
+      "id": "c4py62s"
     },
     {
       "type": "paragraph",
-      "id": "wwyw9e5"
+      "id": "ks3zc22"
     },
     {
-      "id": "vp0grf8",
+      "id": "pe0xjni",
       "type": "heading",
       "level": 2,
       "content": "7. Anglo-French Rivalry (Carnatic Wars)"
     },
     {
-      "id": "1oc9ntn",
+      "id": "cms5o0b",
       "type": "table",
       "rows": [
         {
@@ -266,61 +283,62 @@
       ]
     },
     {
-      "id": "7m3ixgz",
+      "id": "rm94reb",
       "type": "heading",
       "level": 2,
       "content": "8. Impact of European Arrival"
     },
     {
       "type": "paragraph",
-      "id": "o273nv8"
+      "id": "wjaq0jx"
     },
     {
       "type": "paragraph",
-      "id": "6wznw2x"
+      "id": "txyd9qo"
     },
     {
       "type": "paragraph",
-      "id": "devx7bm"
+      "id": "t0vdiln"
     },
     {
       "type": "examAlert",
       "items": [
-        "Chronological order of European arrival in India: Portuguese (1498), Dutch (1602), English (1608), French (1664).",
-        "Vasco da Gama was the first European to reach India by sea, landing at Calicut in 1498 where he was received by King Zamorin.",
-        "The Third Carnatic War ended with the Battle of Wandiwash (1760), decisively ending French colonial ambitions in India."
+        "First Factories: Portuguese at Cochin (1503), Dutch at Masulipatnam (1605), English at Surat (1613), French at Surat (1668).",
+        "Decisive Battles: Battle of Bedara (1759) defeated the Dutch; Battle of Wandiwash (1760) ended French political ambitions in India.",
+        "Royal Ambassadors: Captain William Hawkins visited Jahangir's court in 1608, followed by Sir Thomas Roe in 1615 who secured trade concessions for the British.",
+        "Carnatic Wars: A series of three military conflicts between the British and French East India Companies from 1746 to 1763."
       ],
-      "id": "143q7p7"
+      "id": "h2jdvqf"
     },
     {
       "type": "paragraph",
-      "id": "ml75fqm"
+      "id": "efvu861"
     },
     {
-      "id": "hhbgzuh",
+      "id": "5hjd9c0",
       "type": "heading",
       "level": 2,
       "content": "SSC Exam Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "kv4d6wy"
+      "id": "ymto28a"
     },
     {
       "type": "paragraph",
-      "id": "2v2egam"
+      "id": "p4pnx7q"
     },
     {
       "type": "paragraph",
-      "id": "7rpy7vx"
+      "id": "86cv63v"
     },
     {
       "type": "paragraph",
-      "id": "2utk513"
+      "id": "7tqo6eq"
     },
     {
       "type": "paragraph",
-      "id": "nh2lyyi"
+      "id": "z4kunu7"
     }
   ],
   "enriched": true

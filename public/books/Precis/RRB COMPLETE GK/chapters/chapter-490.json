@@ -1,0 +1,144 @@
+{
+  "id": "o8wnjzh",
+  "title": "Composition of NHRC",
+  "order": 490,
+  "blocks": [
+    {
+      "id": "otlcfug",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chairperson and members of the Commission are appointed by the President on the recommendations of a six-member committee.",
+      "id": "ufzlvj3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Member Category",
+        "Required Qualification",
+        "Count / Details"
+      ],
+      "rows": [
+        [
+          "Chairperson",
+          "Retired Chief Justice of India or retired Supreme Court Judge",
+          "1"
+        ],
+        [
+          "Judicial Members",
+          "Serving/retired SC Judge or serving/retired High Court Chief Justice",
+          "2"
+        ],
+        [
+          "Expert Members",
+          "Persons having knowledge/practical experience in Human Rights (min. 1 woman)",
+          "3"
+        ],
+        [
+          "Ex-Officio Members",
+          "Chairpersons of National Commissions (NCSC, NCST, NCW, NCM, NCBC, NCPCR, CCPD)",
+          "7"
+        ]
+      ],
+      "id": "9e6d96z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Year",
+          "value": "1993",
+          "icon": "calendar"
+        },
+        {
+          "label": "Full-Time Members",
+          "value": "1 Chair + 5 Members",
+          "icon": "book"
+        },
+        {
+          "label": "Ex-Officio Members",
+          "value": "7 Commission Heads",
+          "icon": "award"
+        },
+        {
+          "label": "Selection Committee",
+          "value": "6 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "3 Years / 70 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "rpb2jf6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Selection Committee Composition: Prime Minister (Chair), Speaker of Lok Sabha, Deputy Chairman of Rajya Sabha, Leaders of Opposition in both Houses, and Union Home Minister.",
+        "Tenure: The Chairperson and members hold office for 3 years or until reaching 70 years of age, whichever is earlier, and are eligible for re-appointment.",
+        "7 Ex-Officio Members: Chairpersons of NCSC, NCST, NCW, NCM, NCBC, NCPCR, and the Chief Commissioner for Persons with Disabilities."
+      ],
+      "id": "b6q9g4a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The National Human Rights Commission (NHRC) is a statutory body established under the Protection of Human Rights Act, 1993.",
+        "The Commission consists of a Chairperson, 5 full-time members, and 7 ex-officio members.",
+        "The Chairperson must be a retired Chief Justice of India or a retired Judge of the Supreme Court.",
+        "Out of the three human rights expert members, at least one must be a woman.",
+        "Members are appointed by the President on the recommendation of a high-level 6-member committee headed by the Prime Minister."
+      ],
+      "id": "78gaz36"
+    }
+  ],
+  "enriched": true
+}

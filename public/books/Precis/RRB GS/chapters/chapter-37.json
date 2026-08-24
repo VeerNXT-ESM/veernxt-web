@@ -1,0 +1,897 @@
+{
+  "id": "5pxp1pe",
+  "title": "PHYSICS – CHAPTER 5",
+  "order": 37,
+  "blocks": [
+    {
+      "id": "td9cpzz",
+      "type": "heading",
+      "level": 2,
+      "content": "WORK, ENERGY AND POWER"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Work is scalar and defined as W = F · d · cos(θ), occurring only when force causes displacement.",
+        "Kinetic energy (KE = ½mv²) depends on motion, while potential energy (PE = mgh or ½kx²) depends on position or shape.",
+        "The Work-Energy Theorem establishes that net work done on a body equals the change in its kinetic energy (W = ΔKE).",
+        "Power is the rate at which work is performed or energy is converted (P = W / t).",
+        "Mechanical energy is conserved under conservative forces, whereas non-conservative forces dissipate energy as heat or sound."
+      ],
+      "id": "2g6fpyr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Work & Energy",
+          "value": "Joule (J)",
+          "icon": "award"
+        },
+        {
+          "label": "1 kWh (Commercial Unit)",
+          "value": "3.6 × 10⁶ J",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "clock"
+        },
+        {
+          "label": "1 Horsepower (HP)",
+          "value": "746 W",
+          "icon": "check"
+        }
+      ],
+      "id": "hh78b5c"
+    },
+    {
+      "type": "paragraph",
+      "id": "51v3luw"
+    },
+    {
+      "id": "u523w1m",
+      "type": "heading",
+      "level": 3,
+      "content": "1. WORK"
+    },
+    {
+      "type": "paragraph",
+      "id": "6xnuhq9"
+    },
+    {
+      "type": "paragraph",
+      "id": "1dp6u0y"
+    },
+    {
+      "type": "paragraph",
+      "id": "7j6rm2x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vedohhr"
+    },
+    {
+      "type": "paragraph",
+      "id": "a2yhoje"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dxebaxx"
+    },
+    {
+      "id": "ycgjxj0",
+      "type": "heading",
+      "level": 3,
+      "content": "2. TYPES OF WORK"
+    },
+    {
+      "id": "khgm692",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uso5xbs",
+      "type": "heading",
+      "level": 3,
+      "content": "3. ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "xnyjhf3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bi52ftv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "puhd4b9"
+    },
+    {
+      "id": "3wla3lg",
+      "type": "heading",
+      "level": 3,
+      "content": "4. FORMS OF ENERGY"
+    },
+    {
+      "id": "bege8y3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v8nqnva",
+      "type": "heading",
+      "level": 3,
+      "content": "5. KINETIC ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "b6me9w2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "igkln00"
+    },
+    {
+      "type": "paragraph",
+      "id": "74ky92i"
+    },
+    {
+      "id": "smhozsm",
+      "type": "heading",
+      "level": 3,
+      "content": "6. POTENTIAL ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "1p5bru7"
+    },
+    {
+      "type": "paragraph",
+      "id": "pfd2i2x"
+    },
+    {
+      "id": "fhi3oof",
+      "type": "heading",
+      "level": 3,
+      "content": "7. WORK-ENERGY THEOREM"
+    },
+    {
+      "id": "99m2kml",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "cfkgpt5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "corgbd7"
+    },
+    {
+      "id": "0ge8rm5",
+      "type": "heading",
+      "level": 3,
+      "content": "8. LAW OF CONSERVATION OF ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "bpknfmo"
+    },
+    {
+      "type": "paragraph",
+      "id": "k04dlg7"
+    },
+    {
+      "id": "y47syfz",
+      "type": "heading",
+      "level": 3,
+      "content": "9. POWER"
+    },
+    {
+      "type": "paragraph",
+      "id": "i879sbv"
+    },
+    {
+      "type": "paragraph",
+      "id": "fsucao2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eqvqivh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gvkckjq"
+    },
+    {
+      "type": "paragraph",
+      "id": "lmawkoy"
+    },
+    {
+      "id": "xgzp6kx",
+      "type": "heading",
+      "level": 3,
+      "content": "10. EFFICIENCY"
+    },
+    {
+      "type": "paragraph",
+      "id": "yxlrzlz"
+    },
+    {
+      "type": "paragraph",
+      "id": "9j3zsvc"
+    },
+    {
+      "id": "12kixc9",
+      "type": "heading",
+      "level": 3,
+      "content": "11. COMMERCIAL UNIT OF ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "4k6buwx"
+    },
+    {
+      "type": "paragraph",
+      "id": "fu60apd"
+    },
+    {
+      "id": "9p7uoeg",
+      "type": "heading",
+      "level": 3,
+      "content": "13. WORK DONE BY VARIABLE FORCE"
+    },
+    {
+      "type": "paragraph",
+      "id": "wpxme46"
+    },
+    {
+      "type": "paragraph",
+      "id": "pjwbgl9"
+    },
+    {
+      "type": "paragraph",
+      "id": "7slj1hh"
+    },
+    {
+      "id": "ouf017o",
+      "type": "heading",
+      "level": 3,
+      "content": "13. SPRING POTENTIAL ENERGY"
+    },
+    {
+      "type": "paragraph",
+      "id": "s6h1y3n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0f9clok"
+    },
+    {
+      "type": "paragraph",
+      "id": "l5k1v1d"
+    },
+    {
+      "type": "paragraph",
+      "id": "ttqayc2"
+    },
+    {
+      "id": "g8s2879",
+      "type": "heading",
+      "level": 3,
+      "content": "14. CONSERVATIVE VS NON-CONSERVATIVE FORCES"
+    },
+    {
+      "id": "kifr8k3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0rv03u7",
+      "type": "heading",
+      "level": 3,
+      "content": "15. RELATION BETWEEN KINETIC ENERGY AND MOMENTUM"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "342ix1t"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ogeazd"
+    },
+    {
+      "type": "paragraph",
+      "id": "yfa9uui"
+    },
+    {
+      "type": "pullQuote",
+      "content": "LAW OF CONSERVATION OF ENERGY",
+      "id": "engr7qv"
+    },
+    {
+      "id": "olo13eq",
+      "type": "heading",
+      "level": 3,
+      "content": "16. STOPPING DISTANCE (BRAKING DISTANCE)"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ew0u0n"
+    },
+    {
+      "type": "paragraph",
+      "id": "8fx5rge"
+    },
+    {
+      "type": "paragraph",
+      "id": "nukeb53"
+    },
+    {
+      "id": "akjcm6y",
+      "type": "heading",
+      "level": 3,
+      "content": "17. AVERAGE & INSTANTANEOUS POWER"
+    },
+    {
+      "type": "paragraph",
+      "id": "0c7zu9z"
+    },
+    {
+      "type": "paragraph",
+      "id": "q588epq"
+    },
+    {
+      "type": "paragraph",
+      "id": "ck3ctbt"
+    },
+    {
+      "id": "1j8iq2d",
+      "type": "heading",
+      "level": 3,
+      "content": "18. ENGINE EFFICIENCY"
+    },
+    {
+      "type": "paragraph",
+      "id": "dnp7ddh"
+    },
+    {
+      "type": "paragraph",
+      "id": "1myqv6u"
+    },
+    {
+      "type": "paragraph",
+      "id": "d1b51mp"
+    },
+    {
+      "id": "qq934tb",
+      "type": "heading",
+      "level": 3,
+      "content": "19. ADVANCED RRB EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "de3e1ed"
+    },
+    {
+      "type": "paragraph",
+      "id": "r09mezx"
+    },
+    {
+      "type": "paragraph",
+      "id": "6oqqfs5"
+    },
+    {
+      "type": "paragraph",
+      "id": "ul0ru55"
+    },
+    {
+      "type": "paragraph",
+      "id": "oonmn6s"
+    },
+    {
+      "id": "jrlmk96",
+      "type": "heading",
+      "level": 2,
+      "content": "MCQs"
+    },
+    {
+      "id": "csdkfvs",
+      "type": "heading",
+      "level": 3,
+      "content": "Q1."
+    },
+    {
+      "type": "paragraph",
+      "id": "fbw3gmp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fnx0usj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "olwshh3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aqh5fmw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d6f5f96"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "spgqm9e"
+    },
+    {
+      "type": "paragraph",
+      "id": "keik9gj"
+    },
+    {
+      "type": "paragraph",
+      "id": "1nax5ia"
+    },
+    {
+      "type": "paragraph",
+      "id": "zwuuvvn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Conservative Forces",
+        "Non-Conservative Forces"
+      ],
+      "rows": [
+        [
+          "Path Dependency",
+          "Work done is independent of path taken",
+          "Work done depends on the path taken"
+        ],
+        [
+          "Closed Loop Work",
+          "Work done along a closed path is zero",
+          "Work done along a closed path is non-zero"
+        ],
+        [
+          "Energy Conservation",
+          "Total mechanical energy is conserved",
+          "Mechanical energy is dissipated as heat/sound"
+        ],
+        [
+          "Examples",
+          "Gravitational, Spring, Electrostatic forces",
+          "Friction, Viscous force, Air resistance"
+        ]
+      ],
+      "id": "puw22jg"
+    },
+    {
+      "type": "paragraph",
+      "id": "vfje1al"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2efnzey"
+    },
+    {
+      "type": "paragraph",
+      "id": "nq64n7k"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ll6rv2n"
+    },
+    {
+      "type": "paragraph",
+      "id": "0kavx1z"
+    },
+    {
+      "id": "oke0z6s",
+      "type": "heading",
+      "level": 3,
+      "content": "Q2."
+    },
+    {
+      "type": "paragraph",
+      "id": "3gvz3aw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jjyrurp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "czxvrjr"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xwa5y90"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vlgh44x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tpq8060"
+    },
+    {
+      "type": "paragraph",
+      "id": "q1c31e0"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4xq5fs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h942125"
+    },
+    {
+      "type": "paragraph",
+      "id": "j458ssu"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ijcg1r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hv24iv1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "el448ui"
+    },
+    {
+      "type": "paragraph",
+      "id": "2wqwpzf"
+    },
+    {
+      "id": "e1cqpbk",
+      "type": "heading",
+      "level": 3,
+      "content": "Q3."
+    },
+    {
+      "type": "paragraph",
+      "id": "zerf2cg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iasxm1x"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "23kby4s"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "duiwp0o"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4i5rw71"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dkyyyy0"
+    },
+    {
+      "type": "paragraph",
+      "id": "px4b5tx"
+    },
+    {
+      "type": "paragraph",
+      "id": "shqeraq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hj8upyy"
+    },
+    {
+      "type": "paragraph",
+      "id": "80yfhk1"
+    },
+    {
+      "type": "paragraph",
+      "id": "x4quemm"
+    },
+    {
+      "type": "paragraph",
+      "id": "r6nyrbm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3oa2e81"
+    },
+    {
+      "id": "6vbchpb",
+      "type": "heading",
+      "level": 3,
+      "content": "Q4."
+    },
+    {
+      "type": "paragraph",
+      "id": "r6nnwya"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xghu2fa"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qwbrcgn"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "1 kWh = 3.6 × 10⁶ Joules is a high-frequency question in competitive exams like RRB and SSC.",
+        "Work done by a centripetal force is always ZERO because force and displacement are perpendicular (θ = 90°).",
+        "Relationship between Kinetic Energy and Momentum: KE = p² / (2m). Doubling momentum increases KE by 4 times."
+      ],
+      "id": "aty4pnx"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2ngolb5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p9r9fwc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uw210q8"
+    },
+    {
+      "type": "paragraph",
+      "id": "gmlmtcx"
+    },
+    {
+      "type": "paragraph",
+      "id": "q5gxznj"
+    },
+    {
+      "type": "paragraph",
+      "id": "h903oga"
+    },
+    {
+      "type": "paragraph",
+      "id": "oyh07mh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3ymhnaz"
+    },
+    {
+      "type": "paragraph",
+      "id": "tghtni2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g10jsby"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2q21o87"
+    },
+    {
+      "id": "qwq1dtd",
+      "type": "heading",
+      "level": 3,
+      "content": "Q5."
+    },
+    {
+      "type": "paragraph",
+      "id": "2e0b9ol"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d22h3pk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yl3qy67"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "forrp40"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yuz2pti"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ugyp0d"
+    },
+    {
+      "type": "paragraph",
+      "id": "fw8ul7f"
+    },
+    {
+      "type": "paragraph",
+      "id": "rgznjt4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m8did66"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kh4i1bg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "src7c4f"
+    }
+  ],
+  "enriched": true
+}

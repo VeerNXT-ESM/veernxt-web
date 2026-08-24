@@ -1,0 +1,143 @@
+{
+  "id": "qdedjip",
+  "title": "Status and Establishment",
+  "order": 501,
+  "blocks": [
+    {
+      "id": "6xftxmc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional bodies derive their authority directly from the Constitution of India, whereas statutory bodies are created by an Act of Parliament.",
+      "id": "rlqo3nw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Body",
+        "Statutory Body",
+        "Executive Body"
+      ],
+      "rows": [
+        [
+          "Origin",
+          "Mentioned directly in the Constitution",
+          "Created by an Act of Parliament/Legislature",
+          "Created by Executive Resolution"
+        ],
+        [
+          "Power Source",
+          "Constitution of India",
+          "Specific Statute/Legislation",
+          "Cabinet/Executive Order"
+        ],
+        [
+          "Modification",
+          "Requires Article 368 Constitutional Amendment",
+          "Requires Parliamentary Amendment Bill",
+          "Requires Cabinet Decision"
+        ],
+        [
+          "Examples",
+          "UPSC, Election Commission, CAG",
+          "SEBI, NHRC, NGT",
+          "NITI Aayog, Law Commission"
+        ]
+      ],
+      "id": "h786i3a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "UPSC Establishment",
+          "value": "Article 315",
+          "icon": "book"
+        },
+        {
+          "label": "CAG Authority",
+          "value": "Article 148",
+          "icon": "award"
+        },
+        {
+          "label": "Election Commission",
+          "value": "Article 324",
+          "icon": "check"
+        },
+        {
+          "label": "Finance Commission",
+          "value": "Article 280",
+          "icon": "calendar"
+        }
+      ],
+      "id": "65r666a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NITI Aayog is a non-constitutional and non-statutory body created via executive resolution.",
+        "National Human Rights Commission (NHRC) is a statutory body established under the Protection of Human Rights Act, 1993.",
+        "Removal of the Comptroller and Auditor General (CAG) requires a process similar to the removal of a Supreme Court Judge."
+      ],
+      "id": "72tnzr6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their powers and authority directly from the Constitution of India.",
+        "Statutory bodies are created by an Act passed by the Parliament or State Legislature.",
+        "Executive or non-statutory bodies are formed by an executive resolution or cabinet decision.",
+        "Any change in the status of a constitutional body requires a constitutional amendment under Article 368."
+      ],
+      "id": "g8auc4h"
+    }
+  ],
+  "enriched": true
+}

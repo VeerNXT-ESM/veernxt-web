@@ -1,0 +1,100 @@
+{
+  "id": "xe1ebxn",
+  "title": "10. Legislative Procedure – Types of Bills",
+  "order": 322,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1jkj8el"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Money Bill can be introduced only in the Lok Sabha and only on the recommendation of the President.",
+      "id": "gidyuym"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Ordinary Bill",
+        "Money Bill"
+      ],
+      "rows": [
+        [
+          "House of Origin",
+          "Either Lok Sabha or Rajya Sabha",
+          "Only Lok Sabha"
+        ],
+        [
+          "President's Recommendation",
+          "Not required before introduction",
+          "Required before introduction"
+        ],
+        [
+          "Rajya Sabha Powers",
+          "Can amend, reject, or delay up to 6 months",
+          "Cannot reject or amend; can delay up to 14 days only"
+        ],
+        [
+          "Speaker's Endorsement",
+          "Not required",
+          "Requires Speaker's certification"
+        ],
+        [
+          "Joint Sitting",
+          "Applicable under Article 108",
+          "Not applicable"
+        ]
+      ],
+      "id": "2rbc0ax"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Types of Bills",
+          "value": "4 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Money Bill Article",
+          "value": "Article 110",
+          "icon": "info"
+        },
+        {
+          "label": "RS Delay Limit (Money Bill)",
+          "value": "14 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Constitutional Amendment",
+          "value": "Article 368",
+          "icon": "check"
+        }
+      ],
+      "id": "45radkd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The decision of the Speaker of the Lok Sabha on whether a bill is a Money Bill or not is final and cannot be questioned in court or in either House.",
+        "There is no constitutional provision for a joint sitting in the case of a Money Bill or a Constitutional Amendment Bill.",
+        "Rajya Sabha can detain an Ordinary Bill for a maximum period of 6 months, but a Money Bill for only 14 days."
+      ],
+      "id": "olpaeuv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Bills introduced in Parliament are categorized into four types: Ordinary Bills, Money Bills, Financial Bills, and Constitutional Amendment Bills.",
+        "An Ordinary Bill can originate in either House of Parliament and requires a simple majority to pass.",
+        "Money Bills deal exclusively with financial matters listed under Article 110 and can only be introduced in the Lok Sabha with prior recommendation of the President.",
+        "The Rajya Sabha has limited powers regarding Money Bills; it cannot amend or reject them and must return them within 14 days.",
+        "Joint sittings under Article 108 are applicable to resolve deadlocks on Ordinary and Financial Bills, but not on Money Bills or Constitutional Amendment Bills."
+      ],
+      "id": "abrzu1r"
+    }
+  ],
+  "enriched": true
+}

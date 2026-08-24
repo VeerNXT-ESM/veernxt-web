@@ -1,0 +1,937 @@
+{
+  "id": "vm3b3ns",
+  "title": "Chapter 8: METALS AND NON-METALS",
+  "order": 28,
+  "blocks": [
+    {
+      "id": "oqfsfwu",
+      "type": "heading",
+      "level": 2,
+      "content": "PART 1 – THEORY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metals are electropositive elements that lose electrons to form cations, whereas non-metals are electronegative elements that gain or share electrons.",
+        "Metals form basic or amphoteric oxides, while non-metals form acidic or neutral oxides.",
+        "The reactivity series arranges metals in decreasing order of their chemical reactivity, dictating displacement reactions and extraction methods.",
+        "Highly reactive metals (Na, K, Ca) are extracted via electrolysis, whereas moderately reactive metals (Fe, Zn) are extracted by reduction using carbon.",
+        "Corrosion of iron (rusting) requires both oxygen and moisture, and can be prevented through galvanization, painting, or alloying."
+      ],
+      "id": "v3ax5rn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Liquid Metal",
+          "value": "Mercury (Hg)",
+          "icon": "info"
+        },
+        {
+          "label": "Liquid Non-Metal",
+          "value": "Bromine (Br)",
+          "icon": "info"
+        },
+        {
+          "label": "Most Malleable Metal",
+          "value": "Gold (Au)",
+          "icon": "award"
+        },
+        {
+          "label": "Key Process",
+          "value": "Galvanization",
+          "icon": "check"
+        }
+      ],
+      "id": "5ngz1j6"
+    },
+    {
+      "id": "hu2b5uk",
+      "type": "heading",
+      "level": 3,
+      "content": "1. Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "zb70z3o"
+    },
+    {
+      "type": "paragraph",
+      "id": "kzulgkd"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ztriwc"
+    },
+    {
+      "type": "paragraph",
+      "id": "9opuahr"
+    },
+    {
+      "id": "f5oww64",
+      "type": "heading",
+      "level": 3,
+      "content": "Physical Properties of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "3vu18o8"
+    },
+    {
+      "type": "paragraph",
+      "id": "pd5abqa"
+    },
+    {
+      "type": "paragraph",
+      "id": "d5ujfd8"
+    },
+    {
+      "type": "paragraph",
+      "id": "p9600wt"
+    },
+    {
+      "type": "paragraph",
+      "id": "4p874kk"
+    },
+    {
+      "id": "huvsi6b",
+      "type": "heading",
+      "level": 3,
+      "content": "2. Non-Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "g91keq7"
+    },
+    {
+      "type": "paragraph",
+      "id": "75rz1sc"
+    },
+    {
+      "type": "paragraph",
+      "id": "du25utc"
+    },
+    {
+      "type": "paragraph",
+      "id": "m1pv5rw"
+    },
+    {
+      "id": "a1exu33",
+      "type": "heading",
+      "level": 3,
+      "content": "Physical Properties of Non-Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "9316jyj"
+    },
+    {
+      "type": "paragraph",
+      "id": "yb5213j"
+    },
+    {
+      "type": "paragraph",
+      "id": "1sm9eju"
+    },
+    {
+      "type": "paragraph",
+      "id": "jwcglco"
+    },
+    {
+      "id": "fp8znjr",
+      "type": "heading",
+      "level": 3,
+      "content": "3. Chemical Properties of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "4jvqs1c"
+    },
+    {
+      "type": "paragraph",
+      "id": "8nof2tm"
+    },
+    {
+      "type": "paragraph",
+      "id": "bo2tpag"
+    },
+    {
+      "type": "paragraph",
+      "id": "xv47xy8"
+    },
+    {
+      "type": "paragraph",
+      "id": "t12rpbd"
+    },
+    {
+      "id": "ua71r3q",
+      "type": "heading",
+      "level": 3,
+      "content": "4. Chemical Properties of Non-Metals"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metals are electropositive elements that lose electrons to form cations.",
+      "id": "ygvt195"
+    },
+    {
+      "type": "paragraph",
+      "id": "hcgc9bj"
+    },
+    {
+      "type": "paragraph",
+      "id": "8rix4kk"
+    },
+    {
+      "type": "paragraph",
+      "id": "h4fswwd"
+    },
+    {
+      "id": "wi42pod",
+      "type": "heading",
+      "level": 3,
+      "content": "5. Reactivity Series of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ww8l6e"
+    },
+    {
+      "type": "paragraph",
+      "id": "5bw1aem"
+    },
+    {
+      "id": "k60hcnk",
+      "type": "heading",
+      "level": 3,
+      "content": "6. Corrosion"
+    },
+    {
+      "type": "paragraph",
+      "id": "xydsnwp"
+    },
+    {
+      "type": "paragraph",
+      "id": "pw1nr3u"
+    },
+    {
+      "type": "paragraph",
+      "id": "09g3grt"
+    },
+    {
+      "id": "0gndhdb",
+      "type": "heading",
+      "level": 3,
+      "content": "7. Extraction of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "xkipifm"
+    },
+    {
+      "type": "paragraph",
+      "id": "83r388h"
+    },
+    {
+      "type": "paragraph",
+      "id": "s4oxi7d"
+    },
+    {
+      "type": "paragraph",
+      "id": "lbcp52x"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Metals",
+        "Non-Metals"
+      ],
+      "rows": [
+        [
+          "Electrical Conductivity",
+          "Good conductors due to free electrons",
+          "Poor conductors (Exception: Graphite)"
+        ],
+        [
+          "Nature of Oxides",
+          "Basic or Amphoteric",
+          "Acidic or Neutral"
+        ],
+        [
+          "Malleability & Ductility",
+          "Highly malleable and ductile",
+          "Brittle, non-malleable, and non-ductile"
+        ],
+        [
+          "Electron Behavior",
+          "Lose electrons (Electropositive)",
+          "Gain or share electrons (Electronegative)"
+        ]
+      ],
+      "id": "7bfpp03"
+    },
+    {
+      "type": "paragraph",
+      "id": "4g8qvqw"
+    },
+    {
+      "id": "wm88ago",
+      "type": "heading",
+      "level": 2,
+      "content": "TABLE SECTION"
+    },
+    {
+      "id": "nsjqaya",
+      "type": "heading",
+      "level": 3,
+      "content": "Metals vs Non-Metals"
+    },
+    {
+      "id": "c2b2gl0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q193v3k",
+      "type": "heading",
+      "level": 3,
+      "content": "Reactivity Series Table"
+    },
+    {
+      "id": "gyqlner",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ikikn5e",
+      "type": "heading",
+      "level": 3,
+      "content": "Methods of Extraction"
+    },
+    {
+      "id": "mgucl44",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "isqfiwu",
+      "type": "heading",
+      "level": 3,
+      "content": "Corrosion and Prevention"
+    },
+    {
+      "id": "5jleef3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecu386o",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exceptions"
+    },
+    {
+      "id": "a65kfbu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q0nrv06",
+      "type": "heading",
+      "level": 2,
+      "content": "Nature of Oxides"
+    },
+    {
+      "id": "de2osqw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lzwt96i",
+      "type": "heading",
+      "level": 2,
+      "content": "Displacement Reaction Rules"
+    },
+    {
+      "id": "1x1raiv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lxarjr6",
+      "type": "heading",
+      "level": 2,
+      "content": "Ionic vs Covalent Compounds"
+    },
+    {
+      "id": "n45p88d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ym3d7hd",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Alloys (Exam Focus)"
+    },
+    {
+      "id": "2bj2ckp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Amphoteric oxides like Aluminium oxide (Al2O3) and Zinc oxide (ZnO) react with both acids and bases to produce salt and water.",
+        "Mercury is the only metal found in liquid state at room temperature, and Bromine is the only non-metal liquid at room temperature.",
+        "Graphite is a non-metal that conducts electricity, and Diamond is a non-metal with an exceptionally high melting point."
+      ],
+      "id": "onrg3fc"
+    },
+    {
+      "id": "qaengn8",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "x6gpflg",
+      "type": "heading",
+      "level": 2,
+      "content": "FINAL HIGH-YIELD EXAM POINTS"
+    },
+    {
+      "id": "8j3x71f",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2o0nwnw",
+      "type": "heading",
+      "level": 2,
+      "content": "FINAL RRB QUICK REVISION POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "9fa9feq"
+    },
+    {
+      "type": "paragraph",
+      "id": "352mqkm"
+    },
+    {
+      "type": "paragraph",
+      "id": "36pwxxb"
+    },
+    {
+      "type": "paragraph",
+      "id": "pw1tjrt"
+    },
+    {
+      "type": "paragraph",
+      "id": "1hjmsox"
+    },
+    {
+      "type": "paragraph",
+      "id": "cv0izfv"
+    },
+    {
+      "type": "paragraph",
+      "id": "t4k6u2l"
+    },
+    {
+      "id": "cw6m2mg",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    }
+  ],
+  "enriched": true
+}

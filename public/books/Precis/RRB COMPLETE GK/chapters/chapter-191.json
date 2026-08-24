@@ -1,0 +1,109 @@
+{
+  "id": "fp26wnm",
+  "title": "3. Measurement of Biodiversity",
+  "order": 191,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yg9hbj1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Whittaker Concept",
+          "value": "1972",
+          "icon": "calendar"
+        },
+        {
+          "label": "Diversity Scales",
+          "value": "3 Levels",
+          "icon": "book"
+        },
+        {
+          "label": "Key Components",
+          "value": "2 Parameters",
+          "icon": "check"
+        },
+        {
+          "label": "Major Measurement Indices",
+          "value": "Shannon & Simpson",
+          "icon": "award"
+        }
+      ],
+      "id": "o56bxc0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alpha diversity measures species richness and evenness within a single uniform habitat or local ecosystem.",
+        "Beta diversity quantifies the change or turnover of species between two distinct ecosystems along an environmental gradient.",
+        "Gamma diversity assesses the total species diversity across an entire region containing multiple ecosystems.",
+        "Biodiversity measurement relies on two core elements: species richness (number of species) and species evenness (relative abundance of each species)."
+      ],
+      "id": "et211o3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Alpha diversity refers to the diversity of species within a particular ecosystem or defined habitat.",
+      "id": "0v60iey"
+    },
+    {
+      "type": "paragraph",
+      "id": "tq4ghip"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Diversity Level",
+        "Scale of Measurement",
+        "Key Focus / Meaning"
+      ],
+      "rows": [
+        [
+          "Alpha Diversity",
+          "Local / Intra-community",
+          "Number of species within a single specific habitat"
+        ],
+        [
+          "Beta Diversity",
+          "Inter-community / Gradient",
+          "Rate of change or turnover in species composition between habitats"
+        ],
+        [
+          "Gamma Diversity",
+          "Regional / Landscape",
+          "Overall species richness across large geographic landscapes"
+        ]
+      ],
+      "id": "37s5c4h"
+    },
+    {
+      "type": "paragraph",
+      "id": "9tcdki2"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ca8itb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently ask to distinguish between Species Richness (count of species) and Species Evenness (closeness in numbers of each species).",
+        "R.H. Whittaker categorized biodiversity into Alpha, Beta, and Gamma levels in 1972.",
+        "A high Beta diversity indicates low similarity between communities and high environmental heterogeneity."
+      ],
+      "id": "odziixm"
+    },
+    {
+      "type": "paragraph",
+      "id": "xfskehe"
+    },
+    {
+      "type": "paragraph",
+      "id": "zy6pet2"
+    }
+  ],
+  "enriched": true
+}

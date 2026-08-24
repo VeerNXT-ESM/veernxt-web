@@ -1,0 +1,94 @@
+{
+  "id": "p7iw7dt",
+  "title": "Coordinates Example",
+  "order": 40,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "u325mtl"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Cartesian coordinate system establishes a fundamental bridge between algebra and geometry through numerical coordinates.",
+      "id": "vz4na14"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Quadrant",
+        "Abscissa (X-axis)",
+        "Ordinate (Y-axis)"
+      ],
+      "rows": [
+        [
+          "Quadrant I",
+          "Positive (+)",
+          "Positive (+)"
+        ],
+        [
+          "Quadrant II",
+          "Negative (-)",
+          "Positive (+)"
+        ],
+        [
+          "Quadrant III",
+          "Negative (-)",
+          "Negative (-)"
+        ],
+        [
+          "Quadrant IV",
+          "Positive (+)",
+          "Negative (-)"
+        ]
+      ],
+      "id": "l70v600"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Origin Point",
+          "value": "(0, 0)",
+          "icon": "info"
+        },
+        {
+          "label": "Quadrants",
+          "value": "4 Regions",
+          "icon": "check"
+        },
+        {
+          "label": "Distance Formula",
+          "value": "√((x₂-x₁)² + (y₂-y₁)²)",
+          "icon": "book"
+        },
+        {
+          "label": "Section Ratio",
+          "value": "m : n",
+          "icon": "award"
+        }
+      ],
+      "id": "jryixne"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Finding the ratio in which the y-axis or x-axis divides a given line segment by setting x=0 or y=0.",
+        "Coordinates of the centroid of a triangle with vertices (x1, y1), (x2, y2), and (x3, y3) are ((x1+x2+x3)/3, (y1+y2+y3)/3).",
+        "Check for collinearity of three points using the area of a triangle formula being equal to zero."
+      ],
+      "id": "0cyc10d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Cartesian coordinate system divides a 2D plane into four distinct quadrants using two mutually perpendicular axes.",
+        "The Distance Formula calculates the straight-line distance between any two points (x1, y1) and (x2, y2) in a coordinate plane.",
+        "The Section Formula determines the coordinates of a point that divides a line segment joining two points in a given ratio m:n internally or externally.",
+        "The Midpoint Formula is a special case of the section formula where the ratio m:n is equal to 1:1."
+      ],
+      "id": "cyssvb4"
+    }
+  ],
+  "enriched": true
+}

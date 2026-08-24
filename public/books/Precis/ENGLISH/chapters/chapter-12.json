@@ -1,0 +1,337 @@
+{
+  "id": "c6zzlns",
+  "title": "CHAPTER 12 : CONJUNCTIONS",
+  "order": 12,
+  "blocks": [
+    {
+      "id": "gbkbztb",
+      "type": "heading",
+      "level": 2,
+      "content": "1. INTRODUCTION TO CONJUNCTIONS"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Coordinating conjunctions (FANBOYS: For, And, Nor, But, Or, Yet, So) connect elements of equal grammatical rank.",
+        "Avoid using double conjunctions (e.g., combining 'Although' with 'But' or 'Because' with 'Therefore') in a single clause.",
+        "'Unless' expresses a condition, while 'Until' expresses time; neither should be paired with an additional negative word like 'not'.",
+        "'Lest' is inherently negative, expressing fear or precaution, and must be followed by 'should' or the base verb without 'not'.",
+        "Correlative conjunctions like 'Not only... but also' require strict structural parallelism on both sides of the pair."
+      ],
+      "id": "t5678f9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Coordinating Rule",
+          "value": "FANBOYS",
+          "icon": "book"
+        },
+        {
+          "label": "Inversion Pair",
+          "value": "No Sooner...Than",
+          "icon": "check"
+        },
+        {
+          "label": "Core Condition",
+          "value": "Unless / Until",
+          "icon": "clock"
+        },
+        {
+          "label": "Grammar Principle",
+          "value": "Parallelism",
+          "icon": "award"
+        }
+      ],
+      "id": "lw49v63"
+    },
+    {
+      "type": "paragraph",
+      "id": "nyiuhcp"
+    },
+    {
+      "id": "vvoa1af",
+      "type": "heading",
+      "level": 2,
+      "content": "2. COMPLETE CLASSIFICATION OF CONJUNCTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "n3mfsip"
+    },
+    {
+      "id": "l5y6bq9",
+      "type": "heading",
+      "level": 2,
+      "content": "3. COORDINATING CONJUNCTIONS (FANBOYS)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7fjlw3"
+    },
+    {
+      "id": "66taoei",
+      "type": "heading",
+      "level": 2,
+      "content": "4. MOST COMMON SSC ERROR – DOUBLE CONJUNCTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "xsbt8zh"
+    },
+    {
+      "id": "wabfmyo",
+      "type": "heading",
+      "level": 2,
+      "content": "5. SUBORDINATING CONJUNCTIONS – LOGIC BASED USAGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "z97wuaq"
+    },
+    {
+      "id": "d2ksb4w",
+      "type": "heading",
+      "level": 2,
+      "content": "6. BECAUSE vs SINCE vs AS (VERY IMPORTANT)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ziwgoep"
+    },
+    {
+      "id": "jq4ugi5",
+      "type": "heading",
+      "level": 2,
+      "content": "7. ALTHOUGH / THOUGH / EVEN THOUGH"
+    },
+    {
+      "type": "paragraph",
+      "id": "1yf46xl"
+    },
+    {
+      "id": "i0pz179",
+      "type": "heading",
+      "level": 2,
+      "content": "8. UNLESS – ONE OF THE MOST TESTED CONJUNCTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "3khx57y"
+    },
+    {
+      "id": "t6dimpu",
+      "type": "heading",
+      "level": 2,
+      "content": "9. UNTIL vs UNLESS"
+    },
+    {
+      "type": "paragraph",
+      "id": "d0wkipc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "UNLESS – ONE OF THE MOST TESTED CONJUNCTIONS",
+      "id": "ejqee9r"
+    },
+    {
+      "id": "xei2124",
+      "type": "heading",
+      "level": 2,
+      "content": "10. LEST – ADVANCED SSC FAVORITE"
+    },
+    {
+      "type": "paragraph",
+      "id": "vokk2fw"
+    },
+    {
+      "id": "31wl2ki",
+      "type": "heading",
+      "level": 2,
+      "content": "11. CORRELATIVE CONJUNCTIONS – FULL RULE SET"
+    },
+    {
+      "type": "paragraph",
+      "id": "upyffzn"
+    },
+    {
+      "id": "83eurb2",
+      "type": "heading",
+      "level": 2,
+      "content": "12. SUBJECT–VERB AGREEMENT WITH CORRELATIVES"
+    },
+    {
+      "type": "paragraph",
+      "id": "wrodz5k"
+    },
+    {
+      "id": "6gpicrq",
+      "type": "heading",
+      "level": 2,
+      "content": "13. NOT ONLY…BUT ALSO – PARALLELISM RULE"
+    },
+    {
+      "type": "paragraph",
+      "id": "xd5jzs5"
+    },
+    {
+      "id": "9hnbhyy",
+      "type": "heading",
+      "level": 2,
+      "content": "14. NO SOONER…THAN / HARDLY…WHEN (INVERSION RULE)"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Conjunction Pair / Word",
+        "Function / Focus",
+        "Mandatory Follow-Up Rule",
+        "Common SSC Error"
+      ],
+      "rows": [
+        [
+          "Unless vs Until",
+          "Unless = Condition; Until = Time",
+          "Requires positive verb structure",
+          "Adding 'not' inside the conditional clause"
+        ],
+        [
+          "Lest",
+          "Expresses purpose/precaution against negative outcome",
+          "Followed by 'Should' or base verb",
+          "Using 'will', 'would', or adding 'not'"
+        ],
+        [
+          "No Sooner",
+          "Expresses immediate sequential events",
+          "Followed by 'Than' (Requires Inversion)",
+          "Pairing with 'when', 'then', or omitting inversion"
+        ],
+        [
+          "Hardly / Scarcely",
+          "Expresses immediate sequential events",
+          "Followed by 'When' or 'Before' (Requires Inversion)",
+          "Pairing with 'than' instead of 'when'"
+        ]
+      ],
+      "id": "g1955q6"
+    },
+    {
+      "type": "paragraph",
+      "id": "wqviune"
+    },
+    {
+      "id": "rmigsmk",
+      "type": "heading",
+      "level": 2,
+      "content": "15. WHETHER vs IF"
+    },
+    {
+      "type": "paragraph",
+      "id": "g9jmkyn"
+    },
+    {
+      "id": "ukhbags",
+      "type": "heading",
+      "level": 2,
+      "content": "16. SO…THAT vs SUCH…THAT"
+    },
+    {
+      "type": "paragraph",
+      "id": "tijnuls"
+    },
+    {
+      "id": "43zjc0t",
+      "type": "heading",
+      "level": 2,
+      "content": "17. AS SOON AS – FUTURE TRAP"
+    },
+    {
+      "type": "paragraph",
+      "id": "z8pxker"
+    },
+    {
+      "id": "bg45jkf",
+      "type": "heading",
+      "level": 2,
+      "content": "18. PROVIDED THAT / IN CASE / EVEN IF"
+    },
+    {
+      "type": "paragraph",
+      "id": "8hzz7fh"
+    },
+    {
+      "id": "nu5ic8y",
+      "type": "heading",
+      "level": 2,
+      "content": "19. CONJUNCTION vs PREPOSITION (VERY HIGH SSC TRAP)"
+    },
+    {
+      "type": "paragraph",
+      "id": "npmw153"
+    },
+    {
+      "id": "tg57lu3",
+      "type": "heading",
+      "level": 2,
+      "content": "20. COMMONLY CONFUSED PAIRS"
+    },
+    {
+      "type": "paragraph",
+      "id": "iuh1cda"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Negative inverted starting words like 'No sooner' must take 'than', whereas 'Hardly' and 'Scarcely' must take 'when' or 'before'.",
+        "Do not use 'not' inside clauses introduced by 'Unless', 'Until', or 'Lest', as these conjunctions already carry a negative meaning.",
+        "When subjects are joined by 'Either...or', 'Neither...nor', or 'Not only...but also', the verb agrees in person and number with the nearest subject.",
+        "Never confuse 'Because' (shows cause/reason) with 'Prepositions' like 'Because of' (followed by a noun phrase rather than a clause)."
+      ],
+      "id": "mfp5qtg"
+    },
+    {
+      "id": "sj0eqge",
+      "type": "heading",
+      "level": 2,
+      "content": "21. HIGH-PROBABILITY SSC RULES"
+    },
+    {
+      "type": "paragraph",
+      "id": "nt0sb90"
+    },
+    {
+      "id": "j0qxhsu",
+      "type": "heading",
+      "level": 2,
+      "content": "22. COMMON ERRORS IN SSC EXAMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "yv56g6r"
+    },
+    {
+      "id": "k284hv5",
+      "type": "heading",
+      "level": 2,
+      "content": "23. PRACTICE QUESTIONS (SSC LEVEL)"
+    },
+    {
+      "type": "paragraph",
+      "id": "lqonnff"
+    },
+    {
+      "id": "a3mzt1d",
+      "type": "heading",
+      "level": 2,
+      "content": "24. CHAPTER SUMMARY"
+    },
+    {
+      "type": "paragraph",
+      "id": "2rqn5ke"
+    }
+  ],
+  "enriched": true
+}

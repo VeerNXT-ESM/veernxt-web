@@ -1,0 +1,111 @@
+{
+  "id": "hzrbzvt",
+  "title": "9. Soil Erosion (Detailed Explanation)",
+  "order": 175,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "rdvqq4a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Agents",
+          "value": "Water & Wind",
+          "icon": "info"
+        },
+        {
+          "label": "Avg Topsoil Loss",
+          "value": "16.35 Tonnes/ha/yr",
+          "icon": "clock"
+        },
+        {
+          "label": "Worst Affected Region",
+          "value": "Chambal Ravines",
+          "icon": "award"
+        },
+        {
+          "label": "Key Remedy",
+          "value": "Afforestation",
+          "icon": "check"
+        }
+      ],
+      "id": "e5zxpzv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil erosion is defined as the destruction and removal of the topsoil cover by natural agents such as running water and wind.",
+      "id": "ibscfma"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil erosion involves the detachment and transportation of the fertile topsoil layer by physical agents like running water and wind.",
+        "Sheet erosion takes place on flat agricultural lands after rainfall, removing topsoil uniformly without forming distinct channels.",
+        "Gully erosion cuts deep channels into steep, unprotected slopes, rendering the land unfit for cultivation and creating badland topography.",
+        "Human triggers such as deforestation, overgrazing, shifting cultivation, and improper farming techniques drastically accelerate erosion.",
+        "Effective conservation measures include contour plowing, terrace farming, shelterbelts, and strip cropping to bind soil and reduce runoff velocity."
+      ],
+      "id": "w1o9kkj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Sheet Erosion",
+        "Gully Erosion"
+      ],
+      "rows": [
+        [
+          "Process",
+          "Uniform removal of thin topsoil layers",
+          "Cutting of deep channels and ravines into the land"
+        ],
+        [
+          "Topography",
+          "Flat lands or gentle slopes",
+          "Steep, undulating, or hilly terrains"
+        ],
+        [
+          "Visibility",
+          "Slow and inconspicuous ('Silent')",
+          "Highly prominent and destructive"
+        ],
+        [
+          "Agricultural Impact",
+          "Gradual loss of soil fertility",
+          "Complete loss of arable land surface"
+        ]
+      ],
+      "id": "4c2v1ms"
+    },
+    {
+      "type": "paragraph",
+      "id": "a3ea6l9"
+    },
+    {
+      "type": "paragraph",
+      "id": "0mjm96y"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sheet erosion is frequently referred to as the 'silent killer' because topsoil loss occurs unnoticed over large agricultural areas.",
+        "The Chambal basin in Madhya Pradesh and Rajasthan is the classic Indian example of severe gully erosion resulting in badland topography.",
+        "Wind erosion dominates arid and semi-arid regions such as Western Rajasthan, where shelterbelts are used as the main defense."
+      ],
+      "id": "kuzpr4d"
+    },
+    {
+      "type": "paragraph",
+      "id": "58xhufm"
+    },
+    {
+      "type": "paragraph",
+      "id": "zojk84q"
+    }
+  ],
+  "enriched": true
+}

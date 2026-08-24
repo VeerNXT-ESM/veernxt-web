@@ -1,0 +1,120 @@
+{
+  "id": "tu7mwsu",
+  "title": "ESSAY 7: UPI — How India Rewrote the Rules of Global Payments",
+  "order": 24,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "o5h6daj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Launch Year",
+          "value": "2016",
+          "icon": "calendar"
+        },
+        {
+          "label": "Developer",
+          "value": "NPCI",
+          "icon": "award"
+        },
+        {
+          "label": "Base Protocol",
+          "value": "IMPS",
+          "icon": "info"
+        },
+        {
+          "label": "Availability",
+          "value": "24/7/365",
+          "icon": "clock"
+        }
+      ],
+      "id": "0lxn685"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "UPI was developed by the National Payments Corporation of India (NPCI) and regulated by the Reserve Bank of India (RBI).",
+        "It leverages the Immediate Payment Service (IMPS) backend to enable instant real-time money transfers between bank accounts.",
+        "By utilizing Virtual Payment Addresses (VPA), UPI eliminates the need to share sensitive banking details like account numbers and IFSC codes.",
+        "It has powered financial inclusion in India by drastically lowering transaction costs and enabling micro-payments.",
+        "India is expanding UPI globally through cross-border linkage projects with countries like Singapore, UAE, France, Nepal, and Bhutan."
+      ],
+      "id": "5bk8eqz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "UPI has transformed India's financial landscape from cash-dominated to a world leader in real-time digital payments.",
+      "id": "mdclcnn"
+    },
+    {
+      "type": "paragraph",
+      "id": "hgq88ee"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "UPI",
+        "NEFT",
+        "RTGS"
+      ],
+      "rows": [
+        [
+          "Settlement Mechanism",
+          "Real-Time (Instant)",
+          "Half-Hourly Batches",
+          "Real-Time Gross"
+        ],
+        [
+          "Primary Addressing",
+          "Virtual Payment Address (VPA)",
+          "Account Number + IFSC",
+          "Account Number + IFSC"
+        ],
+        [
+          "Minimum Transfer",
+          "₹1 (No Minimum)",
+          "₹1 (No Minimum)",
+          "₹2,000,000 (₹2 Lakhs)"
+        ],
+        [
+          "Target Use Case",
+          "Micro & Small P2P / P2M",
+          "Routine Institutional Transfers",
+          "High-Value Commercial Payments"
+        ]
+      ],
+      "id": "kr7y9l4"
+    },
+    {
+      "type": "paragraph",
+      "id": "v0akiym"
+    },
+    {
+      "type": "paragraph",
+      "id": "ungv2dd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NPCI is an umbrella organization created under the Payment and Settlement Systems Act, 2007, jointly by RBI and Indian Banks' Association (IBA).",
+        "UPI enforces 2-factor authentication using a single-click PIN verification framework mandated by the RBI.",
+        "Exams frequently test differences between UPI, NEFT, RTGS, and IMPS regarding settlement mechanics and transaction limits."
+      ],
+      "id": "80c2ibg"
+    },
+    {
+      "type": "paragraph",
+      "id": "6bt611p"
+    },
+    {
+      "type": "paragraph",
+      "id": "ov6jkf1"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,90 @@
+{
+  "id": "ujksrqy",
+  "title": "13. Special Courts",
+  "order": 540,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "a0uq55c"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The primary objective of establishing Special Courts is to ensure speedy justice and reduce the pendency of specialized cases in the regular judicial system.",
+      "id": "dq17zme"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Regular Courts",
+        "Special Courts"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "General civil and criminal matters",
+          "Subject-specific statutes (e.g., POCSO, NIA, SC/ST Act)"
+        ],
+        [
+          "Procedure",
+          "Strict adherence to CPC and CrPC rules",
+          "Simplified, summary trials subject to strict timeframes"
+        ],
+        [
+          "Primary Objective",
+          "Routine administration of justice",
+          "Fast-track clearance of specific specialized cases"
+        ]
+      ],
+      "id": "ven33mf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Gram Nyayalayas Act",
+          "value": "2008",
+          "icon": "calendar"
+        },
+        {
+          "label": "Family Courts Act",
+          "value": "1984",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "Speedy Justice",
+          "icon": "clock"
+        },
+        {
+          "label": "Family Court Threshold",
+          "value": "> 1 Million Pop.",
+          "icon": "info"
+        }
+      ],
+      "id": "wpxce83"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Gram Nyayalayas exercise both civil and criminal jurisdiction and are guided by the principles of natural justice rather than rigid procedure rules.",
+        "Establishment of Family Courts is compulsory in every city or town with a population exceeding 10 lakhs (1 million).",
+        "An appeal against any judgment or order of an NIA Special Court lies directly to the High Court both on facts and on law."
+      ],
+      "id": "2nwu4r3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Special Courts are created under specific statutory mandates to expedite trials for designated categories of offenses.",
+        "Gram Nyayalayas function as mobile courts aimed at delivering affordable and speedy justice at the doorstep of rural citizens.",
+        "Family Courts mandate conciliation and informal procedures to settle matrimonial and domestic disputes peacefully.",
+        "Fast Track Special Courts (FTSCs) specifically target sexual offenses under the IPC and the Protection of Children from Sexual Offences (POCSO) Act.",
+        "Judges of Special Courts under central statutes like the NIA Act are designated in consultation with the respective High Court."
+      ],
+      "id": "pa24mef"
+    }
+  ],
+  "enriched": true
+}

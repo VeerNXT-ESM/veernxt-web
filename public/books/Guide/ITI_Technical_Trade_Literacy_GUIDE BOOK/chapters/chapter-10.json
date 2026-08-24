@@ -1,0 +1,452 @@
+{
+  "id": "ksve6d5",
+  "title": "Chapter 11 – Basic Engineering Drawing",
+  "order": 10,
+  "blocks": [
+    {
+      "id": "6l7jibt",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Introduction to Engineering Drawing"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Engineering drawing relies on proper selection and maintenance of drawing instruments.",
+        "Types of lines, dimensioning, and lettering standardise technical communication across engineering disciplines.",
+        "Orthographic projection and standard symbols are foundational concepts for technical drawings."
+      ],
+      "id": "f805f9b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter",
+          "value": "11",
+          "icon": "book"
+        },
+        {
+          "label": "Main Topics",
+          "value": "10 Sections",
+          "icon": "info"
+        },
+        {
+          "label": "Focus Area",
+          "value": "Engineering Drawing",
+          "icon": "award"
+        }
+      ],
+      "id": "hk5yetv"
+    },
+    {
+      "type": "paragraph",
+      "id": "ds0x86j"
+    },
+    {
+      "type": "paragraph",
+      "id": "cdyx3s8"
+    },
+    {
+      "id": "2o14lsk",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Importance of Engineering Drawing"
+    },
+    {
+      "id": "a6fwu9i",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "20xuvvo",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Engineering Drawings"
+    },
+    {
+      "id": "nfjrexr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j2tzlm2",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Drawing Instruments"
+    },
+    {
+      "id": "0j3rjwk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Care of Drawing Instruments",
+      "id": "0jj6d70"
+    },
+    {
+      "id": "hzyyjyd",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Lines Used in Engineering Drawing"
+    },
+    {
+      "id": "amugns6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23n97wo",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Dimensioning in Engineering Drawing"
+    },
+    {
+      "type": "paragraph",
+      "id": "wxi4f5i"
+    },
+    {
+      "id": "05i583i",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "zy46gn7",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Orthographic Projection"
+    },
+    {
+      "type": "paragraph",
+      "id": "gld8aq1"
+    },
+    {
+      "id": "j4pepal",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n0buip",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Lettering in Engineering Drawing"
+    },
+    {
+      "type": "paragraph",
+      "id": "gjr7mim"
+    },
+    {
+      "id": "toqt5e1",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "6700h2r",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Standard Symbols Used in Engineering Drawing"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test the identification and application of specific types of lines and dimensioning rules.",
+        "Orthographic projection methods and standard engineering symbols are high-yield topics for competitive exams."
+      ],
+      "id": "9dxdsk0"
+    },
+    {
+      "id": "amk3xrd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hksmzvk",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Care of Drawing Instruments"
+    },
+    {
+      "id": "empidnt",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "dejs7r9",
+      "type": "heading",
+      "level": 2,
+      "content": "Exam-Oriented Key Points"
+    },
+    {
+      "id": "u8pj67i",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

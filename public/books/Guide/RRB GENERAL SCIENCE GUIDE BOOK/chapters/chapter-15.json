@@ -1,0 +1,433 @@
+{
+  "id": "a5863bj",
+  "title": "Chapter 15: Diseases and Immunity",
+  "order": 15,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "obx5fce"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Categories",
+          "value": "Communicable & Non-Communicable",
+          "icon": "book"
+        },
+        {
+          "label": "Immunity Types",
+          "value": "Innate & Acquired",
+          "icon": "check"
+        },
+        {
+          "label": "First Vaccine Introduced",
+          "value": "1796 (Smallpox)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Key Protection",
+          "value": "Vaccination & Hygiene",
+          "icon": "award"
+        }
+      ],
+      "id": "s07vuiv"
+    },
+    {
+      "id": "qrx097q",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Disease"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Diseases are broadly classified into communicable (infectious) and non-communicable (non-infectious) categories.",
+        "Communicable diseases are caused by microscopic pathogens such as bacteria, viruses, fungi, and protozoa.",
+        "Deficiency diseases result from a sustained lack of essential vitamins, minerals, or nutrients in daily dietary intake.",
+        "The immune system offers two lines of defense: Innate immunity (nonspecific, present at birth) and Acquired immunity (specific, developed over time).",
+        "Vaccination introduces weakened or inactivated pathogens to stimulate the production of antibodies without causing severe illness."
+      ],
+      "id": "eyjwx5w"
+    },
+    {
+      "type": "paragraph",
+      "id": "btpabez"
+    },
+    {
+      "type": "paragraph",
+      "id": "5sntk4u"
+    },
+    {
+      "type": "paragraph",
+      "id": "fymu63d"
+    },
+    {
+      "id": "yumc1uh",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "6orzhf2"
+    },
+    {
+      "type": "paragraph",
+      "id": "on2mjwp"
+    },
+    {
+      "type": "paragraph",
+      "id": "l8oe63o"
+    },
+    {
+      "type": "paragraph",
+      "id": "awc4dq8"
+    },
+    {
+      "id": "fx02i96",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Communicable Diseases"
+    },
+    {
+      "id": "pezikh5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swcwxez",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non‑Communicable Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "15yltoq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Vaccination is the most effective method of preventing infectious diseases and building long-term active immunity.",
+      "id": "zh2rswp"
+    },
+    {
+      "type": "paragraph",
+      "id": "xtuj7dj"
+    },
+    {
+      "type": "paragraph",
+      "id": "hgqlqzc"
+    },
+    {
+      "type": "paragraph",
+      "id": "bv27f0k"
+    },
+    {
+      "id": "j084otb",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Deficiency Diseases"
+    },
+    {
+      "id": "0tenjwi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t030ts2",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Immune System"
+    },
+    {
+      "type": "paragraph",
+      "id": "ovkhkp5"
+    },
+    {
+      "type": "paragraph",
+      "id": "hcoc401"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Communicable Diseases",
+        "Non-Communicable Diseases"
+      ],
+      "rows": [
+        [
+          "Causative Agent",
+          "Biological pathogens (Bacteria, Viruses, Protozoa, Fungi)",
+          "Genetic factors, lifestyle habits, aging, or nutritional deficiencies"
+        ],
+        [
+          "Transmission",
+          "Transmitted from infected to healthy individual via air, water, food, or vectors",
+          "Cannot be transmitted from one person to another"
+        ],
+        [
+          "Onset & Duration",
+          "Usually acute with rapid onset",
+          "Typically chronic with gradual progression"
+        ],
+        [
+          "Examples",
+          "Tuberculosis, Cholera, Malaria, Influenza",
+          "Diabetes, Hypertension, Cancer, Scurvy"
+        ]
+      ],
+      "id": "aicq80d"
+    },
+    {
+      "type": "paragraph",
+      "id": "dzaoexq"
+    },
+    {
+      "id": "s6jojyq",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Immunity"
+    },
+    {
+      "id": "0fevglm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "994v27g",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Vaccination"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ltkabo"
+    },
+    {
+      "type": "paragraph",
+      "id": "rogmhet"
+    },
+    {
+      "type": "paragraph",
+      "id": "89of3f3"
+    },
+    {
+      "id": "wil9wls",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Prevention of Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "gcato29"
+    },
+    {
+      "type": "paragraph",
+      "id": "h8qkqe6"
+    },
+    {
+      "type": "paragraph",
+      "id": "xlsck0h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate clearly between Active Immunity (body produces its own antibodies) and Passive Immunity (ready-made antibodies introduced into the body).",
+        "Memorize major nutritional deficiency diseases: Vitamin A (Night Blindness), Vitamin C (Scurvy), Vitamin D (Rickets), Iron (Anaemia), and Iodine (Goitre).",
+        "Edward Jenner is frequently asked as the pioneer who developed the first successful smallpox vaccine in 1796.",
+        "Disease vectors are crucial exam topics: Female Anopheles mosquito causes Malaria, while Aedes aegypti mosquito transmits Dengue and Chikungunya."
+      ],
+      "id": "evai84i"
+    },
+    {
+      "type": "paragraph",
+      "id": "s3z3wc0"
+    },
+    {
+      "type": "paragraph",
+      "id": "xmiyeys"
+    },
+    {
+      "id": "vlmlnqk",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "nkl3c09"
+    },
+    {
+      "type": "paragraph",
+      "id": "5dnt5mr"
+    },
+    {
+      "type": "paragraph",
+      "id": "z7lslaj"
+    },
+    {
+      "type": "paragraph",
+      "id": "p2vtggm"
+    }
+  ],
+  "enriched": true
+}

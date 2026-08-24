@@ -1,0 +1,419 @@
+{
+  "id": "0sbg0q8",
+  "title": "Chapter 18: Insolation, Heat Budget and Temperature Distribution",
+  "order": 202,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ywo23ds"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Solar Constant",
+          "value": "1.94 cal/cm²/min",
+          "icon": "sun"
+        },
+        {
+          "label": "Earth's Mean Albedo",
+          "value": "~35%",
+          "icon": "award"
+        },
+        {
+          "label": "Normal Lapse Rate",
+          "value": "6.5°C / 1000m",
+          "icon": "clock"
+        },
+        {
+          "label": "Heat Budget Balance",
+          "value": "100 Units",
+          "icon": "check"
+        }
+      ],
+      "id": "8588c1f"
+    },
+    {
+      "id": "jguzymz",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nature of Solar Radiation"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Insolation is incoming shortwave solar radiation received at the Earth's surface.",
+        "The Earth maintains a constant temperature by balancing incoming shortwave solar radiation with outgoing longwave terrestrial radiation.",
+        "Albedo measures surface reflectivity; fresh snow reflects the highest amount of solar radiation.",
+        "Subtropical deserts receive the highest amount of insolation due to low cloud cover, rather than the equator.",
+        "Temperature inversion happens when warm air overlies cold air near the surface, reversing the normal lapse rate."
+      ],
+      "id": "11bimp3"
+    },
+    {
+      "type": "paragraph",
+      "id": "jtwabma"
+    },
+    {
+      "type": "paragraph",
+      "id": "b4hvo9e"
+    },
+    {
+      "type": "paragraph",
+      "id": "awctfhh"
+    },
+    {
+      "type": "paragraph",
+      "id": "hiy76c9"
+    },
+    {
+      "type": "paragraph",
+      "id": "oys5h4h"
+    },
+    {
+      "id": "e5f9c3b",
+      "type": "heading",
+      "level": 3,
+      "content": "Solar Spectrum"
+    },
+    {
+      "type": "paragraph",
+      "id": "35574wy"
+    },
+    {
+      "id": "jnlmpqm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gwdz2sq",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Factors Affecting Insolation"
+    },
+    {
+      "id": "nhmbj6v",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "81k3fo1"
+    },
+    {
+      "type": "paragraph",
+      "id": "s7p7quk"
+    },
+    {
+      "type": "paragraph",
+      "id": "woccpps"
+    },
+    {
+      "type": "paragraph",
+      "id": "xnbu723"
+    },
+    {
+      "type": "paragraph",
+      "id": "ku8g5jz"
+    },
+    {
+      "id": "linib4r",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Role of Earth's Movements"
+    },
+    {
+      "type": "paragraph",
+      "id": "85z55mq"
+    },
+    {
+      "type": "paragraph",
+      "id": "6i7yh7f"
+    },
+    {
+      "type": "paragraph",
+      "id": "mhm4jne"
+    },
+    {
+      "id": "jvjbd8l",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Earth's Heat Budget (Energy Balance)"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Earth maintains its temperature balance through an equilibrium between shortwave solar insolation and longwave terrestrial radiation.",
+      "id": "psbw9w2"
+    },
+    {
+      "type": "paragraph",
+      "id": "mc8gol4"
+    },
+    {
+      "id": "95ateud",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "bhkgfom"
+    },
+    {
+      "id": "a0fyje2",
+      "type": "heading",
+      "level": 3,
+      "content": "Albedo (Reflectivity)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ttv7nji"
+    },
+    {
+      "type": "paragraph",
+      "id": "ss192qm"
+    },
+    {
+      "type": "paragraph",
+      "id": "0fv97sp"
+    },
+    {
+      "type": "paragraph",
+      "id": "dg2eab8"
+    },
+    {
+      "id": "4c2gdq0",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Terrestrial Radiation and Greenhouse Effect"
+    },
+    {
+      "type": "paragraph",
+      "id": "h2j3x5m"
+    },
+    {
+      "type": "paragraph",
+      "id": "20a5jf6"
+    },
+    {
+      "type": "paragraph",
+      "id": "imjjqpg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Insolation (Solar Radiation)",
+        "Terrestrial Radiation"
+      ],
+      "rows": [
+        [
+          "Wavelength",
+          "Shortwave radiation",
+          "Longwave radiation"
+        ],
+        [
+          "Source",
+          "Sun",
+          "Earth's surface"
+        ],
+        [
+          "Atmospheric Absorption",
+          "Atmosphere is largely transparent to it",
+          "Absorbed significantly by greenhouse gases (GHE)"
+        ],
+        [
+          "Primary Timing",
+          "Received during daytime only",
+          "Radiated continuously day and night"
+        ]
+      ],
+      "id": "cf4prk6"
+    },
+    {
+      "type": "paragraph",
+      "id": "x2d7o37"
+    },
+    {
+      "id": "55y6o0k",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Global Temperature Distribution"
+    },
+    {
+      "type": "paragraph",
+      "id": "6senuun"
+    },
+    {
+      "type": "paragraph",
+      "id": "fc1itx8"
+    },
+    {
+      "type": "paragraph",
+      "id": "ibjvgke"
+    },
+    {
+      "type": "paragraph",
+      "id": "g6h7ch6"
+    },
+    {
+      "id": "rus98q5",
+      "type": "heading",
+      "level": 3,
+      "content": "Horizontal Distribution"
+    },
+    {
+      "type": "paragraph",
+      "id": "e6xxf8d"
+    },
+    {
+      "type": "paragraph",
+      "id": "gvf2nb9"
+    },
+    {
+      "type": "paragraph",
+      "id": "o34d1ff"
+    },
+    {
+      "id": "qdk09u2",
+      "type": "heading",
+      "level": 3,
+      "content": "Vertical Distribution"
+    },
+    {
+      "type": "paragraph",
+      "id": "kjuuz0k"
+    },
+    {
+      "type": "paragraph",
+      "id": "62jc1kv"
+    },
+    {
+      "id": "911xc1o",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Temperature Inversion"
+    },
+    {
+      "type": "paragraph",
+      "id": "psdu7up"
+    },
+    {
+      "type": "paragraph",
+      "id": "dygm6ep"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Normal Lapse Rate equals a drop of 6.5°C per 1,000 meters (or 1°C per 165 meters) rise in altitude in the troposphere.",
+        "Temperature Inversion requires specific conditions: long winter nights, clear skies, still/calm air, and dry air near the snow-covered ground.",
+        "Isotherms bend significantly towards the equator over oceans in summer and towards the poles over land in winter."
+      ],
+      "id": "fkg3x8m"
+    },
+    {
+      "type": "paragraph",
+      "id": "ytb07xp"
+    },
+    {
+      "type": "paragraph",
+      "id": "yu11izh"
+    },
+    {
+      "id": "skk2twj",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of Insolation"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ies6bx"
+    },
+    {
+      "type": "paragraph",
+      "id": "o7va4d4"
+    },
+    {
+      "type": "paragraph",
+      "id": "np75r7t"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7kwd1o"
+    },
+    {
+      "type": "paragraph",
+      "id": "r0z01nz"
+    },
+    {
+      "id": "mt9katk",
+      "type": "heading",
+      "level": 2,
+      "content": "MOST IMPORTANT EXAM CONCEPTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "7ozwreo"
+    }
+  ],
+  "enriched": true
+}

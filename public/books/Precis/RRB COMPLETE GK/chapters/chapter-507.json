@@ -1,0 +1,90 @@
+{
+  "id": "0neul1j",
+  "title": "7. Powers of CVC",
+  "order": 507,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "tqznocl"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Commission shall have all the powers of a civil court trying a suit under the Code of Civil Procedure, 1908.",
+      "id": "0chfel5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Primary Function",
+          "Supervisory and advisory body for vigilance matters and corruption prevention",
+          "Premier investigating agency for economic offences, corruption, and complex crimes"
+        ],
+        [
+          "Legal Status",
+          "Statutory body under the CVC Act, 2003",
+          "Non-statutory body deriving powers from the DSPE Act, 1946"
+        ],
+        [
+          "Investigative Powers",
+          "Powers of a Civil Court (summoning, requiring documents)",
+          "Powers of Police Officers (search, seizure, arrest, filing charge-sheets)"
+        ]
+      ],
+      "id": "ykvgbd5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Statutory Status",
+          "value": "CVC Act, 2003",
+          "icon": "award"
+        },
+        {
+          "label": "Inquiry Powers",
+          "value": "Civil Court",
+          "icon": "check"
+        },
+        {
+          "label": "Superintendence",
+          "value": "DSPE (CBI)",
+          "icon": "info"
+        },
+        {
+          "label": "Reporting Body",
+          "value": "President of India",
+          "icon": "book"
+        }
+      ],
+      "id": "0gtvc2e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CVC has no direct powers to investigate state government employees; its jurisdiction is strictly confined to Central Government officials and specified public sector entities.",
+        "CVC's powers over the CBI are limited to superintendence regarding corruption cases under the Prevention of Corruption Act, not general criminal investigations.",
+        "While CVC possesses civil court powers to summon witnesses and compel document production, it functions primarily as an advisory and supervisory body without independent prosecution sanction power."
+      ],
+      "id": "9pcfl5g"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CVC exercises superintendence over the functioning of the Delhi Special Police Establishment (CBI) regarding offences under the Prevention of Corruption Act, 1988.",
+        "While conducting an inquiry, the CVC has all the powers of a civil court trying a suit under the Code of Civil Procedure, 1908.",
+        "The Central Government and its agencies are required to consult the CVC on making rules and regulations governing vigilance matters of Central Services.",
+        "The Commission tenders advice to the Central Government, corporations established under Central Acts, and government companies on vigilance matters.",
+        "The CVC presents an annual report on its performance to the President of India, who causes it to be laid before each House of Parliament."
+      ],
+      "id": "sckyxod"
+    }
+  ],
+  "enriched": true
+}

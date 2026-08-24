@@ -1,40 +1,40 @@
 {
-  "id": "89phs6l",
+  "id": "1s9f2hk",
   "title": "Chapter 12: Periodic Table",
   "order": 61,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "7zyg0lh"
+      "id": "scl22f0"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Total Elements",
-          "value": "118",
-          "icon": "book"
-        },
-        {
-          "label": "Vertical Groups",
-          "value": "18",
-          "icon": "check"
-        },
-        {
-          "label": "Horizontal Periods",
-          "value": "7",
+          "label": "Modern Law Year",
+          "value": "1913",
           "icon": "calendar"
         },
         {
-          "label": "Mendeleev's Table Year",
-          "value": "1869",
-          "icon": "clock"
+          "label": "Total Groups",
+          "value": "18 Groups",
+          "icon": "check"
+        },
+        {
+          "label": "Total Periods",
+          "value": "7 Periods",
+          "icon": "book"
+        },
+        {
+          "label": "Key Basis",
+          "value": "Atomic Number",
+          "icon": "award"
         }
       ],
-      "id": "g8qjuwh"
+      "id": "exl0pd2"
     },
     {
-      "id": "luowulc",
+      "id": "mamyuba",
       "type": "heading",
       "level": 2,
       "content": "1. Need for Classification of Elements"
@@ -43,113 +43,113 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Dobereiner grouped elements into Triads where the central element's atomic mass was approximately the average of the other two.",
-        "Newlands proposed the Law of Octaves, observing that every eighth element possessed similar physical and chemical properties up to calcium.",
-        "Mendeleev arranged elements in order of increasing atomic mass and predicted the properties of undiscovered elements like Eka-aluminium and Eka-silicon.",
-        "Henry Moseley established that atomic number, rather than atomic mass, is the fundamental property governing periodic trends.",
-        "Atomic radius decreases across a period from left to right due to increased nuclear charge and increases down a group."
+        "Dobereiner grouped elements into triads where the atomic mass of the middle element was the average of the other two.",
+        "Newlands' Law of Octaves stated that every eighth element shared similar properties when arranged by increasing atomic mass.",
+        "Mendeleev arranged elements by atomic mass and successfully predicted the properties of undiscovered elements.",
+        "Henry Moseley established the Modern Periodic Law, classifying elements based on atomic number rather than atomic mass.",
+        "The Modern Periodic Table consists of 7 horizontal rows termed periods and 18 vertical columns termed groups."
       ],
-      "id": "2wfcuqf"
+      "id": "mg0wqsp"
     },
     {
       "type": "paragraph",
-      "id": "iicygn6"
+      "id": "rjlmyu3"
     },
     {
       "type": "paragraph",
-      "id": "43uyqhu"
+      "id": "vozejz7"
     },
     {
       "type": "paragraph",
-      "id": "803vgqt"
+      "id": "9bywddr"
     },
     {
-      "id": "det10zl",
+      "id": "jhsmnzv",
       "type": "heading",
       "level": 2,
       "content": "2. Dobereiner’s Triads"
     },
     {
       "type": "paragraph",
-      "id": "hz37hjx"
+      "id": "qtrwe5g"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "caxojmn"
+      "id": "ditlgtz"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ym7mzwv"
+      "id": "5bgtvb7"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3e2te1e"
+      "id": "1oy3y2l"
     },
     {
-      "id": "cmx2b6x",
+      "id": "qe5g6e8",
       "type": "heading",
       "level": 2,
       "content": "3. Newlands’ Law of Octaves"
     },
     {
       "type": "paragraph",
-      "id": "2tu2q0s"
+      "id": "mfujopr"
     },
     {
-      "id": "338aygf",
+      "id": "6woxc52",
       "type": "heading",
       "level": 2,
       "content": "4. Mendeleev’s Periodic Table"
     },
     {
       "type": "paragraph",
-      "id": "mge0g33"
+      "id": "67rkscd"
     },
     {
       "type": "paragraph",
-      "id": "cb04q2p"
+      "id": "6un5czh"
     },
     {
       "type": "pullQuote",
       "content": "Modern Periodic Table",
-      "id": "0bc1nan"
+      "id": "5tyxai7"
     },
     {
       "type": "paragraph",
-      "id": "akch9kl"
+      "id": "0xw7yrp"
     },
     {
       "type": "paragraph",
-      "id": "0ykmr9a"
+      "id": "lj4zs1n"
     },
     {
-      "id": "1h2q8ku",
+      "id": "3j39vlh",
       "type": "heading",
       "level": 2,
       "content": "5. Modern Periodic Table"
     },
     {
       "type": "paragraph",
-      "id": "if4j0r7"
+      "id": "7uymygw"
     },
     {
       "type": "paragraph",
-      "id": "6nhzm4i"
+      "id": "63lfsk8"
     },
     {
       "type": "paragraph",
-      "id": "j1yipvu"
+      "id": "tvtox47"
     },
     {
       "type": "paragraph",
-      "id": "dnylgxr"
+      "id": "uwj6g5t"
     },
     {
       "type": "paragraph",
-      "id": "icfm942"
+      "id": "jisy7o9"
     },
     {
       "type": "comparisonTable",
@@ -165,31 +165,31 @@
           "Atomic Number"
         ],
         [
-          "Structure",
-          "8 Groups and 6 Periods",
-          "18 Groups and 7 Periods"
+          "Number of Groups",
+          "8 Groups",
+          "18 Groups"
+        ],
+        [
+          "Number of Periods",
+          "6 Periods",
+          "7 Periods"
         ],
         [
           "Position of Isotopes",
-          "Could not explain position of isotopes",
-          "Isotopes placed together as atomic numbers are identical"
-        ],
-        [
-          "Anomalous Elements",
-          "Anomalies present (e.g., Co before Ni)",
-          "Anomalies completely eliminated"
+          "Could not be explained",
+          "Assigned same position as atomic number is identical"
         ]
       ],
-      "id": "i0fn5hz"
+      "id": "e1v4038"
     },
     {
-      "id": "0jis3zl",
+      "id": "gp747vm",
       "type": "heading",
       "level": 2,
       "content": "6. Groups in Periodic Table"
     },
     {
-      "id": "jknbm18",
+      "id": "r8zy79k",
       "type": "table",
       "rows": [
         {
@@ -230,13 +230,13 @@
       ]
     },
     {
-      "id": "9zxdof2",
+      "id": "hbc7b82",
       "type": "heading",
       "level": 2,
       "content": "7. Classification of Elements"
     },
     {
-      "id": "80zxttx",
+      "id": "mrdcbgv",
       "type": "table",
       "rows": [
         {
@@ -270,75 +270,75 @@
       ]
     },
     {
-      "id": "yodaom0",
+      "id": "1na6thp",
       "type": "heading",
       "level": 2,
       "content": "8. Periodic Trends"
     },
     {
       "type": "paragraph",
-      "id": "7ff2hmn"
+      "id": "2xhtcql"
     },
     {
       "type": "paragraph",
-      "id": "vgozwxr"
+      "id": "y706s2r"
     },
     {
       "type": "paragraph",
-      "id": "asbrcxl"
+      "id": "n25q4br"
     },
     {
       "type": "paragraph",
-      "id": "7hb5l5p"
+      "id": "78hu1ul"
     },
     {
-      "id": "0mqzr36",
+      "id": "a598viq",
       "type": "heading",
       "level": 2,
       "content": "9. Importance of Periodic Table"
     },
     {
       "type": "paragraph",
-      "id": "wp99su0"
+      "id": "uk52170"
     },
     {
       "type": "examAlert",
       "items": [
-        "Moseley proved atomic number (Z) is the true basis of classification, correcting Mendeleev's atomic mass approach.",
-        "Electronegativity and ionization energy increase from left to right across a period and decrease down a group.",
-        "Modern Periodic Table consists of 18 vertical groups and 7 horizontal periods, where Group 18 contains Noble Gases."
+        "Mendeleev's Periodic Table was based on atomic mass, whereas the Modern Periodic Table is based on atomic number.",
+        "Atomic radius decreases across a period from left to right and increases down a group.",
+        "Electronegativity and ionization energy increase across a period and decrease down a group."
       ],
-      "id": "aajsegk"
+      "id": "kxqhxiu"
     },
     {
       "type": "paragraph",
-      "id": "545qcib"
+      "id": "zestamm"
     },
     {
       "type": "paragraph",
-      "id": "jdo7279"
+      "id": "mehwfey"
     },
     {
-      "id": "nequoam",
+      "id": "v5i8oku",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "9edtwt0"
+      "id": "44w748s"
     },
     {
       "type": "paragraph",
-      "id": "8qk464k"
+      "id": "jcvmwkk"
     },
     {
       "type": "paragraph",
-      "id": "ukv6p31"
+      "id": "xt0yuag"
     },
     {
       "type": "paragraph",
-      "id": "gcm7igs"
+      "id": "yk0cppm"
     }
   ],
   "enriched": true

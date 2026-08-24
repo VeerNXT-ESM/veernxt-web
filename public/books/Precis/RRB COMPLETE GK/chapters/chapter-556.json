@@ -1,0 +1,95 @@
+{
+  "id": "lyq3qxt",
+  "title": "9. Foreign Investment Instruments (Advanced Exam Point)",
+  "order": 556,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3e8mek4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Investments of 10% or more of the post-issue paid-up equity capital of a listed company are classified as Foreign Direct Investment (FDI), whereas investments below 10% are treated as Foreign Portfolio Investment (FPI).",
+      "id": "brp07zc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Foreign Direct Investment (FDI)",
+        "Foreign Portfolio Investment (FPI)"
+      ],
+      "rows": [
+        [
+          "Equity Stake Threshold",
+          "10% or more of paid-up equity capital",
+          "Less than 10% of paid-up equity capital"
+        ],
+        [
+          "Nature & Intent",
+          "Long-term strategic interest with physical assets or operational control",
+          "Short-term financial returns with passive ownership in securities"
+        ],
+        [
+          "Liquidity & Volatility",
+          "Low liquidity; difficult entry and exit process",
+          "High liquidity; fast entry/exit ('Hot Money')"
+        ],
+        [
+          "Technology Transfer",
+          "Brings technological transfer, management expertise, and employment generation",
+          "Brings capital flows into stock/bond markets without direct management involvement"
+        ]
+      ],
+      "id": "an97tpm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FDI Equity Threshold",
+          "value": "≥ 10%",
+          "icon": "check"
+        },
+        {
+          "label": "FIPB Abolished Year",
+          "value": "2017",
+          "icon": "calendar"
+        },
+        {
+          "label": "FPI Equity Cap",
+          "value": "< 10%",
+          "icon": "info"
+        },
+        {
+          "label": "Key Market Regulator",
+          "value": "SEBI",
+          "icon": "award"
+        }
+      ],
+      "id": "854l2pt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "In Masala Bonds, the exchange rate risk is borne by the investor, whereas in Foreign Currency Convertible Bonds (FCCBs), the currency risk lies with the issuer.",
+        "FDI is strictly prohibited in Atomic Energy, Lottery Business, Gambling/Betting, Chit Funds, Nidhi Companies, and Real Estate Business (excluding townships/construction projects).",
+        "P-Notes (Participatory Notes) are frequently audited by SEBI to prevent money laundering, round-tripping, and untraceable capital inflows."
+      ],
+      "id": "6gk4doo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Foreign Direct Investment (FDI) refers to long-term capital investments where the foreign investor holds 10% or more of the post-issue paid-up equity capital of an Indian company.",
+        "Foreign Portfolio Investment (FPI) represents short-term passive investments in equity or debt securities holding less than 10% stake, often termed 'hot money' due to its volatile nature.",
+        "Masala Bonds are foreign-listed, rupee-denominated bonds that transfer the currency risk entirely from the Indian issuing entity to the foreign investor.",
+        "Participatory Notes (P-Notes/ODIs) allow unregistered foreign entities to invest in Indian stock markets through registered Foreign Institutional Investors (FIIs) under strict SEBI compliance.",
+        "The Foreign Investment Facilitation Portal (FIFP) replaced the Foreign Investment Promotion Board (FIPB) to administer FDI under the government approval route."
+      ],
+      "id": "2rfa31u"
+    }
+  ],
+  "enriched": true
+}

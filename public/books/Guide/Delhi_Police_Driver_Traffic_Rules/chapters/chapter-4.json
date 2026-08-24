@@ -1,0 +1,242 @@
+{
+  "id": "t4lpt6s",
+  "title": "Chapter 3: Traffic Signals, Signs & Road Markings",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "1iegeoh",
+      "type": "heading",
+      "level": 2,
+      "content": "Traffic Light Signals"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Traffic light signals regulate vehicle flow at intersections using Red (Stop), Amber/Yellow (Caution/Prepare to Stop), and Green (Go).",
+        "Traffic signs are divided into three primary categories: Mandatory/Regulatory, Cautionary/Warning, and Informatory signs.",
+        "Mandatory signs are generally circular (except STOP and GIVE WAY) and carry strict legal penalties if violated.",
+        "Cautionary signs are triangular in shape and alert drivers to potential road hazards ahead.",
+        "Road markings like solid lines, broken lines, yellow lines, and zebra crossings guide lane discipline and pedestrian safety."
+      ],
+      "id": "l09e3op"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Sign Categories",
+          "value": "3 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "Signal Colors",
+          "value": "Red, Amber, Green",
+          "icon": "clock"
+        },
+        {
+          "label": "Road Markings",
+          "value": "Lines & Symbols",
+          "icon": "check"
+        }
+      ],
+      "id": "sccqqjt"
+    },
+    {
+      "id": "0tti4zg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Traffic Signals, Signs & Road Markings",
+      "id": "gf44a30"
+    },
+    {
+      "id": "yxvf9f1",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Traffic Signs"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Sign Category",
+        "Standard Shape",
+        "Primary Purpose"
+      ],
+      "rows": [
+        [
+          "Mandatory / Regulatory",
+          "Circular (except Stop & Give Way)",
+          "Legal compliance, prohibition, and order"
+        ],
+        [
+          "Cautionary / Warning",
+          "Triangular (Equilateral)",
+          "Warn road users of hazards ahead"
+        ],
+        [
+          "Informatory",
+          "Rectangular or Square",
+          "Provide directions, distances, and facility info"
+        ]
+      ],
+      "id": "1tvla2s"
+    },
+    {
+      "type": "paragraph",
+      "id": "a8mm6c1"
+    },
+    {
+      "type": "paragraph",
+      "id": "3gwnwtt"
+    },
+    {
+      "type": "paragraph",
+      "id": "wyrvhj7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The STOP sign is uniquely octagonal in shape, whereas the GIVE WAY sign is an inverted triangle.",
+        "A continuous solid double yellow line indicates a strict prohibition against crossing or overtaking from either side.",
+        "Disregarding traffic signs and signals attracts legal penalties under Section 119 and Section 177 of the Motor Vehicles Act."
+      ],
+      "id": "xww7bmu"
+    },
+    {
+      "id": "39caatq",
+      "type": "heading",
+      "level": 2,
+      "content": "Road Markings"
+    },
+    {
+      "id": "hm7ec3q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

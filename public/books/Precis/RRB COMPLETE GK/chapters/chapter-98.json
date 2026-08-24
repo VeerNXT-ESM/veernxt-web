@@ -1,0 +1,133 @@
+{
+  "id": "ca3ojww",
+  "title": "8. Primary and Secondary Effects",
+  "order": 98,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "15xnl84"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Impacts",
+          "value": "Immediate",
+          "icon": "clock"
+        },
+        {
+          "label": "Secondary Impacts",
+          "value": "Delayed",
+          "icon": "calendar"
+        },
+        {
+          "label": "Effect Categories",
+          "value": "2 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Critical Risk",
+          "value": "High Vulnerability",
+          "icon": "info"
+        }
+      ],
+      "id": "cvs1n8u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Primary effects occur directly due to the hazard event itself, such as ground shaking, surface faulting, and immediate structural collapse.",
+        "Secondary effects are indirect consequences triggered by primary impacts, including landslides, tsunamis, fires, and soil liquefaction.",
+        "While primary effects cause immediate localized damage, secondary effects often spread across larger regions and extend over longer durations.",
+        "Effective disaster risk reduction requires dual mitigation strategies that address both direct structural vulnerabilities and secondary post-disaster hazards."
+      ],
+      "id": "t0surxy"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eqy0qoi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Primary effects cause immediate physical destruction, while secondary effects propagate long-term socio-economic and environmental disruptions.",
+      "id": "ygtitfn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iij228o"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ysmbjt"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Primary Effects",
+        "Secondary Effects"
+      ],
+      "rows": [
+        [
+          "Timing",
+          "Occur immediately during the occurrence of the hazard",
+          "Occur after the initial event (hours, days, or weeks later)"
+        ],
+        [
+          "Direct Cause",
+          "Direct result of the physical hazard itself",
+          "Triggered as a result of primary damage or disruption"
+        ],
+        [
+          "Common Examples",
+          "Building collapse, ground rupture, surface displacement",
+          "Landslides, tsunamis, soil liquefaction, fires, epidemics"
+        ],
+        [
+          "Mitigation Focus",
+          "Structural engineering, retrofitting, seismic design",
+          "Early warning systems, land-use zoning, emergency response"
+        ]
+      ],
+      "id": "wv1zgx3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aw1lfdi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3dng2tl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p09ix5j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tsunamis, landslides, post-earthquake fires, and soil liquefaction are frequently tested as classic secondary effects in competitive exams.",
+        "Direct structural collapse, ground rupture, and surface displacement are categorized strictly as primary effects.",
+        "Questions often evaluate candidates on distinguishing direct physical hazards from indirect socio-economic impacts."
+      ],
+      "id": "r23m8qp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dqaovuc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g461kpe"
+    }
+  ],
+  "enriched": true
+}

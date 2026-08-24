@@ -1,0 +1,94 @@
+{
+  "id": "e5vvfry",
+  "title": "4. Quick Comparison for Exams",
+  "order": 298,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "13c3gig"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Fundamental Rights and Directive Principles of State Policy constitute the conscience of the Constitution.",
+      "id": "42ry4bf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fundamental Rights (Part III)",
+        "Directive Principles (Part IV)"
+      ],
+      "rows": [
+        [
+          "Enforceability",
+          "Justiciable (Enforceable by courts)",
+          "Non-justiciable (Cannot be enforced by courts)"
+        ],
+        [
+          "Primary Goal",
+          "Establish Political Democracy",
+          "Establish Social and Economic Democracy"
+        ],
+        [
+          "Nature of Mandate",
+          "Negative prohibitions on the State",
+          "Positive guidance for the State"
+        ],
+        [
+          "Sanction",
+          "Legal sanction",
+          "Moral and political sanction"
+        ]
+      ],
+      "id": "lrewlku"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Part III Scope",
+          "value": "Articles 12-35",
+          "icon": "book"
+        },
+        {
+          "label": "Part IV Scope",
+          "value": "Articles 36-51",
+          "icon": "calendar"
+        },
+        {
+          "label": "Legal Nature",
+          "value": "Justiciable vs Non-Justiciable",
+          "icon": "check"
+        },
+        {
+          "label": "Core Landmark",
+          "value": "Minerva Mills (1980)",
+          "icon": "award"
+        }
+      ],
+      "id": "1h1h4vt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently test legal enforceability: Fundamental Rights can be directly enforced under Article 32, whereas Article 37 explicitly makes DPSPs non-justiciable.",
+        "Remember the Minerva Mills case (1980) ruling that the Constitution is founded on the bedrock of balance between Part III and Part IV.",
+        "Article 31C provides protection to laws implementing Articles 39(b) and 39(c) even if they violate Articles 14 and 19."
+      ],
+      "id": "7fvdp0z"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Fundamental Rights (Part III) are justiciable in court, while Directive Principles of State Policy (Part IV) are non-justiciable.",
+        "Fundamental Rights aim to establish political democracy, whereas DPSPs seek to establish social and economic democracy.",
+        "Fundamental Rights place negative obligations on the State, while Directive Principles serve as positive directives for policy formulation.",
+        "The Constitution maintains a delicate balance between Part III and Part IV, making them complementary to each other."
+      ],
+      "id": "sn2euh0"
+    }
+  ],
+  "enriched": true
+}

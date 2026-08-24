@@ -1,40 +1,40 @@
 {
-  "id": "yoy9crb",
+  "id": "8nh8xsb",
   "title": "Chapter 42: National Income",
   "order": 42,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "z74x0c8"
+      "id": "orlwbc6"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Chapter",
-          "value": "42",
-          "icon": "book"
+          "label": "First Estimate",
+          "value": "1867-68 (Dadabhai Naoroji)",
+          "icon": "calendar"
         },
         {
-          "label": "Core Indicator",
-          "value": "GDP & GNP",
-          "icon": "info"
-        },
-        {
-          "label": "Net Metric",
-          "value": "NNP",
+          "label": "Official Measure",
+          "value": "NNP at Factor Cost",
           "icon": "check"
         },
         {
-          "label": "Focus Area",
-          "value": "Indian Economy",
+          "label": "Calculation Methods",
+          "value": "3 Main Approaches",
+          "icon": "book"
+        },
+        {
+          "label": "Nodal Agency",
+          "value": "NSO (formerly CSO)",
           "icon": "award"
         }
       ],
-      "id": "21gh591"
+      "id": "1hkmt0z"
     },
     {
-      "id": "cz61ja4",
+      "id": "995gc4a",
       "type": "heading",
       "level": 2,
       "content": "1. Meaning of National Income"
@@ -43,36 +43,38 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "National Income encompasses major macroeconomic indicators including GDP, GNP, and NNP.",
-        "Calculating National Income relies on systematic methods and distinct economic components.",
-        "National Income estimation in India provides critical insights despite certain analytical limitations."
+        "National Income represents the total net value of all final goods and services produced by a country's residents within a financial year.",
+        "Net National Product (NNP) calculated at Factor Cost is officially defined as the National Income of a nation.",
+        "The three standard methods for estimating National Income are the Production (Value Added) Method, Income Method, and Expenditure Method.",
+        "In India, official National Income statistics are compiled and released by the National Statistical Office (NSO) under MoSPI.",
+        "Depreciation (Capital Consumption Allowance) is subtracted from Gross aggregates to derive Net aggregates."
       ],
-      "id": "vmtsaei"
+      "id": "j4jix07"
     },
     {
       "type": "paragraph",
-      "id": "8o5ytms"
+      "id": "lya2uz6"
     },
     {
       "type": "paragraph",
-      "id": "m0l2xxw"
+      "id": "9gfr5gb"
     },
     {
       "type": "paragraph",
-      "id": "f2mkbwr"
+      "id": "p7zk46m"
     },
     {
       "type": "paragraph",
-      "id": "w98imks"
+      "id": "zhnkskv"
     },
     {
-      "id": "trrfhxt",
+      "id": "com79kt",
       "type": "heading",
       "level": 2,
       "content": "2. Important Concepts of National Income"
     },
     {
-      "id": "465niti",
+      "id": "ni8ikhm",
       "type": "table",
       "rows": [
         {
@@ -120,76 +122,76 @@
       ]
     },
     {
-      "id": "fajxoqr",
+      "id": "m90n5bt",
       "type": "heading",
       "level": 2,
       "content": "3. GDP Explained"
     },
     {
       "type": "paragraph",
-      "id": "89hw4a5"
+      "id": "hr56wsm"
     },
     {
       "type": "paragraph",
-      "id": "iomsddg"
+      "id": "42zknkk"
     },
     {
       "type": "paragraph",
-      "id": "8bp3zam"
+      "id": "9e0vxcn"
     },
     {
       "type": "paragraph",
-      "id": "ughlulo"
+      "id": "5owt7v0"
     },
     {
-      "id": "sxp5bea",
+      "id": "i4e0srz",
       "type": "heading",
       "level": 2,
       "content": "4. GNP Explained"
     },
     {
       "type": "paragraph",
-      "id": "tu8x0c8"
+      "id": "08iz72l"
     },
     {
       "type": "paragraph",
-      "id": "d2pghzz"
+      "id": "b7hxkds"
     },
     {
       "type": "pullQuote",
-      "content": "National Income Estimation in India",
-      "id": "s77rsta"
+      "content": "Net National Product at Factor Cost is considered the true measure of National Income of a nation.",
+      "id": "bqd7jsi"
     },
     {
       "type": "paragraph",
-      "id": "i38aq8d"
+      "id": "m0m2ckp"
     },
     {
-      "id": "x623mrk",
+      "id": "3ipmryb",
       "type": "heading",
       "level": 2,
       "content": "5. NNP Explained"
     },
     {
       "type": "paragraph",
-      "id": "h7tam21"
+      "id": "nfy5917"
     },
     {
       "type": "paragraph",
-      "id": "xijvjun"
+      "id": "yysn9tt"
     },
     {
       "type": "paragraph",
-      "id": "qmllg0p"
+      "id": "sd9hq89"
     },
     {
-      "id": "852p2uy",
+      "id": "noik9l0",
       "type": "heading",
       "level": 2,
       "content": "6. Methods of Calculating National Income"
     },
     {
-      "id": "g6jnbf2",
+      "id": "q1py28y",
       "type": "table",
       "rows": [
         {
@@ -223,107 +225,139 @@
       ]
     },
     {
-      "id": "ecj6grk",
+      "id": "xzbc4od",
       "type": "heading",
       "level": 2,
       "content": "7. Components of National Income"
     },
     {
       "type": "paragraph",
-      "id": "0qe5e44"
+      "id": "0yo3ql9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Basis of Comparison",
+        "Gross Domestic Product (GDP)",
+        "Gross National Product (GNP)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Total market value of final goods & services produced within domestic territory.",
+          "Total market value of final goods & services produced by normal residents of a country worldwide."
+        ],
+        [
+          "Boundary Focus",
+          "Geographical boundary of the country.",
+          "Citizenship / Normal residency of producers."
+        ],
+        [
+          "Formula",
+          "GDP = C + I + G + (X - M)",
+          "GNP = GDP + Net Factor Income from Abroad (NFIA)"
+        ],
+        [
+          "Foreign Income",
+          "Includes income generated by foreign nationals within domestic territory.",
+          "Excludes income generated by foreign nationals within domestic territory; includes residents' foreign earnings."
+        ]
+      ],
+      "id": "js5sgcr"
     },
     {
       "type": "paragraph",
-      "id": "cpsdt22"
+      "id": "sg1miuq"
     },
     {
       "type": "paragraph",
-      "id": "pifevil"
+      "id": "vr8wjw0"
     },
     {
       "type": "paragraph",
-      "id": "k57s56z"
+      "id": "d51t5wf"
     },
     {
-      "id": "mc5akn6",
+      "id": "lraqlkh",
       "type": "heading",
       "level": 2,
       "content": "8. Importance of National Income"
     },
     {
       "type": "paragraph",
-      "id": "bucu2l6"
+      "id": "tgfmvum"
     },
     {
       "type": "paragraph",
-      "id": "m26jjmn"
+      "id": "5yydvrl"
     },
     {
       "type": "paragraph",
-      "id": "tlo6xyy"
+      "id": "oec75rw"
     },
     {
       "type": "paragraph",
-      "id": "wk6wcwo"
+      "id": "1zzkc0t"
     },
     {
-      "id": "oou7ynm",
+      "id": "k4xqw9n",
       "type": "heading",
       "level": 2,
       "content": "9. Limitations of National Income"
     },
     {
       "type": "paragraph",
-      "id": "po06ude"
+      "id": "q2yi59m"
     },
     {
       "type": "paragraph",
-      "id": "c7kl73e"
+      "id": "qol789c"
     },
     {
       "type": "examAlert",
       "items": [
-        "Definitions and differences between GDP, GNP, and NNP are frequently asked in competitive exams.",
-        "Pay special attention to the methods of calculating National Income and their specific components.",
-        "Understand the historical framework and limitations of National Income estimation in India."
+        "Transfer payments (like old-age pensions, scholarships, and unemployment benefits) are EXCLUDED from National Income calculation because no productive activity occurs.",
+        "Windfall gains (e.g., lotteries, gambling) and sale of second-hand goods are NOT included in National Income.",
+        "GDP measures production within domestic boundaries regardless of nationality, whereas GNP incorporates Net Factor Income from Abroad (NFIA).",
+        "Real GDP is measured at constant base-year prices to adjust for inflation, whereas Nominal GDP is measured at current market prices."
       ],
-      "id": "jg3kvr1"
+      "id": "kzmbki1"
     },
     {
       "type": "paragraph",
-      "id": "ph8174h"
+      "id": "9sjx6s5"
     },
     {
       "type": "paragraph",
-      "id": "ze7yl13"
+      "id": "ikd69la"
     },
     {
-      "id": "xxx0gky",
+      "id": "jsg8hls",
       "type": "heading",
       "level": 2,
       "content": "10. National Income Estimation in India"
     },
     {
       "type": "paragraph",
-      "id": "93dtsyu"
+      "id": "bze20wf"
     },
     {
-      "id": "7l7i9cp",
+      "id": "98qchdb",
       "type": "heading",
       "level": 2,
       "content": "Important Facts"
     },
     {
       "type": "paragraph",
-      "id": "00co07q"
+      "id": "n1xyhtj"
     },
     {
       "type": "paragraph",
-      "id": "sjomzt8"
+      "id": "cgw7b30"
     },
     {
       "type": "paragraph",
-      "id": "59yan9j"
+      "id": "f7u2wl1"
     }
   ],
   "enriched": true

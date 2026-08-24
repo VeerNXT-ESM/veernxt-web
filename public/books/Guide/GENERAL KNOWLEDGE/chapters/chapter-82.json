@@ -1,0 +1,362 @@
+{
+  "id": "urm1jwd",
+  "title": "CHAPTER 12: INEQUALITY",
+  "order": 82,
+  "blocks": [
+    {
+      "id": "ojvbmmm",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: FOUNDATIONAL UNDERSTANDING OF INEQUALITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Inequality is multidimensional, spanning income, wealth, gender, social, and regional dimensions.",
+        "Poverty is an absolute state of deprivation, whereas inequality measures relative resource distribution across a population.",
+        "Wealth inequality is inherently more severe and persistent than income inequality due to asset accumulation over generations.",
+        "The Lorenz Curve graphs cumulative income distribution, and the Gini Coefficient quantifies this inequality mathematically.",
+        "Achieving balanced economic development requires targeted government interventions and inclusive growth strategies."
+      ],
+      "id": "hwspki0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Gini Index Range",
+          "value": "0 to 1",
+          "icon": "info"
+        },
+        {
+          "label": "Visual Tool",
+          "value": "Lorenz Curve",
+          "icon": "book"
+        },
+        {
+          "label": "Policy Goal",
+          "value": "Inclusive Growth",
+          "icon": "check"
+        },
+        {
+          "label": "Core Dimensions",
+          "value": "Income & Wealth",
+          "icon": "award"
+        }
+      ],
+      "id": "0doolnc"
+    },
+    {
+      "id": "7fwu9k2",
+      "type": "heading",
+      "level": 3,
+      "content": "1. What Exactly is Inequality?"
+    },
+    {
+      "type": "paragraph",
+      "id": "oa4e8lm"
+    },
+    {
+      "type": "paragraph",
+      "id": "le45v11"
+    },
+    {
+      "id": "lmtbr16",
+      "type": "heading",
+      "level": 3,
+      "content": "2. Inequality is NOT Only About Money"
+    },
+    {
+      "type": "paragraph",
+      "id": "e0lcusa"
+    },
+    {
+      "id": "y64txfo",
+      "type": "heading",
+      "level": 3,
+      "content": "3. Inequality vs Poverty (Critical  Area)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ceyx3t6"
+    },
+    {
+      "type": "paragraph",
+      "id": "z5he22o"
+    },
+    {
+      "id": "s6ft47t",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: DETAILED TYPES OF INEQUALITY"
+    },
+    {
+      "id": "e7kygkg",
+      "type": "heading",
+      "level": 3,
+      "content": "4. Income Inequality (Explained Deeply)"
+    },
+    {
+      "type": "paragraph",
+      "id": "z7vbckv"
+    },
+    {
+      "type": "paragraph",
+      "id": "sx1ds32"
+    },
+    {
+      "id": "b8z6gkw",
+      "type": "heading",
+      "level": 3,
+      "content": "5. Wealth Inequality (More Severe Than Income)"
+    },
+    {
+      "type": "paragraph",
+      "id": "mk0bk9y"
+    },
+    {
+      "type": "paragraph",
+      "id": "299hzh2"
+    },
+    {
+      "id": "ntp04wa",
+      "type": "heading",
+      "level": 3,
+      "content": "6. Gender Inequality (Economic + Social)"
+    },
+    {
+      "type": "paragraph",
+      "id": "3e4u1ww"
+    },
+    {
+      "type": "paragraph",
+      "id": "tngpmc7"
+    },
+    {
+      "id": "g7k7r4n",
+      "type": "heading",
+      "level": 3,
+      "content": "7. Social Inequality"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Inequality is NOT Only About Money",
+      "id": "j4nv130"
+    },
+    {
+      "type": "paragraph",
+      "id": "0qny3th"
+    },
+    {
+      "id": "7op0wj4",
+      "type": "heading",
+      "level": 3,
+      "content": "8. Regional Inequality"
+    },
+    {
+      "type": "paragraph",
+      "id": "7wiiahw"
+    },
+    {
+      "id": "zj4hq02",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: ROOT CAUSES OF INEQUALITY (STEP-BY-STEP LOGIC)"
+    },
+    {
+      "id": "gliext3",
+      "type": "heading",
+      "level": 3,
+      "content": "9. Economic Causes"
+    },
+    {
+      "type": "paragraph",
+      "id": "5o1kdsx"
+    },
+    {
+      "id": "wsfof3i",
+      "type": "heading",
+      "level": 3,
+      "content": "10. Social Causes"
+    },
+    {
+      "type": "paragraph",
+      "id": "qha14rf"
+    },
+    {
+      "id": "egdp3fh",
+      "type": "heading",
+      "level": 3,
+      "content": "11. Institutional & Policy Causes"
+    },
+    {
+      "type": "paragraph",
+      "id": "jdvacyu"
+    },
+    {
+      "id": "gpobt1i",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: MEASUREMENT OF INEQUALITY (VERY HIGH  WEIGHTAGE)"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Dimension",
+        "Inequality",
+        "Poverty"
+      ],
+      "rows": [
+        [
+          "Core Concept",
+          "Relative disparity in the distribution of income, wealth, and opportunities across society",
+          "Absolute inability to fulfill basic human needs such as food, clothing, and shelter"
+        ],
+        [
+          "Measurement Tools",
+          "Lorenz Curve, Gini Coefficient, Palma Ratio",
+          "Headcount Ratio, Poverty Line, Multidimensional Poverty Index (MPI)"
+        ],
+        [
+          "Primary Policy Focus",
+          "Progressive taxation, inclusive growth, and reducing systemic access barriers",
+          "Direct Benefit Transfers (DBT), basic social safety nets, and targeted welfare schemes"
+        ]
+      ],
+      "id": "06pztg7"
+    },
+    {
+      "id": "smbfvw1",
+      "type": "heading",
+      "level": 3,
+      "content": "12. Why Measuring Inequality is Necessary"
+    },
+    {
+      "type": "paragraph",
+      "id": "nu29gxv"
+    },
+    {
+      "id": "zac77j6",
+      "type": "heading",
+      "level": 3,
+      "content": "13. Lorenz Curve (Graphical Explanation)"
+    },
+    {
+      "type": "paragraph",
+      "id": "wtqwqmy"
+    },
+    {
+      "id": "7pp6clu",
+      "type": "heading",
+      "level": 3,
+      "content": "14. Gini Coefficient (Mathematical Logic Explained Simply)"
+    },
+    {
+      "type": "paragraph",
+      "id": "aq6qm6v"
+    },
+    {
+      "id": "9w1ywhz",
+      "type": "heading",
+      "level": 3,
+      "content": "15. Other Indicators"
+    },
+    {
+      "type": "paragraph",
+      "id": "tug9xi6"
+    },
+    {
+      "id": "6c1zi5i",
+      "type": "heading",
+      "level": 2,
+      "content": "PART E: EFFECTS OF INEQUALITY (DEEP ECONOMIC & SOCIAL IMPACT)"
+    },
+    {
+      "id": "kr4bdb3",
+      "type": "heading",
+      "level": 3,
+      "content": "16. Economic Effects"
+    },
+    {
+      "type": "paragraph",
+      "id": "n5h5c44"
+    },
+    {
+      "id": "p0zwbgp",
+      "type": "heading",
+      "level": 3,
+      "content": "17. Social & Political Effects"
+    },
+    {
+      "type": "paragraph",
+      "id": "3169dsn"
+    },
+    {
+      "id": "bj5tn9j",
+      "type": "heading",
+      "level": 2,
+      "content": "PART F: INEQUALITY IN INDIA (COMPLETE CONTEXT)"
+    },
+    {
+      "id": "h4gkcge",
+      "type": "heading",
+      "level": 3,
+      "content": "18. India’s Inequality Pattern"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Exam Weightage: Master the Lorenz Curve and Gini Coefficient (0 = Perfect Equality, 1 = Perfect Inequality).",
+        "Crucial Distinction: Poverty measures basic minimum deprivation, while Inequality measures relative distribution across the entire spectrum.",
+        "Focus Area: Understand the mechanisms of Wealth Inequality versus Income Inequality and key policy responses like Inclusive Growth."
+      ],
+      "id": "kxcmtfk"
+    },
+    {
+      "type": "paragraph",
+      "id": "cebrhyt"
+    },
+    {
+      "type": "paragraph",
+      "id": "y30fiun"
+    },
+    {
+      "id": "g1mghxq",
+      "type": "heading",
+      "level": 2,
+      "content": "PART G: SOLUTIONS & POLICY RESPONSE"
+    },
+    {
+      "id": "3zji52s",
+      "type": "heading",
+      "level": 3,
+      "content": "19. Government Measures to Reduce Inequality"
+    },
+    {
+      "type": "paragraph",
+      "id": "qr6yw1c"
+    },
+    {
+      "id": "cmmuqz7",
+      "type": "heading",
+      "level": 3,
+      "content": "20. Importance of Inclusive Growth"
+    },
+    {
+      "type": "paragraph",
+      "id": "2mhlwq0"
+    },
+    {
+      "id": "0norhjw",
+      "type": "heading",
+      "level": 3,
+      "content": "HYPER FINAL REVISION POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "wzyho3m"
+    }
+  ],
+  "enriched": true
+}

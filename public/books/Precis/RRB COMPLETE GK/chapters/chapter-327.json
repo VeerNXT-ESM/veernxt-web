@@ -1,0 +1,97 @@
+{
+  "id": "0g6lj47",
+  "title": "1. Integrated Judicial System",
+  "order": 327,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "uylkkty"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Judicial Structure",
+          "value": "3-Tier Integrated",
+          "icon": "book"
+        },
+        {
+          "label": "Apex Authority",
+          "value": "Supreme Court",
+          "icon": "award"
+        },
+        {
+          "label": "Historical Source",
+          "value": "GoI Act 1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "Law Enforcement",
+          "value": "Central & State Laws",
+          "icon": "check"
+        }
+      ],
+      "id": "3lfh5me"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Indian Constitution has established an integrated judicial system with the Supreme Court at the top and the high courts below it.",
+      "id": "sswez83"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Indian Judiciary (Integrated System)",
+        "US Judiciary (Dual System)"
+      ],
+      "rows": [
+        [
+          "System Structure",
+          "Single unified hierarchy for the entire nation",
+          "Two distinct hierarchies (Federal Courts & State Courts)"
+        ],
+        [
+          "Enforcement of Laws",
+          "Enforces both Central and State laws across all court levels",
+          "Federal courts enforce Federal laws; State courts enforce State laws"
+        ],
+        [
+          "Subordination",
+          "High Courts and Subordinate Courts operate under Supreme Court oversight",
+          "State Supreme Courts are independent of Federal Courts in State law matters"
+        ]
+      ],
+      "id": "18iczib"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "India features a single integrated judicial system, standing in contrast to federal polities like the USA that maintain a dual judicial system.",
+        "The hierarchy consists of the Supreme Court at the apex, High Courts at the state level, and Subordinate Courts (District and Lower Courts) beneath them.",
+        "This single hierarchy of courts enforces both Central laws enacted by Parliament and State laws enacted by state legislatures.",
+        "The integrated judicial framework was largely adopted from the system established under the Government of India Act of 1935."
+      ],
+      "id": "cvzqd17"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "frequently tested contrast: The US judiciary is dual (federal courts enforce federal laws, state courts enforce state laws), whereas the Indian judiciary is single and integrated (enforcing both).",
+        "The Supreme Court of India replaced the Federal Court of India created under the GoI Act 1935 and was inaugurated on January 28, 1950.",
+        "High Courts do not constitute a separate judicial system independent of the Supreme Court; they form part of the same unified structure."
+      ],
+      "id": "1eoamtj"
+    },
+    {
+      "type": "paragraph",
+      "id": "7529jif"
+    },
+    {
+      "type": "paragraph",
+      "id": "qmw3ay3"
+    }
+  ],
+  "enriched": true
+}

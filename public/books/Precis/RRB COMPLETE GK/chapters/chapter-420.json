@@ -1,0 +1,134 @@
+{
+  "id": "iayh4gp",
+  "title": "Tenure, Removal and Resignation",
+  "order": 420,
+  "blocks": [
+    {
+      "id": "ev7wly4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A judge of the Supreme Court can be removed from office only by an order of the President passed after an address by each House of Parliament supported by a special majority.",
+      "id": "xm0adr7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SC Judge Max Age",
+          "value": "65 Years",
+          "icon": "award"
+        },
+        {
+          "label": "UPSC / CAG Tenure",
+          "value": "6 Years / 65 Yrs",
+          "icon": "clock"
+        },
+        {
+          "label": "President Impeachment",
+          "value": "Article 61",
+          "icon": "book"
+        },
+        {
+          "label": "Governor Term Basis",
+          "value": "Pleasure of President",
+          "icon": "check"
+        }
+      ],
+      "id": "jvexzn5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Body / Office",
+        "Tenure / Age Limit",
+        "Grounds for Removal",
+        "Resignation Addressed To"
+      ],
+      "rows": [
+        [
+          "President of India",
+          "5 Years",
+          "Violation of the Constitution (Article 61)",
+          "Vice-President of India"
+        ],
+        [
+          "Supreme Court Judge",
+          "Up to 65 years of age",
+          "Proved misbehaviour or incapacity (Article 124(4))",
+          "President of India"
+        ],
+        [
+          "CAG / Chief Election Commissioner",
+          "6 Years or 65 years of age",
+          "Same grounds as a Supreme Court Judge",
+          "President of India"
+        ],
+        [
+          "Governor",
+          "5 Years (Subject to pleasure of President)",
+          "No grounds specified in the Constitution",
+          "President of India"
+        ]
+      ],
+      "id": "xcqskdq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Judges of the Supreme Court hold office until attaining the age of 65 years and submit their resignation directly to the President.",
+        "The removal of a Supreme Court Judge requires a special majority in both Houses of Parliament on grounds of proved misbehaviour or incapacity under Article 124(4).",
+        "The Comptroller and Auditor General (CAG) and Chief Election Commissioner (CEC) are removed in the same manner and on the same grounds as a Supreme Court Judge.",
+        "UPSC Chairman and members serve for 6 years or until 65 years of age, and can be removed by the President only after an inquiry by the Supreme Court.",
+        "The President resigns by writing to the Vice-President, whereas the Governor holds office during the pleasure of the President without fixed security of tenure."
+      ],
+      "id": "11ykzo1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The phrase 'violation of the Constitution' is the sole ground for impeachment of the President under Article 61, but it is not explicitly defined in the Constitution.",
+        "The resignation letter of the President is addressed to the Vice-President, who must forthwith communicate it to the Speaker of the Lok Sabha.",
+        "The Constitution does not lay down any specific grounds or procedure for the removal of a State Governor by the President.",
+        "CAG and CEC cannot be removed except on the same grounds and in the same manner as a Judge of the Supreme Court."
+      ],
+      "id": "3p4qtkr"
+    },
+    {
+      "type": "paragraph",
+      "id": "rqleb66"
+    }
+  ],
+  "enriched": true
+}

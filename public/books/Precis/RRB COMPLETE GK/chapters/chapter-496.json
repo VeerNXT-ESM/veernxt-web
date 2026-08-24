@@ -1,0 +1,95 @@
+{
+  "id": "lrckl2q",
+  "title": "9. State Human Rights Commission",
+  "order": 496,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "4nfivjy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Commission shall not inquire into any matter after the expiry of one year from the date on which the act constituting violation of human rights is alleged to have been committed.",
+      "id": "mxjm5ax"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "National Human Rights Commission (NHRC)",
+        "State Human Rights Commission (SHRC)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Entire Country (Union List & Concurrent List)",
+          "Respective State (State List & Concurrent List)"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Selection Committee Head",
+          "Prime Minister",
+          "Chief Minister"
+        ]
+      ],
+      "id": "p3vsh8h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "PHRA, 1993",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "3 Yrs / 70 Yrs",
+          "icon": "clock"
+        },
+        {
+          "label": "Strength",
+          "value": "3 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Limitation Period",
+          "value": "1 Year",
+          "icon": "calendar"
+        }
+      ],
+      "id": "keb89hb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Appointment vs Removal Trap: Governor appoints the members of SHRC, but ONLY the President can remove them.",
+        "Jurisdiction Limit: SHRC can only inquire into violations regarding subjects in the State List (List-II) and Concurrent List (List-III).",
+        "Overlapping Cases: SHRC cannot inquire into any matter already being investigated by the NHRC or any other statutory commission."
+      ],
+      "id": "y37ofi2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The State Human Rights Commission (SHRC) is a statutory, non-constitutional body established under the Protection of Human Rights Act, 1993.",
+        "The Chairperson must be a retired Chief Justice or a retired Judge of a High Court.",
+        "The Chairperson and members are appointed by the Governor on recommendations of a committee headed by the Chief Minister.",
+        "Though appointed by the Governor, the Chairperson and members can be removed only by the President of India.",
+        "The Commission functions primarily in an advisory capacity, and its recommendations are not binding on the state government."
+      ],
+      "id": "6gkb1n4"
+    }
+  ],
+  "enriched": true
+}

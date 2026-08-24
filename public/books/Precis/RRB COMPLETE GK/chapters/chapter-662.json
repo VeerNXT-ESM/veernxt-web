@@ -1,0 +1,106 @@
+{
+  "id": "1mrvgn4",
+  "title": "10. Importance of FCI",
+  "order": 662,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lvg145w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Legislation",
+          "value": "FC Act 1964",
+          "icon": "book"
+        },
+        {
+          "label": "Core Objective",
+          "value": "Food Security",
+          "icon": "check"
+        },
+        {
+          "label": "Nodal Ministry",
+          "value": "Consumer Affairs & Food",
+          "icon": "info"
+        }
+      ],
+      "id": "gq91mgh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The primary objective of FCI is to safeguard the interests of farmers through remunerative procurement and ensure food security via equitable distribution.",
+      "id": "td0uhxt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Food Corporation of India (FCI) was established under the Food Corporations Act, 1964, to implement the National Food Policy.",
+        "FCI provides price support operations to safeguard farmers from distress sales through Minimum Support Price (MSP) purchases.",
+        "It maintains strategic buffer stocks of food grains to stabilize market prices and ensure national food security during distress.",
+        "FCI distributes essential food grains across all states and Union Territories through the Public Distribution System (PDS) and Targeted PDS (TPDS)."
+      ],
+      "id": "pb6jqo0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Minimum Support Price (MSP)",
+        "Central Issue Price (CIP)"
+      ],
+      "rows": [
+        [
+          "Target Beneficiary",
+          "Farmers / Grain Producers",
+          "PDS / NFSA Household Beneficiaries"
+        ],
+        [
+          "Core Objective",
+          "Ensure remunerative returns and prevent distress selling",
+          "Ensure affordable access to staple grains for vulnerable groups"
+        ],
+        [
+          "Price Setting Authority",
+          "Cabinet Committee on Economic Affairs (based on CACP recommendations)",
+          "Central Government (as framed under the National Food Security Act)"
+        ],
+        [
+          "Fiscal Impact",
+          "Forms the primary procurement cost for FCI",
+          "Drives the annual Food Subsidy burden (Economic Cost minus CIP)"
+        ]
+      ],
+      "id": "txqhat7"
+    },
+    {
+      "type": "paragraph",
+      "id": "zns0tjw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "FCI functions under the Ministry of Consumer Affairs, Food and Public Distribution, Government of India.",
+        "While CACP recommends the Minimum Support Price (MSP), FCI acts as the primary agency responsible for procuring grains at MSP.",
+        "Food Subsidy is calculated as the difference between the Economic Cost of food grains to FCI and the Central Issue Price (CIP)."
+      ],
+      "id": "rotx2q3"
+    },
+    {
+      "type": "paragraph",
+      "id": "47u88tq"
+    },
+    {
+      "type": "paragraph",
+      "id": "h3i2tf8"
+    }
+  ],
+  "enriched": true
+}

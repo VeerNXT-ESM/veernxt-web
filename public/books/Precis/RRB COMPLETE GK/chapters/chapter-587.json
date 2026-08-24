@@ -1,0 +1,89 @@
+{
+  "id": "h3l9jgx",
+  "title": "12. Exam Traps",
+  "order": 587,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "gvtpdof"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Distractor options are meticulously designed to match common calculation errors made under exam pressure.",
+      "id": "oqqh93q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Standard Question",
+        "Trap Question"
+      ],
+      "rows": [
+        [
+          "Option Design",
+          "One clear correct answer and three distinct distractors",
+          "Includes answers derived from typical student miscalculations"
+        ],
+        [
+          "Wording Style",
+          "Direct and standard phrasing with standard terminology",
+          "Employs subtle qualifiers, double negatives, or terms like 'EXCEPT'"
+        ],
+        [
+          "Time Strategy",
+          "Requires predictable, steady solving time",
+          "Acts as a time-sink designed to disrupt pacing"
+        ]
+      ],
+      "id": "uu9pony"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Penalty",
+          "value": "25-33%",
+          "icon": "alert"
+        },
+        {
+          "label": "Distractor Rate",
+          "value": "2 Options/Q",
+          "icon": "check"
+        },
+        {
+          "label": "Ideal Time Limit",
+          "value": "60 Secs/Q",
+          "icon": "clock"
+        },
+        {
+          "label": "Silly Errors",
+          "value": "15-20%",
+          "icon": "info"
+        }
+      ],
+      "id": "7i24of4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always re-check the required unit of measurement (e.g., km/h vs m/s) before locking your final answer.",
+        "Option (A) is intentionally placed as a surface-level trap for candidates who stop solving prematurely.",
+        "Beware of double negatives and hidden conditional words in UPSC and SSC statement-type questions."
+      ],
+      "id": "7l5sc5w"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Distractor options frequently reflect the exact output of common formula or calculation mistakes.",
+        "Absolute qualifier words such as 'Always', 'Never', and 'Only' often signal incorrect statement choices.",
+        "Keywords like 'NOT', 'EXCEPT', and 'INCORRECT' are critical traps easily missed during rushed reading.",
+        "Spending excessive time on complex questions early creates fatigue and increases error rates later."
+      ],
+      "id": "nqptspr"
+    }
+  ],
+  "enriched": true
+}

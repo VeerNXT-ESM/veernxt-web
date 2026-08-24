@@ -1,0 +1,231 @@
+{
+  "id": "xgz4s3y",
+  "title": "PART 2",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "to4optl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Methods Covered",
+          "value": "2 Primary Methods",
+          "icon": "book"
+        },
+        {
+          "label": "Core Concepts",
+          "value": "HCF & LCM",
+          "icon": "award"
+        },
+        {
+          "label": "Fraction Formulas",
+          "value": "HCF & LCM Rules",
+          "icon": "info"
+        },
+        {
+          "label": "Key Relation",
+          "value": "Product = HCF × LCM",
+          "icon": "check"
+        }
+      ],
+      "id": "4pa4gae"
+    },
+    {
+      "id": "y9rvbbr",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "HCF (Highest Common Factor) and LCM (Least Common Multiple) can be found using Prime Factorisation or Division Method.",
+        "For any two given numbers, Product of Two Numbers = HCF × LCM.",
+        "HCF of Fractions = (HCF of Numerators) / (LCM of Denominators).",
+        "LCM of Fractions = (LCM of Numerators) / (HCF of Denominators).",
+        "Word problems involving maximum capacity or division usually require finding HCF, whereas problems involving simultaneous occurrences require LCM."
+      ],
+      "id": "rbr9smk"
+    },
+    {
+      "id": "u9wvjrw",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "e1jq89e",
+      "type": "heading",
+      "level": 2,
+      "content": "METHODS TO FIND HCF & LCM"
+    },
+    {
+      "id": "82oymiw",
+      "type": "heading",
+      "level": 2,
+      "content": "(A) PRIME FACTORISATION METHOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "zfvrq26"
+    },
+    {
+      "type": "paragraph",
+      "id": "opgy1qc"
+    },
+    {
+      "id": "6aj1tn4",
+      "type": "heading",
+      "level": 3,
+      "content": "(B) DIVISION METHOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "hu8ye3f"
+    },
+    {
+      "type": "pullQuote",
+      "content": "IMPORTANT RELATION BETWEEN HCF & LCM",
+      "id": "co8o1m2"
+    },
+    {
+      "id": "zjewhq1",
+      "type": "heading",
+      "level": 2,
+      "content": "3. IMPORTANT RELATION BETWEEN HCF & LCM"
+    },
+    {
+      "id": "tl95dhp",
+      "type": "list",
+      "items": [
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "w1xsaz7"
+    },
+    {
+      "id": "utbiph8",
+      "type": "heading",
+      "level": 2,
+      "content": "4. HCF & LCM OF FRACTIONS"
+    },
+    {
+      "id": "va21ywp",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "7napnem"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "HCF (Highest Common Factor)",
+        "LCM (Least Common Multiple)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Largest number that divides all given numbers completely",
+          "Smallest number divisible by all given numbers completely"
+        ],
+        [
+          "Fraction Formula",
+          "HCF of Numerators / LCM of Denominators",
+          "LCM of Numerators / HCF of Denominators"
+        ],
+        [
+          "Word Problem Clues",
+          "Terms like 'Largest', 'Maximum', 'Greatest division'",
+          "Terms like 'Smallest', 'Minimum', 'Repeat together'"
+        ]
+      ],
+      "id": "c6xkari"
+    },
+    {
+      "id": "0542geu",
+      "type": "heading",
+      "level": 2,
+      "content": "5. WORD PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "3xv3773"
+    },
+    {
+      "type": "paragraph",
+      "id": "dpdrad6"
+    },
+    {
+      "id": "mu36fzj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "9j3ct5f"
+    },
+    {
+      "id": "dkmny08",
+      "type": "heading",
+      "level": 2,
+      "content": "7. SOLVED EXAMPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "avklnp6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions on 'Product of two numbers = HCF × LCM' are extremely common in competitive exams.",
+        "Be cautious with fraction calculations: do not mix up numerators and denominators in HCF/LCM formulas.",
+        "Word problems featuring ringing bells, traffic lights, or circular tracks almost always test LCM concepts."
+      ],
+      "id": "6yfo618"
+    },
+    {
+      "type": "paragraph",
+      "id": "3e333j8"
+    },
+    {
+      "id": "t8j78le",
+      "type": "heading",
+      "level": 2,
+      "content": "8. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "59cgyng"
+    },
+    {
+      "id": "clvwljj",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q3ndnzo"
+    }
+  ],
+  "enriched": true
+}

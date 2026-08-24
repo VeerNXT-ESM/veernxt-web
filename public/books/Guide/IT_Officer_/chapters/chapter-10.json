@@ -1,0 +1,537 @@
+{
+  "id": "g60tjf7",
+  "title": "CHAPTER 10: WEB TECHNOLOGIES AND APIs",
+  "order": 10,
+  "blocks": [
+    {
+      "id": "1zq4und",
+      "type": "heading",
+      "level": 2,
+      "content": "10.1 Web Architecture"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Web Architecture forms the foundational framework enabling client-server communication across distributed networks.",
+        "HTTP Protocol is a stateless, application-layer communication protocol underlying data exchange on the Web.",
+        "HTTP Status Codes indicate whether a specific HTTP request has been successfully completed, redirected, or encountered an error.",
+        "REST, GraphQL, and gRPC represent distinct architectural paradigms for building modern web APIs.",
+        "OWASP Top 10 details the most critical security vulnerabilities affecting contemporary web applications."
+      ],
+      "id": "ibq679z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Security Framework",
+          "value": "OWASP Top 10",
+          "icon": "shield"
+        },
+        {
+          "label": "Core Protocol",
+          "value": "HTTP / HTTPS",
+          "icon": "globe"
+        },
+        {
+          "label": "API Styles",
+          "value": "REST, GraphQL, gRPC",
+          "icon": "code"
+        },
+        {
+          "label": "Response Tracking",
+          "value": "HTTP Status Codes",
+          "icon": "check"
+        }
+      ],
+      "id": "lrg2fzc"
+    },
+    {
+      "id": "phb50jf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "10.4 Web Security — OWASP Top 10",
+      "id": "jwnt2wh"
+    },
+    {
+      "id": "7z6uwaz",
+      "type": "heading",
+      "level": 2,
+      "content": "10.2 HTTP Protocol"
+    },
+    {
+      "id": "1p8w879",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "REST",
+        "GraphQL",
+        "gRPC"
+      ],
+      "rows": [
+        [
+          "Data Format",
+          "JSON, XML",
+          "JSON",
+          "Protocol Buffers (Binary)"
+        ],
+        [
+          "Transport Protocol",
+          "HTTP/1.1 or HTTP/2",
+          "HTTP/1.1 or HTTP/2",
+          "HTTP/2 strictly"
+        ],
+        [
+          "Fetching Model",
+          "May cause over/under-fetching",
+          "Fetches exact requested fields",
+          "Strictly typed binary payload"
+        ],
+        [
+          "Primary Use Case",
+          "Public web APIs & CRUD",
+          "Flexible client queries & mobile",
+          "High-performance microservices"
+        ]
+      ],
+      "id": "f583g64"
+    },
+    {
+      "id": "rld5m9i",
+      "type": "heading",
+      "level": 3,
+      "content": "HTTP Status Codes"
+    },
+    {
+      "id": "tqvsd0r",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3sa07mg",
+      "type": "heading",
+      "level": 2,
+      "content": "10.3 REST vs GraphQL vs gRPC"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Memorize HTTP status code series: 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
+        "Understand key differences between REST (JSON/HTTP 1.1), GraphQL (single endpoint query language), and gRPC (HTTP/2 with Protocol Buffers).",
+        "Be prepared for questions on OWASP Top 10 vulnerabilities, particularly SQL Injection, Broken Access Control, and XSS."
+      ],
+      "id": "aue76n0"
+    },
+    {
+      "id": "2jgw9w4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a3i4t01",
+      "type": "heading",
+      "level": 2,
+      "content": "10.4 Web Security — OWASP Top 10"
+    },
+    {
+      "id": "iy3tf2v",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

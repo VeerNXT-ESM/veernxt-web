@@ -1,0 +1,91 @@
+{
+  "id": "ylnz8qi",
+  "title": "11. Right to Constitutional Remedies (Article 32)",
+  "order": 278,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "9vw41xy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "An article without which this Constitution would be a nullity... It is the very soul of the Constitution and the very heart of it.",
+      "id": "fz0mg7p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Article 32 (Supreme Court)",
+        "Article 226 (High Court)"
+      ],
+      "rows": [
+        [
+          "Scope of Enforcement",
+          "Enforces Fundamental Rights only",
+          "Enforces Fundamental Rights as well as ordinary legal rights"
+        ],
+        [
+          "Territorial Jurisdiction",
+          "Applicable throughout the entire territory of India",
+          "Confined to the state territory or where the cause of action arises"
+        ],
+        [
+          "Nature of Right",
+          "Is itself a Fundamental Right (SC cannot refuse relief)",
+          "Is a discretionary power (HC may refuse to exercise writ power)"
+        ]
+      ],
+      "id": "biiqutw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 32",
+          "icon": "book"
+        },
+        {
+          "label": "Types of Writs",
+          "value": "5 Writs",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Custodian",
+          "value": "Supreme Court",
+          "icon": "award"
+        },
+        {
+          "label": "Constitutional Status",
+          "value": "Basic Feature",
+          "icon": "info"
+        }
+      ],
+      "id": "9oenf8w"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 32 can be invoked exclusively for the enforcement of Fundamental Rights, whereas Article 226 applies to both Fundamental Rights and legal rights.",
+        "The Supreme Court cannot refuse to exercise its writ jurisdiction under Article 32 because the remedy itself is a Fundamental Right, whereas High Court jurisdiction under Article 226 is discretionary.",
+        "Habeas Corpus is the only writ that can be issued against both public authorities and private individuals.",
+        "Mandamus cannot be issued against private individuals, the President of India, or State Governors."
+      ],
+      "id": "ycjm9b7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 32 confers the right to remedies for the enforcement of Fundamental Rights guaranteed under Part III of the Constitution.",
+        "Dr. B.R. Ambedkar famously referred to Article 32 as 'the very soul of the Constitution and the very heart of it'.",
+        "The five constitutional writs available under Article 32 are Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo-Warranto.",
+        "The Supreme Court's power to issue writs under Article 32 is part of the basic structure of the Constitution and cannot be abridged by constitutional amendments.",
+        "The right guaranteed by Article 32 cannot be suspended except as provided for by the Constitution during a declared National Emergency under Article 359."
+      ],
+      "id": "kmu49x3"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,100 @@
+{
+  "id": "xm4iult",
+  "title": "6. Composition of Legislative Council",
+  "order": 384,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2utvmyy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The maximum strength of the council is fixed at one-third of the total strength of the assembly and the minimum strength is fixed at 40.",
+      "id": "lip0nck"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category / Authority",
+        "Share of Members",
+        "Electorate / Criteria"
+      ],
+      "rows": [
+        [
+          "Local Authorities",
+          "1/3rd",
+          "Elected by members of local bodies like municipalities and district boards"
+        ],
+        [
+          "Legislative Assembly (MLAs)",
+          "1/3rd",
+          "Elected by MLAs from among persons who are not members of the assembly"
+        ],
+        [
+          "Graduates Constituency",
+          "1/12th",
+          "Elected by graduates of 3 years' standing residing in the state"
+        ],
+        [
+          "Teachers Constituency",
+          "1/12th",
+          "Elected by teachers of 3 years' standing in secondary or higher educational institutions"
+        ],
+        [
+          "Governor's Nomination",
+          "1/6th",
+          "Nominated from fields of Literature, Science, Art, Cooperative Movement, and Social Service"
+        ]
+      ],
+      "id": "cg4j8gp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Maximum Strength",
+          "value": "1/3 of Assembly",
+          "icon": "info"
+        },
+        {
+          "label": "Minimum Strength",
+          "value": "40 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Governor Nomination",
+          "value": "1/6 of Total",
+          "icon": "award"
+        },
+        {
+          "label": "Elected by MLAs",
+          "value": "1/3 of Total",
+          "icon": "book"
+        }
+      ],
+      "id": "w941f1h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Unlike Rajya Sabha nominations by the President, the Governor's nominations to the Legislative Council include 'Cooperative Movement' as an additional field.",
+        "1/3rd of members are elected by members of local authorities, and another 1/3rd are elected by the members of the Legislative Assembly (MLAs).",
+        "Graduates and teachers elect 1/12th of the total members each, provided they meet the 3-year standing criteria."
+      ],
+      "id": "1yi8md6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The composition of the Legislative Council (Vidhan Parishad) is laid down under Article 171 of the Constitution of India.",
+        "The maximum strength of the council is one-third of the total strength of the state assembly, but minimum strength must be 40.",
+        "5/6th of the total members are indirectly elected, while 1/6th are nominated by the Governor.",
+        "Elections to the Legislative Council are held in accordance with the system of proportional representation by means of the single transferable vote.",
+        "Governor nominates members possessing special knowledge or practical experience in literature, science, art, cooperative movement, and social service."
+      ],
+      "id": "86tnkp9"
+    }
+  ],
+  "enriched": true
+}

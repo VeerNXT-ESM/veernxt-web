@@ -1,0 +1,106 @@
+{
+  "id": "cocn7a6",
+  "title": "Untitled Chapter",
+  "order": 106,
+  "blocks": [
+    {
+      "id": "gb8an8u",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Untitled Chapter",
+      "id": "o27gvlr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic Focus",
+          "value": "General",
+          "icon": "book"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "High",
+          "icon": "award"
+        },
+        {
+          "label": "Revision Time",
+          "value": "10 mins",
+          "icon": "clock"
+        }
+      ],
+      "id": "ntiox4f"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Pay special attention to standard terminology and exact definitions.",
+        "Verify statements thoroughly to prevent negative marking in preliminary tests."
+      ],
+      "id": "jcmhf1y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Understand the foundational definitions and core principles of the subject.",
+        "Focus on high-yield factual details commonly targeted in competitive examinations.",
+        "Practice multi-statement questions to test clarity on complex concepts."
+      ],
+      "id": "kwg4ypy"
+    }
+  ],
+  "enriched": true
+}

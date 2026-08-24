@@ -1,0 +1,126 @@
+{
+  "id": "xsickra",
+  "title": "6. Market Intermediaries Regulated by SEBI (Often Asked)",
+  "order": 553,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hz4cq48"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "SEBI Act, 1992",
+          "icon": "book"
+        },
+        {
+          "label": "Registration Section",
+          "value": "Section 12",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "Investor Protection",
+          "icon": "award"
+        },
+        {
+          "label": "Redressal Portal",
+          "value": "SCORES",
+          "icon": "info"
+        }
+      ],
+      "id": "xuerp5v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Under Section 12 of the SEBI Act, 1992, no intermediary can buy, sell, or deal in securities without obtaining a certificate of registration from SEBI.",
+        "Key primary market intermediaries include Merchant Bankers, Underwriters, Registrar and Share Transfer Agents (RTA), and Bankers to an Issue.",
+        "Secondary market intermediaries prominently feature Stock Brokers, Sub-brokers, Clearing Members, and Depository Participants (DPs).",
+        "Institutional and advisory intermediaries such as Credit Rating Agencies, Foreign Portfolio Investors (FPIs), Portfolio Managers, and Investment Advisers operate under explicit SEBI regulations.",
+        "SEBI enforces Code of Conduct, capital adequacy norms, and periodic inspections to ensure market integrity and safeguard investor interests."
+      ],
+      "id": "np5q8rz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "No intermediary shall buy, sell or deal in securities except under, and in accordance with, the conditions of a certificate of registration obtained from the Board.",
+      "id": "trtomil"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g9cqtq2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rjduhwi"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Merchant Banker",
+        "Portfolio Manager"
+      ],
+      "rows": [
+        [
+          "Primary Role",
+          "Issue management, underwriting, and corporate advisory services",
+          "Managing investments and securities portfolios on behalf of clients"
+        ],
+        [
+          "Target Client",
+          "Corporate entities and issuing companies",
+          "Individual investors and High Net-Worth Individuals (HNIs)"
+        ],
+        [
+          "Governing Regulation",
+          "SEBI (Merchant Bankers) Regulations, 1992",
+          "SEBI (Portfolio Managers) Regulations, 2020"
+        ],
+        [
+          "Key Requirement",
+          "Must be a body corporate with mandatory minimum net worth",
+          "Minimum client investment threshold enforced by SEBI"
+        ]
+      ],
+      "id": "7l4qpev"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1pytiy5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6zfg4b5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Section 12 of the SEBI Act, 1992 governs the mandatory registration requirement for all market intermediaries.",
+        "Questions frequently test the distinction between Merchant Bankers (issue management) and Portfolio Managers (discretionary/non-discretionary fund management).",
+        "Depositories (NSDL & CDSL) act as custodians of electronic securities, while investors interact directly with Depository Participants (DPs)."
+      ],
+      "id": "7652p4u"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aga1plz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rdxepby"
+    }
+  ],
+  "enriched": true
+}

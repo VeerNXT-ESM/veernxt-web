@@ -1,22 +1,22 @@
 {
-  "id": "t2b67fr",
+  "id": "cb1fin3",
   "title": "Chapter 3: Computer Hardware",
   "order": 3,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "rxt00y3"
+      "id": "zj0xreh"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Core Processor",
+          "label": "Primary Processor",
           "value": "CPU",
-          "icon": "info"
+          "icon": "cpu"
         },
         {
-          "label": "Main Circuit",
+          "label": "Main Circuit Board",
           "value": "Motherboard",
           "icon": "book"
         },
@@ -31,10 +31,10 @@
           "icon": "award"
         }
       ],
-      "id": "pyuvavg"
+      "id": "xwrosj4"
     },
     {
-      "id": "b1h4uuo",
+      "id": "hhynlou",
       "type": "heading",
       "level": 2,
       "content": "4.1 Central Processing Unit (CPU)"
@@ -43,25 +43,25 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The Central Processing Unit (CPU) forms the core processing element of computer hardware.",
-        "The Motherboard connects and houses all essential hardware components and peripherals.",
-        "Hardware Ports serve as vital interfaces for attaching input, output, and storage devices.",
-        "Expansion Cards provide modular upgrade capabilities to enhance system performance."
+        "The Central Processing Unit (CPU) serves as the primary processing unit, detailing essential components and operational functions.",
+        "The Motherboard houses main system components and enables critical inter-component communication.",
+        "Computer ports facilitate external hardware connections through various dedicated port types.",
+        "Expansion cards allow system modularity and hardware capability enhancement."
       ],
-      "id": "zd6at7h"
+      "id": "2kqal52"
     },
     {
       "type": "paragraph",
-      "id": "sojiqz4"
+      "id": "d40ucd3"
     },
     {
-      "id": "zat6vnb",
+      "id": "0cvsuyk",
       "type": "heading",
       "level": 3,
       "content": "4.1.1 Components of CPU"
     },
     {
-      "id": "bhnoxjn",
+      "id": "x8g9876",
       "type": "table",
       "rows": [
         {
@@ -99,13 +99,13 @@
       ]
     },
     {
-      "id": "0lrijt3",
+      "id": "1930ohk",
       "type": "heading",
       "level": 3,
       "content": "4.1.2 Functions of CPU"
     },
     {
-      "id": "w0wldki",
+      "id": "gorbns6",
       "type": "list",
       "items": [
         null,
@@ -115,13 +115,13 @@
       ]
     },
     {
-      "id": "55ci2vr",
+      "id": "4jdjvvk",
       "type": "heading",
       "level": 3,
       "content": "4.1.3 Important Exam Points"
     },
     {
-      "id": "usujuve",
+      "id": "8zaj1q6",
       "type": "list",
       "items": [
         null,
@@ -133,26 +133,26 @@
     {
       "type": "pullQuote",
       "content": "Central Processing Unit (CPU)",
-      "id": "l4u2aub"
+      "id": "eky3fm7"
     },
     {
-      "id": "edl9aon",
+      "id": "9i3bx22",
       "type": "heading",
       "level": 2,
       "content": "4.2 Motherboard"
     },
     {
       "type": "paragraph",
-      "id": "3573zxc"
+      "id": "33ag5po"
     },
     {
-      "id": "1zsvgc3",
+      "id": "1oxs596",
       "type": "heading",
       "level": 3,
       "content": "4.2.1 Main Components on Motherboard"
     },
     {
-      "id": "y1pxuqe",
+      "id": "8afhuno",
       "type": "list",
       "items": [
         null,
@@ -163,13 +163,13 @@
       ]
     },
     {
-      "id": "9fd8m2a",
+      "id": "b356c0g",
       "type": "heading",
       "level": 3,
       "content": "4.2.2 Functions of Motherboard"
     },
     {
-      "id": "d6wxkxl",
+      "id": "rvvabn1",
       "type": "list",
       "items": [
         null,
@@ -178,13 +178,13 @@
       ]
     },
     {
-      "id": "cda7jgy",
+      "id": "lmeomub",
       "type": "heading",
       "level": 3,
       "content": "4.2.3 Important Exam Points"
     },
     {
-      "id": "ydunsvd",
+      "id": "v5rufh0",
       "type": "list",
       "items": [
         null,
@@ -193,23 +193,23 @@
       ]
     },
     {
-      "id": "hi67wyq",
+      "id": "4ek71la",
       "type": "heading",
       "level": 2,
       "content": "4.3 Ports"
     },
     {
       "type": "paragraph",
-      "id": "sy8iiqv"
+      "id": "ybl850h"
     },
     {
-      "id": "hyckcim",
+      "id": "yjby1cn",
       "type": "heading",
       "level": 3,
       "content": "4.3.1 Types of Ports"
     },
     {
-      "id": "vtysr5y",
+      "id": "dqheh4a",
       "type": "table",
       "rows": [
         {
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "id": "i44ugsi",
+      "id": "d3541e9",
       "type": "heading",
       "level": 2,
       "content": "4.4 Expansion Cards"
@@ -263,24 +263,24 @@
     {
       "type": "examAlert",
       "items": [
-        "Functions and internal components of the CPU are frequently asked in competitive exams.",
-        "Questions often focus on identifying various motherboard components and port types.",
-        "Distinguishing between different expansion cards and their specific use cases is crucial for MCQs."
+        "Key questions frequently test the specific functions and architectural components of the CPU.",
+        "Motherboard components and their primary functions are common high-yield exam topics.",
+        "Distinction between various hardware ports and expansion card types is regularly asked in competitive exams."
       ],
-      "id": "j6tnkq8"
+      "id": "99x452i"
     },
     {
       "type": "paragraph",
-      "id": "ef02alo"
+      "id": "rwu773v"
     },
     {
-      "id": "l6vbjw3",
+      "id": "ufar2xv",
       "type": "heading",
       "level": 3,
       "content": "4.4.1 Types of Expansion Cards"
     },
     {
-      "id": "tocvvk4",
+      "id": "dm67ebw",
       "type": "table",
       "rows": [
         {
@@ -321,13 +321,13 @@
       ]
     },
     {
-      "id": "9c6775f",
+      "id": "fxthq4a",
       "type": "heading",
       "level": 2,
       "content": "4.5 Important Exam Points"
     },
     {
-      "id": "g2pbvuw",
+      "id": "zmqolr8",
       "type": "list",
       "items": [
         null,

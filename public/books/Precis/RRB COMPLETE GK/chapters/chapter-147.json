@@ -1,0 +1,120 @@
+{
+  "id": "bc6mwqf",
+  "title": "3. Transportation by Wind",
+  "order": 147,
+  "blocks": [
+    {
+      "id": "dxt0z4a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Aeolian soils are formed by wind transportation, where saltation is the predominant mechanism for moving medium-sized sand grains.",
+      "id": "mwz6t43"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Transport Mode",
+        "Particle Size Range",
+        "Movement Mechanism"
+      ],
+      "rows": [
+        [
+          "Suspension",
+          "< 0.1 mm",
+          "Fine dust and silt floating in atmospheric air currents over long distances."
+        ],
+        [
+          "Saltation",
+          "0.1 mm – 0.5 mm",
+          "Sand grains moving in a series of short bouncing or jumping trajectories near the ground."
+        ],
+        [
+          "Surface Creep",
+          "> 0.5 mm",
+          "Coarser particles rolling or sliding along the surface due to impacts from saltating grains."
+        ]
+      ],
+      "id": "c8y2f9g"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Suspension Size",
+          "value": "< 0.1 mm",
+          "icon": "info"
+        },
+        {
+          "label": "Saltation Size",
+          "value": "0.1 - 0.5 mm",
+          "icon": "check"
+        },
+        {
+          "label": "Surface Creep Size",
+          "value": "> 0.5 mm",
+          "icon": "clock"
+        },
+        {
+          "label": "Saltation Share",
+          "value": "50% - 75%",
+          "icon": "award"
+        }
+      ],
+      "id": "narjab8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Loess is frequently tested in GATE and ESE as a classic example of an aeolian silt deposit with high collapsibility upon saturation.",
+        "Questions often test particle size thresholds: Suspension (<0.1 mm), Saltation (0.1 mm to 0.5 mm), and Surface Creep (>0.5 mm).",
+        "Aeolian deposits are characterized as uniformly graded (poorly graded) soils due to the natural sorting action of wind."
+      ],
+      "id": "i024dm8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Wind transportation (Aeolian process) moves soil particles through three distinct mechanisms: suspension, saltation, and surface creep.",
+        "Saltation is the dominant mode of wind transport, responsible for moving 50% to 75% of wind-borne sediment weight through bouncing motions.",
+        "Loess is a major aeolian deposit composed of wind-blown silt particles, characterized by light color, high compressibility, and collapsible behavior upon wetting.",
+        "Sand dunes are deposits of fine to medium sand formed when wind encounters obstacles, leading to uniform-graded soil accumulation.",
+        "Aeolian soils typically exhibit poor grading (uniform particle size distribution) because wind sorts particles selectively by size and weight."
+      ],
+      "id": "kpk824j"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,546 @@
+{
+  "id": "r5xgznc",
+  "title": "CHAPTER 8 : LIGHT (OPTICS)",
+  "order": 101,
+  "blocks": [
+    {
+      "id": "4bv5fid",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO LIGHT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light exhibits a dual nature, behaving as electromagnetic waves in propagation and as discrete particles (photons) in interaction with matter.",
+        "Concave mirrors converge light and can form both real and virtual images, whereas convex mirrors diverge light and always form virtual, erect, and diminished images.",
+        "Refraction occurs due to a change in the speed of light across different optical media, following Snell's Law (n₁ sin i = n₂ sin r).",
+        "Defects of vision are corrected using specialized lenses: concave lenses for Myopia, convex lenses for Hypermetropia, and bifocal lenses for Presbyopia.",
+        "Dispersion splits white light into its component colors (VIBGYOR) because different wavelengths refract through different angles in a prism."
+      ],
+      "id": "xvf1l0e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed of Light in Vacuum",
+          "value": "3 × 10⁸ m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Visible Wavelength Spectrum",
+          "value": "400 - 700 nm",
+          "icon": "info"
+        },
+        {
+          "label": "Laws of Reflection/Refraction",
+          "value": "2 Laws Each",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Vision Defects",
+          "value": "4 Types",
+          "icon": "check"
+        }
+      ],
+      "id": "yaadgvh"
+    },
+    {
+      "type": "paragraph",
+      "id": "9j4ia03"
+    },
+    {
+      "type": "paragraph",
+      "id": "8g9tu94"
+    },
+    {
+      "id": "f0ut788",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9vyibsr"
+    },
+    {
+      "type": "paragraph",
+      "id": "j5azwm8"
+    },
+    {
+      "id": "tjxhed1",
+      "type": "heading",
+      "level": 2,
+      "content": "NATURE OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "3i8dkiz"
+    },
+    {
+      "id": "ckwaxf0",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "z7ak6o9"
+    },
+    {
+      "type": "paragraph",
+      "id": "4gb5h5q"
+    },
+    {
+      "id": "f282ane",
+      "type": "heading",
+      "level": 2,
+      "content": "REFLECTION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "3qqjmvm"
+    },
+    {
+      "type": "paragraph",
+      "id": "udew04v"
+    },
+    {
+      "id": "sgckixj",
+      "type": "heading",
+      "level": 3,
+      "content": "Laws of Reflection"
+    },
+    {
+      "type": "paragraph",
+      "id": "oj6iwtg"
+    },
+    {
+      "id": "wl0aqp6",
+      "type": "numberedList",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "0pasa7u"
+    },
+    {
+      "id": "5tucw3v",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF MIRRORS"
+    },
+    {
+      "type": "paragraph",
+      "id": "undhfap"
+    },
+    {
+      "id": "6lgzhr0",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "duuhhu3",
+      "type": "heading",
+      "level": 3,
+      "content": "Plane Mirror"
+    },
+    {
+      "type": "paragraph",
+      "id": "g6scq5x"
+    },
+    {
+      "id": "3byukcu",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "glep29u"
+    },
+    {
+      "id": "kqb2366",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "41q2lr4",
+      "type": "heading",
+      "level": 3,
+      "content": "Concave Mirror"
+    },
+    {
+      "type": "paragraph",
+      "id": "rp33j03"
+    },
+    {
+      "id": "3386573",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Light travels in a straight line in a homogeneous medium, a phenomenon known as the rectilinear propagation of light.",
+      "id": "awk8a3c"
+    },
+    {
+      "type": "paragraph",
+      "id": "4nt02np"
+    },
+    {
+      "id": "z1iorbw",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "2dvdoeo",
+      "type": "heading",
+      "level": 3,
+      "content": "Convex Mirror"
+    },
+    {
+      "type": "paragraph",
+      "id": "jbr1oap"
+    },
+    {
+      "id": "i7w5k18",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "xx4p5mm"
+    },
+    {
+      "id": "pwbgybh",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "n884bhm",
+      "type": "heading",
+      "level": 2,
+      "content": "REFRACTION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "6vzpj6g"
+    },
+    {
+      "type": "paragraph",
+      "id": "s0gbjsc"
+    },
+    {
+      "id": "8xu3sko",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "vpueopm",
+      "type": "heading",
+      "level": 3,
+      "content": "Laws of Refraction"
+    },
+    {
+      "id": "tqe7u4z",
+      "type": "numberedList",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "tmz6em2",
+      "type": "heading",
+      "level": 2,
+      "content": "REFRACTIVE INDEX"
+    },
+    {
+      "type": "paragraph",
+      "id": "52z1hir"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Concave Mirror",
+        "Convex Mirror"
+      ],
+      "rows": [
+        [
+          "Reflecting Surface",
+          "Curved inwards",
+          "Curved outwards"
+        ],
+        [
+          "Nature of Image",
+          "Mostly real and inverted (virtual and erect when object is between P and F)",
+          "Always virtual and erect"
+        ],
+        [
+          "Image Size",
+          "Can be enlarged, diminished, or same size",
+          "Always diminished"
+        ],
+        [
+          "Key Applications",
+          "Shaving mirrors, headlights, solar furnaces",
+          "Rear-view mirrors in vehicles, street light reflectors"
+        ]
+      ],
+      "id": "y6csb0z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1rwpeun"
+    },
+    {
+      "type": "paragraph",
+      "id": "puceu3f"
+    },
+    {
+      "id": "yzk8zof",
+      "type": "heading",
+      "level": 2,
+      "content": "LENSES"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9ppp9v"
+    },
+    {
+      "id": "t1d5iss",
+      "type": "numberedList",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "j35bubi",
+      "type": "heading",
+      "level": 3,
+      "content": "Convex Lens"
+    },
+    {
+      "type": "paragraph",
+      "id": "3n7qnvp"
+    },
+    {
+      "id": "44cfjjq",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "lpbespe",
+      "type": "heading",
+      "level": 3,
+      "content": "Concave Lens"
+    },
+    {
+      "type": "paragraph",
+      "id": "nbnusai"
+    },
+    {
+      "id": "lj7yoy8",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "4az3yie",
+      "type": "heading",
+      "level": 2,
+      "content": "HUMAN EYE"
+    },
+    {
+      "type": "paragraph",
+      "id": "yu4h2ra"
+    },
+    {
+      "id": "uld8jdu",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "xkyqj1p",
+      "type": "heading",
+      "level": 3,
+      "content": "Defects of Vision"
+    },
+    {
+      "id": "dx27okv",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "cfjw5ze"
+    },
+    {
+      "id": "uwv7a99",
+      "type": "heading",
+      "level": 2,
+      "content": "DISPERSION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "9mgl6ra"
+    },
+    {
+      "type": "paragraph",
+      "id": "e8k3m7d"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sign Convention Rules: Focal length (f) is positive for convex mirrors and lenses, but negative for concave mirrors and lenses.",
+        "Power of a Lens (P = 1 / f in meters) expressed in Dioptres (D) is a high-frequency topic in numerical problems.",
+        "Rayleigh Scattering specifies that scattering intensity is inversely proportional to the fourth power of wavelength (I ∝ 1/λ⁴), explaining why the sky appears blue."
+      ],
+      "id": "n7lrg53"
+    },
+    {
+      "id": "wtknhv3",
+      "type": "heading",
+      "level": 2,
+      "content": "SCATTERING OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "id": "ap1qzis"
+    },
+    {
+      "id": "w99c3g4",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "al22z9s"
+    },
+    {
+      "id": "o0fnkmc",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT  QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "asx7fmw"
+    },
+    {
+      "type": "paragraph",
+      "id": "5cquw4j"
+    },
+    {
+      "type": "paragraph",
+      "id": "7jgrom6"
+    },
+    {
+      "type": "paragraph",
+      "id": "vkgfkxb"
+    },
+    {
+      "type": "paragraph",
+      "id": "go37alz"
+    },
+    {
+      "id": "iqn5k6e",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "57negls",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "enriched": true
+}

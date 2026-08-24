@@ -1,0 +1,98 @@
+{
+  "id": "xvg3f0i",
+  "title": "9. Limitations of CBI",
+  "order": 523,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "u8s0bc1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "State Consent Requirement",
+          "value": "Section 6",
+          "icon": "info"
+        },
+        {
+          "label": "SC Observation Year",
+          "value": "2013",
+          "icon": "calendar"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "Non-Statutory Body",
+          "icon": "check"
+        }
+      ],
+      "id": "r5uc41g"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Supreme Court of India severely criticized the agency by observing that the CBI has become a caged parrot speaking in its master's voice.",
+      "id": "seijdf5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "General Consent",
+        "Specific Consent"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "A standing consent given by a state allowing CBI to seamlessly register and investigate cases in that state.",
+          "Case-by-case approval required from the state government before registering an investigation."
+        ],
+        [
+          "Impact of Withdrawal",
+          "CBI cannot register fresh cases in that state without explicit permission for each case.",
+          "CBI must apply to the state government separately for every single case it seeks to investigate."
+        ],
+        [
+          "Pending Investigations",
+          "Investigations started prior to withdrawal of consent remain unaffected and can continue.",
+          "Applies strictly to new cases; old ongoing investigations retain validity."
+        ]
+      ],
+      "id": "0s3prle"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CBI is not a statutory body; it derives its investigating powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "Under Section 6 of the DSPE Act, the CBI requires the prior consent of the concerned state government to conduct investigations within that state's jurisdiction.",
+        "In 2013, the Supreme Court of India famously characterized the CBI as a 'caged parrot speaking in its master's voice' due to excessive political executive interference.",
+        "The agency faces structural dependence, relies heavily on personnel on deputation from state police forces, and suffers from manpower shortages.",
+        "Anti-corruption investigations by the CBI are supervised by the Central Vigilance Commission (CVC), whereas overall administrative control rests with the Ministry of Personnel."
+      ],
+      "id": "n14fgnw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT created by an Act of Parliament; it was set up by a resolution of the Ministry of Home Affairs and derives power from the DSPE Act, 1946.",
+        "Section 6 of the DSPE Act makes state government consent mandatory for CBI operations in any state.",
+        "Superintendence over CBI regarding Prevention of Corruption Act offenses lies with CVC, whereas administrative control rests with the Ministry of Personnel, Public Grievances and Pensions."
+      ],
+      "id": "07r7hx4"
+    },
+    {
+      "type": "paragraph",
+      "id": "wuplyph"
+    },
+    {
+      "type": "paragraph",
+      "id": "6p8h8fj"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,137 @@
+{
+  "id": "q2nnuq6",
+  "title": "Constitutional Status",
+  "order": 460,
+  "blocks": [
+    {
+      "id": "c957b4t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional status ensures independence, permanence, and protection from arbitrary legislative or executive interference.",
+      "id": "hfism78"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies",
+        "Executive Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Authority",
+          "Mentioned in the Constitution itself",
+          "Created by an Act of Parliament or State Legislature",
+          "Created by an Executive Order / Cabinet Resolution"
+        ],
+        [
+          "Mode of Alteration",
+          "Requires Constitutional Amendment under Art. 368",
+          "Requires ordinary legislation passed by Parliament",
+          "Requires executive notification / Cabinet decision"
+        ],
+        [
+          "Examples",
+          "Election Commission, UPSC, Finance Commission, CAG",
+          "NHRC, National Commission for Women, SEBI, CVC",
+          "NITI Aayog, Law Commission of India"
+        ]
+      ],
+      "id": "ayqf69v"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Article",
+          "value": "Art. 243 - 243O",
+          "icon": "book"
+        },
+        {
+          "label": "Amendment Act",
+          "value": "73rd Amendment, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part IX",
+          "icon": "info"
+        },
+        {
+          "label": "Functional Items",
+          "value": "29 Subjects",
+          "icon": "check"
+        }
+      ],
+      "id": "2ziwqgd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test classification: differentiate between Constitutional Bodies (e.g., CAG, UPSC, Election Commission), Statutory Bodies (e.g., NHRC, SEBI), and Executive Bodies (e.g., NITI Aayog).",
+        "Note the key constitutional articles: Article 148 (CAG), Article 280 (Finance Commission), Article 315 (UPSC), and Article 324 (Election Commission).",
+        "Remember that non-constitutional bodies can be established by ordinary law (Statutory) or executive notification (Non-statutory/Executive)."
+      ],
+      "id": "4uck2ec"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their powers, duties, and structure directly from the text of the Constitution of India.",
+        "According constitutional status to a body or institution ensures independence, financial autonomy, and protection from arbitrary executive interference.",
+        "The 73rd and 74th Constitutional Amendment Acts of 1992 conferred constitutional status on Panchayati Raj Institutions and Municipalities respectively.",
+        "Any modification to the powers or composition of constitutional bodies generally requires a constitutional amendment under Article 368."
+      ],
+      "id": "te61ikh"
+    }
+  ],
+  "enriched": true
+}

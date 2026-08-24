@@ -1,0 +1,125 @@
+{
+  "id": "ln0nuhw",
+  "title": "Continental Drift vs Plate Tectonics",
+  "order": 85,
+  "blocks": [
+    {
+      "id": "k9w4kgi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Plate Tectonics explains the movement of continents through convection currents in the asthenosphere, rectifying the main flaw in Wegener's Continental Drift theory.",
+      "id": "0j3lw96"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Drift Theory",
+        "Plate Tectonics Theory"
+      ],
+      "rows": [
+        [
+          "Proposed By & Year",
+          "Alfred Wegener (1912)",
+          "McKenzie, Parker, and Morgan (1967)"
+        ],
+        [
+          "Core Concept",
+          "Continents plow directly through oceanic crust like icebergs.",
+          "Rigid lithospheric plates float and move across the asthenosphere."
+        ],
+        [
+          "Driving Mechanism",
+          "Pole-fleeing force and tidal force (Inadequate)",
+          "Thermal convection currents in the mantle"
+        ],
+        [
+          "Key Evidence",
+          "Jigsaw fit of coastlines, Glossopteris fossils, tillite deposits",
+          "Seafloor spreading, paleomagnetism, mid-ocean ridge mapping"
+        ]
+      ],
+      "id": "omk2mfy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Wegener's Theory",
+          "value": "1912",
+          "icon": "calendar"
+        },
+        {
+          "label": "Plate Tectonics",
+          "value": "1967",
+          "icon": "clock"
+        },
+        {
+          "label": "Major Tectonic Plates",
+          "value": "7",
+          "icon": "award"
+        },
+        {
+          "label": "Supercontinent",
+          "value": "Pangea",
+          "icon": "book"
+        }
+      ],
+      "id": "uhezuqy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Wegener incorrectly identified 'pole-fleeing force' (centrifugal force due to Earth's rotation) and 'tidal force' as the drivers of continental movement—a popular trap in UPSC Prelims.",
+        "Memorize the 7 major plates: Pacific, North American, South American, Eurasian, African, Indo-Australian, and Antarctic.",
+        "Seafloor spreading theory proposed by Harry Hess in 1960 acted as the vital conceptual bridge connecting Continental Drift to Plate Tectonics."
+      ],
+      "id": "m8piux3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alfred Wegener proposed the Continental Drift theory in 1912, hypothesizing that all present-day continents were once part of a single supercontinent named Pangea surrounded by the ocean Panthalassa.",
+        "Continental Drift was initially rejected by the scientific community because Wegener could not provide a plausible physical mechanism to explain how continents moved.",
+        "Plate Tectonics theory, formulated in 1967 by McKenzie, Parker, and Morgan, posits that the Earth's rigid lithosphere is broken into major and minor plates that float over the semi-fluid asthenosphere.",
+        "Thermal convection currents within the Earth's mantle serve as the primary driving mechanism for lithospheric plate movements.",
+        "Discoveries in seafloor spreading by Harry Hess and paleomagnetism provided the crucial empirical foundation for Plate Tectonics."
+      ],
+      "id": "811bg2n"
+    }
+  ],
+  "enriched": true
+}

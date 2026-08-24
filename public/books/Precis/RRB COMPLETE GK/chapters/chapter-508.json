@@ -1,0 +1,120 @@
+{
+  "id": "riop4ok",
+  "title": "Independence of CVC",
+  "order": 508,
+  "blocks": [
+    {
+      "id": "4vqrj17",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission is an independent body which is free from executive control in the exercise of its powers and functions.",
+      "id": "gfb5seh"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commissioner (CVC)",
+        "UPSC Chairman & Members"
+      ],
+      "rows": [
+        [
+          "Tenure",
+          "4 years or 65 years of age",
+          "6 years or 65 years of age"
+        ],
+        [
+          "Selection Committee",
+          "3-Member Panel (PM, HM, Leader of Opposition)",
+          "Appointed directly by the President"
+        ],
+        [
+          "Further Employment",
+          "Strictly ineligible for any Central/State government post",
+          "Members eligible for UPSC Chairmanship; Chairman ineligible for government posts"
+        ]
+      ],
+      "id": "rs4drhp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Statutory Status",
+          "value": "CVC Act 2003",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure of Office",
+          "value": "4 Years / 65 Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "Commission Strength",
+          "value": "1 CVC + Max 2 VCs",
+          "icon": "award"
+        },
+        {
+          "label": "Selection Committee",
+          "value": "3 Members",
+          "icon": "check"
+        }
+      ],
+      "id": "sbniy93"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tenure Exception: The CVC tenure is 4 years (or 65 years of age), unlike standard statutory or constitutional bodies which usually have a 5 or 6-year tenure.",
+        "Further Employment Ban: Members are strictly ineligible for any further employment under the Central or State Governments post-retirement.",
+        "Removal Process: The President can remove the CVC on grounds of proved misbehaviour or incapacity only after a Supreme Court inquiry."
+      ],
+      "id": "fuaf5r3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission is an independent body that functions free from executive control in performing its duties.",
+        "Members are appointed by the President on the recommendation of a committee consisting of the Prime Minister, Minister of Home Affairs, and Leader of Opposition in the Lok Sabha.",
+        "The Central Vigilance Commissioner and Vigilance Commissioners hold office for a term of 4 years or until attaining 65 years of age, whichever is earlier.",
+        "To ensure independence, members are not eligible for reappointment or further employment under the Central or State Governments after demitting office.",
+        "Salaries, allowances, and service conditions of the CVC are aligned with those of the Chairman of the Union Public Service Commission."
+      ],
+      "id": "yw5wnte"
+    }
+  ],
+  "enriched": true
+}

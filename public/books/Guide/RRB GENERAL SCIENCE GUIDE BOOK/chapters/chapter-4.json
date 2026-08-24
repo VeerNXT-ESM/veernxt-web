@@ -1,0 +1,291 @@
+{
+  "id": "ujl2uk8",
+  "title": "Chapter 4: Heat",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5s3zbl9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Heat",
+          "value": "Joule (J)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Temperature",
+          "value": "Kelvin (K)",
+          "icon": "info"
+        },
+        {
+          "label": "Modes of Transfer",
+          "value": "3 Modes",
+          "icon": "check"
+        },
+        {
+          "label": "Max Density of Water",
+          "value": "4 °C",
+          "icon": "clock"
+        }
+      ],
+      "id": "lhtslz4"
+    },
+    {
+      "id": "fjzvhiw",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Heat"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Heat is a form of energy that flows from a body at a higher temperature to a body at a lower temperature.",
+        "Temperature measures the degree of hotness or coldness of a body using scales like Celsius, Fahrenheit, and Kelvin.",
+        "Heat transfer occurs via three primary mechanisms: Conduction, Convection, and Radiation.",
+        "Most substances expand upon heating, with water exhibiting anomalous expansion between 0 °C and 4 °C."
+      ],
+      "id": "xqc2e1e"
+    },
+    {
+      "type": "paragraph",
+      "id": "kyvpe81"
+    },
+    {
+      "type": "paragraph",
+      "id": "pz1af5h"
+    },
+    {
+      "type": "paragraph",
+      "id": "iv3ylwj"
+    },
+    {
+      "type": "paragraph",
+      "id": "1xdv9fy"
+    },
+    {
+      "id": "4zn045i",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "th860we"
+    },
+    {
+      "type": "paragraph",
+      "id": "w4p4lgd"
+    },
+    {
+      "type": "paragraph",
+      "id": "s1yg2li"
+    },
+    {
+      "id": "odin7cf",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Temperature Scales"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Modes of Heat Transfer",
+      "id": "33y6pro"
+    },
+    {
+      "id": "cv9lt4k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2ce0qfy",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Modes of Heat Transfer"
+    },
+    {
+      "id": "vfx9a4p",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qdy3976",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Conduction"
+    },
+    {
+      "type": "paragraph",
+      "id": "0b5brwe"
+    },
+    {
+      "id": "wv4w33b",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Convection"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Mode of Heat Transfer",
+        "Medium Required",
+        "Primary State of Matter"
+      ],
+      "rows": [
+        [
+          "Conduction",
+          "Yes (Direct contact)",
+          "Solids"
+        ],
+        [
+          "Convection",
+          "Yes (Bulk fluid motion)",
+          "Liquids and Gases"
+        ],
+        [
+          "Radiation",
+          "No (Electromagnetic waves)",
+          "Vacuum / Any medium"
+        ]
+      ],
+      "id": "737c74e"
+    },
+    {
+      "type": "paragraph",
+      "id": "0gxsxx0"
+    },
+    {
+      "id": "2is6an6",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Radiation"
+    },
+    {
+      "type": "paragraph",
+      "id": "kb2v542"
+    },
+    {
+      "id": "c1g3cie",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Effects of Heat"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hyq4vsq"
+    },
+    {
+      "type": "paragraph",
+      "id": "s89j2vq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "768sdw4"
+    },
+    {
+      "id": "crh3r56",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Expansion due to Heat"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Temperature Conversion Relation: C/5 = (F - 32)/9 = (K - 273.15)/5.",
+        "Radiation is the fastest mode of heat transfer and does not require a material medium.",
+        "Water reaches its maximum density and minimum volume at 4 °C."
+      ],
+      "id": "3pfshzk"
+    },
+    {
+      "type": "paragraph",
+      "id": "ikq6vtg"
+    },
+    {
+      "id": "bkybzdr",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "xhdmzaq"
+    },
+    {
+      "type": "paragraph",
+      "id": "2wv70nt"
+    },
+    {
+      "type": "paragraph",
+      "id": "gfsg5bh"
+    },
+    {
+      "type": "paragraph",
+      "id": "psd3dtb"
+    }
+  ],
+  "enriched": true
+}

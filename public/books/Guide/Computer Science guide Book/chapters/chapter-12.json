@@ -1,40 +1,40 @@
 {
-  "id": "6a570w6",
+  "id": "d7muc8c",
   "title": "Chapter 12: Internet & Email",
   "order": 12,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "d2k3qm6"
+      "id": "u396ftm"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "WWW Invented",
+          "label": "WWW Invention Year",
           "value": "1989",
           "icon": "calendar"
         },
         {
-          "label": "First Network",
-          "value": "ARPANET",
-          "icon": "info"
+          "label": "Email Sending Protocol",
+          "value": "SMTP",
+          "icon": "book"
         },
         {
-          "label": "Mail Protocol",
-          "value": "SMTP",
+          "label": "Email Receiving Protocol",
+          "value": "POP3 / IMAP",
           "icon": "check"
         },
         {
-          "label": "Secure Web",
-          "value": "HTTPS",
-          "icon": "award"
+          "label": "Secure Web Port",
+          "value": "HTTPS (Port 443)",
+          "icon": "info"
         }
       ],
-      "id": "evpuj1u"
+      "id": "izc1epk"
     },
     {
-      "id": "umir49q",
+      "id": "5x8e0jy",
       "type": "heading",
       "level": 2,
       "content": "12.1 Internet"
@@ -43,26 +43,26 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "The World Wide Web (WWW) was created by Sir Tim Berners-Lee in 1989 at CERN.",
-        "A Web Browser is a client-side software application used to render and display web pages, whereas a Search Engine is a web-based service used to index and search content.",
-        "Email communication uses SMTP (Simple Mail Transfer Protocol) for sending messages, and POP3 or IMAP for receiving messages.",
-        "A Uniform Resource Locator (URL) serves as the unique global address of a web resource.",
-        "HTTPS encrypts communication between the browser and server using SSL/TLS over Port 443."
+        "The Internet is a global network of interconnected computers using the TCP/IP protocol suite.",
+        "The World Wide Web (WWW) is a system of interlinked hypertext documents accessed via web browsers.",
+        "Web Browsers retrieve and display web pages, while Search Engines index and locate online content.",
+        "Email relies on protocols such as SMTP for sending messages, and POP3 or IMAP for receiving them.",
+        "URLs uniquely identify web resources, and HTTPS ensures encrypted and secure web data transfer."
       ],
-      "id": "3i2nk70"
+      "id": "vcrrfrg"
     },
     {
       "type": "paragraph",
-      "id": "275b77t"
+      "id": "23x2ylr"
     },
     {
-      "id": "tpdhjf4",
+      "id": "hzzp9br",
       "type": "heading",
       "level": 3,
       "content": "12.1.1 Advantages of Internet"
     },
     {
-      "id": "4njghvt",
+      "id": "5hfpv88",
       "type": "list",
       "items": [
         null,
@@ -73,23 +73,23 @@
       ]
     },
     {
-      "id": "p93o40g",
+      "id": "tpa23qu",
       "type": "heading",
       "level": 2,
       "content": "12.2 World Wide Web (WWW)"
     },
     {
       "type": "paragraph",
-      "id": "sar6m4x"
+      "id": "4nnwg18"
     },
     {
-      "id": "efcfyps",
+      "id": "83k1jak",
       "type": "heading",
       "level": 3,
       "content": "12.2.1 Features of WWW"
     },
     {
-      "id": "4dsl6ub",
+      "id": "a3uyjeh",
       "type": "list",
       "items": [
         null,
@@ -99,28 +99,28 @@
       ]
     },
     {
-      "id": "15qopb7",
+      "id": "oj5avtu",
       "type": "heading",
       "level": 2,
       "content": "12.3 Web Browser"
     },
     {
       "type": "paragraph",
-      "id": "n3csk06"
+      "id": "mvshtga"
     },
     {
       "type": "pullQuote",
-      "content": "World Wide Web (WWW)",
-      "id": "10ed3ij"
+      "content": "Chapter 12: Internet & Email",
+      "id": "ftd5hlw"
     },
     {
-      "id": "7seslth",
+      "id": "85zsze2",
       "type": "heading",
       "level": 3,
       "content": "12.3.1 Examples of Web Browsers"
     },
     {
-      "id": "swfboz8",
+      "id": "w825l9c",
       "type": "list",
       "items": [
         null,
@@ -131,13 +131,13 @@
       ]
     },
     {
-      "id": "9pvfrpi",
+      "id": "r8lishu",
       "type": "heading",
       "level": 3,
       "content": "12.3.2 Functions of Web Browser"
     },
     {
-      "id": "fhid3wr",
+      "id": "216czxc",
       "type": "list",
       "items": [
         null,
@@ -147,14 +147,14 @@
       ]
     },
     {
-      "id": "hdrrrr2",
+      "id": "pxvm644",
       "type": "heading",
       "level": 2,
       "content": "12.4 Search Engine"
     },
     {
       "type": "paragraph",
-      "id": "xnlvu5o"
+      "id": "rrgm8c2"
     },
     {
       "type": "comparisonTable",
@@ -166,35 +166,35 @@
       "rows": [
         [
           "Definition",
-          "Software program installed on a device to view web pages",
-          "Web service used to search for information across the web"
+          "Application software used to access and display web pages",
+          "Web-based program used to search for information on the web"
         ],
         [
           "Installation",
-          "Requires local installation on the computer/mobile",
-          "Does not require installation; accessed inside a browser"
+          "Needs to be installed on the local device",
+          "Runs on web servers and accessed via a browser"
         ],
         [
-          "Core Function",
-          "Interprets HTML code and renders web pages",
-          "Indexes web pages and retrieves relevant URL results"
+          "Primary Function",
+          "Renders HTML code into graphical web pages",
+          "Searches its database using keywords to locate URL links"
         ],
         [
           "Examples",
-          "Google Chrome, Mozilla Firefox, Safari, Edge",
+          "Google Chrome, Mozilla Firefox, Microsoft Edge",
           "Google, Bing, Yahoo, DuckDuckGo"
         ]
       ],
-      "id": "c5nhsbo"
+      "id": "8zhprrg"
     },
     {
-      "id": "m6yvvs6",
+      "id": "p2odtx3",
       "type": "heading",
       "level": 3,
       "content": "12.4.1 Examples of Search Engines"
     },
     {
-      "id": "wkq2pyc",
+      "id": "g2pkbkd",
       "type": "list",
       "items": [
         null,
@@ -205,13 +205,13 @@
       ]
     },
     {
-      "id": "4534szl",
+      "id": "ja3n1lh",
       "type": "heading",
       "level": 3,
       "content": "12.4.2 Functions of Search Engines"
     },
     {
-      "id": "eybcl0c",
+      "id": "p6gq27m",
       "type": "list",
       "items": [
         null,
@@ -220,23 +220,23 @@
       ]
     },
     {
-      "id": "1k6asux",
+      "id": "c3okc0i",
       "type": "heading",
       "level": 2,
       "content": "12.5 Email (Electronic Mail)"
     },
     {
       "type": "paragraph",
-      "id": "ho9drtq"
+      "id": "nmesism"
     },
     {
-      "id": "ymxylcv",
+      "id": "9jqm6xp",
       "type": "heading",
       "level": 3,
       "content": "12.5.1 Components of Email"
     },
     {
-      "id": "zkmpmlb",
+      "id": "w01yzw8",
       "type": "table",
       "rows": [
         {
@@ -293,21 +293,21 @@
     {
       "type": "examAlert",
       "items": [
-        "SMTP is strictly used for SENDING emails, whereas POP3 and IMAP are used for RECEIVING emails.",
-        "BCC (Blind Carbon Copy) keeps recipient email addresses hidden from all other message recipients.",
-        "HTTPS uses SSL/TLS encryption on Port 443, while unencrypted HTTP operates on Port 80.",
-        "Tim Berners-Lee developed the World Wide Web, HTML, HTTP, and the first web browser."
+        "BCC (Blind Carbon Copy) hides recipient email addresses from other recipients, whereas CC (Carbon Copy) keeps them visible.",
+        "HTTP operates over default Port 80, whereas secure HTTPS operates over Port 443.",
+        "Tim Berners-Lee created the World Wide Web (WWW) at CERN in 1989.",
+        "SMTP is exclusively used for sending emails, while POP3/IMAP protocols are used to fetch/retrieve emails."
       ],
-      "id": "626p0ve"
+      "id": "awye71l"
     },
     {
-      "id": "isk4ggn",
+      "id": "x0z3m7h",
       "type": "heading",
       "level": 3,
       "content": "12.5.2 Advantages of Email"
     },
     {
-      "id": "0zddlq1",
+      "id": "60h7nrc",
       "type": "list",
       "items": [
         null,
@@ -317,13 +317,13 @@
       ]
     },
     {
-      "id": "l9yn1lk",
+      "id": "h8w0bf1",
       "type": "heading",
       "level": 2,
       "content": "12.6 URL / HTTP / HTTPS"
     },
     {
-      "id": "m2i55qk",
+      "id": "8td0ds2",
       "type": "table",
       "rows": [
         {
@@ -357,13 +357,13 @@
       ]
     },
     {
-      "id": "r3ea4gc",
+      "id": "ubdgt2s",
       "type": "heading",
       "level": 2,
       "content": "12.7 Important Exam Points (RRB)"
     },
     {
-      "id": "p7y2rad",
+      "id": "qj95e04",
       "type": "list",
       "items": [
         null,

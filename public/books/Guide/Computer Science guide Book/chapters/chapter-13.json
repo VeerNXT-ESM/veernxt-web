@@ -1,40 +1,40 @@
 {
-  "id": "5fjq3rk",
+  "id": "t9mrgxt",
   "title": "Chapter 13: Cyber Security",
   "order": 13,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "xh94um5"
+      "id": "pzeoa02"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Core Topic",
-          "value": "Cyber Security",
-          "icon": "book"
-        },
-        {
-          "label": "Primary Threats",
-          "value": "Viruses & Malware",
-          "icon": "info"
-        },
-        {
-          "label": "Defense Tools",
+          "label": "Core Components",
           "value": "Firewall & Antivirus",
           "icon": "check"
         },
         {
-          "label": "Cyber Attacks",
+          "label": "Major Threat Types",
+          "value": "Viruses & Malware",
+          "icon": "info"
+        },
+        {
+          "label": "Attack Vectors",
           "value": "Phishing & Hacking",
+          "icon": "clock"
+        },
+        {
+          "label": "Primary Goal",
+          "value": "Cyber Safety Practices",
           "icon": "award"
         }
       ],
-      "id": "xlkckk6"
+      "id": "i0y1kkt"
     },
     {
-      "id": "gimkxjm",
+      "id": "mxdsn8c",
       "type": "heading",
       "level": 2,
       "content": "13.1 Introduction to Cyber Security"
@@ -43,26 +43,26 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Cyber Security covers the protection of computer systems, networks, and data from digital attacks.",
-        "Computer Viruses and Malware represent malicious software designed to compromise or disrupt systems.",
-        "Firewalls and Antivirus software form essential defensive mechanisms against unauthorized network traffic and malicious code.",
-        "Phishing and Hacking are critical security threats involving social engineering and unauthorized system intrusion.",
-        "Cyber Safety Practices are fundamental protocols designed to safeguard personal and organizational digital assets."
+        "Cyber Security focuses on protecting digital systems, networks, and data from unauthorized access or malicious attacks.",
+        "Computer viruses and malware are harmful programs designed to compromise data integrity and system performance.",
+        "Firewalls serve as network security systems that monitor and filter incoming and outgoing network traffic.",
+        "Antivirus software performs key functions like scanning, identifying, quarantining, and eliminating malicious code.",
+        "Phishing uses deceptive communication to steal user credentials, whereas hacking involves breaching system security controls."
       ],
-      "id": "82p4x3b"
+      "id": "y76hwes"
     },
     {
       "type": "paragraph",
-      "id": "0bv225e"
+      "id": "0r8emr0"
     },
     {
-      "id": "9i8h3gy",
+      "id": "7eucyti",
       "type": "heading",
       "level": 3,
       "content": "13.1.1 Importance of Cyber Security"
     },
     {
-      "id": "dt5p4zh",
+      "id": "c4587gc",
       "type": "list",
       "items": [
         null,
@@ -73,23 +73,23 @@
       ]
     },
     {
-      "id": "da9cl31",
+      "id": "m6vfxoc",
       "type": "heading",
       "level": 2,
       "content": "13.2 Computer Virus"
     },
     {
       "type": "paragraph",
-      "id": "umnsrqc"
+      "id": "dite4le"
     },
     {
-      "id": "hfq7rjr",
+      "id": "ccomqnp",
       "type": "heading",
       "level": 3,
       "content": "13.2.1 Characteristics of Computer Virus"
     },
     {
-      "id": "w78axom",
+      "id": "cvwhzfx",
       "type": "list",
       "items": [
         null,
@@ -99,13 +99,13 @@
       ]
     },
     {
-      "id": "o7x3y6z",
+      "id": "nha1wgu",
       "type": "heading",
       "level": 3,
       "content": "13.2.2 Types of Computer Viruses"
     },
     {
-      "id": "wkzhbn5",
+      "id": "qg9ot5l",
       "type": "table",
       "rows": [
         {
@@ -147,27 +147,27 @@
     },
     {
       "type": "pullQuote",
-      "content": "Chapter 13: Cyber Security",
-      "id": "aw1wsnv"
+      "content": "Importance of Cyber Security",
+      "id": "7cvbf8z"
     },
     {
-      "id": "mhdz9sb",
+      "id": "4qbsths",
       "type": "heading",
       "level": 2,
       "content": "13.3 Malware"
     },
     {
       "type": "paragraph",
-      "id": "ah8cume"
+      "id": "o9ojiuu"
     },
     {
-      "id": "6bbqhez",
+      "id": "evfg13r",
       "type": "heading",
       "level": 3,
       "content": "13.3.1 Types of Malware"
     },
     {
-      "id": "ky84v2j",
+      "id": "r6gin6x",
       "type": "table",
       "rows": [
         {
@@ -215,68 +215,63 @@
       ]
     },
     {
-      "id": "3f8oo4w",
+      "id": "wvgwrfw",
       "type": "heading",
       "level": 2,
       "content": "13.4 Firewall"
     },
     {
       "type": "paragraph",
-      "id": "g8h253x"
+      "id": "4u0ss52"
     },
     {
       "type": "comparisonTable",
       "headers": [
-        "Security Concept",
-        "Category",
-        "Primary Role / Impact"
+        "Feature",
+        "Phishing",
+        "Hacking"
       ],
       "rows": [
         [
-          "Computer Virus",
-          "Malware / Threat",
-          "Attaches to host files and replicates to damage system data."
+          "Method",
+          "Social engineering via deceptive emails/messages",
+          "Technical exploitation of system/network security"
         ],
         [
-          "Firewall",
-          "Network Defense",
-          "Monitors and filters incoming/outgoing network traffic based on rules."
+          "Target",
+          "Confidential user data (passwords, OTPs, financial details)",
+          "System resources, network infrastructure, or stored files"
         ],
         [
-          "Antivirus",
-          "Software Defense",
-          "Scans, detects, and removes malicious code from storage and memory."
-        ],
-        [
-          "Phishing",
-          "Cyber Attack",
-          "Deceives users to fraudulently acquire passwords and sensitive data."
+          "Defense",
+          "User awareness, spam filters, two-factor authentication",
+          "Firewalls, patch management, intrusion detection systems"
         ]
       ],
-      "id": "y0avp9m"
+      "id": "rcwjv7r"
     },
     {
       "type": "paragraph",
-      "id": "tozdwmt"
+      "id": "v23cke6"
     },
     {
-      "id": "1jugd5n",
+      "id": "ptk8mhg",
       "type": "heading",
       "level": 2,
       "content": "13.5 Antivirus"
     },
     {
       "type": "paragraph",
-      "id": "qmp0mpn"
+      "id": "zbj4cge"
     },
     {
-      "id": "htedpik",
+      "id": "4cp7bf5",
       "type": "heading",
       "level": 3,
       "content": "13.5.1 Functions of Antivirus Software"
     },
     {
-      "id": "qnq1r57",
+      "id": "wi43e2g",
       "type": "list",
       "items": [
         null,
@@ -286,48 +281,48 @@
       ]
     },
     {
-      "id": "3ryjwmy",
+      "id": "vkmwh17",
       "type": "heading",
       "level": 2,
       "content": "13.6 Phishing and Hacking"
     },
     {
-      "id": "t7y4cdb",
+      "id": "9g9cbwv",
       "type": "heading",
       "level": 3,
       "content": "13.6.1 Phishing"
     },
     {
       "type": "paragraph",
-      "id": "0hpv9md"
+      "id": "frvbeil"
     },
     {
       "type": "examAlert",
       "items": [
-        "Distinguish clearly between various types of Malware, including Viruses, Worms, Trojans, and Ransomware.",
-        "Differentiate the roles of Firewalls (traffic filtering at network boundary) versus Antivirus software (file scanning and malware detection).",
-        "Recognize common Phishing techniques and credential-harvesting mechanisms frequently targeted in exam questions."
+        "Questions frequently test the structural differences between Viruses, Worms, Trojan Horses, and Ransomware.",
+        "Firewall mechanisms (packet filtering vs proxy servers) are common multiple-choice topics in computer awareness.",
+        "Understanding the operational distinction between Phishing (social engineering) and Hacking (system breach) is crucial for exams."
       ],
-      "id": "1p6tdos"
+      "id": "5cek7fb"
     },
     {
-      "id": "bwzyzyv",
+      "id": "9p7vctz",
       "type": "heading",
       "level": 3,
       "content": "13.6.2 Hacking"
     },
     {
       "type": "paragraph",
-      "id": "q3usedj"
+      "id": "jq0gl93"
     },
     {
-      "id": "eg3mcrx",
+      "id": "vmndtst",
       "type": "heading",
       "level": 2,
       "content": "13.7 Cyber Safety Practices"
     },
     {
-      "id": "87gro45",
+      "id": "txm0x3r",
       "type": "list",
       "items": [
         null,
@@ -338,13 +333,13 @@
       ]
     },
     {
-      "id": "s5wxzg3",
+      "id": "pcr4hxg",
       "type": "heading",
       "level": 2,
       "content": "13.8 Important Exam Points"
     },
     {
-      "id": "yh2likt",
+      "id": "noxfwo0",
       "type": "list",
       "items": [
         null,

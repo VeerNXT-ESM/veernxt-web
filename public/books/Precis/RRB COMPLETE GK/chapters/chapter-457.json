@@ -1,0 +1,89 @@
+{
+  "id": "ay5qnea",
+  "title": "14. Exam Traps",
+  "order": 457,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "lotgpol"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Recognizing examiner traps is just as crucial as mastering the syllabus content.",
+      "id": "5alpx2f"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Category",
+        "Examiner Strategy",
+        "Candidate Counter-Strategy"
+      ],
+      "rows": [
+        [
+          "Negation Trap",
+          "Embeds words like 'NOT' or 'INCORRECT' inside lengthy question stems",
+          "Underline/circle key qualifiers before reading the answer choices"
+        ],
+        [
+          "Extreme Qualifier Trap",
+          "Uses 'Always', 'Never', or 'Only' to make statements absolute",
+          "Identify counter-examples; absolute statements are usually false"
+        ],
+        [
+          "Time-Sink Trap",
+          "Inserts high-complexity, calculation-heavy questions early in the test",
+          "Mark and skip on Round 1; solve easy conceptual questions first"
+        ]
+      ],
+      "id": "nwkanny"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Negative Marking Penalty",
+          "value": "1/3rd Marks",
+          "icon": "info"
+        },
+        {
+          "label": "Major Trap Types",
+          "value": "5 Categories",
+          "icon": "check"
+        },
+        {
+          "label": "Max Time per Question",
+          "value": "60–90 Sec",
+          "icon": "clock"
+        },
+        {
+          "label": "Accuracy Threshold",
+          "value": "85% Target",
+          "icon": "award"
+        }
+      ],
+      "id": "lg8l1ve"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Circle or highlight negation words ('NOT', 'EXCEPT', 'INCORRECT') immediately during your first read of the question stem.",
+        "Treat options containing absolute terms ('strictly', 'completely', 'never') with extreme skepticism.",
+        "Avoid changing marked answers in the final 5 minutes based on panic or second-guessing without concrete logical proof."
+      ],
+      "id": "qd3zzhh"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Misreading negative qualifiers like 'NOT', 'EXCEPT', or 'INCORRECT' is the most common cause of unforced errors.",
+        "Extreme qualifiers such as 'Always', 'Never', and 'Only' frequently signal incorrect statements in objective exams.",
+        "Spending over 2 minutes on a single complex question creates a severe time-management trap that jeopardizes easier questions later.",
+        "Partial-truth traps present accurate factual information in the first half of an option while inserting a subtle falsehood at the end."
+      ],
+      "id": "7trbzos"
+    }
+  ],
+  "enriched": true
+}

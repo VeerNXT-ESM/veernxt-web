@@ -1,0 +1,94 @@
+{
+  "id": "kdcr7os",
+  "title": "11. Exam Traps",
+  "order": 511,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dyba7ht"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Recognizing subtle distractors and negative marking traps is the single most effective way to boost your net score.",
+      "id": "tsauotq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Trap Type",
+        "Examiner Mechanism",
+        "Candidate Strategy"
+      ],
+      "rows": [
+        [
+          "Absolute Modifiers",
+          "Uses 'Always', 'Never', or 'Only' in statements",
+          "Look for a single valid counter-example to eliminate"
+        ],
+        [
+          "Negative Phrasing",
+          "Embeds 'NOT', 'EXCEPT', or 'INCORRECT' in the stem",
+          "Circle/highlight the negative word immediately upon reading"
+        ],
+        [
+          "Unit Conversion",
+          "Mixes units like km/h with m/s or meters with cm",
+          "Convert all inputs to standard SI units before solving"
+        ],
+        [
+          "Speed Bump",
+          "Dense paragraph with a simple final question",
+          "Skip on first pass; return after securing easy direct marks"
+        ]
+      ],
+      "id": "kp7hjv4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Trap Categories",
+          "value": "4 Core Types",
+          "icon": "book"
+        },
+        {
+          "label": "Avg. Score Loss",
+          "value": "15-20% Marks",
+          "icon": "info"
+        },
+        {
+          "label": "Time Limit Per Q",
+          "value": "60-90 Secs",
+          "icon": "clock"
+        },
+        {
+          "label": "Target Accuracy",
+          "value": "85%+ Net",
+          "icon": "check"
+        }
+      ],
+      "id": "qtbgylr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always double-check whether the question asks for 'Correct' or 'Incorrect' statements before bubbling your answer.",
+        "Beware of unit mismatch traps (e.g., mixing km/h with m/s or meters with centimeters) in numerical problems.",
+        "Never spend more than 90 seconds on a single question on your first pass through the exam paper."
+      ],
+      "id": "i284lqo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Absolute words such as 'always', 'never', and 'only' usually signify incorrect statement options in objective questions.",
+        "Negative stems containing keywords like 'NOT', 'EXCEPT', or 'INCORRECT' cause maximum unforced errors if unhighlighted.",
+        "Examiners place lengthy speed-bump questions at the beginning of sections to disrupt candidate pacing and focus.",
+        "Option choices often include intermediate calculation steps as clever distractor options to trap hasty candidates."
+      ],
+      "id": "1p2elb6"
+    }
+  ],
+  "enriched": true
+}

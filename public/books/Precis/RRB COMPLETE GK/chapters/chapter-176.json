@@ -1,0 +1,112 @@
+{
+  "id": "ywcph0a",
+  "title": "10. Soil Conservation",
+  "order": 176,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "r8zdom5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Soil Health Card Launch",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Topsoil Formation",
+          "value": "1 cm / 200-400 yrs",
+          "icon": "clock"
+        },
+        {
+          "label": "Primary Water Erosion Types",
+          "value": "2 Types",
+          "icon": "book"
+        },
+        {
+          "label": "National Target Year (LDN)",
+          "value": "2030",
+          "icon": "award"
+        }
+      ],
+      "id": "1fedfk8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil conservation is an essential strategy to prevent soil erosion and maintain ecological balance for sustainable agriculture.",
+      "id": "385ouk2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil erosion involves the detachment and transportation of topsoil by running water, wind, and human activities.",
+        "Water erosion manifests primarily as sheet erosion over gentle slopes and gully erosion forming ravines in steep terrains.",
+        "The Chambal basin in central India represents one of the most severe examples of gully erosion and badland topography.",
+        "Mechanical and biological conservation methods include contour ploughing, terrace farming, strip cropping, and afforestation.",
+        "Shelterbelts and windbreaks are critical conservation techniques in arid regions like Western Rajasthan to prevent wind erosion."
+      ],
+      "id": "c0xoe5x"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Sheet Erosion",
+        "Gully Erosion"
+      ],
+      "rows": [
+        [
+          "Mechanism",
+          "Uniform removal of a thin layer of topsoil over a broad area",
+          "Cutting of deep channels or ravines by concentrated running water"
+        ],
+        [
+          "Visibility",
+          "Hard to detect immediately; leads to insidious loss of soil fertility",
+          "Highly visible, forming deep trenches that fragment land"
+        ],
+        [
+          "Terrain Affected",
+          "Gentle slopes with sparse vegetation cover",
+          "Steep slopes and loose, clayey soils (e.g., Chambal Basin)"
+        ],
+        [
+          "Remedial Action",
+          "Cover cropping, mulching, and organic manure application",
+          "Construction of check dams, gully plugging, and terracing"
+        ]
+      ],
+      "id": "iao156u"
+    },
+    {
+      "type": "paragraph",
+      "id": "dqvhfvn"
+    },
+    {
+      "type": "paragraph",
+      "id": "lzaqid7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sheet Erosion vs Gully Erosion: Sheet erosion removes topsoil uniformly without distinct channels, while gully erosion carves deep channels rendering land unfit for cultivation.",
+        "Contour Ploughing: Ploughing along contour lines decelerates water flow on hill slopes and is frequently asked in UPSC and State PSC exams.",
+        "Chambal Ravines: A prime example of Badland Topography resulting from extensive gully erosion.",
+        "Government Initiatives: Soil Health Card Scheme (2015) and PMKSY (Per Drop More Crop) are key schemes associated with soil health and conservation."
+      ],
+      "id": "0cbcioq"
+    },
+    {
+      "type": "paragraph",
+      "id": "5mpd2d8"
+    },
+    {
+      "type": "paragraph",
+      "id": "5oj4hoh"
+    }
+  ],
+  "enriched": true
+}

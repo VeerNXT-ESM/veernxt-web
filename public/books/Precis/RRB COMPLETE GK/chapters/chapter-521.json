@@ -1,0 +1,94 @@
+{
+  "id": "9ox7r43",
+  "title": "7. Relationship Between CBI and CVC",
+  "order": 521,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "f8ct3db"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission shall exercise superintendence over the functioning of the Delhi Special Police Establishment in so far as it relates to the investigation of offences under the Prevention of Corruption Act, 1988.",
+      "id": "sf3qjqm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Bureau of Investigation (CBI)",
+        "Central Vigilance Commission (CVC)"
+      ],
+      "rows": [
+        [
+          "Legal Status",
+          "Non-statutory body (derives powers from DSPE Act, 1946)",
+          "Statutory body (established under CVC Act, 2003)"
+        ],
+        [
+          "Primary Role",
+          "Investigative agency for corruption, economic offences, and major crimes",
+          "Apex advisory and supervisory body for vigilance in central administration"
+        ],
+        [
+          "Superintendence Relationship",
+          "Functions under superintendence of CVC for corruption cases",
+          "Exercises superintendence over CBI for corruption-related cases"
+        ],
+        [
+          "Administrative Control",
+          "Ministry of Personnel, Public Grievances and Pensions",
+          "Independent agency (Submits annual performance report to President)"
+        ]
+      ],
+      "id": "45otr20"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "DSPE Act",
+          "value": "1946",
+          "icon": "book"
+        },
+        {
+          "label": "CVC Established",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "CVC Statutory Act",
+          "value": "2003",
+          "icon": "award"
+        },
+        {
+          "label": "Key Governing Law",
+          "value": "PoC Act 1988",
+          "icon": "info"
+        }
+      ],
+      "id": "lrf6j0e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CVC's superintendence over CBI is restricted exclusively to corruption cases and does not extend to conventional crime or state-referred investigations.",
+        "CBI is a non-statutory body created by an executive resolution, whereas CVC gained statutory status via the CVC Act, 2003.",
+        "Under the CVC Act 2003, the Director of CBI is provided a guaranteed tenure of not less than two years."
+      ],
+      "id": "ouay3yy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission (CVC) exercises superintendence over the functioning of the CBI concerning offenses under the Prevention of Corruption Act, 1988.",
+        "The Central Vigilance Commissioner heads the committee that recommends appointments for officers of the rank of SP and above in the CBI.",
+        "CBI derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946, rather than being a statutory body itself.",
+        "While CBI operates administratively under the Ministry of Personnel, Public Grievances and Pensions, its corruption investigations are monitored by the CVC."
+      ],
+      "id": "fde8i3p"
+    }
+  ],
+  "enriched": true
+}

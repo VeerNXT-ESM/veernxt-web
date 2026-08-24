@@ -1,0 +1,95 @@
+{
+  "id": "23ar6gf",
+  "title": "14. Lokayuktas",
+  "order": 541,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "vcfwldk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The institution of Lokayukta was established at the state level to inquire into allegations of corruption and maladministration against public servants.",
+      "id": "eb4git2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lokpal",
+        "Lokayukta"
+      ],
+      "rows": [
+        [
+          "Jurisdiction Level",
+          "Union / Central Level",
+          "State Level"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Governing Legislation",
+          "Lokpal and Lokayuktas Act, 2013 (Central Act)",
+          "Respective State Lokayukta Acts"
+        ],
+        [
+          "First Implementation",
+          "Constituted in 2019",
+          "First established in Maharashtra (1971)"
+        ]
+      ],
+      "id": "mglcov2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "ARC Recommendation",
+          "value": "1966",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Act Passed",
+          "value": "1970 (Odisha)",
+          "icon": "book"
+        },
+        {
+          "label": "First Established",
+          "value": "1971 (Maharashtra)",
+          "icon": "award"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "Governor",
+          "icon": "check"
+        }
+      ],
+      "id": "vu7hvro"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinction Alert: Odisha passed the Lokayukta Act first (1970), whereas Maharashtra set up the institution first (1971).",
+        "Consultation Process: Mandatory consultation with both the Chief Justice of the High Court and the Leader of the Opposition in the Assembly is a frequent MCQs topic.",
+        "Variation in Jurisdiction: In some states (e.g., Himachal Pradesh, Andhra Pradesh), the Chief Minister falls under the Lokayukta's jurisdiction, while in others (e.g., Maharashtra, Uttar Pradesh), the Chief Minister is excluded."
+      ],
+      "id": "s5bd14u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The establishment of Lokayukta was recommended by the First Administrative Reforms Commission (1966–1970) headed by Morarji Desai.",
+        "Odisha was the first state to pass the Lokayukta Act in 1970, but Maharashtra was the first to establish the institution in 1971.",
+        "The Lokayukta and Upalokayukta are appointed by the Governor of the state after consulting the Chief Justice of the High Court and the Leader of the Opposition.",
+        "The structure, jurisdiction, tenure, and conditions of service of Lokayuktas vary across different states as they are statutory bodies created by state laws.",
+        "The Lokayukta submits an annual report on performance to the Governor, which is placed before the State Legislature."
+      ],
+      "id": "9vd7e4m"
+    }
+  ],
+  "enriched": true
+}

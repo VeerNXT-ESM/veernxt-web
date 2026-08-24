@@ -1,0 +1,131 @@
+{
+  "id": "fhjluhj",
+  "title": "4. Major Types of Rocks",
+  "order": 63,
+  "blocks": [
+    {
+      "id": "cmdq8u5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because they form the basis for the formation of all other rock types in the geological rock cycle.",
+      "id": "wlp660j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Category",
+        "Mode of Formation",
+        "Key Characteristics",
+        "Prominent Examples"
+      ],
+      "rows": [
+        [
+          "Igneous Rocks",
+          "Cooling and crystallization of magma or lava",
+          "Crystalline texture, non-stratified, devoid of fossils",
+          "Granite, Basalt, Pumice, Gabbro"
+        ],
+        [
+          "Sedimentary Rocks",
+          "Deposition, compaction, and lithification of sediments",
+          "Stratified (layered) structure, highly fossiliferous",
+          "Sandstone, Limestone, Shale, Conglomerate"
+        ],
+        [
+          "Metamorphic Rocks",
+          "Thermal and dynamic alteration under extreme heat/pressure",
+          "Foliated or banded texture, highly dense and crystalline",
+          "Marble, Quartzite, Slate, Gneiss"
+        ]
+      ],
+      "id": "fig0357"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Rock Types",
+          "value": "3 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Earth Crust Share",
+          "value": "95% Igneous & Metamorphic",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Rocks",
+          "value": "Igneous",
+          "icon": "check"
+        },
+        {
+          "label": "Fossil-Bearing",
+          "value": "Sedimentary",
+          "icon": "award"
+        }
+      ],
+      "id": "5tdmqz8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Granite (Intrusive) and Basalt (Extrusive) are classic igneous rocks; Basalt dominates oceanic crust while Granite forms continental crust.",
+        "Standard metamorphism pairs frequently tested in matching questions: Limestone turns to Marble, Sandstone to Quartzite, and Shale to Slate.",
+        "Sedimentary rocks are distinct for their stratification (layering) and are the chief source of fossil fuels like petroleum, coal, and natural gas."
+      ],
+      "id": "hd1un86"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks form from the cooling and solidification of magma or lava and are categorized as primary rocks.",
+        "Sedimentary rocks are formed by the lithification and compaction of weathered sediments or organic remains over long periods.",
+        "Metamorphic rocks result from the recrystallization and structural change of pre-existing rocks under high heat and extreme pressure.",
+        "Fossils are found almost exclusively in sedimentary rocks, as extreme thermal and pressure conditions in igneous and metamorphic processes destroy organic material."
+      ],
+      "id": "ht31fco"
+    }
+  ],
+  "enriched": true
+}

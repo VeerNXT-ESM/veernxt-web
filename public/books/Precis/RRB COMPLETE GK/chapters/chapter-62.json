@@ -1,0 +1,118 @@
+{
+  "id": "3wfe221",
+  "title": "3. Rock Cycle",
+  "order": 62,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "w8xy9yb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Rock Types",
+          "value": "3 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Rocks",
+          "value": "Igneous",
+          "icon": "check"
+        },
+        {
+          "label": "Driving Forces",
+          "value": "Heat & Pressure",
+          "icon": "info"
+        },
+        {
+          "label": "Process Duration",
+          "value": "Millions of Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "pytzydj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The rock cycle is a continuous geological process through which Earth's materials transform between igneous, sedimentary, and metamorphic forms over millions of years.",
+        "Igneous rocks are formed from the cooling and solidification of magma or lava and serve as primary rocks from which all other rocks originate.",
+        "Sedimentary rocks form through weathering, erosion, deposition, compaction, and cementation (lithification) of rock debris.",
+        "Metamorphic rocks result from the alteration of existing rocks under intense heat, pressure, and chemical tectonic action without actual melting.",
+        "Subduction carries surface rocks into the Earth's interior, melting them into magma and restarting the continuous rock cycle."
+      ],
+      "id": "r7hpgnm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Rocks do not remain in their original form for long but undergo a continuous transformation, driving the endless cycle of the Earth's crust.",
+      "id": "fe2kx2b"
+    },
+    {
+      "type": "paragraph",
+      "id": "vjbecjo"
+    },
+    {
+      "type": "paragraph",
+      "id": "aj2xz69"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Formation Process",
+        "Key Features",
+        "Examples"
+      ],
+      "rows": [
+        [
+          "Igneous",
+          "Cooling and solidification of magma or lava",
+          "Crystalline structure, non-foliated, contains no fossils",
+          "Granite, Basalt, Pumice"
+        ],
+        [
+          "Sedimentary",
+          "Deposition, compaction, and lithification of debris",
+          "Stratified layers, soft texture, frequently contains fossils",
+          "Sandstone, Limestone, Shale"
+        ],
+        [
+          "Metamorphic",
+          "Transformation of existing rocks under high heat and pressure",
+          "Foliated or banded structure, hard and dense, no fossils",
+          "Marble, Slate, Gneiss"
+        ]
+      ],
+      "id": "o40om3k"
+    },
+    {
+      "type": "paragraph",
+      "id": "sbpt0z1"
+    },
+    {
+      "type": "paragraph",
+      "id": "6m8mryj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Igneous rocks are called Primary Rocks because all other rock types are directly or indirectly formed from them.",
+        "Fossils are found almost exclusively in Sedimentary Rocks, as the high heat and pressure in igneous and metamorphic formations destroy organic traces.",
+        "Lithification refers specifically to the process of converting loose sediments into consolidated sedimentary rocks through compaction and cementation."
+      ],
+      "id": "zapnon5"
+    },
+    {
+      "type": "paragraph",
+      "id": "dh08hqt"
+    },
+    {
+      "type": "paragraph",
+      "id": "eh7ivsu"
+    }
+  ],
+  "enriched": true
+}

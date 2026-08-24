@@ -1,0 +1,89 @@
+{
+  "id": "6hqauib",
+  "title": "2. Why the Constitution is Supreme",
+  "order": 240,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2i2mqem"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Constitution is the supreme law of the land, and all organs of the State derive their authority and jurisdiction from it.",
+      "id": "kbi3w2p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Supremacy (India)",
+        "Parliamentary Supremacy (UK)"
+      ],
+      "rows": [
+        [
+          "Source of Authority",
+          "Written Constitution (We, the People)",
+          "Parliament itself"
+        ],
+        [
+          "Judicial Review",
+          "Courts can strike down unconstitutional laws",
+          "Courts cannot strike down Parliamentary statutes"
+        ],
+        [
+          "Amending Power",
+          "Limited by the Basic Structure Doctrine",
+          "Unlimited through simple legislative procedure"
+        ]
+      ],
+      "id": "0z3rbu8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supreme Law",
+          "value": "Grundnorm",
+          "icon": "award"
+        },
+        {
+          "label": "Judicial Review",
+          "value": "Article 13",
+          "icon": "book"
+        },
+        {
+          "label": "Landmark Year",
+          "value": "1973",
+          "icon": "calendar"
+        },
+        {
+          "label": "Bound Organs",
+          "value": "3 Branches",
+          "icon": "check"
+        }
+      ],
+      "id": "8dhv3ha"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Differentiate between Parliamentary Sovereignty (UK) and Constitutional Supremacy (India) for Prelims.",
+        "Kesavananda Bharati (1973) established that Article 368 does not enable Parliament to alter the basic structure of the Constitution.",
+        "Article 13 provides the explicit constitutional basis for judicial review in India."
+      ],
+      "id": "vyfipju"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Constitution is the ultimate source of power for the Legislature, Executive, and Judiciary in India.",
+        "Under Article 13, any law enacted by Parliament or state legislatures that violates Fundamental Rights is void.",
+        "The Basic Structure Doctrine limits Parliament's amending power under Article 368 to preserve constitutional principles.",
+        "Indian federalism enforces Constitutional Supremacy to maintain division of powers between the Centre and States."
+      ],
+      "id": "idvlrb1"
+    }
+  ],
+  "enriched": true
+}

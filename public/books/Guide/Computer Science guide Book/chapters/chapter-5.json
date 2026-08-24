@@ -1,40 +1,40 @@
 {
-  "id": "zihzgti",
+  "id": "me3qov5",
   "title": "Chapter 5: Output Devices",
   "order": 5,
   "blocks": [
     {
       "type": "paragraph",
-      "id": "irc72m6"
+      "id": "prai6t1"
     },
     {
       "type": "statStrip",
       "stats": [
         {
-          "label": "Primary Visual Output",
-          "value": "Monitor",
-          "icon": "info"
-        },
-        {
-          "label": "Hard Copy Output",
-          "value": "Printer & Plotter",
+          "label": "Output Devices",
+          "value": "4 Main Types",
           "icon": "book"
         },
         {
-          "label": "Audio Output",
-          "value": "Speaker",
-          "icon": "award"
+          "label": "Printer Classes",
+          "value": "Impact & Non-Impact",
+          "icon": "check"
         },
         {
-          "label": "Key Classification",
-          "value": "Impact vs Non-Impact",
-          "icon": "check"
+          "label": "Vector Output",
+          "value": "Plotters",
+          "icon": "info"
+        },
+        {
+          "label": "Audio Device",
+          "value": "Speakers",
+          "icon": "award"
         }
       ],
-      "id": "mn3v28x"
+      "id": "crez8dq"
     },
     {
-      "id": "z4s0num",
+      "id": "rpsl15j",
       "type": "heading",
       "level": 2,
       "content": "5.1 Monitor"
@@ -43,25 +43,25 @@
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
-        "Monitors provide soft copy visual output and are classified by technology and display characteristics.",
-        "Printers are divided into two main categories: Impact printers (physical contact) and Non-Impact printers (no physical contact).",
-        "Plotters are specialized output devices designed for high-precision vector graphics and large-scale printing.",
-        "Speakers produce sound output by converting digital audio signals into audible sound waves."
+        "Monitors act as the primary visual display units delivering softcopy output.",
+        "Printers generate hardcopy output and are broadly categorized into Impact and Non-Impact types.",
+        "Plotters are specialized line-drawing output devices designed for high-resolution vector graphics and engineering prints.",
+        "Speakers convert processed digital signals into audible sound output."
       ],
-      "id": "0hdh0nc"
+      "id": "0oghzrg"
     },
     {
       "type": "paragraph",
-      "id": "09pqwcz"
+      "id": "e15eemd"
     },
     {
-      "id": "smn15lw",
+      "id": "divrg0v",
       "type": "heading",
       "level": 3,
       "content": "5.1.1 Types of Monitors"
     },
     {
-      "id": "4lth5yf",
+      "id": "6mrmujk",
       "type": "table",
       "rows": [
         {
@@ -99,13 +99,13 @@
       ]
     },
     {
-      "id": "qio4xr0",
+      "id": "mlalswq",
       "type": "heading",
       "level": 3,
       "content": "5.1.2 Monitor Characteristics"
     },
     {
-      "id": "4ks50hk",
+      "id": "rtmxz9t",
       "type": "list",
       "items": [
         null,
@@ -115,28 +115,28 @@
       ]
     },
     {
-      "id": "j7iitlw",
+      "id": "ih7ojh7",
       "type": "heading",
       "level": 2,
       "content": "5.2 Printer"
     },
     {
       "type": "pullQuote",
-      "content": "Impact vs Non-Impact Printers",
-      "id": "n5mcqdk"
+      "content": "5.2.2 Impact vs Non-Impact Printers",
+      "id": "by0n6e7"
     },
     {
       "type": "paragraph",
-      "id": "y3fl8so"
+      "id": "ygw56sk"
     },
     {
-      "id": "0t0zj2g",
+      "id": "wcxfx7m",
       "type": "heading",
       "level": 3,
       "content": "5.2.1 Types of Printers"
     },
     {
-      "id": "ffu7em8",
+      "id": "xmqrz4d",
       "type": "table",
       "rows": [
         {
@@ -190,7 +190,7 @@
       ]
     },
     {
-      "id": "o0pwxra",
+      "id": "1ffozk7",
       "type": "heading",
       "level": 3,
       "content": "5.2.2 Impact vs Non-Impact Printers"
@@ -204,30 +204,30 @@
       ],
       "rows": [
         [
-          "Printing Mechanism",
-          "Strikes a ribbon against paper",
-          "Uses ink spray, heat, or laser technology without striking"
+          "Mechanism",
+          "Direct physical contact with paper via striking pins/hammer",
+          "Uses chemical, heat, or ink spraying techniques without contact"
+        ],
+        [
+          "Examples",
+          "Dot Matrix, Daisy Wheel, Line Printers",
+          "Laser, Inkjet, Thermal Printers"
+        ],
+        [
+          "Print Quality & Speed",
+          "Lower resolution and slower speed",
+          "Higher resolution and faster speed"
         ],
         [
           "Noise Level",
           "Noisy during operation",
-          "Quiet operation"
-        ],
-        [
-          "Print Quality & Speed",
-          "Lower quality, slower speed",
-          "High quality, faster speed"
-        ],
-        [
-          "Examples",
-          "Dot Matrix, Daisy Wheel, Line Printer",
-          "Laser Printer, Inkjet Printer, Thermal Printer"
+          "Quiet/Silent operation"
         ]
       ],
-      "id": "nrkwmz3"
+      "id": "683y31m"
     },
     {
-      "id": "4hprycv",
+      "id": "r2quucv",
       "type": "table",
       "rows": [
         {
@@ -261,23 +261,23 @@
       ]
     },
     {
-      "id": "84iivxj",
+      "id": "nd34xbr",
       "type": "heading",
       "level": 2,
       "content": "5.3 Plotter"
     },
     {
       "type": "paragraph",
-      "id": "aqrsmzw"
+      "id": "950udf6"
     },
     {
-      "id": "9esagf3",
+      "id": "adq0m8p",
       "type": "heading",
       "level": 3,
       "content": "5.3.1 Types of Plotters"
     },
     {
-      "id": "gbg4dut",
+      "id": "dqt45oe",
       "type": "table",
       "rows": [
         {
@@ -304,7 +304,7 @@
       ]
     },
     {
-      "id": "7u50m1d",
+      "id": "31vjuvq",
       "type": "heading",
       "level": 2,
       "content": "5.4 Speaker"
@@ -312,22 +312,22 @@
     {
       "type": "examAlert",
       "items": [
-        "Differentiate between Impact (e.g., Dot Matrix) and Non-Impact printers (e.g., Laser, Inkjet) as this is a frequent objective question.",
-        "Understand key monitor characteristics such as resolution, refresh rate, and display types (LCD, LED, CRT).",
-        "Note that Plotters produce vector graphics hard copies, unlike standard raster printers."
+        "Impact printers (e.g., Dot Matrix) physically strike the ribbon on paper, whereas Non-Impact printers (e.g., Laser, Inkjet) use non-contact methods.",
+        "Plotters are specifically tested as the preferred output device for Computer-Aided Design (CAD) and high-quality vector blueprints.",
+        "Distinguish clearly between softcopy output (Monitors, Speakers) and hardcopy output (Printers, Plotters)."
       ],
-      "id": "u713bb9"
+      "id": "88ez4qb"
     },
     {
       "type": "paragraph",
-      "id": "vfkhkh2"
+      "id": "i1j4tv0"
     },
     {
       "type": "paragraph",
-      "id": "wiwq5ve"
+      "id": "l0da7fm"
     },
     {
-      "id": "p3n46r9",
+      "id": "ezm89v4",
       "type": "list",
       "items": [
         null,
@@ -337,13 +337,13 @@
       ]
     },
     {
-      "id": "3fq645r",
+      "id": "qbcnmh9",
       "type": "heading",
       "level": 2,
       "content": "5.5 Important Exam Points"
     },
     {
-      "id": "9zt4j0q",
+      "id": "nv2x1bv",
       "type": "list",
       "items": [
         null,

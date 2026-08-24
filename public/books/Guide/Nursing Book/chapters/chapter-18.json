@@ -1,0 +1,597 @@
+{
+  "id": "oyglah6",
+  "title": "Chapter 18 – Management of Nursing Services & Education",
+  "order": 18,
+  "blocks": [
+    {
+      "id": "vkkpy11",
+      "type": "heading",
+      "level": 2,
+      "content": "Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "POSDCORB acronym proposed by Luther Gulick outlines the core management functions: Planning, Organizing, Staffing, Directing, Co-ordinating, Reporting, and Budgeting.",
+        "Henri Fayol formulated 14 Principles of Management, emphasizing Unity of Command, Division of Work, and Scalar Chain.",
+        "Nursing staffing requirements rely on patient classification systems, bed occupancy rates, and INC norms to determine optimal nurse-patient ratios.",
+        "Quality Assurance in nursing care incorporates Donabedian's framework evaluating Structure, Process, and Outcome indicators.",
+        "Effective communication and conflict management are vital for maintaining team morale, safety standards, and optimal ward administration."
+      ],
+      "id": "ear5btd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "POSDCORB Functions",
+          "value": "7 Core Steps",
+          "icon": "check"
+        },
+        {
+          "label": "Fayol's Principles",
+          "value": "14 Principles",
+          "icon": "book"
+        },
+        {
+          "label": "ICU Nurse-Patient Ratio",
+          "value": "1:1 Ratio",
+          "icon": "award"
+        },
+        {
+          "label": "General Ward Ratio",
+          "value": "1:6 Ratio",
+          "icon": "info"
+        }
+      ],
+      "id": "0y1rpvk"
+    },
+    {
+      "type": "paragraph",
+      "id": "tkicbre"
+    },
+    {
+      "id": "tfby8ef",
+      "type": "heading",
+      "level": 2,
+      "content": "Basic Concepts of Management"
+    },
+    {
+      "id": "innxp44",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dbltgnl",
+      "type": "heading",
+      "level": 2,
+      "content": "Functions of Management"
+    },
+    {
+      "id": "xcbr6zx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ifj9y2v",
+      "type": "heading",
+      "level": 2,
+      "content": "Hospital Organizational Structure"
+    },
+    {
+      "id": "rgb9s3p",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Management of Nursing Services & Education",
+      "id": "jtjweoh"
+    },
+    {
+      "id": "c9gbpb9",
+      "type": "heading",
+      "level": 2,
+      "content": "Leadership in Nursing"
+    },
+    {
+      "type": "paragraph",
+      "id": "1n42xkf"
+    },
+    {
+      "id": "073sgje",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bu2anw3",
+      "type": "heading",
+      "level": 2,
+      "content": "Staffing in Nursing Services"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Autocratic Leadership",
+        "Democratic Leadership"
+      ],
+      "rows": [
+        [
+          "Decision Making",
+          "Centralized; unilateral by the leader",
+          "Decentralized; participative with team input"
+        ],
+        [
+          "Communication",
+          "One-way (top-down direction)",
+          "Two-way (open dialogue and feedback)"
+        ],
+        [
+          "Staff Autonomy",
+          "Low autonomy; strict supervision",
+          "High autonomy; encourages initiative"
+        ],
+        [
+          "Best Suited For",
+          "Emergency and crisis situations",
+          "Routine nursing care and quality circles"
+        ]
+      ],
+      "id": "7acc1lk"
+    },
+    {
+      "id": "8a5ziww",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yb4cc0h",
+      "type": "heading",
+      "level": 2,
+      "content": "Ward Management"
+    },
+    {
+      "id": "xpxbgjs",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1si7pb7",
+      "type": "heading",
+      "level": 2,
+      "content": "Quality Assurance in Nursing"
+    },
+    {
+      "id": "fa06vcg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v1gp6c5",
+      "type": "heading",
+      "level": 2,
+      "content": "Nursing Education"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Luther Gulick coined the acronym POSDCORB for management functions; frequently asked in nursing officer competitive exams.",
+        "As per INC guidelines, the nurse-patient ratio for ICUs is strictly 1:1 per shift, while high-dependency units require 1:2.",
+        "Donabedian's Model categorizes quality assurance into Structure (resources/staff), Process (care delivery), and Outcome (patient satisfaction/recovery).",
+        "Unity of Command dictates that an employee should receive orders from only one direct supervisor to prevent role confusion."
+      ],
+      "id": "q611ztl"
+    },
+    {
+      "id": "sqgxt8e",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2juw2nk",
+      "type": "heading",
+      "level": 2,
+      "content": "Communication in Nursing Management"
+    },
+    {
+      "id": "qassudi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0e99ed",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Facts"
+    },
+    {
+      "id": "3osl6nk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

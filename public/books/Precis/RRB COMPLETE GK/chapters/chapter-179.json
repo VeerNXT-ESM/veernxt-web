@@ -1,0 +1,121 @@
+{
+  "id": "ox68akk",
+  "title": "1. Concept of Natural Vegetation and Biomes",
+  "order": 179,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "e947d4a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Pioneer Stage",
+          "value": "Initial Colonizers",
+          "icon": "info"
+        },
+        {
+          "label": "Intermediate",
+          "value": "Seral Stages",
+          "icon": "clock"
+        },
+        {
+          "label": "Terminal Stage",
+          "value": "Climax Community",
+          "icon": "award"
+        },
+        {
+          "label": "Key Drivers",
+          "value": "Autogenic & Allogenic",
+          "icon": "check"
+        }
+      ],
+      "id": "cmprzls"
+    },
+    {
+      "type": "paragraph",
+      "id": "56g1bjm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ecological succession represents the gradual and orderly process of ecosystem development through distinct seral stages.",
+      "id": "al8fm64"
+    },
+    {
+      "type": "paragraph",
+      "id": "7deqg54"
+    },
+    {
+      "id": "jlv1wfu",
+      "type": "heading",
+      "level": 2,
+      "content": "Ecological Succession"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Primary Succession",
+        "Secondary Succession"
+      ],
+      "rows": [
+        [
+          "Starting Substrate",
+          "Bare rock, lava flows, sand dunes (No soil)",
+          "Deforested area, burned forest, flooded land (Soil present)"
+        ],
+        [
+          "Pioneer Species",
+          "Lichens, mosses, microbes",
+          "Grasses, weeds, surviving seeds"
+        ],
+        [
+          "Rate of Progression",
+          "Extremely slow (hundreds to thousands of years)",
+          "Relatively rapid (decades to a few centuries)"
+        ],
+        [
+          "Humus Content",
+          "Initially absent",
+          "Present from the beginning"
+        ]
+      ],
+      "id": "kol1l9c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ecological succession is the predictable, directional process of change in species composition over time.",
+        "Primary succession initiates on newly formed, sterile substrates lacking pre-existing organic soil.",
+        "Secondary succession occurs following disturbances in areas where soil and organic matter remain intact.",
+        "The developmental intermediate stages are referred to as seral communities or seres.",
+        "The ultimate stable, self-perpetuating end-state in equilibrium with the climate is the climax community."
+      ],
+      "id": "twk2apf"
+    },
+    {
+      "type": "paragraph",
+      "id": "i8ul9v5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Primary vs. Secondary Succession: Secondary succession proceeds significantly faster because soil substrate is already present.",
+        "Pioneer Species Identification: Lichens and mosses serve as pioneer species in Xerarch (dry) succession, whereas Phytoplankton pioneer Hydrarch (aquatic) succession.",
+        "Autogenic vs. Allogenic Succession: Autogenic succession is driven by biotic components of the ecosystem, while Allogenic succession is driven by external abiotic forces."
+      ],
+      "id": "ydsnk19"
+    },
+    {
+      "type": "paragraph",
+      "id": "8woeuxs"
+    },
+    {
+      "type": "paragraph",
+      "id": "uolwx02"
+    }
+  ],
+  "enriched": true
+}

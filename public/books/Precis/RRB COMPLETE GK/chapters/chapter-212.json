@@ -1,0 +1,525 @@
+{
+  "id": "tk4ezfk",
+  "title": "Chapter 28: Ocean Currents",
+  "order": 212,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "j22tdnr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Ocean Gyres",
+          "value": "5 Main Systems",
+          "icon": "globe"
+        },
+        {
+          "label": "Current Classification",
+          "value": "Warm & Cold",
+          "icon": "info"
+        },
+        {
+          "label": "Ocean Basins",
+          "value": "3 Key Systems",
+          "icon": "compass"
+        },
+        {
+          "label": "Global Mechanism",
+          "value": "Thermohaline",
+          "icon": "refresh"
+        }
+      ],
+      "id": "41mh59l"
+    },
+    {
+      "id": "v858ayb",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning and Characteristics of Ocean Currents"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ocean currents are large-scale continuous movements of ocean water driven by wind, gravity, temperature, and density gradients.",
+        "Ocean gyres form large circular current patterns in the Atlantic, Pacific, and Indian Oceans influenced by the Coriolis effect.",
+        "Thermohaline circulation operates as a deep-ocean global conveyor belt transferring heat and nutrients worldwide.",
+        "Upwelling brings cold, nutrient-rich deep water to the surface, supporting rich marine life and major fishing zones."
+      ],
+      "id": "6uu3vbd"
+    },
+    {
+      "type": "paragraph",
+      "id": "fgghfiv"
+    },
+    {
+      "type": "paragraph",
+      "id": "12izggy"
+    },
+    {
+      "type": "paragraph",
+      "id": "gb9afoh"
+    },
+    {
+      "type": "paragraph",
+      "id": "o09sp87"
+    },
+    {
+      "type": "paragraph",
+      "id": "wlrpdks"
+    },
+    {
+      "id": "63gp2qx",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Warm vs Cold Ocean Currents"
+    },
+    {
+      "id": "qazh4n2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mfhhjc8",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Ocean Gyres – The Circular Current System"
+    },
+    {
+      "type": "paragraph",
+      "id": "o4f6iau"
+    },
+    {
+      "id": "jdzr83g",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Atlantic Ocean Currents and Gyres"
+    },
+    {
+      "id": "xrccgrl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8lmtnkc",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Pacific Ocean Currents and Gyres"
+    },
+    {
+      "id": "bmg3s48",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Thermohaline Circulation – Global Conveyor Belt",
+      "id": "dxc5vqh"
+    },
+    {
+      "id": "3em0bg6",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Indian Ocean Currents and Gyres"
+    },
+    {
+      "type": "paragraph",
+      "id": "wlrb92a"
+    },
+    {
+      "id": "ztcih66",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6oq6bjh",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Factors Controlling Ocean Currents"
+    },
+    {
+      "type": "paragraph",
+      "id": "yj2v2mz"
+    },
+    {
+      "type": "paragraph",
+      "id": "9opmn9j"
+    },
+    {
+      "type": "paragraph",
+      "id": "2n36irh"
+    },
+    {
+      "type": "paragraph",
+      "id": "c5gxv2w"
+    },
+    {
+      "type": "paragraph",
+      "id": "x6pc2hy"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Warm Ocean Currents",
+        "Cold Ocean Currents"
+      ],
+      "rows": [
+        [
+          "Origin",
+          "Equatorial and tropical regions",
+          "Polar and sub-polar regions"
+        ],
+        [
+          "Movement Direction",
+          "From low latitudes to high latitudes",
+          "From high latitudes to low latitudes"
+        ],
+        [
+          "Impact on Coastal Climate",
+          "Raises coastal temperature and increases rainfall",
+          "Lowers coastal temperature and causes dry/desert conditions"
+        ],
+        [
+          "Examples",
+          "Gulf Stream, Kuroshio Current",
+          "Humboldt (Peru) Current, Labrador Current"
+        ]
+      ],
+      "id": "eoogmrn"
+    },
+    {
+      "type": "paragraph",
+      "id": "qgrcods"
+    },
+    {
+      "id": "bqyag0q",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Upwelling and Downwelling"
+    },
+    {
+      "type": "paragraph",
+      "id": "ujufpuw"
+    },
+    {
+      "type": "paragraph",
+      "id": "d1df9h5"
+    },
+    {
+      "type": "paragraph",
+      "id": "1z95got"
+    },
+    {
+      "id": "g8evvor",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Thermohaline Circulation – Global Conveyor Belt"
+    },
+    {
+      "type": "paragraph",
+      "id": "e17y4av"
+    },
+    {
+      "type": "paragraph",
+      "id": "26qiprx"
+    },
+    {
+      "type": "paragraph",
+      "id": "cyfett3"
+    },
+    {
+      "type": "paragraph",
+      "id": "efxz7hr"
+    },
+    {
+      "id": "6lixtbr",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Climatic Importance of Ocean Currents"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Warm currents flow from equatorial regions towards higher latitudes, raising coastal temperatures and increasing precipitation.",
+        "Cold currents move from polar regions to lower latitudes, often causing dry, desert-like conditions on adjacent west coasts.",
+        "The Northern Indian Ocean current pattern uniquely reverses its direction seasonally due to the influence of monsoon winds."
+      ],
+      "id": "lcszi8s"
+    },
+    {
+      "type": "paragraph",
+      "id": "39lg61a"
+    },
+    {
+      "type": "paragraph",
+      "id": "i364s1o"
+    },
+    {
+      "type": "paragraph",
+      "id": "kb8uw0j"
+    },
+    {
+      "type": "paragraph",
+      "id": "dunzlqw"
+    },
+    {
+      "type": "paragraph",
+      "id": "j7lzn54"
+    },
+    {
+      "id": "d9nj52e",
+      "type": "heading",
+      "level": 2,
+      "content": "MASTER EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "2xixlo2"
+    }
+  ],
+  "enriched": true
+}

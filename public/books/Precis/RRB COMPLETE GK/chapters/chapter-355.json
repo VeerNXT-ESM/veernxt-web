@@ -1,0 +1,89 @@
+{
+  "id": "u1b4r8l",
+  "title": "11. Court of Record (Article 215)",
+  "order": 355,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "a2uxk1h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Every High Court shall be a court of record and shall have all the powers of such a court including the power to punish for contempt of itself.",
+      "id": "gldca00"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Supreme Court (Article 129)",
+        "High Court (Article 215)"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 129",
+          "Article 215"
+        ],
+        [
+          "Contempt Jurisdiction Scope",
+          "Contempt of itself and any court or tribunal across India",
+          "Contempt of itself and courts subordinate to it within its territorial jurisdiction"
+        ],
+        [
+          "Precedential Value",
+          "Binding on all courts within the territory of India",
+          "Binding on all subordinate courts within its respective state/jurisdiction"
+        ]
+      ],
+      "id": "th8rv7i"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 215",
+          "icon": "book"
+        },
+        {
+          "label": "Judicial Authority",
+          "value": "High Court",
+          "icon": "award"
+        },
+        {
+          "label": "Key Power",
+          "value": "Contempt Jurisdiction",
+          "icon": "check"
+        },
+        {
+          "label": "Legal Status",
+          "value": "Court of Record",
+          "icon": "info"
+        }
+      ],
+      "id": "oqyiqsj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 215 pertains to the High Court as a Court of Record, whereas Article 129 confers the same status on the Supreme Court.",
+        "High Courts have the jurisdiction to punish for contempt of themselves as well as courts subordinate to them.",
+        "The constitutional power to punish for contempt under Article 215 cannot be taken away or limited even by statutory legislation."
+      ],
+      "id": "brpsyai"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 215 designates every High Court in India as a Court of Record.",
+        "The judgments, records, and proceedings of the High Court are preserved for perpetual memory and evidentiary testimony.",
+        "Acts as a Court of Record grants the High Court the inherent constitutional power to punish for contempt of itself.",
+        "Records of a High Court possess unquestionable evidentiary value and cannot be challenged when produced in subordinate courts."
+      ],
+      "id": "p0ar3hs"
+    }
+  ],
+  "enriched": true
+}

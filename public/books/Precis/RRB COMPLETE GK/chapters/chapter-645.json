@@ -1,0 +1,130 @@
+{
+  "id": "ll7h2kr",
+  "title": "RTI Appeal Process (VERY FREQUENTLY ASKED)",
+  "order": 645,
+  "blocks": [
+    {
+      "id": "gvr5zc0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Any person who does not receive a decision within the time specified or is aggrieved by a decision of the CPIO may prefer a First Appeal under Section 19(1) of the RTI Act.",
+      "id": "t8a7lby"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "First Appeal",
+        "Second Appeal"
+      ],
+      "rows": [
+        [
+          "Appellate Body",
+          "First Appellate Authority (Senior Officer in same Department)",
+          "Central or State Information Commission (CIC / SIC)"
+        ],
+        [
+          "Governing Section",
+          "Section 19(1)",
+          "Section 19(3)"
+        ],
+        [
+          "Limitation Period",
+          "Within 30 days from decision or expiry of 30-day CPIO limit",
+          "Within 90 days from FAA decision date or expiry period"
+        ],
+        [
+          "Disposal Time Frame",
+          "30 days (extendable up to 45 days for special reasons)",
+          "No specific time limit prescribed under the Act"
+        ],
+        [
+          "Power to Impose Penalty",
+          "No penalty powers",
+          "Can impose penalty up to ₹25,000 on CPIO under Sec 20(1)"
+        ]
+      ],
+      "id": "nyz89v5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Appeal Limit",
+          "value": "30 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Second Appeal Limit",
+          "value": "90 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "FAA Disposal Period",
+          "value": "30-45 Days",
+          "icon": "check"
+        },
+        {
+          "label": "Relevant Provision",
+          "value": "Section 19",
+          "icon": "book"
+        }
+      ],
+      "id": "p99sxju"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Section 19(1) governs First Appeal, whereas Section 19(3) governs Second Appeal in the RTI Act, 2005.",
+        "While First Appeal has a statutory disposal limit of 30-45 days, the RTI Act specifies no fixed time frame for CIC/SIC to dispose of a Second Appeal.",
+        "Penalties up to ₹25,000 under Section 20(1) can only be imposed by the Information Commission during a Second Appeal or Complaint, not by the First Appellate Authority."
+      ],
+      "id": "l800r1t"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A First Appeal is filed before an officer senior in rank to the CPIO within the same public authority under Section 19(1).",
+        "The First Appellate Authority (FAA) must decide the appeal within 30 days, extendable up to 45 days with written justification.",
+        "A Second Appeal lies with the Central Information Commission (CIC) or State Information Commission (SIC) under Section 19(3).",
+        "Second Appeals must be preferred within 90 days from the date on which the FAA decision was received or ought to have been rendered.",
+        "The onus to prove that a denial of request was justified lies entirely on the Public Information Officer (CPIO/SPIO)."
+      ],
+      "id": "b1nhcxo"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,95 @@
+{
+  "id": "t284378",
+  "title": "3. Appointment, Qualifications and Conditions",
+  "order": 364,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "k5ybz3v"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor shall be appointed by the President by warrant under his hand and seal.",
+      "id": "84ru4qv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Governor",
+        "President"
+      ],
+      "rows": [
+        [
+          "Selection Mode",
+          "Appointed by the President",
+          "Elected by an Electoral College"
+        ],
+        [
+          "Oath Administered By",
+          "Chief Justice of State High Court",
+          "Chief Justice of India"
+        ],
+        [
+          "Removal Process",
+          "Removed by President at pleasure (No impeachment)",
+          "Impeached by Parliament for 'Violation of Constitution'"
+        ],
+        [
+          "Security of Tenure",
+          "No fixed tenure (Subject to pleasure of President)",
+          "Fixed 5-year tenure with constitutional security"
+        ]
+      ],
+      "id": "rcrgl1t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Minimum Age",
+          "value": "35 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "President of India",
+          "icon": "award"
+        },
+        {
+          "label": "Tenure Basis",
+          "value": "Pleasure of President",
+          "icon": "clock"
+        },
+        {
+          "label": "Constitutional Articles",
+          "value": "Articles 153-158",
+          "icon": "book"
+        }
+      ],
+      "id": "iu4kbke"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The oath of office to the Governor is administered by the Chief Justice of the concerned State High Court, not by the President of India.",
+        "The Governor has no fixed security of tenure and holds office during the pleasure of the President, who can remove the Governor at any time without specifying grounds.",
+        "When the same person is appointed as Governor of two or more states, the emoluments are shared between the states in such proportion as determined by the President."
+      ],
+      "id": "clf03ko"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor is appointed by the President by warrant under his hand and seal, acting as a nominee of the Central Government.",
+        "The Constitution lays down only two qualifications: the person must be a citizen of India and must have completed 35 years of age.",
+        "The 7th Constitutional Amendment Act of 1956 facilitated the appointment of the same person as Governor for two or more states.",
+        "The Governor must not be a member of either House of Parliament or a House of the State Legislature, and must not hold any office of profit.",
+        "The emoluments and allowances of the Governor are charged upon the Consolidated Fund of the State and cannot be diminished during the term of office."
+      ],
+      "id": "d9f4kga"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,119 @@
+{
+  "id": "pbu7csy",
+  "title": "2. Levels of Biodiversity",
+  "order": 190,
+  "blocks": [
+    {
+      "id": "fkl8ii1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Biodiversity refers to the sum total of diversity that exists at all levels of biological organization.",
+      "id": "eyxazpn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Level of Diversity",
+        "Definition / Scale",
+        "Classic Example"
+      ],
+      "rows": [
+        [
+          "Genetic Diversity",
+          "Variation of genes within a single species",
+          "Potency of reserpine in Rauwolfia vomitoria"
+        ],
+        [
+          "Species Diversity",
+          "Variety of species within a region or habitat",
+          "Greater amphibian species in Western Ghats"
+        ],
+        [
+          "Ecological Diversity",
+          "Variety of ecosystems within a geographical area",
+          "India's combination of deserts, rainforests, and mangroves"
+        ]
+      ],
+      "id": "3v1arur"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Levels of Diversity",
+          "value": "3 Main Levels",
+          "icon": "book"
+        },
+        {
+          "label": "Term Popularized By",
+          "value": "Edward Wilson",
+          "icon": "award"
+        },
+        {
+          "label": "Whittaker's Indices",
+          "value": "Alpha, Beta, Gamma",
+          "icon": "info"
+        },
+        {
+          "label": "Global Species Estimate",
+          "value": "7-8 Million",
+          "icon": "check"
+        }
+      ],
+      "id": "jbz5y0u"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sociobiologist Edward Wilson popularized the term 'biodiversity' to describe combined diversity across all biological levels.",
+        "The Western Ghats exhibit greater amphibian species diversity compared to the Eastern Ghats.",
+        "Differentiate clearly between Alpha (within community), Beta (between communities), and Gamma (regional) diversity for direct MCQs."
+      ],
+      "id": "kmi8iqy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Genetic diversity refers to variations of genes within a single species, enabling adaptation to changing environments.",
+        "Species diversity represents the variety and abundance of species within a specific habitat or region.",
+        "Ecological diversity includes the variety of ecosystems such as deserts, rainforests, mangroves, and coral reefs.",
+        "R.H. Whittaker classified ecosystem diversity into Alpha (local), Beta (between habitats), and Gamma (regional) diversity."
+      ],
+      "id": "rpyxznu"
+    }
+  ],
+  "enriched": true
+}

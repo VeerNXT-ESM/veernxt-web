@@ -1,0 +1,95 @@
+{
+  "id": "kllqll9",
+  "title": "9. Longitude and Navigation",
+  "order": 43,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3u6phmj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Longitude determines local time, where every degree of movement eastward adds four minutes to Greenwich Mean Time.",
+      "id": "vfya9rm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitude",
+        "Longitude"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Angular distance north or south of the Equator",
+          "Angular distance east or west of the Prime Meridian"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0° Greenwich)"
+        ],
+        [
+          "Line Characteristics",
+          "Parallel circles that decrease in circumference toward poles",
+          "Semi-circles of equal length that converge at both poles"
+        ],
+        [
+          "Primary Application",
+          "Determines heat zones and geographical climate",
+          "Determines global time zones and local solar time"
+        ]
+      ],
+      "id": "hh8ydgl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Meridians",
+          "value": "360°",
+          "icon": "book"
+        },
+        {
+          "label": "Rotation Rate",
+          "value": "15° / hour",
+          "icon": "clock"
+        },
+        {
+          "label": "1° Time Equivalent",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "Prime Meridian Set",
+          "value": "1884",
+          "icon": "calendar"
+        }
+      ],
+      "id": "rlu0ngc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Calculation Rule: 1° Longitude = 4 Minutes difference. East gain (+), West lose (-).",
+        "Indian Standard Time Meridian (82°30' E) passes through Mirzapur (Uttar Pradesh) and five Indian states.",
+        "The International Date Line zigzags across the Bering Strait to prevent political entities from sharing two different calendar dates."
+      ],
+      "id": "0iqnbgn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Longitudes are imaginary semi-circles running from the North Pole to the South Pole, converging at the poles.",
+        "The Prime Meridian (0° longitude) passes through Greenwich, England, and serves as the baseline for world time zones.",
+        "Because the Earth rotates 360° in 24 hours, traveling 15° east or west changes local time by exactly one hour.",
+        "The International Date Line roughly follows the 180° meridian; crossing it westward advances the date by one day.",
+        "Indian Standard Time (IST) is calculated from 82°30' E longitude, putting India 5 hours and 30 minutes ahead of GMT."
+      ],
+      "id": "acr4f9p"
+    }
+  ],
+  "enriched": true
+}

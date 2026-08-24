@@ -1,0 +1,229 @@
+{
+  "id": "dfxxz49",
+  "title": "PART 8",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4dms8db"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topic",
+          "value": "Average",
+          "icon": "book"
+        },
+        {
+          "label": "Key Formula",
+          "value": "Sum / Count",
+          "icon": "check"
+        },
+        {
+          "label": "Sub-Topics",
+          "value": "6 Sections",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Weightage",
+          "value": "High Frequency",
+          "icon": "award"
+        }
+      ],
+      "id": "o8d1rc7"
+    },
+    {
+      "id": "hxdim33",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Average represents the central value obtained by dividing the sum of all observations by the total count.",
+        "To find the sum of a series, multiply the given average by the number of observations.",
+        "Adding or removing a value alters both the total sum and the total count of observations.",
+        "Age problems require adjusting the average based on the passage of time for all members in a group.",
+        "Weighted average calculates the overall average when different groups have varying sizes or importance."
+      ],
+      "id": "su4lh5h"
+    },
+    {
+      "id": "fnrnvyx",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "mrmsmbh"
+    },
+    {
+      "id": "ei0errr",
+      "type": "heading",
+      "level": 2,
+      "content": "2. AVERAGE OF NUMBERS"
+    },
+    {
+      "id": "kvh4x25",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "5pexmrt",
+      "type": "heading",
+      "level": 2,
+      "content": "3. FINDING SUM WHEN AVERAGE IS GIVEN"
+    },
+    {
+      "id": "dpz9mxo",
+      "type": "list",
+      "items": [
+        null,
+        null
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "IMPORTANT POINTS TO REMEMBER",
+      "id": "zyg2nir"
+    },
+    {
+      "id": "3x7r2zv",
+      "type": "heading",
+      "level": 2,
+      "content": "4. AVERAGE WHEN A VALUE IS ADDED OR REMOVED"
+    },
+    {
+      "type": "paragraph",
+      "id": "8qng6rx"
+    },
+    {
+      "id": "a272b4u",
+      "type": "heading",
+      "level": 2,
+      "content": "5. AVERAGE OF AGES"
+    },
+    {
+      "type": "paragraph",
+      "id": "2pa32w9"
+    },
+    {
+      "id": "76a5man",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Concept",
+        "Simple Average",
+        "Weighted Average"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Equal importance assigned to every observation",
+          "Varying weight/importance assigned to different data groups"
+        ],
+        [
+          "Formula",
+          "Total Sum / Total Count",
+          "Sum of (Value × Weight) / Sum of Weights"
+        ],
+        [
+          "Application",
+          "Uniform distribution of data points",
+          "Combined groups with different counts or percentages"
+        ]
+      ],
+      "id": "bz0wblq"
+    },
+    {
+      "id": "6nq9fj6",
+      "type": "heading",
+      "level": 2,
+      "content": "6. WEIGHTED AVERAGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "eh8v0kw"
+    },
+    {
+      "id": "yid1jkp",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "d9yhelj",
+      "type": "heading",
+      "level": 2,
+      "content": "7. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "4rkpwld"
+    },
+    {
+      "id": "g2jq39i",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always account for changes in the total count (n + 1 or n - 1) when an item is added or removed.",
+        "In average age problems, remember that time increments equally for every member of the group.",
+        "Weighted average questions frequently test combining two groups with different sample sizes."
+      ],
+      "id": "o9533mn"
+    },
+    {
+      "type": "paragraph",
+      "id": "ja436cl"
+    },
+    {
+      "id": "gq2r6l8",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "lilrxxc"
+    },
+    {
+      "id": "3kb2ccv",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y7a1vw8"
+    }
+  ],
+  "enriched": true
+}

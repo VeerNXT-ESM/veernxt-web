@@ -1,0 +1,422 @@
+{
+  "id": "6e9afqz",
+  "title": "CHAPTER 3: LATITUDE, LONGITUDE & TIME",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "ji4sxmb",
+      "type": "heading",
+      "level": 3,
+      "content": "CORE CONCEPT (READ ONCE)"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "1° Longitude Time",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "Standard Meridian (India)",
+          "value": "82.5° E",
+          "icon": "check"
+        },
+        {
+          "label": "IST Offset",
+          "value": "UTC +5:30",
+          "icon": "award"
+        },
+        {
+          "label": "Total Meridians",
+          "value": "360°",
+          "icon": "book"
+        }
+      ],
+      "id": "vmqd0fy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth rotates 360° in 24 hours, which translates to 15° per hour or 1° every 4 minutes.",
+        "Latitude measures distance North or South of the Equator (0°), while Longitude measures distance East or West of the Prime Meridian (0°).",
+        "Indian Standard Time (IST) is based on the 82°30' E longitude, passing near Prayagraj / Mirzapur.",
+        "Time increases as you travel East from the Prime Meridian (+ GMT) and decreases as you travel West (- GMT).",
+        "The International Date Line lies near the 180° meridian; crossing it eastward gains a day, while crossing westward loses a day."
+      ],
+      "id": "2rm48hd"
+    },
+    {
+      "type": "paragraph",
+      "id": "070ll4a"
+    },
+    {
+      "id": "nsv5xjr",
+      "type": "heading",
+      "level": 3,
+      "content": "FORMULAS WITH LOGIC"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ex5zsn"
+    },
+    {
+      "type": "paragraph",
+      "id": "emihitd"
+    },
+    {
+      "type": "paragraph",
+      "id": "wasynzj"
+    },
+    {
+      "type": "paragraph",
+      "id": "9y8lluj"
+    },
+    {
+      "type": "paragraph",
+      "id": "nzl04ra"
+    },
+    {
+      "id": "7zwxman",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 1"
+    },
+    {
+      "type": "paragraph",
+      "id": "v1suzf0"
+    },
+    {
+      "type": "paragraph",
+      "id": "11dk7n4"
+    },
+    {
+      "type": "paragraph",
+      "id": "opzwmii"
+    },
+    {
+      "type": "paragraph",
+      "id": "tauel9n"
+    },
+    {
+      "type": "paragraph",
+      "id": "n6bzqms"
+    },
+    {
+      "type": "paragraph",
+      "id": "h1tpuuh"
+    },
+    {
+      "type": "paragraph",
+      "id": "a36t7d1"
+    },
+    {
+      "id": "6xo9615",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "tjqkfan"
+    },
+    {
+      "type": "paragraph",
+      "id": "fjvmatw"
+    },
+    {
+      "type": "paragraph",
+      "id": "i7kepj3"
+    },
+    {
+      "type": "paragraph",
+      "id": "pp79nvy"
+    },
+    {
+      "type": "paragraph",
+      "id": "o1rb0y0"
+    },
+    {
+      "type": "paragraph",
+      "id": "tdxp6bj"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9v0bzg"
+    },
+    {
+      "type": "paragraph",
+      "id": "2puqyjf"
+    },
+    {
+      "id": "26m8rq2",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 3"
+    },
+    {
+      "type": "paragraph",
+      "id": "o7g2k0u"
+    },
+    {
+      "type": "paragraph",
+      "id": "jkz444e"
+    },
+    {
+      "type": "paragraph",
+      "id": "frklpdk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CORE CONCEPT (READ ONCE)",
+      "id": "fuc5zcz"
+    },
+    {
+      "type": "paragraph",
+      "id": "ske9o9j"
+    },
+    {
+      "type": "paragraph",
+      "id": "g5uj9f5"
+    },
+    {
+      "type": "paragraph",
+      "id": "fry0or3"
+    },
+    {
+      "type": "paragraph",
+      "id": "t1o98iz"
+    },
+    {
+      "type": "paragraph",
+      "id": "dz1q3cb"
+    },
+    {
+      "type": "paragraph",
+      "id": "dbzqlx4"
+    },
+    {
+      "id": "zob72b0",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 4"
+    },
+    {
+      "type": "paragraph",
+      "id": "k65nvnf"
+    },
+    {
+      "type": "paragraph",
+      "id": "45ht7h5"
+    },
+    {
+      "type": "paragraph",
+      "id": "zczk8te"
+    },
+    {
+      "type": "paragraph",
+      "id": "jemwi1w"
+    },
+    {
+      "type": "paragraph",
+      "id": "631g1ps"
+    },
+    {
+      "type": "paragraph",
+      "id": "tmituvf"
+    },
+    {
+      "type": "paragraph",
+      "id": "w20mohz"
+    },
+    {
+      "type": "paragraph",
+      "id": "6koakue"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Latitude",
+        "Longitude"
+      ],
+      "rows": [
+        [
+          "Orientation",
+          "Horizontal (Parallel to Equator)",
+          "Vertical (Runs North to South)"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0°)"
+        ],
+        [
+          "Range",
+          "0° to 90° N / S",
+          "0° to 180° E / W"
+        ],
+        [
+          "Primary Use",
+          "Determining climate zones",
+          "Calculating time and time zones"
+        ]
+      ],
+      "id": "xmrpq55"
+    },
+    {
+      "id": "v2glasr",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 5"
+    },
+    {
+      "type": "paragraph",
+      "id": "4e99ij3"
+    },
+    {
+      "type": "paragraph",
+      "id": "8gfhlds"
+    },
+    {
+      "type": "paragraph",
+      "id": "hgbsx3e"
+    },
+    {
+      "type": "paragraph",
+      "id": "82fifby"
+    },
+    {
+      "type": "paragraph",
+      "id": "o4zqf1g"
+    },
+    {
+      "type": "paragraph",
+      "id": "ue0tf7m"
+    },
+    {
+      "type": "paragraph",
+      "id": "7j8kbwy"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ybtkqw"
+    },
+    {
+      "id": "57mhogk",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 6"
+    },
+    {
+      "type": "paragraph",
+      "id": "p2ikcqd"
+    },
+    {
+      "type": "paragraph",
+      "id": "vxn5r9c"
+    },
+    {
+      "type": "paragraph",
+      "id": "w3zbvef"
+    },
+    {
+      "type": "paragraph",
+      "id": "ip7qk65"
+    },
+    {
+      "type": "paragraph",
+      "id": "mshrhnx"
+    },
+    {
+      "type": "paragraph",
+      "id": "cvv9y4o"
+    },
+    {
+      "type": "paragraph",
+      "id": "koz8n1j"
+    },
+    {
+      "type": "paragraph",
+      "id": "e673ay1"
+    },
+    {
+      "type": "paragraph",
+      "id": "wjn91h1"
+    },
+    {
+      "id": "6iz5t2z",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Calculate time difference between two longitudes using 1° = 4 minutes.",
+        "Remember that Indian Standard Time (82.5° E) is exactly 5 hours and 30 minutes ahead of GMT.",
+        "Understand the difference between local time (based on sun position) and standard time (based on central meridian)."
+      ],
+      "id": "c1wmm03"
+    },
+    {
+      "type": "paragraph",
+      "id": "yywa04u"
+    },
+    {
+      "type": "paragraph",
+      "id": "6bgshmi"
+    },
+    {
+      "type": "paragraph",
+      "id": "6oc6wmc"
+    },
+    {
+      "type": "paragraph",
+      "id": "zukoo15"
+    },
+    {
+      "type": "paragraph",
+      "id": "wczhc3c"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ws6dzm"
+    },
+    {
+      "type": "paragraph",
+      "id": "lb4mezq"
+    },
+    {
+      "type": "paragraph",
+      "id": "lq45nog"
+    },
+    {
+      "id": "v5ju5z0",
+      "type": "heading",
+      "level": 3,
+      "content": "FINAL EXAM STRATEGY"
+    },
+    {
+      "id": "e35zyud",
+      "type": "numberedList",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "rqd7fsa"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "192878j"
+    }
+  ],
+  "enriched": true
+}

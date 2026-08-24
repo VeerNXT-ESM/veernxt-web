@@ -1,0 +1,1048 @@
+{
+  "id": "7atfuh5",
+  "title": "CHAPTER 1: DATA STRUCTURES AND ALGORITHMS",
+  "order": 1,
+  "blocks": [
+    {
+      "id": "d8mrdoy",
+      "type": "heading",
+      "level": 2,
+      "content": "1.1 Introduction to Data Structures"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Linear data structures include Arrays, Linked Lists, Stacks, and Queues.",
+        "Trees cover properties, traversal algorithms, and special tree variants.",
+        "Graph representations and standard traversal algorithms are critical for modeling networks.",
+        "Algorithm design techniques structure the approaches used for searching and sorting.",
+        "Complexity analysis uses Big-O notation to measure algorithm time and space performance."
+      ],
+      "id": "c14ehs6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topics",
+          "value": "9 Subsections",
+          "icon": "book"
+        },
+        {
+          "label": "Linear Types",
+          "value": "Arrays & Lists",
+          "icon": "check"
+        },
+        {
+          "label": "Non-Linear Types",
+          "value": "Trees & Graphs",
+          "icon": "info"
+        },
+        {
+          "label": "Core Metric",
+          "value": "Big-O Reference",
+          "icon": "award"
+        }
+      ],
+      "id": "1mt709q"
+    },
+    {
+      "type": "paragraph",
+      "id": "mnfk3m5"
+    },
+    {
+      "id": "ay4lnba",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsgb0ti",
+      "type": "heading",
+      "level": 2,
+      "content": "1.2 Arrays and Linked Lists"
+    },
+    {
+      "id": "vzzr6o8",
+      "type": "heading",
+      "level": 3,
+      "content": "Arrays"
+    },
+    {
+      "id": "x7lu0cv",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "8mee5re",
+      "type": "heading",
+      "level": 3,
+      "content": "Linked Lists"
+    },
+    {
+      "id": "6kjb5go",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wunb3s4",
+      "type": "heading",
+      "level": 2,
+      "content": "1.3 Stacks and Queues"
+    },
+    {
+      "id": "giygt07",
+      "type": "heading",
+      "level": 3,
+      "content": "Stack Applications"
+    },
+    {
+      "id": "yx04oce",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "46t6k1f",
+      "type": "heading",
+      "level": 3,
+      "content": "Queue Variations"
+    },
+    {
+      "id": "6u1gt7d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CHAPTER 1: DATA STRUCTURES AND ALGORITHMS",
+      "id": "4vigndt"
+    },
+    {
+      "id": "kx0g8tl",
+      "type": "heading",
+      "level": 2,
+      "content": "1.4 Trees"
+    },
+    {
+      "id": "xf0mcb3",
+      "type": "heading",
+      "level": 3,
+      "content": "Binary Tree Properties"
+    },
+    {
+      "id": "3sj28w8",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "8clwyuf",
+      "type": "heading",
+      "level": 3,
+      "content": "Tree Traversals"
+    },
+    {
+      "id": "ts2cggu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wiuyw45",
+      "type": "heading",
+      "level": 3,
+      "content": "Special Trees"
+    },
+    {
+      "id": "i4cf3bb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Arrays",
+        "Linked Lists"
+      ],
+      "rows": [
+        [
+          "Memory Allocation",
+          "Contiguous memory allocation",
+          "Non-contiguous / Dynamic memory allocation"
+        ],
+        [
+          "Access Time",
+          "O(1) direct element access via index",
+          "O(n) sequential element traversal"
+        ],
+        [
+          "Insertion / Deletion",
+          "O(n) due to shifting elements",
+          "O(1) given direct pointer/reference"
+        ]
+      ],
+      "id": "scnxvtq"
+    },
+    {
+      "id": "0ubm007",
+      "type": "heading",
+      "level": 2,
+      "content": "1.5 Graphs"
+    },
+    {
+      "id": "0ukx7c6",
+      "type": "heading",
+      "level": 3,
+      "content": "Graph Terminology"
+    },
+    {
+      "id": "xdsih9z",
+      "type": "list",
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "u9fopfd",
+      "type": "heading",
+      "level": 3,
+      "content": "Graph Representations"
+    },
+    {
+      "id": "s8u44ma",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yiyc1kw",
+      "type": "heading",
+      "level": 3,
+      "content": "Graph Algorithms"
+    },
+    {
+      "id": "i4g71wd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "onjjx12",
+      "type": "heading",
+      "level": 2,
+      "content": "1.6 Sorting Algorithms"
+    },
+    {
+      "id": "3epo0lb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "w7mmbqj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Time and space complexity analysis using Big-O notation is heavily tested in GATE and Indian CS competitive exams.",
+        "Tree traversals (Inorder, Preorder, Postorder) and binary tree properties are standard calculation questions.",
+        "Distinction between array dynamic bounds vs linked list memory allocation is frequently evaluated."
+      ],
+      "id": "p3pn1va"
+    },
+    {
+      "id": "y35hdif",
+      "type": "heading",
+      "level": 2,
+      "content": "1.7 Searching Algorithms"
+    },
+    {
+      "id": "uv4awx2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oa0120x",
+      "type": "heading",
+      "level": 2,
+      "content": "1.8 Algorithm Design Techniques"
+    },
+    {
+      "id": "9xzf43h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ksgaq9q",
+      "type": "heading",
+      "level": 2,
+      "content": "1.9 Complexity Analysis — Big-O Reference"
+    },
+    {
+      "id": "aue4rm2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

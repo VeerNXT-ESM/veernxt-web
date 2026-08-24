@@ -1,0 +1,102 @@
+{
+  "id": "6e3b8a4",
+  "title": "8. Parliamentary Form of Government",
+  "order": 244,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "k7s0tey"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Central Articles",
+          "value": "Art. 74 & 75",
+          "icon": "book"
+        },
+        {
+          "label": "State Articles",
+          "value": "Art. 163 & 164",
+          "icon": "book"
+        },
+        {
+          "label": "System Model",
+          "value": "Westminster Model",
+          "icon": "award"
+        },
+        {
+          "label": "Executive Duty",
+          "value": "Collective Responsibility",
+          "icon": "check"
+        }
+      ],
+      "id": "ta68owd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The parliamentary system of government is one in which the executive is responsible to the legislature for its policies and acts.",
+      "id": "iu5ujlt"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parliamentary System",
+        "Presidential System"
+      ],
+      "rows": [
+        [
+          "Dual executive (Nominal and Real executives)",
+          "Single executive (President is both head of State and Government)"
+        ],
+        [
+          "Executive is responsible to the Legislature",
+          "Executive is not responsible to the Legislature"
+        ],
+        [
+          "Double membership (Ministers belong to both Legislature and Executive)",
+          "Single membership (Ministers cannot be members of the Legislature)"
+        ],
+        [
+          "Prime Minister is the primary leader and center of power",
+          "President is the primary leader and center of power"
+        ],
+        [
+          "Lower House (Lok Sabha) can be dissolved by Executive",
+          "Lower House (House of Representatives) cannot be dissolved by President"
+        ]
+      ],
+      "id": "vs4lamg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Articles 74 and 75 provide for a parliamentary system at the Centre, while Articles 163 and 164 provide for it in the states.",
+        "The executive is responsible to the legislature for its policies and acts, making it a responsible government.",
+        "The President is the nominal executive (de jure executive), whereas the Prime Minister is the real executive (de facto executive).",
+        "Ministers hold double membership, meaning they are members of both the legislature and the executive.",
+        "The parliamentary system is also known as Cabinet Government or the Westminster Model of Government."
+      ],
+      "id": "2og3idh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 75 explicitly lays down that the Council of Ministers is collectively responsible to the Lok Sabha (House of the People).",
+        "Unlike the British system where Parliament is supreme, the Indian Parliament is not a sovereign body due to a written Constitution, federalism, and judicial review.",
+        "In India, the Prime Minister must be a member of either the Lok Sabha or Rajya Sabha; if not a member at appointment, they must get elected within six months."
+      ],
+      "id": "itxxjlp"
+    },
+    {
+      "type": "paragraph",
+      "id": "iyy13x6"
+    },
+    {
+      "type": "paragraph",
+      "id": "428oky5"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,579 @@
+{
+  "id": "nacl66i",
+  "title": "PHYSICS – CHAPTER 2",
+  "order": 33,
+  "blocks": [
+    {
+      "id": "utuvhnc",
+      "type": "heading",
+      "level": 2,
+      "content": "MOTION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Motion is systematically analyzed across 1D and 2D frameworks, including uniform circular motion.",
+        "A fundamental distinction is drawn between scalar quantities (distance, speed) and vector quantities (displacement, velocity).",
+        "Equations of motion apply specifically to scenarios with uniform acceleration and motion under gravity.",
+        "Graphical representations and unit conversions serve as indispensable analytical tools for competitive exam questions."
+      ],
+      "id": "1clm4ye"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Subject",
+          "value": "Physics",
+          "icon": "book"
+        },
+        {
+          "label": "Chapter Topic",
+          "value": "Motion",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "RRB & Competitive",
+          "icon": "award"
+        },
+        {
+          "label": "Core Modules",
+          "value": "16 Topics",
+          "icon": "check"
+        }
+      ],
+      "id": "fpr78hb"
+    },
+    {
+      "type": "paragraph",
+      "id": "769ul44"
+    },
+    {
+      "id": "kvbzxx9",
+      "type": "heading",
+      "level": 3,
+      "content": "1. TYPES OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "pjl2ljv"
+    },
+    {
+      "type": "paragraph",
+      "id": "uo8j3a9"
+    },
+    {
+      "type": "paragraph",
+      "id": "burmv5c"
+    },
+    {
+      "type": "paragraph",
+      "id": "f2ifl1j"
+    },
+    {
+      "id": "487p4dc",
+      "type": "heading",
+      "level": 3,
+      "content": "2. DISTANCE AND DISPLACEMENT"
+    },
+    {
+      "id": "6yqpyy5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y2y98r8"
+    },
+    {
+      "id": "jjwyznz",
+      "type": "heading",
+      "level": 3,
+      "content": "3. SPEED AND VELOCITY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dz3e7h6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iw02v4l"
+    },
+    {
+      "id": "ph1h4l5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pf2kahx"
+    },
+    {
+      "id": "2opdkk8",
+      "type": "heading",
+      "level": 3,
+      "content": "4. ACCELERATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "rduqbv0"
+    },
+    {
+      "type": "paragraph",
+      "id": "5y8852e"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rwtt0sf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "919w74u"
+    },
+    {
+      "type": "paragraph",
+      "id": "f7w594j"
+    },
+    {
+      "id": "4kklkip",
+      "type": "heading",
+      "level": 3,
+      "content": "5. EQUATIONS OF MOTION (Uniform Acceleration)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2sacv8v"
+    },
+    {
+      "type": "paragraph",
+      "id": "pxv05ro"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8bdix2y"
+    },
+    {
+      "type": "paragraph",
+      "id": "9g1k01k"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gl978ia"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lhn5e3z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7peu9u0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s9rddb4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0kpno8b"
+    },
+    {
+      "id": "pe3k24n",
+      "type": "heading",
+      "level": 3,
+      "content": "6. MOTION UNDER GRAVITY (FREE FALL)"
+    },
+    {
+      "type": "paragraph",
+      "id": "nht5yo8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lg12t2g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4txx2ug"
+    },
+    {
+      "type": "pullQuote",
+      "content": "GRAPH CONCEPTS (VERY IMPORTANT FOR RRB)",
+      "id": "jsveept"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dhzjk73"
+    },
+    {
+      "type": "paragraph",
+      "id": "dmgn58m"
+    },
+    {
+      "id": "udwirq2",
+      "type": "heading",
+      "level": 3,
+      "content": "7. UNIFORM CIRCULAR MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "dr1ylry"
+    },
+    {
+      "id": "hefvhpt",
+      "type": "heading",
+      "level": 3,
+      "content": "8. GRAPHICAL REPRESENTATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "mldvrc8"
+    },
+    {
+      "type": "paragraph",
+      "id": "tpj8z4k"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "10o0w03"
+    },
+    {
+      "type": "paragraph",
+      "id": "9qn21yr"
+    },
+    {
+      "type": "paragraph",
+      "id": "mtwikoe"
+    },
+    {
+      "type": "paragraph",
+      "id": "ej5dswd"
+    },
+    {
+      "id": "qafmj29",
+      "type": "heading",
+      "level": 3,
+      "content": "9.SCALAR AND VECTOR QUANTITIES"
+    },
+    {
+      "id": "nebkqpo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9o1k0hk",
+      "type": "heading",
+      "level": 3,
+      "content": "10. AVERAGE SPEED & INSTANTANEOUS VELOCITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "vjem21z"
+    },
+    {
+      "type": "paragraph",
+      "id": "j7uixf7"
+    },
+    {
+      "type": "paragraph",
+      "id": "g5yrp2g"
+    },
+    {
+      "type": "paragraph",
+      "id": "edag9d7"
+    },
+    {
+      "type": "paragraph",
+      "id": "3226a28"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Concept Pair",
+        "Scalar Quantity",
+        "Vector Quantity"
+      ],
+      "rows": [
+        [
+          "Position / Path",
+          "Distance",
+          "Displacement"
+        ],
+        [
+          "Rate of Motion",
+          "Speed",
+          "Velocity"
+        ]
+      ],
+      "id": "b1o18on"
+    },
+    {
+      "type": "paragraph",
+      "id": "6x9c79c"
+    },
+    {
+      "id": "s0ebkxs",
+      "type": "heading",
+      "level": 3,
+      "content": "11. RELATIVE MOTION"
+    },
+    {
+      "type": "paragraph",
+      "id": "7njbws0"
+    },
+    {
+      "type": "paragraph",
+      "id": "cr52o93"
+    },
+    {
+      "type": "paragraph",
+      "id": "bgihmps"
+    },
+    {
+      "id": "amb9vz7",
+      "type": "heading",
+      "level": 3,
+      "content": "12. MOTION IN 1D AND 2D"
+    },
+    {
+      "type": "paragraph",
+      "id": "5p4yhtm"
+    },
+    {
+      "type": "paragraph",
+      "id": "ykh47b1"
+    },
+    {
+      "type": "paragraph",
+      "id": "5766zmr"
+    },
+    {
+      "type": "paragraph",
+      "id": "r2tsqwb"
+    },
+    {
+      "type": "paragraph",
+      "id": "odi6xjd"
+    },
+    {
+      "type": "paragraph",
+      "id": "kz5omor"
+    },
+    {
+      "type": "paragraph",
+      "id": "727lsnf"
+    },
+    {
+      "type": "paragraph",
+      "id": "zyzoleu"
+    },
+    {
+      "id": "3brlu4y",
+      "type": "heading",
+      "level": 3,
+      "content": "13. UNIFORM CIRCULAR MOTION – FORMULAS"
+    },
+    {
+      "type": "paragraph",
+      "id": "3eb7dg4"
+    },
+    {
+      "type": "paragraph",
+      "id": "al5plqz"
+    },
+    {
+      "type": "paragraph",
+      "id": "tz6ark8"
+    },
+    {
+      "id": "g5jng3e",
+      "type": "heading",
+      "level": 3,
+      "content": "14. GRAPH CONCEPTS (VERY IMPORTANT FOR RRB)"
+    },
+    {
+      "type": "paragraph",
+      "id": "rg18be3"
+    },
+    {
+      "type": "paragraph",
+      "id": "bc3rwxa"
+    },
+    {
+      "type": "paragraph",
+      "id": "jqhjyqf"
+    },
+    {
+      "type": "paragraph",
+      "id": "yypm4f5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Graphical interpretation (Position-Time & Velocity-Time) is extremely high-yield for RRB exams.",
+        "Questions frequently contrast scalar vs. vector properties (e.g., Distance vs. Displacement, Speed vs. Velocity).",
+        "Special tricky points often focus on unit conversion errors and sign conventions in free-fall motion under gravity."
+      ],
+      "id": "o2kzlaf"
+    },
+    {
+      "type": "paragraph",
+      "id": "y5zi7kv"
+    },
+    {
+      "id": "0k7ac61",
+      "type": "heading",
+      "level": 3,
+      "content": "15. IMPORTANT UNIT CONVERSIONS"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gby6iyb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yf6fg0n"
+    },
+    {
+      "id": "zspv96u",
+      "type": "heading",
+      "level": 3,
+      "content": "16. SPECIAL RRB TRICKY POINTS"
+    },
+    {
+      "type": "paragraph",
+      "id": "9er4mep"
+    },
+    {
+      "type": "paragraph",
+      "id": "wvicu4o"
+    },
+    {
+      "type": "paragraph",
+      "id": "751mumo"
+    },
+    {
+      "type": "paragraph",
+      "id": "lno8pz3"
+    },
+    {
+      "type": "paragraph",
+      "id": "s4x9amj"
+    },
+    {
+      "type": "paragraph",
+      "id": "kzkulv0"
+    },
+    {
+      "type": "paragraph",
+      "id": "lr9mvph"
+    },
+    {
+      "type": "paragraph",
+      "id": "zzpjk9l"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa4ro1f"
+    },
+    {
+      "type": "paragraph",
+      "id": "7h8016f"
+    }
+  ],
+  "enriched": true
+}

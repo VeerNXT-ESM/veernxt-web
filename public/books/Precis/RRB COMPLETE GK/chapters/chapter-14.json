@@ -1,0 +1,169 @@
+{
+  "id": "tb3ndbv",
+  "title": "2. Size of the Earth",
+  "order": 14,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "bwn75et"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Mean Radius",
+          "value": "6,371 km",
+          "icon": "globe"
+        },
+        {
+          "label": "Equatorial Circumference",
+          "value": "40,075 km",
+          "icon": "compass"
+        },
+        {
+          "label": "Total Surface Area",
+          "value": "510 M sq km",
+          "icon": "map"
+        },
+        {
+          "label": "Surface Gravity",
+          "value": "9.8 m/s²",
+          "icon": "check"
+        }
+      ],
+      "id": "xgqo49f"
+    },
+    {
+      "id": "cl2fu2i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Why Earth's Size Supports Life",
+      "id": "mrd0t0h"
+    },
+    {
+      "id": "tqeh7ls",
+      "type": "heading",
+      "level": 2,
+      "content": "Why Earth's Size Supports Life"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Dimension Property",
+        "Equatorial Region",
+        "Polar Region"
+      ],
+      "rows": [
+        [
+          "Diameter",
+          "12,756 km",
+          "12,714 km"
+        ],
+        [
+          "Radius",
+          "6,378 km",
+          "6,357 km"
+        ],
+        [
+          "Circumference",
+          "40,075 km",
+          "40,008 km"
+        ]
+      ],
+      "id": "erhqbkx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earth's optimal size generates sufficient gravitational force to retain a protective atmosphere.",
+        "The planet's shape is an oblate spheroid, bulging slightly at the equator due to rotation.",
+        "Internal thermal energy is retained effectively because of Earth's volume, keeping its liquid outer core active.",
+        "The active molten core maintains a magnetic field that deflects harmful solar radiation."
+      ],
+      "id": "ub6l35e"
+    },
+    {
+      "type": "paragraph",
+      "id": "e2192ga"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Equatorial Diameter (12,756 km) is greater than the Polar Diameter (12,714 km) by approximately 42 km.",
+        "Gravity is slightly stronger at the poles than at the equator due to the polar flattening of the Geoid shape.",
+        "Escape velocity on Earth is 11.2 km/s, directly determined by Earth's mass and radius."
+      ],
+      "id": "ouo1uud"
+    },
+    {
+      "type": "paragraph",
+      "id": "x3uu1iw"
+    },
+    {
+      "type": "paragraph",
+      "id": "j8l2z05"
+    }
+  ],
+  "enriched": true
+}
