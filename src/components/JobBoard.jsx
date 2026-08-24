@@ -2,32 +2,16 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {
   Briefcase, Calendar, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
-  MapPin, ArrowLeft, ChevronLeft, ChevronRight, X, Sliders, Bookmark,
+  MapPin, X, Sliders, Bookmark,
   BarChart2, CheckCircle2, Award, ChevronDown, ChevronUp, Sparkles, BookOpen
 } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
 import ExamContentPreview from './ExamContentPreview';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-
-// Coarse category every scraped job is tagged with (career_track, computed by
-// scraper-app's classifyCareerTrack() at ingest time — always set, since a
-// precise exam match only resolves a small fraction of postings). STATE_GOVT
-// is the classifier's default bucket, so it reads as a neutral "General" tag
-// rather than a literal state-government label.
-const CAREER_TRACK_META = {
-  BANKING: { label: 'Banking', bg: '#eff6ff', color: '#1d4ed8', border: '#dbeafe' },
-  SSC: { label: 'SSC', bg: '#faf5ff', color: '#7e22ce', border: '#f3e8ff' },
-  RAILWAYS: { label: 'Railways', bg: '#fff7ed', color: '#c2410c', border: '#ffedd5' },
-  POLICE_CAPF: { label: 'Police & CAPF', bg: '#fef2f2', color: '#b91c1c', border: '#fee2e2' },
-  DEFENCE: { label: 'Defence', bg: '#f0fdf4', color: '#15803d', border: '#dcfce7' },
-  PSU: { label: 'PSU', bg: '#f0fdfa', color: '#0f766e', border: '#ccfbf1' },
-  ENGINEERING: { label: 'Engineering', bg: '#eef2ff', color: '#4338ca', border: '#e0e7ff' },
-  STATE_GOVT: { label: 'General', bg: '#f8fafc', color: '#475569', border: '#e2e8f0' },
-};
-const CAREER_TRACK_ORDER = ['BANKING', 'SSC', 'RAILWAYS', 'POLICE_CAPF', 'DEFENCE', 'PSU', 'ENGINEERING', 'STATE_GOVT'];
+import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
 
 const CategoryTag = ({ track, style }) => {
   const meta = CAREER_TRACK_META[track];
@@ -35,18 +19,17 @@ const CategoryTag = ({ track, style }) => {
   return (
     <span
       className="category-tag"
-      style={{ background: meta.bg, color: meta.color, borderColor: meta.border, ...style }}
+      style={{ background: hexToRgba(meta.hue, 0.08), color: meta.hue, borderColor: hexToRgba(meta.hue, 0.2), ...style }}
     >
       {meta.label}
     </span>
   );
 };
 
-const JobBoard = ({ isAdmin = false }) => {
+const JobBoard = () => {
   const navigate = useNavigate();
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('ALL');
   const [error, setError] = useState(null);
@@ -118,21 +101,6 @@ const JobBoard = ({ isAdmin = false }) => {
   useEffect(() => {
     setExamAccordionOpen(false);
   }, [selectedJob?.id]);
-
-  const handleRefresh = async () => {
-    setRefreshing(true);
-    try {
-      // Refresh logic would ideally call a Vercel serverless function or external scraper hook
-      // For now, we'll just refetch from the database
-      await fetchJobs();
-      alert('Job board synced with latest database records.');
-    } catch (err) {
-      console.error('Refresh failed:', err);
-      alert('Refresh failed: ' + err.message);
-    } finally {
-      setRefreshing(false);
-    }
-  };
 
   const dismissJob = (jobId) => {
     setDismissedJobIds(prev => [...prev, jobId]);
@@ -236,13 +204,6 @@ const JobBoard = ({ isAdmin = false }) => {
   );
 
 
-  // Pagination compilation for admin/search views
-  const itemsPerPage = 10;
-  const totalPages = Math.ceil(filteredJobs.length / itemsPerPage) || 1;
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
-
   // Separate jobs for LinkedIn feeds
   const candidateKeywords = ['developer', 'graphic', 'game', 'designer', 'creative', 'artist', 'lip sync', 'dubbing', 'ai', 'intern', 'operations', 'video'];
   const matchedList = filteredJobs.filter(job => 
@@ -265,30 +226,9 @@ const JobBoard = ({ isAdmin = false }) => {
   return (
     <div className="jobs-container animate-fade-in">
       <div className="jobs-header">
-          {isAdmin && (
-            <button 
-              onClick={() => navigate('/admin')} 
-              className="btn-secondary ios-pill" 
-              style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.8rem', fontSize: '0.8rem' }}
-            >
-              <ArrowLeft size={14} /> Back to Admin
-            </button>
-          )}
           <h1 style={{ fontSize: '2.5rem', fontWeight: '800', tracking: '-0.03em' }}>Live Job Board</h1>
           <p style={{ color: '#666', fontSize: '1.1rem' }}>Aggregated notifications from SSC, IBPS, Railways, and State PSCs.</p>
         </div>
-        
-        {isAdmin && (
-          <button 
-            onClick={handleRefresh} 
-            disabled={refreshing}
-            className="btn-secondary ios-pill"
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'white' }}
-          >
-            {refreshing ? <RefreshCw className="animate-spin" size={16} /> : <RefreshCw size={16} />}
-            {refreshing ? 'Scraping...' : 'Refresh Job Board'}
-          </button>
-        )}
 
       <div className="search-bar-wrapper">
         <div className="search-input-container">
@@ -318,7 +258,7 @@ const JobBoard = ({ isAdmin = false }) => {
             key={track}
             className={`category-pill ${categoryFilter === track ? 'active' : ''}`}
             onClick={() => setCategoryFilter(track)}
-            style={categoryFilter === track ? { background: CAREER_TRACK_META[track].bg, color: CAREER_TRACK_META[track].color, borderColor: CAREER_TRACK_META[track].border } : undefined}
+            style={categoryFilter === track ? { background: hexToRgba(CAREER_TRACK_META[track].hue, 0.1), color: CAREER_TRACK_META[track].hue, borderColor: hexToRgba(CAREER_TRACK_META[track].hue, 0.25) } : undefined}
           >
             {CAREER_TRACK_META[track].label} <span className="category-pill-count">{categoryCounts[track]}</span>
           </button>
@@ -335,115 +275,6 @@ const JobBoard = ({ isAdmin = false }) => {
           <AlertCircle size={48} color="#ef4444" />
           <p>{error}</p>
           <button onClick={fetchJobs} className="btn-primary ios-pill">Retry</button>
-        </div>
-      ) : isAdmin ? (
-        /* Admin View: Row list / Table */
-        <div className="admin-jobs-wrapper">
-          <div className="table-responsive">
-            <table className="admin-jobs-table">
-              <thead>
-                <tr>
-                  <th>Conducting Body</th>
-                  <th>Notification / Vacancy Details</th>
-                  <th>Published Date</th>
-                  <th>Last Date</th>
-                  <th>Vacancies</th>
-                  <th style={{ textAlign: 'right' }}>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {paginatedJobs.length > 0 ? (
-                  paginatedJobs.map((job, idx) => (
-                    <tr key={idx} onClick={() => setSelectedJob(job)} style={{ cursor: 'pointer' }}>
-                      <td>
-                        <span className="body-badge" style={{ background: '#f0fdf4', color: '#1F3A2E', border: '1px solid #dcfce7' }}>
-                          {job.body}
-                        </span>
-                        {job.examName && (
-                          <span className="body-badge" style={{ display: 'block', marginTop: '0.3rem', background: '#eef2ff', color: '#3730a3', border: '1px solid #e0e7ff', fontSize: '0.7rem' }}>
-                            Exam: {job.examName}
-                          </span>
-                        )}
-                        {job.careerTrack && (
-                          <div style={{ marginTop: '0.3rem' }}>
-                            <CategoryTag track={job.careerTrack} style={{ fontSize: '0.68rem' }} />
-                          </div>
-                        )}
-                      </td>
-                      <td>
-                        <div className="job-title-col">
-                          <span className="admin-job-title" title={job.title}>{job.title}</span>
-                          {job.url && <span className="admin-job-link-text">{job.url.substring(0, 70)}...</span>}
-                        </div>
-                      </td>
-                      <td>
-                        <span className="date-text">
-                          {job.publishedOn ? new Date(job.publishedOn).toLocaleDateString() : 'Recent'}
-                        </span>
-                      </td>
-                      <td>
-                        <span className={`last-date-badge ${job.lastDate ? 'warning' : 'none'}`}>
-                          {job.lastDate ? new Date(job.lastDate).toLocaleDateString() : 'N/A'}
-                        </span>
-                      </td>
-                      <td>
-                        <span className="vacancies-text">{job.vacancies || 'N/A'}</span>
-                      </td>
-                      <td style={{ textAlign: 'right' }} onClick={(e) => e.stopPropagation()}>
-                        <button className="btn-curate" onClick={() => setSelectedJob(job)}>
-                          View Details
-                        </button>
-                      </td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan="6" style={{ textAlign: 'center', padding: '3rem' }}>
-                      <Search size={32} color="#ccc" style={{ marginBottom: '1rem' }} />
-                      <p style={{ margin: 0, color: '#888' }}>
-                        No vacancies found{search ? ` matching "${search}"` : ''}{categoryFilter !== 'ALL' ? ` in ${CAREER_TRACK_META[categoryFilter].label}` : ''}
-                      </p>
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Pagination Controls */}
-          {totalPages > 1 && (
-            <div className="pagination-bar">
-              <button 
-                className="pagination-btn" 
-                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                disabled={currentPage === 1}
-              >
-                <ChevronLeft size={14} />
-                <span>Previous</span>
-              </button>
-              
-              <div className="pagination-pages">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                  <button
-                    key={page}
-                    className={`pagination-page-btn ${currentPage === page ? 'active' : ''}`}
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </button>
-                ))}
-              </div>
-
-              <button 
-                className="pagination-btn" 
-                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                disabled={currentPage === totalPages}
-              >
-                <span>Next</span>
-                <ChevronRight size={14} />
-              </button>
-            </div>
-          )}
         </div>
       ) : (
         /* Restructured Agniveer Split-Screen Layout: Left Related Feed, Right Detail Review Sheet */
@@ -664,82 +495,6 @@ const JobBoard = ({ isAdmin = false }) => {
         </div>
       )}
 
-      {/* Details View Modal inside the Admin Panel */}
-      {isAdmin && selectedJob && (
-        <div className="modal-overlay animate-fade-in" onClick={() => setSelectedJob(null)}>
-          <div className="details-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <span className="modal-badge">{selectedJob.body}</span>
-              <button className="modal-close-btn" onClick={() => setSelectedJob(null)}>
-                <X size={20} />
-              </button>
-            </div>
-            
-            <h2 className="modal-job-title">{selectedJob.title}</h2>
-            
-            <div className="modal-details-grid">
-              <div className="modal-detail-card">
-                <span className="detail-label">Conducting Body</span>
-                <span className="detail-val">{selectedJob.body}</span>
-              </div>
-              {selectedJob.careerTrack && (
-                <div className="modal-detail-card">
-                  <span className="detail-label">Category</span>
-                  <span className="detail-val"><CategoryTag track={selectedJob.careerTrack} /></span>
-                </div>
-              )}
-              {selectedJob.examId && (
-                <div className="modal-detail-card">
-                  <span className="detail-label">Required Exam</span>
-                  <span className="detail-val">
-                    <Link to={`/exam/${selectedJob.examId}`} style={{ color: 'var(--ios-olive)', fontWeight: 600 }}>{selectedJob.examName || 'View syllabus'}</Link>
-                  </span>
-                </div>
-              )}
-              <div className="modal-detail-card">
-                <span className="detail-label">Published On</span>
-                <span className="detail-val">
-                  {selectedJob.publishedOn ? new Date(selectedJob.publishedOn).toLocaleDateString() : 'Recent'}
-                </span>
-              </div>
-              <div className="modal-detail-card">
-                <span className="detail-label">Last Date to Apply</span>
-                <span className={`detail-val ${selectedJob.lastDate ? 'warning-text' : ''}`}>
-                  {selectedJob.lastDate ? new Date(selectedJob.lastDate).toLocaleDateString() : 'Continuous Recruitment'}
-                </span>
-              </div>
-              <div className="modal-detail-card">
-                <span className="detail-label">Available Vacancies</span>
-                <span className="detail-val">{selectedJob.vacancies || 'As per notification rules'}</span>
-              </div>
-              {selectedJob.ageRange && (
-                <div className="modal-detail-card">
-                  <span className="detail-label">Eligible Age Bracket</span>
-                  <span className="detail-val">{selectedJob.ageRange}</span>
-                </div>
-              )}
-            </div>
-
-            {selectedJob.notes && (
-              <div className="modal-notes-section">
-                <h4>Official Notes & Remarks</h4>
-                <p>{selectedJob.notes}</p>
-              </div>
-            )}
-
-            <div className="modal-footer-row">
-              <button className="btn-secondary" onClick={() => setSelectedJob(null)} style={{ padding: '0.65rem 1.5rem', borderRadius: '10px', border: '1px solid #cbd5e1', cursor: 'pointer', background: 'white', fontWeight: 700 }}>
-                Close Details
-              </button>
-              {selectedJob.url && (
-                <a href={selectedJob.url} rel="noopener" className="btn-primary ios-pill" style={{ textDecoration: 'none', padding: '0.65rem 1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#1F3A2E', color: 'white', borderRadius: '99px', fontWeight: 700 }}>
-                  Open Official Source <ExternalLink size={14} />
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
 
       <style dangerouslySetInnerHTML={{ __html: `
         .jobs-container {
@@ -785,295 +540,6 @@ const JobBoard = ({ isAdmin = false }) => {
           border-color: var(--ios-olive);
           box-shadow: 0 0 0 4px rgba(111, 126, 88, 0.1);
         }
-        /* Admin Jobs Table Styles */
-        .admin-jobs-wrapper {
-          background: white;
-          padding: 1.5rem;
-          border-radius: 20px;
-          border: 1px solid #f1f5f9;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.01);
-          margin-top: 1.5rem;
-        }
-        .table-responsive {
-          width: 100%;
-          overflow-x: auto;
-        }
-        .admin-jobs-table {
-          width: 100%;
-          border-collapse: collapse;
-          text-align: left;
-        }
-        .admin-jobs-table th {
-          padding: 1rem 1.25rem;
-          font-size: 0.72rem;
-          font-weight: 800;
-          color: #475569;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          border-bottom: 2px solid #f1f5f9;
-        }
-        .admin-jobs-table tr {
-          transition: background 0.2s;
-        }
-        .admin-jobs-table tbody tr:hover {
-          background: #f8fafc;
-        }
-        .admin-jobs-table td {
-          padding: 1rem 1.25rem;
-          border-bottom: 1px solid #f1f5f9;
-          font-size: 0.88rem;
-          color: #334155;
-          vertical-align: middle;
-        }
-        .job-title-col {
-          display: flex;
-          flex-direction: column;
-          gap: 0.2rem;
-        }
-        .admin-job-title {
-          font-weight: 700;
-          color: #0f172a;
-          line-height: 1.4;
-          display: -webkit-box;
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          max-width: 450px;
-        }
-        .admin-job-link-text {
-          font-size: 0.68rem;
-          color: #94a3b8;
-          font-family: monospace;
-        }
-        .date-text {
-          font-weight: 600;
-          color: #64748b;
-          font-size: 0.8rem;
-        }
-        .last-date-badge {
-          display: inline-block;
-          font-size: 0.75rem;
-          font-weight: 700;
-          padding: 0.25rem 0.5rem;
-          border-radius: 6px;
-        }
-        .last-date-badge.warning {
-          background: #fff7ed;
-          color: #c2410c;
-        }
-        .last-date-badge.none {
-          background: #f1f5f9;
-          color: #64748b;
-        }
-        .vacancies-text {
-          font-weight: 700;
-          color: #0f172a;
-        }
-        
-        .btn-curate {
-          padding: 0.4rem 0.85rem;
-          background: white;
-          border: 1px solid #cbd5e1;
-          color: #475569;
-          font-weight: 700;
-          font-size: 0.75rem;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: all 0.2s;
-        }
-        .btn-curate:hover {
-          border-color: #1F3A2E;
-          color: #1F3A2E;
-          background: #f8fafc;
-        }
-
-        /* Modal Overlay Styles */
-        .modal-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(15, 23, 42, 0.4);
-          backdrop-filter: blur(8px);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 1000;
-          padding: 1.5rem;
-        }
-        .details-modal {
-          background: white;
-          border-radius: 24px;
-          width: 100%;
-          max-width: 650px;
-          padding: 2.25rem;
-          box-shadow: 0 20px 50px rgba(15,23,42,0.15);
-          text-align: left;
-          position: relative;
-        }
-        .modal-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 1.25rem;
-        }
-        .modal-badge {
-          background: #ecfdf5;
-          color: #10b981;
-          padding: 0.35rem 0.75rem;
-          border-radius: 99px;
-          font-size: 0.72rem;
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
-        .modal-close-btn {
-          background: none;
-          border: none;
-          color: #94a3b8;
-          cursor: pointer;
-          padding: 4px;
-          border-radius: 99px;
-          display: flex;
-          transition: background 0.2s, color 0.2s;
-        }
-        .modal-close-btn:hover {
-          background: #f1f5f9;
-          color: #334155;
-        }
-        .modal-job-title {
-          font-size: 1.4rem;
-          font-weight: 800;
-          color: #0f172a;
-          line-height: 1.35;
-          margin-bottom: 2rem;
-          letter-spacing: -0.02em;
-        }
-        .modal-details-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.25rem;
-          margin-bottom: 2rem;
-        }
-        .modal-detail-card {
-          background: #f8fafc;
-          padding: 1rem 1.25rem;
-          border-radius: 14px;
-          border: 1px solid #f1f5f9;
-          display: flex;
-          flex-direction: column;
-          gap: 0.35rem;
-        }
-        .detail-label {
-          font-size: 0.68rem;
-          font-weight: 800;
-          color: #94a3b8;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
-        .detail-val {
-          font-size: 0.95rem;
-          font-weight: 750;
-          color: #1e293b;
-        }
-        .detail-val.warning-text {
-          color: #c2410c;
-        }
-        .modal-notes-section {
-          background: #fffbeb;
-          border: 1px solid #fef3c7;
-          padding: 1.25rem;
-          border-radius: 16px;
-          margin-bottom: 2rem;
-        }
-        .modal-notes-section h4 {
-          margin: 0 0 0.5rem 0;
-          color: #b45309;
-          font-weight: 800;
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
-        .modal-notes-section p {
-          margin: 0;
-          color: #78350f;
-          font-size: 0.88rem;
-          line-height: 1.5;
-        }
-        .modal-footer-row {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 1rem;
-          border-top: 1px solid #f1f5f9;
-          padding-top: 1.5rem;
-        }
-
-        /* Pagination Bar in Jobs */
-        .pagination-bar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 1.25rem 0.25rem 0.25rem 0.25rem;
-          border-top: 1px solid #f1f5f9;
-          margin-top: 1rem;
-        }
-        .pagination-btn {
-          padding: 0.45rem 1rem;
-          background: white;
-          border: 1px solid #cbd5e1;
-          color: #475569;
-          font-weight: 700;
-          font-size: 0.8rem;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: all 0.2s;
-          display: inline-flex;
-          align-items: center;
-          gap: 0.35rem;
-        }
-        .pagination-btn:hover:not(:disabled) {
-          border-color: #1F3A2E;
-          color: #1F3A2E;
-          background: #f8fafc;
-        }
-        .pagination-btn:disabled {
-          opacity: 0.4;
-          cursor: not-allowed;
-        }
-        .pagination-pages {
-          display: flex;
-          align-items: center;
-          gap: 0.35rem;
-        }
-        .pagination-page-btn {
-          width: 32px;
-          height: 32px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: white;
-          border: 1px solid #cbd5e1;
-          color: #475569;
-          font-weight: 700;
-          font-size: 0.8rem;
-          border-radius: 6px;
-          cursor: pointer;
-          transition: all 0.2s;
-        }
-        .pagination-page-btn:hover:not(.active) {
-          border-color: #1F3A2E;
-          color: #1F3A2E;
-          background: #f8fafc;
-        }
-        .pagination-page-btn.active {
-          background: #1F3A2E;
-          color: white;
-          border-color: #1F3A2E;
-          box-shadow: 0 2px 6px rgba(31,58,46,0.15);
-        }
-
         .job-count {
           font-size: 0.9rem;
           color: #888;
@@ -1149,16 +615,6 @@ const JobBoard = ({ isAdmin = false }) => {
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-        }
-        .body-badge {
-          background: var(--ios-secondary);
-          color: var(--ios-olive);
-          padding: 0.35rem 0.75rem;
-          border-radius: 8px;
-          font-size: 0.75rem;
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
         }
         .date-badge {
           display: flex;

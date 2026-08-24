@@ -2,7 +2,7 @@ import React from 'react';
 import JobBoard from '../components/JobBoard';
 
 const PublicJobs = () => {
-  return <JobBoard isAdmin={false} />;
+  return <JobBoard />;
 };
 
 export default PublicJobs;
