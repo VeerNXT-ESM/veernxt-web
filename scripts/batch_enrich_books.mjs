@@ -13,8 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import mammoth from 'mammoth';
-import { DOMParser } from '@xmldom/xmldom';
+import { generateId, parseDocxToSemanticModelNode } from './docxParser.mjs';
 
 // Load environment variables
 function loadEnv() {
@@ -44,10 +43,6 @@ if (!GEMINI_API_KEY) {
 
 const MODEL_NAME = 'gemini-3.6-flash';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${GEMINI_API_KEY}`;
-
-function generateId() {
-  return Math.random().toString(36).substring(2, 9);
-}
 
 let PRESERVE_PREFIX = false;
 
@@ -212,148 +207,6 @@ async function enrichChapter(chapter) {
   return chapter;
 }
 
-/**
- * Parses DOCX buffer into semantic block structure locally in Node.js
- */
-async function parseDocxToSemanticModelNode(buffer, fileName) {
-  const options = {
-    styleMap: [
-      "p[style-name='Heading 1'] => h1:fresh",
-      "p[style-name='Heading 2'] => h2:fresh",
-      "p[style-name='Heading 3'] => h3:fresh",
-      "p[style-name='Title'] => h1:fresh",
-      "p[style-name='Subtitle'] => h2:fresh",
-      "p[style-name='Quote'] => blockquote:fresh",
-      "p[style-name='Intense Quote'] => blockquote:fresh"
-    ]
-  };
-
-  const result = await mammoth.convertToHtml({ buffer }, options);
-  const html = result.value;
-
-  const wrappedHtml = `<html><body>${html}</body></html>`;
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(wrappedHtml, 'text/xml');
-
-  const book = {
-    id: generateId(),
-    title: fileName.replace(/\.[^/.]+$/, ''),
-    description: '',
-    coverImage: null,
-    chapters: []
-  };
-
-  let currentChapter = null;
-  const imagesDb = []; // Empty for text-only pass
-
-  const ensureChapter = () => {
-    if (!currentChapter) {
-      currentChapter = {
-        id: generateId(),
-        title: 'Introduction',
-        order: book.chapters.length + 1,
-        blocks: []
-      };
-      book.chapters.push(currentChapter);
-    }
-  };
-
-  const classifyParagraph = (element) => {
-    const text = element.textContent.replace(/\u00A0/g, ' ').trim();
-    if (!text) return null;
-
-    const firstChild = element.firstChild;
-    if (firstChild && (firstChild.nodeName === 'STRONG' || firstChild.nodeName === 'B')) {
-      const prefix = firstChild.textContent.trim().toUpperCase();
-      const content = element.innerHTML;
-      
-      if (prefix.includes('IMPORTANT') || prefix.includes('WARNING')) return { type: 'important', content };
-      if (prefix.includes('EXAM TIP') || prefix.includes('TRICK') || prefix.includes('SHORTCUT')) return { type: 'examTip', content };
-      if (prefix.includes('DEFINITION') || prefix.includes('CONCEPT')) return { type: 'definition', content };
-      if (prefix.includes('EXAMPLE') || prefix.includes('FOR INSTANCE')) return { type: 'example', content };
-      if (prefix.includes('NOTE') || prefix.includes('DID YOU KNOW')) return { type: 'callout', content };
-    }
-    
-    const wordCount = text.split(/\s+/).length;
-    if (wordCount <= 5 && !text.endsWith('.') && !text.endsWith('?') && !text.endsWith(':') && !text.endsWith(';')) {
-      return { type: 'heading', level: 4, content: element.innerHTML };
-    }
-
-    return { type: 'paragraph', content: element.innerHTML };
-  };
-
-  const elements = Array.from(doc.documentElement.getElementsByTagName('body')[0].childNodes);
-
-  for (const el of elements) {
-    if (!el.tagName) continue;
-    const nodeName = el.tagName.toUpperCase();
-
-    if (nodeName === 'H1') {
-      currentChapter = {
-        id: generateId(),
-        title: el.textContent.trim() || 'Untitled Chapter',
-        order: book.chapters.length + 1,
-        blocks: []
-      };
-      book.chapters.push(currentChapter);
-      continue;
-    }
-
-    ensureChapter();
-
-    if (nodeName === 'H2') {
-      currentChapter.blocks.push({ id: generateId(), type: 'heading', level: 2, content: el.textContent.trim() });
-    }
-    else if (nodeName === 'H3' || nodeName === 'H4') {
-      currentChapter.blocks.push({ id: generateId(), type: 'heading', level: 3, content: el.textContent.trim() });
-    }
-    else if (nodeName === 'P') {
-      const block = classifyParagraph(el);
-      if (block) {
-        block.id = generateId();
-        currentChapter.blocks.push(block);
-      }
-    }
-    else if (nodeName === 'UL') {
-      const items = Array.from(el.getElementsByTagName('li')).map(li => li.innerHTML);
-      currentChapter.blocks.push({ id: generateId(), type: 'list', items });
-    }
-    else if (nodeName === 'OL') {
-      const items = Array.from(el.getElementsByTagName('li')).map(li => li.innerHTML);
-      currentChapter.blocks.push({ id: generateId(), type: 'numberedList', items });
-    }
-    else if (nodeName === 'BLOCKQUOTE') {
-      currentChapter.blocks.push({ id: generateId(), type: 'callout', content: el.innerHTML });
-    }
-    else if (nodeName === 'TABLE') {
-      const rows = [];
-      const trs = Array.from(el.getElementsByTagName('tr'));
-      let isHeader = true;
-      for (const tr of trs) {
-        const cells = Array.from(tr.childNodes)
-          .filter(n => n.nodeName === 'td' || n.nodeName === 'th')
-          .map(td => td.innerHTML);
-        rows.push({ isHeader, cells });
-        isHeader = false;
-      }
-      if (rows.length > 0) {
-        currentChapter.blocks.push({ id: generateId(), type: 'table', rows });
-      }
-    }
-  }
-
-  // Cleanup
-  const hasOtherChapters = book.chapters.some(ch => !ch.title.toLowerCase().includes('introduction'));
-  book.chapters = book.chapters.filter(ch => {
-    const isIntro = ch.title.toLowerCase().includes('introduction');
-    return ch.blocks.length > 0 && (!isIntro || !hasOtherChapters);
-  });
-  book.chapters.forEach((ch, idx) => {
-    ch.order = idx + 1;
-  });
-
-  return { book, imagesDb };
-}
 
 function walkDocx(dir) {
   let list = [];
@@ -420,10 +273,6 @@ async function main() {
     'Guide\\Mathematics\\Cluster_019_MATHS AND REASONING GUIDE BOOK.docx',
     'Guide\\Mathematics\\Cluster_083_MATHEMATICS.docx',
     'Guide\\Reasoning\\Cluster_052_REASONING.docx',
-    'Precis\\GK-GS\\Cluster_014_SSC COMPLETE GK.docx',
-    'Precis\\GK-GS\\Cluster_047_SSC COMPLETE GK.docx',
-    'Precis\\GK-GS\\Cluster_075_SSC COMPLETE GK.docx',
-    'Precis\\GK-GS\\Cluster_079_RRB COMPLETE GK.docx',
     'Precis\\Hindi\\Cluster_057_HINDI.docx',
     'Precis\\Mathematics\\Cluster_085_MATHEMATICS.docx'
   ];
