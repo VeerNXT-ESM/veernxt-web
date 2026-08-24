@@ -17,6 +17,7 @@ function r2KeyFor(bodyId, file) {
 function LogoCell({ body, onReplaced }) {
   const [uploading, setUploading] = useState(false);
   const [feedback, setFeedback] = useState(null); // 'ok' | 'error' | null
+  const [errorMsg, setErrorMsg] = useState('');
   const inputRef = useRef(null);
 
   const handleFileChange = async (e) => {
@@ -34,10 +35,11 @@ function LogoCell({ body, onReplaced }) {
       setFeedback('ok');
     } catch (err) {
       console.error('Logo replace failed:', err);
+      setErrorMsg(err.message || 'Unknown error');
       setFeedback('error');
     } finally {
       setUploading(false);
-      setTimeout(() => setFeedback(null), 3000);
+      setTimeout(() => setFeedback(null), 6000);
     }
   };
 
@@ -68,7 +70,11 @@ function LogoCell({ body, onReplaced }) {
         {uploading ? 'Uploading…' : body.logo_path ? 'Replace' : 'Upload'}
       </button>
       {feedback === 'ok' && <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.7rem', color: '#16a34a' }}><CheckCircle2 size={12} /> Saved</span>}
-      {feedback === 'error' && <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.7rem', color: '#ef4444' }}><XCircle size={12} /> Failed</span>}
+      {feedback === 'error' && (
+        <span title={errorMsg} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.7rem', color: '#ef4444', textAlign: 'center', maxWidth: '140px' }}>
+          <XCircle size={12} style={{ flexShrink: 0 }} /> {errorMsg || 'Failed'}
+        </span>
+      )}
     </div>
   );
 }
