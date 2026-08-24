@@ -148,3 +148,32 @@ export function getSubjectByKey(key) {
 export function getFamilyHex(familyKey) {
   return COLOR_FAMILIES[familyKey]?.hex || COLOR_FAMILIES.teal.hex;
 }
+
+// Real thumbnail art (public/thumbnails/), one per subject key where the
+// user has supplied one. Only 15 of the 18 subjects have art so far --
+// general_studies, general_science, and information_technology (plus the
+// neutral 'general' default) still fall back to the colour-block gradient
+// in ExamThumbnail.jsx/ExamContentPreview.jsx until art exists for them.
+const SUBJECT_THUMBNAIL_IMAGE = {
+  english: 'English.png',
+  computer_science: 'Computer Science.png',
+  hindi: 'Hindi.png',
+  law: 'LAw.png',
+  mathematics: 'Mathematics.png',
+  electrical_engineering: 'Electrical Engineering.png',
+  reasoning: 'Reasoning.png',
+  nursing: 'Nursing.png',
+  gk_general_awareness: 'General Knowledge.png',
+  financial_awareness: 'Financial Awareness.png',
+  technical_trades: 'Technical Trades.png',
+  agriculture_rural_dev: 'Agriculture.png',
+  descriptive_writing: 'Descriptive Writing.png',
+  hr_personnel: 'HR-Personnel.png',
+  traffic_road_safety: 'Traffic-Road Safety.png',
+};
+
+/** Real thumbnail image URL for a subject key, or null if only the colour-block fallback is available. */
+export function getSubjectThumbnailImage(key) {
+  const filename = SUBJECT_THUMBNAIL_IMAGE[key];
+  return filename ? `/thumbnails/${encodeURIComponent(filename)}` : null;
+}

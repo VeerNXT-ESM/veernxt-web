@@ -7,7 +7,7 @@
 // exams.thumbnail_subject — replacing the earlier conducting-body hash so
 // every exam reads by what it's actually about (English, GK, General
 // Studies, ...), not which department runs it. See status_report.md §27.10.
-import { getSubjectByKey, getFamilyHex } from '../../lib/thumbnailTaxonomy';
+import { getSubjectByKey, getFamilyHex, getSubjectThumbnailImage } from '../../lib/thumbnailTaxonomy';
 
 function abbreviate(name) {
   if (!name) return '';
@@ -32,8 +32,13 @@ const ExamThumbnail = ({ label, conductingBodyName, thumbnailSubject, accentColo
     );
   }
 
+  const image = getSubjectThumbnailImage(subject.key);
+  const background = image
+    ? `linear-gradient(160deg, ${bg}b3 0%, ${bg}e6 100%), url("${image}")`
+    : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`;
+
   return (
-    <div className="lc-thumb-lg" style={{ background: `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)` }}>
+    <div className="lc-thumb-lg" style={{ background, backgroundSize: image ? 'cover' : undefined, backgroundPosition: image ? 'center' : undefined }}>
       <div className="lc-thumb-lg-subject">{subject.label.toUpperCase()}</div>
       <div className="lc-thumb-lg-label">{(label || 'STUDY MATERIAL').toUpperCase()}</div>
       {abbr && <div className="lc-thumb-lg-badge">{abbr}</div>}
