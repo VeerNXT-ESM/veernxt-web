@@ -12,12 +12,43 @@ import ExamContentPreview from './ExamContentPreview';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+// Coarse category every scraped job is tagged with (career_track, computed by
+// scraper-app's classifyCareerTrack() at ingest time — always set, since a
+// precise exam match only resolves a small fraction of postings). STATE_GOVT
+// is the classifier's default bucket, so it reads as a neutral "General" tag
+// rather than a literal state-government label.
+const CAREER_TRACK_META = {
+  BANKING: { label: 'Banking', bg: '#eff6ff', color: '#1d4ed8', border: '#dbeafe' },
+  SSC: { label: 'SSC', bg: '#faf5ff', color: '#7e22ce', border: '#f3e8ff' },
+  RAILWAYS: { label: 'Railways', bg: '#fff7ed', color: '#c2410c', border: '#ffedd5' },
+  POLICE_CAPF: { label: 'Police & CAPF', bg: '#fef2f2', color: '#b91c1c', border: '#fee2e2' },
+  DEFENCE: { label: 'Defence', bg: '#f0fdf4', color: '#15803d', border: '#dcfce7' },
+  PSU: { label: 'PSU', bg: '#f0fdfa', color: '#0f766e', border: '#ccfbf1' },
+  ENGINEERING: { label: 'Engineering', bg: '#eef2ff', color: '#4338ca', border: '#e0e7ff' },
+  STATE_GOVT: { label: 'General', bg: '#f8fafc', color: '#475569', border: '#e2e8f0' },
+};
+const CAREER_TRACK_ORDER = ['BANKING', 'SSC', 'RAILWAYS', 'POLICE_CAPF', 'DEFENCE', 'PSU', 'ENGINEERING', 'STATE_GOVT'];
+
+const CategoryTag = ({ track, style }) => {
+  const meta = CAREER_TRACK_META[track];
+  if (!meta) return null;
+  return (
+    <span
+      className="category-tag"
+      style={{ background: meta.bg, color: meta.color, borderColor: meta.border, ...style }}
+    >
+      {meta.label}
+    </span>
+  );
+};
+
 const JobBoard = ({ isAdmin = false }) => {
   const navigate = useNavigate();
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [search, setSearch] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('ALL');
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedJob, setSelectedJob] = useState(null);
@@ -82,7 +113,7 @@ const JobBoard = ({ isAdmin = false }) => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [search]);
+  }, [search, categoryFilter]);
 
   useEffect(() => {
     setExamAccordionOpen(false);
@@ -183,14 +214,26 @@ const JobBoard = ({ isAdmin = false }) => {
     return "Chennai, Tamil Nadu";
   };
 
-  const filteredJobs = jobs.filter(job => {
+  const searchMatchedJobs = jobs.filter(job => {
     if (!job) return false;
     const jobId = job.id || job._id || job.title || 'unknown';
     return !dismissedJobIds.includes(jobId) && (
-      job.title?.toLowerCase().includes(search.toLowerCase()) || 
+      job.title?.toLowerCase().includes(search.toLowerCase()) ||
       job.body?.toLowerCase().includes(search.toLowerCase())
     );
   });
+
+  // Category counts reflect the active search but not the active category
+  // pill itself, so switching categories doesn't make the other counts vanish.
+  const categoryCounts = searchMatchedJobs.reduce((acc, job) => {
+    const track = job.careerTrack || 'STATE_GOVT';
+    acc[track] = (acc[track] || 0) + 1;
+    return acc;
+  }, {});
+
+  const filteredJobs = searchMatchedJobs.filter(job =>
+    categoryFilter === 'ALL' || (job.careerTrack || 'STATE_GOVT') === categoryFilter
+  );
 
 
   // Pagination compilation for admin/search views
@@ -263,6 +306,25 @@ const JobBoard = ({ isAdmin = false }) => {
         </div>
       </div>
 
+      <div className="category-filter-bar">
+        <button
+          className={`category-pill ${categoryFilter === 'ALL' ? 'active' : ''}`}
+          onClick={() => setCategoryFilter('ALL')}
+        >
+          All <span className="category-pill-count">{searchMatchedJobs.length}</span>
+        </button>
+        {CAREER_TRACK_ORDER.filter(track => categoryCounts[track] > 0).map(track => (
+          <button
+            key={track}
+            className={`category-pill ${categoryFilter === track ? 'active' : ''}`}
+            onClick={() => setCategoryFilter(track)}
+            style={categoryFilter === track ? { background: CAREER_TRACK_META[track].bg, color: CAREER_TRACK_META[track].color, borderColor: CAREER_TRACK_META[track].border } : undefined}
+          >
+            {CAREER_TRACK_META[track].label} <span className="category-pill-count">{categoryCounts[track]}</span>
+          </button>
+        ))}
+      </div>
+
       {loading ? (
         <div className="loading-state">
           <RefreshCw className="animate-spin" size={48} color="var(--ios-olive)" />
@@ -302,6 +364,11 @@ const JobBoard = ({ isAdmin = false }) => {
                             Exam: {job.examName}
                           </span>
                         )}
+                        {job.careerTrack && (
+                          <div style={{ marginTop: '0.3rem' }}>
+                            <CategoryTag track={job.careerTrack} style={{ fontSize: '0.68rem' }} />
+                          </div>
+                        )}
                       </td>
                       <td>
                         <div className="job-title-col">
@@ -333,7 +400,9 @@ const JobBoard = ({ isAdmin = false }) => {
                   <tr>
                     <td colSpan="6" style={{ textAlign: 'center', padding: '3rem' }}>
                       <Search size={32} color="#ccc" style={{ marginBottom: '1rem' }} />
-                      <p style={{ margin: 0, color: '#888' }}>No vacancies found matching "{search}"</p>
+                      <p style={{ margin: 0, color: '#888' }}>
+                        No vacancies found{search ? ` matching "${search}"` : ''}{categoryFilter !== 'ALL' ? ` in ${CAREER_TRACK_META[categoryFilter].label}` : ''}
+                      </p>
                     </td>
                   </tr>
                 )}
@@ -409,7 +478,8 @@ const JobBoard = ({ isAdmin = false }) => {
                       </div>
 
                       {/* Matching Insight Badges */}
-                      <div style={{ display: 'flex', gap: '0.35rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+                      <div style={{ display: 'flex', gap: '0.35rem', marginTop: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                        {job.careerTrack && <CategoryTag track={job.careerTrack} style={{ fontSize: '0.62rem', padding: '0.12rem 0.4rem' }} />}
                         {idx % 3 === 0 && (
                           <div className="mini-insight-badge active">
                             <Award size={10} />
@@ -425,7 +495,7 @@ const JobBoard = ({ isAdmin = false }) => {
                 })
               ) : (
                 <div style={{ padding: '2rem', textAlign: 'center', color: '#666' }}>
-                  No available jobs matching search.
+                  No available jobs{categoryFilter !== 'ALL' ? ` in ${CAREER_TRACK_META[categoryFilter].label}` : ' matching search'}.
                 </div>
               )}
             </div>
@@ -446,6 +516,11 @@ const JobBoard = ({ isAdmin = false }) => {
                       <p className="premium-job-subtitle-line">
                         {selectedJob.body} • Chennai, Tamil Nadu, India • {selectedJob.publishedOn ? calculateDaysAgo(selectedJob.publishedOn) : '2 weeks ago'}
                       </p>
+                      {selectedJob.careerTrack && (
+                        <div style={{ marginTop: '0.5rem' }}>
+                          <CategoryTag track={selectedJob.careerTrack} />
+                        </div>
+                      )}
                       {selectedJob.examId && (
                         <button
                           type="button"
@@ -607,6 +682,12 @@ const JobBoard = ({ isAdmin = false }) => {
                 <span className="detail-label">Conducting Body</span>
                 <span className="detail-val">{selectedJob.body}</span>
               </div>
+              {selectedJob.careerTrack && (
+                <div className="modal-detail-card">
+                  <span className="detail-label">Category</span>
+                  <span className="detail-val"><CategoryTag track={selectedJob.careerTrack} /></span>
+                </div>
+              )}
               {selectedJob.examId && (
                 <div className="modal-detail-card">
                   <span className="detail-label">Required Exam</span>
@@ -997,6 +1078,54 @@ const JobBoard = ({ isAdmin = false }) => {
           font-size: 0.9rem;
           color: #888;
           font-weight: 600;
+          white-space: nowrap;
+        }
+        .category-filter-bar {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+        }
+        .category-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.4rem 0.85rem;
+          border-radius: 99px;
+          border: 1.5px solid #e2e8f0;
+          background: white;
+          color: #475569;
+          font-size: 0.78rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.15s;
+          white-space: nowrap;
+        }
+        .category-pill:hover {
+          border-color: #cbd5e1;
+          background: #f8fafc;
+        }
+        .category-pill.active {
+          background: #1F3A2E;
+          color: white;
+          border-color: #1F3A2E;
+          box-shadow: 0 2px 6px rgba(31,58,46,0.15);
+        }
+        .category-pill-count {
+          font-size: 0.7rem;
+          font-weight: 800;
+          opacity: 0.65;
+        }
+        .category-tag {
+          display: inline-flex;
+          align-items: center;
+          padding: 0.2rem 0.55rem;
+          border-radius: 99px;
+          border: 1px solid;
+          font-size: 0.7rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
           white-space: nowrap;
         }
         .jobs-grid {

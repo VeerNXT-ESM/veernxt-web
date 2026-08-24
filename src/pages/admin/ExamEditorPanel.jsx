@@ -489,17 +489,22 @@ const AddSubjectDrawer = ({ examId, existingSubjectIds, nextOrder, onClose, onAd
 
 const AddResourceDrawer = ({ examSubject, onClose, onAdded }) => {
   const [search, setSearch] = useState('');
+  const [showAllSubjects, setShowAllSubjects] = useState(false);
   const [results, setResults] = useState([]);
   const [selected, setSelected] = useState(new Set());
   const [existingResourceIds, setExistingResourceIds] = useState(new Set());
   const [saving, setSaving] = useState(false);
 
   const runSearch = useCallback(async () => {
-    let query = supabase.from('lc_resources').select('id,title,resource_type').order('title').limit(40);
+    let query = supabase.from('lc_resources').select('id,title,resource_type,subject:lc_subjects(name)').order('title').limit(40);
     if (search) query = query.ilike('title', `%${search}%`);
+    // Default to only this subject's resources -- otherwise every resource in
+    // the library shows up regardless of relevance. Toggle off to reach
+    // cross-subject resources (or the ones with no subject_id set at all).
+    if (!showAllSubjects) query = query.eq('subject_id', examSubject.subject_id);
     const { data } = await query;
     setResults(data || []);
-  }, [search]);
+  }, [search, showAllSubjects, examSubject.subject_id]);
 
   useEffect(() => { (async () => { const { data } = await supabase.from('lc_subject_resources').select('resource_id').eq('exam_subject_id', examSubject.id); setExistingResourceIds(new Set((data || []).map((r) => r.resource_id))); })(); }, [examSubject.id]);
   useEffect(() => { const t = setTimeout(runSearch, 300); return () => clearTimeout(t); }, [runSearch]);
@@ -525,17 +530,26 @@ const AddResourceDrawer = ({ examSubject, onClose, onAdded }) => {
         </div>
         <div className="lc-drawer-body">
           <div className="lc-search-input-wrapper"><Search size={16} /><input type="text" placeholder="Search resources..." value={search} onChange={(e) => setSearch(e.target.value)} /></div>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', color: 'var(--admin-text-muted)', margin: '0.75rem 0' }}>
+            <input type="checkbox" checked={showAllSubjects} onChange={(e) => setShowAllSubjects(e.target.checked)} />
+            Show resources from all subjects (not just {examSubject.subject?.name})
+          </label>
           <div>
             {results.map((r) => {
               const already = existingResourceIds.has(r.id);
               return (
                 <label key={r.id} className="lc-drawer-list-item" style={{ cursor: already ? 'default' : 'pointer', opacity: already ? 0.5 : 1 }}>
-                  <span><input type="checkbox" disabled={already} checked={already || selected.has(r.id)} onChange={() => toggle(r.id)} style={{ marginRight: '0.6rem' }} />{r.title} <span className="lc-muted-note">· {r.resource_type}</span></span>
+                  <span><input type="checkbox" disabled={already} checked={already || selected.has(r.id)} onChange={() => toggle(r.id)} style={{ marginRight: '0.6rem' }} />{r.title} <span className="lc-muted-note">· {r.resource_type}{showAllSubjects ? ` · ${r.subject?.name || 'No subject'}` : ''}</span></span>
                   {already && <span className="lc-muted-note">Already added</span>}
                 </label>
               );
             })}
-            {results.length === 0 && <p className="lc-muted-note">No resources found.</p>}
+            {results.length === 0 && (
+              <p className="lc-muted-note">
+                No resources found{!showAllSubjects ? ` for ${examSubject.subject?.name}` : ''}.
+                {!showAllSubjects && ' Try "Show resources from all subjects" above.'}
+              </p>
+            )}
           </div>
         </div>
         <div className="lc-modal-footer">
