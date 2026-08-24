@@ -3,9 +3,14 @@
  * scripts/migrate_resources_to_blocks.mjs
  *
  * Phase of Resources_Migration_Plan.md: for each already-enriched book at
- * FINAL_CONTENT_ENRICHED/{Guide,Precis}/<title>/, upload its chapter-N.json
- * files to R2 and flip the matching resources_v2 rows' `format` column to
- * 'blocks' + a new `storage_base_url` pointing at the upload.
+ * public/books/{Guide,Precis}/<title>/ (the content team's consolidated
+ * drop location -- previously K:\...\FINAL_CONTENT_ENRICHED, moved
+ * in-repo once that stopped being the single source of truth), upload its
+ * chapter-N.json files to R2 and flip the matching resources_v2 rows'
+ * `format` column to 'blocks' + a new `storage_base_url` pointing at the
+ * upload. Safe to re-run against a title already migrated (e.g. a book
+ * reprocessed with a fuller/cheaper-tier pass) -- it just re-uploads and
+ * overwrites the same R2 key and resources_v2 rows.
  *
  * Matching is deliberately EXACT title+category only, against resources_v2
  * rows whose current storage_base_url is under the canonical
@@ -34,11 +39,13 @@
 import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
 import { getS3Client, uploadToR2 } from './ingest-drive-content.js';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const EXECUTE = process.argv.includes('--execute');
-const SOURCE_ROOT = 'K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT_ENRICHED';
+const SOURCE_ROOT = path.join(__dirname, '..', 'public', 'books');
 const TOP_LEVEL_CATEGORIES = ['Guide', 'Precis'];
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
@@ -82,12 +89,19 @@ async function main() {
   console.log(`Mode: ${EXECUTE ? 'EXECUTE (uploading + updating resources_v2.format)' : 'DRY RUN'}\n`);
 
   const books = listBookFolders();
-  console.log(`${books.length} enriched book folders found under FINAL_CONTENT_ENRICHED.\n`);
+  console.log(`${books.length} enriched book folders found under ${SOURCE_ROOT}.\n`);
 
+  // Canonical = either the original un-migrated master_documents copy, OR
+  // a row this script already migrated in an earlier run (storage_base_url
+  // now under structured_resources/blocks/, format='blocks') -- without the
+  // second clause, re-running against a title that was already migrated
+  // (e.g. the content team reprocessed it with fuller content) would look
+  // like "no canonical row found" simply because the url no longer
+  // contains "master_documents", silently skipping a real update.
   const masterRows = await fetchAllRows(
     'resources_v2',
-    'resource_id,title,category,storage_base_url',
-    (q) => q.ilike('storage_base_url', '%master_documents%')
+    'resource_id,title,category,storage_base_url,format',
+    (q) => q.or('storage_base_url.ilike.%master_documents%,format.eq.blocks')
   );
 
   // Group canonical rows by (title, category) -> distinct storage_base_urls.
