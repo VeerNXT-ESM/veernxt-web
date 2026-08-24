@@ -8,6 +8,8 @@ import AuthCallback from './pages/AuthCallback';
 import Profiling from './pages/Profiling';
 import ProfilingResults from './pages/ProfilingResults';
 import Dashboard from './pages/Dashboard';
+import EmployerOnboarding from './pages/EmployerOnboarding';
+import EmployerDashboard from './pages/EmployerDashboard';
 import LearningCenter from './pages/LearningCenter';
 import ExamSyllabus from './pages/ExamSyllabus';
 import FinancialGuidance from './pages/FinancialGuidance';
@@ -145,6 +147,8 @@ function App() {
           <Route path="/profiling/results" element={<AuthGuard skipProfilingCheck><ProfilingResults /></AuthGuard>} />
           <Route path="/subscribe" element={<AuthGuard skipProfilingCheck><Subscribe /></AuthGuard>} />
           <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
+          <Route path="/employer/onboarding" element={<AuthGuard skipProfilingCheck><EmployerOnboarding /></AuthGuard>} />
+          <Route path="/employer/dashboard" element={<AuthGuard skipProfilingCheck><EmployerDashboard /></AuthGuard>} />
           <Route path="/learning-center" element={<AuthGuard><LearningCenter /></AuthGuard>} />
           <Route path="/exam/:examId" element={<AuthGuard><ExamSyllabus /></AuthGuard>} />
           <Route path="/jobs" element={<AuthGuard><PublicJobs /></AuthGuard>} />
