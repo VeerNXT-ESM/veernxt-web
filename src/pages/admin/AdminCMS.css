@@ -145,6 +145,15 @@
 .lc-level-pills button.active { background: var(--admin-accent); color: #06281c; }
 .lc-filter-bar-secondary { display: flex; flex-wrap: wrap; gap: 1.1rem; }
 .lc-filter-bar-secondary .lc-filter-field { flex: 1 1 240px; }
+
+/* Variable-length colour-coded pill row (JobsPage.jsx career-track filter) —
+   unlike .lc-level-pills (fixed 3-item strip), each pill carries its own
+   track colour via inline style, applied only from lib/careerTrack.js. */
+.lc-category-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+.lc-category-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 0.5rem 0.95rem; font-size: 0.78rem; font-weight: 700; color: var(--admin-text-muted); cursor: pointer; }
+.lc-category-pill:hover { color: var(--admin-text); border-color: var(--admin-text-muted); }
+.lc-category-pill-count { font-size: 0.7rem; font-weight: 800; opacity: 0.7; }
+.lc-category-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.55rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap; }
 .lc-search-input-wrapper { position: relative; }
 .lc-search-input-wrapper svg { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--admin-text-muted); }
 .lc-search-input-wrapper input { width: 100%; padding: 0.65rem 0.85rem 0.65rem 2.25rem; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.9rem; background: var(--surface-alt); color: var(--admin-text); box-sizing: border-box; }
