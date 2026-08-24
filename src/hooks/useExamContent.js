@@ -44,6 +44,40 @@ async function fetchResourcesFallback(examName, careerTrack) {
   return resData.data || [];
 }
 
+// resources_v2 has one row per exam-folder copy of the same canonical
+// document (e.g. ~850 separate "ENGLISH" rows, one per exam), so a
+// resource picked by exam-name matching or lc_exam_resource_map may be a
+// different physical row than the one scripts/migrate_resources_to_blocks.mjs
+// updated to the new format for that same title — verified live: of 9,766
+// migrated rows, only 138 were the exact resource_id the mapping table
+// referenced. Redirect any 'html' resource to its 'blocks' sibling (same
+// title + category) when one exists, so a migrated title actually shows
+// the new format regardless of which duplicate row got selected upstream.
+async function upgradeToCanonicalFormat(resources) {
+  const needsUpgrade = resources.filter((r) => r.format !== 'blocks' && r.title);
+  if (needsUpgrade.length === 0) return resources;
+
+  const titles = [...new Set(needsUpgrade.map((r) => r.title.trim()))];
+  const { data: canonicalRows } = await supabase
+    .from('resources_v2')
+    .select('resource_id,title,category,format,storage_base_url')
+    .eq('format', 'blocks')
+    .in('title', titles);
+  if (!canonicalRows || canonicalRows.length === 0) return resources;
+
+  const canonicalByKey = new Map();
+  for (const c of canonicalRows) {
+    const key = `${c.title.trim().toLowerCase()}::${c.category}`;
+    if (!canonicalByKey.has(key)) canonicalByKey.set(key, c);
+  }
+
+  return resources.map((r) => {
+    if (r.format === 'blocks' || !r.title) return r;
+    const canonical = canonicalByKey.get(`${r.title.trim().toLowerCase()}::${r.category}`);
+    return canonical ? { ...r, resource_id: canonical.resource_id, format: canonical.format, storage_base_url: canonical.storage_base_url } : r;
+  });
+}
+
 function careerTrackKeyword(examName, careerTrack) {
   if (careerTrack === 'POLICE_CAPF') return 'Constable';
   if (careerTrack === 'SSC') return 'SSC';
@@ -108,7 +142,8 @@ export function useExamContent(examName, careerTrack, examId) {
           fetchQuizzesByExamName(examName, careerTrack),
         ]);
 
-        const resources = mappedResources !== null ? mappedResources : await fetchResourcesFallback(examName, careerTrack);
+        const rawResources = mappedResources !== null ? mappedResources : await fetchResourcesFallback(examName, careerTrack);
+        const resources = await upgradeToCanonicalFormat(rawResources);
 
         if (!mounted) return;
         setByCategory(groupByCategory(resources));
