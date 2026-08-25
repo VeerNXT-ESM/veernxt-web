@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
-  const { mobile, newPassword, resetToken } = req.body || {};
+  const { mobile, newPassword, resetToken, role } = req.body || {};
 
   if (!mobile || !newPassword || !resetToken) {
     console.error('[reset-password] Missing parameter(s). mobile:', mobile, 'newPassword:', !!newPassword, 'resetToken:', !!resetToken);
@@ -74,10 +74,13 @@ export default async function handler(req, res) {
   );
 
   const cleanMobile = mobile.replace(/[\s\-+]/g, '');
-  const fullMobile = (cleanMobile.length === 10) 
-    ? `91${cleanMobile}` 
+  const fullMobile = (cleanMobile.length === 10)
+    ? `91${cleanMobile}`
     : (cleanMobile.startsWith('91') && cleanMobile.length === 12 ? cleanMobile : `91${cleanMobile}`);
-  const syntheticEmail = `${fullMobile}@veernxt.in`;
+  // Must match the same role-suffixed format api/auth/register.js creates
+  // the account under -- candidate and employer are separate Supabase Auth
+  // identities even when they share a phone number (see that file).
+  const syntheticEmail = role === 'employer' ? `${fullMobile}+employer@veernxt.in` : `${fullMobile}@veernxt.in`;
   console.log('[reset-password] Connecting email to reset:', syntheticEmail);
 
   try {

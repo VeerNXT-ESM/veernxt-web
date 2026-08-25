@@ -187,9 +187,12 @@ const Login = () => {
           showMsg(data.error || 'Failed to create account.', 'error');
         } else {
           showMsg('Account created! Auto-logging you in...', 'success');
-          
-          // Auto-login after successful registration
-          const syntheticEmail = `${verifiedMobile}@veernxt.in`;
+
+          // Auto-login after successful registration. Must match the same
+          // role-suffixed format api/auth/register.js just created the
+          // account under (see that file for why candidate vs employer
+          // need distinct synthetic emails for the same phone number).
+          const syntheticEmail = role === 'employer' ? `${verifiedMobile}+employer@veernxt.in` : `${verifiedMobile}@veernxt.in`;
           await supabase.auth.signInWithPassword({
             email: syntheticEmail,
             password: password,
@@ -212,10 +215,11 @@ const Login = () => {
         const res = await fetch('/api/auth/reset-password', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            mobile: verifiedMobile, 
+          body: JSON.stringify({
+            mobile: verifiedMobile,
             newPassword: password,
-            resetToken: resetToken 
+            resetToken: resetToken,
+            role: role,
           }),
         });
         const data = await res.json();
@@ -224,9 +228,10 @@ const Login = () => {
           showMsg(data.error || 'Could not reset password. Please contact support.', 'error');
         } else {
           showMsg('Password reset successful! Logging you in...', 'success');
-          
-          // Auto-login after successful reset
-          const syntheticEmail = `${verifiedMobile}@veernxt.in`;
+
+          // Auto-login after successful reset -- same role-suffixed format
+          // api/auth/reset-password.js just looked the account up under.
+          const syntheticEmail = role === 'employer' ? `${verifiedMobile}+employer@veernxt.in` : `${verifiedMobile}@veernxt.in`;
           await supabase.auth.signInWithPassword({
             email: syntheticEmail,
             password: password,
@@ -315,10 +320,13 @@ const Login = () => {
       let loginEmail = employerEmail;
       if (!loginEmail && employerPhone) {
         const cleanPhone = employerPhone.replace(/[\s\-+]/g, '');
-        const fullPhone = (cleanPhone.length === 10) 
-          ? `91${cleanPhone}` 
+        const fullPhone = (cleanPhone.length === 10)
+          ? `91${cleanPhone}`
           : (cleanPhone.startsWith('91') && cleanPhone.length === 12 ? cleanPhone : `91${cleanPhone}`);
-        loginEmail = `${fullPhone}@veernxt.in`;
+        // Employer accounts registered by phone use the +employer-suffixed
+        // synthetic email (see api/auth/register.js) so the same phone
+        // number can also have a separate candidate account.
+        loginEmail = `${fullPhone}+employer@veernxt.in`;
       }
 
       if (!loginEmail) {
