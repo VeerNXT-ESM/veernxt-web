@@ -27,7 +27,7 @@ const STAGES = [
 // rendering/validating that question lives in renderQuestion()/
 // validateQuestion() below, keyed by the same index.
 const QUESTION_STAGE = [
-  'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity',
+  'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity',
   'service', 'service', 'service', 'service', 'service',
   'academics', 'academics',
   'physical',
@@ -53,6 +53,9 @@ const Profiling = () => {
     dobMonth: '',
     dobYear: '',
     category: '',
+    disabilityStatus: '',
+    disabilityType: '',
+    disabilityPercentage: '',
     stateOfDomicile: '',
     district: '',
     maritalStatus: '',
@@ -165,22 +168,23 @@ const Profiling = () => {
       case 0: return !!d.fullName;
       case 1: return !!(d.dobDay && d.dobMonth && d.dobYear);
       case 2: return !!d.category;
-      case 3: return !!d.maritalStatus;
-      case 4: return !!d.stateOfDomicile;
-      case 5: return true; // district — optional
-      case 6: return !!d.email;
-      case 7: return !!d.mobile;
-      case 8: return !!d.serviceBranch;
-      case 9: return !!d.armCorpsTrade;
-      case 10: return !!d.roleAppointment;
-      case 11: return d.serviceYears !== '' && d.serviceMonths !== '';
-      case 12: return !!d.characterOnDischarge;
-      case 13: return !!d.highestQualification;
-      case 14: return true; // NCC — optional
-      case 15: return !!(d.heightCm && d.weightKg && d.chestCm && d.chestExpansion);
-      case 16: return d.careerPreferences.length > 0;
-      case 17: return true; // interests — optional
-      case 18: return d.consent;
+      case 3: return !!d.disabilityStatus && (d.disabilityStatus === 'No' || (!!d.disabilityType && !!d.disabilityPercentage));
+      case 4: return !!d.maritalStatus;
+      case 5: return !!d.stateOfDomicile;
+      case 6: return true; // district — optional
+      case 7: return !!d.email;
+      case 8: return !!d.mobile;
+      case 9: return !!d.serviceBranch;
+      case 10: return !!d.armCorpsTrade;
+      case 11: return !!d.roleAppointment;
+      case 12: return d.serviceYears !== '' && d.serviceMonths !== '';
+      case 13: return !!d.characterOnDischarge;
+      case 14: return !!d.highestQualification;
+      case 15: return true; // NCC — optional
+      case 16: return !!(d.heightCm && d.weightKg && d.chestCm && d.chestExpansion);
+      case 17: return d.careerPreferences.length > 0;
+      case 18: return true; // interests — optional
+      case 19: return d.consent;
       default: return true;
     }
   };
@@ -273,17 +277,39 @@ const Profiling = () => {
 
       case 3:
         return (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <ChoiceGroup columns={2} value={d.disabilityStatus} onChange={(v) => setField('disabilityStatus', v)}
+              options={['No', 'Yes'].map(o => ({ value: o, label: o }))} />
+            {d.disabilityStatus === 'Yes' && (
+              <>
+                <div>
+                  <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Type of disability</p>
+                  <ChoiceGroup columns={2} value={d.disabilityType} onChange={(v) => setField('disabilityType', v)}
+                    options={['Locomotor', 'Visual', 'Hearing', 'Intellectual', 'Multiple', 'Other'].map(t => ({ value: t, label: t }))} />
+                </div>
+                <div>
+                  <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Certified disability percentage</p>
+                  <ChoiceGroup columns={3} value={d.disabilityPercentage} onChange={(v) => setField('disabilityPercentage', v)}
+                    options={['40-49%', '50-69%', '70-100%'].map(p => ({ value: p, label: p }))} />
+                </div>
+              </>
+            )}
+          </div>
+        );
+
+      case 4:
+        return (
           <ChoiceGroup columns={2} value={d.maritalStatus} onChange={(v) => setField('maritalStatus', v)}
             options={['Single', 'Married'].map(m => ({ value: m, label: m }))} />
         );
 
-      case 4:
+      case 5:
         return (
           <Select name="stateOfDomicile" value={d.stateOfDomicile} onChange={handleChange} searchable
             placeholder="Start typing your state…" options={Object.keys(STATE_DISTRICTS).sort().map(s => ({ value: s, label: s }))} />
         );
 
-      case 5:
+      case 6:
         return d.stateOfDomicile && STATE_DISTRICTS[d.stateOfDomicile] ? (
           <Select name="district" value={d.district} onChange={handleChange} searchable
             placeholder="Start typing your district…" options={STATE_DISTRICTS[d.stateOfDomicile].map(dist => ({ value: dist, label: dist }))} />
@@ -291,25 +317,25 @@ const Profiling = () => {
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No district list available for {d.stateOfDomicile || 'this state'} — you can skip this.</p>
         );
 
-      case 6:
+      case 7:
         return (
           <input className="vx-field" type="email" name="email" value={d.email} onChange={handleChange}
             placeholder="you@example.com" autoComplete="email" />
         );
 
-      case 7:
+      case 8:
         return (
           <input className="vx-field" type="tel" inputMode="tel" name="mobile" value={d.mobile} onChange={handleChange}
             placeholder="10-digit mobile number" autoComplete="tel" />
         );
 
-      case 8:
+      case 9:
         return (
           <ChoiceGroup columns={1} value={d.serviceBranch} onChange={(v) => setField('serviceBranch', v)}
             options={['Indian Army', 'Indian Navy', 'Indian Air Force'].map(s => ({ value: s, label: s }))} />
         );
 
-      case 9: {
+      case 10: {
         const availableArms = d.serviceBranch
           ? [...new Set(designationsData.designations.filter(x => x.service === d.serviceBranch).map(x => x.arm_corps))]
           : [];
@@ -319,7 +345,7 @@ const Profiling = () => {
         );
       }
 
-      case 10: {
+      case 11: {
         const availableRoles = d.armCorpsTrade
           ? designationsData.designations.filter(x => x.service === d.serviceBranch && x.arm_corps === d.armCorpsTrade).map(x => x.trade)
           : [];
@@ -329,7 +355,7 @@ const Profiling = () => {
         );
       }
 
-      case 11:
+      case 12:
         return (
           <div className="pf-inline-2">
             <Select name="serviceYears" value={d.serviceYears} onChange={handleChange} placeholder="Years"
@@ -339,25 +365,25 @@ const Profiling = () => {
           </div>
         );
 
-      case 12:
+      case 13:
         return (
           <ChoiceGroup columns={1} value={d.characterOnDischarge} onChange={(v) => setField('characterOnDischarge', v)}
             options={['Exemplary', 'Very Good', 'Good'].map(c => ({ value: c, label: c }))} />
         );
 
-      case 13:
+      case 14:
         return (
           <ChoiceGroup columns={2} value={d.highestQualification} onChange={(v) => setField('highestQualification', v)}
             options={['Class 10', 'Class 12', 'Graduate', 'Post-Graduate'].map(q => ({ value: q, label: q }))} />
         );
 
-      case 14:
+      case 15:
         return (
           <ChoiceGroup columns={2} value={d.nccCertification} onChange={(v) => setField('nccCertification', v)}
             options={['None', 'A Certificate', 'B Certificate', 'C Certificate'].map(c => ({ value: c, label: c }))} />
         );
 
-      case 15:
+      case 16:
         return (
           <div className="pf-vitals-grid">
             <div className="pf-vitals-field">
@@ -379,19 +405,19 @@ const Profiling = () => {
           </div>
         );
 
-      case 16:
+      case 17:
         return (
           <MultiChoiceGroup columns={2} values={d.careerPreferences} onToggle={(v) => handleMultiSelect('careerPreferences', v)}
             options={['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'TEACHING', 'ENGINEERING', 'NURSING'].map(p => ({ value: p, label: p.replace('_', ' ') }))} />
         );
 
-      case 17:
+      case 18:
         return (
           <MultiChoiceGroup columns={2} values={d.sewaNidhiInterests} onToggle={(v) => handleMultiSelect('sewaNidhiInterests', v)}
             options={['Agriculture', 'Small Business', 'Security Agency', 'Transport', 'Skill Training', 'Tourism'].map(i => ({ value: i, label: i }))} />
         );
 
-      case 18:
+      case 19:
         return (
           <div>
             <div className="pf-summary-card">
@@ -526,6 +552,7 @@ const QUESTION_TITLES = [
   "What's your full name?",
   'When were you born?',
   'Which reservation category do you belong to?',
+  'Do you have a disability (PwD)?',
   "What's your marital status?",
   "What's your state of domicile?",
   'Which district?',
@@ -548,6 +575,7 @@ const QUESTION_HELP = [
   'This is how your name will appear on your VeerNXT profile.',
   undefined,
   'Used only to check eligibility for reservation-based exam quotas.',
+  'PwD candidates get benefits like relaxed age/physical limits and reserved vacancies on many exams — this is used only to check that eligibility.',
   undefined,
   "We'll flag exams that give preference to your home state.",
   'Optional — helps narrow domicile-based eligibility further.',
@@ -589,6 +617,7 @@ function ApplicationSummary({ d }) {
         ['Full name', d.fullName],
         ['Date of birth', d.dobDay && d.dobMonth && d.dobYear ? `${d.dobDay}-${d.dobMonth}-${d.dobYear}` : ''],
         ['Category', d.category],
+        ['Disability (PwD)', d.disabilityStatus === 'Yes' ? `${d.disabilityType || '—'}, ${d.disabilityPercentage || '—'}` : d.disabilityStatus],
         ['Marital status', d.maritalStatus],
         ['State of domicile', d.stateOfDomicile],
         ['District', d.district],

@@ -34,6 +34,8 @@ const CandidateProfileTemplate = ({
     veer_score = 85,
     service_branch = 'Indian Army',
     reservation_category = 'General',
+    disability_status = 'No',
+    disability_type = '',
     profile_data = {}
   } = candidate;
 
@@ -103,6 +105,11 @@ const CandidateProfileTemplate = ({
                 <span className="info-tag" style={{ background: quotaColors.bg, color: quotaColors.text, borderColor: quotaColors.border }}>
                   Quota: {reservation_category}
                 </span>
+                {disability_status === 'Yes' && (
+                  <span className="info-tag" style={{ background: '#fee2e2', color: '#b91c1c', borderColor: '#fecaca' }}>
+                    PwD{disability_type ? ` — ${disability_type}` : ''}
+                  </span>
+                )}
               </div>
             </div>
           </div>

@@ -22,10 +22,11 @@ const EMPLOYER_STAGES = [
 ];
 const EMPLOYER_QUESTION_STAGE = [
   'company', 'company', 'company', 'company', 'company', 'company', 'company',
-  'hiring', 'hiring', 'hiring', 'hiring',
+  'hiring', 'hiring', 'hiring', 'hiring', 'hiring',
   'review',
 ];
 const EMPLOYER_TOTAL_STEPS = EMPLOYER_QUESTION_STAGE.length;
+const PWD_STANCE_OPTIONS = ['We have a PwD quota to fulfil', 'Open to it, not mandated', 'Not currently', 'Not sure'];
 const EMPLOYER_TITLES = [
   "What's your company called?",
   "What's your company website?",
@@ -38,6 +39,7 @@ const EMPLOYER_TITLES = [
   'What skills or trade backgrounds matter most?',
   'Any candidate preferences?',
   'How soon are you looking to hire?',
+  'Do you hire candidates with disabilities (PwD)?',
   'Review and confirm',
 ];
 const EMPLOYER_HELP = [
@@ -52,6 +54,7 @@ const EMPLOYER_HELP = [
   'Optional — pick any that apply, or choose "Other" to add your own.',
   'Optional — helps us pace which candidates we surface first.',
   "We'll pace candidate introductions to match your timeline.",
+  'Many organisations must meet a PwD hiring quota under the RPwD Act, 2016 — this helps us prioritise quota-eligible candidates for your listings.',
   'Take one last look before we save your hiring profile.',
 ];
 
@@ -73,7 +76,7 @@ const EmployerOnboarding = () => {
   const [submitLoading, setSubmitLoading] = useState(false);
   const [formData, setFormData] = useState({
     companyName: '', website: '', contactName: '', designation: '', industry: '', locationState: '', locationCity: '', about: '',
-    hiringRoles: [], hiringRolesOther: '', requiredSkills: [], requiredSkillsOther: '', preferredBranch: 'Any', experienceRange: 'Any', hiringReadiness: '',
+    hiringRoles: [], hiringRolesOther: '', requiredSkills: [], requiredSkillsOther: '', preferredBranch: 'Any', experienceRange: 'Any', hiringReadiness: '', pwdHiringStance: '',
   });
   const [step, setStep] = useState(0);
   const { hasDraft, loadDraft, saveDraft, clearDraft } = useLocalDraft('veernxt_employer_onboarding_draft_v1');
@@ -115,6 +118,7 @@ const EmployerOnboarding = () => {
           preferredBranch: hp.preferredBranch || 'Any',
           experienceRange: hp.experienceRange || 'Any',
           hiringReadiness: hp.hiringReadiness || '',
+          pwdHiringStance: hp.pwdHiringStance || '',
         }));
       }
       setChecking(false);
@@ -149,6 +153,7 @@ const EmployerOnboarding = () => {
       case 8: return true;
       case 9: return true;
       case 10: return !!d.hiringReadiness;
+      case 11: return true; // PwD stance — optional
       default: return true;
     }
   };
@@ -194,6 +199,7 @@ const EmployerOnboarding = () => {
             preferredBranch: d.preferredBranch,
             experienceRange: d.experienceRange,
             hiringReadiness: d.hiringReadiness,
+            pwdHiringStance: d.pwdHiringStance,
           },
         })
         .eq('id', currentSession.user.id);
@@ -294,11 +300,17 @@ const EmployerOnboarding = () => {
         );
       case 11:
         return (
+          <ChoiceGroup columns={1} value={d.pwdHiringStance} onChange={(v) => setField('pwdHiringStance', v)}
+            options={PWD_STANCE_OPTIONS.map((s) => ({ value: s, label: s }))} />
+        );
+      case 12:
+        return (
           <div className="pf-summary-card">
             <p><strong>Company:</strong> {d.companyName || '—'}</p>
             <p><strong>Industry:</strong> {d.industry || '—'}</p>
             <p><strong>Hiring for:</strong> {d.hiringRoles.length ? d.hiringRoles.join(', ') : '—'}</p>
             <p><strong>Readiness:</strong> {d.hiringReadiness || '—'}</p>
+            <p><strong>PwD hiring:</strong> {d.pwdHiringStance || '—'}</p>
           </div>
         );
       default:

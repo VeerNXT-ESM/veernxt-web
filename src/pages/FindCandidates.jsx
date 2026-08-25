@@ -18,6 +18,7 @@ const FindCandidates = () => {
   // Advanced filter criteria states
   const [selectedBranch, setSelectedBranch] = useState('All');
   const [selectedQuota, setSelectedQuota] = useState('All');
+  const [selectedPwd, setSelectedPwd] = useState('All');
   const [minVeerScore, setMinVeerScore] = useState(0);
   const [currentUser, setCurrentUser] = useState(null);
   const [userConnections, setUserConnections] = useState([]);
@@ -62,6 +63,8 @@ const FindCandidates = () => {
               veer_score: row.veer_score || 0,
               service_branch: row.service_branch || 'Indian Army',
               reservation_category: rawData.category || 'General',
+              disability_status: rawData.disabilityStatus || 'No',
+              disability_type: rawData.disabilityType || '',
               profile_data: {
                 armCorpsTrade: row.trade || rawData.armCorpsTrade || 'General Service',
                 roleAppointment: rawData.roleAppointment || row.rank || 'N/A',
@@ -82,6 +85,7 @@ const FindCandidates = () => {
             veer_score: 94,
             service_branch: 'Indian Army',
             reservation_category: 'OBC',
+            disability_status: 'No',
             profile_data: {
               armCorpsTrade: 'Clerk SD',
               roleAppointment: 'Storekeeper Technical',
@@ -98,6 +102,7 @@ const FindCandidates = () => {
             veer_score: 87,
             service_branch: 'Indian Navy',
             reservation_category: 'General',
+            disability_status: 'No',
             profile_data: {
               armCorpsTrade: 'Seaman Branch',
               roleAppointment: 'Leading Hand',
@@ -114,6 +119,8 @@ const FindCandidates = () => {
             veer_score: 91,
             service_branch: 'Indian Air Force',
             reservation_category: 'SC',
+            disability_status: 'Yes',
+            disability_type: 'Locomotor',
             profile_data: {
               armCorpsTrade: 'Mechanical Fitter',
               roleAppointment: 'Agniveer IAF Fitter',
@@ -130,6 +137,7 @@ const FindCandidates = () => {
             veer_score: 89,
             service_branch: 'Indian Army',
             reservation_category: 'EWS',
+            disability_status: 'No',
             profile_data: {
               armCorpsTrade: 'Signals Branch',
               roleAppointment: 'Telecom Operator',
@@ -146,6 +154,7 @@ const FindCandidates = () => {
             veer_score: 93,
             service_branch: 'Indian Air Force',
             reservation_category: 'ST',
+            disability_status: 'No',
             profile_data: {
               armCorpsTrade: 'Meteorological Branch',
               roleAppointment: 'IAF Airwoman GD',
@@ -195,6 +204,11 @@ const FindCandidates = () => {
       result = result.filter(c => c.reservation_category === selectedQuota);
     }
 
+    // PwD filter
+    if (selectedPwd !== 'All') {
+      result = result.filter(c => c.disability_status === selectedPwd);
+    }
+
     // Veer Score filter
     if (minVeerScore > 0) {
       result = result.filter(c => c.veer_score >= minVeerScore);
@@ -206,7 +220,7 @@ const FindCandidates = () => {
     } else {
       setSelectedCandidate(null);
     }
-  }, [searchQuery, selectedBranch, selectedQuota, minVeerScore, candidates]);
+  }, [searchQuery, selectedBranch, selectedQuota, selectedPwd, minVeerScore, candidates]);
 
   const getConnectionStatus = (candidateId) => {
     if (!currentUser) return null;
@@ -345,6 +359,19 @@ const FindCandidates = () => {
           </div>
 
           <div className="filter-item-wrapper">
+            <label>PwD Status</label>
+            <select
+              value={selectedPwd}
+              onChange={e => setSelectedPwd(e.target.value)}
+              className="filter-dropdown"
+            >
+              <option value="All">All Candidates</option>
+              <option value="Yes">PwD Only (quota-eligible)</option>
+              <option value="No">Non-PwD Only</option>
+            </select>
+          </div>
+
+          <div className="filter-item-wrapper">
             <label>Minimum Veer Score ({minVeerScore}+)</label>
             <input 
               type="range" 
@@ -393,6 +420,7 @@ const FindCandidates = () => {
                       </p>
                       <div style={{ display: 'flex', gap: '0.35rem', marginTop: '0.35rem' }}>
                         <span className="cand-mini-badge quota">{cand.reservation_category}</span>
+                        {cand.disability_status === 'Yes' && <span className="cand-mini-badge quota">PwD</span>}
                         <span className="cand-mini-badge score">Veer Score: {cand.veer_score}</span>
                       </div>
                     </div>
