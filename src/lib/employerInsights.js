@@ -24,7 +24,7 @@ export function getEmployerInsights(formData) {
     });
   }
 
-  if (formData.hiringRoles) {
+  if (formData.hiringRoles?.length) {
     insights.push({
       icon: Users,
       label: 'Role Targeting',
@@ -32,7 +32,7 @@ export function getEmployerInsights(formData) {
     });
   }
 
-  if (formData.requiredSkills) {
+  if (formData.requiredSkills?.length) {
     insights.push({
       icon: Target,
       label: 'Skills Matching',

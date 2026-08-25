@@ -5,9 +5,15 @@ import { RefreshCw } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Select from '../components/ui/Select';
 import GuidedStep from '../components/ui/GuidedStep';
-import { ChoiceGroup } from '../components/ui/ChoiceGroup';
+import { ChoiceGroup, MultiChoiceGroup } from '../components/ui/ChoiceGroup';
 import { getEmployerInsights } from '../lib/employerInsights';
 import { useLocalDraft } from '../lib/useLocalDraft';
+import { STATE_DISTRICTS } from '../lib/districts';
+
+const HIRING_ROLE_OPTIONS = ['Security Supervisor', 'Logistics Coordinator', 'Administration / Clerk', 'IT Support', 'Facility Manager', 'Operations Manager', 'Warehouse Manager', 'Driver / Transport', 'Customer Service', 'Sales Executive', 'Other'];
+const REQUIRED_SKILL_OPTIONS = ['Convoy / Fleet Operations', 'Warehouse Management', 'Network / IT Security', 'Physical Security', 'Team Leadership', 'Administration', 'Technical / Mechanical', 'Communication', 'Other'];
+const BRANCH_PREFERENCE_OPTIONS = ['Any', 'Indian Army', 'Indian Navy', 'Indian Air Force'];
+const EXPERIENCE_RANGE_OPTIONS = ['Any', '0-2 years', '3-5 years', '5+ years'];
 
 const EMPLOYER_STAGES = [
   { id: 'company', label: 'Company' },
@@ -54,8 +60,8 @@ const EmployerOnboarding = () => {
   const [checking, setChecking] = useState(true);
   const [submitLoading, setSubmitLoading] = useState(false);
   const [formData, setFormData] = useState({
-    companyName: '', website: '', contactName: '', designation: '', industry: '', location: '', about: '',
-    hiringRoles: '', requiredSkills: '', candidatePreferences: '', hiringReadiness: '',
+    companyName: '', website: '', contactName: '', designation: '', industry: '', locationState: '', locationCity: '', about: '',
+    hiringRoles: [], hiringRolesOther: '', requiredSkills: [], requiredSkillsOther: '', preferredBranch: 'Any', experienceRange: 'Any', hiringReadiness: '',
   });
   const [step, setStep] = useState(0);
   const { hasDraft, loadDraft, saveDraft, clearDraft } = useLocalDraft('veernxt_employer_onboarding_draft_v1');
@@ -80,6 +86,12 @@ const EmployerOnboarding = () => {
   }, [formData, step, draftPrompt]);
 
   const setField = (name, value) => setFormData((prev) => ({ ...prev, [name]: value }));
+  const toggleMulti = (name, val) => setFormData((prev) => {
+    const current = prev[name];
+    return current.includes(val)
+      ? { ...prev, [name]: current.filter((i) => i !== val) }
+      : { ...prev, [name]: [...current, val] };
+  });
 
   const validateQuestion = (s) => {
     const d = formData;
@@ -89,9 +101,9 @@ const EmployerOnboarding = () => {
       case 2: return !!d.contactName;
       case 3: return !!d.designation;
       case 4: return !!d.industry;
-      case 5: return !!d.location;
+      case 5: return !!d.locationState && !!d.locationCity;
       case 6: return !!d.about;
-      case 7: return !!d.hiringRoles;
+      case 7: return d.hiringRoles.length > 0;
       case 8: return true;
       case 9: return true;
       case 10: return !!d.hiringReadiness;
@@ -119,11 +131,14 @@ const EmployerOnboarding = () => {
           contact_name: d.contactName,
           designation: d.designation,
           industry: d.industry,
-          location: d.location,
+          location: `${d.locationCity}, ${d.locationState}`,
           about: d.about,
           updated_at: new Date().toISOString(),
         });
       if (dbError) throw dbError;
+
+      const hiringRoles = d.hiringRolesOther ? [...d.hiringRoles.filter((r) => r !== 'Other'), d.hiringRolesOther] : d.hiringRoles;
+      const requiredSkills = d.requiredSkillsOther ? [...d.requiredSkills.filter((s) => s !== 'Other'), d.requiredSkillsOther] : d.requiredSkills;
 
       // hiring_profile is a newer, additive column (sql/employer_hiring_profile.sql)
       // written as its own request so a database that hasn't run that migration
@@ -132,9 +147,10 @@ const EmployerOnboarding = () => {
         .from('employer_profiles')
         .update({
           hiring_profile: {
-            hiringRoles: d.hiringRoles,
-            requiredSkills: d.requiredSkills,
-            candidatePreferences: d.candidatePreferences,
+            hiringRoles,
+            requiredSkills,
+            preferredBranch: d.preferredBranch,
+            experienceRange: d.experienceRange,
             hiringReadiness: d.hiringReadiness,
           },
         })
@@ -182,15 +198,53 @@ const EmployerOnboarding = () => {
             options={['IT & Software', 'Security Services', 'Aerospace & Defence', 'Logistics & Supply Chain', 'Manufacturing', 'Finance & Banking', 'Retail & E-commerce', 'Other'].map((i) => ({ value: i, label: i }))} />
         );
       case 5:
-        return <input className="vx-field" type="text" value={d.location} onChange={(e) => setField('location', e.target.value)} placeholder="e.g. Gurugram, India" autoComplete="address-level2" />;
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            <Select searchable value={d.locationState} onChange={(e) => { setField('locationState', e.target.value); setField('locationCity', ''); }}
+              placeholder="Start typing your state…" options={Object.keys(STATE_DISTRICTS).sort().map((s) => ({ value: s, label: s }))} />
+            {d.locationState && STATE_DISTRICTS[d.locationState] && (
+              <Select searchable value={d.locationCity} onChange={(e) => setField('locationCity', e.target.value)}
+                placeholder="Start typing your city/district…" options={STATE_DISTRICTS[d.locationState].map((c) => ({ value: c, label: c }))} />
+            )}
+          </div>
+        );
       case 6:
         return <textarea className="vx-field" rows={4} value={d.about} onChange={(e) => setField('about', e.target.value)} placeholder="Tell us about the roles you are hiring for and how military talent fits into your team..." />;
       case 7:
-        return <input className="vx-field" type="text" value={d.hiringRoles} onChange={(e) => setField('hiringRoles', e.target.value)} placeholder="e.g. Security Supervisor, Logistics Coordinator, IT Support" />;
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            <MultiChoiceGroup columns={2} values={d.hiringRoles} onToggle={(v) => toggleMulti('hiringRoles', v)}
+              options={HIRING_ROLE_OPTIONS.map((r) => ({ value: r, label: r }))} />
+            {d.hiringRoles.includes('Other') && (
+              <input className="vx-field" type="text" value={d.hiringRolesOther} onChange={(e) => setField('hiringRolesOther', e.target.value)} placeholder="Tell us which other role(s)" />
+            )}
+          </div>
+        );
       case 8:
-        return <input className="vx-field" type="text" value={d.requiredSkills} onChange={(e) => setField('requiredSkills', e.target.value)} placeholder="e.g. Convoy operations, warehouse management, network security" />;
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            <MultiChoiceGroup columns={2} values={d.requiredSkills} onToggle={(v) => toggleMulti('requiredSkills', v)}
+              options={REQUIRED_SKILL_OPTIONS.map((s) => ({ value: s, label: s }))} />
+            {d.requiredSkills.includes('Other') && (
+              <input className="vx-field" type="text" value={d.requiredSkillsOther} onChange={(e) => setField('requiredSkillsOther', e.target.value)} placeholder="Tell us which other skill(s)" />
+            )}
+          </div>
+        );
       case 9:
-        return <input className="vx-field" type="text" value={d.candidatePreferences} onChange={(e) => setField('candidatePreferences', e.target.value)} placeholder="e.g. JCOs with 5+ years, Indian Army preferred" />;
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Preferred branch</p>
+              <ChoiceGroup columns={2} value={d.preferredBranch} onChange={(v) => setField('preferredBranch', v)}
+                options={BRANCH_PREFERENCE_OPTIONS.map((b) => ({ value: b, label: b }))} />
+            </div>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Experience</p>
+              <ChoiceGroup columns={2} value={d.experienceRange} onChange={(v) => setField('experienceRange', v)}
+                options={EXPERIENCE_RANGE_OPTIONS.map((r) => ({ value: r, label: r }))} />
+            </div>
+          </div>
+        );
       case 10:
         return (
           <ChoiceGroup columns={1} value={d.hiringReadiness} onChange={(v) => setField('hiringReadiness', v)}
@@ -201,7 +255,7 @@ const EmployerOnboarding = () => {
           <div className="pf-summary-card">
             <p><strong>Company:</strong> {d.companyName || '—'}</p>
             <p><strong>Industry:</strong> {d.industry || '—'}</p>
-            <p><strong>Hiring for:</strong> {d.hiringRoles || '—'}</p>
+            <p><strong>Hiring for:</strong> {d.hiringRoles.length ? d.hiringRoles.join(', ') : '—'}</p>
             <p><strong>Readiness:</strong> {d.hiringReadiness || '—'}</p>
           </div>
         );
