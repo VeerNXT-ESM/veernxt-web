@@ -91,7 +91,15 @@ export default async function handler(req, res) {
     process.env.SUPABASE_SERVICE_ROLE_KEY
   );
 
-  const syntheticEmail = `${fullMobile}@veernxt.in`;
+  // Candidate and employer accounts are kept as separate Supabase Auth
+  // identities even when they share the same real-world phone number --
+  // Supabase requires a unique email per user, so without a role-specific
+  // suffix the second registration attempt (whichever role comes second)
+  // would collide with the first and get rejected as "already registered".
+  // Candidate keeps the original unsuffixed format for backward
+  // compatibility with every already-registered candidate account.
+  const isEmployer = role === 'employer';
+  const syntheticEmail = isEmployer ? `${fullMobile}+employer@veernxt.in` : `${fullMobile}@veernxt.in`;
   console.log('[register] Creating user with synthetic email:', syntheticEmail);
 
   try {
@@ -108,7 +116,7 @@ export default async function handler(req, res) {
     if (createError) {
       console.error('[register] Supabase auth.admin.createUser returned error:', createError);
       if (createError.message?.includes('already registered') || createError.message?.includes('already exists')) {
-        return res.status(409).json({ ok: false, error: 'This number is already registered. Please login instead.' });
+        return res.status(409).json({ ok: false, error: `This number is already registered as ${isEmployer ? 'an employer' : 'a candidate'}. Please login instead.` });
       }
       throw createError;
     }
