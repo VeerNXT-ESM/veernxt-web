@@ -313,7 +313,7 @@ const EmployerDashboard = () => {
         .dashboard-wrapper { padding: 3rem 1.5rem; max-width: 1100px; margin: 0 auto; }
         .emp-hero {
           margin-bottom: 2.5rem;
-          background: linear-gradient(135deg, #1e293b 0%, #1F3A2E 100%);
+          background: linear-gradient(135deg, #0d1f0d 0%, #1F3A2E 100%);
           padding: 2rem;
           border-radius: var(--radius-lg);
           box-shadow: var(--shadow-3);
