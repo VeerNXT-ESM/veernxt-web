@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { RefreshCw } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -48,15 +48,27 @@ const EMPLOYER_HELP = [
   'This helps us prioritise which veteran trade backgrounds we surface to you first.',
   undefined,
   'A short overview candidates will see on your listings.',
-  'e.g. "Security Supervisor, Logistics Coordinator, IT Support" — free text is fine.',
-  'Optional — specific certifications, trade backgrounds, or experience level.',
-  'Optional — preferred service branch, rank range, or years of experience.',
+  'Pick as many as apply — choose "Other" to add a role that isn\'t listed.',
+  'Optional — pick any that apply, or choose "Other" to add your own.',
+  'Optional — helps us pace which candidates we surface first.',
   "We'll pace candidate introductions to match your timeline.",
   'Take one last look before we save your hiring profile.',
 ];
 
+// Splits a hiring_profile array back into its preset selections plus any
+// custom "Other" text, mirroring how HIRING_ROLE_OPTIONS/REQUIRED_SKILL_OPTIONS
+// are written on submit — used to re-populate the form when editing.
+const splitPresetAndOther = (values, presetOptions) => {
+  if (!Array.isArray(values)) return { preset: [], other: '' };
+  const preset = values.filter((v) => presetOptions.includes(v));
+  const other = values.filter((v) => !presetOptions.includes(v));
+  return { preset: other.length ? [...preset, 'Other'] : preset, other: other.join(', ') };
+};
+
 const EmployerOnboarding = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const isEditMode = searchParams.get('edit') === 'true';
   const [checking, setChecking] = useState(true);
   const [submitLoading, setSubmitLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -65,19 +77,49 @@ const EmployerOnboarding = () => {
   });
   const [step, setStep] = useState(0);
   const { hasDraft, loadDraft, saveDraft, clearDraft } = useLocalDraft('veernxt_employer_onboarding_draft_v1');
-  const [draftPrompt, setDraftPrompt] = useState(() => (hasDraft ? 'pending' : null));
+  // Edit mode loads real data from the DB, not a local draft, so the
+  // "welcome back" resume prompt doesn't apply there.
+  const [draftPrompt, setDraftPrompt] = useState(() => (!isEditMode && hasDraft ? 'pending' : null));
 
   // Already-onboarded employers land here from a stale link/bookmark — send
-  // them straight to their dashboard instead of re-running onboarding.
+  // them straight to their dashboard instead of re-running onboarding,
+  // *unless* they explicitly asked to re-open onboarding via ?edit=true
+  // (e.g. from the "Redo onboarding" link on the dashboard), in which case
+  // we pre-fill the form with their existing profile instead.
   useEffect(() => {
     (async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) { navigate('/login'); return; }
-      const { data } = await supabase.from('employer_profiles').select('company_name').eq('id', session.user.id).maybeSingle();
-      if (data?.company_name) { navigate('/employer/dashboard', { replace: true }); return; }
+      const { data } = await supabase.from('employer_profiles').select('*').eq('id', session.user.id).maybeSingle();
+      if (data?.company_name && !isEditMode) { navigate('/employer/dashboard', { replace: true }); return; }
+
+      if (data?.company_name && isEditMode) {
+        const [locationCity, locationState] = (data.location || '').split(',').map((s) => s.trim());
+        const hp = data.hiring_profile || {};
+        const roles = splitPresetAndOther(hp.hiringRoles, HIRING_ROLE_OPTIONS);
+        const skills = splitPresetAndOther(hp.requiredSkills, REQUIRED_SKILL_OPTIONS);
+        setFormData((prev) => ({
+          ...prev,
+          companyName: data.company_name || '',
+          website: data.website || '',
+          contactName: data.contact_name || '',
+          designation: data.designation || '',
+          industry: data.industry || '',
+          locationState: STATE_DISTRICTS[locationState] ? locationState : '',
+          locationCity: locationCity || '',
+          about: data.about || '',
+          hiringRoles: roles.preset,
+          hiringRolesOther: roles.other,
+          requiredSkills: skills.preset,
+          requiredSkillsOther: skills.other,
+          preferredBranch: hp.preferredBranch || 'Any',
+          experienceRange: hp.experienceRange || 'Any',
+          hiringReadiness: hp.hiringReadiness || '',
+        }));
+      }
       setChecking(false);
     })();
-  }, [navigate]);
+  }, [navigate, isEditMode]);
 
   useEffect(() => {
     if (draftPrompt === 'pending') return;
