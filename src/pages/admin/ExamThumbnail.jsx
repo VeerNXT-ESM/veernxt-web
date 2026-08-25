@@ -33,8 +33,12 @@ const ExamThumbnail = ({ label, conductingBodyName, thumbnailSubject, accentColo
   }
 
   const image = getSubjectThumbnailImage(subject.key);
+  // A light tint over the photo (not a heavy scrim) -- just enough to keep
+  // the subject colour identity and give the overlaid text a legible base;
+  // text itself carries a drop-shadow (see .lc-thumb-lg-subject/-label/
+  // -badge) instead of relying on darkening the image to make it readable.
   const background = image
-    ? `linear-gradient(160deg, ${bg}b3 0%, ${bg}e6 100%), url("${image}")`
+    ? `linear-gradient(160deg, ${bg}40 0%, ${bg}59 100%), url("${image}")`
     : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`;
 
   return (

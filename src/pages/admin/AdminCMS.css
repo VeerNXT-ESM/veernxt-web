@@ -295,8 +295,8 @@
 /* Colour-based exam thumbnail (ExamThumbnail.jsx) */
 .lc-thumb-sm { width: 34px; height: 34px; border-radius: 7px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 800; color: rgba(255,255,255,0.92); }
 .lc-thumb-lg { width: 100%; aspect-ratio: 3 / 4; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1rem; gap: 0.75rem; }
-.lc-thumb-lg-subject { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
-.lc-thumb-lg-label { font-weight: 800; font-size: 0.95rem; line-height: 1.3; color: rgba(255,255,255,0.95); white-space: pre-line; }
+.lc-thumb-lg-subject { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.9); text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,0.65); }
+.lc-thumb-lg-label { font-weight: 800; font-size: 0.95rem; line-height: 1.3; color: #fff; white-space: pre-line; text-shadow: 0 1px 4px rgba(0,0,0,0.65); }
 .lc-thumb-lg-badge { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; background: rgba(0,0,0,0.28); color: white; padding: 0.25rem 0.6rem; border-radius: 999px; }
 
 .lc-color-swatches { display: flex; gap: 0.5rem; }
