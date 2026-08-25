@@ -191,6 +191,9 @@ const EmployerDashboard = () => {
               <Button variant="ghost" onClick={handleOpenEditModal} style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }}>
                 Edit Profile
               </Button>
+              <Button variant="ghost" onClick={() => navigate('/employer/onboarding?edit=true')} style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }}>
+                Redo Onboarding
+              </Button>
             </div>
           </div>
 
