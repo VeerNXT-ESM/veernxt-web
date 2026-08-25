@@ -186,9 +186,10 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                 >
                   <span
                     style={{
-                      aspectRatio: '4 / 3', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      textAlign: 'center', padding: '0.6rem', fontWeight: 800, fontSize: '0.72rem', color: 'rgba(255,255,255,0.95)',
-                      background: image ? `linear-gradient(160deg, ${bg}b3 0%, ${bg}e6 100%), url("${image}")` : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
+                      aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      textAlign: 'center', padding: '0.6rem', fontWeight: 800, fontSize: '0.72rem', color: '#fff',
+                      textShadow: image ? '0 1px 4px rgba(0,0,0,0.65)' : 'none',
+                      background: image ? `linear-gradient(160deg, ${bg}40 0%, ${bg}59 100%), url("${image}")` : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
                       backgroundSize: image ? 'cover' : undefined,
                       backgroundPosition: image ? 'center' : undefined,
                       boxShadow: active ? '0 0 0 3px var(--ios-olive, #4b6b32)' : 'none',
