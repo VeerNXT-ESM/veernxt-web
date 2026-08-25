@@ -1,4 +1,4 @@
-import { Building2, TrendingUp, Users, Target, CalendarClock } from 'lucide-react';
+import { Building2, TrendingUp, Users, Target, CalendarClock, ShieldCheck } from 'lucide-react';
 
 /**
  * Client-side "here's what this means for your candidate matches" copy for
@@ -45,6 +45,14 @@ export function getEmployerInsights(formData) {
       icon: CalendarClock,
       label: 'Hiring Readiness',
       detail: `Marked as "${formData.hiringReadiness}" — we'll pace candidate introductions to match your timeline.`,
+    });
+  }
+
+  if (formData.pwdHiringStance) {
+    insights.push({
+      icon: ShieldCheck,
+      label: 'PwD Quota Matching',
+      detail: 'We\'ll prioritise surfacing quota-eligible PwD candidates alongside your other requisites.',
     });
   }
 
