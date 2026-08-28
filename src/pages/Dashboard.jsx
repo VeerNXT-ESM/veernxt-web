@@ -626,7 +626,7 @@ const Dashboard = () => {
             <div className="category-grid">
               {[
                 { id: 'study-guides', title: 'Study Guides', icon: 'S10_study_guide.png', desc: 'Guides & précis' },
-                { id: 'pyq', title: 'PYQ Center', icon: 'S09_learning_center.png', desc: 'Coming soon' },
+                { id: 'pyq', title: 'PYQ Center', icon: 'S09_learning_center.png', desc: 'Practice previous year papers' },
                 { id: 'quiz', title: 'Quiz Center', icon: 'S11_mock_test.png', desc: 'Coming soon' }
               ].map(cat => (
                 <div key={cat.id} className="category-card" onClick={() => navigate('/learning-center')}>

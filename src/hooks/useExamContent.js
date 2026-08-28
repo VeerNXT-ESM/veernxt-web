@@ -87,17 +87,17 @@ function careerTrackKeyword(examName, careerTrack) {
   return examName.split(' ')[0];
 }
 
-async function fetchQuizzesByExamName(examName, careerTrack) {
-  let quizData = await supabase.from('quizzes').select('*').eq('exam_name', examName);
+async function fetchQuizzesByExamName(examName, careerTrack, category = 'Mock Test') {
+  let quizData = await supabase.from('quizzes').select('*').eq('exam_name', examName).eq('category', category);
 
   if (!quizData.data || quizData.data.length === 0) {
     const escaped = examName.replace(/[%_]/g, (c) => `\\${c}`);
-    quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`);
+    quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`).eq('category', category);
   }
 
   if ((!quizData.data || quizData.data.length === 0) && careerTrack) {
     const fallbackTerm = careerTrackKeyword(examName, careerTrack);
-    quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`);
+    quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).eq('category', category);
   }
 
   return quizData.data || [];

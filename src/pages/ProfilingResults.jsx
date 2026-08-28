@@ -60,7 +60,7 @@ const ExamPrepSection = ({ exam }) => {
       setLoading(true);
       try {
         let resData = await supabase.from('resources_v2').select('*').eq('exam_name', exam.exam_name).limit(3);
-        let quizData = await supabase.from('quizzes').select('*').eq('exam_name', exam.exam_name).limit(3);
+        let quizData = await supabase.from('quizzes').select('*').eq('exam_name', exam.exam_name).eq('category', 'Mock Test').limit(3);
 
         // resources_v2/quizzes exam_name carries a "N. " ordinal prefix from
         // the CMS ingestion that the recommendation engine's exam_name never
@@ -73,7 +73,7 @@ const ExamPrepSection = ({ exam }) => {
         }
         if (!quizData.data || quizData.data.length === 0) {
           const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
-          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`).limit(3);
+          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`).eq('category', 'Mock Test').limit(3);
         }
 
         if ((!resData.data || resData.data.length === 0) && exam.career_track) {
@@ -85,7 +85,7 @@ const ExamPrepSection = ({ exam }) => {
           else if (exam.career_track === 'DEFENCE') fallbackTerm = 'Defence';
 
           resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
-          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
+          quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).eq('category', 'Mock Test').limit(3);
         }
 
         if (mounted) {

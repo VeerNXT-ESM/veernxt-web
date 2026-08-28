@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Book, RefreshCw, Search, ChevronDown, ChevronUp, BookOpen, ScrollText, Brain, Bell, X } from 'lucide-react';
+import { Book, RefreshCw, Search, ChevronDown, ChevronUp, BookOpen, ScrollText, Brain, X } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
@@ -44,7 +45,6 @@ const LearningCenter = () => {
   const [selectedBodyId, setSelectedBodyId] = useState('');
   const [searchText, setSearchText] = useState('');
 
-  const [notified, setNotified] = useState({ pyq: false, quiz: false });
   const [expandedExamId, setExpandedExamId] = useState(null);
   const [profile, setProfile] = useState(null);
   const effectiveTier = getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at);
@@ -539,28 +539,18 @@ const LearningCenter = () => {
                     <div className="prep-card-icon"><ScrollText size={22} /></div>
                     <h3>PYQ Center</h3>
                     <p>Practice with questions from previous examinations.</p>
-                    <span className="coming-soon-badge">Coming Soon</span>
-                    {notified.pyq ? (
-                      <span className="notify-confirmed">We'll let you know!</span>
-                    ) : (
-                      <button type="button" className="notify-btn" onClick={() => setNotified((n) => ({ ...n, pyq: true }))}>
-                        <Bell size={14} /> Notify me when available
-                      </button>
-                    )}
+                    <Link to="/pyq-center" className="ios-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', padding: '0.65rem 1rem', width: '100%', marginTop: 'auto', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                      Visit PYQ Center
+                    </Link>
                   </div>
 
                   <div className="prep-card">
                     <div className="prep-card-icon"><Brain size={22} /></div>
                     <h3>Quiz Center</h3>
                     <p>Test your knowledge with subject-wise quizzes and exam simulations.</p>
-                    <span className="coming-soon-badge">Coming Soon</span>
-                    {notified.quiz ? (
-                      <span className="notify-confirmed">We'll let you know!</span>
-                    ) : (
-                      <button type="button" className="notify-btn" onClick={() => setNotified((n) => ({ ...n, quiz: true }))}>
-                        <Bell size={14} /> Notify me when available
-                      </button>
-                    )}
+                    <Link to="/quiz-center" className="ios-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', padding: '0.65rem 1rem', width: '100%', marginTop: 'auto', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                      Visit Quiz Center
+                    </Link>
                   </div>
                 </div>
               </div>
