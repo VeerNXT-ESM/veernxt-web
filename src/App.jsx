@@ -33,6 +33,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Support from './pages/Support';
 import Legal from './pages/Legal';
 import InteractiveQuiz from './components/InteractiveQuiz';
+import QuizCenter from './pages/QuizCenter';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
 import OverviewPage from './pages/admin/OverviewPage';
@@ -157,6 +158,14 @@ function App() {
           <Route path="/network" element={<AuthGuard><Network /></AuthGuard>} />
           <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
           <Route path="/quiz/:id" element={<AuthGuard><InteractiveQuiz /></AuthGuard>} />
+          <Route path="/quiz-center" element={<AuthGuard><QuizCenter /></AuthGuard>} />
+          <Route path="/pyq-center" element={<AuthGuard><QuizCenter
+            category="PYQ"
+            title="PYQ Center"
+            description="Practice with real questions from previous examinations, organised by subject."
+            searchPlaceholder="Search previous year papers..."
+            emptyTitle="No PYQs Found"
+          /></AuthGuard>} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/support" element={<Support />} />
           <Route path="/legal" element={<Legal />} />
