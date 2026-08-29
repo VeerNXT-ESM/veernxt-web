@@ -1,6 +1,6 @@
 # VeerNXT AI Inference API - Usage Guide
 
-This document explains how to call the internal AI Inference proxy endpoint located at `/api/v1/chat/completions` within the VeerNXT Web backend.
+This document explains how to call the standalone AI Inference proxy service hosted at `https://singular-ai.vercel.app`.
 
 ## 1. Authentication
 
@@ -19,7 +19,7 @@ Authorization: Bearer developergupta_GWWN4LCOUOAKz16hF439MUGnf1PPKonBnpARki6xHPD
 You can test the endpoint from your terminal using cURL.
 
 ```bash
-curl -X POST https://veernxt.in/api/v1/chat/completions \
+curl -X POST https://singular-ai.vercel.app/api/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer developergupta_GWWN4LCOUOAKz16hF439MUGnf1PPKonBnpARki6xHPDbEnNjR" \
   -d '{
@@ -47,7 +47,7 @@ If you are calling this from another backend service or frontend component, use 
 
 ```javascript
 async function fetchAIResponse(userMessage, context) {
-  const url = '/api/v1/chat/completions'; // Relative URL if calling from the same domain
+const url = 'https://singular-ai.vercel.app/api/v1/chat/completions'; // Absolute URL to the standalone AI proxy
   
   const payload = {
     model: 'nvidia/nemotron-3.5-lightning-30b-a3b',
