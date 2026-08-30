@@ -32,8 +32,11 @@ import { supabase } from './lib/supabase';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Support from './pages/Support';
 import Legal from './pages/Legal';
+import LegalAidCell from './pages/LegalAidCell';
 import InteractiveQuiz from './components/InteractiveQuiz';
 import QuizCenter from './pages/QuizCenter';
+import PyqCenter from './pages/PyqCenter';
+import PyqReader from './pages/PyqReader';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
 import OverviewPage from './pages/admin/OverviewPage';
@@ -45,6 +48,7 @@ import ContentGraphPage from './pages/admin/ContentGraphPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
 import QuizzesPage from './pages/admin/QuizzesPage';
+import PyqPapersPage from './pages/admin/PyqPapersPage';
 import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import CVBuilder from './pages/CVBuilder';
@@ -159,16 +163,12 @@ function App() {
           <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
           <Route path="/quiz/:id" element={<AuthGuard><InteractiveQuiz /></AuthGuard>} />
           <Route path="/quiz-center" element={<AuthGuard><QuizCenter /></AuthGuard>} />
-          <Route path="/pyq-center" element={<AuthGuard><QuizCenter
-            category="PYQ"
-            title="PYQ Center"
-            description="Practice with real questions from previous examinations, organised by subject."
-            searchPlaceholder="Search previous year papers..."
-            emptyTitle="No PYQs Found"
-          /></AuthGuard>} />
+          <Route path="/pyq-center" element={<AuthGuard><PyqCenter /></AuthGuard>} />
+          <Route path="/pyq-reader/:id" element={<AuthGuard><PyqReader /></AuthGuard>} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/support" element={<Support />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/legal-aid" element={<LegalAidCell />} />
           <Route path="/cv" element={<AuthGuard><CVBuilder /></AuthGuard>} />
           <Route path="/rewards" element={<AuthGuard><RewardsCenter /></AuthGuard>} />
         </Route>
@@ -188,6 +188,7 @@ function App() {
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />
           <Route path="/admin/quizzes" element={<QuizzesPage />} />
+          <Route path="/admin/pyq-papers" element={<PyqPapersPage />} />
           <Route path="/admin/jobs" element={<AdminJobs />} />
           <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
         </Route>

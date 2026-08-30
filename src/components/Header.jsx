@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Menu, Settings, User, Bell, Landmark, Briefcase,
-  Home, Users, MessageSquare, Grid, Target, Search, Trophy
+  Home, Users, MessageSquare, Grid, Target, Search, Trophy, Scale
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useAccountSummary } from '../lib/useAccountSummary';
@@ -74,6 +74,13 @@ const Header = () => {
             <Link to="/financial-guidance" className={`nav-link-item ${window.location.pathname === '/financial-guidance' ? 'active' : ''}`} title="Finance">
               <Landmark size={22} />
               <span className="nav-link-label">Finance</span>
+            </Link>
+          )}
+
+          {!isEmployer && (
+            <Link to="/legal-aid" className={`nav-link-item ${window.location.pathname === '/legal-aid' ? 'active' : ''}`} title="Legal Aid Cell">
+              <Scale size={22} />
+              <span className="nav-link-label">Legal Aid</span>
             </Link>
           )}
 
