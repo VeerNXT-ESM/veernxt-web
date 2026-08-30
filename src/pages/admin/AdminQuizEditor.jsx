@@ -14,7 +14,7 @@ const AdminQuizEditor = () => {
     title: '',
     exam_name: '',
     subject: '',
-    category: 'PYQ',
+    category: 'Mock Test',
     description: '',
     total_questions: 0,
     is_freemium: false
@@ -120,7 +120,6 @@ const AdminQuizEditor = () => {
               <div className="form-group">
                 <label>Category</label>
                 <select value={quizData.category} onChange={e => setQuizData({...quizData, category: e.target.value})}>
-                  <option value="PYQ">Previous Year Question</option>
                   <option value="Mock Test">Mock Test</option>
                   <option value="Topic Test">Topic Test</option>
                 </select>

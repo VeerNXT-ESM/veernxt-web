@@ -25,6 +25,7 @@ export const ADMIN_NAV = [
       { key: 'users', label: 'Users', path: '/admin/users', icon: 'Users' },
       { key: 'roles', label: 'Roles & Permissions', path: '/admin/roles', icon: 'Shield' },
       { key: 'quizzes', label: 'Quizzes', path: '/admin/quizzes', icon: 'HelpCircle' },
+      { key: 'pyq-papers', label: 'PYQ Papers', path: '/admin/pyq-papers', icon: 'ScrollText' },
     ],
   },
   {

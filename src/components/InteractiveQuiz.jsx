@@ -321,7 +321,7 @@ const InteractiveQuiz = () => {
             <Lock size={30} color="#ef4444" />
           </div>
           <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
-            {quiz?.category === 'PYQ' ? 'PYQ Locked' : 'Mock Test Locked'}
+            Mock Test Locked
           </h3>
           <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
             {access.reason || "You have already used your 1 free mock test. Upgrade to access all exams, practice resources, and unlimited mock tests."}

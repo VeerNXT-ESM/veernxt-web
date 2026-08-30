@@ -5,7 +5,7 @@ import { useDebounced } from './lcShared';
 import { Search, Plus } from 'lucide-react';
 import { THUMBNAIL_SUBJECTS } from '../../lib/thumbnailTaxonomy';
 
-const CATEGORY_TABS = ['All', 'Mock Test', 'PYQ', 'Topic Test'];
+const CATEGORY_TABS = ['All', 'Mock Test', 'Topic Test'];
 const SUBJECT_OPTIONS = Object.values(THUMBNAIL_SUBJECTS).map((s) => s.label).sort();
 
 // Minimal browse/open list for the `quizzes` table — a separate, still-live

@@ -129,40 +129,38 @@ async function main() {
         continue;
       }
 
-      const quizId = stableUuid(filename);
+      const paperId = stableUuid(filename);
       const subject = modeSubject(allQuestions);
 
       console.log(`[Ingesting] "${quizTitle}" (${allQuestions.length} Qs, Exam: "${examName}", Subject: "${subject}")`);
 
       if (EXECUTE) {
-        // 1. Upsert Quiz metadata
-        const quizRecord = {
-          id: quizId,
+        // 1. Upsert paper metadata
+        const paperRecord = {
+          id: paperId,
           title: quizTitle,
           exam_name: examName,
-          category: 'PYQ',
           subject,
-          description: `Previous Year Paper for ${examName}`,
           total_questions: allQuestions.length,
-          is_freemium: false,
+          source_file: filename,
           created_at: new Date().toISOString()
         };
 
-        const { error: quizError } = await supabase
-          .from('quizzes')
-          .upsert(quizRecord, { onConflict: 'id' });
+        const { error: paperError } = await supabase
+          .from('pyq_papers')
+          .upsert(paperRecord, { onConflict: 'id' });
 
-        if (quizError) {
-          console.error(`  [Error] Failed to upsert quiz: ${quizError.message}`);
+        if (paperError) {
+          console.error(`  [Error] Failed to upsert paper: ${paperError.message}`);
           errorCount++;
           continue;
         }
 
         // 2. Clear old questions to avoid duplicates/collisions
         const { error: deleteError } = await supabase
-          .from('questions')
+          .from('pyq_questions')
           .delete()
-          .eq('quiz_id', quizId);
+          .eq('paper_id', paperId);
 
         if (deleteError) {
           console.error(`  [Error] Failed to delete old questions: ${deleteError.message}`);
@@ -170,11 +168,11 @@ async function main() {
           continue;
         }
 
-        // 3. Bulk insert questions (questions table has no `subject` column —
-        // that's derived onto the quiz record only, via modeSubject() above)
+        // 3. Bulk insert questions (pyq_questions has no `subject` column —
+        // that's derived onto the paper record only, via modeSubject() above)
         const questionsToInsert = allQuestions.map(({ subject: _subject, ...q }) => ({
           ...q,
-          quiz_id: quizId
+          paper_id: paperId
         }));
 
         // Batch inserts to prevent hitting payload limit for huge exams
@@ -182,7 +180,7 @@ async function main() {
         for (let i = 0; i < questionsToInsert.length; i += batchSize) {
           const batch = questionsToInsert.slice(i, i + batchSize);
           const { error: questionsError } = await supabase
-            .from('questions')
+            .from('pyq_questions')
             .insert(batch);
 
           if (questionsError) {
@@ -190,8 +188,8 @@ async function main() {
             throw new Error(questionsError.message);
           }
         }
-        
-        console.log(`  -> Successfully upserted Quiz and ${allQuestions.length} Questions.`);
+
+        console.log(`  -> Successfully upserted Paper and ${allQuestions.length} Questions.`);
       }
       
       successCount++;
