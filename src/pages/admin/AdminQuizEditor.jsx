@@ -3,6 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import { Save, ArrowLeft, Plus, Trash2, HelpCircle, Layout, List } from 'lucide-react';
 import SimpleRichTextEditor from '../../components/admin/SimpleRichTextEditor';
+import { THUMBNAIL_SUBJECTS } from '../../lib/thumbnailTaxonomy';
+
+const SUBJECT_OPTIONS = Object.values(THUMBNAIL_SUBJECTS).map((s) => s.label).sort();
 
 const AdminQuizEditor = () => {
   const { id } = useParams();
@@ -132,7 +135,10 @@ const AdminQuizEditor = () => {
               </div>
               <div className="form-group">
                 <label>Subject</label>
-                <input type="text" value={quizData.subject} onChange={e => setQuizData({...quizData, subject: e.target.value})} />
+                <select value={quizData.subject || ''} onChange={e => setQuizData({...quizData, subject: e.target.value})}>
+                  <option value="">Select a subject...</option>
+                  {SUBJECT_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
+                </select>
               </div>
             </div>
             <div className="form-group">

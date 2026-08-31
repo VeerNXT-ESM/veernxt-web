@@ -145,6 +145,48 @@ export function getSubjectByKey(key) {
   return DEFAULT_THUMBNAIL_SUBJECT;
 }
 
+// Free-text subject name -> canonical THUMBNAIL_SUBJECTS entry, for names
+// coming from sources that don't use the 17-subject vocabulary directly:
+// exams.subject_requirements keys (e.g. "Quantitative Aptitude", "Hindi /
+// Regional Language") and quizzes.subject (free text today). Exact label
+// match first (case-insensitive), then a small alias table for the known
+// naming mismatches -- same "Quantitative Aptitude"/"Maths" -> Mathematics
+// alias already established in scripts/rebuild_exam_subjects_from_
+// requirements.mjs, extended to the other subject_requirements keys found
+// on the live exams table. Anything unmatched (e.g. "Interview", "Physical
+// Test" -- real subject_requirements keys but not academic subjects, or
+// stray free text like "SSC Stenographer") returns null rather than a
+// fabricated match, so callers can decide how to handle it instead of
+// silently mis-grouping.
+const LABEL_ALIASES = {
+  'quantitative aptitude': 'mathematics',
+  'maths': 'mathematics',
+  'math': 'mathematics',
+  // "General Knowledge / GS" is the one subject_requirements flag covering
+  // combined GS/GK mock papers (per the actual quizzes.subject retag pass --
+  // RRB/SSC/RPF combined-post papers are tagged "General Studies", not "GK
+  // & General Awareness") -- aliased to general_studies, not gk_general_
+  // awareness, so the exam-relevance filter in QuizCenter.jsx actually
+  // matches those quizzes instead of silently hiding them.
+  'general knowledge / gs': 'general_studies',
+  'general knowledge': 'gk_general_awareness',
+  'gk': 'gk_general_awareness',
+  'gs': 'general_studies',
+  'hindi / regional language': 'hindi',
+  'computer knowledge': 'computer_science',
+};
+
+const LABEL_TO_KEY = Object.fromEntries(
+  Object.entries(THUMBNAIL_SUBJECTS).map(([key, { label }]) => [label.toLowerCase(), key])
+);
+
+export function resolveCanonicalSubjectLabel(rawName) {
+  const name = (rawName || '').trim().toLowerCase();
+  if (!name) return null;
+  const key = LABEL_TO_KEY[name] || LABEL_ALIASES[name];
+  return key ? { key, ...THUMBNAIL_SUBJECTS[key] } : null;
+}
+
 export function getFamilyHex(familyKey) {
   return COLOR_FAMILIES[familyKey]?.hex || COLOR_FAMILIES.teal.hex;
 }
