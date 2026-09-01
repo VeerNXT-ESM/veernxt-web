@@ -1,5 +1,11 @@
 {
   "rewrites": [
+    { "source": "/api/v1/chat/completions", "destination": "/api/v1/router?fn=chat" },
+    { "source": "/api/v1/health", "destination": "/api/v1/router?fn=health" },
+    { "source": "/api/payments/create-subscription", "destination": "/api/payments/actions?fn=create-subscription" },
+    { "source": "/api/payments/verify-payment", "destination": "/api/payments/actions?fn=verify-payment" },
+    { "source": "/api/auth/register", "destination": "/api/auth/account?fn=register" },
+    { "source": "/api/auth/reset-password", "destination": "/api/auth/account?fn=reset-password" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],

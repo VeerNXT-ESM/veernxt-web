@@ -1,5 +1,17 @@
 import Joi from 'joi';
 
+/**
+ * /api/v1/router
+ *
+ * Combines what used to be two separate serverless functions
+ * (v1/chat/completions.js, v1/health.js) into one, purely to stay under
+ * Vercel Hobby's 12-function-per-deployment cap. External URLs are
+ * unchanged -- vercel.json rewrites /api/v1/chat/completions and
+ * /api/v1/health to this file with a `fn` query param, so callers
+ * (see docs/AI_API_USAGE.md) see no difference. Underlying behavior of
+ * each handler is unchanged, just relocated.
+ */
+
 const chatRequestSchema = Joi.object({
   model: Joi.string().required(),
   messages: Joi.array().items(
@@ -16,12 +28,18 @@ const chatRequestSchema = Joi.object({
   presence_penalty: Joi.number().min(-2).max(2).optional(),
 }).unknown(false);
 
-/**
- * POST /api/v1/chat/completions
- * Proxy endpoint to call the internal AI provider model.
- * Secured by an internal API key for Vercel functions/backend communication.
- */
-export default async function handler(req, res) {
+async function handleHealth(req, res) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({
+      error: { code: 'METHOD_NOT_ALLOWED', message: 'Only GET requests are allowed.' }
+    });
+  }
+
+  return res.status(200).json({ status: 'ok' });
+}
+
+async function handleChatCompletions(req, res) {
   // 1. Enforce POST
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -57,7 +75,7 @@ export default async function handler(req, res) {
   try {
     const aiBaseUrl = process.env.VITE_AI_BASE_URL || process.env.AI_BASE_URL;
     const aiApiKey = process.env.VITE_AI_API_KEY || process.env.AI_API_KEY;
-    
+
     if (!aiBaseUrl || !aiApiKey) {
       console.error('[Error] AI Provider configuration is missing.');
       return res.status(500).json({
@@ -66,7 +84,7 @@ export default async function handler(req, res) {
     }
 
     const providerUrl = `${aiBaseUrl.replace(/\/+$/, '')}/chat/completions`;
-    
+
     const response = await fetch(providerUrl, {
       method: 'POST',
       headers: {
@@ -104,4 +122,11 @@ export default async function handler(req, res) {
       error: { code: 'INTERNAL_SERVER_ERROR', message: 'An unexpected error occurred.' }
     });
   }
+}
+
+export default async function handler(req, res) {
+  const { fn } = req.query || {};
+  if (fn === 'health') return handleHealth(req, res);
+  if (fn === 'chat') return handleChatCompletions(req, res);
+  return res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Unknown v1 endpoint.' } });
 }
