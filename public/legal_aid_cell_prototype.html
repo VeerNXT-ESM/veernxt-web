@@ -1,698 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VeerNXT: Legal Aid Cell Prototype</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#FAF6EF;
-    --paper:#FFFFFF;
-    --olive:#4b6b32;
-    --olive-deep:#3a5326;
-    --olive-soft:#EEF1EA;
-    --gold:#9C7A2E;
-    --gold-soft:#EFE4C8;
-    --ink:#22261F;
-    --stone:#6B6B60;
-    --line:#E1DAC8;
-    --urgent:#7A2E1F;
-    --urgent-soft:#F4E4DD;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:
-      radial-gradient(1200px 600px at 15% -10%, #F1ECDD 0%, transparent 60%),
-      var(--cream);
-    font-family:'Inter','Noto Sans Devanagari',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:24px 16px;
-  }
-  .lab-tag{
-    font-size:11px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--stone); margin-bottom:16px; text-align:center;
-    display:flex; align-items:center; gap:8px;
-  }
-  .lab-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
-
-  .phone{
-    width:100%; max-width:900px;
-    background:var(--paper);
-    display:flex;
-    flex-direction:column;
-    position:relative;
-  }
-
-  /* ---- TOP BAR ---- */
-  .topbar{
-    background:var(--olive);
-    color:#fff;
-    padding:18px 20px 16px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-shrink:0;
-  }
-  .topbar svg{width:26px;height:26px;flex-shrink:0;}
-  .topbar .titles{flex:1; min-width:0;}
-  .topbar .titles .t1{font-family:Georgia,'Iowan Old Style',serif; font-size:16px; font-weight:700; letter-spacing:.02em;}
-  .topbar .titles .t2{font-size:10.5px; color:#D9CFA6; letter-spacing:.08em; text-transform:uppercase; margin-top:1px;}
-  .topbar .step{
-    font-size:11px; color:#EFE4C8; border:1px solid rgba(239,228,200,.4);
-    padding:3px 9px; border-radius:20px; white-space:nowrap; flex-shrink:0;
-  }
-
-  /* ---- CONTENT ---- */
-  .content{
-    padding:24px 22px 20px;
-    display:flex;
-    flex-wrap:wrap;
-    align-content:flex-start;
-    gap:12px;
-  }
-  /* Everything in .content is full-width by default (title, lead text,
-     textarea, chip-row, info-card, ...); .option cards below opt into
-     wrapping two-per-row so multiple-choice questions spread across the
-     available width instead of stacking single-file like a phone screen. */
-  .content > *{ flex:1 1 100%; margin-bottom:0 !important; }
-
-  .eyebrow{
-    font-size:11px; letter-spacing:.13em; text-transform:uppercase;
-    color:var(--gold); font-weight:700; margin-bottom:8px;
-  }
-  h1.screen-title{
-    font-family:Georgia,'Iowan Old Style',serif;
-    font-size:24px; line-height:1.25; margin:0 0 10px; color:var(--olive-deep);
-    font-weight:700;
-  }
-  p.lead{font-size:14.5px; line-height:1.55; color:var(--stone); margin:0 0 20px;}
-
-  .disclaimer{
-    background:var(--olive-soft);
-    border-left:3px solid var(--gold);
-    padding:12px 14px;
-    border-radius:6px;
-    font-size:12.5px;
-    line-height:1.5;
-    color:var(--olive-deep);
-    margin-bottom:22px;
-  }
-  .disclaimer b{color:var(--olive);}
-
-  /* ---- CARDS / OPTIONS ---- */
-  .option{
-    display:flex; align-items:flex-start; gap:12px;
-    background:var(--paper);
-    border:1.5px solid var(--line);
-    border-radius:0;
-    padding:14px 16px;
-    cursor:pointer;
-    transition:all .15s ease;
-    text-align:left;
-    flex:1 1 calc(50% - 6px) !important;
-    min-width:260px;
-  }
-  .option:hover{border-color:var(--gold); background:#FFFDF8; transform:translateY(-1px); box-shadow:0 6px 14px -8px rgba(31,61,31,.25);}
-  .option .icon{
-    width:34px;height:34px;border-radius:0;background:var(--olive-soft);
-    display:flex;align-items:center;justify-content:center;flex-shrink:0;
-    color:var(--olive);
-  }
-  .option .icon svg{width:18px;height:18px;}
-  .option .otext .ot1{font-size:14.5px; font-weight:600; color:var(--ink);}
-  .option .otext .ot2{font-size:12px; color:var(--stone); margin-top:2px; line-height:1.4;}
-  .option.urgent-opt{border-color:var(--urgent); background:var(--urgent-soft);}
-  .option.urgent-opt .icon{background:#E8CFC5; color:var(--urgent);}
-  .option.selected{border-color:var(--gold); background:var(--gold-soft);}
-
-  .chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;}
-  .chip{
-    border:1.5px solid var(--line); border-radius:0; padding:8px 14px;
-    font-family:'Quicksand',sans-serif; font-size:13px; font-weight:600; cursor:pointer; background:#fff; transition:.15s;
-  }
-  .chip:hover{border-color:var(--gold);}
-  .chip.chip-selected{background:var(--olive); color:#fff; border-color:var(--olive);}
-
-  textarea.freeform{
-    width:100%; border:1.5px solid var(--line); border-radius:0; padding:12px;
-    font-family:inherit; font-size:13.5px; resize:none; min-height:80px; margin-bottom:16px;
-  }
-  textarea.freeform:focus{outline:none; border-color:var(--gold);}
-
-  /* ---- INFO CARD ---- */
-  .info-card{
-    background:#fff; border:1px solid var(--line); border-radius:0;
-    padding:16px; margin-bottom:14px;
-  }
-  .info-card .law-tag{
-    display:inline-block; font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
-    color:var(--olive); background:var(--olive-soft); padding:4px 9px; border-radius:6px;
-    margin-bottom:10px; font-weight:700;
-  }
-  .info-card p{font-size:13.5px; line-height:1.6; color:var(--ink); margin:0 0 10px;}
-  .info-card a.provision-link{font-size:12px; color:var(--gold); text-decoration:none; font-weight:600; border-bottom:1px dotted var(--gold);}
-
-  .entitlement-card{
-    border:1.5px solid var(--gold); background:#FFFCF5; border-radius:12px;
-    padding:14px 16px; margin-bottom:12px;
-  }
-  .entitlement-card .et1{font-size:14px; font-weight:700; color:var(--olive-deep); margin-bottom:4px;}
-  .entitlement-card .et2{font-size:12.5px; color:var(--stone); line-height:1.5; margin-bottom:10px;}
-  .entitlement-card button.small-btn{
-    font-size:12px; padding:7px 12px; border-radius:7px; border:1px solid var(--olive);
-    background:#fff; color:var(--olive); font-weight:600; cursor:pointer;
-  }
-
-  .summary-box{
-    background:var(--olive-deep); color:#F3EFE2; border-radius:12px; padding:16px;
-    font-size:13px; line-height:1.7; margin-bottom:18px;
-  }
-  .summary-box .sline{display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dashed rgba(255,255,255,.15);}
-  .summary-box .sline:last-child{border-bottom:none;}
-  .summary-box .slabel{color:#C9BE9A; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em;}
-  .summary-box .sval{font-weight:600; text-align:right; max-width:60%;}
-  .priority-banner{
-    background:var(--urgent); color:#fff; font-size:12px; font-weight:700;
-    padding:8px 12px; border-radius:0; margin-bottom:16px; text-align:center;
-    letter-spacing:.03em; text-transform:uppercase;
-    display:flex; align-items:center; justify-content:center; gap:6px;
-  }
-  .priority-banner svg{width:14px;height:14px;flex-shrink:0;}
-
-  .expert-card{
-    display:flex; gap:12px; align-items:center; border:1.5px solid var(--gold);
-    background:#FFFCF5; border-radius:12px; padding:14px; margin-bottom:16px;
-  }
-  .expert-avatar{
-    width:46px;height:46px;border-radius:50%;background:var(--olive);
-    color:#fff; display:flex; align-items:center; justify-content:center;
-    font-family:Georgia,serif; font-weight:700; font-size:17px; flex-shrink:0;
-  }
-  .expert-name{font-size:14px; font-weight:700; color:var(--ink);}
-  .verified-badge{
-    display:inline-flex; align-items:center; gap:3px; font-size:10px; font-weight:700;
-    color:var(--olive); background:var(--olive-soft); padding:2px 7px; border-radius:10px;
-    margin-top:3px;
-  }
-  .expert-spec{font-size:12px; color:var(--stone); margin-top:4px;}
-
-  /* ---- STATUS TRACKER (signature element) ---- */
-  .case-ref{
-    font-family:'Courier New',monospace; font-size:12px; letter-spacing:.04em;
-    color:var(--stone); background:var(--olive-soft); display:inline-block;
-    padding:5px 10px; border-radius:6px; margin-bottom:20px;
-  }
-  .tracker{position:relative; padding-left:8px;}
-  .tstep{position:relative; padding-left:34px; padding-bottom:26px;}
-  .tstep:last-child{padding-bottom:2px;}
-  .tstep::before{ /* connecting line */
-    content:''; position:absolute; left:11px; top:26px; bottom:0; width:2px;
-    background:var(--line);
-  }
-  .tstep:last-child::before{display:none;}
-  .tstep.tdone::before{background:var(--gold);}
-  .seal{
-    position:absolute; left:0; top:0; width:24px; height:24px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:12px;
-    border:2px solid var(--line); background:#fff; color:var(--stone);
-  }
-  .tstep.tdone .seal{border-color:var(--gold); background:var(--gold); color:#fff;}
-  .tstep.tcurrent .seal{
-    border-color:var(--olive); background:var(--olive-soft); color:var(--olive);
-    animation:pulse 1.8s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(31,61,31,.35);}
-    70%{box-shadow:0 0 0 8px rgba(31,61,31,0);}
-    100%{box-shadow:0 0 0 0 rgba(31,61,31,0);}
-  }
-  .tstep .tlabel{font-size:13.5px; font-weight:700; color:var(--ink);}
-  .tstep.tdone .tlabel, .tstep.tcurrent .tlabel{color:var(--olive-deep);}
-  .tstep:not(.tdone):not(.tcurrent) .tlabel{color:var(--stone);}
-  .tstep .tsub{font-size:11.5px; color:var(--stone); margin-top:2px;}
-
-  /* ---- BOTTOM ACTION BAR ---- */
-  .actionbar{
-    padding:14px 22px 20px; border-top:1px solid var(--line); background:#fff; flex-shrink:0;
-  }
-  .btn-primary{
-    width:100%; background:var(--olive); color:#fff; border:none; border-radius:0;
-    padding:0.75rem 1.5rem; font-family:'Quicksand',sans-serif; font-size:14.5px; font-weight:700;
-    cursor:pointer; letter-spacing:.01em; box-shadow:0 4px 12px rgba(75,107,50,0.2);
-    transition:all .2s ease;
-  }
-  .btn-primary:hover{opacity:0.9; transform:translateY(-1px);}
-  .btn-primary:disabled{background:#C9C4B4; box-shadow:none; cursor:not-allowed; transform:none;}
-  .btn-secondary{
-    width:100%; background:none; border:none; color:var(--stone);
-    font-family:'Quicksand',sans-serif; font-size:12.5px; font-weight:700;
-    padding:10px 0 0; cursor:pointer; text-decoration:underline;
-  }
-  .back-link{
-    font-size:12px; color:var(--stone); cursor:pointer; display:inline-flex; align-items:center;
-    gap:4px; margin-bottom:14px; user-select:none;
-  }
-  .back-link:hover{color:var(--olive);}
-
-  /* Dashboard mini mock */
-  .dash-grid{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px;}
-  .dash-btn{
-    flex:1 1 calc(50% - 6px); min-width:130px;
-    border:1.5px solid var(--line); border-radius:0; padding:16px 12px; text-align:center;
-    background:#fff; font-family:'Quicksand',sans-serif; font-size:12.5px; font-weight:600; color:var(--ink);
-  }
-  .dash-btn .dicon{margin:0 auto 6px; display:flex; align-items:center; justify-content:center;}
-  .dash-btn .dicon svg{width:22px; height:22px;}
-  .dash-btn.highlight{
-    border-color:var(--gold); background:var(--gold-soft); cursor:pointer;
-    animation:glow 2s infinite;
-  }
-  @keyframes glow{
-    0%,100%{box-shadow:0 0 0 0 rgba(156,122,46,.35);}
-    50%{box-shadow:0 0 0 6px rgba(156,122,46,0);}
-  }
-
-  @media (max-width:430px){
-    .phone{width:100%;}
-    body{padding:12px;}
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VeerNXT Legal Sahayata</title>
+  <meta name="description" content="Guided legal assistance prototype for Agniveers, ex-servicemen and defence families.">
+  <style>
+    :root{--green:#173d29;--green2:#24583c;--gold:#b4862d;--gold2:#e9c878;--paper:#f4f5ef;--ink:#122319;--muted:#657168;--line:#dfe3d7;--white:#fff;--danger:#a44438}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif} button,input{font:inherit} button{cursor:pointer}
+    .topbar{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#f8f8f3;border-bottom:1px solid #dbe0d5;position:sticky;top:0;z-index:20}
+    .brand{display:flex;align-items:center;gap:12px;border:0;background:none;color:var(--ink);text-align:left}.crest{width:42px;height:42px;border-radius:12px;background:var(--green);color:var(--gold2);display:grid;place-items:center;font-size:23px}.brand strong{font-size:22px}.gold{color:#a87b26}.brand small{display:block;margin-top:3px;font-size:9px;letter-spacing:.22em;color:#607064;font-weight:700}.toplinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:600;color:#506057}.avatar{width:36px;height:36px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center}
+    .dashboard{max-width:1440px;margin:auto;padding:42px 32px}.hero{position:relative;overflow:hidden;border-radius:32px;background:var(--green);padding:44px 48px;color:white;box-shadow:0 25px 70px rgba(20,57,39,.2)}.hero:after{content:"";position:absolute;width:340px;height:340px;border:65px solid rgba(255,255,255,.035);border-radius:50%;right:-100px;top:-170px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#9b742a}.hero .eyebrow{color:var(--gold2)}h1{font-size:44px;line-height:1.1;letter-spacing:-.035em;margin:12px 0 14px}.hero p{max-width:740px;color:#d7e2da;line-height:1.7}.sectionhead{margin:32px 0 18px}.sectionhead h2{margin:8px 0;font-size:26px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{min-height:265px;border:1px solid var(--line);border-radius:26px;background:white;padding:24px;box-shadow:0 10px 35px rgba(27,49,36,.05)}.card.legal{border-color:#b99a53;background:#fffaf0}.icon{width:48px;height:48px;border-radius:15px;background:var(--green2);color:white;display:grid;place-items:center;font-size:22px}.card h3{margin:28px 0 10px;font-size:20px}.card p{color:var(--muted);font-size:14px;line-height:1.65}.start{width:100%;margin-top:18px;border:0;border-radius:12px;background:var(--green);color:white;padding:14px 16px;font-weight:750;display:flex;justify-content:space-between}.new{float:right;background:var(--green);color:white;border-radius:999px;padding:5px 10px;font-size:10px;font-weight:800;letter-spacing:.1em}
+    .flow{max-width:1400px;margin:auto;padding:28px;display:grid;grid-template-columns:250px 1fr}.side{background:var(--green);color:white;border-radius:28px 0 0 28px;padding:28px}.exit{border:0;background:none;color:#c7d3cb}.side h2{font-size:24px;line-height:1.25}.steps{list-style:none;padding:0;margin:32px 0}.steps li{display:flex;align-items:center;gap:12px;padding:12px;border-radius:12px;color:#aebdb3}.steps li.active{background:rgba(255,255,255,.1);color:white;font-weight:700}.num{width:28px;height:28px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:grid;place-items:center;font-size:12px}.steps li.done .num{background:var(--gold2);border-color:var(--gold2);color:var(--green)}.privacy{margin-top:45px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.05);padding:15px;font-size:12px;line-height:1.6;color:#cbd5ce}.panel{min-height:760px;background:white;border:1px solid var(--line);border-radius:0 28px 28px 0;box-shadow:0 24px 70px rgba(23,49,35,.09)}.content{max-width:900px;min-height:700px;margin:auto;padding:48px 54px;display:flex;flex-direction:column}.body{flex:1}.intro{max-width:700px;color:var(--muted);line-height:1.7}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}.choice{border:1px solid var(--line);border-radius:17px;padding:18px;background:white;text-align:left}.choice.selected{border-color:var(--green2);background:#eef5ef;box-shadow:0 0 0 2px rgba(36,88,60,.09)}.choice.danger.selected{border-color:var(--danger);background:#fff3f0}.choice strong{display:block;margin:14px 0 7px}.choice small{color:var(--muted);line-height:1.5}.notice{margin-top:18px;padding:14px;border-radius:12px;background:#fff8f6;border:1px solid #e8b7ae;color:#6e332b;font-size:14px;line-height:1.6}.pills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 25px}.pill{border:1px solid #dce1d9;border-radius:999px;background:white;padding:10px 15px}.pill.selected{background:var(--green2);color:white;border-color:var(--green2)}.servicegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.servicebtn{padding:15px;border:1px solid #dce1d9;border-radius:12px;background:white;font-weight:700}.servicebtn.selected{border-color:var(--gold);background:#fff8e9;color:#6d511e}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}.field{display:block;font-size:14px;font-weight:700}.field input{width:100%;margin-top:8px;border:1px solid #d7ddd4;border-radius:12px;background:#fbfcf9;padding:14px;font-weight:400}.issuegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.issue{display:flex;gap:13px;padding:16px;border:1px solid var(--line);border-radius:16px;background:white;text-align:left}.issue.selected{border-color:var(--green2);background:#f0f6f1}.issue b{display:block;margin-bottom:5px}.issue small{color:var(--muted);line-height:1.45}.docs{margin-top:24px;border-top:1px solid #e7eae4;padding-top:22px}.doc{display:flex;gap:10px;align-items:center;border:1px solid #e1e5de;border-radius:11px;padding:13px;margin:8px 0}.summarygrid{display:grid;grid-template-columns:1.15fr .85fr;gap:15px}.summarybox{border:1px solid #dbe2d9;border-radius:17px;background:#fbfcf9;padding:20px}.tag{float:right;border-radius:999px;background:#fff0cf;color:#75541a;padding:5px 10px;font-size:10px;font-weight:800}.data{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:20px}.data small{display:block;color:#7a857d;margin-bottom:4px}.greenbox{margin-top:18px;background:#edf3ed;border-radius:12px;padding:15px;line-height:1.55}.source{background:var(--green);color:white}.source p{color:#c9d5cd;font-size:13px;line-height:1.6}.actions{display:flex;justify-content:space-between;border-top:1px solid #e5e8e1;padding-top:18px;margin-top:28px}.back,.next{border:0;border-radius:12px;padding:13px 18px;font-weight:750}.back{background:white;color:#5d6a61}.next{background:var(--green);color:white}.consent{display:flex;gap:10px;margin-top:16px;padding:14px;border-radius:12px;background:#f5f6f2;font-size:12px;line-height:1.55}.confirm{width:100%;margin-top:18px;border:0;border-radius:12px;background:var(--gold);color:white;padding:15px;font-weight:800}.prototype{text-align:center;font-size:12px;color:#778279;margin-top:16px}.hidden{display:none!important}.mobileprogress{display:none}
+    @media(max-width:980px){.cards{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr;padding:14px}.side{display:none}.panel{border-radius:24px}.mobileprogress{display:block;padding:16px 22px;border-bottom:1px solid var(--line);font-size:12px;font-weight:800}.bar{height:5px;background:#e7eae4;border-radius:5px;margin-top:10px}.bar span{display:block;height:100%;background:var(--gold);border-radius:5px}.content{padding:32px 26px}.toplinks{display:none}}
+    @media(max-width:620px){.topbar{padding:0 16px}.dashboard{padding:22px 16px}.hero{padding:32px 24px}h1{font-size:34px}.cards,.choices,.issuegrid,.summarygrid,.fields{grid-template-columns:1fr}.servicegrid{grid-template-columns:1fr 1fr}.card{min-height:auto}.content{padding:28px 20px}.flow{padding:8px}}
+  </style>
 </head>
 <body>
+  <header class="topbar"><button class="brand" onclick="showDashboard()"><span class="crest">⚖</span><span><strong>Veer<span class="gold">NXT</span></strong><small>BEYOND THE UNIFORM</small></span></button><nav class="toplinks"><span>Dashboard</span><span>My cases</span><span>Resources</span><span>English</span><span class="avatar">VS</span></nav></header>
 
-<div class="phone">
-  <div class="topbar">
-    <svg viewBox="0 0 100 100" fill="none">
-      <path d="M50 8 L88 20 V46 C88 68 72 84 50 92 C28 84 12 68 12 46 V20 Z" fill="#EFE4C8" stroke="#9C7A2E" stroke-width="3"/>
-      <path d="M50 8 L88 20 V46 C88 68 72 84 50 92 C28 84 12 68 12 46 V20 Z" fill="none" stroke="#1F3D1F" stroke-width="0" />
-      <path d="M50 30 V70 M38 42 L50 30 L62 42" stroke="#1F3D1F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </svg>
-    <div class="titles">
-      <div class="t1" id="topTitle">VeerNXT</div>
-      <div class="t2" id="topSub">Placement · Finance · Legal</div>
-    </div>
-    <div class="step" id="stepIndicator" style="display:none;"></div>
-  </div>
+  <main id="dashboard" class="dashboard">
+    <section class="hero"><p class="eyebrow">Your transition command centre</p><h1>Good afternoon.</h1><p>VeerNXT is here to support you with your career, exam preparation, finances and legal concerns throughout your journey beyond the uniform.</p></section>
+    <div class="sectionhead"><p class="eyebrow">VeerNXT services</p><h2>How can we support you today?</h2></div>
+    <section class="cards">
+      <article class="card"><div class="icon">◎</div><h3>Career Transition</h3><p>Map your service skills to a meaningful civilian career.</p></article>
+      <article class="card"><div class="icon">▤</div><h3>Exam Preparation</h3><p>Career mapped preparation for Central, State and Union Territory examinations.</p></article>
+      <article class="card"><div class="icon">₹</div><h3>Financial Guidance</h3><p>Build financial confidence for life beyond your term of service.</p></article>
+      <article class="card legal"><span class="new">NEW</span><div class="icon">⚖</div><h3>Legal Sahayata</h3><p>Understand your concern, prepare your case and connect with the right legal support.</p><button class="start" onclick="startFlow()">Start legal assistance <span>→</span></button></article>
+    </section>
+  </main>
 
-  <div class="content" id="content"></div>
+  <main id="flow" class="flow hidden">
+    <aside class="side"><button class="exit" onclick="showDashboard()">× Exit assistance</button><p class="eyebrow" style="color:#e3c677;margin-top:35px">Legal Sahayata</p><h2>We will guide you,<br>one step at a time.</h2><ol id="steps" class="steps"></ol><div class="privacy">🔒 Your information is private and can only be seen by authorised support personnel.</div></aside>
+    <section class="panel"><div class="mobileprogress"><span id="mobileStep">STEP 1 OF 6</span><div class="bar"><span id="mobileBar" style="width:16.7%"></span></div></div>
+      <div id="screen1" class="content screen"><div class="body"><p class="eyebrow">Safety first</p><h1>Before we begin, is your matter urgent?</h1><p class="intro">Please tell us if you are in immediate danger, facing detention, or have a hearing or deadline within the next 72 hours. This will help us arrange the right support without delay.</p><div class="choices"><button class="choice selected" data-group="urgent" onclick="selectChoice(this,false)"><span>🛡</span><strong>No, I am safe right now</strong><small>I can continue through the normal assistance steps.</small></button><button class="choice danger" data-group="urgent" onclick="selectChoice(this,true)"><span>⚠</span><strong>Yes, this may be urgent</strong><small>There is danger, arrest, active fraud or an urgent deadline.</small></button></div><div id="urgentNotice" class="notice hidden"><strong>Please seek immediate help.</strong> Call 112 if you are in danger. For cyber financial fraud, call 1930. VeerNXT does not replace emergency services.</div><p class="intro" style="font-size:12px">🔒 Please do not upload classified, restricted, operational or security sensitive documents.</p></div><div class="actions"><span></span><button class="next" onclick="go(2)">Continue →</button></div></div>
 
-  <div class="actionbar" id="actionbar"></div>
-</div>
+      <div id="screen2" class="content screen hidden"><div class="body"><p class="eyebrow">About you</p><h1>Please tell us a little about yourself.</h1><p class="intro">Your service status helps us understand which rules may apply and which specialist should review your matter.</p><b>I am a...</b><div class="pills" id="statusPills"></div><b>Service</b><div class="servicegrid" id="serviceGrid"></div><div class="fields"><label class="field">State or Union Territory<input value="Uttarakhand"></label><label class="field">Year of release or retirement<input value="2024"></label></div></div><div class="actions"><button class="back" onclick="go(1)">← Back</button><button class="next" onclick="go(3)">Continue →</button></div></div>
 
-<script>
-// Inline lucide icon SVGs (same icon set used across the rest of the site)
-// -- replaces emoji glyphs, since this is a static file with no bundler
-// access to import lucide-react components directly.
-function ico(paths){
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
-}
-const ICONS = {
-  graduationCap: ico('<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>'),
-  landmark: ico('<path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/>'),
-  briefcase: ico('<path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/>'),
-  scale: ico('<path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M7 21h10"/>'),
-  clock: ico('<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>'),
-  clipboardList: ico('<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>'),
-  shield: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
-  award: ico('<path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/>'),
-  alertTriangle: ico('<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>'),
-  fileText: ico('<path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>'),
-  penLine: ico('<path d="M13 21h8"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>'),
-  indianRupee: ico('<path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/>'),
-  helpCircle: ico('<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>'),
-  home: ico('<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'),
-  creditCard: ico('<rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/>'),
-  flag: ico('<path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/>'),
-};
+      <div id="screen3" class="content screen hidden"><div class="body"><p class="eyebrow">Select issue</p><h1>What do you need help with?</h1><p class="intro">Choose the option that seems closest to your concern. It is perfectly all right if you do not know the legal term for it.</p><div id="issueGrid" class="issuegrid"></div><div class="greenbox"><strong>For this demonstration:</strong> Select Pension and veteran benefits to see how VeerNXT handles a disability pension matter.</div></div><div class="actions"><button class="back" onclick="go(2)">← Back</button><button class="next" onclick="go(4)">Continue →</button></div></div>
 
-const state = {
-  screen: 'dashboard',
-  urgent: null,
-  track: null,
-  category: null,
-  answers: {},
-  history: []
-};
+      <div id="screen4" class="content screen hidden"><div class="body"><p class="eyebrow">Case questions, step 4 of 6</p><h1>Has your disability pension claim been decided?</h1><p class="intro">Your answers will help our Legal Support Desk understand what has happened and prepare your case history. They do not amount to legal advice.</p><div class="choices" style="grid-template-columns:repeat(3,1fr)"><button class="choice selected" data-group="decision" onclick="pick(this)"><strong>Yes, it was rejected</strong></button><button class="choice" data-group="decision" onclick="pick(this)"><strong>Yes, it was partly approved</strong></button><button class="choice" data-group="decision" onclick="pick(this)"><strong>No decision yet</strong></button></div><div class="docs"><h3>Which documents do you have?</h3><p class="intro" style="font-size:12px">Select all that apply. Nothing is uploaded in this demonstration.</p><div id="docs"></div></div></div><div class="actions"><button class="back" onclick="go(3)">← Back</button><button class="next" onclick="go(5)">Prepare my guidance →</button></div></div>
 
-const CATEGORY_LABELS = {
-  redink: 'Red-Ink Entry / Adverse Entry',
-  showcause: 'Show-Cause Notice',
-  acr: 'ACR Representation',
-  pay: 'Pay & Allowance Dispute',
-  pension: 'Pension & Disability Claim',
-  aft: 'AFT Appeal',
-  property: 'Property / Family Matter',
-  fraud: 'Financial Fraud / Cheque Dispute',
-  other: 'Other / General Query'
-};
+      <div id="screen5" class="content screen hidden"><div class="body"><p class="eyebrow">Your preliminary guidance</p><h1>Your matter appears to concern disability pension.</h1><p class="intro">We have organised the information you provided into a simple assistance note. A qualified professional must examine your documents before giving legal advice.</p><div class="summarygrid"><article class="summarybox"><span class="tag">REVIEW ADVISED</span><small>CASE REFERENCE</small><h3>VNXT LS 240817</h3><div class="data"><div><small>Applicant</small><b id="sumStatus">Ex-serviceman</b></div><div><small>Service</small><b id="sumService">Army</b></div><div><small>Issue</small><b>Disability pension</b></div><div><small>Urgency</small><b>Standard review</b></div></div><div class="greenbox"><b>What happens next</b><p>A pension and service matters specialist should review the medical board findings, rejection order and appeal history, including any applicable time limits.</p></div></article><div><article class="summarybox"><h3>Documents to arrange</h3><p>✓ Release Medical Board</p><p>✓ Rejection order</p><p>○ First or second appeal, if filed</p></article><article class="summarybox source" style="margin-top:14px"><h3>Verified source approach</h3><p>Guidance is checked against approved service law, pension regulations and official sources. No result is guaranteed.</p></article></div></div><div class="notice" style="background:#fffaf0;border-color:#eed9ad;color:#695a38"><strong>Important:</strong> Time limits may apply. Please do not delay professional review.</div></div><div class="actions"><button class="back" onclick="go(4)">← Back</button><button class="next" onclick="go(6)">Connect with support desk →</button></div></div>
 
-function go(screen){
-  state.history.push(state.screen);
-  state.screen = screen;
-  render();
-  document.getElementById('content').scrollTop = 0;
-}
-function back(){
-  const prev = state.history.pop();
-  if(prev){ state.screen = prev; render(); }
-}
-function resetAll(){
-  state.screen='dashboard'; state.urgent=null; state.track=null; state.category=null; state.answers={}; state.history=[];
-  render();
-}
+      <div id="screen6" class="content screen hidden"><div class="body"><p class="eyebrow">VeerNXT Legal Support Desk</p><h1>How would you like us to contact you?</h1><p class="intro">A Case Care Coordinator will speak with you, help organise your documents and connect you with a suitable legal professional. The coordinator will not give legal advice.</p><div class="choices"><button class="choice selected" data-group="contact" onclick="pick(this)"><span>☎</span><strong>Request a phone call</strong><small>Preferred time: Today, 4:00 to 6:00 PM</small></button><button class="choice" data-group="contact" onclick="pick(this)"><span>◉</span><strong>Continue on WhatsApp</strong><small>Receive your case reference and secure instructions.</small></button></div><label class="field" style="margin-top:22px">Mobile number<input value="+91 98••• ••432"></label><label class="consent"><input type="checkbox" checked>I consent to VeerNXT contacting me and sharing this case summary only with authorised support personnel or the legal professional assigned to me.</label><button class="confirm" onclick="alert('This is a prototype. No callback request has been sent.')">Confirm callback request</button><p class="prototype">🔒 This is only a prototype. No request is sent and no personal information is saved.</p></div><div class="actions"><button class="back" onclick="go(5)">← Back</button><button class="next" onclick="showDashboard()">Return to dashboard</button></div></div>
+    </section>
+  </main>
 
-function setTop(title, sub, stepText){
-  document.getElementById('topTitle').textContent = title;
-  document.getElementById('topSub').textContent = sub;
-  const si = document.getElementById('stepIndicator');
-  if(stepText){ si.style.display='inline-block'; si.textContent = stepText; }
-  else { si.style.display='none'; }
-}
-
-function render(){
-  const c = document.getElementById('content');
-  const a = document.getElementById('actionbar');
-  c.innerHTML=''; a.innerHTML='';
-
-  if(state.screen==='dashboard') return renderDashboard(c,a);
-  if(state.screen==='landing') return renderLanding(c,a);
-  if(state.screen==='urgency') return renderUrgency(c,a);
-  if(state.screen==='track') return renderTrack(c,a);
-  if(state.screen==='category') return renderCategory(c,a);
-  if(state.screen==='followup') return renderFollowup(c,a);
-  if(state.screen==='info') return renderInfo(c,a);
-  if(state.screen==='entitlement') return renderEntitlement(c,a);
-  if(state.screen==='connect') return renderConnect(c,a);
-  if(state.screen==='expert') return renderExpert(c,a);
-  if(state.screen==='tracker') return renderTracker(c,a);
-}
-
-/* ---------------- SCREENS ---------------- */
-
-function renderDashboard(c,a){
-  setTop('Legal Aid Cell','Dashboard',null);
-  c.innerHTML = `
-    <div class="eyebrow">YOUR DASHBOARD</div>
-    <h1 class="screen-title">Welcome back, Agniveer.</h1>
-    <p class="lead">This is a simplified view of the VeerNXT dashboard, showing where the Legal Aid Cell sits alongside the platform's other verticals.</p>
-    <div class="dash-grid">
-      <div class="dash-btn"><span class="dicon">${ICONS.graduationCap}</span>Education</div>
-      <div class="dash-btn"><span class="dicon">${ICONS.landmark}</span>Finance</div>
-      <div class="dash-btn"><span class="dicon">${ICONS.briefcase}</span>Placement Cell</div>
-      <div class="dash-btn highlight" onclick="go('landing')"><span class="dicon">${ICONS.scale}</span>Legal Aid Cell</div>
-    </div>
-  `;
-  a.innerHTML = `<button class="btn-primary" onclick="go('landing')">Open Legal Aid Cell</button>`;
-}
-
-function renderLanding(c,a){
-  setTop('Legal Aid Cell','Know Your Rights',null);
-  c.innerHTML = `
-    <div class="eyebrow">LEGAL AID CELL</div>
-    <h1 class="screen-title">Know where you stand.</h1>
-    <p class="lead">Answer a few simple questions about your situation. We'll explain your position in plain language, check what you may already be entitled to for free, and connect you with the right expert if you need one.</p>
-    <div class="disclaimer"><b>Please note:</b> This gives you general information so you can understand your situation. It isn't a legal opinion. For advice specific to your case, you'll be connected with a qualified legal expert.</div>
-  `;
-  a.innerHTML = `<button class="btn-primary" onclick="go('urgency')">Begin My Legal Situation Check</button>`;
-}
-
-function renderUrgency(c,a){
-  setTop('Legal Aid Cell','Situation Check','Step 1 of 5');
-  c.innerHTML = `
-    <div class="eyebrow">FIRST, A QUICK CHECK</div>
-    <h1 class="screen-title">Is this time-sensitive?</h1>
-    <p class="lead">Have you received any of the following?</p>
-    <div class="option urgent-opt" onclick="setUrgent(true)">
-      <div class="icon">${ICONS.clock}</div>
-      <div class="otext"><div class="ot1">Yes, I have a deadline</div><div class="ot2">A charge-sheet, show-cause notice, or a court/tribunal date</div></div>
-    </div>
-    <div class="option" onclick="setUrgent(false)">
-      <div class="icon">${ICONS.clipboardList}</div>
-      <div class="otext"><div class="ot1">No, I want to understand my situation first</div><div class="ot2">There's no immediate deadline I'm working against</div></div>
-    </div>
-  `;
-  a.innerHTML = '';
-}
-function setUrgent(val){
-  state.urgent = val;
-  if(val){ state.answers.category = 'Time-sensitive matter'; go('connect'); }
-  else { go('track'); }
-}
-
-function renderTrack(c,a){
-  setTop('Legal Aid Cell','Situation Check','Step 2 of 5');
-  c.innerHTML = `
-    <div class="back-link" onclick="back()">← Back</div>
-    <div class="eyebrow">YOUR SERVICE STATUS</div>
-    <h1 class="screen-title">Where are you in your service?</h1>
-    <p class="lead">This determines which rules apply to your situation.</p>
-    <div class="option" onclick="setTrack('serving')">
-      <div class="icon">${ICONS.shield}</div>
-      <div class="otext"><div class="ot1">Currently Serving</div><div class="ot2">Governed by the Army Act, Army Rules & DSR</div></div>
-    </div>
-    <div class="option" onclick="setTrack('released')">
-      <div class="icon">${ICONS.award}</div>
-      <div class="otext"><div class="ot1">Released / Ex-Serviceman</div><div class="ot2">Pension, civil, criminal & AFT matters</div></div>
-    </div>
-  `;
-  a.innerHTML='';
-}
-function setTrack(t){ state.track = t; go('category'); }
-
-function renderCategory(c,a){
-  setTop('Legal Aid Cell','Situation Check','Step 3 of 5');
-  const serving = [
-    ['redink',ICONS.alertTriangle,'Red-Ink / Adverse Entry','A negative entry recorded or proposed against you'],
-    ['showcause',ICONS.fileText,'Show-Cause Notice','You have been asked to explain conduct or performance'],
-    ['acr',ICONS.penLine,'ACR Representation','A grievance about your Annual Confidential Report'],
-    ['pay',ICONS.indianRupee,'Pay & Allowance Dispute','An issue with entitlements, allowances or recovery'],
-    ['other',ICONS.helpCircle,'Something Else','Any other in-service concern'],
-  ];
-  const released = [
-    ['pension',ICONS.landmark,'Pension & Disability Claim','Regular, disability or family pension issues'],
-    ['aft',ICONS.scale,'AFT Appeal','Appealing a service-related order or rejection'],
-    ['property',ICONS.home,'Property / Family Matter','Land, inheritance, matrimonial or succession issues'],
-    ['fraud',ICONS.creditCard,'Financial Fraud / Cheque Dispute','Loan recovery, cheque bounce or lending disputes'],
-    ['other',ICONS.helpCircle,'Something Else','Any other post-release concern'],
-  ];
-  const list = state.track==='serving' ? serving : released;
-  c.innerHTML = `
-    <div class="back-link" onclick="back()">← Back</div>
-    <div class="eyebrow">${state.track==='serving'?'IN-SERVICE MATTERS':'POST-RELEASE MATTERS'}</div>
-    <h1 class="screen-title">What's this about?</h1>
-    <p class="lead">Choose the option closest to your situation.</p>
-    ${list.map(([key,icon,title,sub])=>`
-      <div class="option" onclick="setCategory('${key}')">
-        <div class="icon">${icon}</div>
-        <div class="otext"><div class="ot1">${title}</div><div class="ot2">${sub}</div></div>
-      </div>
-    `).join('')}
-  `;
-  a.innerHTML='';
-}
-function setCategory(cat){ state.category = cat; go('followup'); }
-
-function renderFollowup(c,a){
-  setTop('Legal Aid Cell','Situation Check','Step 4 of 5');
-  let html = `<div class="back-link" onclick="back()">← Back</div>
-    <div class="eyebrow">A FEW MORE DETAILS</div>
-    <h1 class="screen-title">Help us understand precisely</h1>`;
-
-  if(state.category==='redink'){
-    html += `<p class="lead">Has the entry already been recorded, or are you responding to a show-cause first?</p>
-      <div class="chip-row">
-        <div class="chip" onclick="pick('stage','Already recorded',this)">Already recorded</div>
-        <div class="chip" onclick="pick('stage','Responding to show-cause',this)">Responding to show-cause</div>
-      </div>
-      <p class="lead">Do you have the reference number or date of the order?</p>
-      <div class="chip-row">
-        <div class="chip" onclick="pick('ref','Yes, I have it',this)">Yes, I have it</div>
-        <div class="chip" onclick="pick('ref','No, not yet',this)">No, not yet</div>
-      </div>`;
-  } else if(state.category==='pension'){
-    html += `<p class="lead">Is this about your regular pension, or a disability/war-injury pension?</p>
-      <div class="chip-row">
-        <div class="chip" onclick="pick('type','Regular pension',this)">Regular pension</div>
-        <div class="chip" onclick="pick('type','Disability pension',this)">Disability pension</div>
-      </div>
-      <p class="lead">Has your claim already been rejected, or is this a first application?</p>
-      <div class="chip-row">
-        <div class="chip" onclick="pick('stage','Already rejected',this)">Already rejected</div>
-        <div class="chip" onclick="pick('stage','First application',this)">First application</div>
-      </div>`;
-  } else {
-    html += `<p class="lead">In a line or two, what would you like help understanding?</p>
-      <textarea class="freeform" placeholder="e.g. My unit has withheld part of my pay and I don't know why..." oninput="pick('note',this.value)"></textarea>`;
-  }
-
-  c.innerHTML = html;
-  a.innerHTML = `<button class="btn-primary" onclick="go('info')">Continue</button>`;
-}
-function pick(key,val,el){
-  state.answers[key]=val;
-  if(el && el.classList.contains('chip')){
-    el.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('chip-selected'));
-    el.classList.add('chip-selected');
-  }
-}
-
-const INFO_CONTENT = {
-  redink: {
-    law: 'Governing Law: Army Act 1950 · DSR Vol II',
-    text: 'You generally have the right to submit a statement of defence before an adverse entry is finalised, and to make a representation against it afterward if you were not given that opportunity. The applicable framework sits under the Army Act and the Defence Service Regulations governing administrative action. The exact procedure depends on your rank and the nature of the entry.'
-  },
-  showcause: {
-    law: 'Governing Law: Army Act 1950 · Army Rules 1954',
-    text: 'A show-cause notice generally requires a written response within a specified period. You are usually entitled to see the full basis of the allegation before responding, and the response itself becomes part of your service record, so precision matters more than speed here.'
-  },
-  acr: {
-    law: 'Governing Law: DSR Vol I · Administrative Instructions',
-    text: 'Representations against an ACR are usually time-bound from the date of communication of the report. The grounds typically need to be specific. A general objection is less effective than pointing to a factual inaccuracy or a procedural lapse.'
-  },
-  pay: {
-    law: 'Governing Law: Pay & Allowances Regulations',
-    text: "Disputes over pay, allowances, or recovery notices usually first go through your unit's administrative channel before any external appeal is available. Keep copies of your pay slips and any recovery communication."
-  },
-  pension: {
-    law: 'Governing Law: Pension Regulations for the Army · AFT Act 2007',
-    text: 'A rejected disability or regular pension claim can usually be appealed before the Armed Forces Tribunal. Time limits apply from the date of rejection, so the date on your rejection letter matters a great deal. Keep the original safe.'
-  },
-  aft: {
-    law: 'Governing Law: Armed Forces Tribunal Act 2007',
-    text: 'The AFT is generally the primary venue for appeals against service-related orders since 2007. Filing is usually time-bound, and the tribunal typically expects the internal departmental remedy to have been attempted first, where one exists.'
-  },
-  property: {
-    law: 'Governing Law: General Civil Law (State-specific)',
-    text: "Property, inheritance and matrimonial matters are governed by general civil law rather than military regulations, and often depend heavily on the state you're in. Documentation, things like sale deeds, succession certificates, and marriage records, usually matters more than any other single factor."
-  },
-  fraud: {
-    law: 'Governing Law: Bharatiya Nyaya Sanhita · Negotiable Instruments Act',
-    text: 'Cheque bounce and lending disputes generally have specific, time-bound legal remedies. Acting promptly after the incident, and keeping every related document, usually strengthens the case considerably.'
-  },
-  other: {
-    law: 'General Guidance',
-    text: 'Your situation may not fit a standard category, which is exactly the kind of case worth discussing directly with a legal expert rather than relying on general information alone.'
-  }
-};
-
-function renderInfo(c,a){
-  setTop('Legal Aid Cell','Situation Check','Step 5 of 5');
-  const info = INFO_CONTENT[state.category] || INFO_CONTENT.other;
-  c.innerHTML = `
-    <div class="eyebrow">HERE'S WHAT GENERALLY APPLIES</div>
-    <h1 class="screen-title">Understanding your situation</h1>
-    <div class="info-card">
-      <span class="law-tag">${info.law}</span>
-      <p>${info.text}</p>
-      <a class="provision-link" href="javascript:void(0)">Read the underlying provision →</a>
-    </div>
-    <div class="disclaimer"><b>Remember:</b> this is general information, not a legal opinion on your specific case.</div>
-  `;
-  a.innerHTML = `<button class="btn-primary" onclick="go('entitlement')">Continue</button>`;
-}
-
-function renderEntitlement(c,a){
-  setTop('Legal Aid Cell','Free Entitlements',null);
-  c.innerHTML = `
-    <div class="eyebrow">BEFORE ANYTHING ELSE</div>
-    <h1 class="screen-title">You may already be entitled to free help</h1>
-    <p class="lead">These government and statutory schemes may already cover your situation at no cost.</p>
-    <div class="entitlement-card">
-      <div class="et1">Zila Sainik Board: Legal Cell</div>
-      <div class="et2">Ex-servicemen are entitled to free legal assistance through their District Sainik Board for service and pension-related matters.</div>
-      <button class="small-btn">View Contact Details</button>
-    </div>
-    <div class="entitlement-card">
-      <div class="et1">NALSA / District Legal Services Authority</div>
-      <div class="et2">Free legal aid for civil and criminal matters, based on eligibility criteria.</div>
-      <button class="small-btn">Check My Eligibility</button>
-    </div>
-  `;
-  a.innerHTML = `
-    <button class="btn-primary" onclick="go('connect')">I'd still like to speak with a VeerNXT Legal Expert</button>
-  `;
-}
-
-function renderConnect(c,a){
-  setTop('Legal Aid Cell','Case Summary',null);
-  const trackLabel = state.track==='serving' ? 'Currently Serving' : (state.track==='released' ? 'Released / ESM' : 'Not set');
-  const catLabel = CATEGORY_LABELS[state.category] || state.answers.category || 'General Query';
-  const detailParts = [];
-  for(const k in state.answers){ if(k!=='category'){ detailParts.push(k+': '+state.answers[k]); } }
-  const details = detailParts.length ? detailParts.join(' · ') : 'Not applicable';
-
-  c.innerHTML = `
-    ${state.urgent ? `<div class="priority-banner">${ICONS.flag}Priority: Time-Sensitive Matter</div>` : ''}
-    <div class="eyebrow">YOUR CASE SUMMARY</div>
-    <h1 class="screen-title">Ready to connect</h1>
-    <p class="lead">We've put together a summary from your answers so you won't need to explain everything again.</p>
-    <div class="summary-box">
-      <div class="sline"><span class="slabel">Status</span><span class="sval">${state.urgent?'Priority':'Standard'}</span></div>
-      <div class="sline"><span class="slabel">Track</span><span class="sval">${trackLabel}</span></div>
-      <div class="sline"><span class="slabel">Category</span><span class="sval">${catLabel}</span></div>
-      <div class="sline"><span class="slabel">Details</span><span class="sval">${details}</span></div>
-    </div>
-  `;
-  a.innerHTML = `<button class="btn-primary" onclick="go('expert')">Connect Me With a Legal Expert</button>`;
-}
-
-function renderExpert(c,a){
-  setTop('Legal Aid Cell','Expert Assigned',null);
-  const isServing = state.track==='serving' || state.urgent;
-  const name = isServing ? 'Col (Retd) A. Sharma' : 'Adv. R. Menon';
-  const spec = isServing ? 'JAG Branch (Retd), Service discipline & administrative matters' : 'Civil & Pension Appeals, AFT practice';
-  const initials = isServing ? 'AS' : 'RM';
-  c.innerHTML = `
-    <div class="eyebrow">YOU'RE IN GOOD HANDS</div>
-    <h1 class="screen-title">Expert assigned to your case</h1>
-    <div class="expert-card">
-      <div class="expert-avatar">${initials}</div>
-      <div>
-        <div class="expert-name">${name}</div>
-        <div class="verified-badge">✓ Verified Legal Expert</div>
-        <div class="expert-spec">${spec}</div>
-      </div>
-    </div>
-    <p class="lead">Typical response time: ${state.urgent ? 'within 4 hours (priority)' : 'within 24 hours'}. You'll be notified the moment there's an update.</p>
-  `;
-  a.innerHTML = `<button class="btn-primary" onclick="go('tracker')">View My Case Status</button>`;
-}
-
-function renderTracker(c,a){
-  setTop('Legal Aid Cell','Case Status',null);
-  const steps = [
-    ['Submitted','Your case summary was received','done'],
-    ['Assigned','A Verified Legal Expert was matched to your case','done'],
-    ['Under Review','Your expert is reviewing the details','current'],
-    ['Consultation Scheduled','A time will be proposed for your discussion','pending'],
-    ['Resolved','Your matter is closed out','pending'],
-  ];
-  c.innerHTML = `
-    <div class="eyebrow">CASE STATUS</div>
-    <h1 class="screen-title">Tracking your case</h1>
-    <div class="case-ref">VNXT / LAC / 2026 / 00147</div>
-    <div class="tracker">
-      ${steps.map(([label,sub,st])=>`
-        <div class="tstep ${st==='done'?'tdone':st==='current'?'tcurrent':''}">
-          <div class="seal">${st==='done'?'✓':st==='current'?'●':''}</div>
-          <div class="tlabel">${label}</div>
-          <div class="tsub">${sub}</div>
-        </div>
-      `).join('')}
-    </div>
-  `;
-  a.innerHTML = `<button class="btn-primary" onclick="resetAll()">↺ Restart Demo</button>`;
-}
-
-render();
-</script>
+  <script>
+    const stepLabels=["Safety check","About you","Select issue","Case questions","Your guidance","Connect"];
+    const statuses=["Serving Agniveer","Released Agniveer","Ex-serviceman","Widow or NOK","Serving regular personnel"];
+    const forces=["Army","Navy","Air Force","Other"];
+    const issues=[
+      ["Pension and veteran benefits","PPO, SPARSH, disability, family pension and ECHS"],
+      ["Service and disciplinary matters","Notice, punishment, discharge, records and grievance"],
+      ["Agniveer support","Release, Seva Nidhi, injury, documents and entitlements"],
+      ["Family and personal matters","Property, matrimonial, succession and consumer issues"],
+      ["Police, cyber and criminal matters","FIR, fraud, threats, arrest and court notice"],
+      ["I am not sure","Tell us what happened. We will help you find the right category."]
+    ];
+    const docNames=["Discharge book or release order","PPO or e-PPO, if issued","Release Medical Board proceedings","Disability claim rejection order","Earlier appeal or representation"];
+    let current=1, selectedStatus="Ex-serviceman", selectedService="Army";
+    function init(){document.getElementById('statusPills').innerHTML=statuses.map(s=>`<button class="pill ${s===selectedStatus?'selected':''}" onclick="chooseStatus(this,'${s}')">${s}</button>`).join('');document.getElementById('serviceGrid').innerHTML=forces.map(s=>`<button class="servicebtn ${s===selectedService?'selected':''}" onclick="chooseService(this,'${s}')">${s}</button>`).join('');document.getElementById('issueGrid').innerHTML=issues.map((x,i)=>`<button class="issue ${i===0?'selected':''}" onclick="pick(this)"><span style="font-size:22px">${['₹','⚖','★','⌂','⚠','?'][i]}</span><span><b>${x[0]}</b><small>${x[1]}</small></span></button>`).join('');document.getElementById('docs').innerHTML=docNames.map((d,i)=>`<label class="doc"><input type="checkbox" ${i<3?'checked':''}>${d}</label>`).join('');updateSteps()}
+    function showDashboard(){document.getElementById('dashboard').classList.remove('hidden');document.getElementById('flow').classList.add('hidden');window.scrollTo(0,0)}
+    function startFlow(){document.getElementById('dashboard').classList.add('hidden');document.getElementById('flow').classList.remove('hidden');go(1)}
+    function go(n){current=n;document.querySelectorAll('.screen').forEach(x=>x.classList.add('hidden'));document.getElementById('screen'+n).classList.remove('hidden');if(n===5){document.getElementById('sumStatus').textContent=selectedStatus;document.getElementById('sumService').textContent=selectedService}updateSteps();window.scrollTo(0,0)}
+    function updateSteps(){document.getElementById('steps').innerHTML=stepLabels.map((s,i)=>`<li class="${i+1===current?'active':''} ${i+1<current?'done':''}"><span class="num">${i+1<current?'✓':i+1}</span>${s}</li>`).join('');document.getElementById('mobileStep').textContent=`STEP ${current} OF 6`;document.getElementById('mobileBar').style.width=(current/6*100)+'%'}
+    function pick(el){const group=el.dataset.group;if(group){document.querySelectorAll(`[data-group="${group}"]`).forEach(x=>x.classList.remove('selected'))}else{[...el.parentElement.children].forEach(x=>x.classList.remove('selected'))}el.classList.add('selected')}
+    function selectChoice(el,isUrgent){pick(el);document.getElementById('urgentNotice').classList.toggle('hidden',!isUrgent)}
+    function chooseStatus(el,value){selectedStatus=value;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+    function chooseService(el,value){selectedService=value;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+    init();
+  </script>
 </body>
 </html>
