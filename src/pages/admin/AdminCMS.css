@@ -287,10 +287,17 @@
 .lc-editor-identity { display: grid; grid-template-columns: 1fr 200px; gap: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.6rem; }
 .lc-editor-identity-fields { display: flex; flex-direction: column; gap: 1.1rem; }
 .lc-editor-thumbnail { display: flex; flex-direction: column; }
-.lc-editor-tabs { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid var(--border); }
-.lc-editor-tabs button { background: none; border: none; padding: 0.6rem 0.9rem; font-size: 0.82rem; font-weight: 600; color: var(--admin-text-muted); cursor: pointer; border-bottom: 2px solid transparent; }
-.lc-editor-tabs button:hover { color: var(--admin-text); }
-.lc-editor-tabs button.active { color: var(--admin-accent); border-bottom-color: var(--admin-accent); }
+
+/* Status toggle (ExamEditorPanel.jsx) — replaces the old Draft/Published/
+   Archived dropdown; reuses --radius-pill (currently 0px, matching the
+   site-wide sharp-corners design) rather than a hardcoded pill shape. */
+.lc-input-group .lc-toggle { display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer; user-select: none; }
+.lc-toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.lc-toggle-track { width: 40px; height: 22px; border-radius: var(--radius-pill); background: var(--surface-alt); border: 1px solid var(--border); position: relative; flex-shrink: 0; transition: background 0.15s, border-color 0.15s; }
+.lc-toggle-thumb { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--admin-text-muted); transition: transform 0.15s, background 0.15s; }
+.lc-toggle input:checked + .lc-toggle-track { background: var(--admin-accent-soft); border-color: var(--admin-accent); }
+.lc-toggle input:checked + .lc-toggle-track .lc-toggle-thumb { transform: translateX(18px); background: var(--admin-accent); }
+.lc-toggle-label { font-size: 0.82rem; font-weight: 600; color: var(--admin-text); }
 
 /* Colour-based exam thumbnail (ExamThumbnail.jsx) */
 .lc-thumb-sm { width: 34px; height: 34px; border-radius: 7px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 800; color: rgba(255,255,255,0.92); }
@@ -303,14 +310,8 @@
 .lc-color-swatch { width: 26px; height: 26px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; }
 .lc-color-swatch.active { border-color: var(--admin-text); box-shadow: 0 0 0 2px var(--surface) inset; }
 
-/* Contextual Information Rail (ExamContextRail.jsx) */
+/* Contextual Information Rail (ExamIntroCard.jsx, ExamStatusCard.jsx) */
 .lc-rail { display: flex; flex-direction: column; gap: 1.25rem; }
-.lc-donut-total { font-size: 1.6rem; font-weight: 800; color: var(--admin-text); margin-bottom: 0.85rem; display: flex; align-items: baseline; gap: 0.4rem; }
-.lc-donut-total span { font-size: 0.72rem; font-weight: 600; color: var(--admin-text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
-.lc-quick-actions { display: flex; flex-direction: column; gap: 0.5rem; }
-.lc-quick-action { display: flex; align-items: center; gap: 0.6rem; width: 100%; text-align: left; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.75rem; font-size: 0.82rem; font-weight: 600; color: var(--admin-text); cursor: pointer; }
-.lc-quick-action:hover { border-color: var(--admin-accent); color: var(--admin-accent); }
-.lc-quick-action.danger:hover { border-color: var(--admin-danger); color: var(--admin-danger); }
 
 @media (max-width: 1500px) {
   .lc-exams-workspace { grid-template-columns: 1.5fr 1.7fr 1fr; }
