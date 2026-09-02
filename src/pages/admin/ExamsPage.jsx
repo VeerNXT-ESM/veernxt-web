@@ -4,7 +4,9 @@ import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
 import ExamEditorPanel from './ExamEditorPanel';
-import ExamContextRail from './ExamContextRail';
+import ExamIntroCard from './ExamIntroCard';
+import ExamStatusCard from './ExamStatusCard';
+import ExamSubjectsPanel from './ExamSubjectsPanel';
 import { PAGE_SIZE, useDebounced, StatusBadge } from './lcShared';
 import { Search, Plus, ChevronLeft, ChevronRight, ShieldAlert } from 'lucide-react';
 
@@ -239,7 +241,6 @@ const ExamsPage = () => {
               examId={selectedExamId}
               onCreated={(newExam) => { selectExam(newExam.id); fetchExams(); }}
               onSaved={fetchExams}
-              onDuplicated={(newId) => { selectExam(newId); fetchExams(); }}
             />
           ) : (
             <div className="lc-card lc-empty-editor">
@@ -249,9 +250,14 @@ const ExamsPage = () => {
         </div>
 
         <div className="lc-exams-rail-col">
-          <ExamContextRail examId={selectedExamId} onChanged={fetchExams} />
+          <div className="lc-rail">
+            <ExamIntroCard examId={selectedExamId} />
+            <ExamStatusCard examId={selectedExamId} />
+          </div>
         </div>
       </div>
+
+      {selectedExamId && <ExamSubjectsPanel examId={selectedExamId} onChanged={fetchExams} />}
     </div>
   );
 };
