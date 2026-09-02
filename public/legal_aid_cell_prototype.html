@@ -7,65 +7,677 @@
   <meta name="description" content="Guided legal assistance prototype for Agniveers, ex-servicemen and defence families.">
   <style>
     :root{--green:#173d29;--green2:#24583c;--gold:#b4862d;--gold2:#e9c878;--paper:#f4f5ef;--ink:#122319;--muted:#657168;--line:#dfe3d7;--white:#fff;--danger:#a44438}
-    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif} button,input{font:inherit} button{cursor:pointer}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif} button,input,textarea{font:inherit} button{cursor:pointer}
     .dashboard{max-width:1440px;margin:auto;padding:42px 32px}.hero{position:relative;overflow:hidden;border-radius:32px;background:var(--green);padding:44px 48px;color:white;box-shadow:0 25px 70px rgba(20,57,39,.2)}.hero:after{content:"";position:absolute;width:340px;height:340px;border:65px solid rgba(255,255,255,.035);border-radius:50%;right:-100px;top:-170px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#9b742a}.hero .eyebrow{color:var(--gold2)}h1{font-size:44px;line-height:1.1;letter-spacing:-.035em;margin:12px 0 14px}.hero p{max-width:740px;color:#d7e2da;line-height:1.7}.sectionhead{margin:32px 0 18px}.sectionhead h2{margin:8px 0;font-size:26px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{min-height:265px;border:1px solid var(--line);border-radius:26px;background:white;padding:24px;box-shadow:0 10px 35px rgba(27,49,36,.05)}.card.legal{border-color:#b99a53;background:#fffaf0}.icon{width:48px;height:48px;border-radius:15px;background:var(--green2);color:white;display:grid;place-items:center;font-size:22px}.card h3{margin:28px 0 10px;font-size:20px}.card p{color:var(--muted);font-size:14px;line-height:1.65}.start{width:100%;margin-top:18px;border:0;border-radius:12px;background:var(--green);color:white;padding:14px 16px;font-weight:750;display:flex;justify-content:space-between}.new{float:right;background:var(--green);color:white;border-radius:999px;padding:5px 10px;font-size:10px;font-weight:800;letter-spacing:.1em}
     .flow{max-width:1400px;margin:auto;padding:28px;display:grid;grid-template-columns:250px 1fr}.side{background:var(--green);color:white;border-radius:28px 0 0 28px;padding:28px}.exit{border:0;background:none;color:#c7d3cb}.side h2{font-size:24px;line-height:1.25}.steps{list-style:none;padding:0;margin:32px 0}.steps li{display:flex;align-items:center;gap:12px;padding:12px;border-radius:12px;color:#aebdb3}.steps li.active{background:rgba(255,255,255,.1);color:white;font-weight:700}.num{width:28px;height:28px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:grid;place-items:center;font-size:12px}.steps li.done .num{background:var(--gold2);border-color:var(--gold2);color:var(--green)}.privacy{margin-top:45px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.05);padding:15px;font-size:12px;line-height:1.6;color:#cbd5ce}.panel{min-height:760px;background:white;border:1px solid var(--line);border-radius:0 28px 28px 0;box-shadow:0 24px 70px rgba(23,49,35,.09)}.content{max-width:900px;min-height:700px;margin:auto;padding:48px 54px;display:flex;flex-direction:column}.body{flex:1}.intro{max-width:700px;color:var(--muted);line-height:1.7}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}.choice{border:1px solid var(--line);border-radius:17px;padding:18px;background:white;text-align:left}.choice.selected{border-color:var(--green2);background:#eef5ef;box-shadow:0 0 0 2px rgba(36,88,60,.09)}.choice.danger.selected{border-color:var(--danger);background:#fff3f0}.choice strong{display:block;margin:14px 0 7px}.choice small{color:var(--muted);line-height:1.5}.notice{margin-top:18px;padding:14px;border-radius:12px;background:#fff8f6;border:1px solid #e8b7ae;color:#6e332b;font-size:14px;line-height:1.6}.pills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 25px}.pill{border:1px solid #dce1d9;border-radius:999px;background:white;padding:10px 15px}.pill.selected{background:var(--green2);color:white;border-color:var(--green2)}.servicegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.servicebtn{padding:15px;border:1px solid #dce1d9;border-radius:12px;background:white;font-weight:700}.servicebtn.selected{border-color:var(--gold);background:#fff8e9;color:#6d511e}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}.field{display:block;font-size:14px;font-weight:700}.field input{width:100%;margin-top:8px;border:1px solid #d7ddd4;border-radius:12px;background:#fbfcf9;padding:14px;font-weight:400}.issuegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.issue{display:flex;gap:13px;padding:16px;border:1px solid var(--line);border-radius:16px;background:white;text-align:left}.issue.selected{border-color:var(--green2);background:#f0f6f1}.issue b{display:block;margin-bottom:5px}.issue small{color:var(--muted);line-height:1.45}.docs{margin-top:24px;border-top:1px solid #e7eae4;padding-top:22px}.doc{display:flex;gap:10px;align-items:center;border:1px solid #e1e5de;border-radius:11px;padding:13px;margin:8px 0}.summarygrid{display:grid;grid-template-columns:1.15fr .85fr;gap:15px}.summarybox{border:1px solid #dbe2d9;border-radius:17px;background:#fbfcf9;padding:20px}.tag{float:right;border-radius:999px;background:#fff0cf;color:#75541a;padding:5px 10px;font-size:10px;font-weight:800}.data{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:20px}.data small{display:block;color:#7a857d;margin-bottom:4px}.greenbox{margin-top:18px;background:#edf3ed;border-radius:12px;padding:15px;line-height:1.55}.source{background:var(--green);color:white}.source p{color:#c9d5cd;font-size:13px;line-height:1.6}.actions{display:flex;justify-content:space-between;border-top:1px solid #e5e8e1;padding-top:18px;margin-top:28px}.back,.next{border:0;border-radius:12px;padding:13px 18px;font-weight:750}.back{background:white;color:#5d6a61}.next{background:var(--green);color:white}.consent{display:flex;gap:10px;margin-top:16px;padding:14px;border-radius:12px;background:#f5f6f2;font-size:12px;line-height:1.55}.confirm{width:100%;margin-top:18px;border:0;border-radius:12px;background:var(--gold);color:white;padding:15px;font-weight:800}.prototype{text-align:center;font-size:12px;color:#778279;margin-top:16px}.hidden{display:none!important}.mobileprogress{display:none}
     @media(max-width:980px){.cards{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr;padding:14px}.side{display:none}.panel{border-radius:24px}.mobileprogress{display:block;padding:16px 22px;border-bottom:1px solid var(--line);font-size:12px;font-weight:800}.bar{height:5px;background:#e7eae4;border-radius:5px;margin-top:10px}.bar span{display:block;height:100%;background:var(--gold);border-radius:5px}.content{padding:32px 26px}}
     @media(max-width:620px){.dashboard{padding:22px 16px}.hero{padding:32px 24px}h1{font-size:34px}.cards,.choices,.issuegrid,.summarygrid,.fields{grid-template-columns:1fr}.servicegrid{grid-template-columns:1fr 1fr}.card{min-height:auto}.content{padding:28px 20px}.flow{padding:8px}}
+    .textarea{width:100%;margin-top:8px;border:1px solid #d7ddd4;border-radius:12px;background:#fbfcf9;padding:14px;font-weight:400;min-height:120px;resize:vertical;font-family:inherit}.qblock{margin-top:26px}.qblock:first-child{margin-top:0}.qblock>b{display:block;margin-bottom:10px}.qblock .intro{margin:2px 0 8px}
   </style>
 </head>
 <body>
-  <main id="dashboard" class="dashboard">
-    <section class="hero"><p class="eyebrow">Your transition command centre</p><h1>Good afternoon.</h1><p>VeerNXT is here to support you with your career, exam preparation, finances and legal concerns throughout your journey beyond the uniform.</p></section>
-    <div class="sectionhead"><p class="eyebrow">VeerNXT services</p><h2>How can we support you today?</h2></div>
-    <section class="cards">
-      <article class="card"><div class="icon">◎</div><h3>Career Transition</h3><p>Map your service skills to a meaningful civilian career.</p></article>
-      <article class="card"><div class="icon">▤</div><h3>Exam Preparation</h3><p>Career mapped preparation for Central, State and Union Territory examinations.</p></article>
-      <article class="card"><div class="icon">₹</div><h3>Financial Guidance</h3><p>Build financial confidence for life beyond your term of service.</p></article>
-      <article class="card legal"><span class="new">NEW</span><div class="icon">⚖</div><h3>Legal Sahayata</h3><p>Understand your concern, prepare your case and connect with the right legal support.</p><button class="start" onclick="startFlow()">Start legal assistance <span>→</span></button></article>
-    </section>
-  </main>
+  <main id="flow" class="flow">
+    <aside class="side"><button class="exit" onclick="exitAssistance()">× Exit assistance</button><p class="eyebrow" style="color:#e3c677;margin-top:35px">Legal Sahayata</p><h2>We will guide you,<br>one step at a time.</h2><ol id="steps" class="steps"></ol><div class="privacy">🔒 Your information is private and can only be seen by authorised support personnel.</div></aside>
+    <section class="panel"><div class="mobileprogress"><span id="mobileStep">STEP 1 OF 8</span><div class="bar"><span id="mobileBar" style="width:12.5%"></span></div></div>
 
-  <main id="flow" class="flow hidden">
-    <aside class="side"><button class="exit" onclick="showDashboard()">× Exit assistance</button><p class="eyebrow" style="color:#e3c677;margin-top:35px">Legal Sahayata</p><h2>We will guide you,<br>one step at a time.</h2><ol id="steps" class="steps"></ol><div class="privacy">🔒 Your information is private and can only be seen by authorised support personnel.</div></aside>
-    <section class="panel"><div class="mobileprogress"><span id="mobileStep">STEP 1 OF 6</span><div class="bar"><span id="mobileBar" style="width:16.7%"></span></div></div>
-      <div id="screen1" class="content screen"><div class="body"><p class="eyebrow">Safety first</p><h1>Before we begin, is your matter urgent?</h1><p class="intro">Please tell us if you are in immediate danger, facing detention, or have a hearing or deadline within the next 72 hours. This will help us arrange the right support without delay.</p><div class="choices"><button class="choice selected" data-group="urgent" onclick="selectChoice(this,false)"><span>🛡</span><strong>No, I am safe right now</strong><small>I can continue through the normal assistance steps.</small></button><button class="choice danger" data-group="urgent" onclick="selectChoice(this,true)"><span>⚠</span><strong>Yes, this may be urgent</strong><small>There is danger, arrest, active fraud or an urgent deadline.</small></button></div><div id="urgentNotice" class="notice hidden"><strong>Please seek immediate help.</strong> Call 112 if you are in danger. For cyber financial fraud, call 1930. VeerNXT does not replace emergency services.</div><p class="intro" style="font-size:12px">🔒 Please do not upload classified, restricted, operational or security sensitive documents.</p></div><div class="actions"><span></span><button class="next" onclick="go(2)">Continue →</button></div></div>
+      <div id="screen1" class="content screen"><div class="body"><p class="eyebrow">Safety first</p><h1>Before we begin, is your matter urgent?</h1><p class="intro">Please tell us if any of the following apply. This will help us arrange the right support without delay.</p><ul style="margin:14px 0 0;padding-left:20px;color:var(--muted);line-height:1.8;font-size:14px"><li>You are in immediate danger</li><li>You are facing arrest or detention</li><li>You have a court hearing coming up</li><li>You have a deadline within the next 72 hours</li><li>You are experiencing active financial or cyber fraud</li><li>Any other situation needing immediate assistance</li></ul><div class="choices"><button class="choice selected" data-group="urgent" onclick="selectChoice(this,false)"><span>🛡</span><strong>No, I am safe right now</strong><small>I can continue through the normal assistance steps.</small></button><button class="choice danger" data-group="urgent" onclick="selectChoice(this,true)"><span>⚠</span><strong>Yes, this may be urgent</strong><small>There is danger, arrest, active fraud or an urgent deadline.</small></button></div><div id="urgentNotice" class="notice hidden"><strong>Please seek immediate help.</strong> Call 112 if you are in danger. For cyber financial fraud, call 1930. VeerNXT does not replace emergency services — you can still continue with the questions below so we can prepare your case, and we will flag it as urgent.</div><p class="intro" style="font-size:12px">🔒 Please do not upload classified, restricted, operational or security sensitive documents.</p></div><div class="actions"><span></span><button class="next" onclick="go(2)">Continue →</button></div></div>
 
-      <div id="screen2" class="content screen hidden"><div class="body"><p class="eyebrow">About you</p><h1>Please tell us a little about yourself.</h1><p class="intro">Your service status helps us understand which rules may apply and which specialist should review your matter.</p><b>I am a...</b><div class="pills" id="statusPills"></div><b>Service</b><div class="servicegrid" id="serviceGrid"></div><div class="fields"><label class="field">State or Union Territory<input value="Uttarakhand"></label><label class="field">Year of release or retirement<input value="2024"></label></div></div><div class="actions"><button class="back" onclick="go(1)">← Back</button><button class="next" onclick="go(3)">Continue →</button></div></div>
+      <div id="screen2" class="content screen hidden"><div class="body"><p class="eyebrow">About you</p><h1>What best describes your connection to the Armed Forces?</h1><p class="intro">Your profile helps us understand which rules may apply and which specialist should review your matter.</p><div class="pills" id="profilePills"></div><b>Which service were you / your family member connected to?</b><div class="servicegrid" id="serviceGrid"></div><div class="fields" id="profileFieldsContainer"></div><div class="fields" style="margin-top:15px"><label class="field">State or Union Territory<input id="stateInput" value="Uttarakhand"></label></div></div><div class="actions"><button class="back" onclick="go(1)">← Back</button><button class="next" onclick="go(3)">Continue →</button></div></div>
 
-      <div id="screen3" class="content screen hidden"><div class="body"><p class="eyebrow">Select issue</p><h1>What do you need help with?</h1><p class="intro">Choose the option that seems closest to your concern. It is perfectly all right if you do not know the legal term for it.</p><div id="issueGrid" class="issuegrid"></div><div class="greenbox"><strong>For this demonstration:</strong> Select Pension and veteran benefits to see how VeerNXT handles a disability pension matter.</div></div><div class="actions"><button class="back" onclick="go(2)">← Back</button><button class="next" onclick="go(4)">Continue →</button></div></div>
+      <div id="screen3" class="content screen hidden"><div class="body"><p class="eyebrow">What happened</p><h1>What happened?</h1><p class="intro">Choose the situation that is closest to your concern. You don't need to know the legal term for it.</p><div id="categoryGrid" class="issuegrid"></div></div><div class="actions"><button class="back" onclick="go(2)">← Back</button><button class="next" onclick="continueFromCategory()">Continue →</button></div></div>
 
-      <div id="screen4" class="content screen hidden"><div class="body"><p class="eyebrow">Case questions, step 4 of 6</p><h1>Has your disability pension claim been decided?</h1><p class="intro">Your answers will help our Legal Support Desk understand what has happened and prepare your case history. They do not amount to legal advice.</p><div class="choices" style="grid-template-columns:repeat(3,1fr)"><button class="choice selected" data-group="decision" onclick="pick(this)"><strong>Yes, it was rejected</strong></button><button class="choice" data-group="decision" onclick="pick(this)"><strong>Yes, it was partly approved</strong></button><button class="choice" data-group="decision" onclick="pick(this)"><strong>No decision yet</strong></button></div><div class="docs"><h3>Which documents do you have?</h3><p class="intro" style="font-size:12px">Select all that apply. Nothing is uploaded in this demonstration.</p><div id="docs"></div></div></div><div class="actions"><button class="back" onclick="go(3)">← Back</button><button class="next" onclick="go(5)">Prepare my guidance →</button></div></div>
+      <div id="screen4" class="content screen hidden"><div class="body"><p class="eyebrow" id="situationEyebrow">Your situation</p><h1 id="situationHeading">What is happening?</h1><p class="intro">Select the option closest to your situation.</p><div id="situationGrid" class="issuegrid"></div></div><div class="actions"><button class="back" onclick="go(3)">← Back</button><button class="next" onclick="continueFromSituation()">Continue →</button></div></div>
 
-      <div id="screen5" class="content screen hidden"><div class="body"><p class="eyebrow">Your preliminary guidance</p><h1>Your matter appears to concern disability pension.</h1><p class="intro">We have organised the information you provided into a simple assistance note. A qualified professional must examine your documents before giving legal advice.</p><div class="summarygrid"><article class="summarybox"><span class="tag">REVIEW ADVISED</span><small>CASE REFERENCE</small><h3>VNXT LS 240817</h3><div class="data"><div><small>Applicant</small><b id="sumStatus">Ex-serviceman</b></div><div><small>Service</small><b id="sumService">Army</b></div><div><small>Issue</small><b>Disability pension</b></div><div><small>Urgency</small><b>Standard review</b></div></div><div class="greenbox"><b>What happens next</b><p>A pension and service matters specialist should review the medical board findings, rejection order and appeal history, including any applicable time limits.</p></div></article><div><article class="summarybox"><h3>Documents to arrange</h3><p>✓ Release Medical Board</p><p>✓ Rejection order</p><p>○ First or second appeal, if filed</p></article><article class="summarybox source" style="margin-top:14px"><h3>Verified source approach</h3><p>Guidance is checked against approved service law, pension regulations and official sources. No result is guaranteed.</p></article></div></div><div class="notice" style="background:#fffaf0;border-color:#eed9ad;color:#695a38"><strong>Important:</strong> Time limits may apply. Please do not delay professional review.</div></div><div class="actions"><button class="back" onclick="go(4)">← Back</button><button class="next" onclick="go(6)">Connect with support desk →</button></div></div>
+      <div id="screen5" class="content screen hidden"><div class="body"><p class="eyebrow">A few questions</p><h1 id="questionsHeading">Just a few questions about your situation.</h1><p class="intro">Your answers help our Legal Support Desk understand what happened and prepare your case history. They do not amount to legal advice.</p><div id="unknownStoryWrap" class="hidden"><label class="field">Tell us what happened<textarea class="textarea" id="storyInput" placeholder="For example: My pension was coming every month but stopped two months ago." oninput="answerText('story', this.value)"></textarea></label></div><div id="dynQuestions"></div></div><div class="actions"><button class="back" onclick="backFromQuestions()">← Back</button><button class="next" onclick="go(6)">Continue →</button></div></div>
 
-      <div id="screen6" class="content screen hidden"><div class="body"><p class="eyebrow">VeerNXT Legal Support Desk</p><h1>How would you like us to contact you?</h1><p class="intro">A Case Care Coordinator will speak with you, help organise your documents and connect you with a suitable legal professional. The coordinator will not give legal advice.</p><div class="choices"><button class="choice selected" data-group="contact" onclick="pick(this)"><span>☎</span><strong>Request a phone call</strong><small>Preferred time: Today, 4:00 to 6:00 PM</small></button><button class="choice" data-group="contact" onclick="pick(this)"><span>◉</span><strong>Continue on WhatsApp</strong><small>Receive your case reference and secure instructions.</small></button></div><label class="field" style="margin-top:22px">Mobile number<input value="+91 98••• ••432"></label><label class="consent"><input type="checkbox" checked>I consent to VeerNXT contacting me and sharing this case summary only with authorised support personnel or the legal professional assigned to me.</label><button class="confirm" onclick="alert('This is a prototype. No callback request has been sent.')">Confirm callback request</button><p class="prototype">🔒 This is only a prototype. No request is sent and no personal information is saved.</p></div><div class="actions"><button class="back" onclick="go(5)">← Back</button><button class="next" onclick="showDashboard()">Return to dashboard</button></div></div>
+      <div id="screen6" class="content screen hidden"><div class="body"><p class="eyebrow">Documents</p><h1>Which documents do you have?</h1><p class="intro" style="font-size:12px">Select all that apply. Nothing is uploaded in this demonstration.</p><div id="dynDocs" class="docs" style="border:none;padding-top:0"></div></div><div class="actions"><button class="back" onclick="go(5)">← Back</button><button class="next" onclick="go(7)">Prepare my case summary →</button></div></div>
+
+      <div id="screen7" class="content screen hidden"><div class="body"><p class="eyebrow">Your case summary</p><h1>Here's what we understood.</h1><p class="intro">We have organised the information you provided into a simple assistance note. A qualified professional must examine your documents before giving advice.</p><div id="summaryContent"></div></div><div class="actions"><button class="back" onclick="go(6)">← Back</button><button class="next" onclick="go(8)">Connect with support desk →</button></div></div>
+
+      <div id="screen8" class="content screen hidden"><div class="body"><p class="eyebrow">VeerNXT Legal Support Desk</p><h1>How would you like us to contact you?</h1><p class="intro">Case reference: <strong id="connectCaseRef"></strong>. A Case Care Coordinator will speak with you, help organise your documents and connect you with a suitable legal professional. The coordinator will not give legal advice.</p><div class="choices"><button class="choice selected" data-group="contact" onclick="pick(this)"><span>☎</span><strong>Request a phone call</strong><small>Preferred time: Today, 4:00 to 6:00 PM</small></button><button class="choice" data-group="contact" onclick="pick(this)"><span>◉</span><strong>Continue on WhatsApp</strong><small>Receive your case reference and secure instructions.</small></button></div><label class="field" style="margin-top:22px">Mobile number<input value="+91 98••• ••432"></label><label class="consent"><input type="checkbox" checked>I consent to VeerNXT contacting me and sharing this case summary only with authorised support personnel or the legal professional assigned to me.</label><button class="confirm" onclick="alert('This is a prototype. No callback request has been sent. Reference: '+state.caseRef)">Confirm callback request</button><p class="prototype">🔒 This is only a prototype. No request is sent and no personal information is saved.</p></div><div class="actions"><button class="back" onclick="go(7)">← Back</button><button class="next" onclick="exitAssistance()">Finish</button></div></div>
+
     </section>
   </main>
 
   <script>
-    const stepLabels=["Safety check","About you","Select issue","Case questions","Your guidance","Connect"];
-    const statuses=["Serving Agniveer","Released Agniveer","Ex-serviceman","Widow or NOK","Serving regular personnel"];
-    const forces=["Army","Navy","Air Force","Other"];
-    const issues=[
-      ["Pension and veteran benefits","PPO, SPARSH, disability, family pension and ECHS"],
-      ["Service and disciplinary matters","Notice, punishment, discharge, records and grievance"],
-      ["Agniveer support","Release, Seva Nidhi, injury, documents and entitlements"],
-      ["Family and personal matters","Property, matrimonial, succession and consumer issues"],
-      ["Police, cyber and criminal matters","FIR, fraud, threats, arrest and court notice"],
-      ["I am not sure","Tell us what happened. We will help you find the right category."]
+    /* ---------- configuration ---------- */
+    const stepLabels=["Safety check","About you","What happened","Your situation","A few questions","Documents","Case summary","Connect"];
+
+    const profiles=[
+      {id:'agniveer_serving',label:'Serving Agniveer'},
+      {id:'agniveer_released',label:'Released Agniveer'},
+      {id:'ex_serviceman',label:'Ex-serviceman'},
+      {id:'serving',label:'Serving personnel'},
+      {id:'widow_nok',label:'Widow / NOK'},
+      {id:'family_member',label:'Defence family member'},
+      {id:'other',label:'Other'}
     ];
-    const docNames=["Discharge book or release order","PPO or e-PPO, if issued","Release Medical Board proceedings","Disability claim rejection order","Earlier appeal or representation"];
-    let current=1, selectedStatus="Ex-serviceman", selectedService="Army";
-    function init(){document.getElementById('statusPills').innerHTML=statuses.map(s=>`<button class="pill ${s===selectedStatus?'selected':''}" onclick="chooseStatus(this,'${s}')">${s}</button>`).join('');document.getElementById('serviceGrid').innerHTML=forces.map(s=>`<button class="servicebtn ${s===selectedService?'selected':''}" onclick="chooseService(this,'${s}')">${s}</button>`).join('');document.getElementById('issueGrid').innerHTML=issues.map((x,i)=>`<button class="issue ${i===0?'selected':''}" onclick="pick(this)"><span style="font-size:22px">${['₹','⚖','★','⌂','⚠','?'][i]}</span><span><b>${x[0]}</b><small>${x[1]}</small></span></button>`).join('');document.getElementById('docs').innerHTML=docNames.map((d,i)=>`<label class="doc"><input type="checkbox" ${i<3?'checked':''}>${d}</label>`).join('');updateSteps()}
-    function showDashboard(){document.getElementById('dashboard').classList.remove('hidden');document.getElementById('flow').classList.add('hidden');window.scrollTo(0,0)}
-    function startFlow(){document.getElementById('dashboard').classList.add('hidden');document.getElementById('flow').classList.remove('hidden');go(1)}
-    function go(n){current=n;document.querySelectorAll('.screen').forEach(x=>x.classList.add('hidden'));document.getElementById('screen'+n).classList.remove('hidden');if(n===5){document.getElementById('sumStatus').textContent=selectedStatus;document.getElementById('sumService').textContent=selectedService}updateSteps();window.scrollTo(0,0)}
-    function updateSteps(){document.getElementById('steps').innerHTML=stepLabels.map((s,i)=>`<li class="${i+1===current?'active':''} ${i+1<current?'done':''}"><span class="num">${i+1<current?'✓':i+1}</span>${s}</li>`).join('');document.getElementById('mobileStep').textContent=`STEP ${current} OF 6`;document.getElementById('mobileBar').style.width=(current/6*100)+'%'}
-    function pick(el){const group=el.dataset.group;if(group){document.querySelectorAll(`[data-group="${group}"]`).forEach(x=>x.classList.remove('selected'))}else{[...el.parentElement.children].forEach(x=>x.classList.remove('selected'))}el.classList.add('selected')}
-    function selectChoice(el,isUrgent){pick(el);document.getElementById('urgentNotice').classList.toggle('hidden',!isUrgent)}
-    function chooseStatus(el,value){selectedStatus=value;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
-    function chooseService(el,value){selectedService=value;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+    const services=["Army","Navy","Air Force","Other"];
+
+    const yesNo=['Yes','No','Not sure'];
+
+    const profileFieldsConfig={
+      ex_serviceman:[
+        {id:'releaseYear',label:'Year of release or retirement',type:'text',placeholder:'e.g. 2024'},
+        {id:'releaseType',label:'Type of release',type:'text',placeholder:'e.g. Normal, Invalided, Discharge'},
+        {id:'serviceDuration',label:'Service duration',type:'text',placeholder:'e.g. 15 years'},
+        {id:'ppoAvailable',label:'PPO (Pension Payment Order) available?',type:'yesno'},
+        {id:'sparshAccess',label:'SPARSH (pension disbursement portal) access?',type:'yesno'},
+        {id:'echsBeneficiary',label:'ECHS (Ex-servicemen health scheme) beneficiary?',type:'yesno'}
+      ],
+      agniveer_serving:[
+        {id:'enrolmentDate',label:'Date of enrolment',type:'text',placeholder:'e.g. Jan 2023'},
+        {id:'releaseDate',label:'Expected release date',type:'text',placeholder:'e.g. Dec 2026'},
+        {id:'serviceDuration',label:'Service duration so far',type:'text',placeholder:'e.g. 2 years'},
+        {id:'injuryDuringService',label:'Injury or disability during service?',type:'yesno'}
+      ],
+      agniveer_released:[
+        {id:'enrolmentDate',label:'Date of enrolment',type:'text',placeholder:'e.g. Jan 2023'},
+        {id:'releaseDate',label:'Date of release',type:'text',placeholder:'e.g. Jan 2027'},
+        {id:'releaseStatus',label:'Current release status',type:'text',placeholder:'e.g. Released, pending clearance'},
+        {id:'sevaNidhiReceived',label:'Seva Nidhi (Agniveer exit corpus) received?',type:'yesno'},
+        {id:'serviceCertReceived',label:'Service certificate received?',type:'yesno'},
+        {id:'injuryDuringService',label:'Injury or disability during service?',type:'yesno'}
+      ],
+      widow_nok:[
+        {id:'relationship',label:'Relationship to deceased service member',type:'text',placeholder:'e.g. Spouse, Son, Daughter'},
+        {id:'deceasedService',label:'Service of deceased member',type:'text',placeholder:'e.g. Army'},
+        {id:'dateOfDeath',label:'Date of death',type:'text',placeholder:'e.g. March 2023'},
+        {id:'ppoAvailable',label:'PPO / pension information available?',type:'yesno'},
+        {id:'familyPensionReceived',label:'Family pension currently received?',type:'yesno'}
+      ],
+      serving:[
+        {id:'serviceDuration',label:'Years of service so far',type:'text',placeholder:'e.g. 8 years'}
+      ],
+      family_member:[
+        {id:'relationship',label:'Relationship to service member',type:'text',placeholder:'e.g. Spouse, Parent, Child'}
+      ],
+      other:[]
+    };
+
+    const legalCategories=[
+      {id:'pension',icon:'₹',title:'Pension & Veteran Benefits',desc:'Pension, PPO, SPARSH, disability pension, family pension, arrears and veteran benefits.'},
+      {id:'service',icon:'⚑',title:'Service & Discharge',desc:'Service records, discharge, disciplinary action, notices and service-related grievances.'},
+      {id:'agniveer',icon:'★',title:'Agniveer Matters',desc:'Release, Seva Nidhi, service documents, injury, disability and other Agniveer entitlements.'},
+      {id:'family',icon:'⌂',title:'Family & Veteran Welfare',desc:'Family pension, NOK matters, succession, marriage, maintenance and related concerns.'},
+      {id:'police',icon:'⚠',title:'Police, Criminal & Fraud',desc:'FIRs, police matters, arrest, threats, cybercrime and financial fraud.'},
+      {id:'property',icon:'⌁',title:'Property & Civil Disputes',desc:'Land, property, loans, consumer disputes, contracts and recovery matters.'},
+      {id:'unknown',icon:'?',title:"I Don't Know",desc:"Tell us what happened and we'll help identify the right category."}
+    ];
+
+    const situationsByCategory={
+      pension:[
+        {id:'pension_stopped',label:'My pension has stopped',flow:'pension_stopped_delayed'},
+        {id:'pension_delayed',label:'My pension is delayed',flow:'pension_stopped_delayed'},
+        {id:'pension_amount_wrong',label:'My pension amount is incorrect',flow:'pension_amount_arrears'},
+        {id:'pension_arrears',label:'I have not received pension arrears',flow:'pension_amount_arrears'},
+        {id:'disability_rejected',label:'My disability pension was rejected',flow:'disability_pension'},
+        {id:'disability_disputed',label:'My disability percentage is disputed',flow:'disability_pension'},
+        {id:'family_pension_problem',label:'I have a family pension problem',flow:'family_pension'},
+        {id:'ppo_problem',label:'I have a PPO problem',flow:'pension_other'},
+        {id:'sparsh_problem',label:'I have a SPARSH problem',flow:'sparsh'},
+        {id:'echs_issue',label:'I have an ECHS-related issue',flow:'echs'},
+        {id:'refund_recovery',label:'I was asked to refund/recover pension money',flow:'pension_other'},
+        {id:'pension_other',label:'Other pension or benefit issue',flow:'pension_other'}
+      ],
+      service:[
+        {id:'discharge_release',label:'Discharge / release problem',flow:'service_disciplinary'},
+        {id:'show_cause',label:'Show-cause notice',flow:'service_disciplinary'},
+        {id:'disciplinary_action',label:'Disciplinary action',flow:'service_disciplinary'},
+        {id:'court_of_inquiry',label:'Court of Inquiry',flow:'service_disciplinary'},
+        {id:'summary_proceedings',label:'Summary proceedings',flow:'service_disciplinary'},
+        {id:'service_record_problem',label:'Service record problem',flow:'service_disciplinary'},
+        {id:'medical_category_issue',label:'Medical category issue',flow:'service_disciplinary'},
+        {id:'pay_recovery_dispute',label:'Pay / recovery dispute',flow:'service_disciplinary'},
+        {id:'character_cert_problem',label:'Character / service certificate problem',flow:'service_disciplinary'},
+        {id:'service_other',label:'Other service matter',flow:'service_disciplinary'}
+      ],
+      agniveer:[
+        {id:'agniveer_release_problem',label:'Release problem',flow:'agniveer_release'},
+        {id:'seva_nidhi_issue',label:'Seva Nidhi issue',flow:'agniveer_release'},
+        {id:'agniveer_document_issue',label:'Service certificate / document issue',flow:'agniveer_release'},
+        {id:'agniveer_injury',label:'Injury during service',flow:'agniveer_injury'},
+        {id:'agniveer_disability',label:'Disability after injury',flow:'agniveer_injury'},
+        {id:'agniveer_death',label:'Death during service / family benefits',flow:'agniveer_injury'},
+        {id:'re_enrolment_issue',label:'Re-enrolment / continuation issue',flow:'agniveer_release'},
+        {id:'agniveer_other',label:'Other Agniveer entitlement',flow:'agniveer_release'}
+      ],
+      family:[
+        {id:'family_pension_fw',label:'Family pension',flow:'family_pension'},
+        {id:'succession',label:'Succession / inheritance',flow:'family_welfare'},
+        {id:'property_family',label:'Property between family members',flow:'family_welfare'},
+        {id:'marriage_divorce',label:'Marriage / divorce',flow:'family_welfare'},
+        {id:'maintenance',label:'Maintenance',flow:'family_welfare'},
+        {id:'childrens_entitlement',label:"Children's entitlement",flow:'family_welfare'},
+        {id:'death_benefits',label:'Death benefits',flow:'family_welfare'},
+        {id:'consumer_dispute_family',label:'Consumer dispute',flow:'family_welfare'},
+        {id:'family_other',label:'Other family matter',flow:'family_welfare'}
+      ],
+      police:[
+        {id:'fir',label:'FIR',flow:'police_fraud'},
+        {id:'police_complaint',label:'Police complaint',flow:'police_fraud'},
+        {id:'arrest_detention',label:'Arrest / detention',flow:'police_fraud'},
+        {id:'court_summons',label:'Court summons',flow:'police_fraud'},
+        {id:'threat_harassment',label:'Threat / harassment',flow:'police_fraud'},
+        {id:'cyber_fraud',label:'Cyber fraud',flow:'police_fraud'},
+        {id:'financial_fraud',label:'Financial fraud',flow:'police_fraud'},
+        {id:'impersonation_fraud',label:'Veteran impersonation / fraud',flow:'police_fraud'},
+        {id:'police_other',label:'Other',flow:'police_fraud'}
+      ],
+      property:[
+        {id:'land_dispute',label:'Land dispute',flow:'property_civil'},
+        {id:'encroachment',label:'Encroachment',flow:'property_civil'},
+        {id:'possession',label:'Possession',flow:'property_civil'},
+        {id:'housing_dispute',label:'Housing dispute',flow:'property_civil'},
+        {id:'loan_bank_dispute',label:'Loan / bank dispute',flow:'property_civil'},
+        {id:'consumer_dispute',label:'Consumer dispute',flow:'property_civil'},
+        {id:'contract_dispute',label:'Contract dispute',flow:'property_civil'},
+        {id:'money_recovery',label:'Money recovery',flow:'property_civil'},
+        {id:'neighbour_dispute',label:'Neighbour dispute',flow:'property_civil'},
+        {id:'property_other',label:'Other',flow:'property_civil'}
+      ]
+    };
+
+    const timeframeOptions=['Within the last month','1–3 months ago','3–6 months ago','More than 6 months ago',"I'm not sure"];
+
+    const legalFlows={
+      pension_stopped_delayed:{
+        questions:[
+          {id:'onsetTime',prompt:'When did you first notice the problem?',type:'single',options:timeframeOptions},
+          {id:'wasNormalBefore',prompt:'Were you receiving the pension normally before this?',type:'single',options:yesNo},
+          {id:'contacted',prompt:'Have you contacted anyone about the problem?',type:'multi',options:['Bank','SPARSH','Pension office / department','Ex-servicemen welfare office','No','Other']},
+          {id:'grievanceRef',prompt:'Do you have a complaint or grievance reference number?',type:'single',options:yesNo,showIf:ctx=>!(ctx.qa.contacted&&ctx.qa.contacted.length===1&&ctx.qa.contacted[0]==='No')}
+        ],
+        documents:[
+          {id:'ppo',label:'PPO / e-PPO'},
+          {id:'pensionStatement',label:'Recent pension statement'},
+          {id:'bankStatement',label:'Bank statement showing pension credits'},
+          {id:'sparshComm',label:'SPARSH communication',showIf:ctx=>(ctx.qa.contacted||[]).includes('SPARSH')},
+          {id:'grievanceRef',label:'Grievance / reference number',showIf:ctx=>ctx.qa.grievanceRef==='Yes'},
+          {id:'correspondence',label:'Relevant correspondence',defaultChecked:false}
+        ]
+      },
+      pension_amount_arrears:{
+        questions:[
+          {id:'whatIncorrect',prompt:'What appears to be incorrect?',type:'single',options:['Pension amount','Arrears not paid','Rate/revision not applied','Recovery/deduction made','Other']},
+          {id:'onsetTime',prompt:'When did you first notice the difference?',type:'single',options:timeframeOptions},
+          {id:'previouslyDifferent',prompt:'Was the amount previously different?',type:'single',options:yesNo},
+          {id:'writtenExplanation',prompt:'Have you received any written explanation?',type:'single',options:['Yes','No']},
+          {id:'grievanceRaised',prompt:'Have you raised a grievance?',type:'single',options:yesNo},
+          {id:'arrearsInvolved',prompt:'Are arrears involved?',type:'single',options:yesNo},
+          {id:'recoveryMade',prompt:'Has any recovery/deduction been made?',type:'single',options:['Yes','No']}
+        ],
+        documents:[
+          {id:'ppo',label:'PPO / e-PPO'},
+          {id:'pensionStatement',label:'Pension statement'},
+          {id:'bankStatement',label:'Bank statement'},
+          {id:'revisionComm',label:'Pension revision communication',showIf:ctx=>ctx.qa.writtenExplanation==='Yes'},
+          {id:'recoveryNotice',label:'Recovery / deduction notice',showIf:ctx=>ctx.qa.recoveryMade==='Yes'},
+          {id:'grievanceCorrespondence',label:'Grievance correspondence',showIf:ctx=>ctx.qa.grievanceRaised==='Yes'}
+        ]
+      },
+      disability_pension:{
+        questions:[
+          {id:'problemType',prompt:'What is the problem with your disability pension?',type:'single',options:['My claim was rejected','My disability percentage was disputed','My pension was partly approved','My pension has not started','My pension has stopped','I was asked to refund money',"I don't understand the decision",'Other']},
+          {id:'injuryTiming',prompt:'When did the disability or injury occur?',type:'single',options:['During service','At release','After release',"I'm not sure"]},
+          {id:'medicalBoard',prompt:'Was a medical board conducted?',help:'A medical board formally assesses a service-related injury or disability.',type:'single',options:yesNo},
+          {id:'medicalBoardOutcome',prompt:'What was the outcome?',type:'single',options:['Disability accepted','Disability partly accepted','Disability rejected',"I don't understand the finding"],showIf:ctx=>ctx.qa.medicalBoard==='Yes'},
+          {id:'hasMedicalBoardDocs',prompt:'Do you have the medical board documents?',type:'single',options:['Yes','No'],showIf:ctx=>ctx.qa.medicalBoard==='Not sure'},
+          {id:'challenged',prompt:'Have you challenged the decision?',type:'single',options:['No','Representation submitted','First appeal submitted','Second appeal submitted','Tribunal/court proceedings',"I'm not sure"]}
+        ],
+        documents:[
+          {id:'medicalBoard',label:'Release Medical Board proceedings',showIf:ctx=>ctx.qa.medicalBoard==='Yes'||ctx.qa.hasMedicalBoardDocs==='Yes'},
+          {id:'ppo',label:'PPO / e-PPO'},
+          {id:'rejectionOrder',label:'Disability claim / rejection order'},
+          {id:'appeal',label:'Appeal or representation',showIf:ctx=>ctx.qa.challenged&&ctx.qa.challenged!=='No'},
+          {id:'medicalDocs',label:'Relevant medical-board documentation',showIf:ctx=>ctx.qa.medicalBoard==='Yes'}
+        ]
+      },
+      sparsh:{
+        questions:[
+          {id:'sparshProblem',prompt:'What is the problem?',type:'single',options:['Cannot access account','Pension not credited','Pension amount incorrect','Personal details incorrect','Life certificate problem','Bank details problem','Pension stopped','Grievance not resolved','Other']},
+          {id:'onsetTime',prompt:'When did the problem start?',type:'single',options:timeframeOptions},
+          {id:'grievanceRaised',prompt:'Have you raised a SPARSH grievance?',type:'single',options:yesNo},
+          {id:'grievanceNumber',prompt:'Do you have the grievance number?',type:'single',options:['Yes','No'],showIf:ctx=>ctx.qa.grievanceRaised==='Yes'},
+          {id:'contactedBank',prompt:'Have you contacted your bank?',type:'single',options:['Yes','No']},
+          {id:'writtenResponse',prompt:'Have you received any written response?',type:'single',options:['Yes','No']}
+        ],
+        documents:[
+          {id:'ppo',label:'PPO / e-PPO'},
+          {id:'sparshComm',label:'SPARSH communication'},
+          {id:'grievanceRef',label:'Grievance reference',showIf:ctx=>ctx.qa.grievanceNumber==='Yes'},
+          {id:'bankStatement',label:'Bank statement',showIf:ctx=>ctx.qa.contactedBank==='Yes'},
+          {id:'correspondence',label:'Relevant correspondence',showIf:ctx=>ctx.qa.writtenResponse==='Yes'}
+        ]
+      },
+      family_pension:{
+        questions:[
+          {id:'currentlyReceiving',prompt:'Are you currently receiving family pension?',type:'single',options:yesNo},
+          {id:'delayedStopped',prompt:'Is the pension delayed or stopped?',type:'single',options:['Yes','No']},
+          {id:'rejected',prompt:'Has the pension claim been rejected?',type:'single',options:yesNo},
+          {id:'eligibilityDifficulty',prompt:'Are you having difficulty establishing eligibility?',type:'single',options:['Yes','No']},
+          {id:'ppoExists',prompt:'Is there a PPO (Pension Payment Order)?',type:'single',options:yesNo},
+          {id:'applicationSubmitted',prompt:'Has any application already been submitted?',type:'single',options:['Yes','No']},
+          {id:'writtenResponse',prompt:'Have you received a written response?',type:'single',options:['Yes','No'],showIf:ctx=>ctx.qa.applicationSubmitted==='Yes'}
+        ],
+        documents:[
+          {id:'ppo',label:'PPO / e-PPO',showIf:ctx=>ctx.qa.ppoExists!=='No'},
+          {id:'deathCertificate',label:'Death certificate',showIf:ctx=>ctx.profile==='widow_nok'},
+          {id:'correspondence',label:'Family pension correspondence'},
+          {id:'proofOfRelationship',label:'Proof of relationship',showIf:ctx=>ctx.profile==='widow_nok'},
+          {id:'previousApplications',label:'Previous applications or rejections',showIf:ctx=>ctx.qa.applicationSubmitted==='Yes'}
+        ]
+      },
+      echs:{
+        questions:[
+          {id:'echsProblem',prompt:'What happened?',type:'single',options:['Treatment denied','Hospital/provider issue','Reimbursement problem','Card/membership issue','Emergency treatment issue','Other']},
+          {id:'onsetTime',prompt:'When did it happen?',type:'single',options:timeframeOptions},
+          {id:'facility',prompt:'Which facility was involved?',type:'text',placeholder:'e.g. Polyclinic name or hospital'},
+          {id:'writtenRefusal',prompt:'Was a written refusal or communication provided?',type:'single',options:['Yes','No']},
+          {id:'reimbursementFiled',prompt:'Was a reimbursement claim filed?',type:'single',options:['Yes','No','Not applicable']}
+        ],
+        documents:[
+          {id:'echsCard',label:'ECHS card / details'},
+          {id:'referral',label:'Referral',showIf:ctx=>['Treatment denied','Hospital/provider issue'].includes(ctx.qa.echsProblem)},
+          {id:'bills',label:'Bills',showIf:ctx=>ctx.qa.echsProblem==='Reimbursement problem'||ctx.qa.reimbursementFiled==='Yes'},
+          {id:'reimbursementApplication',label:'Reimbursement application',showIf:ctx=>ctx.qa.reimbursementFiled==='Yes'},
+          {id:'writtenRefusal',label:'Written refusal / communication',showIf:ctx=>ctx.qa.writtenRefusal==='Yes'}
+        ]
+      },
+      pension_other:{
+        questions:[
+          {id:'whatHappened',prompt:'What happened?',type:'text',placeholder:'Briefly describe the problem in your own words'},
+          {id:'onsetTime',prompt:'When did this happen?',type:'single',options:timeframeOptions},
+          {id:'writtenNotice',prompt:'Did you receive anything in writing?',type:'single',options:yesNo},
+          {id:'actionTaken',prompt:'Have you already taken any action?',type:'single',options:['No','Complaint','Representation','Appeal','Other']},
+          {id:'deadlineHearing',prompt:'Is there a deadline or hearing?',type:'single',options:yesNo}
+        ],
+        documents:[
+          {id:'ppo',label:'PPO / e-PPO'},
+          {id:'pensionStatement',label:'Pension statement'},
+          {id:'correspondence',label:'Relevant correspondence',showIf:ctx=>ctx.qa.writtenNotice==='Yes'},
+          {id:'actionRecord',label:'Record of complaint / representation / appeal',showIf:ctx=>ctx.qa.actionTaken&&ctx.qa.actionTaken!=='No'}
+        ]
+      },
+      service_disciplinary:{
+        questions:[
+          {id:'received',prompt:'What have you received?',type:'single',options:['Notice','Show-cause notice','Charge sheet','Punishment order','Inquiry report','Discharge order','Other','Nothing in writing']},
+          {id:'dateReceived',prompt:'When did you receive it?',type:'text',placeholder:'Approximate date',showIf:ctx=>ctx.qa.received&&ctx.qa.received!=='Nothing in writing'},
+          {id:'responded',prompt:'Have you responded or appealed?',type:'single',options:['No','Yes',"I'm not sure"]},
+          {id:'deadlineHearing',prompt:'Is there a hearing or deadline coming up?',type:'single',options:['Yes','No',"I'm not sure"]}
+        ],
+        documents:[
+          {id:'notice',label:'Notice',showIf:ctx=>ctx.qa.received&&ctx.qa.received!=='Nothing in writing'},
+          {id:'chargeSheet',label:'Charge sheet',showIf:ctx=>ctx.qa.received==='Charge sheet'},
+          {id:'order',label:'Order (punishment / discharge)',showIf:ctx=>ctx.qa.received==='Punishment order'||ctx.qa.received==='Discharge order'},
+          {id:'inquiryDocs',label:'Inquiry documentation',showIf:ctx=>ctx.qa.received==='Inquiry report'},
+          {id:'appeal',label:'Appeal or representation',showIf:ctx=>ctx.qa.responded==='Yes'},
+          {id:'serviceRecords',label:'Relevant service records',defaultChecked:false}
+        ]
+      },
+      agniveer_release:{
+        questions:[
+          {id:'released',prompt:'Have you already been released?',type:'single',options:['Yes','No, still serving',"I'm not sure"]},
+          {id:'releaseDate',prompt:'What was the expected/relevant release date?',type:'text',placeholder:'e.g. Jan 2026'},
+          {id:'problem',prompt:'What is the problem?',type:'text',placeholder:'Briefly describe the problem in your own words'},
+          {id:'docsReceived',prompt:'Have you received your service documents?',type:'single',options:['Yes','No','Partly']},
+          {id:'settlementReceived',prompt:'Have you received the relevant financial settlement (Seva Nidhi etc.)?',type:'single',options:['Yes','No','Partly']},
+          {id:'contactedUnit',prompt:'Have you contacted your unit/department?',type:'single',options:['Yes','No']},
+          {id:'writtenResponse',prompt:'Have you received a written response?',type:'single',options:['Yes','No'],showIf:ctx=>ctx.qa.contactedUnit==='Yes'}
+        ],
+        documents:[
+          {id:'releaseDocs',label:'Release / discharge documentation'},
+          {id:'serviceCert',label:'Service certificate',showIf:ctx=>ctx.qa.docsReceived!=='Yes'},
+          {id:'settlementRecords',label:'Financial settlement records (Seva Nidhi etc.)',showIf:ctx=>ctx.qa.settlementReceived!=='Yes'},
+          {id:'correspondence',label:'Correspondence with unit / department',showIf:ctx=>ctx.qa.contactedUnit==='Yes'},
+          {id:'medicalDocs',label:'Medical documents',showIf:ctx=>ctx.profileData&&ctx.profileData.injuryDuringService==='Yes'}
+        ]
+      },
+      agniveer_injury:{
+        questions:[
+          {id:'duringService',prompt:'Did the injury occur during service?',type:'single',options:yesNo},
+          {id:'when',prompt:'When did it occur?',type:'text',placeholder:'Approximate date'},
+          {id:'treatedMilitary',prompt:'Was treatment provided through military medical facilities?',type:'single',options:['Yes','No','Partly']},
+          {id:'medicalBoard',prompt:'Was a medical board conducted?',type:'single',options:yesNo},
+          {id:'disabilityAssessed',prompt:'Was a disability assessment made?',type:'single',options:yesNo,showIf:ctx=>ctx.qa.medicalBoard==='Yes'},
+          {id:'releasedDueToInjury',prompt:'Were you released because of the injury?',type:'single',options:['Yes','No','Not yet released']},
+          {id:'benefitsExplained',prompt:'Were benefits/compensation explained to you?',type:'single',options:['Yes','No']},
+          {id:'writtenRecord',prompt:'Have you received anything in writing?',type:'single',options:['Yes','No']}
+        ],
+        documents:[
+          {id:'medicalBoardDocs',label:'Medical board documentation',showIf:ctx=>ctx.qa.medicalBoard==='Yes'},
+          {id:'treatmentRecords',label:'Treatment records'},
+          {id:'releaseDocs',label:'Release documentation',showIf:ctx=>ctx.qa.releasedDueToInjury==='Yes'},
+          {id:'injuryReport',label:'Injury report'},
+          {id:'correspondence',label:'Correspondence',showIf:ctx=>ctx.qa.writtenRecord==='Yes'},
+          {id:'benefitDecision',label:'Benefit / claim decision',showIf:ctx=>ctx.qa.benefitsExplained==='Yes'}
+        ]
+      },
+      family_welfare:{
+        questions:[
+          {id:'whatHappened',prompt:'What happened?',type:'text',placeholder:'Briefly describe the situation'},
+          {id:'whoInvolved',prompt:'Who is involved?',type:'text',placeholder:'e.g. Spouse, sibling, other family member'},
+          {id:'when',prompt:'When did it happen?',type:'single',options:timeframeOptions},
+          {id:'writtenNotice',prompt:'Is there a written notice/order?',type:'single',options:yesNo},
+          {id:'filed',prompt:'Has anything already been filed?',type:'single',options:yesNo},
+          {id:'deadlineHearing',prompt:'Is there an upcoming deadline/hearing?',type:'single',options:yesNo}
+        ],
+        documents:[
+          {id:'noticeOrder',label:'Notice or order',showIf:ctx=>ctx.qa.writtenNotice==='Yes'},
+          {id:'filingPapers',label:'Filing papers',showIf:ctx=>ctx.qa.filed==='Yes'},
+          {id:'correspondence',label:'Relevant correspondence',defaultChecked:false},
+          {id:'proofOfRelationship',label:'Proof of relationship',showIf:ctx=>ctx.profile==='widow_nok'||ctx.profile==='family_member'}
+        ]
+      },
+      police_fraud:{
+        questions:[
+          {id:'firRegistered',prompt:'Has an FIR been registered?',type:'single',options:yesNo},
+          {id:'contactedByPolice',prompt:'Have you been contacted by police?',type:'single',options:['Yes','No']},
+          {id:'arrested',prompt:'Has anyone been arrested?',type:'single',options:yesNo},
+          {id:'noticeSummons',prompt:'Have you received a notice/summons?',type:'single',options:['Yes','No']},
+          {id:'deadlineHearing',prompt:'Is there an upcoming court date?',type:'single',options:['Yes','No',"I'm not sure"]},
+          {id:'moneyLeft',prompt:'Did money leave your account?',type:'single',options:['Yes','No','Not applicable'],showIf:ctx=>['cyber_fraud','financial_fraud','impersonation_fraud'].includes(ctx.situation)},
+          {id:'reportedFraud',prompt:'Have you reported the cyber/financial fraud (1930 / cybercrime.gov.in)?',type:'single',options:['Yes','No'],showIf:ctx=>ctx.qa.moneyLeft==='Yes'}
+        ],
+        documents:[
+          {id:'firCopy',label:'FIR copy',showIf:ctx=>ctx.qa.firRegistered==='Yes'},
+          {id:'noticeSummons',label:'Notice / summons',showIf:ctx=>ctx.qa.noticeSummons==='Yes'},
+          {id:'transactionProof',label:'Bank / transaction proof',showIf:ctx=>ctx.qa.moneyLeft==='Yes'},
+          {id:'fraudReportAck',label:'Cyber/financial fraud report acknowledgement',showIf:ctx=>ctx.qa.reportedFraud==='Yes'},
+          {id:'correspondence',label:'Relevant correspondence',defaultChecked:false}
+        ]
+      },
+      property_civil:{
+        questions:[
+          {id:'disputeAbout',prompt:'What is the dispute about?',type:'text',placeholder:'Briefly describe the dispute'},
+          {id:'otherParty',prompt:'Who is the other party?',type:'text',placeholder:'e.g. Neighbour, bank, builder'},
+          {id:'hasDocuments',prompt:'Do you have documents related to this?',type:'single',options:['Yes','No','Some']},
+          {id:'noticeReceived',prompt:'Have you received a notice?',type:'single',options:['Yes','No']},
+          {id:'caseFiled',prompt:'Has a case already been filed?',type:'single',options:yesNo},
+          {id:'deadlineHearing',prompt:'Is there a hearing/deadline?',type:'single',options:yesNo},
+          {id:'immediateThreat',prompt:'Is there an immediate threat to property or possession?',type:'single',options:['Yes','No']}
+        ],
+        documents:[
+          {id:'propertyDocs',label:'Property / title documents',showIf:ctx=>ctx.qa.hasDocuments!=='No'},
+          {id:'notice',label:'Notice received',showIf:ctx=>ctx.qa.noticeReceived==='Yes'},
+          {id:'caseFilingPapers',label:'Case filing papers',showIf:ctx=>ctx.qa.caseFiled==='Yes'},
+          {id:'correspondence',label:'Relevant correspondence',defaultChecked:false}
+        ]
+      },
+      unknown_freeform:{
+        questions:[
+          {id:'whoAbout',prompt:'Who is this about?',type:'single',options:['Me','My spouse','My parent','Another family member','Other']},
+          {id:'when',prompt:'When did it happen?',type:'single',options:timeframeOptions},
+          {id:'writtenNotice',prompt:'Did you receive any notice/order/document?',type:'single',options:yesNo},
+          {id:'actionTaken',prompt:'Have you already complained or appealed?',type:'single',options:['Yes','No']},
+          {id:'deadlineHearing',prompt:'Is there a deadline/hearing?',type:'single',options:yesNo}
+        ],
+        documents:[
+          {id:'correspondence',label:'Relevant correspondence / notice',showIf:ctx=>ctx.qa.writtenNotice==='Yes'},
+          {id:'actionRecord',label:'Record of complaint or appeal',showIf:ctx=>ctx.qa.actionTaken==='Yes'},
+          {id:'relatedPapers',label:'Any related papers you have',defaultChecked:false}
+        ]
+      }
+    };
+
+    /* ---------- state ---------- */
+    let current=1;
+    const state={
+      urgent:false,
+      profile:'ex_serviceman',
+      service:'Army',
+      profileData:{},
+      category:'pension',
+      situation:null,
+      flowKey:null,
+      skippedSituation:false,
+      qa:{},
+      docsChecked:{},
+      caseRef:null
+    };
+
+    /* ---------- helpers ---------- */
+    function esc(s){return (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+    function jsEsc(s){return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'")}
+    function genCaseRef(){return 'VNXT LS '+Date.now().toString(36).toUpperCase().slice(-6)}
+
+    function currentCtx(){return {qa:state.qa,profile:state.profile,category:state.category,situation:state.situation,profileData:state.profileData}}
+
+    function classifyFreeform(text){
+      const t=(text||'').toLowerCase();
+      const rules=[
+        [/pension|ppo|sparsh|echs|disability/,'Pension & Veteran Benefits'],
+        [/discharge|show.cause|charge sheet|punishment|inquiry|disciplinary/,'Service & Discharge'],
+        [/agniveer|seva nidhi/,'Agniveer Matters'],
+        [/fir|police|arrest|fraud|cyber|threat|summons/,'Police, Criminal & Fraud'],
+        [/land|property|loan|encroachment|possession|neighbour|consumer|contract/,'Property & Civil Disputes'],
+        [/marriage|divorce|maintenance|succession|inheritance|family/,'Family & Veteran Welfare']
+      ];
+      for(const [re,label] of rules){if(re.test(t))return label}
+      return null;
+    }
+
+    function computeUrgency(){
+      if(state.urgent)return 'Urgent';
+      const qa=state.qa;
+      if(qa.deadlineHearing==='Yes'||qa.moneyLeft==='Yes')return 'Priority review';
+      return 'Standard review';
+    }
+
+    function recommendRoute(){
+      if(state.urgent)return 'Urgent assistance';
+      const qa=state.qa,cat=state.category;
+      if(cat==='police'){
+        if(qa.firRegistered==='Yes'||qa.arrested==='Yes'||qa.noticeSummons==='Yes')return 'Legal professional review';
+        return 'Case coordinator review';
+      }
+      if(cat==='pension'){
+        if(qa.challenged&&qa.challenged!=='No')return 'Legal professional review';
+        if(qa.problemType&&['My claim was rejected','My disability percentage was disputed'].includes(qa.problemType))return 'Legal professional review';
+        return 'Administrative grievance support';
+      }
+      if(cat==='service'){
+        if(['Punishment order','Discharge order','Inquiry report'].includes(qa.received))return 'Legal professional review';
+        return 'Case coordinator review';
+      }
+      if(cat==='agniveer'){
+        if(qa.medicalBoard==='Yes'||qa.disabilityAssessed)return 'Case coordinator review';
+        return 'Administrative grievance support';
+      }
+      if(cat==='property'){
+        if(qa.caseFiled==='Yes'||qa.immediateThreat==='Yes')return 'Legal professional review';
+        return 'Case coordinator review';
+      }
+      return 'Case coordinator review';
+    }
+
+    function composeProfileLine(){
+      const profileLabel=(profiles.find(p=>p.id===state.profile)||{}).label||'Applicant';
+      const pd=state.profileData;
+      let extra='';
+      if(state.profile==='ex_serviceman'&&pd.releaseYear)extra=' · Released '+pd.releaseYear;
+      else if(state.profile==='agniveer_released'&&pd.releaseDate)extra=' · Released '+pd.releaseDate;
+      else if(state.profile==='agniveer_serving'&&pd.enrolmentDate)extra=' · Enrolled '+pd.enrolmentDate;
+      else if(state.profile==='widow_nok'&&pd.dateOfDeath)extra=' · '+pd.dateOfDeath;
+      return `${profileLabel} · ${state.service}${extra}`;
+    }
+
+    /* ---------- rendering ---------- */
+    function init(){
+      document.getElementById('profilePills').innerHTML=profiles.map(p=>`<button type="button" class="pill ${p.id===state.profile?'selected':''}" onclick="selectProfile(this,'${p.id}')">${esc(p.label)}</button>`).join('');
+      document.getElementById('serviceGrid').innerHTML=services.map(s=>`<button type="button" class="servicebtn ${s===state.service?'selected':''}" onclick="selectService(this,'${s}')">${s}</button>`).join('');
+      document.getElementById('categoryGrid').innerHTML=legalCategories.map(c=>`<button type="button" class="issue ${c.id===state.category?'selected':''}" onclick="selectCategory(this,'${c.id}')"><span style="font-size:22px">${c.icon}</span><span><b>${esc(c.title)}</b><small>${esc(c.desc)}</small></span></button>`).join('');
+      renderProfileFields();
+      updateSteps();
+    }
+
+    function renderProfileFields(){
+      const fields=profileFieldsConfig[state.profile]||[];
+      document.getElementById('profileFieldsContainer').innerHTML=fields.map(f=>{
+        if(f.type==='yesno'){
+          const val=state.profileData[f.id];
+          return `<div class="field"><label>${esc(f.label)}</label><div class="pills" style="margin:8px 0 0">`+['Yes','No',"Not sure"].map(o=>`<button type="button" class="pill ${val===o?'selected':''}" onclick="setProfileField('${f.id}','${jsEsc(o)}')">${esc(o)}</button>`).join('')+`</div></div>`;
+        }
+        return `<label class="field">${esc(f.label)}<input type="text" placeholder="${esc(f.placeholder||'')}" value="${esc(state.profileData[f.id]||'')}" oninput="state.profileData['${f.id}']=this.value"></label>`;
+      }).join('');
+    }
+
+    function renderSituationGrid(){
+      const cat=legalCategories.find(c=>c.id===state.category);
+      document.getElementById('situationEyebrow').textContent=cat?cat.title:'Your situation';
+      document.getElementById('situationHeading').textContent='What is happening?';
+      const list=situationsByCategory[state.category]||[];
+      document.getElementById('situationGrid').innerHTML=list.map(s=>`<button type="button" class="issue ${s.id===state.situation?'selected':''}" onclick="selectSituation(this,'${s.id}','${s.flow}')"><b>${esc(s.label)}</b></button>`).join('');
+    }
+
+    function renderQuestionBlock(q){
+      const val=state.qa[q.id];
+      let control='';
+      if(q.type==='single'){
+        control=`<div class="pills">`+q.options.map(o=>`<button type="button" class="pill ${val===o?'selected':''}" onclick="answerSingle('${q.id}','${jsEsc(o)}')">${esc(o)}</button>`).join('')+`</div>`;
+      }else if(q.type==='multi'){
+        const arr=val||[];
+        control=`<div class="docs" style="border:none;padding-top:0;margin-top:10px">`+q.options.map(o=>`<label class="doc"><input type="checkbox" ${arr.includes(o)?'checked':''} onchange="answerMulti('${q.id}','${jsEsc(o)}',this.checked)">${esc(o)}</label>`).join('')+`</div>`;
+      }else{
+        control=`<label class="field" style="margin-top:8px"><input type="text" placeholder="${esc(q.placeholder||'')}" value="${esc(val||'')}" oninput="answerText('${q.id}', this.value)"></label>`;
+      }
+      return `<div class="qblock"><b>${esc(q.prompt)}</b>${q.help?`<p class="intro" style="font-size:12px">${esc(q.help)}</p>`:''}${control}</div>`;
+    }
+
+    function renderQuestions(){
+      const flow=legalFlows[state.flowKey];
+      const heading=document.getElementById('questionsHeading');
+      const storyWrap=document.getElementById('unknownStoryWrap');
+      if(state.flowKey==='unknown_freeform'){
+        storyWrap.classList.remove('hidden');
+        document.getElementById('storyInput').value=state.qa.story||'';
+        heading.textContent="Tell us what happened, and we'll ask a few quick questions.";
+      }else{
+        storyWrap.classList.add('hidden');
+        const sit=(situationsByCategory[state.category]||[]).find(s=>s.id===state.situation);
+        heading.textContent=sit?sit.label:'Just a few questions about your situation.';
+      }
+      const ctx=currentCtx();
+      let banner='';
+      if(['cyber_fraud','financial_fraud','impersonation_fraud'].includes(state.situation)){
+        banner=`<div class="notice">If you are experiencing active cyber or financial fraud, call <strong>1930</strong> immediately or report at cybercrime.gov.in. This questionnaire helps prepare your case but does not replace that report.</div>`;
+      }
+      document.getElementById('dynQuestions').innerHTML=banner+flow.questions.filter(q=>!q.showIf||q.showIf(ctx)).map(renderQuestionBlock).join('');
+    }
+
+    function renderDocuments(){
+      const flow=legalFlows[state.flowKey];
+      const ctx=currentCtx();
+      const docs=flow.documents.filter(d=>!d.showIf||d.showIf(ctx));
+      docs.forEach(d=>{if(!(d.id in state.docsChecked))state.docsChecked[d.id]=d.defaultChecked!==false});
+      document.getElementById('dynDocs').innerHTML=docs.map(d=>`<label class="doc"><input type="checkbox" ${state.docsChecked[d.id]?'checked':''} onchange="state.docsChecked['${d.id}']=this.checked">${esc(d.label)}</label>`).join('')||'<p class="intro">No specific documents are needed at this stage.</p>';
+    }
+
+    function renderSummary(){
+      if(!state.caseRef)state.caseRef=genCaseRef();
+      const flow=legalFlows[state.flowKey];
+      const ctx=currentCtx();
+      const cat=legalCategories.find(c=>c.id===state.category);
+      const sit=(situationsByCategory[state.category]||[]).find(s=>s.id===state.situation);
+      const profileLine=composeProfileLine();
+      const concernParts=[cat?cat.title:null,sit?sit.label:(state.flowKey==='unknown_freeform'?'Not yet classified':null)];
+      const visibleQs=flow.questions.filter(q=>!q.showIf||q.showIf(ctx));
+      const qaLines=visibleQs.filter(q=>{const v=state.qa[q.id];return v!==undefined&&v!==''&&!(Array.isArray(v)&&v.length===0)}).map(q=>`<div><small>${esc(q.prompt)}</small><b>${esc(Array.isArray(state.qa[q.id])?state.qa[q.id].join(', '):state.qa[q.id])}</b></div>`).join('');
+      const storyLine=state.flowKey==='unknown_freeform'&&state.qa.story?`<div class="greenbox"><b>What you told us</b><p>${esc(state.qa.story)}</p></div>`:'';
+      const guessCategory=state.flowKey==='unknown_freeform'?classifyFreeform(state.qa.story):null;
+      const urgency=computeUrgency();
+      const urgencyColor=urgency==='Urgent'?'#a44438':(urgency==='Priority review'?'#8a6a1e':'#1f3d29');
+      const route=recommendRoute();
+      const docs=flow.documents.filter(d=>!d.showIf||d.showIf(ctx));
+
+      document.getElementById('summaryContent').innerHTML=`
+        <div class="summarygrid">
+          <article class="summarybox">
+            <span class="tag">PRELIMINARY ASSISTANCE CLASSIFICATION</span>
+            <small>CASE REFERENCE</small><h3>${state.caseRef}</h3>
+            <div class="data">
+              <div><small>Your profile</small><b>${esc(profileLine)}</b></div>
+              <div><small>Your concern</small><b>${esc(concernParts.filter(Boolean).join(' → '))}</b></div>
+              <div><small>Urgency</small><b style="color:${urgencyColor}">${urgency}</b></div>
+              <div><small>Recommended support route</small><b>${esc(route)}</b></div>
+            </div>
+            ${guessCategory?`<div class="greenbox"><b>Likely category</b><p>Based on what you told us, this may relate to <b>${esc(guessCategory)}</b>. A coordinator will confirm this.</p></div>`:''}
+            ${storyLine}
+            ${qaLines?`<div class="greenbox"><b>What you told us</b>${qaLines}</div>`:''}
+          </article>
+          <div>
+            <article class="summarybox"><h3>Documents to arrange</h3>${docs.length?docs.map(d=>`<p>${state.docsChecked[d.id]?'✓':'○'} ${esc(d.label)}</p>`).join(''):'<p>No specific documents needed at this stage.</p>'}</article>
+            <article class="summarybox source" style="margin-top:14px"><h3>Verified source approach</h3><p>This is a preliminary assistance classification, checked against approved service law, pension regulations and official sources where applicable. It is not legal advice, and no outcome is guaranteed.</p></article>
+          </div>
+        </div>
+        <div class="notice" style="background:#fffaf0;border-color:#eed9ad;color:#695a38"><strong>Important:</strong> Your answers suggest that this matter may require review by a qualified professional. Time limits may apply for appeals and representations — please do not delay professional review.</div>
+      `;
+    }
+
+    /* ---------- navigation ---------- */
+    function go(n){
+      current=n;
+      document.querySelectorAll('.screen').forEach(x=>x.classList.add('hidden'));
+      document.getElementById('screen'+n).classList.remove('hidden');
+      if(n===2)renderProfileFields();
+      if(n===4)renderSituationGrid();
+      if(n===5)renderQuestions();
+      if(n===6)renderDocuments();
+      if(n===7)renderSummary();
+      if(n===8){if(!state.caseRef)state.caseRef=genCaseRef();document.getElementById('connectCaseRef').textContent=state.caseRef}
+      updateSteps();
+      window.scrollTo(0,0);
+    }
+
+    function updateSteps(){
+      document.getElementById('steps').innerHTML=stepLabels.map((s,i)=>`<li class="${i+1===current?'active':''} ${i+1<current?'done':''}"><span class="num">${i+1<current?'✓':i+1}</span>${s}</li>`).join('');
+      document.getElementById('mobileStep').textContent=`STEP ${current} OF ${stepLabels.length}`;
+      document.getElementById('mobileBar').style.width=(current/stepLabels.length*100)+'%';
+    }
+
+    function exitAssistance(){try{if(window.top!==window){window.top.history.back();return}}catch(e){}history.back()}
+
+    function pick(el){
+      const group=el.dataset.group;
+      if(group){document.querySelectorAll(`[data-group="${group}"]`).forEach(x=>x.classList.remove('selected'))}
+      else{[...el.parentElement.children].forEach(x=>x.classList.remove('selected'))}
+      el.classList.add('selected');
+    }
+    function selectChoice(el,isUrgent){pick(el);state.urgent=isUrgent;document.getElementById('urgentNotice').classList.toggle('hidden',!isUrgent)}
+    function selectProfile(el,id){state.profile=id;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected');state.profileData={};renderProfileFields()}
+    function selectService(el,value){state.service=value;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+    function setProfileField(fieldId,value){state.profileData[fieldId]=value;renderProfileFields()}
+    function selectCategory(el,id){state.category=id;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+    function selectSituation(el,id,flow){state.situation=id;state.flowKey=flow;[...el.parentElement.children].forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+
+    function continueFromCategory(){
+      if(state.category==='unknown'){
+        state.situation='unknown_freeform';
+        state.flowKey='unknown_freeform';
+        state.skippedSituation=true;
+        state.qa={};
+        state.docsChecked={};
+        go(5);
+      }else{
+        state.skippedSituation=false;
+        go(4);
+      }
+    }
+    function continueFromSituation(){state.qa={};state.docsChecked={};go(5)}
+    function backFromQuestions(){go(state.skippedSituation?3:4)}
+    function answerSingle(qid,value){state.qa[qid]=value;renderQuestions()}
+    function answerMulti(qid,value,checked){
+      let arr=Array.isArray(state.qa[qid])?state.qa[qid].slice():[];
+      if(checked){
+        if(value==='No'){arr=['No']}else{arr=arr.filter(v=>v!=='No');arr.push(value)}
+      }else{
+        arr=arr.filter(v=>v!==value);
+      }
+      state.qa[qid]=arr;
+      renderQuestions();
+    }
+    function answerText(qid,value){state.qa[qid]=value}
+
     init();
   </script>
 </body>
