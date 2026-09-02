@@ -55,6 +55,7 @@ import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
 import DevReader from './pages/sandbox/DevReader';
+import AiChatbotWidget from './components/AiChatbotWidget';
 import './index.css';
 
 /**
@@ -136,6 +137,7 @@ function App() {
   return (
     <Router>
       <BodyThemeSync />
+      <AiChatbotWidget />
       <Routes>
         {/* Landing / Root Handler */}
         <Route path="/" element={<RootRoute />} />

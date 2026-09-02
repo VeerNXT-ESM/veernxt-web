@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeerNXT AI Assistant Chatbot Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ios-olive: #4B6B32;
+      --ios-olive-dark: #3A5427;
+      --slate-dark: #0B132B;
+      --slate-header: #1C2541;
+      --bg-body: #0F172A;
+      --chat-bg: #F8FAFC;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-body);
+      color: #F8FAFC;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .demo-container { text-align: center; max-width: 680px; margin-bottom: 30px; }
+    .demo-title {
+      font-size: 2.2rem; font-weight: 800; margin-bottom: 12px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #86EFAC 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .demo-subtitle { font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; }
+
+    /* Profile Switcher Controls for Prototype Testing */
+    .profile-switcher {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+      background: rgba(255, 255, 255, 0.05); padding: 12px 16px; border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px;
+    }
+    .profile-btn {
+      background: rgba(255, 255, 255, 0.1); color: #CBD5E1; border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 14px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .profile-btn:hover, .profile-btn.active {
+      background: var(--ios-olive); color: white; border-color: #86EFAC; transform: translateY(-1px);
+    }
+
+    .chatbot-fab {
+      position: fixed; bottom: 30px; right: 30px; width: 58px; height: 58px;
+      border-radius: 50%; background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #4B6B32 100%);
+      color: white; border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.45); z-index: 9999;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .chatbot-fab:hover { transform: scale(1.08); box-shadow: 0 14px 30px rgba(15, 23, 42, 0.6); }
+    .chatbot-fab.active { background: #0F172A; transform: rotate(90deg); }
+
+    .fab-pulse-dot {
+      position: absolute; top: 2px; right: 2px; width: 10px; height: 10px; border-radius: 50%;
+      background: #FF9900; border: 2px solid #0F172A; animation: fabGlow 2s infinite;
+    }
+    @keyframes fabGlow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.7; } }
+
+    .chatbot-drawer {
+      position: fixed; bottom: 105px; right: 30px; width: 420px;
+      max-width: calc(100vw - 32px); height: 620px; max-height: calc(100vh - 140px);
+      background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(18px);
+      border-radius: 24px; border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); display: none; flex-direction: column;
+      z-index: 9998; overflow: hidden; animation: drawerSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .chatbot-drawer.open { display: flex; }
+
+    @keyframes drawerSlideUp {
+      from { opacity: 0; transform: translateY(20px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.9rem 1.15rem; background: linear-gradient(135deg, #0B132B 0%, #1C2541 60%, #1E293B 100%);
+      color: white; border-bottom: 2px solid #4B6B32;
+    }
+    .header-left { display: flex; align-items: center; gap: 0.75rem; }
+    .bot-avatar {
+      width: 38px; height: 38px; border-radius: 12px; background: rgba(134, 239, 172, 0.18);
+      border: 1px solid rgba(134, 239, 172, 0.4); display: flex; align-items: center; justify-content: center; color: #86EFAC;
+    }
+    .bot-titles h3 { font-size: 0.95rem; font-weight: 700; line-height: 1.2; }
+    .title-row { display: flex; align-items: center; gap: 0.5rem; }
+    .ai-badge {
+      font-size: 0.65rem; font-weight: 800; background: linear-gradient(90deg, #4B6B32 0%, #86EFAC 100%);
+      color: #0F172A; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;
+    }
+    .online-indicator { display: flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; color: #94A3B8; }
+    .online-indicator .dot { width: 6px; height: 6px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 6px #22C55E; }
+    .user-session-text strong { color: #86EFAC; }
+    .header-right { display: flex; gap: 0.4rem; }
+    .btn-icon-head {
+      background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.15); color: #CBD5E1;
+      width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-icon-head:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+    /* Profile Context Strip */
+    .profile-context-strip {
+      display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem;
+      background: #F1F5F9; border-bottom: 1px solid #E2E8F0; overflow-x: auto;
+    }
+    .strip-item {
+      display: flex; align-items: center; gap: 0.3rem; font-size: 0.7rem; font-weight: 600;
+      color: #475569; white-space: nowrap; background: white; padding: 2px 8px; border-radius: 12px; border: 1px solid #CBD5E1;
+    }
+    .strip-item.highlight { background: #EFF6FF; color: #1D4ED8; border-color: #BFDBFE; }
+
+    .drawer-body {
+      flex: 1; padding: 1.25rem 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; background: var(--chat-bg);
+    }
+    .chat-bubble-row { display: flex; align-items: flex-start; gap: 0.6rem; max-width: 90%; }
+    .chat-bubble-row.user-row { align-self: flex-end; flex-direction: row-reverse; }
+    .chat-bubble-row.bot-row { align-self: flex-start; }
+    .msg-avatar {
+      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 800; margin-top: 2px;
+    }
+    .msg-avatar.bot { background: #0F172A; color: #86EFAC; border: 1px solid rgba(134, 239, 172, 0.3); }
+    .msg-avatar.user { background: #3B82F6; color: white; }
+
+    .msg-bubble {
+      padding: 0.85rem 1rem; border-radius: 16px; font-size: 0.85rem; line-height: 1.45; word-break: break-word; position: relative;
+    }
+    .msg-bubble.bot { background: white; color: #1E293B; border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border-top-left-radius: 4px; }
+    .msg-bubble.ai-bubble { border-left: 3px solid #4B6B32; }
+    .msg-bubble.user { background: linear-gradient(135deg, #1E293B 0%, #334155 100%); color: white; border-top-right-radius: 4px; }
+    .ai-tag { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; font-weight: 700; color: #4B6B32; background: #DCFCE7; padding: 2px 7px; border-radius: 4px; margin-bottom: 0.5rem; text-transform: uppercase; }
+
+    .chat-bold { font-weight: 700; color: #0F172A; }
+    .msg-bubble.user .chat-bold { color: white; }
+    .chat-paragraph { margin: 0 0 0.3rem 0; }
+    .chat-paragraph:last-child { margin-bottom: 0; }
+    .chat-bullet-item { display: flex; align-items: flex-start; gap: 0.4rem; margin: 0.2rem 0; }
+    .bullet-dot { color: #4B6B32; font-weight: bold; }
+    .chat-spacer { height: 0.4rem; }
+
+    .msg-chips-grid { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
+    .chip-btn {
+      display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; background: #F8FAFC; border: 1px solid #E2E8F0;
+      border-radius: 10px; font-size: 0.78rem; font-weight: 500; color: #334155; cursor: pointer; text-align: left; transition: all 0.2s;
+    }
+    .chip-btn:hover { background: #EFF6FF; border-color: #93C5FD; color: #1D4ED8; transform: translateX(2px); }
+    .chip-btn.personalized-chip { background: #FFFBEB; border-color: #FDE68A; color: #92400E; font-weight: 600; }
+    .chip-btn.personalized-chip:hover { background: #FEF3C7; border-color: #F59E0B; color: #78350F; }
+
+    /* Buffering Dots / Thinking State Animation */
+    .aws-thinking-bubble { background: white !important; border: 1px solid #E2E8F0 !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important; min-width: 240px; }
+    .aws-thinking-header { display: flex; align-items: center; gap: 0.35rem; color: #4B6B32; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 0.3rem; }
+    .aws-thinking-dots { display: flex; align-items: center; gap: 6px; padding: 6px 0; }
+    .aws-thinking-dots .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; animation: awsPulseWave 1.4s infinite ease-in-out both; }
+    .aws-thinking-dots .dot-1 { animation-delay: -0.32s; background: #FF9900; }
+    .aws-thinking-dots .dot-2 { animation-delay: -0.16s; background: #00A4E4; }
+    .aws-thinking-dots .dot-3 { animation-delay: 0s; background: #22C55E; }
+
+    @keyframes awsPulseWave {
+      0%, 80%, 100% { transform: scale(0.4); opacity: 0.3; }
+      40% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 8px currentColor; }
+    }
+    .thinking-status { display: block; font-size: 0.72rem; color: #64748B; font-style: italic; margin-top: 0.2rem; }
+
+    .drawer-footer { padding: 0.85rem 1rem; background: white; border-top: 1px solid #E2E8F0; display: flex; align-items: center; gap: 0.5rem; }
+    .chat-input { flex: 1; padding: 0.65rem 0.85rem; border: 1px solid #CBD5E1; border-radius: 12px; font-size: 0.85rem; outline: none; transition: all 0.2s; }
+    .chat-input:focus { border-color: #4B6B32; box-shadow: 0 0 0 3px rgba(75, 107, 50, 0.15); }
+    .btn-send { width: 38px; height: 38px; border-radius: 12px; background: #0F172A; color: #86EFAC; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }
+    .btn-send:disabled { background: #E2E8F0; color: #94A3B8; cursor: not-allowed; }
+    .btn-send:hover:not(:disabled) { background: #1E293B; transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+  <div class="demo-container">
+    <h1 class="demo-title">VeerNXT AI Assistant Chatbot Demo</h1>
+    <p class="demo-subtitle">
+      Experience the AI Assistant with real-time profile customization, buffering dots thinking state, and NLU intelligence!
+    </p>
+
+    <!-- Profile Switcher for Testing -->
+    <div class="profile-switcher">
+      <button class="profile-btn active" onclick="switchProfile('guest')">👤 Guest Mode</button>
+      <button class="profile-btn" onclick="switchProfile('army_signals')">🎖️ Subedar Rajesh (Signals)</button>
+      <button class="profile-btn" onclick="switchProfile('agniveer_air')">🪖 Agniveer Amit (Air Force)</button>
+      <button class="profile-btn" onclick="switchProfile('employer')">🏢 Recruiter (Tech Corp)</button>
+    </div>
+  </div>
+
+  <!-- Floating Launcher Button -->
+  <button id="chatbotFab" class="chatbot-fab" aria-label="Open VeerNXT AI Chatbot">
+    <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+        <circle cx="12" cy="5" r="2"></circle>
+        <path d="M12 7v4"></path>
+        <line x1="8" y1="16" x2="8" y2="16.01"></line>
+        <line x1="16" y1="16" x2="16" y2="16.01"></line>
+      </svg>
+      <span class="fab-pulse-dot"></span>
+    </div>
+  </button>
+
+  <div id="chatbotDrawer" class="chatbot-drawer">
+    <div class="drawer-header">
+      <div class="header-left">
+        <div class="bot-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+            <circle cx="12" cy="5" r="2"></circle>
+            <path d="M12 7v4"></path>
+          </svg>
+        </div>
+        <div class="bot-titles">
+          <div class="title-row">
+            <h3>VeerNXT AI Assistant</h3>
+            <span class="ai-badge">PRO AI</span>
+          </div>
+          <div class="online-indicator">
+            <span class="dot"></span>
+            <span id="headerSessionText">Virtual Support Assistant • Online</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button id="btnReset" class="btn-icon-head" title="Reset Chat">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+        </button>
+        <button id="btnClose" class="btn-icon-head" title="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- User Profile Context Strip -->
+    <div id="profileStrip" class="profile-context-strip" style="display: none;"></div>
+
+    <div id="drawerBody" class="drawer-body"></div>
+
+    <form id="chatForm" class="drawer-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Ask any question..." autocomplete="off" />
+      <button type="submit" id="btnSend" class="btn-send" aria-label="Send">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script>
+    // Demo Preset Profiles
+    const PROFILES = {
+      guest: { isLoggedIn: false },
+      army_signals: {
+        isLoggedIn: true, isEmployer: false, name: 'Rajesh Kumar', rank: 'Subedar',
+        branch: 'Indian Army', corps: 'Corps of Signals', targetRole: 'Telecom & IT Operations',
+        yearsOfService: 15, education: 'Graduate (B.Tech)', veerScore: 820
+      },
+      agniveer_air: {
+        isLoggedIn: true, isEmployer: false, name: 'Amit Sharma', rank: 'Agniveer',
+        branch: 'Indian Air Force', corps: 'Aviation Logistics', targetRole: 'Supply Chain Supervisor',
+        yearsOfService: 4, education: '12th Pass', veerScore: 740
+      },
+      employer: {
+        isLoggedIn: true, isEmployer: true, name: 'Priya Verma',
+        companyName: 'AeroTech Defense Systems', industry: 'Aviation & Defense Logistics'
+      }
+    };
+
+    let activeProfile = PROFILES.guest;
+    let messages = [];
+    let isTyping = false;
+
+    const TOPIC_CATEGORIES = [
+      { id: 'cat_exams', label: 'Exams, Mock Tests & PYQs', categoryKey: 'exams' },
+      { id: 'cat_finance', label: 'Sewa Nidhi & Wealth Growth', categoryKey: 'finance' },
+      { id: 'cat_legal', label: 'Legal Aid Cell for ESM', categoryKey: 'legal' },
+      { id: 'cat_jobs', label: 'Corporate Jobs & ATS CV', categoryKey: 'jobs' },
+      { id: 'cat_pricing', label: 'Subscriptions & Tiers', categoryKey: 'pricing' },
+      { id: 'cat_about', label: 'About VeerNXT & HQ Address', categoryKey: 'about' }
+    ];
+
+    const SUB_TOPIC_CHIPS = {
+      exams: [
+        { id: 'rrb_je', label: 'RRB Junior Engineer (JE)' },
+        { id: 'rrb_ntpc', label: 'RRB NTPC Exam' },
+        { id: 'rrb_alp', label: 'RRB Loco Pilot (ALP)' },
+        { id: 'ssc_post', label: 'SSC Selection Post & CGL' },
+        { id: 'mock_tests', label: 'Mock Test Engine & Modes' },
+        { id: 'pyqs', label: '400+ PYQ Paper Documents' }
+      ],
+      finance: [
+        { id: 'sewa_nidhi', label: '₹10–12L 4-Pillar Sewa Nidhi Strategy' },
+        { id: 'mutual_funds', label: 'SEBI Safety & Mutual Funds' },
+        { id: 'business_loan', label: 'Mudra Loans & Business Setup' }
+      ],
+      legal: [
+        { id: 'orop_pension', label: 'OROP & Disability Pension Claims' },
+        { id: 'echs_csd', label: 'ECHS 64KB & CSD Smart Cards' }
+      ],
+      jobs: [
+        { id: 'ats_cv', label: 'Military Trade ATS CV Translation' },
+        { id: 'jobs_board', label: 'Corporate Job Openings for ESM' }
+      ]
+    };
+
+    function switchProfile(key) {
+      activeProfile = PROFILES[key];
+      document.querySelectorAll('.profile-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      resetChat();
+    }
+
+    function resetChat() {
+      messages = [];
+      const headerSessionText = document.getElementById('headerSessionText');
+      const profileStrip = document.getElementById('profileStrip');
+
+      if (activeProfile.isLoggedIn && !activeProfile.isEmployer) {
+        headerSessionText.innerHTML = `Logged in as: <strong>${activeProfile.rank} ${activeProfile.name}</strong>`;
+        profileStrip.style.display = 'flex';
+        profileStrip.innerHTML = `
+          <div class="strip-item">🛡️ ${activeProfile.branch}</div>
+          <div class="strip-item">🎖️ ${activeProfile.corps}</div>
+          <div class="strip-item highlight">Target: ${activeProfile.targetRole}</div>
+        `;
+        messages.push({
+          id: 'msg-init',
+          sender: 'bot',
+          isAi: true,
+          text: `**Jai Hind, ${activeProfile.rank} ${activeProfile.name}!** 🇮🇳\n\nWelcome to VeerNXT AI Support. I've synced your defense profile:\n- **Branch & Corps**: ${activeProfile.branch} • ${activeProfile.corps}\n- **Target Role**: ${activeProfile.targetRole}\n- **Service Duration**: ${activeProfile.yearsOfService} Years\n\nSelect a personalized path below or ask any question!`,
+          options: [
+            { id: 'p_career', label: `🎯 Career Roadmap (${activeProfile.targetRole})`, type: 'personalized' },
+            { id: 'p_ats', label: `📜 ATS CV Translation (${activeProfile.corps})`, type: 'personalized' },
+            { id: 'p_sewa', label: `💰 Sewa Nidhi Plan (${activeProfile.yearsOfService} Yrs)`, type: 'personalized' },
+            { id: 'p_exams', label: `📝 Exams & Mocks (${activeProfile.education})`, type: 'personalized' },
+            { id: 'p_all', label: `🌐 Browse All Categories`, type: 'show_all' }
+          ]
+        });
+      } else if (activeProfile.isLoggedIn && activeProfile.isEmployer) {
+        headerSessionText.innerHTML = `Logged in as: <strong>${activeProfile.name} (${activeProfile.companyName})</strong>`;
+        profileStrip.style.display = 'flex';
+        profileStrip.innerHTML = `<div class="strip-item highlight">🏢 Industry: ${activeProfile.industry}</div>`;
+        messages.push({
+          id: 'msg-init',
+          sender: 'bot',
+          isAi: true,
+          text: `**Welcome, ${activeProfile.name}!** 🏢\n\nVeerNXT AI Assistant is synced with your **${activeProfile.companyName}** workspace. How can I assist your defense recruitment today?`,
+          options: [
+            { id: 'emp_search', label: `🔍 Match Verified Veterans (${activeProfile.industry})`, type: 'employer' },
+            { id: 'emp_post', label: `💼 Post Veteran Job Opening`, type: 'employer' },
+            { id: 'p_all', label: `🌐 Browse All Categories`, type: 'show_all' }
+          ]
+        });
+      } else {
+        headerSessionText.innerHTML = `Virtual Support Assistant • Online`;
+        profileStrip.style.display = 'none';
+        messages.push({
+          id: 'msg-init',
+          sender: 'bot',
+          isAi: true,
+          text: `**Jai Hind! Welcome to VeerNXT** — India's premier Defence Reintegration AI Platform.\n\nSelect a category below or type any question to get instant detailed guidance!`,
+          options: TOPIC_CATEGORIES
+        });
+      }
+
+      renderMessages();
+    }
+
+    const fab = document.getElementById('chatbotFab');
+    const drawer = document.getElementById('chatbotDrawer');
+    const btnClose = document.getElementById('btnClose');
+    const btnReset = document.getElementById('btnReset');
+    const drawerBody = document.getElementById('drawerBody');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+
+    fab.addEventListener('click', () => {
+      drawer.classList.toggle('open');
+      fab.classList.toggle('active');
+      if (drawer.classList.contains('open') && messages.length === 0) resetChat();
+    });
+
+    btnClose.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      fab.classList.remove('active');
+    });
+
+    btnReset.addEventListener('click', resetChat);
+
+    function triggerThinkingState(userText, generatorFunc, statusText) {
+      if (isTyping) return;
+      if (userText) {
+        messages.push({ id: 'msg-' + Date.now(), sender: 'user', text: userText });
+      }
+
+      isTyping = true;
+      renderMessages(true, statusText);
+
+      setTimeout(() => {
+        const botReply = generatorFunc();
+        messages.push(botReply);
+        isTyping = false;
+        renderMessages();
+      }, 1000);
+    }
+
+    function formatMessageText(text) {
+      if (!text) return '';
+      const lines = text.split('\n');
+      let html = '';
+      lines.forEach(line => {
+        const isBullet = line.trim().startsWith('- ') || line.trim().startsWith('• ');
+        let cleanLine = line.trim();
+        if (isBullet) cleanLine = cleanLine.replace(/^[-•]\s*/, '');
+
+        const parts = cleanLine.split(/(\*\*?[^*]+\*\*?)/g);
+        const lineElements = parts.map(part => {
+          if ((part.startsWith('**') && part.endsWith('**') && part.length > 4) ||
+              (part.startsWith('*') && part.endsWith('*') && part.length > 2)) {
+            const cleanWord = part.replace(/^\*+|\*+$/g, '');
+            return `<strong class="chat-bold">${cleanWord}</strong>`;
+          }
+          return part;
+        }).join('');
+
+        if (isBullet) html += `<div class="chat-bullet-item"><span class="bullet-dot">•</span><span>${lineElements}</span></div>`;
+        else if (cleanLine === '') html += `<div class="chat-spacer"></div>`;
+        else html += `<p class="chat-paragraph">${lineElements}</p>`;
+      });
+      return html;
+    }
+
+    function renderMessages(showThinking = false, statusText = '') {
+      drawerBody.innerHTML = '';
+      messages.forEach(msg => {
+        const row = document.createElement('div');
+        row.className = `chat-bubble-row ${msg.sender === 'user' ? 'user-row' : 'bot-row'}`;
+
+        let chipsHtml = '';
+        if (msg.options && msg.options.length > 0) {
+          chipsHtml = `<div class="msg-chips-grid">` + 
+            msg.options.map(opt => {
+              const isCat = opt.categoryKey !== undefined;
+              const isPersonalized = opt.type === 'personalized' || opt.type === 'employer';
+              return `<button class="chip-btn ${isPersonalized ? 'personalized-chip' : ''}" data-type="${isPersonalized ? 'p' : (isCat ? 'cat' : 'sub')}" data-key="${isCat ? opt.categoryKey : opt.id}" data-label="${opt.label}">
+                <span>${isPersonalized ? '⚡ ' : ''}${opt.label}</span>
+              </button>`;
+            }).join('') +
+            `</div>`;
+        }
+
+        let aiBadge = msg.isAi ? `<div class="ai-tag">VeerNXT AI Assistant</div>` : '';
+
+        row.innerHTML = `
+          ${msg.sender === 'bot' ? `<div class="msg-avatar bot">AI</div>` : ''}
+          <div class="msg-bubble ${msg.sender} ${msg.isAi ? 'ai-bubble' : ''}">
+            ${aiBadge}
+            <div>${formatMessageText(msg.text)}</div>
+            ${chipsHtml}
+          </div>
+          ${msg.sender === 'user' ? `<div class="msg-avatar user">U</div>` : ''}
+        `;
+
+        drawerBody.appendChild(row);
+      });
+
+      // Show Buffering Dots if Thinking
+      if (showThinking) {
+        const thinkingRow = document.createElement('div');
+        thinkingRow.className = 'chat-bubble-row bot-row';
+        thinkingRow.innerHTML = `
+          <div class="msg-avatar bot">AI</div>
+          <div class="msg-bubble bot aws-thinking-bubble">
+            <div class="aws-thinking-header">⚡ VeerNXT AI Engine</div>
+            <div class="aws-thinking-dots">
+              <span class="dot dot-1"></span>
+              <span class="dot dot-2"></span>
+              <span class="dot dot-3"></span>
+            </div>
+            <span class="thinking-status">${statusText || 'VeerNXT AI is thinking...'}</span>
+          </div>
+        `;
+        drawerBody.appendChild(thinkingRow);
+      }
+
+      drawerBody.querySelectorAll('.chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (isTyping) return;
+          const type = btn.getAttribute('data-type');
+          const key = btn.getAttribute('data-key');
+          const label = btn.getAttribute('data-label');
+          
+          triggerThinkingState(
+            label,
+            () => synthesizeResponse(key, label, type),
+            `Evaluating ${label}...`
+          );
+        });
+      });
+
+      drawerBody.scrollTop = drawerBody.scrollHeight;
+    }
+
+    function synthesizeResponse(key, label, type) {
+      let text = `**Guidance on ${label}**\n\n`;
+      if (type === 'p') {
+        text += `- **Profile Match**: Verified for **${activeProfile.name}** (${activeProfile.branch} ${activeProfile.corps || ''}).\n`;
+        text += `- **Career Impact**: Direct corporate ATS translation and exam eligibility matching active.`;
+      } else {
+        text += `- Comprehensive support for competitive exams, Sewa Nidhi compound growth, and pro-bono legal advocacy.\n`;
+        text += `- Select an option below or ask any specific question!`;
+      }
+      return { id: 'msg-' + Date.now(), sender: 'bot', isAi: true, text, options: TOPIC_CATEGORIES };
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const query = chatInput.value.trim();
+      if (!query || isTyping) return;
+
+      chatInput.value = '';
+      triggerThinkingState(
+        query,
+        () => {
+          let text = `**VeerNXT Intelligence Breakdown for "${query}"**\n\n`;
+          text += `- **Analysis**: Processed for ${activeProfile.isLoggedIn ? activeProfile.name : 'Guest User'}.\n`;
+          text += `- **Key Recommendation**: Access ATS Resume Builder for corporate transition, practice 450+ Mock Tests, or consult Legal Aid Cell.\n`;
+          if (activeProfile.isLoggedIn) {
+            text += `\n💡 **Personalized Note**: Pre-screened for your ${activeProfile.branch} background.`;
+          }
+          return { id: 'msg-' + Date.now(), sender: 'bot', isAi: true, text, options: TOPIC_CATEGORIES };
+        },
+        `Evaluating "${query.slice(0, 24)}..."`
+      );
+    });
+
+    resetChat();
+  </script>
+</body>
+</html>
