@@ -7,7 +7,7 @@
   --color-ios-secondary: #F2F2F7;
   --color-ios-olive: #4b6b32;
   --color-ios-text: #333333;
-  --radius-ios: 14px;
+  --radius-ios: 0px;
   --shadow-ios: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
@@ -22,10 +22,10 @@
   /* Radius scale — deliberate hierarchy, not rounded-everything.
      Pill (999px) is reserved for true pills: badges, tags, the points
      counter. Buttons, cards and sheets each get their own tier below. */
-  --radius-sm: 8px;   /* inputs, chips, buttons, small controls */
-  --radius-md: 14px;  /* cards, panels */
-  --radius-lg: 22px;  /* modals, sheets, hero panels */
-  --radius-pill: 999px;
+  --radius-sm: 0px;   /* inputs, chips, buttons, small controls */
+  --radius-md: 0px;  /* cards, panels */
+  --radius-lg: 0px;  /* modals, sheets, hero panels */
+  --radius-pill: 0px;
   --radius-ios: var(--radius-md); /* legacy alias, do not use in new code */
 
   /* Elevation scale — three tiers instead of one-off rgba() per file */
@@ -63,6 +63,7 @@
 @layer base {
   * {
     box-sizing: border-box;
+    border-radius: 0px !important;
   }
 
   body {

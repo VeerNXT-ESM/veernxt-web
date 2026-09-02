@@ -92,7 +92,7 @@ function QuizRow({ quiz, examName, locked }) {
  * is unaffected — Dashboard.jsx opts into both for its 5-category view.
  */
 const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles' }) => {
-  const { byCategory, quizzes, loading, error } = useExamContent(examName, careerTrack, examId);
+  const { byCategory, quizzes, intro, loading, error } = useExamContent(examName, careerTrack, examId);
   const [openSubjectKey, setOpenSubjectKey] = useState(null);
 
   if (loading) {
@@ -133,9 +133,18 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
         {quizzes.length > 0 && (
           <div style={{ marginBottom: '1.1rem' }}>
             <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
-            {quizzes.map((quiz) => (
-              <QuizRow key={quiz.id} quiz={quiz} examName={examName} locked={!quizAccess.allowed} />
-            ))}
+            <Link
+              to="/quiz-center"
+              style={{
+                display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
+                borderRadius: 0, textDecoration: 'none', color: 'inherit',
+                border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+                fontSize: '0.85rem', fontWeight: 'bold'
+              }}
+            >
+              <PlayCircle size={15} color="var(--ios-olive)" style={{ flexShrink: 0 }} />
+              <span>Visit Quiz Center</span>
+            </Link>
           </div>
         )}
 
@@ -162,7 +171,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
     const quizAccess = canTakeQuiz(tier, freeQuizUsed);
     const subjectGroups = buildSubjectGroups(byCategory);
     const openGroup = subjectGroups.find((g) => g.key === openSubjectKey) || null;
-    const hasAnything = subjectGroups.length > 0 || quizzes.length > 0;
+    const hasAnything = subjectGroups.length > 0 || quizzes.length > 0 || !!intro;
 
     if (!hasAnything) {
       return <p style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
@@ -170,6 +179,20 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
 
     return (
       <div style={{ padding: '0.5rem 0 0' }}>
+        {intro && (
+          <div id="section-intro" style={{ marginBottom: '1.1rem', scrollMarginTop: '1.5rem' }}>
+            <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Introduction</h4>
+            {intro.source === 'auto' ? (
+              <ResourceRow resource={intro.resource} examName={examName} locked={false} />
+            ) : (
+              <div style={{ padding: '0.9rem 1rem', borderRadius: 'var(--radius-sm, 10px)', border: '1px solid var(--border, #e2e8f0)', background: '#fff' }}>
+                {intro.title && <h5 style={{ margin: '0 0 0.5rem', fontSize: '0.9rem' }}>{intro.title}</h5>}
+                {intro.body && <p style={{ margin: 0, fontSize: '0.85rem', color: '#334155', whiteSpace: 'pre-wrap' }}>{intro.body}</p>}
+              </div>
+            )}
+          </div>
+        )}
+
         {subjectGroups.length > 0 && (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.75rem', marginBottom: '1.1rem' }}>
             {subjectGroups.map((group) => {
@@ -222,9 +245,18 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
         {quizzes.length > 0 && (
           <div style={{ marginBottom: '1.1rem' }}>
             <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
-            {quizzes.map((quiz) => (
-              <QuizRow key={quiz.id} quiz={quiz} examName={examName} locked={!quizAccess.allowed} />
-            ))}
+            <Link
+              to="/quiz-center"
+              style={{
+                display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
+                borderRadius: 0, textDecoration: 'none', color: 'inherit',
+                border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+                fontSize: '0.85rem', fontWeight: 'bold'
+              }}
+            >
+              <PlayCircle size={15} color="var(--ios-olive)" style={{ flexShrink: 0 }} />
+              <span>Visit Quiz Center</span>
+            </Link>
           </div>
         )}
       </div>

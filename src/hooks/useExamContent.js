@@ -78,6 +78,28 @@ async function upgradeToCanonicalFormat(resources) {
   });
 }
 
+// Guaranteed one-row-per-exam Intro slot (sql/lc_exam_intro.sql, admin CMS
+// housekeeping) -- the single curated source of truth for the exam's
+// Introduction, independent of lc_exam_resource_map's ambiguity and RLS
+// gap. 'unset' rows (472 exams with no Intro document yet) return null so
+// the syllabus page simply omits the section rather than showing an empty
+// placeholder.
+async function fetchExamIntro(examId) {
+  const { data: intro } = await supabase.from('lc_exam_intro').select('*').eq('exam_id', examId).maybeSingle();
+  if (!intro) return null;
+
+  if (intro.source === 'auto' && intro.resource_id) {
+    const { data: resource } = await supabase.from('resources_v2').select('*').eq('resource_id', intro.resource_id).maybeSingle();
+    return resource ? { source: 'auto', resource } : null;
+  }
+
+  if (intro.source === 'manual' && (intro.manual_title || intro.manual_body)) {
+    return { source: 'manual', title: intro.manual_title, body: intro.manual_body };
+  }
+
+  return null;
+}
+
 function careerTrackKeyword(examName, careerTrack) {
   if (careerTrack === 'POLICE_CAPF') return 'Constable';
   if (careerTrack === 'SSC') return 'SSC';
@@ -118,11 +140,15 @@ function groupByCategory(resources) {
  * ExamContentPreview.jsx. Prefers the precomputed lc_exam_resource_map
  * (examId) for resources when available; falls back to the exam-name
  * matching chain otherwise, so nothing regresses for exams the mapping
- * script hasn't covered.
+ * script hasn't covered. `intro` is separate from `byCategory.Intro` --
+ * sourced from lc_exam_intro, the guaranteed one-row-per-exam table the
+ * admin CMS's Introduction card manages, rather than the ambiguous
+ * multi-row Intro category in the resource-mapping chain above.
  */
 export function useExamContent(examName, careerTrack, examId) {
   const [byCategory, setByCategory] = useState(() => groupByCategory([]));
   const [quizzes, setQuizzes] = useState([]);
+  const [intro, setIntro] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -137,9 +163,10 @@ export function useExamContent(examName, careerTrack, examId) {
 
     (async () => {
       try {
-        const [mappedResources, quizRows] = await Promise.all([
+        const [mappedResources, quizRows, introData] = await Promise.all([
           examId ? fetchMappedResources(examId) : Promise.resolve(null),
           fetchQuizzesByExamName(examName, careerTrack),
+          examId ? fetchExamIntro(examId) : Promise.resolve(null),
         ]);
 
         const rawResources = mappedResources !== null ? mappedResources : await fetchResourcesFallback(examName, careerTrack);
@@ -148,6 +175,7 @@ export function useExamContent(examName, careerTrack, examId) {
         if (!mounted) return;
         setByCategory(groupByCategory(resources));
         setQuizzes(quizRows);
+        setIntro(introData);
       } catch (err) {
         console.error('Error fetching exam content:', err);
         if (mounted) setError('Unable to load content for this exam.');
@@ -159,5 +187,5 @@ export function useExamContent(examName, careerTrack, examId) {
     return () => { mounted = false; };
   }, [examName, careerTrack, examId]);
 
-  return { byCategory, quizzes, loading, error };
+  return { byCategory, quizzes, intro, loading, error };
 }

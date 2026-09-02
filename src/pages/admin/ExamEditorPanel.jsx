@@ -2,9 +2,10 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
+import AdminResourcePreview from './AdminResourcePreview';
 import {
   Save, Plus, X, GripVertical, Trash2, Search, ChevronDown, ChevronUp,
-  Eye, Copy,
+  Eye, Copy, FileText,
 } from 'lucide-react';
 
 const STATUS_OPTIONS = [
@@ -51,6 +52,14 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDuplicated }) => {
   const [subjectsDirtyOrder, setSubjectsDirtyOrder] = useState(false);
   const dragIndexRef = useRef(null);
 
+  const [examIntro, setExamIntro] = useState(null); // lc_exam_intro row, or null if none exists yet
+  const [introResourceTitle, setIntroResourceTitle] = useState(null); // joined from resources_v2 when auto-populated
+  const [introOverriding, setIntroOverriding] = useState(false);
+  const [introTitleDraft, setIntroTitleDraft] = useState('');
+  const [introBodyDraft, setIntroBodyDraft] = useState('');
+  const [introSaving, setIntroSaving] = useState(false);
+  const [introPreviewOpen, setIntroPreviewOpen] = useState(false);
+
   const [addSubjectDrawer, setAddSubjectDrawer] = useState(false);
   const [addResourceDrawerFor, setAddResourceDrawerFor] = useState(null);
 
@@ -67,6 +76,12 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDuplicated }) => {
       setExamMeta(null);
       setExamTags([]);
       setExamSubjects([]);
+      setExamIntro(null);
+      setIntroResourceTitle(null);
+      setIntroOverriding(false);
+      setIntroTitleDraft('');
+      setIntroBodyDraft('');
+      setIntroPreviewOpen(false);
       setLoading(false);
     }
   }, [examId]);
@@ -105,11 +120,47 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDuplicated }) => {
       const { data: tagLinks } = await supabase.from('lc_exam_tags').select('tag:lc_tags(id,name)').eq('exam_id', id);
       setExamTags((tagLinks || []).map((t) => t.tag).filter(Boolean));
 
-      await refetchSubjects(id);
+      await Promise.all([refetchSubjects(id), fetchIntro(id)]);
     } catch (err) {
       alert('Failed to load exam: ' + err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchIntro = async (id) => {
+    const { data: intro } = await supabase.from('lc_exam_intro').select('*').eq('exam_id', id).maybeSingle();
+    setExamIntro(intro || null);
+    setIntroOverriding(false);
+    setIntroTitleDraft(intro?.manual_title || '');
+    setIntroBodyDraft(intro?.manual_body || '');
+    if (intro?.resource_id) {
+      const { data: resource } = await supabase.from('resources_v2').select('title').eq('resource_id', intro.resource_id).maybeSingle();
+      setIntroResourceTitle(resource?.title || null);
+    } else {
+      setIntroResourceTitle(null);
+    }
+  };
+
+  const saveIntro = async () => {
+    if (!examId) return;
+    setIntroSaving(true);
+    try {
+      const payload = {
+        exam_id: examId,
+        resource_id: null,
+        manual_title: introTitleDraft.trim() || null,
+        manual_body: introBodyDraft.trim() || null,
+        source: 'manual',
+        updated_at: new Date().toISOString(),
+      };
+      const { error } = await supabase.from('lc_exam_intro').upsert(payload, { onConflict: 'exam_id' });
+      if (error) throw error;
+      await fetchIntro(examId);
+    } catch (err) {
+      alert('Failed to save Introduction: ' + err.message);
+    } finally {
+      setIntroSaving(false);
     }
   };
 
@@ -340,6 +391,44 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDuplicated }) => {
       </div>
 
       {tab === 'syllabus' && (
+        <>
+        <div className="lc-card">
+          <div className="lc-card-row-header">
+            <h3 style={{ margin: 0 }}>Introduction</h3>
+          </div>
+          {!examId ? (
+            <span className="lc-muted-note">Save the exam first — an Introduction slot is created automatically.</span>
+          ) : examIntro?.source === 'auto' && examIntro?.resource_id && !introOverriding ? (
+            <div>
+              <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: '0 0 0.75rem' }}>
+                <FileText size={15} color="var(--ios-olive)" /> {introResourceTitle || 'Untitled resource'}
+              </p>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <button className="lc-btn" onClick={() => setIntroPreviewOpen(true)}><Eye size={14} /> Preview</button>
+                <button className="lc-btn" onClick={() => setIntroOverriding(true)}>Override</button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              {examIntro?.source === 'unset' && !introOverriding && (
+                <p className="lc-muted-note" style={{ marginTop: 0 }}>No Intro document found for this exam yet — write one below.</p>
+              )}
+              <div className="lc-input-group">
+                <label>Title</label>
+                <input type="text" value={introTitleDraft} onChange={(e) => setIntroTitleDraft(e.target.value)} placeholder="Introduction title" />
+              </div>
+              <div className="lc-input-group">
+                <label>Body</label>
+                <textarea rows={6} value={introBodyDraft} onChange={(e) => setIntroBodyDraft(e.target.value)} placeholder="Write the introduction content..." />
+              </div>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <button className="lc-btn primary" disabled={introSaving} onClick={saveIntro}>{introSaving ? 'Saving…' : 'Save Introduction'}</button>
+                {examIntro?.source === 'auto' && <button className="lc-btn" onClick={() => setIntroOverriding(false)}>Cancel Override</button>}
+              </div>
+            </div>
+          )}
+        </div>
+
         <div className="lc-card">
           <div className="lc-card-row-header">
             <h3 style={{ margin: 0 }}>Subjects in this Exam</h3>
@@ -359,6 +448,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDuplicated }) => {
             <SubjectRow key={es.id} examSubject={es} index={index} onDragStart={handleDragStart} onDragOver={handleDragOver} onDrop={handleDrop} onRemove={() => removeSubject(es)} onAddResource={() => setAddResourceDrawerFor(es)} />
           ))}
         </div>
+        </>
       )}
 
       {tab === 'info' && (
@@ -397,6 +487,17 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDuplicated }) => {
       )}
       {addResourceDrawerFor && (
         <AddResourceDrawer examSubject={addResourceDrawerFor} onClose={() => setAddResourceDrawerFor(null)} onAdded={() => { setAddResourceDrawerFor(null); refetchSubjects(examId); onSaved?.(); }} />
+      )}
+      {introPreviewOpen && examIntro?.resource_id && (
+        <div className="lc-drawer-backdrop" onClick={() => setIntroPreviewOpen(false)}>
+          <div className="lc-drawer-panel" style={{ width: 'min(900px, 92vw)', height: '85vh', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
+            <div className="lc-drawer-header">
+              <div><h3>Introduction Preview</h3><p>{introResourceTitle || 'Untitled resource'}</p></div>
+              <button className="lc-close-btn" onClick={() => setIntroPreviewOpen(false)}><X size={20} /></button>
+            </div>
+            <AdminResourcePreview resourceId={examIntro.resource_id} />
+          </div>
+        </div>
       )}
     </div>
   );
