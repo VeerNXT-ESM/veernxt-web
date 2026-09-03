@@ -1,9 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Award, Briefcase, MessageSquare, RefreshCw, ShieldCheck, User, Users } from 'lucide-react';
+import { Award, Briefcase, MessageSquare, Plus, RefreshCw, ShieldCheck, User, Users } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { hexToRgba } from '../lib/careerTrack';
+
+// Friendly, employer-facing status labels — the stored enum
+// (ps_job_requirements.status) stays internal/precise; candidates and
+// employers see the plain-language version per
+// docs/VeerNXT_Private_Sector_Implementation_Improvements.md §16.
+const REQUIREMENT_STATUS_LABEL = {
+  submitted: 'Under Review',
+  under_review: 'Under Review',
+  approved: 'Matching',
+  rejected: 'Not Approved',
+  filled: 'Filled',
+  closed: 'Closed',
+};
 
 // Military branch -> tag colour, for the Veteran Talent Spotlight list.
 // Deliberately separate from careerTrack.js's CAREER_TRACK_META (that's
@@ -40,6 +53,7 @@ const EmployerDashboard = () => {
   const [activeChatsCount, setActiveChatsCount] = useState(0);
   const [connectionsCount, setConnectionsCount] = useState(0);
   const [spotlightCandidates, setSpotlightCandidates] = useState([]);
+  const [requirements, setRequirements] = useState([]);
 
   const [showEditModal, setShowEditModal] = useState(false);
   const [editFormData, setEditFormData] = useState({});
@@ -67,6 +81,10 @@ const EmployerDashboard = () => {
         ]);
         setConnectionsCount(cCount || 0);
         setActivePostingsCount(jCount || 0);
+
+        const { data: requirementRows } = await supabase
+          .from('ps_job_requirements').select('id, role_titles, quantity, status').eq('employer_id', currentSession.user.id).order('created_at', { ascending: false });
+        setRequirements(requirementRows || []);
 
         const { data: sentMsgs } = await supabase.from('chat_messages').select('receiver_id').eq('sender_id', currentSession.user.id);
         setShortlistedCount(new Set((sentMsgs || []).map((m) => m.receiver_id).filter(Boolean)).size);
@@ -219,6 +237,41 @@ const EmployerDashboard = () => {
               <span className="emp-stat-label"><ShieldCheck size={11} /> Trust Status</span>
             </div>
           </div>
+        </div>
+
+        <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>Active Requirements</h2>
+            <Button size="sm" icon={Plus} onClick={() => navigate('/employer/post-job')}>Post Another Job</Button>
+          </div>
+          {requirements.length === 0 ? (
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>No requirements posted yet — tell us who you're hiring for and our HR team will get started.</p>
+          ) : (
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
+                <thead>
+                  <tr style={{ textAlign: 'left', color: '#64748b', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+                    <th style={{ padding: '0.5rem 0.75rem 0.5rem 0' }}>Role</th>
+                    <th style={{ padding: '0.5rem 0.75rem', textAlign: 'right' }}>Positions</th>
+                    <th style={{ padding: '0.5rem 0 0.5rem 0.75rem' }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {requirements.map((r) => (
+                    <tr key={r.id} style={{ borderTop: '1px solid #f1f5f9' }}>
+                      <td style={{ padding: '0.65rem 0.75rem 0.65rem 0', fontWeight: 700, color: '#0f172a' }}>{(r.role_titles || []).join(' / ')}</td>
+                      <td style={{ padding: '0.65rem 0.75rem', textAlign: 'right' }}>{r.quantity}</td>
+                      <td style={{ padding: '0.65rem 0 0.65rem 0.75rem' }}>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, padding: '0.2rem 0.6rem', borderRadius: 999, background: 'rgba(75,107,50,0.1)', color: 'var(--ios-olive)' }}>
+                          {REQUIREMENT_STATUS_LABEL[r.status] || r.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
         <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)' }}>

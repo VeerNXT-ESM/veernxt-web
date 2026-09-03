@@ -10,6 +10,11 @@ import ProfilingResults from './pages/ProfilingResults';
 import Dashboard from './pages/Dashboard';
 import EmployerOnboarding from './pages/EmployerOnboarding';
 import EmployerDashboard from './pages/EmployerDashboard';
+import EmployerReadyToHire from './pages/EmployerReadyToHire';
+import PostJobRequirement from './pages/PostJobRequirement';
+import PrivateSectorHome from './pages/PrivateSectorHome';
+import PrivateSectorProfile from './pages/PrivateSectorProfile';
+import PrivateSectorOpportunities from './pages/PrivateSectorOpportunities';
 import LearningCenter from './pages/LearningCenter';
 import ExamSyllabus from './pages/ExamSyllabus';
 import FinancialGuidance from './pages/FinancialGuidance';
@@ -17,6 +22,7 @@ import SecureReader from './components/SecureReader';
 import Footer from './components/Footer';
 import AdminJobs from './pages/admin/AdminJobs';
 import AdminRewardsQueue from './pages/admin/AdminRewardsQueue';
+import AdminPrivateSector from './pages/admin/AdminPrivateSector';
 import PublicJobs from './pages/PublicJobs';
 import FindCandidates from './pages/FindCandidates';
 import MessagingWorkspace from './components/MessagingWorkspace';
@@ -156,6 +162,11 @@ function App() {
           <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
           <Route path="/employer/onboarding" element={<AuthGuard skipProfilingCheck><EmployerOnboarding /></AuthGuard>} />
           <Route path="/employer/dashboard" element={<AuthGuard skipProfilingCheck><EmployerDashboard /></AuthGuard>} />
+          <Route path="/employer/ready-to-hire" element={<AuthGuard skipProfilingCheck><EmployerReadyToHire /></AuthGuard>} />
+          <Route path="/employer/post-job" element={<AuthGuard skipProfilingCheck><PostJobRequirement /></AuthGuard>} />
+          <Route path="/private-sector" element={<AuthGuard><PrivateSectorHome /></AuthGuard>} />
+          <Route path="/private-sector/profile" element={<AuthGuard><PrivateSectorProfile /></AuthGuard>} />
+          <Route path="/private-sector/opportunities" element={<AuthGuard><PrivateSectorOpportunities /></AuthGuard>} />
           <Route path="/learning-center" element={<AuthGuard><LearningCenter /></AuthGuard>} />
           <Route path="/exam/:examId" element={<AuthGuard><ExamSyllabus /></AuthGuard>} />
           <Route path="/jobs" element={<AuthGuard><PublicJobs /></AuthGuard>} />
@@ -193,6 +204,7 @@ function App() {
           <Route path="/admin/pyq-papers" element={<PyqPapersPage />} />
           <Route path="/admin/jobs" element={<AdminJobs />} />
           <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
+          <Route path="/admin/private-sector" element={<AdminPrivateSector />} />
         </Route>
         <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />

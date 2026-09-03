@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Menu, Settings, User, Bell, Landmark, Briefcase,
-  Home, Users, MessageSquare, Grid, Target, Search, Trophy, Scale
+  Home, Users, MessageSquare, Grid, Target, Search, Trophy, Scale, UserCheck
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useAccountSummary } from '../lib/useAccountSummary';
@@ -81,6 +81,13 @@ const Header = () => {
             <Link to="/legal-aid" className={`nav-link-item ${window.location.pathname === '/legal-aid' ? 'active' : ''}`} title="Legal Aid Cell">
               <Scale size={22} />
               <span className="nav-link-label">Legal Aid</span>
+            </Link>
+          )}
+
+          {!isEmployer && (
+            <Link to="/private-sector" className={`nav-link-item ${window.location.pathname.startsWith('/private-sector') ? 'active' : ''}`} title="Private Sector">
+              <UserCheck size={22} />
+              <span className="nav-link-label">Private Sector</span>
             </Link>
           )}
 
