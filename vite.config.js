@@ -7,6 +7,27 @@ import { fileURLToPath, parse as parseUrl } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// vercel.json's literal (non-wildcard) /api/* rewrites -- e.g.
+// { source: "/api/auth/reset-password", destination: "/api/auth/account?fn=reset-password" }
+// -- collapsed into a lookup this plugin can apply below. Vercel itself
+// applies these in production; this local shim didn't, so every
+// consolidated-router endpoint (register, reset-password, the v1/chat and
+// payments routes) 404'd here even though it worked when actually deployed.
+// Only literal sources are handled -- the catch-all `/api/(.*)` and
+// `/(.*)` rewrites at the end of vercel.json need no translation, since
+// this plugin's existing 1:1 file lookup already covers that case.
+const API_REWRITES = (() => {
+  const vercelConfigPath = path.join(__dirname, 'vercel.json')
+  const raw = JSON.parse(fs.readFileSync(vercelConfigPath, 'utf-8'))
+  const map = new Map()
+  for (const rule of raw.rewrites || []) {
+    if (!rule.source.startsWith('/api/') || rule.source.includes('(')) continue
+    const [destPath, destQuery] = rule.destination.split('?')
+    map.set(rule.source, { destPath, destQuery: destQuery ? parseUrl('?' + destQuery, true).query : {} })
+  }
+  return map
+})()
+
 // Simple Vite plugin to run Vercel Serverless Functions locally
 const vercelApiPlugin = () => {
   return {
@@ -16,13 +37,17 @@ const vercelApiPlugin = () => {
         if (req.url.startsWith('/api/')) {
           try {
             const routePath = req.url.split('?')[0];
-            const filePath = path.join(__dirname, routePath + '.js');
-            
+            const rewrite = API_REWRITES.get(routePath);
+            const targetPath = rewrite ? rewrite.destPath : routePath;
+            const filePath = path.join(__dirname, targetPath + '.js');
+
             if (fs.existsSync(filePath)) {
               // Vercel's real runtime parses ?query=params onto req.query —
               // this local shim didn't, so any GET route reading req.query
-              // (e.g. api/exams.js) silently got undefined here.
-              req.query = parseUrl(req.url, true).query;
+              // (e.g. api/exams.js) silently got undefined here. A matched
+              // rewrite's own destination query (e.g. ?fn=reset-password)
+              // is merged in too, same as Vercel does for a rewritten request.
+              req.query = { ...parseUrl(req.url, true).query, ...(rewrite ? rewrite.destQuery : {}) };
 
               let body = '';
               req.on('data', chunk => { body += chunk.toString(); });
