@@ -208,7 +208,10 @@ const EmployerOnboarding = () => {
       }
 
       clearDraft();
-      navigate('/employer/dashboard', { replace: true });
+      // First-time completion goes to the "You're ready to hire" CTA
+      // (docs/VeerNXT_Private_Sector_Implementation_Improvements.md §1) --
+      // re-onboarding via ?edit=true goes straight back to the dashboard.
+      navigate(isEditMode ? '/employer/dashboard' : '/employer/ready-to-hire', { replace: true });
     } catch (err) {
       console.error('Error during employer onboarding upsert:', err);
       alert('Failed to save profile: ' + err.message);

@@ -33,6 +33,7 @@ export const ADMIN_NAV = [
     items: [
       { key: 'jobs', label: 'Job Board', path: '/admin/jobs', icon: 'Briefcase' },
       { key: 'rewards', label: 'Rewards', path: '/admin/rewards', icon: 'Gift' },
+      { key: 'private-sector', label: 'Private Sector', path: '/admin/private-sector', icon: 'UserCheck' },
     ],
   },
 ];

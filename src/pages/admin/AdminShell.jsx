@@ -3,11 +3,11 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
   GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield,
-  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText,
+  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck,
 } from 'lucide-react';
 import './AdminCMS.css';
 
-const ICONS = { GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText };
+const ICONS = { GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it
@@ -40,6 +40,7 @@ const PAGE_META = {
   '/admin/pyq-papers': { title: 'PYQ Papers', description: 'Previous year question papers — read-only content, not quizzes.' },
   '/admin/jobs': { title: 'Job Board', description: 'Aggregated vacancy notifications.' },
   '/admin/rewards': { title: 'Rewards', description: 'Redemption queue for the points program.' },
+  '/admin/private-sector': { title: 'Private Sector — HR Console', description: 'Employer requirements, service verification and the candidate matching pipeline.' },
 };
 
 const AdminShell = () => {
