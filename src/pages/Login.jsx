@@ -725,6 +725,32 @@ const Login = () => {
       );
     }
 
+    // ── FORGOT PASSWORD — PHONE INPUT ──
+    if (authMode === 'forgot') {
+      return (
+        <div className="animate-fade-in">
+          <Button type="button" variant="ghost" size="sm" icon={ArrowLeft} onClick={() => { setAuthMode('login'); resetFlow(); }} style={{ padding: '0.5rem 0.25rem', marginBottom: '1.5rem' }}>
+            Back to login
+          </Button>
+          <form onSubmit={handleSendOTP} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ textAlign: 'left' }}>
+              <label style={labelStyle} htmlFor="emp-forgot-mobile">Registered recruiter mobile number</label>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <input id="emp-forgot-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
+                  onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
+                  style={{ ...inputStyle, flex: 1 }}
+                />
+              </div>
+            </div>
+            <Button type="submit" fullWidth size="lg" disabled={loading}>
+              {loading ? 'Sending code…' : 'Send reset code'}
+            </Button>
+          </form>
+        </div>
+      );
+    }
+
     // ── LOGIN — DEFAULT ──
     return (
       <div className="animate-fade-in">
@@ -768,6 +794,14 @@ const Login = () => {
           onClick={() => { setAuthMode('register'); resetFlow(); }} style={{ marginTop: '0.85rem' }}>
           Register corporate account
         </Button>
+
+        <div style={{ textAlign: 'center', marginTop: '0.85rem' }}>
+          <button className="vx-link" onClick={() => { setAuthMode('forgot'); resetFlow(); }}
+            style={{ background: 'none', border: 'none', color: '#475569', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', padding: '0.6rem 0.75rem', minHeight: '44px', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+            <KeyRound size={14} />
+            Forgot password?
+          </button>
+        </div>
       </div>
     );
   };
