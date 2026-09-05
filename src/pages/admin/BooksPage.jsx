@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, AlertTriangle, CheckCircle2, FolderOpen, Plus, Copy } from 'lucide-react';
+import { Search, AlertTriangle, CheckCircle2, Plus, Copy } from 'lucide-react';
 import { useDebounced } from './lcShared';
 import { NewBookModal, DuplicateBookModal } from '../../components/admin/BookFormModals';
 
@@ -17,13 +17,13 @@ const SORT_OPTIONS = [
   { value: 'title', label: 'Title (A-Z)' },
 ];
 
-// Read-only book/chapter browser over public/books/{Guide,Precis} -- Phase 1
-// of the book-content-editor plan. This is deliberately a different data
-// model from ResourcesTab.jsx (lc_resources, admin-only, incomplete) and
-// AdminContentEditor.jsx (resources.body_html, Quill HTML) -- see
-// project-dual-admin-content-systems memory. This page browses the
-// block-JSON books that scripts/sync_books_to_r2.mjs actually ships to
-// candidates.
+// Book browser/editor over resources_v2 (format='blocks') + R2 -- R2 is the
+// only source of truth for book content, so there's no local filesystem
+// involved anywhere in this feature and it works identically whether the
+// admin site is running locally or deployed. This is deliberately a
+// different data model from ResourcesTab.jsx (lc_resources, admin-only,
+// incomplete) and AdminContentEditor.jsx (resources.body_html, Quill HTML)
+// -- see project-dual-admin-content-systems memory.
 const BooksPage = () => {
   const navigate = useNavigate();
   const [books, setBooks] = useState(null);
@@ -58,9 +58,9 @@ const BooksPage = () => {
     if (category) list = list.filter((b) => b.category === category);
     if (debouncedSearch.trim()) {
       const q = debouncedSearch.trim().toLowerCase();
-      list = list.filter((b) => b.title.toLowerCase().includes(q) || b.folder.toLowerCase().includes(q));
+      list = list.filter((b) => b.title.toLowerCase().includes(q));
     }
-    const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0) + (b.empty ? 100000 : 0);
+    const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
     return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
   }, [books, category, debouncedSearch, sort]);
 
@@ -68,7 +68,6 @@ const BooksPage = () => {
     if (!books) return null;
     return {
       count: books.length,
-      empty: books.filter((b) => b.empty).length,
       withIssues: books.filter((b) => (b.issueCounts?.high || 0) + (b.issueCounts?.medium || 0) > 0).length,
     };
   }, [books]);
@@ -78,7 +77,7 @@ const BooksPage = () => {
       <div className="lc-section-header">
         <div>
           <h2>Book Content</h2>
-          <p>Guide &amp; Precis books shipped from public/books — {totals ? `${totals.count} books, ${totals.withIssues} flagged by the last QA scan, ${totals.empty} empty.` : 'loading…'}</p>
+          <p>Guide &amp; Precis books, live from R2 — {totals ? `${totals.count} books, ${totals.withIssues} flagged by the last QA scan.` : 'loading…'}</p>
         </div>
         <button className="lc-btn primary" onClick={() => setShowNewModal(true)}><Plus size={16} /> New Book</button>
       </div>
@@ -86,7 +85,7 @@ const BooksPage = () => {
       <div className="lc-filter-bar" style={{ gridTemplateColumns: '1fr auto auto' }}>
         <div className="lc-filter-field lc-search-input-wrapper">
           <Search size={16} />
-          <input type="text" placeholder="Search book title or folder..." value={search} onChange={(e) => setSearch(e.target.value)} />
+          <input type="text" placeholder="Search book title..." value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div className="lc-filter-field">
           <label>Category</label>
@@ -126,19 +125,15 @@ const BooksPage = () => {
           </thead>
           <tbody>
             {filtered.map((b) => (
-              <tr key={`${b.category}/${b.folder}`} className="clickable" onClick={() => navigate(`/admin/books/${b.category}/${encodeURIComponent(b.folder)}`)}>
+              <tr key={b.resourceId} className="clickable" onClick={() => navigate(`/admin/books/${b.category}/${b.resourceId}`)}>
                 <td>
                   <span className="lc-table-title">{b.title}</span>
-                  {b.title !== b.folder && <span className="lc-table-sub">{b.folder}</span>}
+                  {b.duplicateRowCount > 1 && <span className="lc-table-sub">{b.duplicateRowCount} linked exam entries</span>}
                 </td>
                 <td>{b.category}</td>
-                <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{b.chapters?.length ?? 0}</span></td>
+                <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{b.chapterCount ?? '—'}</span></td>
                 <td>
-                  {b.empty ? (
-                    <span className="lc-status-badge" style={{ background: 'var(--admin-danger-bg)', color: 'var(--admin-danger)' }}>
-                      <FolderOpen size={12} style={{ verticalAlign: '-2px', marginRight: 4 }} />Empty folder
-                    </span>
-                  ) : (b.issueCounts?.high || 0) > 0 ? (
+                  {(b.issueCounts?.high || 0) > 0 ? (
                     <span className="lc-status-badge" style={{ background: 'var(--admin-danger-bg)', color: 'var(--admin-danger)' }}>
                       <AlertTriangle size={12} style={{ verticalAlign: '-2px', marginRight: 4 }} />{b.issueCounts.high} high
                     </span>
@@ -174,14 +169,14 @@ const BooksPage = () => {
       {showNewModal && (
         <NewBookModal
           onClose={() => setShowNewModal(false)}
-          onCreated={(cat, folder) => { setShowNewModal(false); navigate(`/admin/books/${cat}/${encodeURIComponent(folder)}`); }}
+          onCreated={(cat, resourceId) => { setShowNewModal(false); navigate(`/admin/books/${cat}/${resourceId}`); }}
         />
       )}
       {duplicateSource && (
         <DuplicateBookModal
           source={duplicateSource}
           onClose={() => setDuplicateSource(null)}
-          onDuplicated={(cat, folder) => { setDuplicateSource(null); fetchBooks(); navigate(`/admin/books/${cat}/${encodeURIComponent(folder)}`); }}
+          onDuplicated={(cat, resourceId) => { setDuplicateSource(null); fetchBooks(); navigate(`/admin/books/${cat}/${resourceId}`); }}
         />
       )}
     </div>

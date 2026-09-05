@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, PutObjectCommand, ListObjectsV2Command, DeleteObjectsCommand, CopyObjectCommand } from '@aws-sdk/client-s3';
 import fs from 'node:fs';
 import path from 'node:path';
-import { getBookFolder, syncOneBook, getS3Client } from '../../scripts/sync_books_to_r2.mjs';
+import { getS3Client, uploadToR2, generateResourceId } from '../../scripts/ingest-drive-content.js';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -20,99 +20,273 @@ function checkAdminSecret(req, res) {
   return true;
 }
 
-const BOOKS_ROOT = path.resolve(process.cwd(), 'public', 'books');
 const BOOK_CATEGORIES = ['Guide', 'Precis'];
+
+// R2 is the only source of truth for book content -- these actions read
+// and write Cloudflare R2 + the resources_v2 table directly, nothing on
+// local disk, so they work identically whether this runs on `npm run dev`
+// or on a real Vercel deployment. (An earlier version of this editor
+// treated public/books on local disk as the source of truth with R2 as a
+// "publish" target; that's gone now -- the content team edits straight
+// against what's actually live, from wherever the admin site is deployed.)
+
+function getSupabaseAdmin() {
+  return createClient(supabaseUrl, supabaseServiceKey || process.env.VITE_SUPABASE_ANON_KEY);
+}
+
+function getR2PublicUrl() {
+  return process.env.R2_PUBLIC_URL;
+}
+
+function getR2Bucket() {
+  return process.env.R2_BUCKET_NAME;
+}
+
+// resources_v2.title has heavy pre-existing duplication (the same book
+// linked from many exams, one row per link -- see books-list's own
+// comment), so every lookup here matches by title, not row id. ilike is
+// used for a case-insensitive match; % and _ are escaped first so a title
+// containing either character doesn't act as a SQL wildcard.
+function escapeIlike(str) {
+  return str.trim().replace(/[\\%_]/g, '\\$&');
+}
+
+// Paginated: some titles in resources_v2 have 1000+ duplicate rows, well
+// past PostgREST's per-request row cap.
+async function fetchRowsByTitle(supabase, category, title) {
+  const escaped = escapeIlike(title);
+  let rows = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase
+      .from('resources_v2')
+      .select('resource_id,title,category,storage_base_url,format,chapter_count')
+      .eq('category', category)
+      .ilike('title', escaped)
+      .range(from, from + 999);
+    if (error) throw new Error(error.message);
+    rows = rows.concat(data);
+    if (data.length < 1000) break;
+  }
+  return rows;
+}
+
+// Of however many resources_v2 rows share a title, picks the storage
+// location most of them already agree on (or the only one, in the common
+// case). Every books-save-chapter/books-delete call also re-points every
+// row in the group at whatever this returns, so duplicate rows converge
+// on one location a little more each time a book is touched here, instead
+// of the group drifting further apart.
+function pickCanonicalStorageBaseUrl(rows) {
+  const counts = new Map();
+  for (const r of rows) {
+    if (!r.storage_base_url) continue;
+    counts.set(r.storage_base_url, (counts.get(r.storage_base_url) || 0) + 1);
+  }
+  let best = null;
+  let bestCount = 0;
+  for (const [url, count] of counts) {
+    if (count > bestCount) {
+      best = url;
+      bestCount = count;
+    }
+  }
+  return best;
+}
+
+// storage_base_url is a full public URL (e.g.
+// "https://pub-xxx.r2.dev/structured_resources/blocks/Guide/<id>/");
+// returns just the R2 object key prefix, no trailing slash. Returns null
+// if the URL doesn't start with this deployment's own R2_PUBLIC_URL --
+// this project migrated R2 accounts once already (R2_OLD_* env vars still
+// exist), so a stale row could point at the old bucket, and treating that
+// as "can't resolve" is much safer than guessing.
+function prefixFromStorageBaseUrl(storageBaseUrl, publicUrl) {
+  if (!storageBaseUrl || !publicUrl) return null;
+  const base = publicUrl.replace(/\/$/, '') + '/';
+  if (!storageBaseUrl.startsWith(base)) return null;
+  return storageBaseUrl.slice(base.length).replace(/\/$/, '');
+}
+
+async function fetchJson(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${url}`);
+  return res.json();
+}
+
+async function listR2Keys(s3, bucket, prefix) {
+  const keys = [];
+  let continuationToken;
+  do {
+    const resp = await s3.send(new ListObjectsV2Command({ Bucket: bucket, Prefix: `${prefix}/`, ContinuationToken: continuationToken }));
+    for (const obj of resp.Contents || []) keys.push(obj.Key);
+    continuationToken = resp.IsTruncated ? resp.NextContinuationToken : undefined;
+  } while (continuationToken);
+  return keys;
+}
+
+async function deleteR2Keys(s3, bucket, keys) {
+  for (let i = 0; i < keys.length; i += 1000) {
+    const batch = keys.slice(i, i + 1000);
+    await s3.send(new DeleteObjectsCommand({ Bucket: bucket, Delete: { Objects: batch.map((Key) => ({ Key })) } }));
+  }
+}
+
+function genBookId() {
+  return Math.random().toString(36).slice(2, 9);
+}
+
+// Applies literal find->replace pairs to every string value found anywhere
+// in a JSON-shaped value (recursing through objects/arrays). Used by
+// books-duplicate to rebrand a cloned book's text -- e.g. turning a
+// Bihar_GS clone into Jharkhand_GS by replacing "Bihar" with "Jharkhand"
+// across every chapter, the same rebrand step scripts/duplicate_enriched_books.mjs
+// did by hand for one specific set of books.
+function deepReplaceStrings(value, pairs) {
+  if (typeof value === 'string') {
+    let out = value;
+    for (const { find, replace } of pairs) {
+      if (find) out = out.split(find).join(replace ?? '');
+    }
+    return out;
+  }
+  if (Array.isArray(value)) return value.map((v) => deepReplaceStrings(v, pairs));
+  if (value && typeof value === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(value)) out[k] = deepReplaceStrings(v, pairs);
+    return out;
+  }
+  return value;
+}
 
 /**
  * POST /api/admin/save-resource with { type: 'books-list' }
  *
- * Lists every book under public/books/{Guide,Precis} by reading each
- * metadata.json -- the admin book browser can't discover book folders on
- * its own since public/books is served as static files with no directory
- * index. Chapter *content* doesn't need an endpoint: once the client has
- * a book's chapters[].file_name from this response, it fetches the JSON
- * directly from /books/<category>/<folder>/chapters/chapter-N.json like
- * the candidate-facing reader does against R2.
+ * Lists every Guide/Precis book by grouping resources_v2 rows by
+ * (title, category) -- this table has heavy pre-existing duplication (the
+ * same book linked from many exams, one row per link; some titles have
+ * 1000+ rows), so this shows one representative per group, not one row
+ * per DB row. Paginated past PostgREST's 1000-row response cap.
  *
  * Also attaches each book's issue counts from content-issues-report.json
- * (scripts/scan_content_issues.mjs) when that report exists, so the
- * browser can sort/flag by how much work a book actually needs.
+ * (scripts/scan_content_issues.mjs) when that report exists, matched by
+ * title -- that report is generated from a local snapshot of these books
+ * and can go stale as content gets edited here, but it's still a useful
+ * starting point for "which books need work."
  */
 async function handleBooksList(req, res) {
   if (!checkAdminSecret(req, res)) return;
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
-  // issuesByBook stays null (not {}) when no report has ever been generated,
-  // so the client can tell "scanned and clean" (zero-count object) apart
-  // from "never scanned" (null) -- both look like "no issues" otherwise.
-  let issuesByBook = null;
   try {
-    const reportPath = path.resolve(process.cwd(), 'content-issues-report.json');
-    if (fs.existsSync(reportPath)) {
-      issuesByBook = {};
-      const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-      for (const issue of report.issues || []) {
-        const key = `${issue.category}/${issue.book}`;
-        if (!issuesByBook[key]) issuesByBook[key] = { high: 0, medium: 0, low: 0 };
-        issuesByBook[key][issue.severity] = (issuesByBook[key][issue.severity] || 0) + 1;
-      }
+    const supabase = getSupabaseAdmin();
+
+    let rows = [];
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await supabase
+        .from('resources_v2')
+        .select('resource_id,title,category,storage_base_url,chapter_count')
+        .in('category', BOOK_CATEGORIES)
+        .eq('format', 'blocks')
+        .range(from, from + 999);
+      if (error) throw new Error(error.message);
+      rows = rows.concat(data);
+      if (data.length < 1000) break;
     }
+
+    const groups = new Map();
+    for (const r of rows) {
+      if (!r.title) continue;
+      const key = `${r.category}::${r.title.trim().toLowerCase()}`;
+      if (!groups.has(key)) groups.set(key, { title: r.title.trim(), category: r.category, rows: [] });
+      groups.get(key).rows.push(r);
+    }
+
+    let issuesByTitle = null;
+    try {
+      const reportPath = path.resolve(process.cwd(), 'content-issues-report.json');
+      if (fs.existsSync(reportPath)) {
+        issuesByTitle = {};
+        const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+        for (const issue of report.issues || []) {
+          const key = `${issue.category}::${issue.book?.trim().toLowerCase()}`;
+          if (!issuesByTitle[key]) issuesByTitle[key] = { high: 0, medium: 0, low: 0 };
+          issuesByTitle[key][issue.severity] = (issuesByTitle[key][issue.severity] || 0) + 1;
+        }
+      }
+    } catch (e) {
+      console.error('[admin/save-resource:books-list] Failed to read content-issues-report.json:', e.message);
+    }
+
+    const publicUrl = getR2PublicUrl();
+    const books = [];
+    for (const group of groups.values()) {
+      const canonicalUrl = pickCanonicalStorageBaseUrl(group.rows);
+      if (!canonicalUrl || !prefixFromStorageBaseUrl(canonicalUrl, publicUrl)) continue; // broken/unresolvable -- nothing to open
+      const canonicalRow = group.rows.find((r) => r.storage_base_url === canonicalUrl) || group.rows[0];
+      const issueKey = `${group.category}::${group.title.toLowerCase()}`;
+      books.push({
+        resourceId: canonicalRow.resource_id,
+        title: group.title,
+        category: group.category,
+        storageBaseUrl: canonicalUrl,
+        chapterCount: canonicalRow.chapter_count ?? null,
+        duplicateRowCount: group.rows.length,
+        issueCounts: issuesByTitle ? (issuesByTitle[issueKey] || { high: 0, medium: 0, low: 0 }) : null,
+      });
+    }
+
+    return res.status(200).json({ ok: true, books });
   } catch (e) {
-    console.error('[admin/save-resource:books-list] Failed to read content-issues-report.json:', e.message);
+    console.error('[admin/save-resource:books-list] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
   }
-
-  const getIssueCounts = (key) => (issuesByBook ? (issuesByBook[key] || { high: 0, medium: 0, low: 0 }) : null);
-
-  const books = [];
-  for (const category of BOOK_CATEGORIES) {
-    const categoryDir = path.join(BOOKS_ROOT, category);
-    if (!fs.existsSync(categoryDir)) continue;
-    for (const folder of fs.readdirSync(categoryDir)) {
-      const bookDir = path.join(categoryDir, folder);
-      if (!fs.statSync(bookDir).isDirectory()) continue;
-
-      const metadataPath = path.join(bookDir, 'metadata.json');
-      const key = `${category}/${folder}`;
-      if (!fs.existsSync(metadataPath)) {
-        books.push({ category, folder, title: folder, book_id: null, chapters: [], empty: true, issueCounts: getIssueCounts(key) });
-        continue;
-      }
-      try {
-        const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-        books.push({
-          category,
-          folder,
-          book_id: metadata.book_id,
-          title: metadata.title || folder,
-          source_file: metadata.source_file || null,
-          chapter_count: metadata.chapter_count ?? metadata.chapters?.length ?? 0,
-          image_count: metadata.image_count ?? 0,
-          chapters: metadata.chapters || [],
-          empty: false,
-          issueCounts: getIssueCounts(key),
-        });
-      } catch (e) {
-        books.push({ category, folder, title: folder, book_id: null, chapters: [], empty: true, error: e.message, issueCounts: getIssueCounts(key) });
-      }
-    }
-  }
-
-  return res.status(200).json({ ok: true, books });
 }
 
 /**
- * POST /api/admin/save-resource with { type: 'books-issues', category, folder }
+ * POST /api/admin/save-resource with { type: 'books-get', resourceId }
+ *
+ * Resolves one book's live title/category/canonical storage location by
+ * resource_id -- the chapter browser needs this on a fresh page load
+ * (direct link or refresh), since the category+resourceId in the URL
+ * alone isn't enough to know where its content actually lives in R2.
+ */
+async function handleBooksGet(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId } = req.body || {};
+  if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    if (error) throw new Error(error.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+    if (!canonicalUrl) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
+
+    return res.status(200).json({ ok: true, resourceId: row.resource_id, title: row.title, category: row.category, storageBaseUrl: canonicalUrl });
+  } catch (e) {
+    console.error('[admin/save-resource:books-get] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with { type: 'books-issues', category, title }
  *
  * Returns the full per-block issue list (from content-issues-report.json)
  * for one book, so the chapter browser can highlight exactly which blocks
  * scripts/scan_content_issues.mjs flagged. Kept separate from books-list
  * so the book-list page doesn't have to download every block-level issue
- * for all 122 books just to render per-book counts.
+ * for all ~122 books just to render per-book counts.
  */
 async function handleBooksIssues(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { category, folder } = req.body || {};
-  if (!BOOK_CATEGORIES.includes(category) || !folder) {
-    return res.status(400).json({ ok: false, error: 'Invalid category or folder' });
+  const { category, title } = req.body || {};
+  if (!BOOK_CATEGORIES.includes(category) || !title) {
+    return res.status(400).json({ ok: false, error: 'Invalid category or title' });
   }
 
   try {
@@ -121,7 +295,8 @@ async function handleBooksIssues(req, res) {
       return res.status(200).json({ ok: true, issues: [], scanned: false });
     }
     const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-    const issues = (report.issues || []).filter((i) => i.category === category && i.book === folder);
+    const norm = title.trim().toLowerCase();
+    const issues = (report.issues || []).filter((i) => i.category === category && i.book?.trim().toLowerCase() === norm);
     return res.status(200).json({ ok: true, issues, scanned: true, generatedAt: report.generatedAt });
   } catch (e) {
     return res.status(500).json({ ok: false, error: e.message });
@@ -184,175 +359,108 @@ async function handleR2Upload(req, res) {
 
 /**
  * POST /api/admin/save-resource with
- * { type: 'books-save-chapter', category, folder, fileName, chapterData }
+ * { type: 'books-save-chapter', resourceId, fileName, chapterData }
  *
- * Writes one chapter's edited blocks back to public/books on disk. Only
- * works against the local dev server -- Vercel's deployed filesystem is
- * read-only (process.env.VERCEL is set on every Vercel deployment,
- * preview or production), so a write there fails loudly instead of
- * silently no-op'ing. Content curation happens from this repo on the
- * editor's machine; scripts/sync_books_to_r2.mjs (wrapped by the
- * "Publish" action in a later phase) is what actually ships an edit to
- * candidates.
- *
- * Also patches metadata.json's blocks_count/title for this chapter so it
- * doesn't immediately show up as stale in scripts/scan_content_issues.mjs.
+ * Writes one chapter's edited blocks straight to R2, at whatever prefix
+ * this book's resources_v2 rows already agree it lives at. Also patches
+ * metadata.json's per-chapter title/blocks_count and the DB's own
+ * chapter_count to match, and re-points every duplicate row sharing this
+ * title+category at the canonical location (see pickCanonicalStorageBaseUrl).
  */
 async function handleBooksSaveChapter(req, res) {
   if (!checkAdminSecret(req, res)) return;
 
-  if (process.env.VERCEL) {
-    return res.status(503).json({ ok: false, error: "Content editing only works against the local dev server (npm run dev) -- Vercel's deployed filesystem is read-only. Edit locally and commit, then Publish to push to R2." });
-  }
-
-  const { category, folder, fileName, chapterData } = req.body || {};
-  if (!BOOK_CATEGORIES.includes(category) || !folder || !fileName || !chapterData || !Array.isArray(chapterData.blocks)) {
-    return res.status(400).json({ ok: false, error: 'Missing or invalid category, folder, fileName or chapterData' });
+  const { resourceId, fileName, chapterData } = req.body || {};
+  if (!resourceId || !fileName || !chapterData || !Array.isArray(chapterData.blocks)) {
+    return res.status(400).json({ ok: false, error: 'Missing or invalid resourceId, fileName or chapterData' });
   }
   if (!/^chapters\/chapter-\d+\.json$/.test(fileName)) {
     return res.status(400).json({ ok: false, error: 'Invalid fileName' });
   }
-
-  const resolvedBookDir = path.resolve(BOOKS_ROOT, category, folder);
-  if (!resolvedBookDir.startsWith(BOOKS_ROOT + path.sep) || !fs.existsSync(resolvedBookDir)) {
-    return res.status(400).json({ ok: false, error: 'Unknown book folder' });
-  }
-  const chapterPath = path.resolve(resolvedBookDir, fileName);
-  if (!chapterPath.startsWith(resolvedBookDir + path.sep) || !fs.existsSync(chapterPath)) {
-    return res.status(400).json({ ok: false, error: 'Unknown chapter file' });
-  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
 
   try {
-    fs.writeFileSync(chapterPath, JSON.stringify(chapterData, null, 2) + '\n');
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const metadataPath = path.join(resolvedBookDir, 'metadata.json');
-    if (fs.existsSync(metadataPath)) {
-      const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+    const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
+    if (!prefix) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
+
+    const s3 = getS3Client();
+    await uploadToR2(s3, bucket, `${prefix}/${fileName}`, Buffer.from(JSON.stringify(chapterData, null, 2)), 'application/json');
+
+    let realChapterCount = null;
+    try {
+      const metadata = await fetchJson(`${canonicalUrl}metadata.json`);
       const entry = (metadata.chapters || []).find((c) => c.file_name === fileName);
       if (entry) {
         entry.blocks_count = chapterData.blocks.length;
         if (chapterData.title) entry.title = chapterData.title;
-        fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2) + '\n');
       }
+      realChapterCount = metadata.chapters?.length ?? null;
+      await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+    } catch (e) {
+      // The chapter itself already saved successfully above -- a failure
+      // here just means metadata.json's display title/count go stale,
+      // not that the edit was lost.
+      console.error('[admin/save-resource:books-save-chapter] metadata.json patch failed (chapter content still saved):', e.message);
     }
+
+    const updatePatch = { format: 'blocks', storage_base_url: canonicalUrl, metadata_url: `${canonicalUrl}metadata.json` };
+    if (realChapterCount !== null) updatePatch.chapter_count = realChapterCount;
+    const { error: updateError } = await supabase.from('resources_v2').update(updatePatch).eq('category', row.category).ilike('title', escapeIlike(row.title));
+    if (updateError) console.error('[admin/save-resource:books-save-chapter] row consolidation update failed (content still saved):', updateError.message);
 
     return res.status(200).json({ ok: true });
   } catch (e) {
-    console.error('[admin/save-resource:books-save-chapter] write failed:', e.message);
+    console.error('[admin/save-resource:books-save-chapter] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
 
-function genBookId() {
-  return Math.random().toString(36).slice(2, 9);
-}
-
-// A book folder name is a plain single path segment: no separators, no
-// "..", not empty. Same shape validation for source and destination in
-// duplicate/create/delete so a client-supplied folder name can never walk
-// outside BOOKS_ROOT/<category>/.
-function isSafeFolderName(name) {
-  return typeof name === 'string' && name.length > 0 && name.length < 200 && !name.includes('/') && !name.includes('\\') && name !== '.' && name !== '..';
-}
-
-function resolveBookDir(category, folder) {
-  if (!BOOK_CATEGORIES.includes(category) || !isSafeFolderName(folder)) return null;
-  const resolved = path.resolve(BOOKS_ROOT, category, folder);
-  if (!resolved.startsWith(path.join(BOOKS_ROOT, category) + path.sep)) return null;
-  return resolved;
-}
-
-function copyDirRecursive(src, dest) {
-  fs.mkdirSync(dest, { recursive: true });
-  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
-    const srcPath = path.join(src, entry.name);
-    const destPath = path.join(dest, entry.name);
-    if (entry.isDirectory()) copyDirRecursive(srcPath, destPath);
-    else fs.copyFileSync(srcPath, destPath);
-  }
-}
-
-// Applies literal find->replace pairs to every string value found anywhere
-// in a JSON-shaped value (recursing through objects/arrays). Used by
-// books-duplicate to rebrand a cloned book's text -- e.g. turning a
-// Bihar_GS clone into Jharkhand_GS by replacing "Bihar" with "Jharkhand"
-// across every chapter, the same rebrand step scripts/duplicate_enriched_books.mjs
-// did by hand for one specific set of books.
-function deepReplaceStrings(value, pairs) {
-  if (typeof value === 'string') {
-    let out = value;
-    for (const { find, replace } of pairs) {
-      if (find) out = out.split(find).join(replace ?? '');
-    }
-    return out;
-  }
-  if (Array.isArray(value)) return value.map((v) => deepReplaceStrings(v, pairs));
-  if (value && typeof value === 'object') {
-    const out = {};
-    for (const [k, v] of Object.entries(value)) out[k] = deepReplaceStrings(v, pairs);
-    return out;
-  }
-  return value;
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-const TRANSIENT_FS_ERROR_CODES = new Set(['EPERM', 'ENOTEMPTY', 'EBUSY']);
-
-// A path just deleted via books-delete can stay in a transient
-// locked/"pending delete" state on this drive for a moment (see
-// handleBooksDelete's own retry loop) -- long enough that immediately
-// creating something new at the same path can throw EPERM/EBUSY even
-// though the delete already reported success. Retries only the specific
-// error codes that mean "this is a lock, not a real problem"; anything
-// else (bad JSON, disk full, permissions genuinely wrong) rethrows on the
-// first try.
-async function retryTransientFsOp(fn, { attempts = 4, delayMs = 600 } = {}) {
-  for (let attempt = 0; ; attempt++) {
-    try {
-      return fn();
-    } catch (e) {
-      if (attempt >= attempts - 1 || !TRANSIENT_FS_ERROR_CODES.has(e.code)) throw e;
-      await sleep(delayMs);
-    }
-  }
-}
-
-function requireLocalFilesystem(res) {
-  if (process.env.VERCEL) {
-    res.status(503).json({ ok: false, error: "This action only works against the local dev server (npm run dev) -- Vercel's deployed filesystem is read-only." });
-    return false;
-  }
-  return true;
-}
-
 /**
- * POST /api/admin/save-resource with { type: 'books-create', category, folder, title }
+ * POST /api/admin/save-resource with { type: 'books-create', title, category }
  *
- * Creates a blank book: metadata.json + a single empty chapter-1.json.
- * For content with no source docx to enrich -- e.g. a book authored
- * directly in the editor rather than through the ingestion pipeline.
+ * Creates a blank book straight in R2: metadata.json + a single empty
+ * chapter-1.json under a freshly generated resource id, plus its
+ * resources_v2 row. For content with no source docx to enrich -- e.g. a
+ * book authored directly in the editor rather than through the ingestion
+ * pipeline.
  */
 async function handleBooksCreate(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  if (!requireLocalFilesystem(res)) return;
-
-  const { category, folder, title } = req.body || {};
-  const bookDir = resolveBookDir(category, folder);
-  if (!bookDir || !title?.trim()) {
-    return res.status(400).json({ ok: false, error: 'Missing or invalid category, folder or title' });
+  const { title, category } = req.body || {};
+  if (!BOOK_CATEGORIES.includes(category) || !title?.trim()) {
+    return res.status(400).json({ ok: false, error: 'Missing or invalid title or category' });
   }
-  if (fs.existsSync(bookDir)) {
-    return res.status(409).json({ ok: false, error: `${category}/${folder} already exists` });
-  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
 
   try {
-    await retryTransientFsOp(() => fs.mkdirSync(path.join(bookDir, 'chapters'), { recursive: true }));
-    const bookId = genBookId();
+    const supabase = getSupabaseAdmin();
+
+    // Refuse a duplicate title+category rather than silently adding to the
+    // pile -- Duplicate Book is the path for "another one like this", New
+    // Book is for something that doesn't exist yet.
+    const existing = await fetchRowsByTitle(supabase, category, title.trim());
+    if (existing.length > 0) return res.status(409).json({ ok: false, error: `A ${category} book titled "${title.trim()}" already exists` });
+
+    const newResourceId = generateResourceId(title.trim(), '', category, '');
+    const storageBaseUrl = `${publicUrl}/structured_resources/blocks/${category}/${newResourceId}/`;
+    const prefix = `structured_resources/blocks/${category}/${newResourceId}`;
+
+    const s3 = getS3Client();
     const metadata = {
-      book_id: bookId,
+      book_id: genBookId(),
       title: title.trim(),
       source_file: null,
       category,
@@ -360,9 +468,26 @@ async function handleBooksCreate(req, res) {
       image_count: 0,
       chapters: [{ title: 'Chapter 1', order: 1, enriched: true, blocks_count: 0, file_name: 'chapters/chapter-1.json' }],
     };
-    fs.writeFileSync(path.join(bookDir, 'metadata.json'), JSON.stringify(metadata, null, 2) + '\n');
-    fs.writeFileSync(path.join(bookDir, 'chapters', 'chapter-1.json'), JSON.stringify({ id: genBookId(), title: 'Chapter 1', order: 1, blocks: [] }, null, 2) + '\n');
-    return res.status(200).json({ ok: true, category, folder });
+    await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+    await uploadToR2(s3, bucket, `${prefix}/chapters/chapter-1.json`, Buffer.from(JSON.stringify({ id: genBookId(), title: 'Chapter 1', order: 1, blocks: [] }, null, 2)), 'application/json');
+
+    const { error } = await supabase.from('resources_v2').insert({
+      resource_id: newResourceId,
+      file_hash: genBookId() + genBookId(),
+      title: title.trim(),
+      category,
+      format: 'blocks',
+      storage_base_url: storageBaseUrl,
+      metadata_url: `${storageBaseUrl}metadata.json`,
+      status: 'Published',
+      chapter_count: 1,
+      is_freemium: false,
+      is_locked: true,
+      updated_at: new Date().toISOString(),
+    });
+    if (error) throw new Error(error.message);
+
+    return res.status(200).json({ ok: true, resourceId: newResourceId });
   } catch (e) {
     console.error('[admin/save-resource:books-create] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
@@ -371,177 +496,139 @@ async function handleBooksCreate(req, res) {
 
 /**
  * POST /api/admin/save-resource with
- * { type: 'books-duplicate', sourceCategory, sourceFolder, destCategory, destFolder, newTitle, findReplace }
+ * { type: 'books-duplicate', sourceResourceId, newTitle, destCategory, findReplace }
  *
- * Clones an entire book folder (metadata.json + chapters/ + images/) to a
- * new folder, assigns it a fresh book_id, and optionally rewrites every
- * string in the clone via literal find/replace pairs -- generalizes what
- * scripts/duplicate_enriched_books.mjs did by hand for one hardcoded set
- * of Precis subject books into a reusable action for any book (e.g.
+ * Clones every R2 object under the source book's prefix to a fresh
+ * resource id (images via a server-side R2 copy; metadata.json and every
+ * chapter file downloaded, optionally rewritten via literal find/replace
+ * pairs, and re-uploaded), then inserts a new resources_v2 row. Generalizes
+ * what scripts/duplicate_enriched_books.mjs did by hand for one hardcoded
+ * set of Precis subject books into a reusable action for any book (e.g.
  * cloning a state's GS guide into a new state and rebranding the state
  * name throughout).
  */
 async function handleBooksDuplicate(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  if (!requireLocalFilesystem(res)) return;
-
-  const { sourceCategory, sourceFolder, destCategory, destFolder, newTitle, findReplace } = req.body || {};
-  const sourceDir = resolveBookDir(sourceCategory, sourceFolder);
-  const destDir = resolveBookDir(destCategory, destFolder);
-  if (!sourceDir || !fs.existsSync(sourceDir)) {
-    return res.status(400).json({ ok: false, error: 'Unknown source book' });
+  const { sourceResourceId, newTitle, destCategory, findReplace } = req.body || {};
+  if (!sourceResourceId || !newTitle?.trim() || !BOOK_CATEGORIES.includes(destCategory)) {
+    return res.status(400).json({ ok: false, error: 'Missing or invalid sourceResourceId, newTitle or destCategory' });
   }
-  if (!destDir) {
-    return res.status(400).json({ ok: false, error: 'Invalid destination category or folder name' });
-  }
-  if (fs.existsSync(destDir)) {
-    return res.status(409).json({ ok: false, error: `${destCategory}/${destFolder} already exists` });
-  }
-  const pairs = Array.isArray(findReplace) ? findReplace.filter((p) => p && p.find) : [];
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
 
   try {
-    await retryTransientFsOp(() => copyDirRecursive(sourceDir, destDir));
+    const supabase = getSupabaseAdmin();
+    const { data: sourceRow, error: rowError } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', sourceResourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!sourceRow) return res.status(404).json({ ok: false, error: 'Source book not found' });
 
-    const metadataPath = path.join(destDir, 'metadata.json');
-    let metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-    metadata.book_id = genBookId();
-    metadata.category = destCategory;
-    metadata.title = newTitle?.trim() || metadata.title;
-    if (pairs.length) metadata = deepReplaceStrings(metadata, pairs);
-    fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2) + '\n');
+    const sourceGroupRows = await fetchRowsByTitle(supabase, sourceRow.category, sourceRow.title);
+    const sourceCanonicalUrl = pickCanonicalStorageBaseUrl(sourceGroupRows.length ? sourceGroupRows : [sourceRow]);
+    const sourcePrefix = prefixFromStorageBaseUrl(sourceCanonicalUrl, publicUrl);
+    if (!sourcePrefix) return res.status(500).json({ ok: false, error: 'Could not resolve source storage location' });
 
-    if (pairs.length) {
-      for (const chapter of metadata.chapters || []) {
-        const chapterPath = path.join(destDir, chapter.file_name);
-        if (!fs.existsSync(chapterPath)) continue;
-        const chapterData = deepReplaceStrings(JSON.parse(fs.readFileSync(chapterPath, 'utf8')), pairs);
-        fs.writeFileSync(chapterPath, JSON.stringify(chapterData, null, 2) + '\n');
+    const existingDest = await fetchRowsByTitle(supabase, destCategory, newTitle.trim());
+    if (existingDest.length > 0) return res.status(409).json({ ok: false, error: `A ${destCategory} book titled "${newTitle.trim()}" already exists` });
+
+    const s3 = getS3Client();
+    const objectKeys = await listR2Keys(s3, bucket, sourcePrefix);
+    if (objectKeys.length === 0) return res.status(400).json({ ok: false, error: 'Source book has no content in R2' });
+
+    const newResourceId = generateResourceId(newTitle.trim(), '', destCategory, '');
+    const destPrefix = `structured_resources/blocks/${destCategory}/${newResourceId}`;
+    const destStorageBaseUrl = `${publicUrl}/structured_resources/blocks/${destCategory}/${newResourceId}/`;
+    const pairs = Array.isArray(findReplace) ? findReplace.filter((p) => p && p.find) : [];
+
+    let metadata = null;
+    for (const key of objectKeys) {
+      const relative = key.slice(sourcePrefix.length + 1); // strip "prefix/"
+      const destKey = `${destPrefix}/${relative}`;
+
+      if (relative === 'metadata.json' || relative.startsWith('chapters/')) {
+        const content = await fetchJson(`${publicUrl}/${key}`);
+        const transformed = pairs.length ? deepReplaceStrings(content, pairs) : content;
+        if (relative === 'metadata.json') {
+          metadata = transformed; // uploaded once below, after title/id/category are patched in
+        } else {
+          await uploadToR2(s3, bucket, destKey, Buffer.from(JSON.stringify(transformed, null, 2)), 'application/json');
+        }
+      } else {
+        // Images etc. -- binary, no text transform, server-side copy (no download/reupload round trip)
+        await s3.send(new CopyObjectCommand({ Bucket: bucket, CopySource: `${bucket}/${encodeURIComponent(key)}`, Key: destKey }));
       }
     }
 
-    return res.status(200).json({ ok: true, category: destCategory, folder: destFolder });
+    if (!metadata) return res.status(500).json({ ok: false, error: 'Source book has no metadata.json' });
+    metadata.book_id = genBookId();
+    metadata.title = newTitle.trim();
+    metadata.category = destCategory;
+    await uploadToR2(s3, bucket, `${destPrefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+
+    const { error } = await supabase.from('resources_v2').insert({
+      resource_id: newResourceId,
+      file_hash: genBookId() + genBookId(),
+      title: newTitle.trim(),
+      category: destCategory,
+      format: 'blocks',
+      storage_base_url: destStorageBaseUrl,
+      metadata_url: `${destStorageBaseUrl}metadata.json`,
+      status: 'Published',
+      chapter_count: metadata.chapters?.length ?? 0,
+      is_freemium: false,
+      is_locked: true,
+      updated_at: new Date().toISOString(),
+    });
+    if (error) throw new Error(error.message);
+
+    return res.status(200).json({ ok: true, resourceId: newResourceId });
   } catch (e) {
     console.error('[admin/save-resource:books-duplicate] failed:', e.message);
-    // Best-effort cleanup of a partially-written clone so a failed attempt
-    // doesn't block retrying under the same destination name.
-    try { fs.rmSync(destDir, { recursive: true, force: true, maxRetries: 10, retryDelay: 400 }); } catch { /* ignore */ }
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
 
 /**
- * POST /api/admin/save-resource with { type: 'books-delete', category, folder }
+ * POST /api/admin/save-resource with { type: 'books-delete', resourceId }
  *
- * Deletes a book folder entirely. Exists mainly to clean up after
- * books-create/books-duplicate mistakes without dropping to a filesystem
- * outside the editor -- this is destructive and local-only, no undo beyond
- * git (which won't help for a book that was never committed).
+ * Deletes every R2 object under the book's canonical prefix, then deletes
+ * every resources_v2 row sharing that title+category -- leaving any of
+ * them behind would just be a dangling reference to now-missing content.
+ * Destructive; the only undo is re-Duplicating from a version still open
+ * in someone's browser, or re-ingesting from a source doc if one exists.
  */
 async function handleBooksDelete(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  if (!requireLocalFilesystem(res)) return;
-
-  const { category, folder } = req.body || {};
-  const bookDir = resolveBookDir(category, folder);
-  if (!bookDir || !fs.existsSync(bookDir)) {
-    return res.status(400).json({ ok: false, error: 'Unknown book' });
-  }
-
-  // Windows (and especially a cloud-synced drive letter, which this repo
-  // can live on) can hold the directory's own handle -- or a transient
-  // sync-status file inside it -- well after the real content is gone,
-  // observed here taking upward of 20s to release on its own. Several
-  // short rounds with real waits between them absorb the common case
-  // without either tying up the request for 20s+ on every delete or
-  // giving up after the very first race.
-  let lastError;
-  for (let attempt = 0; attempt < 4; attempt++) {
-    if (attempt > 0) await sleep(750);
-    try {
-      fs.rmSync(bookDir, { recursive: true, force: true, maxRetries: 2, retryDelay: 200 });
-      return res.status(200).json({ ok: true });
-    } catch (e) {
-      lastError = e;
-    }
-  }
-
-  // Every real file under bookDir is reliably gone by now (rmSync removes
-  // depth-first, so only the final rmdir of the now-empty directory can
-  // still be racing a lock) -- if the directory is empty, the book is
-  // functionally deleted even though the empty shell hasn't been reclaimed
-  // yet. Treat that as success rather than block the request further; the
-  // leftover empty folder is harmless and books-list already has a
-  // category for it ("empty folder").
-  let remaining;
-  try { remaining = fs.readdirSync(bookDir); } catch { remaining = null; }
-  if (remaining === null || remaining.length === 0) {
-    try { fs.rmdirSync(bookDir); } catch { /* fine either way, see above */ }
-    return res.status(200).json({ ok: true });
-  }
-
-  console.error('[admin/save-resource:books-delete] failed:', lastError.message);
-  return res.status(500).json({ ok: false, error: lastError.message });
-}
-
-/**
- * POST /api/admin/save-resource with { type: 'books-publish', category, folder }
- *
- * Phase 4 of the book-content-editor plan: pushes one book's current local
- * JSON to R2 and upserts its resources_v2 row(s), so edits made in the
- * chapter editor actually reach the candidate-facing app instead of sitting
- * in public/books until someone remembers to run the bulk sync script.
- * Reuses scripts/sync_books_to_r2.mjs's syncOneBook() -- the exact same
- * logic the bulk `node scripts/sync_books_to_r2.mjs --execute` run uses --
- * scoped to this one book instead of scanning all ~122.
- */
-async function handleBooksPublish(req, res) {
-  if (!checkAdminSecret(req, res)) return;
-  if (!requireLocalFilesystem(res)) return;
-
-  const { category, folder } = req.body || {};
-  if (!BOOK_CATEGORIES.includes(category) || !folder) {
-    return res.status(400).json({ ok: false, error: 'Missing category or folder' });
-  }
-
-  const book = getBookFolder(category, folder);
-  if (!book) {
-    return res.status(400).json({ ok: false, error: 'Not a valid book folder (missing metadata.json or chapters)' });
-  }
-
-  const bucket = process.env.R2_BUCKET_NAME;
-  const publicUrl = process.env.R2_PUBLIC_URL;
-  if (!supabaseUrl || !bucket || !publicUrl) {
-    return res.status(500).json({ ok: false, error: 'Server misconfiguration: Supabase/R2 env vars not set' });
-  }
+  const { resourceId } = req.body || {};
+  if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
 
   try {
-    const supabase = createClient(supabaseUrl, supabaseServiceKey || process.env.VITE_SUPABASE_ANON_KEY);
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    // ilike for a case-insensitive match against sync_books_to_r2.mjs's own
-    // title matching (trimmed, case-insensitive) -- % and _ are escaped
-    // first so a title containing either doesn't act as a SQL wildcard.
-    // Paginated: some titles in this table have 1000+ duplicate rows (a
-    // pre-existing data-hygiene issue, not something this action fixes),
-    // well past PostgREST's per-request row cap.
-    const escapedTitle = book.title.trim().replace(/[\\%_]/g, '\\$&');
-    let dbRows = [];
-    for (let from = 0; ; from += 1000) {
-      const { data, error: fetchError } = await supabase
-        .from('resources_v2')
-        .select('resource_id,title,category,storage_base_url,format')
-        .eq('category', category)
-        .ilike('title', escapedTitle)
-        .range(from, from + 999);
-      if (fetchError) throw new Error(fetchError.message);
-      dbRows = dbRows.concat(data);
-      if (data.length < 1000) break;
+    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+    const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
+
+    if (prefix) {
+      const s3 = getS3Client();
+      const keys = await listR2Keys(s3, bucket, prefix);
+      if (keys.length > 0) await deleteR2Keys(s3, bucket, keys);
     }
 
-    const s3 = getS3Client();
-    const result = await syncOneBook(book, dbRows, { supabase, s3, bucket, publicUrl, execute: true });
-    return res.status(200).json({ ok: true, ...result });
+    const { error } = await supabase.from('resources_v2').delete().eq('category', row.category).ilike('title', escapeIlike(row.title));
+    if (error) throw new Error(error.message);
+
+    return res.status(200).json({ ok: true });
   } catch (e) {
-    console.error('[admin/save-resource:books-publish] failed:', e.message);
+    console.error('[admin/save-resource:books-delete] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -557,6 +644,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-list') {
     return handleBooksList(req, res);
+  }
+
+  if (req.body?.type === 'books-get') {
+    return handleBooksGet(req, res);
   }
 
   if (req.body?.type === 'books-issues') {
@@ -577,10 +668,6 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-delete') {
     return handleBooksDelete(req, res);
-  }
-
-  if (req.body?.type === 'books-publish') {
-    return handleBooksPublish(req, res);
   }
 
   if (!supabaseUrl) {
