@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight } from 'lucide-react';
+import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check } from 'lucide-react';
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
@@ -44,20 +44,51 @@ function buildSubjectGroups(byCategory) {
   return [...groups.values()];
 }
 
-function ResourceRow({ resource, examName, locked }) {
+function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete }) {
   return (
-    <Link
-      to={`/reader/${resource.resource_id}`}
+    <div
       style={{
         display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
-        borderRadius: 'var(--radius-sm, 10px)', textDecoration: 'none', color: 'inherit',
-        border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+        borderRadius: 'var(--radius-sm, 10px)',
+        border: isCompleted ? '1px solid #bbf7d0' : '1px solid var(--border, #e2e8f0)',
+        marginBottom: '0.5rem', background: isCompleted ? '#f0fdf4' : '#fff',
       }}
     >
-      <FileText size={15} color="var(--ios-olive)" style={{ flexShrink: 0 }} />
-      <span style={{ flex: 1, fontSize: '0.85rem' }}>{cleanContentTitle(resource.title, examName)}</span>
+      {onToggleComplete && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleComplete(resource.resource_id);
+          }}
+          title={isCompleted ? "Marked as Completed" : "Mark as Complete"}
+          style={{
+            background: isCompleted ? '#16a34a' : 'transparent',
+            border: isCompleted ? 'none' : '2px solid #cbd5e1',
+            borderRadius: '50%',
+            width: '22px',
+            height: '22px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            padding: 0,
+            flexShrink: 0,
+          }}
+        >
+          {isCompleted && <Check size={13} color="#fff" strokeWidth={3} />}
+        </button>
+      )}
+      <FileText size={15} color={isCompleted ? "#16a34a" : "var(--ios-olive)"} style={{ flexShrink: 0 }} />
+      <Link
+        to={`/reader/${resource.resource_id}`}
+        style={{ flex: 1, fontSize: '0.85rem', textDecoration: 'none', color: 'inherit', fontWeight: isCompleted ? 600 : 400 }}
+      >
+        {cleanContentTitle(resource.title, examName)}
+      </Link>
+      {isCompleted && <span style={{ fontSize: '0.7rem', color: '#16a34a', fontWeight: 700, background: '#dcfce7', padding: '0.15rem 0.5rem', borderRadius: '999px' }}>Done</span>}
       {locked ? <Lock size={13} color="#ef4444" /> : <Unlock size={13} color="#16a34a" />}
-    </Link>
+    </div>
   );
 }
 
@@ -92,7 +123,7 @@ function QuizRow({ quiz, examName, locked }) {
  * is unaffected — Dashboard.jsx opts into both for its 5-category view.
  */
 const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles' }) => {
-  const { byCategory, quizzes, intro, loading, error } = useExamContent(examName, careerTrack, examId);
+  const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading, error } = useExamContent(examName, careerTrack, examId);
   const [openSubjectKey, setOpenSubjectKey] = useState(null);
 
   if (loading) {
@@ -124,7 +155,14 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
             <div key={key} style={{ marginBottom: '1.1rem' }}>
               <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>{label}</h4>
               {items.map((res) => (
-                <ResourceRow key={res.id} resource={res} examName={examName} locked={isResourceLockedForUser(tier, res.category)} />
+                <ResourceRow
+                  key={res.id || res.resource_id}
+                  resource={res}
+                  examName={examName}
+                  locked={isResourceLockedForUser(tier, res.category)}
+                  isCompleted={completedResourceIds?.has(res.resource_id)}
+                  onToggleComplete={(id) => markAsCompleted(id)}
+                />
               ))}
             </div>
           );
@@ -183,7 +221,13 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
           <div id="section-intro" style={{ marginBottom: '1.1rem', scrollMarginTop: '1.5rem' }}>
             <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Introduction</h4>
             {intro.source === 'auto' ? (
-              <ResourceRow resource={intro.resource} examName={examName} locked={false} />
+              <ResourceRow
+                resource={intro.resource}
+                examName={examName}
+                locked={false}
+                isCompleted={completedResourceIds?.has(intro.resource.resource_id)}
+                onToggleComplete={(id) => markAsCompleted(id)}
+              />
             ) : (
               <div style={{ padding: '0.9rem 1rem', borderRadius: 'var(--radius-sm, 10px)', border: '1px solid var(--border, #e2e8f0)', background: '#fff' }}>
                 {intro.title && <h5 style={{ margin: '0 0 0.5rem', fontSize: '0.9rem' }}>{intro.title}</h5>}
@@ -235,7 +279,14 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
               <div key={catKey} style={{ marginBottom: '0.85rem' }}>
                 <h5 style={{ fontSize: '0.68rem', color: '#94a3b8', fontWeight: 700, marginBottom: '0.4rem', textTransform: 'uppercase' }}>{SUBJECT_CATEGORY_LABELS[catKey]}</h5>
                 {openGroup.categories.get(catKey).map((res) => (
-                  <ResourceRow key={res.id} resource={res} examName={examName} locked={isResourceLockedForUser(tier, catKey)} />
+                  <ResourceRow
+                    key={res.id || res.resource_id}
+                    resource={res}
+                    examName={examName}
+                    locked={isResourceLockedForUser(tier, catKey)}
+                    isCompleted={completedResourceIds?.has(res.resource_id)}
+                    onToggleComplete={(id) => markAsCompleted(id, openGroup.key)}
+                  />
                 ))}
               </div>
             ))}

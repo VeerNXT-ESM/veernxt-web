@@ -1,7 +1,7 @@
-import { useMemo, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useMemo, useState, useEffect, useCallback } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Book, RefreshCw, Search, ChevronDown, ChevronUp, BookOpen, ScrollText, Brain, X } from 'lucide-react';
+import { Book, RefreshCw, Search, ChevronDown, ChevronUp, BookOpen, ScrollText, Brain, X, Target, Rocket, ArrowRight } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
@@ -26,6 +26,7 @@ const TEASER_SUBJECT_KEYS = ['english', 'gk_general_awareness', 'reasoning', 'ma
  * multi-step drill-down with its own results section.
  */
 const LearningCenter = () => {
+  const navigate = useNavigate();
   const [initialLoading, setInitialLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -33,6 +34,11 @@ const LearningCenter = () => {
   const [examMatches, setExamMatches] = useState([]);
   const [transferableSkills, setTransferableSkills] = useState([]);
   const [examProgress, setExamProgress] = useState({});
+
+  // Primary preparation target (from user_exam_targets)
+  const [primaryTarget, setPrimaryTarget] = useState(null); // { exam_id, exam_name, conducting_body, ... }
+  const [allTargetIds, setAllTargetIds] = useState(new Set()); // all saved exam IDs
+  const [preparingExamId, setPreparingExamId] = useState(null); // loading state for CTA
 
   // Catalog + filters. The whole lc_exams catalog (~1k rows) is fetched
   // once; every filter/level/derived list comes from it client-side.
@@ -51,6 +57,35 @@ const LearningCenter = () => {
   const freeQuizUsed = !!profile?.free_quiz_used;
 
   const toggleExpanded = (examId) => setExpandedExamId((prev) => (prev === examId ? null : examId));
+
+  // Saves the exam as the candidate's primary target and navigates to its journey.
+  const handleStartPreparing = useCallback(async (examId, examName) => {
+    if (!examId) return;
+    setPreparingExamId(examId);
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user) {
+        // Demote any existing primary, then upsert this exam as primary.
+        await supabase
+          .from('user_exam_targets')
+          .update({ is_primary: false })
+          .eq('user_id', session.user.id)
+          .eq('is_primary', true);
+        await supabase.from('user_exam_targets').upsert({
+          user_id: session.user.id,
+          exam_id: examId,
+          is_primary: true,
+          status: 'active',
+          last_activity_at: new Date().toISOString(),
+        }, { onConflict: 'user_id,exam_id' });
+      }
+    } catch (err) {
+      console.warn('Could not save exam target:', err);
+    } finally {
+      setPreparingExamId(null);
+      navigate(`/exam/${examId}`);
+    }
+  }, [navigate]);
 
   const handleRegionModeChange = (mode) => {
     setRegionMode(mode);
@@ -252,6 +287,29 @@ const LearningCenter = () => {
             }
             loadPersonalization(session.user.id, matches);
           }
+
+          // Load the candidate's exam targets (primary + all saved)
+          try {
+            const { data: targets } = await supabase
+              .from('user_exam_targets')
+              .select('exam_id, is_primary, status, exam:lc_exams(id, name, conducting_body:lc_conducting_bodies(name))')
+              .eq('user_id', session.user.id)
+              .eq('status', 'active');
+            if (targets?.length) {
+              setAllTargetIds(new Set(targets.map((t) => t.exam_id)));
+              const primary = targets.find((t) => t.is_primary);
+              if (primary?.exam) {
+                setPrimaryTarget({
+                  exam_id: primary.exam_id,
+                  exam_name: primary.exam.name,
+                  conducting_body: primary.exam.conducting_body?.name || '',
+                });
+              }
+            }
+          } catch (e) {
+            // user_exam_targets may not exist yet; gracefully ignore
+            console.warn('Could not load exam targets (migration may be pending):', e);
+          }
         }
       } catch (err) {
         console.error('Error in initial load:', err);
@@ -378,6 +436,27 @@ const LearningCenter = () => {
           ) : (
             <div className="course-sections">
 
+              {/* ── Current Preparation Hero ── */}
+              {primaryTarget && (
+                <div className="lc-prep-hero">
+                  <div className="lc-prep-hero-left">
+                    <span className="lc-prep-hero-eyebrow">Your Current Mission</span>
+                    <h2 className="lc-prep-hero-title">{primaryTarget.exam_name}</h2>
+                    {primaryTarget.conducting_body && (
+                      <p className="lc-prep-hero-body">{primaryTarget.conducting_body}</p>
+                    )}
+                  </div>
+                  <div className="lc-prep-hero-right">
+                    <Link
+                      to={`/exam/${primaryTarget.exam_id}`}
+                      className="lc-prep-hero-continue-btn"
+                    >
+                      Continue Preparing <ArrowRight size={15} />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
               <div className="course-section">
                 <div className="section-header">
                   <h2>Search Results</h2>
@@ -418,7 +497,22 @@ const LearningCenter = () => {
                             {conductingBody && <p className="result-card-body">{conductingBody}</p>}
                             <div className="result-card-bottom">
                               <span>{resourceCount != null ? `${resourceCount} resource${resourceCount === 1 ? '' : 's'} available` : ''}</span>
-                              <span className="result-card-cta">{isExpanded ? 'Hide' : 'View Exam'} {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}</span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                <button
+                                  type="button"
+                                  className="lc-start-preparing-btn"
+                                  onClick={(e) => { e.stopPropagation(); handleStartPreparing(examId, name); }}
+                                  disabled={preparingExamId === examId}
+                                >
+                                  {preparingExamId === examId
+                                    ? <RefreshCw size={12} className="animate-spin" />
+                                    : <Rocket size={12} />}
+                                  {allTargetIds.has(examId) ? 'Continue' : 'Start Preparing'}
+                                </button>
+                                <span className="result-card-cta" onClick={() => toggleExpanded(examId)} style={{cursor:'pointer'}}>
+                                  {isExpanded ? 'Hide' : 'Details'} {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                                </span>
+                              </div>
                             </div>
                           </button>
                           {isExpanded && (
@@ -453,16 +547,18 @@ const LearningCenter = () => {
                 )}
               </div>
 
+              {/* ── My Exams (saved targets) ── */}
               <div className="course-section">
                 <div className="section-header">
                   <h2>My Exams</h2>
                 </div>
-                <p className="skill-section-subtitle" style={{ marginTop: '-0.5rem', marginBottom: '1rem' }}>Exams you've saved or started</p>
+                <p className="skill-section-subtitle" style={{ marginTop: '-0.5rem', marginBottom: '1rem' }}>Exams you're preparing for</p>
                 {myExams.length > 0 ? (
                   <div className="my-exams-grid">
                     {myExams.map((match) => {
                       const prog = examProgress[match.exam_name];
                       const isExpanded = expandedExamId === match.exam_id;
+                      const isPrimary = primaryTarget?.exam_id === match.exam_id;
                       return (
                         <div key={match.exam_id || match.exam_name} className={`my-exam-card ${isExpanded ? 'my-exam-card-expanded' : ''}`}>
                           <button type="button" className="my-exam-card-clickable" onClick={() => toggleExpanded(match.exam_id)}>
@@ -472,7 +568,20 @@ const LearningCenter = () => {
                               {match.score != null && <span className="exam-match-score">{Math.round(match.score)}% Match</span>}
                               {prog?.total ? <span className="exam-progress-explored">{prog.explored} of {prog.total} explored</span> : null}
                             </div>
-                            <span className="result-card-cta">{isExpanded ? 'Hide' : 'Continue'} {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.5rem' }}>
+                              <button
+                                type="button"
+                                className="lc-start-preparing-btn"
+                                onClick={(e) => { e.stopPropagation(); handleStartPreparing(match.exam_id, match.exam_name); }}
+                                disabled={preparingExamId === match.exam_id}
+                              >
+                                {preparingExamId === match.exam_id
+                                  ? <RefreshCw size={12} className="animate-spin" />
+                                  : <Rocket size={12} />}
+                                {isPrimary ? 'Current Mission' : 'Make Primary'}
+                              </button>
+                              <span className="result-card-cta">{isExpanded ? 'Hide' : 'Details'} {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}</span>
+                            </div>
                           </button>
                           {isExpanded && (
                             <div className="result-card-expanded">
@@ -491,10 +600,11 @@ const LearningCenter = () => {
                     })}
                   </div>
                 ) : (
-                  <p className="filter-empty-note">No exams in your preparation list yet. Search above to find exams matched to your profile.</p>
+                  <p className="filter-empty-note">No exams saved yet. Click <strong>Start Preparing</strong> on any exam above to begin your journey.</p>
                 )}
               </div>
 
+              {/* ── Preparation Centers (global hubs, always visible) ── */}
               <div className="course-section">
                 <div className="section-header">
                   <h2>Preparation Centers</h2>
@@ -539,7 +649,7 @@ const LearningCenter = () => {
                     <div className="prep-card-icon"><ScrollText size={22} /></div>
                     <h3>PYQ Center</h3>
                     <p>Practice with questions from previous examinations.</p>
-                    <Link to="/pyq-center" className="ios-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', padding: '0.65rem 1rem', width: '100%', marginTop: 'auto', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                    <Link to={primaryTarget ? `/pyq-center?exam=${primaryTarget.exam_id}` : '/pyq-center'} className="ios-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', padding: '0.65rem 1rem', width: '100%', marginTop: 'auto', fontSize: '0.85rem', fontWeight: 'bold' }}>
                       Visit PYQ Center
                     </Link>
                   </div>
@@ -548,7 +658,7 @@ const LearningCenter = () => {
                     <div className="prep-card-icon"><Brain size={22} /></div>
                     <h3>Quiz Center</h3>
                     <p>Test your knowledge with subject-wise quizzes and exam simulations.</p>
-                    <Link to="/quiz-center" className="ios-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', padding: '0.65rem 1rem', width: '100%', marginTop: 'auto', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                    <Link to={primaryTarget ? `/quiz-center?exam=${primaryTarget.exam_id}` : '/quiz-center'} className="ios-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', padding: '0.65rem 1rem', width: '100%', marginTop: 'auto', fontSize: '0.85rem', fontWeight: 'bold' }}>
                       Visit Quiz Center
                     </Link>
                   </div>
@@ -576,3 +686,4 @@ const LearningCenter = () => {
 };
 
 export default LearningCenter;
+

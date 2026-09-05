@@ -10,11 +10,13 @@ export default function QuizCenter() {
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState('');
   const [profile, setProfile] = useState(null);
+  const [targetExam, setTargetExam] = useState(null);
   // null = no matched exam yet (fallback: show every subject, unfiltered);
   // a Set = canonical subject keys required by the user's top-matched exam.
   const [allowedSubjectKeys, setAllowedSubjectKeys] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeSubjectKey = searchParams.get('subject');
+  const activeExamId = searchParams.get('exam');
 
   useEffect(() => {
     const loadQuizzes = async () => {
@@ -28,12 +30,14 @@ export default function QuizCenter() {
             .maybeSingle();
           if (profileRow) {
             setProfile(profileRow);
-            const topExam = (profileRow.recommendations || [])[0];
-            if (topExam?.exam_id) {
+            // If activeExamId is passed in URL, load that specific exam, else fall back to top recommendation
+            const examIdToLoad = activeExamId || (profileRow.recommendations || [])[0]?.exam_id;
+            if (examIdToLoad) {
               try {
-                const res = await fetch(`/api/exams?examId=${encodeURIComponent(topExam.exam_id)}`);
+                const res = await fetch(`/api/exams?examId=${encodeURIComponent(examIdToLoad)}`);
                 const json = await res.json();
-                if (json.ok) {
+                if (json.ok && json.exam) {
+                  setTargetExam(json.exam);
                   const required = Object.entries(json.exam.subjects || {})
                     .filter(([, v]) => (v || '').toLowerCase() === 'yes')
                     .map(([k]) => resolveCanonicalSubjectLabel(k)?.key)
@@ -41,7 +45,7 @@ export default function QuizCenter() {
                   setAllowedSubjectKeys(new Set(required));
                 }
               } catch (e) {
-                console.error('Error fetching top exam subjects:', e);
+                console.error('Error fetching target exam subjects:', e);
               }
             }
           }
@@ -62,7 +66,7 @@ export default function QuizCenter() {
       }
     };
     loadQuizzes();
-  }, []);
+  }, [activeExamId]);
 
   const tier = getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at);
   const freeQuizUsed = !!profile?.free_quiz_used;
@@ -156,6 +160,42 @@ export default function QuizCenter() {
               ? `Mock tests for ${activeGroup.label}.`
               : 'Test your competitive exam readiness with custom mock simulations and subject-wise testing.'}
           </p>
+
+          {targetExam && (
+            <div style={{
+              marginTop: '1rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              background: '#eef2e6',
+              border: '1px solid var(--ios-olive, #4b6b32)',
+              borderRadius: '999px',
+              padding: '0.4rem 1rem',
+              fontSize: '0.8rem',
+              color: 'var(--ios-olive, #4b6b32)',
+              fontWeight: 700,
+            }}>
+              <span>🎯 Filtered for: {targetExam.name}</span>
+              {activeExamId && (
+                <button
+                  type="button"
+                  onClick={() => setSearchParams({})}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#64748b',
+                    cursor: 'pointer',
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    textDecoration: 'underline',
+                    padding: 0,
+                  }}
+                >
+                  Show All Exams
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Search */}
