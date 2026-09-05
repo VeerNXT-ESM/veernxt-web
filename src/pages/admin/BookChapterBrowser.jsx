@@ -1,11 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, UploadCloud } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2 } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import '../../components/book/BookBlocks.css';
 import BlockEditForm, { BlockTypePicker, createBlock, genBlockId } from '../../components/admin/BlockEditForm';
-import { DuplicateBookModal, ConfirmDeleteModal, PublishModal } from '../../components/admin/BookFormModals';
+import { DuplicateBookModal, ConfirmDeleteModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -17,15 +17,31 @@ const SEVERITY_STYLE = {
 
 const cloneBlocks = (blocks) => JSON.parse(JSON.stringify(blocks || []));
 
-// Full-page chapter browser/editor for one book. Phase 1 built the
-// read-only preview + QA overlay; Phase 2 adds the block editor itself.
-// Lives outside AdminShell, same as AdminContentEditor.jsx, since a
-// chapter sidebar + content pane wants the full viewport width.
+async function postBooksAction(body) {
+  const res = await fetch('/api/admin/save-resource', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+    body: JSON.stringify(body),
+  });
+  const data = await res.json();
+  if (!res.ok || !data.ok) throw new Error(data.error || `HTTP ${res.status}`);
+  return data;
+}
+
+// Full-page chapter browser/editor for one book. R2 is the only source of
+// truth for book content -- this reads metadata.json/chapter JSON straight
+// from the book's storage_base_url (a public R2 URL, same as the
+// candidate-facing reader fetches from) and saves go straight back to R2,
+// so there's no local filesystem step and no separate "Publish" action:
+// Save Chapter *is* live immediately. Lives outside AdminShell, same as
+// AdminContentEditor.jsx, since a chapter sidebar + content pane wants the
+// full viewport width.
 const BookChapterBrowser = () => {
-  const { category, book: folder } = useParams();
+  const { category, book: resourceId } = useParams();
   const navigate = useNavigate();
+  const [book, setBook] = useState(null); // { resourceId, title, category, storageBaseUrl }
+  const [bookError, setBookError] = useState(null);
   const [metadata, setMetadata] = useState(null);
-  const [metaError, setMetaError] = useState(null);
   const [issues, setIssues] = useState([]);
   const [activeOrder, setActiveOrder] = useState(null);
   const [chapterData, setChapterData] = useState(null);
@@ -41,62 +57,47 @@ const BookChapterBrowser = () => {
   const [topPickerOpen, setTopPickerOpen] = useState(false);
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [showPublishModal, setShowPublishModal] = useState(false);
-
-  const bookBasePath = `/books/${category}/${encodeURIComponent(folder)}`;
 
   useEffect(() => {
     if (!localStorage.getItem('admin_session')) navigate('/admin/login');
   }, [navigate]);
 
   useEffect(() => {
-    // Reset immediately -- category/folder changing means a full navigation
-    // to a different book (e.g. after Duplicate/New Book), and this
-    // component instance stays mounted across that route change. Without
-    // this, a failed fetch below would leave the *previous* book's
-    // metadata on screen instead of a clear error.
+    // Reset immediately -- resourceId changing means a full navigation to a
+    // different book (e.g. after Duplicate/New Book), and this component
+    // instance stays mounted across that route change.
+    setBook(null);
     setMetadata(null);
     setActiveOrder(null);
-    setMetaError(null);
-    (async () => {
-      // A book just created or duplicated via the API can take a moment to
-      // become visible to the dev server's static file serving on this
-      // filesystem -- a fetch landing in that window 404s (or the dev
-      // server's SPA fallback returns index.html for the unmatched path,
-      // which fails JSON parsing). A couple of short retries absorb that
-      // instead of showing a hard error for content that's actually there.
-      let lastErr;
-      for (let attempt = 0; attempt < 4; attempt++) {
-        if (attempt > 0) await new Promise((r) => setTimeout(r, 600));
-        try {
-          const res = await fetch(`${bookBasePath}/metadata.json`);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          const data = await res.json();
-          setMetadata(data);
-          const chapters = data.chapters || [];
-          if (chapters.length > 0) setActiveOrder(chapters[0].order);
-          return;
-        } catch (err) {
-          lastErr = err;
-        }
-      }
-      setMetaError(lastErr.message);
-    })();
-
+    setBookError(null);
     (async () => {
       try {
-        const res = await fetch('/api/admin/save-resource', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
-          body: JSON.stringify({ type: 'books-issues', category, folder }),
+        const data = await postBooksAction({ type: 'books-get', resourceId });
+        setBook(data);
+        const meta = await fetch(`${data.storageBaseUrl}metadata.json`).then((r) => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
         });
-        const data = await res.json();
-        if (res.ok && data.ok) setIssues(data.issues);
+        setMetadata(meta);
+        const chapters = meta.chapters || [];
+        if (chapters.length > 0) setActiveOrder(chapters[0].order);
+      } catch (err) {
+        setBookError(err.message);
+      }
+    })();
+  }, [resourceId]);
+
+  useEffect(() => {
+    if (!book) return;
+    (async () => {
+      try {
+        const data = await postBooksAction({ type: 'books-issues', category: book.category, title: book.title });
+        setIssues(data.issues || []);
       } catch {
         // QA report is a nice-to-have overlay -- browsing still works without it
       }
     })();
-  }, [category, folder, bookBasePath]);
+  }, [book]);
 
   const issuesByChapterFile = useMemo(() => {
     const map = {};
@@ -126,7 +127,7 @@ const BookChapterBrowser = () => {
   );
 
   useEffect(() => {
-    if (!activeChapterMeta) return;
+    if (!activeChapterMeta || !book) return;
     (async () => {
       setChapterLoading(true);
       setChapterError(null);
@@ -135,7 +136,7 @@ const BookChapterBrowser = () => {
       setDirty(false);
       setSaveError(null);
       try {
-        const res = await fetch(`${bookBasePath}/${activeChapterMeta.file_name}`);
+        const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         setChapterData(data);
@@ -145,7 +146,7 @@ const BookChapterBrowser = () => {
         setChapterLoading(false);
       }
     })();
-  }, [activeChapterMeta, bookBasePath]);
+  }, [activeChapterMeta, book]);
 
   const selectChapter = (order) => {
     if (dirty && !window.confirm('Discard unsaved changes to this chapter?')) return;
@@ -193,13 +194,7 @@ const BookChapterBrowser = () => {
     setSaveError(null);
     try {
       const payload = { id: chapterData.id, title: editTitle, order: chapterData.order, blocks: editBlocks };
-      const res = await fetch('/api/admin/save-resource', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
-        body: JSON.stringify({ type: 'books-save-chapter', category, folder, fileName: activeChapterMeta.file_name, chapterData: payload }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.ok) throw new Error(data.error || `HTTP ${res.status}`);
+      await postBooksAction({ type: 'books-save-chapter', resourceId: book.resourceId, fileName: activeChapterMeta.file_name, chapterData: payload });
 
       setChapterData(payload);
       setMetadata((prev) => ({
@@ -226,24 +221,21 @@ const BookChapterBrowser = () => {
           <ArrowLeft size={18} /> Book Content
         </button>
         <div style={{ flex: 1 }}>
-          <h1 style={{ fontSize: '1.15rem', margin: 0, fontWeight: 800, color: '#0f172a' }}>{metadata?.title || folder}</h1>
-          <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>{category} · {folder}</div>
+          <h1 style={{ fontSize: '1.15rem', margin: 0, fontWeight: 800, color: '#0f172a' }}>{book?.title || resourceId}</h1>
+          <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>{category}</div>
         </div>
         {issues.length > 0 && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem', color: '#b91c1c', fontWeight: 700 }}>
             <AlertTriangle size={16} /> {issues.filter((i) => i.severity === 'high').length} high · {issues.filter((i) => i.severity === 'medium').length} medium
           </div>
         )}
-        {metadata && mode === 'preview' && (
+        {book && mode === 'preview' && (
           <>
             <button onClick={() => setShowDuplicateModal(true)} title="Duplicate this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
               <Copy size={14} /> Duplicate
             </button>
             <button onClick={() => setShowDeleteModal(true)} title="Delete this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#dc2626', border: '1px solid #fecaca', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
               <Trash2 size={14} /> Delete
-            </button>
-            <button onClick={() => setShowPublishModal(true)} title="Publish this book to R2 (updates the live app)" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#0f766e', border: '1px solid #99f6e4', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
-              <UploadCloud size={14} /> Publish to R2
             </button>
           </>
         )}
@@ -264,9 +256,9 @@ const BookChapterBrowser = () => {
         )}
       </div>
 
-      {metaError && <div style={{ padding: '2rem' }}>Failed to load book metadata: {metaError}</div>}
+      {bookError && <div style={{ padding: '2rem' }}>Failed to load this book: {bookError}</div>}
 
-      {metadata && (
+      {metadata && book && (
         <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', minHeight: 'calc(100vh - 65px)' }}>
           <aside style={{ borderRight: '1px solid #e2e8f0', background: 'white', overflowY: 'auto', padding: '0.75rem' }}>
             {(metadata.chapters || []).map((c) => {
@@ -339,7 +331,7 @@ const BookChapterBrowser = () => {
               {chapterData && !chapterLoading && mode === 'edit' && (
                 <>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: '#4b6b32', fontSize: '0.78rem', fontWeight: 700 }}>
-                    <Eye size={14} /> Edit mode — Save Chapter to write these changes to disk.
+                    <Eye size={14} /> Edit mode — Save Chapter publishes these changes immediately.
                   </div>
                   {saveError && (
                     <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#b91c1c', borderRadius: 8, padding: '0.6rem 0.85rem', marginBottom: '1rem', fontSize: '0.8rem' }}>
@@ -391,24 +383,18 @@ const BookChapterBrowser = () => {
         </div>
       )}
 
-      {showDuplicateModal && metadata && (
+      {showDuplicateModal && book && (
         <DuplicateBookModal
-          source={{ category, folder, title: metadata.title || folder }}
+          source={book}
           onClose={() => setShowDuplicateModal(false)}
-          onDuplicated={(cat, destFolder) => { setShowDuplicateModal(false); navigate(`/admin/books/${cat}/${encodeURIComponent(destFolder)}`); }}
+          onDuplicated={(cat, newResourceId) => { setShowDuplicateModal(false); navigate(`/admin/books/${cat}/${newResourceId}`); }}
         />
       )}
-      {showDeleteModal && metadata && (
+      {showDeleteModal && book && (
         <ConfirmDeleteModal
-          book={{ category, folder, title: metadata.title || folder }}
+          book={book}
           onClose={() => setShowDeleteModal(false)}
           onDeleted={() => navigate('/admin/books')}
-        />
-      )}
-      {showPublishModal && metadata && (
-        <PublishModal
-          book={{ category, folder, title: metadata.title || folder }}
-          onClose={() => setShowPublishModal(false)}
         />
       )}
     </div>

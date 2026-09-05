@@ -48,23 +48,16 @@ const ModalShell = ({ title, onClose, children, footer }) => (
 export const NewBookModal = ({ onClose, onCreated }) => {
   const [category, setCategory] = useState('Guide');
   const [title, setTitle] = useState('');
-  const [folder, setFolder] = useState('');
-  const [folderTouched, setFolderTouched] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleTitleChange = (v) => {
-    setTitle(v);
-    if (!folderTouched) setFolder(v.trim());
-  };
-
   const handleCreate = async () => {
-    if (!title.trim() || !folder.trim()) return;
+    if (!title.trim()) return;
     setSaving(true);
     setError(null);
     try {
-      const data = await postBooksAction({ type: 'books-create', category, folder: folder.trim(), title: title.trim() });
-      onCreated(data.category, data.folder);
+      const data = await postBooksAction({ type: 'books-create', category, title: title.trim() });
+      onCreated(category, data.resourceId);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -78,7 +71,7 @@ export const NewBookModal = ({ onClose, onCreated }) => {
       onClose={onClose}
       footer={<>
         <button style={btnSecondary} onClick={onClose} disabled={saving}>Cancel</button>
-        <button style={{ ...btnPrimary, opacity: title.trim() && folder.trim() ? 1 : 0.5 }} onClick={handleCreate} disabled={saving || !title.trim() || !folder.trim()}>
+        <button style={{ ...btnPrimary, opacity: title.trim() ? 1 : 0.5 }} onClick={handleCreate} disabled={saving || !title.trim()}>
           {saving ? 'Creating…' : 'Create Book'}
         </button>
       </>}
@@ -93,20 +86,15 @@ export const NewBookModal = ({ onClose, onCreated }) => {
       </div>
       <div>
         <label style={labelStyle}>Title</label>
-        <input type="text" style={fieldStyle} value={title} onChange={(e) => handleTitleChange(e.target.value)} placeholder="e.g. Uttarakhand GS" autoFocus />
+        <input type="text" style={fieldStyle} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g. Uttarakhand GS" autoFocus />
       </div>
-      <div>
-        <label style={labelStyle}>Folder name (public/books/{category}/…)</label>
-        <input type="text" style={fieldStyle} value={folder} onChange={(e) => { setFolder(e.target.value); setFolderTouched(true); }} />
-      </div>
-      <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0 }}>Creates a blank book with one empty chapter — you'll write content in the chapter editor.</p>
+      <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0 }}>Creates a blank book with one empty chapter, live in R2 immediately — you'll write content in the chapter editor.</p>
     </ModalShell>
   );
 };
 
 export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
   const [destCategory, setDestCategory] = useState(source.category);
-  const [destFolder, setDestFolder] = useState(`${source.folder}_copy`);
   const [newTitle, setNewTitle] = useState(`${source.title} (Copy)`);
   const [findReplace, setFindReplace] = useState([{ find: '', replace: '' }]);
   const [saving, setSaving] = useState(false);
@@ -117,20 +105,18 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
   const addPair = () => setFindReplace((prev) => [...prev, { find: '', replace: '' }]);
 
   const handleDuplicate = async () => {
-    if (!destFolder.trim() || !newTitle.trim()) return;
+    if (!newTitle.trim()) return;
     setSaving(true);
     setError(null);
     try {
       const data = await postBooksAction({
         type: 'books-duplicate',
-        sourceCategory: source.category,
-        sourceFolder: source.folder,
+        sourceResourceId: source.resourceId,
         destCategory,
-        destFolder: destFolder.trim(),
         newTitle: newTitle.trim(),
         findReplace: findReplace.filter((p) => p.find.trim()),
       });
-      onDuplicated(data.category, data.folder);
+      onDuplicated(destCategory, data.resourceId);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -144,7 +130,7 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
       onClose={onClose}
       footer={<>
         <button style={btnSecondary} onClick={onClose} disabled={saving}>Cancel</button>
-        <button style={{ ...btnPrimary, opacity: destFolder.trim() && newTitle.trim() ? 1 : 0.5 }} onClick={handleDuplicate} disabled={saving || !destFolder.trim() || !newTitle.trim()}>
+        <button style={{ ...btnPrimary, opacity: newTitle.trim() ? 1 : 0.5 }} onClick={handleDuplicate} disabled={saving || !newTitle.trim()}>
           {saving ? 'Duplicating…' : 'Duplicate Book'}
         </button>
       </>}
@@ -162,10 +148,6 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
         <input type="text" style={fieldStyle} value={newTitle} onChange={(e) => setNewTitle(e.target.value)} autoFocus />
       </div>
       <div>
-        <label style={labelStyle}>Destination folder name</label>
-        <input type="text" style={fieldStyle} value={destFolder} onChange={(e) => setDestFolder(e.target.value)} />
-      </div>
-      <div>
         <label style={labelStyle}>Find &amp; replace across all chapters (optional)</label>
         <p style={{ fontSize: '0.76rem', color: '#94a3b8', margin: '0 0 0.5rem' }}>Useful for state-variant books — e.g. replace "Bihar" with "Jharkhand" everywhere in the clone.</p>
         {findReplace.map((pair, idx) => (
@@ -179,6 +161,7 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
           <Plus size={13} /> Add replacement
         </button>
       </div>
+      <p style={{ fontSize: '0.76rem', color: '#94a3b8', margin: 0 }}>Live in R2 immediately under a new id — the source book is untouched.</p>
     </ModalShell>
   );
 };
@@ -187,12 +170,13 @@ export const ConfirmDeleteModal = ({ book, onClose, onDeleted }) => {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
   const [confirmText, setConfirmText] = useState('');
+  const matches = confirmText.trim().toLowerCase() === book.title.trim().toLowerCase();
 
   const handleDelete = async () => {
     setSaving(true);
     setError(null);
     try {
-      await postBooksAction({ type: 'books-delete', category: book.category, folder: book.folder });
+      await postBooksAction({ type: 'books-delete', resourceId: book.resourceId });
       onDeleted();
     } catch (err) {
       setError(err.message);
@@ -208,8 +192,8 @@ export const ConfirmDeleteModal = ({ book, onClose, onDeleted }) => {
       footer={<>
         <button style={btnSecondary} onClick={onClose} disabled={saving}>Cancel</button>
         <button
-          style={{ ...btnPrimary, background: confirmText === book.folder ? '#dc2626' : '#fca5a5', cursor: confirmText === book.folder ? 'pointer' : 'not-allowed' }}
-          onClick={handleDelete} disabled={saving || confirmText !== book.folder}
+          style={{ ...btnPrimary, background: matches ? '#dc2626' : '#fca5a5', cursor: matches ? 'pointer' : 'not-allowed' }}
+          onClick={handleDelete} disabled={saving || !matches}
         >
           {saving ? 'Deleting…' : 'Delete Permanently'}
         </button>
@@ -217,81 +201,12 @@ export const ConfirmDeleteModal = ({ book, onClose, onDeleted }) => {
     >
       {error && <div style={errorStyle}>{error}</div>}
       <p style={{ margin: 0, fontSize: '0.88rem', color: '#334155' }}>
-        This permanently deletes <strong>{book.category}/{book.folder}</strong> ("{book.title}") from disk. This cannot be undone unless it was already committed to git.
+        This permanently deletes every chapter and image for <strong>"{book.title}"</strong> from R2, live immediately. This cannot be undone.
       </p>
       <div>
-        <label style={labelStyle}>Type the folder name to confirm: <code>{book.folder}</code></label>
+        <label style={labelStyle}>Type the title to confirm: <code>{book.title}</code></label>
         <input type="text" style={fieldStyle} value={confirmText} onChange={(e) => setConfirmText(e.target.value)} autoFocus />
       </div>
-    </ModalShell>
-  );
-};
-
-// Phase 4: pushes the book's current local JSON to R2 and upserts its
-// resources_v2 row(s) -- the one action in this whole editor that reaches
-// past the local machine into the live app, so it gets its own explicit
-// confirm step rather than living behind the same click as Save.
-export const PublishModal = ({ book, onClose, onPublished }) => {
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState(null);
-  const [result, setResult] = useState(null);
-
-  const handlePublish = async () => {
-    setSaving(true);
-    setError(null);
-    try {
-      const data = await postBooksAction({ type: 'books-publish', category: book.category, folder: book.folder });
-      setResult(data);
-      onPublished?.(data);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setSaving(false);
-    }
-  };
-
-  return (
-    <ModalShell
-      title={result ? 'Published' : `Publish "${book.title}" to R2`}
-      onClose={onClose}
-      footer={result ? (
-        <>
-          {result.resourceId && (
-            <a href={`/reader/${result.resourceId}`} target="_blank" rel="noreferrer" style={{ ...btnSecondary, textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-              View Live
-            </a>
-          )}
-          <button style={btnPrimary} onClick={onClose}>Done</button>
-        </>
-      ) : (
-        <>
-          <button style={btnSecondary} onClick={onClose} disabled={saving}>Cancel</button>
-          <button style={btnPrimary} onClick={handlePublish} disabled={saving}>{saving ? 'Publishing…' : 'Publish to R2'}</button>
-        </>
-      )}
-    >
-      {error && <div style={errorStyle}>{error}</div>}
-      {!result ? (
-        <>
-          <p style={{ margin: 0, fontSize: '0.88rem', color: '#334155' }}>
-            This uploads every chapter and image in <strong>{book.category}/{book.folder}</strong> to Cloudflare R2 and updates its resources_v2 database row(s) — the same thing <code>node scripts/sync_books_to_r2.mjs --execute</code> does, scoped to just this book.
-          </p>
-          <p style={{ margin: 0, fontSize: '0.82rem', color: '#b45309', background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 8, padding: '0.6rem 0.85rem' }}>
-            This is the one action here that reaches the live app — candidates using this resource will see the update immediately.
-          </p>
-        </>
-      ) : (
-        <>
-          <p style={{ margin: 0, fontSize: '0.88rem', color: '#166534', background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, padding: '0.6rem 0.85rem' }}>
-            Uploaded {result.chapterCount} chapter{result.chapterCount === 1 ? '' : 's'} and {result.imageCount} image{result.imageCount === 1 ? '' : 's'}.
-          </p>
-          <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
-            <div><strong>Storage:</strong> {result.storageBaseUrl}</div>
-            {result.resourceId && <div><strong>Resource ID:</strong> {result.resourceId}</div>}
-            {result.group === 'consolidated' && <div style={{ color: '#b45309', marginTop: '0.4rem' }}>Note: multiple existing database rows for this title were consolidated to one storage location.</div>}
-          </div>
-        </>
-      )}
     </ModalShell>
   );
 };
