@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ScrollText, Search, RefreshCw, Lock, ArrowLeft } from 'lucide-react';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
@@ -10,6 +10,9 @@ export default function PyqCenter() {
   const [searchText, setSearchText] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('All');
   const [effectiveTier, setEffectiveTier] = useState(null);
+  const [targetExam, setTargetExam] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeExamId = searchParams.get('exam');
 
   useEffect(() => {
     const loadPapers = async () => {
@@ -23,6 +26,18 @@ export default function PyqCenter() {
             .maybeSingle();
           if (profileRow) {
             setEffectiveTier(getEffectiveTier(profileRow.subscription_tier, profileRow.subscription_expires_at));
+          }
+        }
+
+        if (activeExamId) {
+          try {
+            const res = await fetch(`/api/exams?examId=${encodeURIComponent(activeExamId)}`);
+            const json = await res.json();
+            if (json.ok && json.exam) {
+              setTargetExam(json.exam);
+            }
+          } catch (e) {
+            console.error('Error loading exam for PYQ filter:', e);
           }
         }
 
@@ -40,7 +55,7 @@ export default function PyqCenter() {
       }
     };
     loadPapers();
-  }, []);
+  }, [activeExamId]);
 
   const access = canAccessResource(effectiveTier, 'PYQ');
 
@@ -51,7 +66,8 @@ export default function PyqCenter() {
                           (p.exam_name || '').toLowerCase().includes(searchText.toLowerCase()) ||
                           (p.subject || '').toLowerCase().includes(searchText.toLowerCase());
     const matchesSubject = selectedSubject === 'All' || p.subject === selectedSubject;
-    return matchesSearch && matchesSubject;
+    const matchesExam = !targetExam || !p.exam_name || p.exam_name.toLowerCase().includes(targetExam.name.toLowerCase()) || targetExam.name.toLowerCase().includes((p.exam_name || '').toLowerCase());
+    return matchesSearch && matchesSubject && matchesExam;
   });
 
   return (
@@ -84,6 +100,42 @@ export default function PyqCenter() {
           <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b', fontWeight: 500 }}>
             Practice with real questions from previous examinations, with answers and explanations.
           </p>
+
+          {targetExam && (
+            <div style={{
+              marginTop: '1rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              background: '#eef2e6',
+              border: '1px solid var(--ios-olive, #4b6b32)',
+              borderRadius: '999px',
+              padding: '0.4rem 1rem',
+              fontSize: '0.8rem',
+              color: 'var(--ios-olive, #4b6b32)',
+              fontWeight: 700,
+            }}>
+              <span>📜 Past Year Papers for: {targetExam.name}</span>
+              {activeExamId && (
+                <button
+                  type="button"
+                  onClick={() => setSearchParams({})}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#64748b',
+                    cursor: 'pointer',
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    textDecoration: 'underline',
+                    padding: 0,
+                  }}
+                >
+                  Show All Papers
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         <div style={{

@@ -7,6 +7,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { useExamContent } from '../hooks/useExamContent';
 import { resolveSubjectForTitle } from '../lib/thumbnailTaxonomy';
+import TodayObjectiveCard from '../components/learning/TodayObjectiveCard';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -25,6 +26,8 @@ const Dashboard = () => {
   const topExam = recommendations[0] || null;
   const { byCategory: topExamByCategory, loading: topExamContentLoading } = useExamContent(topExam?.exam_name, topExam?.career_track, topExam?.exam_id);
 
+  const [primaryTargetExam, setPrimaryTargetExam] = useState(null);
+
   useEffect(() => {
     if (!session?.user || isEmployer) return;
     let cancelled = false;
@@ -37,6 +40,29 @@ const Dashboard = () => {
         if (cancelled) return;
         setOpenedResourceIds(new Set((data || []).map((o) => o.ref_id).filter(Boolean)));
       });
+
+    // Fetch primary exam target
+    (async () => {
+      try {
+        const { data: target } = await supabase
+          .from('user_exam_targets')
+          .select('exam_id')
+          .eq('user_id', session.user.id)
+          .eq('is_primary', true)
+          .maybeSingle();
+
+        if (target?.exam_id && !cancelled) {
+          const res = await fetch(`/api/exams?examId=${encodeURIComponent(target.exam_id)}`);
+          const data = await res.json();
+          if (data.ok && data.exam && !cancelled) {
+            setPrimaryTargetExam(data.exam);
+          }
+        }
+      } catch (e) {
+        console.warn('primary target fetch in Dashboard:', e);
+      }
+    })();
+
     return () => { cancelled = true; };
   }, [session, isEmployer]);
 
@@ -572,6 +598,22 @@ const Dashboard = () => {
                 {transferableSkills.map((s, i) => <li key={i}>{s}</li>)}
               </ul>
             </Card>
+          </div>
+        )}
+
+        {!isEmployer && (primaryTargetExam || topExam) && (
+          <div style={{ marginBottom: '1.5rem' }}>
+            <TodayObjectiveCard
+              examId={primaryTargetExam?.id || topExam?.exam_id}
+              examName={primaryTargetExam?.name || topExam?.exam_name}
+              objective={{
+                type: 'read',
+                title: `Continue Preparing for ${primaryTargetExam?.name || topExam?.exam_name}`,
+                subtitle: 'Complete today\'s study materials, guidebooks, and mock tests for your target exam.',
+                targetUrl: `/exam/${primaryTargetExam?.id || topExam?.exam_id}`,
+              }}
+              compact
+            />
           </div>
         )}
 

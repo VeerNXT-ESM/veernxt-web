@@ -149,6 +149,7 @@ export function useExamContent(examName, careerTrack, examId) {
   const [byCategory, setByCategory] = useState(() => groupByCategory([]));
   const [quizzes, setQuizzes] = useState([]);
   const [intro, setIntro] = useState(null);
+  const [completedResourceIds, setCompletedResourceIds] = useState(new Set());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -172,6 +173,23 @@ export function useExamContent(examName, careerTrack, examId) {
         const rawResources = mappedResources !== null ? mappedResources : await fetchResourcesFallback(examName, careerTrack);
         const resources = await upgradeToCanonicalFormat(rawResources);
 
+        // Fetch completed resources for current user
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user && mounted) {
+          try {
+            const { data: reads } = await supabase
+              .from('user_resource_reads')
+              .select('resource_id, status')
+              .eq('user_id', session.user.id)
+              .eq('status', 'completed');
+            if (reads && mounted) {
+              setCompletedResourceIds(new Set(reads.map((r) => r.resource_id)));
+            }
+          } catch (e) {
+            console.warn('user_resource_reads query fallback:', e);
+          }
+        }
+
         if (!mounted) return;
         setByCategory(groupByCategory(resources));
         setQuizzes(quizRows);
@@ -187,5 +205,33 @@ export function useExamContent(examName, careerTrack, examId) {
     return () => { mounted = false; };
   }, [examName, careerTrack, examId]);
 
-  return { byCategory, quizzes, intro, loading, error };
+  const markAsCompleted = async (resourceId, subjectKey) => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user) return false;
+
+    try {
+      const { error } = await supabase
+        .from('user_resource_reads')
+        .upsert(
+          {
+            user_id: session.user.id,
+            resource_id: resourceId,
+            exam_id: examId || null,
+            subject_key: subjectKey || null,
+            status: 'completed',
+            completed_at: new Date().toISOString(),
+          },
+          { onConflict: 'user_id,resource_id' }
+        );
+
+      if (error) throw error;
+      setCompletedResourceIds((prev) => new Set([...prev, resourceId]));
+      return true;
+    } catch (err) {
+      console.error('Error marking resource as completed:', err);
+      return false;
+    }
+  };
+
+  return { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading, error };
 }

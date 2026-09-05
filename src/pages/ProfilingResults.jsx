@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { supabase } from '../lib/supabase';
 import {
   Award, Target, Briefcase, MapPin, ExternalLink, Crown,
-  FileText, PlayCircle, Sparkles, ArrowRight, ChevronDown, ChevronUp, RefreshCw,
-  Compass, ListChecks, AlertCircle, CheckCircle2,
+  FileText, PlayCircle, Sparkles, ArrowRight, RefreshCw,
+  Compass, ListChecks, AlertCircle, CheckCircle2, Rocket,
 } from 'lucide-react';
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
@@ -150,14 +150,47 @@ const ExamPrepSection = ({ exam }) => {
 
 const ProfilingResults = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [recommendations, setRecommendations] = useState([]);
   const [veerScore, setVeerScore] = useState(null);
   const [fullName, setFullName] = useState('');
   const [rawProfile, setRawProfile] = useState(null);
-  const [expandedExamId, setExpandedExamId] = useState(null);
   const [pointsAwarded, setPointsAwarded] = useState(0);
   const [pointsBalance, setPointsBalance] = useState(null);
+  const [preparingExamId, setPreparingExamId] = useState(null);
+
+  // Sets the candidate's active preparation target and navigates to the Exam Journey.
+  // If they already have a primary target, this exam becomes their new primary.
+  const handleStartPreparing = async (rec) => {
+    if (!rec?.exam_id) return;
+    setPreparingExamId(rec.exam_id);
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user) {
+        // Clear any existing primary, then upsert this exam as primary.
+        await supabase
+          .from('user_exam_targets')
+          .update({ is_primary: false })
+          .eq('user_id', session.user.id)
+          .eq('is_primary', true);
+
+        await supabase.from('user_exam_targets').upsert({
+          user_id: session.user.id,
+          exam_id: rec.exam_id,
+          is_primary: true,
+          status: 'active',
+          last_activity_at: new Date().toISOString(),
+        }, { onConflict: 'user_id,exam_id' });
+      }
+    } catch (err) {
+      console.warn('Could not save exam target:', err);
+      // Navigate anyway — the journey page can still show content.
+    } finally {
+      setPreparingExamId(null);
+      navigate(`/exam/${rec.exam_id}`);
+    }
+  };
 
   useEffect(() => {
     const load = async () => {
@@ -358,16 +391,19 @@ const ProfilingResults = () => {
                         <span>{Math.min(Math.round(rec.score), 100)}% Match</span>
                       </div>
                       <div className="results-rec-actions">
-                        <Button
+                        <button
                           type="button"
-                          variant="secondary"
-                          size="sm"
-                          icon={expandedExamId === rec.exam_id ? ChevronUp : ChevronDown}
-                          className="results-prep-toggle"
-                          onClick={() => setExpandedExamId(expandedExamId === rec.exam_id ? null : rec.exam_id)}
+                          className="results-start-preparing-btn"
+                          onClick={() => handleStartPreparing(rec)}
+                          disabled={preparingExamId === rec.exam_id}
                         >
-                          Prepare
-                        </Button>
+                          {preparingExamId === rec.exam_id ? (
+                            <RefreshCw size={14} className="results-animate-spin" />
+                          ) : (
+                            <Rocket size={14} />
+                          )}
+                          Start Preparing
+                        </button>
                         {rec.website && (
                           <a href={rec.website} target="_blank" rel="noopener noreferrer" className="results-rec-link">
                             <ExternalLink size={16} />
@@ -375,15 +411,6 @@ const ProfilingResults = () => {
                         )}
                       </div>
                     </Card>
-                    {expandedExamId === rec.exam_id && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -6 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2, ease: 'easeOut' }}
-                      >
-                        <ExamPrepSection exam={rec} />
-                      </motion.div>
-                    )}
                   </motion.div>
                 ))}
               </div>
@@ -670,39 +697,32 @@ const ProfilingResults = () => {
         }
         .results-rec-link { color: #ccc; }
         .results-rec-link:hover { color: var(--ios-olive); }
-        .results-prep-panel {
-          margin-top: 0.5rem;
-        }
-        .results-prep-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
-        }
-        .results-prep-grid h5 {
-          font-size: 0.72rem;
-          color: #888;
-          margin-bottom: 0.5rem;
-        }
-        .results-prep-list {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-        .results-prep-item {
-          display: flex;
+        .results-start-preparing-btn {
+          display: inline-flex;
           align-items: center;
-          gap: 0.5rem;
-          padding: 0.6rem 0.75rem;
-          background: white;
-          border-radius: var(--radius-sm);
-          text-decoration: none;
-          color: var(--ios-text);
-          font-size: 0.8rem;
-          font-weight: 600;
-          border: 1px solid rgba(0,0,0,0.05);
+          gap: 0.4rem;
+          background: var(--ios-olive);
+          color: white;
+          border: none;
+          border-radius: var(--radius-pill);
+          padding: 0.55rem 1.1rem;
+          font-size: 0.82rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: background 0.15s, transform 0.15s, opacity 0.15s;
+          white-space: nowrap;
         }
-        .results-prep-item:hover { border-color: var(--ios-olive); color: var(--ios-olive); }
-        .results-prep-none { font-size: 0.8rem; color: #aaa; }
+        .results-start-preparing-btn:hover:not(:disabled) {
+          background: #2d411e;
+          transform: translateY(-1px);
+        }
+        .results-start-preparing-btn:active:not(:disabled) {
+          transform: translateY(0);
+        }
+        .results-start-preparing-btn:disabled {
+          opacity: 0.65;
+          cursor: not-allowed;
+        }
         .results-prep-loading, .results-prep-empty {
           padding: 1rem;
           text-align: center;

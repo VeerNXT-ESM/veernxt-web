@@ -13,6 +13,89 @@
   padding: 2rem 1rem;
 }
 
+/* ── Release 1: Current Mission Hero Banner ── */
+.lc-prep-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, var(--ios-olive, #4b6b32) 0%, #2d411e 100%);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  margin-bottom: 0.5rem;
+}
+.lc-prep-hero-eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.35rem;
+}
+.lc-prep-hero-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.2rem;
+  line-height: 1.3;
+}
+.lc-prep-hero-body {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+.lc-prep-hero-right {
+  flex-shrink: 0;
+}
+.lc-prep-hero-continue-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+  white-space: nowrap;
+}
+.lc-prep-hero-continue-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-1px);
+}
+
+/* ── Release 1: Start Preparing button on exam cards ── */
+.lc-start-preparing-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--ios-olive, #4b6b32);
+  color: white;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s, opacity 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lc-start-preparing-btn:hover:not(:disabled) {
+  background: #2d411e;
+  transform: translateY(-1px);
+}
+.lc-start-preparing-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
 .browse-group {
   margin-top: 1.5rem;
 }

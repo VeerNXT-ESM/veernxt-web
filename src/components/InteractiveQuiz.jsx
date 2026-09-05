@@ -267,6 +267,21 @@ const InteractiveQuiz = () => {
         completed_at: new Date().toISOString()
       });
 
+      // Write to new Learning Journey tracking table
+      try {
+        await supabase.from('user_quiz_attempts').insert({
+          user_id: session.user.id,
+          quiz_id: id,
+          subject_key: quiz.subject || null,
+          score_pct: scorePercent,
+          questions_total: questions.length,
+          questions_correct: correctCount,
+          attempted_at: new Date().toISOString()
+        });
+      } catch (e) {
+        console.warn('user_quiz_attempts insert warning:', e);
+      }
+
       awardPoints('QUIZ_COMPLETE', { refId: id, metadata: { score_percent: scorePercent } });
 
       if (isFreeAttempt) {
