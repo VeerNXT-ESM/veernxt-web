@@ -57,6 +57,8 @@ import QuizzesPage from './pages/admin/QuizzesPage';
 import PyqPapersPage from './pages/admin/PyqPapersPage';
 import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
+import BooksPage from './pages/admin/BooksPage';
+import BookChapterBrowser from './pages/admin/BookChapterBrowser';
 import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
@@ -196,6 +198,7 @@ function App() {
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/syllabus" element={<SyllabusPage />} />
           <Route path="/admin/resources" element={<ResourcesPage />} />
+          <Route path="/admin/books" element={<BooksPage />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
           <Route path="/admin/content-graph" element={<ContentGraphPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
@@ -208,6 +211,7 @@ function App() {
         </Route>
         <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
+        <Route path="/admin/books/:category/:book" element={<BookChapterBrowser />} />
       </Routes>
     </Router>
   );
