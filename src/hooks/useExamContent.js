@@ -1,5 +1,23 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+
+const TRACKABLE_CATEGORIES = ['Guide', 'Precis', 'PYQ'];
+
+// Progress for the "Mission Objective" banner (TodayObjectiveCard) — counts
+// only the categories a candidate actually works through page by page
+// (Intro is a single curated blurb, not a checklist item).
+export function countProgress(byCategory, completedResourceIds) {
+  let totalCount = 0;
+  let completedCount = 0;
+  for (const cat of TRACKABLE_CATEGORIES) {
+    for (const res of byCategory?.[cat] || []) {
+      totalCount += 1;
+      if (completedResourceIds?.has(res.resource_id)) completedCount += 1;
+    }
+  }
+  return { completedCount, totalCount };
+}
 
 const RESOURCE_CATEGORIES = ['Intro', 'Guide', 'Precis', 'PYQ'];
 
@@ -146,6 +164,7 @@ function groupByCategory(resources) {
  * multi-row Intro category in the resource-mapping chain above.
  */
 export function useExamContent(examName, careerTrack, examId) {
+  const navigate = useNavigate();
   const [byCategory, setByCategory] = useState(() => groupByCategory([]));
   const [quizzes, setQuizzes] = useState([]);
   const [intro, setIntro] = useState(null);
@@ -205,9 +224,12 @@ export function useExamContent(examName, careerTrack, examId) {
     return () => { mounted = false; };
   }, [examName, careerTrack, examId]);
 
-  const markAsCompleted = async (resourceId, subjectKey) => {
+  const markAsCompleted = async (resourceId, subjectKey, completed = true) => {
     const { data: { session } } = await supabase.auth.getSession();
-    if (!session?.user) return false;
+    if (!session?.user) {
+      navigate('/login');
+      return false;
+    }
 
     try {
       const { error } = await supabase
@@ -218,17 +240,22 @@ export function useExamContent(examName, careerTrack, examId) {
             resource_id: resourceId,
             exam_id: examId || null,
             subject_key: subjectKey || null,
-            status: 'completed',
-            completed_at: new Date().toISOString(),
+            status: completed ? 'completed' : 'not_started',
+            completed_at: completed ? new Date().toISOString() : null,
           },
           { onConflict: 'user_id,resource_id' }
         );
 
       if (error) throw error;
-      setCompletedResourceIds((prev) => new Set([...prev, resourceId]));
+      setCompletedResourceIds((prev) => {
+        const next = new Set(prev);
+        if (completed) next.add(resourceId);
+        else next.delete(resourceId);
+        return next;
+      });
       return true;
     } catch (err) {
-      console.error('Error marking resource as completed:', err);
+      console.error('Error updating resource completion:', err);
       return false;
     }
   };

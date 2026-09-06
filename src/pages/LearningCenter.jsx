@@ -61,24 +61,16 @@ const LearningCenter = () => {
   // Saves the exam as the candidate's primary target and navigates to its journey.
   const handleStartPreparing = useCallback(async (examId, examName) => {
     if (!examId) return;
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user) {
+      navigate('/login');
+      return;
+    }
     setPreparingExamId(examId);
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session?.user) {
-        // Demote any existing primary, then upsert this exam as primary.
-        await supabase
-          .from('user_exam_targets')
-          .update({ is_primary: false })
-          .eq('user_id', session.user.id)
-          .eq('is_primary', true);
-        await supabase.from('user_exam_targets').upsert({
-          user_id: session.user.id,
-          exam_id: examId,
-          is_primary: true,
-          status: 'active',
-          last_activity_at: new Date().toISOString(),
-        }, { onConflict: 'user_id,exam_id' });
-      }
+      // Demote-then-upsert done atomically server-side (sql/user_learning_journey_fixes.sql)
+      // so a dropped connection can't leave the account with zero or two primaries.
+      await supabase.rpc('set_primary_exam_target', { p_exam_id: examId });
     } catch (err) {
       console.warn('Could not save exam target:', err);
     } finally {

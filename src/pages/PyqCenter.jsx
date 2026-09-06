@@ -61,14 +61,20 @@ export default function PyqCenter() {
 
   const subjects = ['All', ...new Set(papers.map(p => p.subject).filter(Boolean))];
 
+  const matchesExamFilter = (p) => !targetExam || !p.exam_name || p.exam_name.toLowerCase().includes(targetExam.name.toLowerCase()) || targetExam.name.toLowerCase().includes((p.exam_name || '').toLowerCase());
+
   const filteredPapers = papers.filter(p => {
     const matchesSearch = p.title.toLowerCase().includes(searchText.toLowerCase()) ||
                           (p.exam_name || '').toLowerCase().includes(searchText.toLowerCase()) ||
                           (p.subject || '').toLowerCase().includes(searchText.toLowerCase());
     const matchesSubject = selectedSubject === 'All' || p.subject === selectedSubject;
-    const matchesExam = !targetExam || !p.exam_name || p.exam_name.toLowerCase().includes(targetExam.name.toLowerCase()) || targetExam.name.toLowerCase().includes((p.exam_name || '').toLowerCase());
-    return matchesSearch && matchesSubject && matchesExam;
+    return matchesSearch && matchesSubject && matchesExamFilter(p);
   });
+
+  // Distinguishes "the exam filter itself matched nothing" (papers exist,
+  // just none tagged for this exam yet) from "no PYQs exist in the library
+  // at all" — the two need different messaging and CTAs.
+  const examFilterZeroedOut = !!targetExam && papers.length > 0 && !papers.some(matchesExamFilter);
 
   return (
     <div style={{ minHeight: '100vh', background: '#F4F4F8', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif" }}>
@@ -175,6 +181,23 @@ export default function PyqCenter() {
         {loading ? (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
             <RefreshCw className="animate-spin" size={24} color="var(--ios-olive)" />
+          </div>
+        ) : filteredPapers.length === 0 && examFilterZeroedOut ? (
+          <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', border: '1px solid #e2e8f0' }}>
+            <ScrollText size={48} color="#cbd5e1" style={{ marginBottom: '1rem' }} />
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--ios-text)' }}>No PYQs matched to {targetExam.name} yet</h3>
+            <p style={{ color: '#64748b', fontSize: '0.85rem', margin: '0 0 1rem' }}>We haven't tagged past papers for this exact exam yet — the library has papers for other exams though.</p>
+            <button
+              type="button"
+              onClick={() => setSearchParams({})}
+              style={{
+                background: 'var(--ios-olive)', color: 'white', border: 'none',
+                padding: '0.6rem 1.25rem', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer',
+                textTransform: 'uppercase', letterSpacing: '0.5px',
+              }}
+            >
+              Show All Papers
+            </button>
           </div>
         ) : filteredPapers.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', border: '1px solid #e2e8f0' }}>

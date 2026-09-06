@@ -5,7 +5,7 @@ import { ShieldCheck, MapPin, Briefcase, RefreshCw, ChevronDown, ChevronUp, File
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { useExamContent } from '../hooks/useExamContent';
+import { useExamContent, countProgress } from '../hooks/useExamContent';
 import { resolveSubjectForTitle } from '../lib/thumbnailTaxonomy';
 import TodayObjectiveCard from '../components/learning/TodayObjectiveCard';
 
@@ -24,9 +24,14 @@ const Dashboard = () => {
   // useExamContent below is a hook and can't follow a conditional return.
   const recommendations = profile?.recommendations || [];
   const topExam = recommendations[0] || null;
-  const { byCategory: topExamByCategory, loading: topExamContentLoading } = useExamContent(topExam?.exam_name, topExam?.career_track, topExam?.exam_id);
+  const { byCategory: topExamByCategory, completedResourceIds: topExamCompletedIds, loading: topExamContentLoading } = useExamContent(topExam?.exam_name, topExam?.career_track, topExam?.exam_id);
 
   const [primaryTargetExam, setPrimaryTargetExam] = useState(null);
+
+  // Mission Objective progress — prefers the primary target's own content
+  // over the top recommendation's when the candidate has explicitly set one.
+  const { byCategory: primaryByCategory, completedResourceIds: primaryCompletedIds } =
+    useExamContent(primaryTargetExam?.name, primaryTargetExam?.careerTrack, primaryTargetExam?.id);
 
   useEffect(() => {
     if (!session?.user || isEmployer) return;
@@ -601,21 +606,41 @@ const Dashboard = () => {
           </div>
         )}
 
-        {!isEmployer && (primaryTargetExam || topExam) && (
-          <div style={{ marginBottom: '1.5rem' }}>
-            <TodayObjectiveCard
-              examId={primaryTargetExam?.id || topExam?.exam_id}
-              examName={primaryTargetExam?.name || topExam?.exam_name}
-              objective={{
+        {!isEmployer && (primaryTargetExam || topExam) && (() => {
+          const objectiveExamId = primaryTargetExam?.id || topExam?.exam_id;
+          const objectiveExamName = primaryTargetExam?.name || topExam?.exam_name;
+          const { completedCount, totalCount } = countProgress(
+            primaryTargetExam ? primaryByCategory : topExamByCategory,
+            primaryTargetExam ? primaryCompletedIds : topExamCompletedIds
+          );
+          const objective = totalCount > 0 && completedCount === totalCount
+            ? {
+                type: 'complete',
+                title: `You've completed prep for ${objectiveExamName}`,
+                subtitle: 'Keep your edge sharp with a mock test or past-year paper.',
+                targetUrl: `/quiz-center?exam=${objectiveExamId}`,
+                completedCount,
+                totalCount,
+              }
+            : {
                 type: 'read',
-                title: `Continue Preparing for ${primaryTargetExam?.name || topExam?.exam_name}`,
+                title: `Continue Preparing for ${objectiveExamName}`,
                 subtitle: 'Complete today\'s study materials, guidebooks, and mock tests for your target exam.',
-                targetUrl: `/exam/${primaryTargetExam?.id || topExam?.exam_id}`,
-              }}
-              compact
-            />
-          </div>
-        )}
+                targetUrl: `/exam/${objectiveExamId}`,
+                completedCount,
+                totalCount,
+              };
+          return (
+            <div style={{ marginBottom: '1.5rem' }}>
+              <TodayObjectiveCard
+                examId={objectiveExamId}
+                examName={objectiveExamName}
+                objective={objective}
+                compact
+              />
+            </div>
+          );
+        })()}
 
         <div className="dashboard-grid">
           {/* Your Next Step — the single highest-priority action, front and

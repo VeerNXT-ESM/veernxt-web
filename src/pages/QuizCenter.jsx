@@ -14,6 +14,11 @@ export default function QuizCenter() {
   // null = no matched exam yet (fallback: show every subject, unfiltered);
   // a Set = canonical subject keys required by the user's top-matched exam.
   const [allowedSubjectKeys, setAllowedSubjectKeys] = useState(null);
+  // null = no lc_exam_quiz_map rows for this exam yet (subject-overlap
+  // fallback below still applies); a Set = the exam has a real, reasoned
+  // mapping (sql/lc_exam_quiz_map.sql, scripts/map_exam_quizzes_gemini.mjs)
+  // and quizzes are restricted to exactly those quiz_ids.
+  const [mappedQuizIds, setMappedQuizIds] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeSubjectKey = searchParams.get('subject');
   const activeExamId = searchParams.get('exam');
@@ -47,6 +52,18 @@ export default function QuizCenter() {
               } catch (e) {
                 console.error('Error fetching target exam subjects:', e);
               }
+
+              try {
+                const { data: mapRows } = await supabase
+                  .from('lc_exam_quiz_map')
+                  .select('quiz_id')
+                  .eq('exam_id', examIdToLoad);
+                if (mapRows && mapRows.length > 0) {
+                  setMappedQuizIds(new Set(mapRows.map((r) => r.quiz_id)));
+                }
+              } catch (e) {
+                console.warn('lc_exam_quiz_map query fallback:', e);
+              }
             }
           }
         }
@@ -72,20 +89,28 @@ export default function QuizCenter() {
   const freeQuizUsed = !!profile?.free_quiz_used;
   const quizAccess = canTakeQuiz(tier, freeQuizUsed);
 
-  // Group quizzes by canonical subject where possible. A quiz whose subject
-  // doesn't match the 17-subject taxonomy (which is most of them today --
-  // quizzes.subject is largely untagged/"General") falls back to an ad-hoc
-  // group keyed on its raw subject text, and that fallback group is always
-  // shown regardless of exam-match filtering -- only canonically-tagged
-  // quizzes get filtered to the user's matched exam's required subjects.
-  // This means the page stays useful today and tightens up automatically
-  // as quizzes get properly re-tagged via the admin bulk-assign tool.
+  // Group quizzes by canonical subject where possible (regardless of which
+  // exam-match mode below is active — subject grouping is just the browse
+  // structure). Exam-match filtering itself has two tiers:
+  //  1. lc_exam_quiz_map has rows for this exam (mappedQuizIds is a Set) ->
+  //     restrict to exactly those quiz_ids, a real per-exam match.
+  //  2. No mapping rows yet -> fall back to subject-overlap (any quiz whose
+  //     canonical subject the exam's syllabus requires). This barely
+  //     discriminates for common subjects (English/Reasoning/etc. are
+  //     required by nearly every exam) but keeps the page useful pre-rollout.
+  //     A quiz whose subject doesn't match the 17-subject taxonomy at all
+  //     (quizzes.subject is largely untagged/"General" today) is exempt
+  //     from this fallback filter so it isn't hidden outright.
   const groups = useMemo(() => {
     const map = new Map();
     for (const quiz of quizzes) {
       const canonical = resolveCanonicalSubjectLabel(quiz.subject);
+      if (mappedQuizIds) {
+        if (!mappedQuizIds.has(quiz.id)) continue;
+      } else if (allowedSubjectKeys && canonical && !allowedSubjectKeys.has(canonical.key)) {
+        continue;
+      }
       const key = canonical?.key || quiz.subject || 'uncategorized';
-      if (allowedSubjectKeys && canonical && !allowedSubjectKeys.has(key)) continue;
       if (!map.has(key)) {
         map.set(key, {
           key,
@@ -97,7 +122,7 @@ export default function QuizCenter() {
       map.get(key).quizzes.push(quiz);
     }
     return [...map.values()].sort((a, b) => a.label.localeCompare(b.label));
-  }, [quizzes, allowedSubjectKeys]);
+  }, [quizzes, allowedSubjectKeys, mappedQuizIds]);
 
   const activeGroup = groups.find((g) => g.key === activeSubjectKey) || null;
 
@@ -175,7 +200,7 @@ export default function QuizCenter() {
               color: 'var(--ios-olive, #4b6b32)',
               fontWeight: 700,
             }}>
-              <span>🎯 Filtered for: {targetExam.name}</span>
+              <span>{mappedQuizIds ? `🎯 Filtered for: ${targetExam.name}` : `Related subjects for: ${targetExam.name}`}</span>
               {activeExamId && (
                 <button
                   type="button"

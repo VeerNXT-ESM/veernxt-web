@@ -1,16 +1,18 @@
 import { useEffect, useState, useCallback } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, Target, Rocket, PlayCircle, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { getEffectiveTier, TIERS } from '../lib/subscriptionAccess';
 import ExamContentPreview from '../components/ExamContentPreview';
 import TodayObjectiveCard from '../components/learning/TodayObjectiveCard';
+import { useExamContent, countProgress } from '../hooks/useExamContent';
 import Card from '../components/ui/Card';
 import ExamThumbnail from './admin/ExamThumbnail';
 import './ExamSyllabus.css';
 
 const ExamSyllabus = () => {
   const { examId } = useParams();
+  const navigate = useNavigate();
   const [exam, setExam] = useState(null);
   const [examLoading, setExamLoading] = useState(true);
   const [examError, setExamError] = useState(null);
@@ -18,6 +20,14 @@ const ExamSyllabus = () => {
   const [freeQuizUsed, setFreeQuizUsed] = useState(false);
   const [isPrimaryTarget, setIsPrimaryTarget] = useState(false);
   const [preparingLoading, setPreparingLoading] = useState(false);
+
+  // Real progress for the Mission Objective banner below — a second call to
+  // the same hook ExamContentPreview already uses internally with these
+  // identical args. Duplicates one fetch per page load; accepted tradeoff
+  // over prop-drilling ExamContentPreview's internal state (it's also
+  // consumed by JobBoard.jsx/Dashboard.jsx with different data needs).
+  const { byCategory: objectiveByCategory, completedResourceIds: objectiveCompletedIds } =
+    useExamContent(exam?.name, exam?.careerTrack, examId);
 
   useEffect(() => {
     let mounted = true;
@@ -81,29 +91,17 @@ const ExamSyllabus = () => {
   }, [examId]);
 
   const handleMakePrimary = async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user) {
+      navigate('/login');
+      return;
+    }
     setPreparingLoading(true);
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.user) return;
-
-      await supabase
-        .from('user_exam_targets')
-        .update({ is_primary: false })
-        .eq('user_id', session.user.id);
-
-      await supabase
-        .from('user_exam_targets')
-        .upsert(
-          {
-            user_id: session.user.id,
-            exam_id: examId,
-            is_primary: true,
-            status: 'active',
-            last_activity_at: new Date().toISOString(),
-          },
-          { onConflict: 'user_id,exam_id' }
-        );
-
+      // Demote-then-upsert done atomically server-side (sql/user_learning_journey_fixes.sql)
+      // so a dropped connection can't leave the account with zero or two primaries.
+      const { error } = await supabase.rpc('set_primary_exam_target', { p_exam_id: examId });
+      if (error) throw error;
       setIsPrimaryTarget(true);
     } catch (err) {
       console.error('Error setting primary exam target:', err);
@@ -131,12 +129,24 @@ const ExamSyllabus = () => {
 
   const subjects = Object.entries(exam.subjects || {}).filter(([, v]) => String(v).toLowerCase() === 'yes').map(([k]) => k);
 
-  const objective = {
-    type: 'read',
-    title: `Explore ${exam.name} Syllabus`,
-    subtitle: 'Review subjects, guidebooks, précis, and past question papers for your exam.',
-    targetUrl: '#section-guide',
-  };
+  const { completedCount, totalCount } = countProgress(objectiveByCategory, objectiveCompletedIds);
+  const objective = totalCount > 0 && completedCount === totalCount
+    ? {
+        type: 'complete',
+        title: `You've completed the ${exam.name} prep material`,
+        subtitle: 'Keep your edge sharp with a mock test or past-year paper.',
+        targetUrl: `/quiz-center?exam=${examId}`,
+        completedCount,
+        totalCount,
+      }
+    : {
+        type: 'read',
+        title: `Explore ${exam.name} Syllabus`,
+        subtitle: 'Review subjects, guidebooks, précis, and past question papers for your exam.',
+        targetUrl: '#section-guide',
+        completedCount,
+        totalCount,
+      };
 
   return (
     <div style={{ padding: '3rem 1.5rem', maxWidth: '900px', margin: '0 auto' }}>

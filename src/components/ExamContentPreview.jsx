@@ -59,9 +59,9 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
           type="button"
           onClick={(e) => {
             e.stopPropagation();
-            onToggleComplete(resource.resource_id);
+            onToggleComplete(resource.resource_id, !isCompleted);
           }}
-          title={isCompleted ? "Marked as Completed" : "Mark as Complete"}
+          title={isCompleted ? "Marked as Complete — click to undo" : "Mark as Complete"}
           style={{
             background: isCompleted ? '#16a34a' : 'transparent',
             border: isCompleted ? 'none' : '2px solid #cbd5e1',
@@ -161,7 +161,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                   examName={examName}
                   locked={isResourceLockedForUser(tier, res.category)}
                   isCompleted={completedResourceIds?.has(res.resource_id)}
-                  onToggleComplete={(id) => markAsCompleted(id)}
+                  onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
                 />
               ))}
             </div>
@@ -285,7 +285,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                     examName={examName}
                     locked={isResourceLockedForUser(tier, catKey)}
                     isCompleted={completedResourceIds?.has(res.resource_id)}
-                    onToggleComplete={(id) => markAsCompleted(id, openGroup.key)}
+                    onToggleComplete={(id, completed) => markAsCompleted(id, openGroup.key, completed)}
                   />
                 ))}
               </div>
