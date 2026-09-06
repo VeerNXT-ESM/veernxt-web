@@ -1,9 +1,7 @@
+import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  'https://jtcyeufhvpieyngracpo.supabase.co',
-  '***REDACTED-ROTATED-SERVICE-ROLE-KEY***'
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 async function checkAuthUsers() {
   console.log("Fetching users from auth.users...");

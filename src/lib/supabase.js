@@ -1,9 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://jtcyeufhvpieyngracpo.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '***REDACTED-ROTATED-SERVICE-ROLE-KEY***';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-// Real Supabase client — no more mock overrides
+if (!supabaseAnonKey) {
+  throw new Error('VITE_SUPABASE_ANON_KEY is not set — refusing to start without it rather than falling back to a hardcoded key.');
+}
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 /**

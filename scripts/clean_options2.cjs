@@ -1,5 +1,7 @@
-const SUPABASE_URL = 'https://jtcyeufhvpieyngracpo.supabase.co';
-const SUPABASE_KEY = '***REDACTED-ROTATED-SERVICE-ROLE-KEY***';
+require('dotenv/config');
+
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 async function querySupabase(endpoint, method = 'GET', body = null) {
   const options = {

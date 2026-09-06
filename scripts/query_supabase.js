@@ -1,9 +1,7 @@
+import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://jtcyeufhvpieyngracpo.supabase.co';
-const supabaseKey = '***REDACTED-ROTATED-SERVICE-ROLE-KEY***';
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 async function checkSupabase() {
   console.log('Querying Supabase resources_v2...');
