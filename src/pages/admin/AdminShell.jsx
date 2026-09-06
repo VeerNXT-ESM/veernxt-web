@@ -2,39 +2,35 @@ import { useEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
-  GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield,
+  GraduationCap, BookOpen, Library, Users, Shield,
   HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked,
 } from 'lucide-react';
 import './AdminCMS.css';
 
-const ICONS = { GraduationCap, BookOpen, Library, BarChart3, Share2, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked };
+const ICONS = { GraduationCap, BookOpen, Library, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it
-// duplicates most of the left sidebar. A couple of labels alias onto the
-// nearest real page rather than a dead route: Content Library has no page
-// of its own yet (same canonical-content concept as Resources), Analytics
-// aliases to Overview, Settings aliases to Roles & Permissions (the closest
-// thing to system configuration that exists today).
+// duplicates most of the left sidebar. Content Library aliases onto
+// Resources (same canonical-content concept, no page of its own yet);
+// Settings aliases to Roles & Permissions (the closest thing to system
+// configuration that exists today). Exams is first — it's the actual
+// admin landing page (see the /admin redirect in App.jsx).
 const HORIZONTAL_NAV = [
-  { label: 'Dashboard', path: '/admin/overview' },
   { label: 'Exams', path: '/admin/exams' },
   { label: 'Syllabus', path: '/admin/syllabus' },
   { label: 'Resources', path: '/admin/resources' },
   { label: 'Content Library', path: '/admin/resources' },
-  { label: 'Analytics', path: '/admin/overview' },
   { label: 'Users', path: '/admin/users' },
   { label: 'Settings', path: '/admin/roles' },
 ];
 
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
-  '/admin/overview': { title: 'Overview', description: 'Real numbers from the canonical content library — not decoration.' },
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
   '/admin/syllabus': { title: 'Syllabus', description: 'Inspect subjects independently of any one exam.' },
   '/admin/resources': { title: 'Resource Library', description: 'The master canonical content database — every resource exists once.' },
   '/admin/books': { title: 'Book Content', description: 'Browse and QA the Guide/Precis book JSON that actually ships to candidates.' },
-  '/admin/content-graph': { title: 'Content Graph', description: 'How canonical content is actually reused across exams.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
   '/admin/quizzes': { title: 'Quizzes', description: 'Manually authored assessments.' },

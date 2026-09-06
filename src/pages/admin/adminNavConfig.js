@@ -14,13 +14,6 @@ export const ADMIN_NAV = [
     ],
   },
   {
-    group: 'ANALYTICS',
-    items: [
-      { key: 'overview', label: 'Overview', path: '/admin/overview', icon: 'BarChart3', badge: 'New' },
-      { key: 'content-graph', label: 'Content Graph', path: '/admin/content-graph', icon: 'Share2' },
-    ],
-  },
-  {
     group: 'SYSTEM',
     items: [
       { key: 'users', label: 'Users', path: '/admin/users', icon: 'Users' },

@@ -45,12 +45,10 @@ import PyqCenter from './pages/PyqCenter';
 import PyqReader from './pages/PyqReader';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
-import OverviewPage from './pages/admin/OverviewPage';
 import ExamsPage from './pages/admin/ExamsPage';
 import SyllabusPage from './pages/admin/SyllabusPage';
 import ResourcesPage from './pages/admin/ResourcesPage';
 import ConductingBodiesPage from './pages/admin/ConductingBodiesPage';
-import ContentGraphPage from './pages/admin/ContentGraphPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
 import QuizzesPage from './pages/admin/QuizzesPage';
@@ -193,14 +191,12 @@ function App() {
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route element={<AdminShell />}>
-          <Route path="/admin" element={<Navigate to="/admin/overview" replace />} />
-          <Route path="/admin/overview" element={<OverviewPage />} />
+          <Route path="/admin" element={<Navigate to="/admin/exams" replace />} />
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/syllabus" element={<SyllabusPage />} />
           <Route path="/admin/resources" element={<ResourcesPage />} />
           <Route path="/admin/books" element={<BooksPage />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
-          <Route path="/admin/content-graph" element={<ContentGraphPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />
           <Route path="/admin/quizzes" element={<QuizzesPage />} />
