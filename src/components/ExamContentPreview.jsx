@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check } from 'lucide-react';
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
@@ -22,27 +21,13 @@ const LIST_SECTIONS = [
   { key: 'PYQ', label: 'Previous Year Questions' },
 ];
 
-// `variant="subjects"` groups the same resources one level differently:
-// by subject (English, Reasoning, ...) resolved per-resource from its
-// title via the shared thumbnail taxonomy, rather than by category — a
-// subject usually has both a Guide and a Précis, so category-first lists
-// split the same subject's material across two lists.
+// `variant="subjects"` sections resources by category (Intro/Guide/Precis/
+// PYQ) — every resource is visible immediately, no subject-tile click-
+// through step. Each resource still gets its own subject-colour thumbnail
+// (English, Reasoning, ...), resolved per-resource from its title via the
+// shared thumbnail taxonomy, via ResourceTile below.
 const SUBJECT_CATEGORY_ORDER = ['Intro', 'Guide', 'Precis', 'PYQ'];
 const SUBJECT_CATEGORY_LABELS = { Intro: 'Intro', Guide: 'Guide', Precis: 'Précis', PYQ: 'PYQ' };
-
-function buildSubjectGroups(byCategory) {
-  const groups = new Map();
-  for (const catKey of SUBJECT_CATEGORY_ORDER) {
-    for (const res of byCategory[catKey] || []) {
-      const subject = resolveSubjectForTitle(res.title);
-      if (!groups.has(subject.key)) groups.set(subject.key, { ...subject, categories: new Map() });
-      const group = groups.get(subject.key);
-      if (!group.categories.has(catKey)) group.categories.set(catKey, []);
-      group.categories.get(catKey).push(res);
-    }
-  }
-  return [...groups.values()];
-}
 
 function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete }) {
   return (
@@ -92,6 +77,61 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
   );
 }
 
+// One thumbnail per resource (not per subject) for `variant="subjects"` —
+// colour/art comes from resolveSubjectForTitle, same taxonomy the old
+// subject-tile grouping used, just applied per-document instead of once
+// per subject so a Guide and its sibling Précis each get their own tile
+// and label instead of sharing one tile captioned "Guide • Précis".
+function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete }) {
+  const subject = resolveSubjectForTitle(resource.title);
+  const bg = getFamilyHex(subject.family);
+  const image = getSubjectThumbnailImage(subject.key);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+      <Link to={`/reader/${resource.resource_id}`} style={{ position: 'relative', display: 'block', textDecoration: 'none' }}>
+        <span
+          style={{
+            aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'flex-end',
+            padding: '0.5rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
+            textShadow: image ? '0 1px 4px rgba(0,0,0,0.65)' : 'none',
+            background: image ? `linear-gradient(160deg, ${bg}40 0%, ${bg}59 100%), url("${image}")` : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
+            backgroundSize: image ? 'cover' : undefined,
+            backgroundPosition: image ? 'center' : undefined,
+            boxShadow: isCompleted ? '0 0 0 3px #16a34a' : 'none',
+          }}
+        >
+          {subject.label}
+        </span>
+        <span style={{
+          position: 'absolute', top: '0.4rem', right: '0.4rem', width: '20px', height: '20px', borderRadius: '50%',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', background: locked ? '#ef4444' : '#16a34a',
+        }}>
+          {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
+        </span>
+      </Link>
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
+        <button
+          type="button"
+          onClick={() => onToggleComplete(resource.resource_id, !isCompleted)}
+          title={isCompleted ? 'Marked as Complete — click to undo' : 'Mark as Complete'}
+          style={{
+            background: isCompleted ? '#16a34a' : 'transparent',
+            border: isCompleted ? 'none' : '2px solid #cbd5e1',
+            borderRadius: '50%', width: '18px', height: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', padding: 0, flexShrink: 0, marginTop: '0.1rem',
+          }}
+        >
+          {isCompleted && <Check size={11} color="#fff" strokeWidth={3} />}
+        </button>
+        <span style={{ fontSize: '0.74rem', fontWeight: isCompleted ? 600 : 500, lineHeight: 1.3, color: isCompleted ? '#16a34a' : '#0f172a' }}>
+          {cleanContentTitle(resource.title, examName)}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function QuizRow({ quiz, examName, locked }) {
   return (
     <Link
@@ -124,7 +164,6 @@ function QuizRow({ quiz, examName, locked }) {
  */
 const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles' }) => {
   const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading, error } = useExamContent(examName, careerTrack, examId);
-  const [openSubjectKey, setOpenSubjectKey] = useState(null);
 
   if (loading) {
     return (
@@ -206,10 +245,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
   }
 
   if (variant === 'subjects') {
-    const quizAccess = canTakeQuiz(tier, freeQuizUsed);
-    const subjectGroups = buildSubjectGroups(byCategory);
-    const openGroup = subjectGroups.find((g) => g.key === openSubjectKey) || null;
-    const hasAnything = subjectGroups.length > 0 || quizzes.length > 0 || !!intro;
+    const hasAnything = SUBJECT_CATEGORY_ORDER.some((c) => (byCategory[c]?.length || 0) > 0) || quizzes.length > 0 || !!intro;
 
     if (!hasAnything) {
       return <p style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
@@ -218,7 +254,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
     return (
       <div style={{ padding: '0.5rem 0 0' }}>
         {intro && (
-          <div id="section-intro" style={{ marginBottom: '1.1rem', scrollMarginTop: '1.5rem' }}>
+          <div id="section-intro" style={{ marginBottom: '1.5rem', scrollMarginTop: '1.5rem' }}>
             <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Introduction</h4>
             {intro.source === 'auto' ? (
               <ResourceRow
@@ -226,7 +262,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                 examName={examName}
                 locked={false}
                 isCompleted={completedResourceIds?.has(intro.resource.resource_id)}
-                onToggleComplete={(id) => markAsCompleted(id)}
+                onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
               />
             ) : (
               <div style={{ padding: '0.9rem 1rem', borderRadius: 'var(--radius-sm, 10px)', border: '1px solid var(--border, #e2e8f0)', background: '#fff' }}>
@@ -237,61 +273,27 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
           </div>
         )}
 
-        {subjectGroups.length > 0 && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.75rem', marginBottom: '1.1rem' }}>
-            {subjectGroups.map((group) => {
-              const bg = getFamilyHex(group.family);
-              const image = getSubjectThumbnailImage(group.key);
-              const active = openSubjectKey === group.key;
-              const availableCats = SUBJECT_CATEGORY_ORDER.filter((c) => group.categories.has(c));
-              return (
-                <button
-                  key={group.key}
-                  type="button"
-                  onClick={() => setOpenSubjectKey(active ? null : group.key)}
-                  style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', font: 'inherit' }}
-                >
-                  <span
-                    style={{
-                      aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      textAlign: 'center', padding: '0.6rem', fontWeight: 800, fontSize: '0.72rem', color: '#fff',
-                      textShadow: image ? '0 1px 4px rgba(0,0,0,0.65)' : 'none',
-                      background: image ? `linear-gradient(160deg, ${bg}40 0%, ${bg}59 100%), url("${image}")` : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
-                      backgroundSize: image ? 'cover' : undefined,
-                      backgroundPosition: image ? 'center' : undefined,
-                      boxShadow: active ? '0 0 0 3px var(--ios-olive, #4b6b32)' : 'none',
-                    }}
-                  >
-                    {group.label.toUpperCase()}
-                  </span>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0f172a' }}>{group.label}</span>
-                  <span style={{ fontSize: '0.68rem', color: '#94a3b8' }}>{availableCats.map((c) => SUBJECT_CATEGORY_LABELS[c]).join(' • ')}</span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {openGroup && (
-          <div style={{ marginBottom: '1.1rem', borderTop: '1px solid var(--border, #e2e8f0)', paddingTop: '1rem' }}>
-            <h4 style={{ fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.65rem' }}>{openGroup.label}</h4>
-            {SUBJECT_CATEGORY_ORDER.filter((c) => openGroup.categories.has(c)).map((catKey) => (
-              <div key={catKey} style={{ marginBottom: '0.85rem' }}>
-                <h5 style={{ fontSize: '0.68rem', color: '#94a3b8', fontWeight: 700, marginBottom: '0.4rem', textTransform: 'uppercase' }}>{SUBJECT_CATEGORY_LABELS[catKey]}</h5>
-                {openGroup.categories.get(catKey).map((res) => (
-                  <ResourceRow
+        {SUBJECT_CATEGORY_ORDER.filter((catKey) => catKey !== 'Intro').map((catKey) => {
+          const items = byCategory[catKey] || [];
+          if (items.length === 0) return null;
+          return (
+            <div key={catKey} style={{ marginBottom: '1.5rem' }}>
+              <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>{SUBJECT_CATEGORY_LABELS[catKey]}</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.85rem' }}>
+                {items.map((res) => (
+                  <ResourceTile
                     key={res.id || res.resource_id}
                     resource={res}
                     examName={examName}
                     locked={isResourceLockedForUser(tier, catKey)}
                     isCompleted={completedResourceIds?.has(res.resource_id)}
-                    onToggleComplete={(id, completed) => markAsCompleted(id, openGroup.key, completed)}
+                    onToggleComplete={(id, completed) => markAsCompleted(id, resolveSubjectForTitle(res.title).key, completed)}
                   />
                 ))}
               </div>
-            ))}
-          </div>
-        )}
+            </div>
+          );
+        })}
 
         {quizzes.length > 0 && (
           <div style={{ marginBottom: '1.1rem' }}>
