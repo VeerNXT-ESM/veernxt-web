@@ -1677,3 +1677,85 @@ All three fixed and re-verified live before calling this done.
 
 Carried over from §38.3/§37.6, still untouched, now four-plus sessions without being picked up: Gemini prepay status (unknown since §36's $0), the concurrency-pool/exact-match short-circuit for `map_exam_resources_gemini.mjs`, whether the user's manual subject-adding pass ever happened, `sync_books_to_r2.mjs --execute`'s collision-risk re-check, and `lc_exam_resource_map`'s RLS-blocks-everything production bug (§37.1) — none of these were touched this session either.
 
+---
+
+## 40. New session — local-dev book content editor built for Guide/Précis books, then rewired straight to R2
+
+Separate from the Private Sector module (§39) and from §37.1's `lc_exam_intro`/`lc_exam_resource_map` work — this targets `public/books`, the 122 Guide/Précis books that ship to candidates via `scripts/sync_books_to_r2.mjs`, distinct from both existing content systems (`resources_v2`/`lc_exam_resource_map`, live, and the incomplete admin-only `lc_resources`/`lc_subjects` CMS, which never talk to each other) and from `AdminContentEditor.jsx`'s unrelated HTML editor. No content-team tool existed to find or fix mistakes/missing text across those books before this.
+
+### 40.1 First pass: a local-dev-only editor reading/writing the filesystem (Phases 0-4)
+
+- `scripts/scan_content_issues.mjs`: read-only QA scan flagging empty/short content, ragged/empty table cells, missing images, and stale metadata across every book — surfaces which books actually need manual attention rather than requiring a blind page-by-page review of 122 books.
+- `/admin/books`: searchable book list sorted by QA severity, with New Book and Duplicate Book (with find/replace rebrand) actions.
+- `/admin/books/:category/:book`: chapter browser overlaying the QA scan on the real `BlockRenderer` preview, a full block editor (add/edit/reorder/delete across all 16 block types), and Duplicate/Delete/Publish actions for the whole book.
+- `api/admin/save-resource.js` gained the new `books-*` actions (list/issues/save-chapter/create/duplicate/delete/publish) rather than new `api/admin/books/*.js` functions — this repo's `api/` directory was already at Vercel Hobby's 12-function cap (first hit in §36.3, still the operative constraint on where any new endpoint can live). Writes are refused outside local dev (`process.env.VERCEL`) since the deployed filesystem is read-only; `books-publish` reused `sync_books_to_r2.mjs`'s own per-book sync logic (extracted into an exported `syncOneBook()`) so there's one implementation of "push this book to R2," not two that can drift apart.
+
+### 40.2 Follow-up request, same day: local files removed entirely, R2 becomes the only source of truth
+
+User asked for the content team to be able to edit from wherever the admin site is deployed, nothing local involved — so the local-JSON-as-truth design (`public/books` + a separate "Publish to R2" step) from §40.1 was replaced, not extended:
+
+- `books-list` now groups `resources_v2` rows by `(title, category)` instead of scanning a folder — this table has heavy pre-existing duplication (the same book linked from many exams; some titles have 1000+ rows), so the list shows one representative per group. New `books-get` resolves a book's live title/category/storage location by `resource_id` for direct links.
+- `books-save-chapter`/`create`/`duplicate`/`delete` now read and write Cloudflare R2 objects and `resources_v2` directly (`PutObject`/`ListObjectsV2`/`DeleteObjects`/`CopyObject`), with no filesystem access at all — the `process.env.VERCEL` "local dev only" guard and every local-disk helper (`BOOKS_ROOT`, `copyDirRecursive`, the Windows delete-retry logic) are gone. Every write also re-points all duplicate rows for that title at the canonical storage location and self-heals `resources_v2.chapter_count`, which the old sync script never corrected on existing rows.
+- `books-publish` is gone outright — saving already is publishing now, there's nothing left to separately push.
+- Frontend (`BooksPage.jsx`, `BookChapterBrowser.jsx`, `BookFormModals.jsx`) now keys off `resource_id` instead of a local folder name throughout; New Book/Duplicate Book no longer ask for a folder name since R2 keys are generated automatically.
+
+Verified against real production R2 + Supabase, not a staging copy: read paths against real books (HINDI, `Cluster_057_HINDI`), then a full create → edit → save → reload → duplicate → find/replace → delete cycle on disposable test titles, confirmed removed from both R2 and Supabase afterward.
+
+**Note for whoever next touches `public/books`**: per §40.2, that directory and `scripts/sync_books_to_r2.mjs` are no longer the live publishing path for Guide/Précis content — `resources_v2` via the admin editor is. Worth confirming `public/books` itself is safe to archive/delete rather than just bypassed, next time someone is in this area.
+
+---
+
+## 41. New session — Learning Center rebuilt from a static catalog into an active, mission-driven preparation system (Releases 1-4)
+
+Same day as §40, a separate and unrelated push (`c2a8d44`) — the commit itself carries no body, so this section (and §42 below, which audited it) is the only narrative record of what shipped. Khan Academy/Duolingo-style framing for competitive defense and police exam prep: an explicit exam target, a daily "mission objective," resource-completion tracking, exam-filtered practice, and a dashboard progress widget, replacing what had been passive browsing.
+
+### 41.1 What shipped
+
+- **Schema** (`sql/user_learning_journey.sql`, applied live): three new tables — `user_exam_targets` (one row per user+exam, `is_primary` flagging the candidate's current focus — uniqueness only ever enforced in application logic at this point, not the database, which §42 found and fixed), `user_resource_reads` (per-resource completion status), `user_quiz_attempts` (per-attempt score log). RLS on all three, `auth.uid() = user_id` scoping throughout.
+- **Target selection**: `ProfilingResults.jsx` gained a green "🚀 Start Preparing" pill that sets a candidate's primary exam target and routes to `/exam/:examId`; `LearningCenter.jsx` gained a "Your Current Mission" hero banner and "Make Primary" toggles on matched-exam cards; both, plus `ExamSyllabus.jsx`'s own "Set as Primary Target" button, independently implemented the same demote-then-upsert sequence against `user_exam_targets` — three copies of logic that turned out to have a real race condition, see §42.
+- **Exam Journey dashboard**: `ExamSyllabus.jsx` gained a primary-target banner, a "Today's Objective" card, and practice-center shortcuts pre-filtered to the exam (`?exam=` query params into `QuizCenter.jsx`/`PyqCenter.jsx`). New components `TodayObjectiveCard.jsx` (military-themed objective banner) and `SubjectProgressBar.jsx`.
+- **Completion tracking**: `useExamContent.js` extended to fetch/upsert `user_resource_reads`; `ExamContentPreview.jsx` gained a round checkmark toggle and "Done" badges per resource.
+- **Practice loop**: `QuizCenter.jsx`/`PyqCenter.jsx` accept `?exam=` and show a "Filtered for {exam}" badge; `InteractiveQuiz.jsx` logs every completed attempt to `user_quiz_attempts`; `Dashboard.jsx` gained a `TodayObjectiveCard` widget for candidates with an active target.
+
+### 41.2 Not caught before merge — surfaced the next day by §42's audit
+
+This session's own verification isn't recorded (no commit body, no separate notes found), so it's unknown whether a live click-through happened before this shipped. What's known is that a dedicated audit the very next session (§42) found one real race condition (the three-site demote-then-upsert, with no database-level uniqueness constraint behind it), a completion checkmark that could mark but never un-mark, an anonymous-user path that silently no-op'd instead of prompting login, a "Mission Objective" banner that was static copy despite shipping the props (`completedCount`/`totalCount`) to make it dynamic, and — the most substantial finding — a quiz exam-filter that matched by subject overlap rather than actual exam identity, which barely discriminates since most quizzes in this catalog share one generic subject tag. Full detail and fixes in §42.
+
+---
+
+## 42. New session — audit of §41's Learning Center release, all findings fixed and pushed; a quiz-mapping pipeline built, redesigned mid-flight, and left blocked on Gemini credits
+
+User supplied a written audit request for §41's release (`docs/Audit for learningcenter.md`) covering four pillars — DB integrity, React correctness, UX/degradation, missed edge cases. Read every file the request named directly rather than relying on the request's own description of them, since a description can miss what the code actually does.
+
+### 42.1 Audit findings (full report given to the user; condensed here)
+
+1. **No DB-level uniqueness on "one primary target per user"** (`sql/user_learning_journey.sql` comment admitted it: "enforced in app logic"). The three duplicated demote-then-upsert call sites (§41.1) are two non-atomic round trips each — a dropped connection or two racing tabs could leave a user with zero or two primary rows, and `Dashboard.jsx`/`ExamSyllabus.jsx` both read the primary target via `.eq('is_primary', true).maybeSingle()`, which throws if more than one row ever matched.
+2. **QuizCenter's exam filter doesn't filter by exam** — it filters by subject overlap between the quiz's tagged subject and the target exam's required syllabus subjects, which barely discriminates (see §42.3) while the UI badge claimed an exact match ("🎯 Filtered for: {exam}").
+3. **"Today's Mission Objective" was static copy** — neither render site (`Dashboard.jsx`, `ExamSyllabus.jsx`) ever passed `completedCount`/`totalCount` to `TodayObjectiveCard`, so its own progress badge and `type: 'complete'` state were dead code despite being built.
+4. **The "Mark as Complete" checkmark was one-way** — `markAsCompleted` always upserted `status: 'completed'`; there was no path back to `not_started`, despite the button being named `onToggleComplete`.
+5. **PyqCenter's exam-name substring filter degraded to a generic empty state** ("No PYQs Found — try clearing filters") indistinguishable from "this exam genuinely has none yet."
+6. **No `CHECK` constraints** on the two new tables' `status` columns — comment-documented enums only.
+7. **Anonymous users got silent no-ops** on "Mark Complete"/"Start Preparing" — no redirect, no message.
+
+### 42.2 Every finding fixed, applied live, pushed (`e05c6df`)
+
+- `sql/user_learning_journey_fixes.sql` (applied via `scripts/apply_sql_via_management_api.mjs`, confirmed live via a follow-up `pg_indexes`/`pg_proc`/`pg_constraint` query): a partial unique index (`user_exam_targets(user_id) WHERE is_primary`), `CHECK` constraints on both status columns, and a new `set_primary_exam_target(p_exam_id)` RPC — `SECURITY DEFINER`, reads `auth.uid()` internally rather than taking a `user_id` parameter, so unlike the money-moving RPCs in `sql/points_system.sql` (locked to `service_role` specifically because they take a `p_user_id` param, which a malicious client could otherwise pass as someone else's id) it's safe to grant directly to `authenticated`. All three call sites (`ProfilingResults.jsx`, `LearningCenter.jsx`, `ExamSyllabus.jsx`) now call this one RPC instead of their own copy of the two-step sequence.
+- **A bug caught mid-fix, not by inspection**: the first pass at redirecting anonymous users to `/login` left the existing `try/finally` structure intact, and `finally` still ran `navigate('/exam/...')` after the early-return `navigate('/login')` — silently overriding the login redirect the moment it fired. Caught by re-reading the diff before moving on, not by a runtime test; fixed in both files by checking the session before entering the try/finally rather than inside it.
+- `markAsCompleted` now takes an explicit `completed` boolean and upserts `not_started`/`completed` accordingly, updating the local `Set` by add-or-delete — a real toggle. Anonymous calls now redirect to `/login` (`useExamContent.js` calls `useNavigate()` internally), matching the existing convention in `CVBuilder.jsx`.
+- `ExamSyllabus.jsx`/`Dashboard.jsx` now compute real progress via a new `countProgress()` helper (exported from `useExamContent.js`) over the trackable categories (Guide/Précis/PYQ) and switch the objective to a "you've completed prep" state with a mock-test CTA once `completedCount === totalCount`.
+- `PyqCenter.jsx` now distinguishes "the exam filter matched nothing" (papers exist, just not tagged for this exam) from "nothing exists at all," with a dedicated message and an inline "Show All Papers" CTA in the empty state itself.
+- `QuizCenter.jsx` now checks a new `lc_exam_quiz_map` table first when `?exam=` is set; badge reads "🎯 Filtered for: {exam}" only when a real mapping exists, "Related subjects for: {exam}" when it's still using the subject-overlap fallback — so the copy never claims more precision than the data backs up.
+- `npm run build` clean; every lint diagnostic touched was confirmed pre-existing via `git stash`, not introduced by this pass.
+
+### 42.3 The quiz→exam mapping pipeline: built once, then structurally rebuilt after checking the data first
+
+Initial design directly mirrored `scripts/map_exam_resources_gemini.mjs` (§29.3-era) — iterate every `lc_exams` row, shortlist candidate quizzes, ask Gemini to pick genuine fits. Before spending any Gemini cost on it, checked the actual data and found the design was wrong for this table: **only 10 distinct `exam_name` values exist across the entire 451-row `quizzes` catalog**, and 401 of those 451 (89%) share one identical subject tag, `"General Studies"` — confirming finding #2 above is close to a total non-filter in production today, not just an imprecise one. A per-1500-exam iteration would have meant ~1500 Gemini calls to solve what is structurally a 10-bucket problem, and would still have hand-waved an arbitrary ~40-quiz slice out of 401 identically-tagged candidates to Gemini for the common case.
+
+Rewrote `scripts/map_exam_quizzes_gemini.mjs` around the real shape of the data instead: iterate the ~10 quiz `exam_name` buckets, shortlist `lc_exams` candidates per bucket (bidirectional substring match, guarding against at least one live blank-`name` row that would otherwise match every bucket trivially; a significant-word fallback if that finds nothing), and ask Gemini once per bucket which candidate exams the bucket's quizzes genuinely belong to — explicitly allowing one bucket to match many exams (a generic Stenographer mock-test set is real prep for every state/High Court Stenographer posting, and the catalog lists roughly 50 of those as separate rows). Verified mechanically with `--sample=2`: correct bucket detection (10 buckets, 451 quizzes), correct small clean candidate shortlists (1–5 exams for most buckets) — but every actual Gemini call returned `429 RESOURCE_EXHAUSTED`, confirming Gemini's prepay credits are still at zero (last known state: §36, unrechecked since). This new design needs roughly 10 Gemini calls total to complete, not ~1500, so cost is no longer a real constraint once credits exist — `sql/lc_exam_quiz_map.sql` (the target table) is already live.
+
+### 42.4 🎯 Next session starts here
+
+**Gemini prepay credits, live-reconfirmed exhausted this session** (real `429`, not assumed) — updates the long-standing "unknown, last checked §36" note below. Once topped up: `node scripts/map_exam_quizzes_gemini.mjs --sample=2` to sanity-check output, then `--execute` for the full ~10-bucket run (cheap — see §42.3). Nothing else needs to change for `QuizCenter.jsx` to start using it; it already checks `lc_exam_quiz_map` first and only falls back when a bucket has no rows.
+
+**Everything carried over from §39.4/§38.3/§37.6, still untouched, now six-plus sessions without being picked up**: the concurrency-pool/exact-match short-circuit for `map_exam_resources_gemini.mjs`; whether the user's manual "adding subjects to existing exams" pass ever happened (worth checking before trusting either mapping script's candidate-building logic still matches current data); `sync_books_to_r2.mjs --execute`'s collision-risk re-check (also newly relevant given §40.2 — that script is no longer the live publishing path at all, see the note at the end of §40.2); `lc_exam_resource_map`'s RLS-blocks-everything production bug (§37.1) — a real, live, silent bug meaning every exam's Guide/Précis/PYQ content is served via the runtime exam-name-matching fallback chain, never the precomputed mapping table that's supposed to be authoritative; and real MSG91 WhatsApp credentials for the Private Sector module (§39.4), still not provisioned as of this writing.
+
