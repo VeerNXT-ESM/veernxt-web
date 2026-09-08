@@ -1,0 +1,12 @@
+-- Run this ONLY after learning-center-backend (or whichever branch renamed
+-- resources_v2 -> resources, see sql/rename_resources_v2_to_resources.sql)
+-- is merged to main AND deployed to production -- i.e. once no deployed
+-- code anywhere still queries the table by its old name. Until then this
+-- view is load-bearing: it's the only reason the currently-deployed site
+-- still works against the renamed table.
+--
+-- Leaving it around indefinitely after that point would just be a new
+-- deprecated alias to clean up later -- the opposite of the point of
+-- this rename -- so drop it once it's confirmed dead, don't just forget
+-- about it.
+drop view if exists resources_v2;
