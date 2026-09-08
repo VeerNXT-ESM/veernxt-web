@@ -21,9 +21,9 @@ export function countProgress(byCategory, completedResourceIds) {
 
 const RESOURCE_CATEGORIES = ['Intro', 'Guide', 'Precis', 'PYQ'];
 
-// Precomputed, Gemini-verified exam -> resources_v2 mapping (see
+// Precomputed, Gemini-verified exam -> resources mapping (see
 // scripts/map_exam_resources_gemini.mjs, status_report.md §29.3) —
-// checked first when an examId is available. No FK to resources_v2 (that
+// checked first when an examId is available. No FK to resources (that
 // table has no unique constraint Postgres can target), so this is two
 // queries: mapping rows, then the resources they point at.
 async function fetchMappedResources(examId) {
@@ -34,11 +34,11 @@ async function fetchMappedResources(examId) {
   if (!mappings || mappings.length === 0) return null; // no mapping yet -> caller falls back
 
   const resourceIds = mappings.map((m) => m.resource_id);
-  const { data: resources } = await supabase.from('resources_v2').select('*').in('resource_id', resourceIds);
+  const { data: resources } = await supabase.from('resources').select('*').in('resource_id', resourceIds);
   return resources || [];
 }
 
-// resources_v2 exam_name carries a "N. " ordinal prefix from CMS ingestion
+// resources exam_name carries a "N. " ordinal prefix from CMS ingestion
 // that the unified exams.exam_name never has, so an exact match misses
 // real, published content — exact -> ilike substring -> career-track
 // keyword fallback, same chain proven in Dashboard.jsx's old
@@ -47,22 +47,22 @@ async function fetchMappedResources(examId) {
 // always use this chain since Phase 1 of the mapping work didn't cover
 // quizzes.
 async function fetchResourcesFallback(examName, careerTrack) {
-  let resData = await supabase.from('resources_v2').select('*').eq('exam_name', examName);
+  let resData = await supabase.from('resources').select('*').eq('exam_name', examName);
 
   if (!resData.data || resData.data.length === 0) {
     const escaped = examName.replace(/[%_]/g, (c) => `\\${c}`);
-    resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${escaped}%`);
+    resData = await supabase.from('resources').select('*').ilike('exam_name', `%${escaped}%`);
   }
 
   if ((!resData.data || resData.data.length === 0) && careerTrack) {
     const fallbackTerm = careerTrackKeyword(examName, careerTrack);
-    resData = await supabase.from('resources_v2').select('*').ilike('exam_name', `%${fallbackTerm}%`);
+    resData = await supabase.from('resources').select('*').ilike('exam_name', `%${fallbackTerm}%`);
   }
 
   return resData.data || [];
 }
 
-// resources_v2 has one row per exam-folder copy of the same canonical
+// resources has one row per exam-folder copy of the same canonical
 // document (e.g. ~850 separate "ENGLISH" rows, one per exam), so a
 // resource picked by exam-name matching or lc_exam_resource_map may be a
 // different physical row than the one scripts/migrate_resources_to_blocks.mjs
@@ -77,7 +77,7 @@ async function upgradeToCanonicalFormat(resources) {
 
   const titles = [...new Set(needsUpgrade.map((r) => r.title.trim()))];
   const { data: canonicalRows } = await supabase
-    .from('resources_v2')
+    .from('resources')
     .select('resource_id,title,category,format,storage_base_url')
     .eq('format', 'blocks')
     .in('title', titles);
@@ -107,7 +107,7 @@ async function fetchExamIntro(examId) {
   if (!intro) return null;
 
   if (intro.source === 'auto' && intro.resource_id) {
-    const { data: resource } = await supabase.from('resources_v2').select('*').eq('resource_id', intro.resource_id).maybeSingle();
+    const { data: resource } = await supabase.from('resources').select('*').eq('resource_id', intro.resource_id).maybeSingle();
     return resource ? { source: 'auto', resource } : null;
   }
 

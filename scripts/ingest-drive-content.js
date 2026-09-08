@@ -5,7 +5,7 @@
  * Standalone Node port of the browser Drive-ingestion pipeline
  * (AdminDriveIngestion.jsx + contentEngineProcessor.js), for bulk-loading
  * a local folder tree of .docx study material straight into production
- * (R2 + Supabase resources_v2) without the browser drag-and-drop UI — built
+ * (R2 + Supabase resources) without the browser drag-and-drop UI — built
  * because the real content set (~7,000 files) makes that impractical by
  * hand.
  *
@@ -19,7 +19,7 @@
  * in their original format, and thumbnail_url (if any) is just the cover
  * image's own uploaded URL.
  *
- * The resources_v2 row written here matches, column for column, what
+ * The resources row written here matches, column for column, what
  * api/admin/save-resource.js's V2 branch persists — that endpoint is the
  * proven-working reference, so this deliberately doesn't add or rename
  * anything relative to it (e.g. it does NOT write drive_path — that field
@@ -60,7 +60,7 @@ loadEnv();
 // ---------------------------------------------------------------------------
 // CLI args
 // ---------------------------------------------------------------------------
-// resources_v2.category has a Postgres CHECK constraint that only allows
+// resources.category has a Postgres CHECK constraint that only allows
 // Guide/Intro/Precis (confirmed empirically — Mock Test and PYQ are
 // rejected outright, no spelling/casing gets through). Mock Test/PYQ
 // content already has a real, working home in the separate `quizzes` table
@@ -114,7 +114,7 @@ function findCategoryFolder(folderLevels) {
 // own filing convention, e.g. "2. Assistant", "11. INSURANCE EXAMS") that
 // the rebuilt exams/lc_conducting_bodies tables this session (see
 // rebuild_exams_from_datamap.mjs, preview_conducting_body_names.mjs)
-// deliberately don't carry. Stripped here so newly-ingested resources_v2
+// deliberately don't carry. Stripped here so newly-ingested resources
 // rows use the same clean convention -- without this, exam_name still
 // substring-matches fine (Dashboard.jsx/ProfilingResults.jsx's ilike
 // fallback), but the raw prefix would look inconsistent everywhere it's
@@ -433,7 +433,7 @@ function walkDocxFiles(root) {
 // ---------------------------------------------------------------------------
 // Duplicate detection — same semantics as isDuplicateFile() in the browser
 // tool: title+path substring match against everything already in
-// resources_v2, fetched once up front (paginated) so re-running this script
+// resources, fetched once up front (paginated) so re-running this script
 // safely skips anything already ingested.
 // ---------------------------------------------------------------------------
 async function fetchExistingResources(supabase) {
@@ -442,7 +442,7 @@ async function fetchExistingResources(supabase) {
   let from = 0;
   for (;;) {
     const { data, error } = await supabase
-      .from('resources_v2')
+      .from('resources')
       .select('title, source_file, storage_base_url')
       .range(from, from + PAGE - 1);
     if (error) throw error;
@@ -498,7 +498,7 @@ async function main() {
   const bucket = process.env.R2_BUCKET_NAME;
   const publicUrl = process.env.R2_PUBLIC_URL;
 
-  console.log('Fetching existing resources_v2 rows for duplicate check...');
+  console.log('Fetching existing resources rows for duplicate check...');
   const existing = await fetchExistingResources(supabase);
   console.log(`${existing.length} existing rows loaded.`);
 
@@ -574,7 +574,7 @@ async function main() {
         updated_at: new Date().toISOString(),
       };
 
-      const { error } = await supabase.from('resources_v2').upsert(record, { onConflict: 'resource_id' });
+      const { error } = await supabase.from('resources').upsert(record, { onConflict: 'resource_id' });
       if (error) throw error;
 
       console.log(`${label} OK — "${examName}" / ${category} (${processed.chapters.length} ch, ${processed.imageCount} img)`);

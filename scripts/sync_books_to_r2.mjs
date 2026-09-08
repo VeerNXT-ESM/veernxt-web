@@ -3,12 +3,12 @@
  *
  * Per status_report.md §40.2, the book content editor (BooksPage.jsx /
  * BookChapterBrowser.jsx -> api/admin/save-resource.js's books-* actions)
- * was rewired to read/write Cloudflare R2 + resources_v2 directly --
+ * was rewired to read/write Cloudflare R2 + resources directly --
  * "nothing on local disk" (see that file's own header comment). This
  * script's local `public/books/` -> R2 push was the *previous* design,
  * where local JSON was the source of truth and R2 a "publish" target.
  *
- * Live-reconfirmed today: a resources_v2 row this script would sync
+ * Live-reconfirmed today: a resources row this script would sync
  * (title="AGRICULTURAL AND RURAL DEVELOPMENT") already carries the newer
  * paragraph content out on R2, with updated_at predating this check by a
  * week -- it got there through the live admin-editor path, not through
@@ -17,7 +17,7 @@
  * `public/books/` itself is consequently not guaranteed to reflect
  * production either way (it can drift stale, or ahead, independently) --
  * don't treat a local edit under that folder as live without checking
- * resources_v2/R2 directly, and don't run this script's --execute against
+ * resources/R2 directly, and don't run this script's --execute against
  * production without re-diffing local vs. live first (the original
  * collision-risk concern this file used to carry forward unresolved).
  * Kept rather than deleted in case a genuine bulk local-file ingestion is
@@ -98,11 +98,11 @@ function listBookFolders() {
 }
 
 /**
- * Syncs one book folder to R2 and upserts its resources_v2 row(s),
+ * Syncs one book folder to R2 and upserts its resources row(s),
  * exactly reproducing one iteration of main()'s loop below -- extracted
  * so api/admin/save-resource.js's books-publish action can reuse this
  * exact logic for a single book instead of drifting a second
- * implementation. `dbRows` is that book's existing resources_v2 rows
+ * implementation. `dbRows` is that book's existing resources rows
  * (title+category match, fetched by the caller); `execute` mirrors the
  * CLI's --execute flag (false = dry run, computes URLs/logs but writes
  * nothing). Returns { storageBaseUrl, resourceId, group } summarizing
@@ -137,8 +137,8 @@ async function syncOneBook(book, dbRows, { supabase, s3, bucket, publicUrl, exec
         is_locked: true,
         updated_at: new Date().toISOString(),
       };
-      const { error } = await supabase.from('resources_v2').insert(newRecord);
-      if (error) throw new Error(`Failed to insert new resources_v2 row: ${error.message}`);
+      const { error } = await supabase.from('resources').insert(newRecord);
+      if (error) throw new Error(`Failed to insert new resources row: ${error.message}`);
     }
   } else {
     // --- GROUP B (>1 row, consolidate) / CANONICAL (1 row): same update shape either way ---
@@ -152,11 +152,11 @@ async function syncOneBook(book, dbRows, { supabase, s3, bucket, publicUrl, exec
 
     if (execute) {
       const { error } = await supabase
-        .from('resources_v2')
+        .from('resources')
         .update({ format: 'blocks', storage_base_url: finalBaseUrl, metadata_url: `${finalBaseUrl}metadata.json` })
         .eq('title', book.title)
         .eq('category', book.category);
-      if (error) throw new Error(`Failed to update resources_v2 row(s): ${error.message}`);
+      if (error) throw new Error(`Failed to update resources row(s): ${error.message}`);
     }
   }
 
@@ -202,9 +202,9 @@ async function main() {
   const books = listBookFolders();
   console.log(`${books.length} enriched book folders found locally under ${SOURCE_ROOT}.\n`);
 
-  // Fetch all existing rows in resources_v2
-  console.log("Fetching resources_v2 catalog from database...");
-  const allRows = await fetchAllRows('resources_v2', 'resource_id,title,category,storage_base_url,format');
+  // Fetch all existing rows in resources
+  console.log("Fetching resources catalog from database...");
+  const allRows = await fetchAllRows('resources', 'resource_id,title,category,storage_base_url,format');
   console.log(`Fetched ${allRows.length} database entries.\n`);
 
   // Group database entries by (title, category)

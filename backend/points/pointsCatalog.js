@@ -19,7 +19,7 @@ export const POINT_ACTIONS = {
   },
   RESOURCE_OPENED: {
     once: 'target',
-    refTable: 'resources_v2',
+    refTable: 'resources',
     points: 20,
   },
   QUIZ_COMPLETE: {

@@ -18,7 +18,7 @@
  *      created_at alone doesn't actually discriminate ties). Every exam
  *      this fires on is logged so it's a reviewable list, not a silent
  *      guess (source='auto').
- *   3. Zero rows -> exact-name fallback: resources_v2 row with
+ *   3. Zero rows -> exact-name fallback: resources row with
  *      category='Intro' and exam_name matching lc_exams.name exactly
  *      (source='auto').
  *   4. Still nothing -> insert with source='unset', resource_id=null —
@@ -62,7 +62,7 @@ async function fetchAllRows(table, columns, filter) {
   return all;
 }
 
-// resources_v2.exam_name carries a "N. " ordinal prefix from CMS ingestion
+// resources.exam_name carries a "N. " ordinal prefix from CMS ingestion
 // that lc_exams.name never has (same fix applied in
 // scripts/map_exam_resources_gemini.mjs) -- without stripping it, an exact
 // match against lc_exams.name misses 12 of the 29 live exact-name-fallback
@@ -96,7 +96,7 @@ async function main() {
   const [exams, introMapRows, introResources] = await Promise.all([
     fetchAllRows('lc_exams', 'id,name'),
     fetchAllRows('lc_exam_resource_map', 'exam_id,resource_id,confidence,created_at', (q) => q.eq('category', 'Intro')),
-    fetchAllRows('resources_v2', 'resource_id,exam_name', (q) => q.eq('category', 'Intro')),
+    fetchAllRows('resources', 'resource_id,exam_name', (q) => q.eq('category', 'Intro')),
   ]);
 
   const mapRowsByExam = new Map();

@@ -2,7 +2,7 @@
 /**
  * scripts/migrate-state-exams-prefix.js
  *
- * One-off migration: moves every resources_v2 row whose R2 storage lives at
+ * One-off migration: moves every resources row whose R2 storage lives at
  * a bare state-name prefix (structured_resources/1. Andhra Pradesh/...) to
  * live under structured_resources/STATE EXAMS/1. Andhra Pradesh/... instead
  * — matching the pre-existing convention used by an earlier ingestion pass
@@ -79,7 +79,7 @@ async function fetchRowsToMigrate(supabase, limit) {
   let from = 0;
   for (;;) {
     const { data, error } = await supabase
-      .from('resources_v2')
+      .from('resources')
       .select('resource_id, storage_base_url, metadata_url, thumbnail_url')
       .not('storage_base_url', 'ilike', '%/structured_resources/STATE EXAMS/%')
       .not('storage_base_url', 'ilike', '%/structured_resources/CENTRAL EXAMS/%')
@@ -135,7 +135,7 @@ async function migrateOne(s3, bucket, publicUrl, supabase, row) {
   const newThumbnailUrl = row.thumbnail_url ? row.thumbnail_url.replace(oldPrefix, newPrefix) : row.thumbnail_url;
 
   const { error } = await supabase
-    .from('resources_v2')
+    .from('resources')
     .update({ storage_base_url: newStorageBaseUrl, metadata_url: newMetadataUrl, thumbnail_url: newThumbnailUrl })
     .eq('resource_id', row.resource_id);
   if (error) throw error;

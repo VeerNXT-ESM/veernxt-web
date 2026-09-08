@@ -9,7 +9,7 @@
  * migration, R2 has no server-side CopyObject across different accounts —
  * this has to actually download each object and re-upload it.
  *
- * Does NOT touch Supabase. This only copies bytes; resources_v2's
+ * Does NOT touch Supabase. This only copies bytes; resources's
  * storage_base_url/metadata_url/thumbnail_url still point at the OLD
  * bucket's public URL until a separate, deliberate cutover step repoints
  * them — the app keeps working against the old bucket the entire time

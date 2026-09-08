@@ -4,7 +4,7 @@
  *
  * Computes and stores exams.thumbnail_subject for every exam, using the
  * 17-subject taxonomy in src/lib/thumbnailTaxonomy.js. Dominant subject is
- * resolved from the exam's actual ingested resources_v2 content (the 12
+ * resolved from the exam's actual ingested resources content (the 12
  * core-subject documents + 33 state/UT GS books from
  * scripts/ingest_master_documents.mjs) -- reliable and unambiguous, since
  * those titles are known exactly, rather than guessing from
@@ -54,7 +54,7 @@ async function main() {
 
   const [exams, resources] = await Promise.all([
     fetchAll(supabase, 'exams', 'exam_id,exam_name,thumbnail_subject'),
-    fetchAll(supabase, 'resources_v2', 'exam_name,title,category'),
+    fetchAll(supabase, 'resources', 'exam_name,title,category'),
   ]);
 
   const resourcesByExamName = new Map();

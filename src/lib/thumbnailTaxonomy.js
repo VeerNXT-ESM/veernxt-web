@@ -57,11 +57,11 @@ export const THUMBNAIL_SUBJECTS = {
 // instruction not to give these their own thumbnail identity.
 export const DEFAULT_THUMBNAIL_SUBJECT = { key: 'general', label: 'Study Material', family: 'teal' };
 
-// resources_v2.title -> thumbnail subject key, for the exact titles written
+// resources.title -> thumbnail subject key, for the exact titles written
 // by scripts/ingest_master_documents.mjs's 12 core-subject documents.
 // Keyed on the cleaned title (see cleanTitle() in that script). Exported
 // (alongside REGION_GS_TITLE_PATTERN below) so scripts/map_exam_resources_
-// gemini.mjs can reuse the same "which resources_v2 rows are universal vs.
+// gemini.mjs can reuse the same "which resources rows are universal vs.
 // region-specific" classification when building a Gemini candidate list,
 // rather than re-deriving it.
 export const CORE_TITLE_TO_SUBJECT = {
@@ -74,7 +74,7 @@ export const CORE_TITLE_TO_SUBJECT = {
   'MATHEMATICS': 'mathematics',
 };
 
-// Any resources_v2 row whose title matches one of the 33 state/UT GS book
+// Any resources row whose title matches one of the 33 state/UT GS book
 // titles ingested by the same script is General Studies, not generic GK --
 // per the user's own observation that GS content is genuinely region-
 // specific while GK/English/etc. are shared pan-India. Matched by suffix/
@@ -107,7 +107,7 @@ function subjectKeyForTitle(title) {
 
 /**
  * Resolves the dominant thumbnail subject for an exam from its ingested
- * resources_v2 rows (title + category). Guide/Precis titles from the core
+ * resources rows (title + category). Guide/Precis titles from the core
  * 12-document ingestion map directly and unambiguously; state/UT GS books
  * map to General Studies; anything else (niche/unlabeled exam-specific
  * content, or no content at all) falls back to the neutral default.

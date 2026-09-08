@@ -4,7 +4,7 @@
  *
  * Phase 1 of the admin data-quality plan (see status_report.md and the
  * approved plan this session): for each lc_exams row, ask Gemini to pick
- * the best-fit resources_v2 rows per category (Intro/Guide/Precis/PYQ)
+ * the best-fit resources rows per category (Intro/Guide/Precis/PYQ)
  * from a candidate shortlist, and write verified rows to
  * lc_exam_resource_map (sql/lc_exam_resource_map.sql). This replaces
  * src/hooks/useExamContent.js's runtime exact -> ilike -> career-track
@@ -17,13 +17,13 @@
  * PLUS two extra tiers this script adds because it has a bigger job than
  * a single runtime lookup — surfacing the "niche unlinked" resources
  * status_report.md §26.3 flagged, not just repeating today's behavior:
- *   1. Exact/ilike match against resources_v2.exam_name (today's primary
+ *   1. Exact/ilike match against resources.exam_name (today's primary
  *      signal).
  *   2. Every "dominant" universal-subject resource (English/Reasoning/
  *      Maths/GK/Hindi/Computer Science — src/lib/thumbnailTaxonomy.js's
  *      CORE_TITLE_TO_SUBJECT) — nearly every exam wants a subset of these
  *      per its subject_requirements.
- *   3. For a state/UT exam: resources_v2 rows matching
+ *   3. For a state/UT exam: resources rows matching
  *      REGION_GS_TITLE_PATTERN whose title contains the exam's region
  *      name — the state GS/SI books that were seeded unlinked.
  *   4. Career-track keyword fallback (same mapping useExamContent.js
@@ -130,7 +130,7 @@ async function fetchAllRows(table, columns, filter) {
   return all;
 }
 
-// Some titles have exact-duplicate rows in resources_v2 (status_report.md
+// Some titles have exact-duplicate rows in resources (status_report.md
 // §26.3's "duplicate-orphan" finding — e.g. 5 identical "GS & GK GUIDE
 // BOOK" rows under different resource_ids). Deduping candidates by
 // resource_id alone lets every copy through as a distinct-looking option,
@@ -385,7 +385,7 @@ async function main() {
   const [lcExams, legacyExams, allResources, existingMappedExamIds] = await Promise.all([
     fetchAllRows('lc_exams', 'id,name,category,conducting_body:lc_conducting_bodies(id,name),region:lc_regions(id,name,level)'),
     fetchAllRows('exams', 'exam_name,career_track,subject_requirements'),
-    fetchAllRows('resources_v2', 'resource_id,title,category,exam_name'),
+    fetchAllRows('resources', 'resource_id,title,category,exam_name'),
     ALL ? Promise.resolve([]) : fetchAllRows('lc_exam_resource_map', 'exam_id'),
   ]);
 

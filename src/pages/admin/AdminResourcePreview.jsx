@@ -26,7 +26,7 @@ const AdminResourcePreview = ({ resourceId }) => {
     setActiveIndex(0);
 
     (async () => {
-      const { data } = await supabase.from('resources_v2').select('*').eq('resource_id', resourceId).maybeSingle();
+      const { data } = await supabase.from('resources').select('*').eq('resource_id', resourceId).maybeSingle();
       if (!mounted) return;
       setResource(data || null);
       if (data) {

@@ -6,11 +6,11 @@
  * public/books/{Guide,Precis}/<title>/ (the content team's consolidated
  * drop location -- previously K:\...\FINAL_CONTENT_ENRICHED, moved
  * in-repo once that stopped being the single source of truth), upload its
- * chapter-N.json files to R2 and flip the matching resources_v2 rows'
+ * chapter-N.json files to R2 and flip the matching resources rows'
  * `format` column to 'blocks' + a new `storage_base_url` pointing at the
  * upload. Safe to re-run against a title already migrated (e.g. a book
  * reprocessed with a fuller/cheaper-tier pass) -- it just re-uploads and
- * overwrites the same R2 key and resources_v2 rows.
+ * overwrites the same R2 key and resources rows.
  *
  * Three cases per local book, matched EXACT title+category only (no
  * fuzzy/substring matching -- this session already found real
@@ -18,11 +18,11 @@
  * conducting-body logos, and FINAL_CONTENT_ENRICHED's own folder names
  * don't all line up 1:1 with today's canonical titles):
  *
- *   1. MATCHED -- exactly one canonical resources_v2 row already exists
+ *   1. MATCHED -- exactly one canonical resources row already exists
  *      (storage_base_url under `master_documents/`, or already
  *      format='blocks' from an earlier run of this script). Re-uses that
  *      row's own R2 folder id and updates it in place.
- *   2. GROUP B -- one or more resources_v2 rows exist for this
+ *   2. GROUP B -- one or more resources rows exist for this
  *      (title, category), but none are canonical yet (still on the old
  *      per-exam-folder duplicate scheme, one storage_base_url per row).
  *      Picks a canonical folder id deterministically (lowest resource_id
@@ -33,7 +33,7 @@
  *      believed canonical), that's left alone and reported rather than
  *      auto-resolved -- that's a different, rarer problem than "never
  *      consolidated yet".
- *   3. GROUP A -- zero resources_v2 rows exist for this (title, category)
+ *   3. GROUP A -- zero resources rows exist for this (title, category)
  *      at all. Inserts one new row with a real uuid resource_id and a
  *      real sha256 content hash (not a random placeholder). exam_name/
  *      subject/conducting_body are left as the same generic fallback
@@ -138,7 +138,7 @@ function extractFolderId(url) {
 }
 
 async function main() {
-  console.log(`Mode: ${EXECUTE ? 'EXECUTE (uploading + updating resources_v2)' : 'DRY RUN'}\n`);
+  console.log(`Mode: ${EXECUTE ? 'EXECUTE (uploading + updating resources)' : 'DRY RUN'}\n`);
 
   const books = listBookFolders();
   console.log(`${books.length} enriched book folders found under ${SOURCE_ROOT}.\n`);
@@ -147,7 +147,7 @@ async function main() {
   // a row this script already migrated in an earlier run (storage_base_url
   // now under structured_resources/blocks/, format='blocks').
   const masterRows = await fetchAllRows(
-    'resources_v2',
+    'resources',
     'resource_id,title,category,storage_base_url,format',
     (q) => q.or('storage_base_url.ilike.%master_documents%,format.eq.blocks')
   );
@@ -160,10 +160,10 @@ async function main() {
     entry.rowCount++;
   }
 
-  // Every resources_v2 row for this title, canonical or not -- used to tell
+  // Every resources row for this title, canonical or not -- used to tell
   // GROUP A (zero rows anywhere) apart from GROUP B (rows exist, just not
   // canonical yet).
-  const allRows = await fetchAllRows('resources_v2', 'resource_id,title,category,storage_base_url');
+  const allRows = await fetchAllRows('resources', 'resource_id,title,category,storage_base_url');
   const allRowsByKey = new Map();
   for (const r of allRows) {
     const key = `${r.title.trim().toLowerCase()}::${r.category}`;
@@ -232,7 +232,7 @@ async function main() {
       rewrittenChapters.push({ chapterFile, chapter });
     }
 
-    console.log(`[${dbAction.label}] "${book.title}" (${book.category}) — ${book.chapterFiles.length} chapters, ${book.imageFiles.length} images, ${imagesRewritten} image src rewritten, ${dbAction.rowCount ?? 'new'} resources_v2 row(s).`);
+    console.log(`[${dbAction.label}] "${book.title}" (${book.category}) — ${book.chapterFiles.length} chapters, ${book.imageFiles.length} images, ${imagesRewritten} image src rewritten, ${dbAction.rowCount ?? 'new'} resources row(s).`);
 
     if (!EXECUTE) continue;
 
@@ -248,15 +248,15 @@ async function main() {
     }
 
     if (dbAction.kind === 'update') {
-      const { error } = await supabase.from('resources_v2').update({ format: 'blocks', storage_base_url: newBaseUrl }).eq('storage_base_url', dbAction.filterUrl);
+      const { error } = await supabase.from('resources').update({ format: 'blocks', storage_base_url: newBaseUrl }).eq('storage_base_url', dbAction.filterUrl);
       if (error) { console.error(`  [db error] ${error.message}`); continue; }
       totalRowsUpdated += dbAction.rowCount;
-      console.log(`  -> uploaded to ${newBaseUrl}, updated ${dbAction.rowCount} resources_v2 row(s).`);
+      console.log(`  -> uploaded to ${newBaseUrl}, updated ${dbAction.rowCount} resources row(s).`);
     } else if (dbAction.kind === 'update-title') {
-      const { error } = await supabase.from('resources_v2').update({ format: 'blocks', storage_base_url: newBaseUrl }).eq('title', book.title).eq('category', book.category);
+      const { error } = await supabase.from('resources').update({ format: 'blocks', storage_base_url: newBaseUrl }).eq('title', book.title).eq('category', book.category);
       if (error) { console.error(`  [db error] ${error.message}`); continue; }
       totalRowsUpdated += dbAction.rowCount;
-      console.log(`  -> uploaded to ${newBaseUrl}, consolidated ${dbAction.rowCount} previously-duplicate resources_v2 row(s).`);
+      console.log(`  -> uploaded to ${newBaseUrl}, consolidated ${dbAction.rowCount} previously-duplicate resources row(s).`);
     } else if (dbAction.kind === 'insert') {
       const record = {
         resource_id: dbAction.newUuid,
@@ -278,10 +278,10 @@ async function main() {
         status: 'Published',
         updated_at: new Date().toISOString(),
       };
-      const { error } = await supabase.from('resources_v2').insert(record);
+      const { error } = await supabase.from('resources').insert(record);
       if (error) { console.error(`  [db error] ${error.message}`); continue; }
       totalRowsInserted++;
-      console.log(`  -> uploaded to ${newBaseUrl}, inserted new resources_v2 row (resource_id=${dbAction.newUuid}). NOT linked to any exam yet.`);
+      console.log(`  -> uploaded to ${newBaseUrl}, inserted new resources row (resource_id=${dbAction.newUuid}). NOT linked to any exam yet.`);
     }
   }
 
@@ -291,8 +291,8 @@ async function main() {
   console.log(`Group A (new rows created): ${groupA}`);
   console.log(`Ambiguous (skipped, needs manual review): ${skippedAmbiguous}`);
   if (EXECUTE) {
-    console.log(`Total resources_v2 rows updated: ${totalRowsUpdated}`);
-    console.log(`Total resources_v2 rows inserted: ${totalRowsInserted}`);
+    console.log(`Total resources rows updated: ${totalRowsUpdated}`);
+    console.log(`Total resources rows inserted: ${totalRowsInserted}`);
     if (groupA > 0) console.log(`\nNote: ${groupA} newly-inserted row(s) are real content on R2 but are NOT linked to any exam yet -- a separate lc_exam_resource_map / lc_subject_resources pass is still needed before any exam surfaces them.`);
   } else {
     console.log('\nDry run — no uploads or writes. Re-run with --execute to migrate.');

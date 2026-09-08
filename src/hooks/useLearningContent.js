@@ -14,7 +14,7 @@ function escapeForOrFilter(value) {
 
 /**
  * Resolves the exam_name list for a conducting body, used ONLY for Central
- * (see buildQuery below) — resources_v2.conducting_body is a flat literal
+ * (see buildQuery below) — resources.conducting_body is a flat literal
  * ('CENTRAL EXAMS') for every central row with no per-body text to filter
  * on, so Central needs this exam-name bridge; State/UT rows carry the body
  * name directly in conducting_body and don't need it (a bridge there was
@@ -91,7 +91,7 @@ export function useLearningContent({
       query = supabase.from(table).select('*');
     }
 
-    if (table === 'resources_v2') {
+    if (table === 'resources') {
       query = query.eq('status', 'Published');
     }
 
@@ -146,13 +146,13 @@ export function useLearningContent({
     const to = from + PAGE_SIZE - 1;
 
     try {
-      const resQuery = buildQuery('resources_v2').order('created_at', { ascending: false }).range(from, to);
+      const resQuery = buildQuery('resources').order('created_at', { ascending: false }).range(from, to);
       const quizQuery = buildQuery('quizzes').order('created_at', { ascending: false }).range(from, to);
 
       const fetches = [resQuery, quizQuery];
 
       if (isInitial) {
-        fetches.push(buildQuery('resources_v2', true));
+        fetches.push(buildQuery('resources', true));
         fetches.push(buildQuery('quizzes', true));
       }
 

@@ -4,12 +4,12 @@
  *
  * Ingests the FINAL_CONTENT master documents (already deduplicated by an
  * earlier content-team pass -- one file per shared subject document,
- * unlike the old per-exam-duplicated resources_v2 rows) into resources_v2,
+ * unlike the old per-exam-duplicated resources rows) into resources,
  * per the confirmed approach: upload each physical file to R2 exactly
- * once, then write one resources_v2 row per exam that needs it, all
+ * once, then write one resources row per exam that needs it, all
  * pointing at the SAME shared storage_base_url. No re-uploading, no
  * per-exam file duplication -- just DB rows referencing shared content,
- * using the existing (working) resources_v2/SecureReader delivery path
+ * using the existing (working) resources/SecureReader delivery path
  * rather than lc_resources (which still has no real file storage).
  *
  * Scope for this pass (deliberately narrower than the full 88-cluster
@@ -134,7 +134,7 @@ async function main() {
     fetchAll(supabase, 'exams', 'exam_id,exam_name,conducting_body,region_id,region:lc_regions(name)'),
     fetchAll(supabase, 'lc_subjects', 'id,name'),
     fetchAll(supabase, 'lc_exam_subjects', 'exam_id,subject_id'),
-    fetchAll(supabase, 'resources_v2', 'exam_name,subject,category,source_file'),
+    fetchAll(supabase, 'resources', 'exam_name,subject,category,source_file'),
   ]);
 
   const subjectNameToId = new Map(subjects.map((s) => [s.name, s.id]));
@@ -203,7 +203,7 @@ async function main() {
         status: 'Published',
         updated_at: new Date().toISOString(),
       }));
-      const { error } = await supabase.from('resources_v2').upsert(chunk, { onConflict: 'resource_id' });
+      const { error } = await supabase.from('resources').upsert(chunk, { onConflict: 'resource_id' });
       if (error) { console.error(`  FAILED chunk: ${error.message}`); continue; }
       totalRowsWritten += chunk.length;
     }

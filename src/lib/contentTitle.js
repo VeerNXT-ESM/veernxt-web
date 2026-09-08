@@ -1,5 +1,5 @@
 /**
- * `title` on every resources_v2/quizzes row is literally the source
+ * `title` on every resources/quizzes row is literally the source
  * filename from the Drive-folder batch ingestion pipeline (extension
  * stripped — see contentEngineProcessor.js), so it carries filename
  * artifacts: an exam-abbreviation prefix, underscores, and a trailing

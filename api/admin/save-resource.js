@@ -23,7 +23,7 @@ function checkAdminSecret(req, res) {
 const BOOK_CATEGORIES = ['Guide', 'Precis'];
 
 // R2 is the only source of truth for book content -- these actions read
-// and write Cloudflare R2 + the resources_v2 table directly, nothing on
+// and write Cloudflare R2 + the resources table directly, nothing on
 // local disk, so they work identically whether this runs on `npm run dev`
 // or on a real Vercel deployment. (An earlier version of this editor
 // treated public/books on local disk as the source of truth with R2 as a
@@ -42,7 +42,7 @@ function getR2Bucket() {
   return process.env.R2_BUCKET_NAME;
 }
 
-// resources_v2.title has heavy pre-existing duplication (the same book
+// resources.title has heavy pre-existing duplication (the same book
 // linked from many exams, one row per link -- see books-list's own
 // comment), so every lookup here matches by title, not row id. ilike is
 // used for a case-insensitive match; % and _ are escaped first so a title
@@ -51,14 +51,14 @@ function escapeIlike(str) {
   return str.trim().replace(/[\\%_]/g, '\\$&');
 }
 
-// Paginated: some titles in resources_v2 have 1000+ duplicate rows, well
+// Paginated: some titles in resources have 1000+ duplicate rows, well
 // past PostgREST's per-request row cap.
 async function fetchRowsByTitle(supabase, category, title) {
   const escaped = escapeIlike(title);
   let rows = [];
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
-      .from('resources_v2')
+      .from('resources')
       .select('resource_id,title,category,storage_base_url,format,chapter_count')
       .eq('category', category)
       .ilike('title', escaped)
@@ -70,7 +70,7 @@ async function fetchRowsByTitle(supabase, category, title) {
   return rows;
 }
 
-// Of however many resources_v2 rows share a title, picks the storage
+// Of however many resources rows share a title, picks the storage
 // location most of them already agree on (or the only one, in the common
 // case). Every books-save-chapter/books-delete call also re-points every
 // row in the group at whatever this returns, so duplicate rows converge
@@ -161,7 +161,7 @@ function deepReplaceStrings(value, pairs) {
 /**
  * POST /api/admin/save-resource with { type: 'books-list' }
  *
- * Lists every Guide/Precis book by grouping resources_v2 rows by
+ * Lists every Guide/Precis book by grouping resources rows by
  * (title, category) -- this table has heavy pre-existing duplication (the
  * same book linked from many exams, one row per link; some titles have
  * 1000+ rows), so this shows one representative per group, not one row
@@ -183,7 +183,7 @@ async function handleBooksList(req, res) {
     let rows = [];
     for (let from = 0; ; from += 1000) {
       const { data, error } = await supabase
-        .from('resources_v2')
+        .from('resources')
         .select('resource_id,title,category,storage_base_url,chapter_count')
         .in('category', BOOK_CATEGORIES)
         .eq('format', 'blocks')
@@ -258,7 +258,7 @@ async function handleBooksGet(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
@@ -362,7 +362,7 @@ async function handleR2Upload(req, res) {
  * { type: 'books-save-chapter', resourceId, fileName, chapterData }
  *
  * Writes one chapter's edited blocks straight to R2, at whatever prefix
- * this book's resources_v2 rows already agree it lives at. Also patches
+ * this book's resources rows already agree it lives at. Also patches
  * metadata.json's per-chapter title/blocks_count and the DB's own
  * chapter_count to match, and re-points every duplicate row sharing this
  * title+category at the canonical location (see pickCanonicalStorageBaseUrl).
@@ -384,7 +384,7 @@ async function handleBooksSaveChapter(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
@@ -415,7 +415,7 @@ async function handleBooksSaveChapter(req, res) {
 
     const updatePatch = { format: 'blocks', storage_base_url: canonicalUrl, metadata_url: `${canonicalUrl}metadata.json` };
     if (realChapterCount !== null) updatePatch.chapter_count = realChapterCount;
-    const { error: updateError } = await supabase.from('resources_v2').update(updatePatch).eq('category', row.category).ilike('title', escapeIlike(row.title));
+    const { error: updateError } = await supabase.from('resources').update(updatePatch).eq('category', row.category).ilike('title', escapeIlike(row.title));
     if (updateError) console.error('[admin/save-resource:books-save-chapter] row consolidation update failed (content still saved):', updateError.message);
 
     return res.status(200).json({ ok: true });
@@ -430,7 +430,7 @@ async function handleBooksSaveChapter(req, res) {
  *
  * Creates a blank book straight in R2: metadata.json + a single empty
  * chapter-1.json under a freshly generated resource id, plus its
- * resources_v2 row. For content with no source docx to enrich -- e.g. a
+ * resources row. For content with no source docx to enrich -- e.g. a
  * book authored directly in the editor rather than through the ingestion
  * pipeline.
  */
@@ -471,7 +471,7 @@ async function handleBooksCreate(req, res) {
     await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
     await uploadToR2(s3, bucket, `${prefix}/chapters/chapter-1.json`, Buffer.from(JSON.stringify({ id: genBookId(), title: 'Chapter 1', order: 1, blocks: [] }, null, 2)), 'application/json');
 
-    const { error } = await supabase.from('resources_v2').insert({
+    const { error } = await supabase.from('resources').insert({
       resource_id: newResourceId,
       file_hash: genBookId() + genBookId(),
       title: title.trim(),
@@ -501,7 +501,7 @@ async function handleBooksCreate(req, res) {
  * Clones every R2 object under the source book's prefix to a fresh
  * resource id (images via a server-side R2 copy; metadata.json and every
  * chapter file downloaded, optionally rewritten via literal find/replace
- * pairs, and re-uploaded), then inserts a new resources_v2 row. Generalizes
+ * pairs, and re-uploaded), then inserts a new resources row. Generalizes
  * what scripts/duplicate_enriched_books.mjs did by hand for one hardcoded
  * set of Precis subject books into a reusable action for any book (e.g.
  * cloning a state's GS guide into a new state and rebranding the state
@@ -520,7 +520,7 @@ async function handleBooksDuplicate(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: sourceRow, error: rowError } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', sourceResourceId).maybeSingle();
+    const { data: sourceRow, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', sourceResourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!sourceRow) return res.status(404).json({ ok: false, error: 'Source book not found' });
 
@@ -566,7 +566,7 @@ async function handleBooksDuplicate(req, res) {
     metadata.category = destCategory;
     await uploadToR2(s3, bucket, `${destPrefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
 
-    const { error } = await supabase.from('resources_v2').insert({
+    const { error } = await supabase.from('resources').insert({
       resource_id: newResourceId,
       file_hash: genBookId() + genBookId(),
       title: newTitle.trim(),
@@ -593,7 +593,7 @@ async function handleBooksDuplicate(req, res) {
  * POST /api/admin/save-resource with { type: 'books-delete', resourceId }
  *
  * Deletes every R2 object under the book's canonical prefix, then deletes
- * every resources_v2 row sharing that title+category -- leaving any of
+ * every resources row sharing that title+category -- leaving any of
  * them behind would just be a dangling reference to now-missing content.
  * Destructive; the only undo is re-Duplicating from a version still open
  * in someone's browser, or re-ingesting from a source doc if one exists.
@@ -609,7 +609,7 @@ async function handleBooksDelete(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources_v2').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
@@ -623,7 +623,7 @@ async function handleBooksDelete(req, res) {
       if (keys.length > 0) await deleteR2Keys(s3, bucket, keys);
     }
 
-    const { error } = await supabase.from('resources_v2').delete().eq('category', row.category).ilike('title', escapeIlike(row.title));
+    const { error } = await supabase.from('resources').delete().eq('category', row.category).ilike('title', escapeIlike(row.title));
     if (error) throw new Error(error.message);
 
     return res.status(200).json({ ok: true });
@@ -705,7 +705,7 @@ export default async function handler(req, res) {
       };
 
       const { data, error } = await supabase
-        .from('resources_v2')
+        .from('resources')
         .upsert(record, { onConflict: 'resource_id' })
         .select();
 

@@ -11,7 +11,7 @@ async function run() {
 
   while (hasMore) {
     const { data, error } = await supabase
-      .from('resources_v2')
+      .from('resources')
       .select('source_file, chapter_count')
       .ilike('storage_base_url', '%master_documents%')
       .range(page * pageSize, (page + 1) * pageSize - 1);

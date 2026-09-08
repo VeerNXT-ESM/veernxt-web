@@ -229,7 +229,7 @@ const LearningCenter = () => {
 
     try {
       const exploredRes = openedIds.length
-        ? await supabase.from('resources_v2').select('resource_id, exam_name').in('resource_id', openedIds)
+        ? await supabase.from('resources').select('resource_id, exam_name').in('resource_id', openedIds)
         : { data: [] };
 
       const exploredByExam = {};
@@ -241,7 +241,7 @@ const LearningCenter = () => {
       if (matchExamNames.length) {
         const counts = await Promise.all(
           matchExamNames.map(name =>
-            supabase.from('resources_v2').select('*', { count: 'exact', head: true }).eq('status', 'Published').eq('exam_name', name)
+            supabase.from('resources').select('*', { count: 'exact', head: true }).eq('status', 'Published').eq('exam_name', name)
           )
         );
         const progress = {};

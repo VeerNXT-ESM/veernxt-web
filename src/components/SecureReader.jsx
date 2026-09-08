@@ -22,7 +22,7 @@ const SecureReader = () => {
   const [effectiveTier, setEffectiveTier] = useState('FREE');
   const chapterCache = React.useRef({});
 
-  // Fetch resource metadata from resources_v2 and user subscription
+  // Fetch resource metadata from resources and user subscription
   useEffect(() => {
     const fetchResource = async () => {
       let tier = 'FREE';
@@ -44,7 +44,7 @@ const SecureReader = () => {
       }
 
       const { data } = await supabase
-        .from('resources_v2')
+        .from('resources')
         .select('*')
         .eq('resource_id', id)
         .single();
@@ -111,7 +111,7 @@ const SecureReader = () => {
       chapterCache.current[cacheKey] = chapterData;
 
       // Two chapter-N.json shapes can come back depending on
-      // resources_v2.format: 'html' (legacy) is {title, body_html, images};
+      // resources.format: 'html' (legacy) is {title, body_html, images};
       // 'blocks' (new enriched-content pipeline) is {title, order, blocks}.
       // Storing whichever fields are present lets the render branch below
       // pick the right one without needing to know format up front.

@@ -14,7 +14,7 @@
  * in the admin CMS.
  *
  * Strips the prefix from exams.exam_name directly (safe: it only makes
- * existing ilike substring matches against resources_v2 MORE permissive,
+ * existing ilike substring matches against resources MORE permissive,
  * never fewer). lc_exams.name should be re-synced afterward with
  * scripts/sync_lc_exams_names.mjs.
  *

@@ -11,7 +11,7 @@
  * Populates the new Learning Center schema (sql/learning_center_schema.sql
  * -- must already be applied via the Supabase SQL editor) entirely from
  * our own already-validated offline sources, NOT from the messy live
- * resources_v2 -- deliberately bypassing that reconciliation problem for
+ * resources -- deliberately bypassing that reconciliation problem for
  * this pass:
  *
  *   - conducting_bodies / regions / exams / subjects / exam_subjects
@@ -36,7 +36,7 @@
  * exam_master_datamap.json's own ut_master_content field), not broadly.
  *
  * Purely additive against brand-new, empty tables -- zero risk to
- * resources_v2 or any existing table.
+ * resources or any existing table.
  *
  * Usage:
  *   node scripts/seed_learning_center_schema.mjs            # dry run

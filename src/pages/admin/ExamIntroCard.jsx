@@ -11,7 +11,7 @@ import AdminResourcePreview from './AdminResourcePreview';
  */
 const ExamIntroCard = ({ examId }) => {
   const [examIntro, setExamIntro] = useState(null); // lc_exam_intro row, or null if none exists yet
-  const [introResourceTitle, setIntroResourceTitle] = useState(null); // joined from resources_v2 when auto-populated
+  const [introResourceTitle, setIntroResourceTitle] = useState(null); // joined from resources when auto-populated
   const [editing, setEditing] = useState(false);
   const [introTitleDraft, setIntroTitleDraft] = useState('');
   const [introBodyDraft, setIntroBodyDraft] = useState('');
@@ -38,7 +38,7 @@ const ExamIntroCard = ({ examId }) => {
     setIntroTitleDraft(intro?.manual_title || '');
     setIntroBodyDraft(intro?.manual_body || '');
     if (intro?.resource_id) {
-      const { data: resource } = await supabase.from('resources_v2').select('title').eq('resource_id', intro.resource_id).maybeSingle();
+      const { data: resource } = await supabase.from('resources').select('title').eq('resource_id', intro.resource_id).maybeSingle();
       setIntroResourceTitle(resource?.title || null);
     } else {
       setIntroResourceTitle(null);

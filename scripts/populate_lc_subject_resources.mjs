@@ -3,8 +3,8 @@
  * scripts/populate_lc_subject_resources.mjs
  *
  * The admin CMS reads lc_exams/lc_exam_subjects/lc_subject_resources, not
- * exams/resources_v2 -- so even though scripts/ingest_master_documents.mjs
- * got real content in front of users via resources_v2, the CMS's own
+ * exams/resources -- so even though scripts/ingest_master_documents.mjs
+ * got real content in front of users via resources, the CMS's own
  * Resources/Syllabus/Content Graph pages still showed zero books mapped
  * (lc_subject_resources was empty; it was cascaded away when
  * lc_exam_subjects got rebuilt in §27.6 and never repopulated).
@@ -12,11 +12,11 @@
  * This creates one clean lc_resources row per document (12 core-subject +
  * 33 state/UT GS books -- same 45 documents from
  * scripts/ingest_master_documents.mjs), with a REAL storage_base_url
- * recovered from the matching resources_v2 row (already uploaded to R2,
+ * recovered from the matching resources row (already uploaded to R2,
  * same file) -- finally giving lc_resources real file backing, not just
  * metadata. Then links each one via lc_subject_resources to every
  * lc_exam_subjects row for the exams that need it (same core-subject /
- * region-scoped targeting as the resources_v2 ingestion).
+ * region-scoped targeting as the resources ingestion).
  *
  * Usage:
  *   node scripts/populate_lc_subject_resources.mjs            # dry run
@@ -87,7 +87,7 @@ async function main() {
   const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, { auth: { persistSession: false } });
 
   const [resources, subjects, examSubjects, exams, existingLcResources] = await Promise.all([
-    fetchAll(supabase, 'resources_v2', 'title,category,storage_base_url,metadata_url,thumbnail_url,chapter_count,file_hash,source_file'),
+    fetchAll(supabase, 'resources', 'title,category,storage_base_url,metadata_url,thumbnail_url,chapter_count,file_hash,source_file'),
     fetchAll(supabase, 'lc_subjects', 'id,name'),
     fetchAll(supabase, 'lc_exam_subjects', 'id,exam_id,subject_id'),
     fetchAll(supabase, 'exams', 'exam_id,region_id'),
@@ -99,7 +99,7 @@ async function main() {
   const examSubjectsByExamSubject = new Map(); // `${exam_id}::${subject_id}` -> lc_exam_subjects.id
   for (const es of examSubjects) examSubjectsByExamSubject.set(`${es.exam_id}::${es.subject_id}`, es.id);
 
-  // One representative resources_v2 row per (title, category) -- gives us
+  // One representative resources row per (title, category) -- gives us
   // the real storage_base_url/metadata_url/thumbnail_url/chapter_count that
   // were already uploaded once for that shared document.
   const repByTitleCategory = new Map();

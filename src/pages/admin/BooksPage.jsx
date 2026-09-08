@@ -17,7 +17,7 @@ const SORT_OPTIONS = [
   { value: 'title', label: 'Title (A-Z)' },
 ];
 
-// Book browser/editor over resources_v2 (format='blocks') + R2 -- R2 is the
+// Book browser/editor over resources (format='blocks') + R2 -- R2 is the
 // only source of truth for book content, so there's no local filesystem
 // involved anywhere in this feature and it works identically whether the
 // admin site is running locally or deployed. This is deliberately a

@@ -4,7 +4,7 @@
  *
  * The actual cutover step for the R2 account migration (see
  * migrate-r2-account.js and status_report.md): repoints every
- * resources_v2 row's storage_base_url/metadata_url/thumbnail_url from the
+ * resources row's storage_base_url/metadata_url/thumbnail_url from the
  * old bucket's public URL to the new one. Doesn't touch R2 at all — by
  * this point every object already exists, byte-identical, at the new
  * bucket (verified separately). This is a pure string replace + DB write.
@@ -71,7 +71,7 @@ async function main() {
   let from = 0;
   for (;;) {
     const { data, error } = await supabase
-      .from('resources_v2')
+      .from('resources')
       .select('resource_id, storage_base_url, metadata_url, thumbnail_url')
       .ilike('storage_base_url', `${OLD_URL}%`)
       .range(from, from + PAGE - 1);
@@ -95,7 +95,7 @@ async function main() {
         metadata_url: row.metadata_url ? row.metadata_url.replace(OLD_URL, NEW_URL) : row.metadata_url,
         thumbnail_url: row.thumbnail_url ? row.thumbnail_url.replace(OLD_URL, NEW_URL) : row.thumbnail_url,
       };
-      const { error } = await supabase.from('resources_v2').update(update).eq('resource_id', row.resource_id);
+      const { error } = await supabase.from('resources').update(update).eq('resource_id', row.resource_id);
       if (error) throw error;
       updated++;
       if (updated % 500 === 0) console.log(`[${updated}/${toProcess.length}] updated`);

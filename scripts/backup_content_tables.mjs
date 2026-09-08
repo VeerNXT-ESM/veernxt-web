@@ -2,7 +2,7 @@
 /**
  * scripts/backup_content_tables.mjs
  *
- * There is currently no backup of resources_v2 / quizzes / questions /
+ * There is currently no backup of resources / quizzes / questions /
  * resources anywhere -- no schema in git, no migrations, no snapshot table.
  * Before the Learning Center CMS rearchitecture touches anything, dump
  * every row of these four tables to timestamped JSON. Read-only against
@@ -43,7 +43,7 @@ function parseArgs() {
   return out;
 }
 
-const TABLES = ['resources_v2', 'quizzes', 'questions', 'resources'];
+const TABLES = ['resources', 'quizzes', 'questions', 'resources'];
 
 async function fetchAllRows(supabase, table) {
   const all = [];
