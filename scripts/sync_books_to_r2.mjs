@@ -1,3 +1,28 @@
+/**
+ * SUPERSEDED, not the live publishing path (confirmed live 2026-09-08).
+ *
+ * Per status_report.md §40.2, the book content editor (BooksPage.jsx /
+ * BookChapterBrowser.jsx -> api/admin/save-resource.js's books-* actions)
+ * was rewired to read/write Cloudflare R2 + resources_v2 directly --
+ * "nothing on local disk" (see that file's own header comment). This
+ * script's local `public/books/` -> R2 push was the *previous* design,
+ * where local JSON was the source of truth and R2 a "publish" target.
+ *
+ * Live-reconfirmed today: a resources_v2 row this script would sync
+ * (title="AGRICULTURAL AND RURAL DEVELOPMENT") already carries the newer
+ * paragraph content out on R2, with updated_at predating this check by a
+ * week -- it got there through the live admin-editor path, not through
+ * this script or a `public/books/` change reaching production.
+ *
+ * `public/books/` itself is consequently not guaranteed to reflect
+ * production either way (it can drift stale, or ahead, independently) --
+ * don't treat a local edit under that folder as live without checking
+ * resources_v2/R2 directly, and don't run this script's --execute against
+ * production without re-diffing local vs. live first (the original
+ * collision-risk concern this file used to carry forward unresolved).
+ * Kept rather than deleted in case a genuine bulk local-file ingestion is
+ * ever needed again, but treat it as a one-off tool, not a pipeline.
+ */
 import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -35,11 +60,11 @@ async function fetchAllRows(table, columns, filterFn) {
 }
 
 // Builds the same book descriptor shape listBookFolders() produces, for
-// exactly one already-known category/folder -- used by the admin editor's
-// "Publish to R2" action (api/admin/save-resource.js's books-publish),
-// which knows which single book to sync and shouldn't re-scan all ~122
-// folders to do it. Returns null if the folder isn't a valid book (no
-// chapters/metadata.json, or zero chapter files).
+// exactly one already-known category/folder, so a caller that already
+// knows which single book it wants doesn't have to re-scan all ~122
+// folders to get it. (Not actually wired to the live admin editor --
+// see this file's header.) Returns null if the folder isn't a valid book
+// (no chapters/metadata.json, or zero chapter files).
 function getBookFolder(category, name) {
   const bookDir = path.join(SOURCE_ROOT, category, name);
   if (!fs.existsSync(bookDir) || !fs.statSync(bookDir).isDirectory()) return null;
