@@ -21,9 +21,10 @@ const SORT_OPTIONS = [
 // only source of truth for book content, so there's no local filesystem
 // involved anywhere in this feature and it works identically whether the
 // admin site is running locally or deployed. This is deliberately a
-// different data model from ResourcesTab.jsx (lc_resources, admin-only,
-// incomplete) and AdminContentEditor.jsx (resources.body_html, Quill HTML)
-// -- see project-dual-admin-content-systems memory.
+// different data model from AdminContentEditor.jsx (resources.body_html,
+// Quill HTML). The other parallel system, lc_resources/lc_subjects (an
+// orphaned, admin-only CMS never fed by the live pipeline), was removed --
+// see project-dual-admin-content-systems memory.
 const BooksPage = () => {
   const navigate = useNavigate();
   const [books, setBooks] = useState(null);

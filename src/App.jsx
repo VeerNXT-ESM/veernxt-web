@@ -46,8 +46,6 @@ import PyqReader from './pages/PyqReader';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
 import ExamsPage from './pages/admin/ExamsPage';
-import SyllabusPage from './pages/admin/SyllabusPage';
-import ResourcesPage from './pages/admin/ResourcesPage';
 import ConductingBodiesPage from './pages/admin/ConductingBodiesPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
@@ -193,8 +191,6 @@ function App() {
         <Route element={<AdminShell />}>
           <Route path="/admin" element={<Navigate to="/admin/exams" replace />} />
           <Route path="/admin/exams" element={<ExamsPage />} />
-          <Route path="/admin/syllabus" element={<SyllabusPage />} />
-          <Route path="/admin/resources" element={<ResourcesPage />} />
           <Route path="/admin/books" element={<BooksPage />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
           <Route path="/admin/users" element={<UsersPage />} />

@@ -6,8 +6,8 @@ import AdminResourcePreview from './AdminResourcePreview';
 /**
  * Rail card for the exam's Introduction (lc_exam_intro) — self-contained,
  * fetches its own data by examId rather than depending on the editor
- * panel's internal state, same pattern ExamStatusCard/ExamSubjectsPanel
- * already use so this keeps working while the editor is mid-load.
+ * panel's internal state, same pattern ExamStatusCard uses so this keeps
+ * working while the editor is mid-load.
  */
 const ExamIntroCard = ({ examId }) => {
   const [examIntro, setExamIntro] = useState(null); // lc_exam_intro row, or null if none exists yet

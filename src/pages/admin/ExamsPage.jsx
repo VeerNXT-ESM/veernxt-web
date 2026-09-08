@@ -6,7 +6,6 @@ import ExamThumbnail from './ExamThumbnail';
 import ExamEditorPanel from './ExamEditorPanel';
 import ExamIntroCard from './ExamIntroCard';
 import ExamStatusCard from './ExamStatusCard';
-import ExamSubjectsPanel from './ExamSubjectsPanel';
 import { PAGE_SIZE, useDebounced, StatusBadge } from './lcShared';
 import { Search, Plus, ChevronLeft, ChevronRight, ShieldAlert } from 'lucide-react';
 
@@ -102,15 +101,7 @@ const ExamsPage = () => {
       if (error) throw error;
       if (requestId !== requestIdRef.current) return;
 
-      const ids = (data || []).map((e) => e.id);
-      let statsById = {};
-      if (ids.length) {
-        const { data: stats } = await supabase.from('lc_exam_stats').select('*').in('exam_id', ids);
-        statsById = Object.fromEntries((stats || []).map((s) => [s.exam_id, s]));
-      }
-      if (requestId !== requestIdRef.current) return;
-
-      setExams((data || []).map((e) => ({ ...e, stats: statsById[e.id] || { subject_count: 0, resource_count: 0 } })));
+      setExams(data || []);
       setTotal(count || 0);
     } catch (err) {
       console.error('Error fetching exams:', err);
@@ -189,10 +180,8 @@ const ExamsPage = () => {
             <table className="lc-table lc-table-compact">
               <thead>
                 <tr>
-                  <th style={{ width: '42%' }}>Exam</th>
-                  <th style={{ width: '28%' }}>Body</th>
-                  <th style={{ width: '10%', textAlign: 'right' }}>Subj.</th>
-                  <th style={{ width: '10%', textAlign: 'right' }}>Res.</th>
+                  <th style={{ width: '52%' }}>Exam</th>
+                  <th style={{ width: '38%' }}>Body</th>
                   <th style={{ width: '10%' }}>Status</th>
                 </tr>
               </thead>
@@ -209,8 +198,6 @@ const ExamsPage = () => {
                       </div>
                     </td>
                     <td className="lc-table-sub lc-truncate" title={exam.conducting_body?.name}>{exam.conducting_body?.name || '—'}</td>
-                    <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{exam.stats.subject_count}</span></td>
-                    <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{exam.stats.resource_count}</span></td>
                     <td><StatusBadge status={exam.status} /></td>
                   </tr>
                 ))}
@@ -256,8 +243,6 @@ const ExamsPage = () => {
           </div>
         </div>
       </div>
-
-      {selectedExamId && <ExamSubjectsPanel examId={selectedExamId} onChanged={fetchExams} />}
     </div>
   );
 };

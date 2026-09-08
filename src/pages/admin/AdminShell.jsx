@@ -2,25 +2,21 @@ import { useEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
-  GraduationCap, BookOpen, Library, Users, Shield,
+  GraduationCap, Users, Shield,
   HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked,
 } from 'lucide-react';
 import './AdminCMS.css';
 
-const ICONS = { GraduationCap, BookOpen, Library, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked };
+const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it
-// duplicates most of the left sidebar. Content Library aliases onto
-// Resources (same canonical-content concept, no page of its own yet);
-// Settings aliases to Roles & Permissions (the closest thing to system
-// configuration that exists today). Exams is first — it's the actual
-// admin landing page (see the /admin redirect in App.jsx).
+// duplicates most of the left sidebar. Settings aliases to Roles &
+// Permissions (the closest thing to system configuration that exists
+// today). Exams is first — it's the actual admin landing page (see the
+// /admin redirect in App.jsx).
 const HORIZONTAL_NAV = [
   { label: 'Exams', path: '/admin/exams' },
-  { label: 'Syllabus', path: '/admin/syllabus' },
-  { label: 'Resources', path: '/admin/resources' },
-  { label: 'Content Library', path: '/admin/resources' },
   { label: 'Users', path: '/admin/users' },
   { label: 'Settings', path: '/admin/roles' },
 ];
@@ -28,8 +24,6 @@ const HORIZONTAL_NAV = [
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
-  '/admin/syllabus': { title: 'Syllabus', description: 'Inspect subjects independently of any one exam.' },
-  '/admin/resources': { title: 'Resource Library', description: 'The master canonical content database — every resource exists once.' },
   '/admin/books': { title: 'Book Content', description: 'Browse and QA the Guide/Precis book JSON that actually ships to candidates.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
