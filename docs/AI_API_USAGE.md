@@ -8,7 +8,7 @@ The endpoint is protected by an internal API key to prevent unauthorized usage. 
 
 **Header Format:**
 ```http
-Authorization: Bearer ***REDACTED-ROTATED-INTERNAL-API-KEY***
+Authorization: Bearer YOUR_INTERNAL_API_KEY
 ```
 *(Ensure the key matches the `INTERNAL_API_KEY` defined in the `.env` file).*
 
@@ -21,7 +21,7 @@ You can test the endpoint from your terminal using cURL.
 ```bash
 curl -X POST https://singular-ai.vercel.app/api/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer ***REDACTED-ROTATED-INTERNAL-API-KEY***" \
+  -H "Authorization: Bearer YOUR_INTERNAL_API_KEY" \
   -d '{
     "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
     "temperature": 0.3,
@@ -74,7 +74,7 @@ const url = 'https://singular-ai.vercel.app/api/v1/chat/completions'; // Absolut
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ***REDACTED-ROTATED-INTERNAL-API-KEY***`
+        'Authorization': `Bearer YOUR_INTERNAL_API_KEY`
       },
       body: JSON.stringify(payload)
     });
